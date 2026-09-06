@@ -22,7 +22,7 @@ class PredictService:
 
         # 2. Obtener datos históricos para generar features futuros
         demands = self.demand_repo.get_all_demands()
-        if len(demands) < 30:
+        if len(demands) < 5:
             raise ValueError("Se necesitan al menos 30 días de datos históricos")
 
         df = pd.DataFrame([
@@ -36,7 +36,7 @@ class PredictService:
 
         for cat in categories:
             df_cat = df[df['category'] == cat].copy()
-            if len(df_cat) < 30:
+            if len(df_cat) < 5:
                 continue
 
             last_date = df_cat['date'].max()

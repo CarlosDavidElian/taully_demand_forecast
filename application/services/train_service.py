@@ -14,7 +14,7 @@ class TrainService:
     def run(self) -> Dict[str, float]:
         # 1. Obtener historial
         demands = self.demand_repo.get_all_demands()
-        if len(demands) < 30:
+        if len(demands) < 5:
             raise ValueError("Se necesitan al menos 30 días de datos históricos para entrenar")
 
         # 2. Convertir a DataFrame y crear features temporales
@@ -31,7 +31,7 @@ class TrainService:
 
         for cat in categories:
             df_cat = df[df['category'] == cat].copy()
-            if len(df_cat) < 30:
+            if len(df_cat) < 5:
                 continue
 
             # Crear features de tiempo

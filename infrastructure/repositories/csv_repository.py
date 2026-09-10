@@ -31,8 +31,15 @@ class CSVDemandRepository(DemandRepository):
         else:
             df_combined = df_new
 
-        # Guardar
-        df_combined.to_csv(self.file_path, index=False)
+        # Guardar. En Windows, Excel bloquea el archivo mientras está abierto;
+        # devolvemos una instrucción accionable para la interfaz web.
+        try:
+            df_combined.to_csv(self.file_path, index=False)
+        except PermissionError as exc:
+            raise ValueError(
+                "No se puede actualizar el historial porque 'historial_demanda.csv' está abierto "
+                "en otra aplicación. Ciérralo en Excel y vuelve a procesar el reporte."
+            ) from exc
 
     def get_all_demands(self) -> List[Demand]:
         if not self.file_path.exists() or self.file_path.stat().st_size == 0:

@@ -22,8 +22,6 @@ class ExcelReader(SaleReader):
 
         for idx, row in df_raw.iterrows():
             fila_texto = ' '.join([str(x) for x in row.values])
-            print(f"🔍 Fila {idx}: {fila_texto[:80]}...")  # DEPURACIÓN
-
             if 'FECHAI:' in fila_texto and fecha is None:
                 match = re.search(r'FECHAI:\s*(\d{2}/\d{2}/\d{4})', fila_texto)
                 if match:
@@ -31,7 +29,6 @@ class ExcelReader(SaleReader):
 
             if 'PROD' in fila_texto and 'CANT' in fila_texto:
                 inicio_tabla = idx + 1
-                print(f"🔍 Tabla encontrada en fila {idx}, datos desde fila {inicio_tabla}")
                 break
 
         if fecha is None:
@@ -51,13 +48,6 @@ class ExcelReader(SaleReader):
         )
         # Asignamos nombres de columnas
         df_ventas.columns = ['PROD', 'DESC', 'CANT', 'TOTAL']
-
-        print("✅ df_ventas shape:", df_ventas.shape)
-        print("✅ df_ventas dtypes:\n", df_ventas.dtypes)
-        print("✅ df_ventas head:\n", df_ventas.head())
-
-        print("🔍 Columnas de df_ventas:", df_ventas.columns.tolist())
-        print("🔍 Primeras 3 filas de df_ventas:\n", df_ventas.head(3))
 
         # 3. Limpiar datos
         df_ventas = clean_sales_dataframe(df_ventas)

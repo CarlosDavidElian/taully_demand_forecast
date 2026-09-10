@@ -16,19 +16,19 @@ class ExcelCatalogRepository(ProductCatalogRepository):
         if not CATALOG_FILE.exists():
             raise FileNotFoundError(f"Catálogo no encontrado en {CATALOG_FILE}")
         
-        print(f"📂 Leyendo catálogo desde: {CATALOG_FILE}")
-        print(f"📏 Tamaño del archivo: {CATALOG_FILE.stat().st_size} bytes")
+        print(f"INFO Leyendo catálogo desde: {CATALOG_FILE}")
+        print(f"INFO Tamaño del archivo: {CATALOG_FILE.stat().st_size} bytes")
         
         # 2. Intentar leer con openpyxl
         try:
             df = pd.read_excel(CATALOG_FILE, header=0, dtype=str, engine='openpyxl')
         except Exception as e:
-            print(f"❌ Error al leer con openpyxl: {e}")
+            print(f"ERROR al leer con openpyxl: {e}")
             # Fallback: leer sin especificar motor
             df = pd.read_excel(CATALOG_FILE, header=0, dtype=str)
         
-        print(f"✅ Columnas encontradas: {df.columns.tolist()}")
-        print(f"✅ Filas encontradas: {len(df)}")
+        print(f"OK Columnas encontradas: {df.columns.tolist()}")
+        print(f"OK Filas encontradas: {len(df)}")
         if len(df) > 0:
             print("Primeras 3 filas:\n", df.head(3))
         
@@ -62,7 +62,7 @@ class ExcelCatalogRepository(ProductCatalogRepository):
             )
             self._products.append(product)
         
-        print(f"✅ {len(self._products)} productos cargados correctamente")
+        print(f"OK {len(self._products)} productos cargados correctamente")
 
     def get_product(self, product_name: str) -> Optional[Product]:
         for p in self._products:

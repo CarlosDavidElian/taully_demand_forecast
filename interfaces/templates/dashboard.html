@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Panel de gestión y pronóstico de demanda de Minimarket Taully." />
+    <title>Taully · Demanda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <a class="brand" href="/" aria-label="Inicio de Taully Demanda">
+          <span class="brand-mark" aria-hidden="true">T</span>
+          <span>taully<span class="brand-light">.demanda</span></span>
+        </a>
+        <div class="live-indicator"><span></span> Panel operativo</div>
+      </header>
+
+      <section class="intro" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">MINIMARKET TAULLY</p>
+          <h1 id="page-title">Control de demanda,<br /><em>sin la terminal.</em></h1>
+          <p class="intro-copy">Carga reportes, entrena el modelo y revisa el pronóstico desde un solo lugar.</p>
+        </div>
+        <div class="date-card">
+          <span>ÚLTIMA ACTUALIZACIÓN</span>
+          <strong id="last-date">Sin historial</strong>
+        </div>
+      </section>
+
+      <section class="action-grid" aria-label="Acciones principales">
+        <form id="upload-form" class="action-card upload-card">
+          <div class="card-number">01</div>
+          <div class="action-content">
+            <p class="action-label">CARGAR REPORTE</p>
+            <h2>Incorpora las ventas del día</h2>
+            <p>Formatos compatibles: Excel o PDF.</p>
+            <label class="file-control" for="report">
+              <span id="file-name">Seleccionar archivo</span>
+              <span class="file-button">Examinar</span>
+            </label>
+            <input id="report" name="report" type="file" accept=".xlsx,.xls,.pdf" required />
+            <button class="button button-primary" type="submit">Procesar reporte <span aria-hidden="true">↗</span></button>
+          </div>
+        </form>
+
+        <section class="action-card train-card" aria-labelledby="train-heading">
+          <div class="card-number">02</div>
+          <div class="action-content">
+            <p class="action-label">MODELO</p>
+            <h2 id="train-heading">Actualiza el pronóstico</h2>
+            <p>Entrena el modelo con el historial consolidado actual.</p>
+            <button id="train-button" class="button button-dark" type="button">Entrenar modelo <span aria-hidden="true">→</span></button>
+            <dl id="metrics" class="metrics" hidden>
+              <div><dt>MAPE</dt><dd id="metric-mape">—</dd></div>
+              <div><dt>RMSE</dt><dd id="metric-rmse">—</dd></div>
+              <div><dt>MAE</dt><dd id="metric-mae">—</dd></div>
+            </dl>
+          </div>
+        </section>
+
+        <section class="action-card forecast-card" aria-labelledby="forecast-heading">
+          <div class="card-number">03</div>
+          <div class="action-content">
+            <p class="action-label">PRONÓSTICO</p>
+            <h2 id="forecast-heading">Mira lo que viene</h2>
+            <p>Genera una estimación por familia de productos.</p>
+            <div class="forecast-controls">
+              <label for="days">Horizonte</label>
+              <select id="days" name="days">
+                <option value="7">7 días</option>
+                <option value="14">14 días</option>
+                <option value="30">30 días</option>
+              </select>
+            </div>
+            <button id="forecast-button" class="button button-outline" type="button">Generar pronóstico <span aria-hidden="true">→</span></button>
+          </div>
+        </section>
+      </section>
+
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+
+      <section class="stats" aria-label="Resumen del historial">
+        <article><span>REGISTROS</span><strong id="records">—</strong></article>
+        <article><span>FAMILIAS</span><strong id="categories-count">—</strong></article>
+        <article><span>UNIDADES HISTÓRICAS</span><strong id="total-quantity">—</strong></article>
+      </section>
+
+      <section class="content-grid">
+        <article class="panel category-panel">
+          <div class="panel-heading">
+            <div><p class="eyebrow">HISTORIAL</p><h2>Demanda por familia</h2></div>
+            <span class="panel-note">Acumulado</span>
+          </div>
+          <div id="category-bars" class="category-bars">
+            <p class="empty-state">Cargando historial…</p>
+          </div>
+        </article>
+
+        <article class="panel recent-panel">
+          <div class="panel-heading">
+            <div><p class="eyebrow">ÚLTIMOS MOVIMIENTOS</p><h2>Actividad reciente</h2></div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Fecha</th><th>Familia</th><th>Unidades</th></tr></thead>
+              <tbody id="recent-table"><tr><td colspan="3" class="empty-state">Cargando historial…</td></tr></tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+
+      <section id="forecast-results" class="panel results-panel" hidden aria-labelledby="results-title">
+        <div class="panel-heading">
+          <div><p class="eyebrow">RESULTADO</p><h2 id="results-title">Próxima demanda estimada</h2></div>
+          <span id="forecast-period" class="panel-note"></span>
+        </div>
+        <div id="prediction-list" class="prediction-list"></div>
+      </section>
+    </main>
+    <script src="{{ url_for('static', filename='dashboard.js') }}"></script>
+  </body>
+</html>

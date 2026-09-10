@@ -1,15 +1,15 @@
 import pandas as pd
 import numpy as np
-from typing import Dict, Tuple
+import joblib
+from typing import Dict
 
 from domain.interfaces.repositories import DemandRepository
 from infrastructure.ml.model_trainer import ModelTrainer
-from config.settings import BEST_MODEL_FILE
+from config.settings import MODELS_FILE
 
 class TrainService:
     def __init__(self, demand_repo: DemandRepository):
         self.demand_repo = demand_repo
-        self.trainer = ModelTrainer()
 
     def run(self) -> Dict[str, float]:
         # 1. Obtener historial
@@ -27,7 +27,8 @@ class TrainService:
         # 3. Preparar datos para entrenamiento (por categoría)
         # Vamos a entrenar un modelo por categoría para mayor precisión
         categories = df['category'].unique()
-        best_overall_metrics = {}
+        models_by_category = {}
+        metrics_by_category = []
 
         for cat in categories:
             df_cat = df[df['category'] == cat].copy()
@@ -51,13 +52,23 @@ class TrainService:
             X = df_cat[features].values
             y = df_cat['quantity'].values
 
-            # Entrenar modelo para esta categoría
-            metrics = self.trainer.train(X, y, model_name=f"model_{cat}")
+            # Cada categoría necesita su propio modelo: sus cantidades y su
+            # comportamiento histórico no son intercambiables.
+            trainer = ModelTrainer()
+            metrics = trainer.train(X, y, model_name=f"model_{cat}")
+            models_by_category[str(cat)] = trainer.best_model
+            metrics_by_category.append(metrics)
 
-            # Guardar el mejor modelo global (el de menor MAPE)
-            if 'mape' in metrics:
-                if not best_overall_metrics or metrics['mape'] < best_overall_metrics.get('mape', float('inf')):
-                    best_overall_metrics = metrics
-                    self.trainer.save_best_model(BEST_MODEL_FILE)
+        if not models_by_category:
+            return {}
 
-        return best_overall_metrics
+        # Guardar todos los modelos en un único artefacto simplifica la carga
+        # desde la web y garantiza que cada pronóstico use su propia categoría.
+        joblib.dump(models_by_category, MODELS_FILE)
+
+        # La interfaz muestra un resumen representativo de las categorías
+        # entrenadas, no las métricas del "mejor" modelo aislado.
+        return {
+            name: float(np.mean([metrics[name] for metrics in metrics_by_category]))
+            for name in ("mae", "rmse", "mape")
+        }

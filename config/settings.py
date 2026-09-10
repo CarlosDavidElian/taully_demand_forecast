@@ -8,7 +8,8 @@ MODELS_DIR = DATA_DIR / "models"
 
 CATALOG_FILE = DATA_DIR / "catalogo_maestro.xlsx"
 HISTORIAL_FILE = DATA_DIR / "historial_demanda.csv"
-BEST_MODEL_FILE = MODELS_DIR / "best_model.pkl"
+# Artefacto que contiene un modelo entrenado por cada categoría de producto.
+MODELS_FILE = MODELS_DIR / "models_by_category.pkl"
 
 TIME_FEATURES = ['day_of_week', 'month', 'day_of_year', 'is_weekend']
 

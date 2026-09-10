@@ -13,25 +13,25 @@ from application.use_cases.run_forecast import RunForecastUseCase
 def main():
     args = parse_arguments()
 
-    # Inicializar dependencias (inyección de dependencias)
-    catalog_repo = ExcelCatalogRepository()
+    # Inicializar solo las dependencias requeridas por el comando. Así el
+    # entrenamiento y el pronóstico no dependen de abrir el catálogo Excel.
     demand_repo = CSVDemandRepository()
-
-    ingest_service = IngestService(catalog_repo, demand_repo)
     train_service = TrainService(demand_repo)
     predict_service = PredictService(demand_repo)
 
     if args.command == 'load':
+        catalog_repo = ExcelCatalogRepository()
+        ingest_service = IngestService(catalog_repo, demand_repo)
         use_case = ProcessReportUseCase(ingest_service)
         try:
             demands = use_case.execute(args.file)
-            print("📊 Resumen de demanda procesada:")
+            print("Resumen de demanda procesada:")
             for d in demands[:5]:  # Mostrar solo los primeros 5
                 print(f"  - {d.date.strftime('%Y-%m-%d')} | {d.category}: {d.quantity:.2f}")
             if len(demands) > 5:
                 print(f"  ... y {len(demands)-5} registros más.")
         except Exception as e:
-            print(f"❌ Error al procesar el archivo: {e}")
+            print(f"Error al procesar el archivo: {e}")
             sys.exit(1)
 
     elif args.command == 'train':
@@ -39,9 +39,9 @@ def main():
         try:
             # Solo entrenar, sin predecir (o predecir solo para validar)
             metrics = train_service.run()
-            print(f"✅ Modelo entrenado. MAPE: {metrics.get('mape', 'N/A')}%")
+            print(f"Modelo entrenado. MAPE: {metrics.get('mape', 'N/A')}%")
         except Exception as e:
-            print(f"❌ Error al entrenar: {e}")
+            print(f"Error al entrenar: {e}")
             sys.exit(1)
 
     elif args.command == 'predict':
@@ -49,7 +49,7 @@ def main():
         try:
             predictions = use_case.execute(args.days)
         except Exception as e:
-            print(f"❌ Error al predecir: {e}")
+            print(f"Error al predecir: {e}")
             sys.exit(1)
 
     else:

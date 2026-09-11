@@ -7,38 +7,60 @@
     <title>Taully · Demanda</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}" />
   </head>
   <body>
     <main class="shell">
       <header class="topbar">
         <a class="brand" href="/" aria-label="Inicio de Taully Demanda">
-          <span class="brand-mark" aria-hidden="true">T</span>
-          <span>taully<span class="brand-light">.demanda</span></span>
+          <span class="brand-logo-frame"><img class="brand-logo" src="{{ url_for('brand_logo') }}" alt="" /></span>
+          <span class="brand-divider" aria-hidden="true"></span>
+          <span class="brand-copy"><strong>SISTEMA DE DEMANDA</strong><small>MINIMARKET TAULLY</small></span>
         </a>
-        <div class="live-indicator"><span></span> Panel operativo</div>
+        <div class="project-tag"><span class="tag-dot" aria-hidden="true"></span> PROYECTO DE TESIS · PANEL OPERATIVO</div>
       </header>
 
       <section class="intro" aria-labelledby="page-title">
         <div>
-          <p class="eyebrow">MINIMARKET TAULLY</p>
-          <h1 id="page-title">Control de demanda,<br /><em>sin la terminal.</em></h1>
-          <p class="intro-copy">Carga reportes, entrena el modelo y revisa el pronóstico desde un solo lugar.</p>
+          <p class="eyebrow">MINIMARKET TAULLY · ANÁLISIS PREDICTIVO</p>
+          <h1 id="page-title">Sistema de pronóstico<br /><em>de demanda.</em></h1>
+          <p class="intro-copy">Panel de apoyo a la toma de decisiones que consolida ventas históricas, entrena modelos predictivos y estima la demanda futura por familia de productos.</p>
         </div>
         <div class="date-card">
-          <span>ÚLTIMA ACTUALIZACIÓN</span>
+          <span>ÚLTIMO DATO INCORPORADO</span>
           <strong id="last-date">Sin historial</strong>
+          <small>Fecha más reciente en el historial</small>
         </div>
       </section>
+
+      <section class="research-context" aria-label="Contexto del proyecto">
+        <div class="context-item">
+          <span class="context-index">01</span>
+          <div><strong>Fuente de información</strong><p>Reportes de ventas en formato Excel o PDF.</p></div>
+        </div>
+        <div class="context-item">
+          <span class="context-index">02</span>
+          <div><strong>Proceso analítico</strong><p>Consolidación de datos y entrenamiento por familia.</p></div>
+        </div>
+        <div class="context-item">
+          <span class="context-index">03</span>
+          <div><strong>Resultado esperado</strong><p>Pronóstico para la planificación de inventario.</p></div>
+        </div>
+      </section>
+
+      <div class="section-heading">
+        <div><p class="eyebrow">FLUJO DE EJECUCIÓN</p><h2>Procesamiento del pronóstico</h2></div>
+        <p>Complete las tres etapas en orden para actualizar la estimación.</p>
+      </div>
 
       <section class="action-grid" aria-label="Acciones principales">
         <form id="upload-form" class="action-card upload-card">
           <div class="card-number">01</div>
           <div class="action-content">
             <p class="action-label">CARGAR REPORTE</p>
-            <h2>Incorpora las ventas del día</h2>
-            <p>Formatos compatibles: Excel o PDF.</p>
+            <h2>Incorpore las ventas registradas</h2>
+            <p>Formatos compatibles: Excel o PDF. Los datos se consolidan por fecha y familia.</p>
             <label class="file-control" for="report">
               <span id="file-name">Seleccionar archivo</span>
               <span class="file-button">Examinar</span>
@@ -52,8 +74,8 @@
           <div class="card-number">02</div>
           <div class="action-content">
             <p class="action-label">MODELO</p>
-            <h2 id="train-heading">Actualiza el pronóstico</h2>
-            <p>Entrena el modelo con el historial consolidado actual.</p>
+            <h2 id="train-heading">Entrene el modelo predictivo</h2>
+            <p>Actualiza el modelo con el historial de demanda consolidado.</p>
             <button id="train-button" class="button button-dark" type="button">Entrenar modelo <span aria-hidden="true">→</span></button>
             <dl id="metrics" class="metrics" hidden>
               <div><dt>MAPE</dt><dd id="metric-mape">—</dd></div>
@@ -67,8 +89,8 @@
           <div class="card-number">03</div>
           <div class="action-content">
             <p class="action-label">PRONÓSTICO</p>
-            <h2 id="forecast-heading">Mira lo que viene</h2>
-            <p>Genera una estimación por familia de productos.</p>
+            <h2 id="forecast-heading">Genere la estimación futura</h2>
+            <p>Obtiene una proyección por familia de productos y periodo.</p>
             <div class="forecast-controls">
               <label for="days">Horizonte</label>
               <select id="days" name="days">
@@ -84,10 +106,16 @@
 
       <p id="status" class="status" role="status" aria-live="polite"></p>
 
-      <section class="stats" aria-label="Resumen del historial">
-        <article><span>REGISTROS</span><strong id="records">—</strong></article>
-        <article><span>FAMILIAS</span><strong id="categories-count">—</strong></article>
-        <article><span>UNIDADES HISTÓRICAS</span><strong id="total-quantity">—</strong></article>
+      <section class="dashboard-section" aria-labelledby="history-title">
+        <div class="section-heading section-heading-compact">
+          <div><p class="eyebrow">RESULTADOS DEL HISTORIAL</p><h2 id="history-title">Resumen de datos procesados</h2></div>
+          <p>Indicadores calculados a partir de los reportes incorporados.</p>
+        </div>
+        <div class="stats" aria-label="Resumen del historial">
+          <article><span>REGISTROS PROCESADOS</span><strong id="records">—</strong><small>observaciones consolidadas</small></article>
+          <article><span>FAMILIAS ANALIZADAS</span><strong id="categories-count">—</strong><small>categorías de productos</small></article>
+          <article><span>UNIDADES HISTÓRICAS</span><strong id="total-quantity">—</strong><small>demanda acumulada</small></article>
+        </div>
       </section>
 
       <section class="content-grid">

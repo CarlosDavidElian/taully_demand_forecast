@@ -6,13 +6,13 @@ import tempfile
 from pathlib import Path
 from typing import Any
 
-from flask import Flask, jsonify, render_template, request
+from flask import Flask, jsonify, render_template, request, send_from_directory
 from werkzeug.utils import secure_filename
 
 from application.services.ingest_service import IngestService
 from application.services.predict_service import PredictService
 from application.services.train_service import TrainService
-from config.settings import MODELS_FILE
+from config.settings import BASE_DIR, MODELS_FILE
 from infrastructure.repositories.catalog_repository import ExcelCatalogRepository
 from infrastructure.repositories.csv_repository import CSVDemandRepository
 
@@ -34,6 +34,11 @@ def create_app(test_config: dict[str, Any] | None = None) -> Flask:
     @app.get("/")
     def dashboard() -> str:
         return render_template("dashboard.html")
+
+    @app.get("/logo.jpg")
+    def brand_logo():
+        """Entrega el logo corporativo que se muestra en el encabezado."""
+        return send_from_directory(str(BASE_DIR), "logo.jpg")
 
     @app.get("/api/dashboard")
     def dashboard_data():

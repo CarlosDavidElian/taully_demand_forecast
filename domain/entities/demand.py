@@ -3,9 +3,9 @@ from datetime import datetime
 
 @dataclass
 class Demand:
-    """Representa la demanda consolidada por categoría en un día."""
+    """Representa la demanda consolidada por producto en un día."""
     date: datetime
-    category: str       # Usamos 'category' (o family) como agrupador
+    category: str       # Nombre del producto; se conserva por compatibilidad.
     quantity: float
 
     def __post_init__(self):

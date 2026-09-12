@@ -29,19 +29,16 @@ class IngestService:
         # 2. Leer las ventas del archivo
         sales: List[Sale] = reader.read_sales(str(path))
 
-        # 3. Enriquecer con categoría (Family) usando el catálogo
+        # 3. Consolidar por producto. Cada presentación se mantiene separada
+        #    para que el pronóstico represente, por ejemplo, "GLORIA AZUL 400"
+        #    y "GLORIA UHT ROJA" como productos diferentes.
         demands_dict = {}
         for sale in sales:
-            product = self.catalog_repo.get_product(sale.product_name)
-            if product is None:
-                # Si no está en el catálogo, lo ignoramos o asignamos "DESCONOCIDO"
-                # Para este caso, lo asignamos a "OTROS" para no perder el dato
-                category = "OTROS"
-            else:
-                category = product.family  # Usamos 'family' como agrupador principal
+            product_name = sale.product_name
 
-            # Agrupar por (fecha, categoria) sumando cantidades
-            key = (sale.date, category)
+            # Agrupar por (fecha, producto) sumando cantidades cuando el mismo
+            # producto aparece más de una vez en un reporte.
+            key = (sale.date, product_name)
             if key in demands_dict:
                 demands_dict[key] += sale.quantity
             else:

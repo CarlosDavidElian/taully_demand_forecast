@@ -14,45 +14,32 @@ class ExcelReader(SaleReader):
     - Tabla con columnas: PROD, DESC, CANT, TOTAL.
     """
     def read_sales(self, file_path: str) -> List[Sale]:
-        # 1. Leer el archivo una primera vez para encontrar la fila de la tabla
+        # Leemos la hoja completa una sola vez. El reporte POS suele tener
+        # información antes de la tabla y no siempre fija sus columnas en A:D.
         df_raw = pd.read_excel(file_path, header=None, dtype=str)
+        fecha = self._extract_start_date(df_raw)
+        header_index, column_indexes = self._find_table_header(df_raw)
 
-        fecha = None
-        inicio_tabla = None
-
-        for idx, row in df_raw.iterrows():
-            fila_texto = ' '.join([str(x) for x in row.values])
-            if 'FECHAI:' in fila_texto and fecha is None:
-                match = re.search(r'FECHAI:\s*(\d{2}/\d{2}/\d{4})', fila_texto)
-                if match:
-                    fecha = datetime.strptime(match.group(1), '%d/%m/%Y')
-
-            if 'PROD' in fila_texto and 'CANT' in fila_texto:
-                inicio_tabla = idx + 1
-                break
-
-        if fecha is None:
-            raise ValueError("No se encontró 'FECHAI' en el archivo Excel")
-        if inicio_tabla is None:
-            raise ValueError("No se encontró la tabla con 'PROD' y 'CANT'")
-
-        # 2. Leer nuevamente el archivo saltando las filas hasta el inicio de la tabla
-        #    usamos skiprows para omitir las filas de encabezado y solo leer la tabla
-        #    Además, forzamos dtype=str y header=None
-        df_ventas = pd.read_excel(
-            file_path,
-            skiprows=inicio_tabla,   # salta todas las filas antes de la tabla
-            header=None,
-            dtype=str,
-            usecols="A:D"            # solo las primeras 4 columnas
+        selected = pd.DataFrame(
+            {
+                "PROD": df_raw.iloc[header_index + 1 :, column_indexes["PROD"]],
+                "CANT": df_raw.iloc[header_index + 1 :, column_indexes["CANT"]],
+            }
         )
-        # Asignamos nombres de columnas
-        df_ventas.columns = ['PROD', 'DESC', 'CANT', 'TOTAL']
+        if "TOTAL" in column_indexes:
+            selected["TOTAL"] = df_raw.iloc[header_index + 1 :, column_indexes["TOTAL"]]
+        else:
+            # TOTAL no se usa para consolidar demanda; mantenerlo en cero
+            # permite procesar reportes válidos que no lo muestran.
+            selected["TOTAL"] = "0"
 
-        # 3. Limpiar datos
+        # Limpiar datos
+        df_ventas = selected
         df_ventas = clean_sales_dataframe(df_ventas)
+        if df_ventas.empty:
+            raise ValueError("El reporte Excel no contiene filas de venta válidas.")
 
-        # 4. Mapear a entidades Sale
+        # Mapear a entidades Sale
         sales = []
         for _, row in df_ventas.iterrows():
             sale = Sale(
@@ -64,3 +51,38 @@ class ExcelReader(SaleReader):
             sales.append(sale)
 
         return sales
+
+    @staticmethod
+    def _extract_start_date(dataframe: pd.DataFrame) -> datetime:
+        """Encuentra FECHAI aun cuando etiqueta y fecha estén en celdas distintas."""
+        pattern = re.compile(r"FECHAI\s*:?\s*(\d{1,2}/\d{1,2}/\d{4})", re.IGNORECASE)
+        for _, row in dataframe.iterrows():
+            values = [str(value).strip() for value in row.values if pd.notna(value)]
+            row_text = " ".join(values)
+            match = pattern.search(row_text)
+            if match:
+                return datetime.strptime(match.group(1), "%d/%m/%Y")
+
+            # Algunos exportadores separan "FECHAI" y "12/09/2026" en
+            # dos celdas. Solo aceptamos una fecha de la misma fila.
+            if any(value.upper().rstrip(":") == "FECHAI" for value in values):
+                for value in values:
+                    date_match = re.fullmatch(r"\d{1,2}/\d{1,2}/\d{4}", value)
+                    if date_match:
+                        return datetime.strptime(date_match.group(0), "%d/%m/%Y")
+        raise ValueError("No se encontró 'FECHAI' en el archivo Excel")
+
+    @staticmethod
+    def _find_table_header(dataframe: pd.DataFrame) -> tuple[int, dict[str, int]]:
+        required = {"PROD", "CANT"}
+        for row_index, row in dataframe.iterrows():
+            headers: dict[str, int] = {}
+            for column_index, value in enumerate(row.values):
+                if pd.isna(value):
+                    continue
+                header = str(value).strip().upper()
+                if header in {"PROD", "DESC", "CANT", "TOTAL"}:
+                    headers.setdefault(header, column_index)
+            if required.issubset(headers):
+                return row_index, headers
+        raise ValueError("No se encontró la tabla con las columnas 'PROD' y 'CANT'")

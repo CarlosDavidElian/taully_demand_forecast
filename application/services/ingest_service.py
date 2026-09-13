@@ -3,18 +3,17 @@ from pathlib import Path
 
 from domain.entities.sale import Sale
 from domain.entities.demand import Demand
-from domain.interfaces.repositories import SaleReader, DemandRepository, ProductCatalogRepository
+from domain.interfaces.repositories import SaleReader, DemandRepository
 from infrastructure.readers.excel_reader import ExcelReader
 from infrastructure.readers.pdf_reader import PDFReader
 
 class IngestService:
     def __init__(
         self,
-        catalog_repo: ProductCatalogRepository,
         demand_repo: DemandRepository
     ):
-        self.catalog_repo = catalog_repo
         self.demand_repo = demand_repo
+        self.last_save_summary = {"added": 0, "updated": 0, "unchanged": 0}
 
     def process_file(self, file_path: str) -> List[Demand]:
         # 1. Seleccionar el reader adecuado según la extensión
@@ -50,7 +49,11 @@ class IngestService:
             for (date, cat), qty in demands_dict.items()
         ]
 
-        # 5. Guardar en el repositorio (historial)
-        self.demand_repo.save_demands(demands)
+        if not demands:
+            raise ValueError("El reporte no contiene ventas válidas para incorporar.")
+
+        # 5. Guardar en el repositorio (historial) y conservar el resultado
+        #    para informar a la interfaz qué cambió realmente.
+        self.last_save_summary = self.demand_repo.save_demands(demands)
 
         return demands

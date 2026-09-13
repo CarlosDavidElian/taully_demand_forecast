@@ -1,11 +1,13 @@
 import pandas as pd
 import numpy as np
 import joblib
+from datetime import datetime, timezone
 from typing import Dict
 
 from domain.interfaces.repositories import DemandRepository
+from application.services.history_fingerprint import history_fingerprint
 from infrastructure.ml.model_trainer import ModelTrainer
-from config.settings import MODELS_FILE
+from config.settings import MODELS_FILE, TIME_FEATURES
 
 class TrainService:
     def __init__(self, demand_repo: DemandRepository):
@@ -14,7 +16,7 @@ class TrainService:
     def run(self) -> Dict[str, float]:
         # 1. Obtener historial
         demands = self.demand_repo.get_all_demands()
-        if len(demands) < 5:
+        if len({demand.date.date() for demand in demands}) < 30:
             raise ValueError("Se necesitan al menos 30 días de datos históricos para entrenar")
 
         # 2. Convertir a DataFrame y crear features temporales
@@ -24,15 +26,21 @@ class TrainService:
         ])
         df = df.sort_values('date').reset_index(drop=True)
 
-        # 3. Preparar datos para entrenamiento (por categoría)
-        # Vamos a entrenar un modelo por categoría para mayor precisión
+        # 3. Preparar datos por producto. Se usan solamente variables de
+        # calendario: las antiguas variables lag/media móvil incluían la venta
+        # que se quería predecir y producían métricas engañosamente perfectas.
         categories = df['category'].unique()
         models_by_category = {}
         metrics_by_category = []
 
         for cat in categories:
             df_cat = df[df['category'] == cat].copy()
-            if len(df_cat) < 5:
+            if df_cat['date'].nunique() < 30:
+                continue
+            if df_cat['quantity'].nunique() < 2:
+                # Una serie constante no permite demostrar precisión de un
+                # pronóstico; se informa al usuario en vez de guardar un
+                # modelo con MAPE artificialmente igual a cero.
                 continue
 
             # Crear features de tiempo
@@ -41,14 +49,8 @@ class TrainService:
             df_cat['day_of_year'] = df_cat['date'].dt.dayofyear
             df_cat['is_weekend'] = (df_cat['day_of_week'] >= 5).astype(int)
 
-            # Feature de lag (día anterior)
-            df_cat['lag_1'] = df_cat['quantity'].shift(1).bfill()
-
-            # Feature de media móvil 7 días
-            df_cat['rolling_7'] = df_cat['quantity'].rolling(7, min_periods=1).mean().bfill()
-
             # Dividir en X e y
-            features = ['day_of_week', 'month', 'day_of_year', 'is_weekend', 'lag_1', 'rolling_7']
+            features = TIME_FEATURES
             X = df_cat[features].values
             y = df_cat['quantity'].values
 
@@ -60,11 +62,25 @@ class TrainService:
             metrics_by_category.append(metrics)
 
         if not models_by_category:
-            return {}
+            raise ValueError(
+                "No hay productos entrenables: cada producto necesita al menos 30 fechas "
+                "y cantidades que varíen. Revisa los reportes cargados."
+            )
 
         # Guardar todos los modelos en un único artefacto simplifica la carga
         # desde la web y garantiza que cada pronóstico use su propia categoría.
-        joblib.dump(models_by_category, MODELS_FILE)
+        joblib.dump(
+            {
+                "version": 2,
+                "models": models_by_category,
+                "metadata": {
+                    "history_fingerprint": history_fingerprint(demands),
+                    "trained_at": datetime.now(timezone.utc).isoformat(),
+                    "features": features,
+                },
+            },
+            MODELS_FILE,
+        )
 
         # La interfaz muestra un resumen representativo de las categorías
         # entrenadas, no las métricas del "mejor" modelo aislado.

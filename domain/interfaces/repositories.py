@@ -13,7 +13,8 @@ class SaleReader(ABC):
 class DemandRepository(ABC):
     """Contrato para almacenar y recuperar la demanda histórica."""
     @abstractmethod
-    def save_demands(self, demands: List[Demand]) -> None:
+    def save_demands(self, demands: List[Demand]) -> dict[str, int]:
+        """Guarda demandas y devuelve el detalle de filas nuevas o actualizadas."""
         pass
 
     @abstractmethod

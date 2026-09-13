@@ -6,9 +6,14 @@ const forecastButton = document.querySelector("#forecast-button");
 
 const numberFormat = new Intl.NumberFormat("es-PE", { maximumFractionDigits: 2 });
 const dateFormat = new Intl.DateTimeFormat("es-PE", { day: "2-digit", month: "short", year: "numeric", timeZone: "UTC" });
+const dateTimeFormat = new Intl.DateTimeFormat("es-PE", { dateStyle: "medium", timeStyle: "short" });
 
 function formatDate(value) {
   return value ? dateFormat.format(new Date(`${value}T00:00:00Z`)) : "Sin historial";
+}
+
+function formatDateTime(value) {
+  return value ? `Historial actualizado: ${dateTimeFormat.format(new Date(value))}` : "Historial aún no actualizado";
 }
 
 function escapeHtml(value) {
@@ -36,18 +41,19 @@ async function request(url, options = {}) {
 }
 
 function renderDashboard(data) {
-  const { summary, categories, recent } = data;
+  const { summary, products, recent } = data;
   document.querySelector("#records").textContent = numberFormat.format(summary.records);
-  document.querySelector("#categories-count").textContent = numberFormat.format(summary.categories);
+  document.querySelector("#products-count").textContent = numberFormat.format(summary.products);
   document.querySelector("#total-quantity").textContent = numberFormat.format(summary.total_quantity);
-  document.querySelector("#last-date").textContent = formatDate(summary.last_date);
+  document.querySelector("#last-sale-date").textContent = formatDate(summary.last_sale_date);
+  document.querySelector("#history-updated-at").textContent = formatDateTime(summary.history_updated_at);
 
   const bars = document.querySelector("#category-bars");
-  if (!categories.length) {
+  if (!products.length) {
     bars.innerHTML = '<p class="empty-state">Aún no hay demanda cargada. Empieza procesando un reporte.</p>';
   } else {
-    const maximum = Math.max(...categories.map((item) => item.quantity), 1);
-    bars.innerHTML = categories.slice(0, 8).map((item) => `
+    const maximum = Math.max(...products.map((item) => item.quantity), 1);
+    bars.innerHTML = products.slice(0, 8).map((item) => `
       <div class="bar-row">
         <span class="bar-label" title="${escapeHtml(item.name)}">${escapeHtml(item.name)}</span>
         <div class="bar-track"><div class="bar-value" style="width: ${(item.quantity / maximum) * 100}%"></div></div>
@@ -83,7 +89,13 @@ uploadForm.addEventListener("submit", async (event) => {
     const formData = new FormData(uploadForm);
     const data = await request("/api/reports", { method: "POST", body: formData });
     renderDashboard(data.dashboard);
-    setStatus(`${data.message} Se incorporaron ${numberFormat.format(data.records)} registros.`, "success");
+    const summary = data.save_summary;
+    setStatus(
+      `${data.message} Nuevos: ${numberFormat.format(summary.added)} · actualizados: ${numberFormat.format(summary.updated)} · sin cambios: ${numberFormat.format(summary.unchanged)}. Entrena nuevamente antes de pronosticar.`,
+      "success"
+    );
+    document.querySelector("#metrics").hidden = true;
+    document.querySelector("#forecast-results").hidden = true;
     uploadForm.reset();
     document.querySelector("#file-name").textContent = "Seleccionar archivo";
   } catch (error) {
@@ -113,7 +125,7 @@ trainButton.addEventListener("click", async () => {
 forecastButton.addEventListener("click", async () => {
   const days = Number(document.querySelector("#days").value);
   setButtonLoading(forecastButton, true, "Calculando");
-  setStatus("Calculando el pronóstico por familia…", "working");
+  setStatus("Calculando el pronóstico por producto…", "working");
   try {
     const data = await request("/api/forecast", {
       method: "POST",

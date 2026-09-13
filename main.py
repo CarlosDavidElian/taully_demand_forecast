@@ -3,7 +3,6 @@ from pathlib import Path
 
 from interfaces.cli import parse_arguments
 from infrastructure.repositories.csv_repository import CSVDemandRepository
-from infrastructure.repositories.catalog_repository import ExcelCatalogRepository
 from application.services.ingest_service import IngestService
 from application.services.train_service import TrainService
 from application.services.predict_service import PredictService
@@ -20,8 +19,7 @@ def main():
     predict_service = PredictService(demand_repo)
 
     if args.command == 'load':
-        catalog_repo = ExcelCatalogRepository()
-        ingest_service = IngestService(catalog_repo, demand_repo)
+        ingest_service = IngestService(demand_repo)
         use_case = ProcessReportUseCase(ingest_service)
         try:
             demands = use_case.execute(args.file)
@@ -45,7 +43,7 @@ def main():
             sys.exit(1)
 
     elif args.command == 'predict':
-        use_case = RunForecastUseCase(train_service, predict_service)
+        use_case = RunForecastUseCase(predict_service)
         try:
             predictions = use_case.execute(args.days)
         except Exception as e:

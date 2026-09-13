@@ -1,9 +1,7 @@
 import pandas as pd
 import tabula
 import pdfplumber
-import re
 from typing import List
-from datetime import datetime
 
 from domain.interfaces.repositories import SaleReader
 from domain.entities.sale import Sale
@@ -22,18 +20,22 @@ class PDFReader(SaleReader):
         with pdfplumber.open(file_path) as pdf:
             texto_completo = ""
             for page in pdf.pages:
-                texto_completo += page.extract_text() + "\n"
+                texto_completo += (page.extract_text() or "") + "\n"
             fecha = extract_date_from_text(texto_completo)
 
         # 2. Extraer la tabla usando tabula (busca la primera tabla que tenga PROD y CANT)
-        tablas = tabula.read_pdf(file_path, pages='all', multiple_tables=True, guess=False)
+        try:
+            tablas = tabula.read_pdf(file_path, pages='all', multiple_tables=True, guess=False)
+        except Exception as exc:
+            raise ValueError("No se pudo leer la tabla de ventas del PDF.") from exc
         
         df_ventas = None
         for tabla in tablas:
             # Normalizar nombres de columnas
             tabla.columns = tabla.columns.str.upper().str.strip()
             if 'PROD' in tabla.columns and 'CANT' in tabla.columns:
-                df_ventas = tabla[['PROD', 'DESC', 'CANT', 'TOTAL']].copy()
+                df_ventas = tabla[['PROD', 'CANT']].copy()
+                df_ventas['TOTAL'] = tabla['TOTAL'] if 'TOTAL' in tabla.columns else '0'
                 break
         
         if df_ventas is None:
@@ -41,6 +43,8 @@ class PDFReader(SaleReader):
         
         # 3. Limpiar los datos (quitar ANULADO, convertir a números)
         df_ventas = clean_sales_dataframe(df_ventas)
+        if df_ventas.empty:
+            raise ValueError("El PDF no contiene filas de venta válidas.")
 
         # 4. Mapear a entidades Sale
         sales = []

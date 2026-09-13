@@ -23,15 +23,27 @@ class SQLiteDemandRepository(DemandRepository):
                 )
             """)
 
-    def save_demands(self, demands: List[Demand]) -> None:
+    def save_demands(self, demands: List[Demand]) -> dict[str, int]:
+        added = updated = unchanged = 0
         with sqlite3.connect(self.db_path) as conn:
             cursor = conn.cursor()
             for d in demands:
+                previous = cursor.execute(
+                    "SELECT quantity FROM demands WHERE date = ? AND category = ?",
+                    (d.date.isoformat(), d.category),
+                ).fetchone()
+                if previous is None:
+                    added += 1
+                elif float(previous[0]) == float(d.quantity):
+                    unchanged += 1
+                else:
+                    updated += 1
                 cursor.execute(
                     "INSERT OR REPLACE INTO demands (date, category, quantity) VALUES (?, ?, ?)",
                     (d.date.isoformat(), d.category, d.quantity)
                 )
             conn.commit()
+        return {"added": added, "updated": updated, "unchanged": unchanged}
 
     def get_all_demands(self) -> List[Demand]:
         with sqlite3.connect(self.db_path) as conn:

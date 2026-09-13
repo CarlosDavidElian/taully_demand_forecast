@@ -8,7 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}" />
+    <link rel="icon" href="{{ url_for('favicon', v='3') }}" sizes="any" />
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='taully-favicon.png', v='3') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css', v='2') }}" />
   </head>
   <body>
     <main class="shell">
@@ -25,12 +27,12 @@
         <div>
           <p class="eyebrow">MINIMARKET TAULLY · ANÁLISIS PREDICTIVO</p>
           <h1 id="page-title">Sistema de pronóstico<br /><em>de demanda.</em></h1>
-          <p class="intro-copy">Panel de apoyo a la toma de decisiones que consolida ventas históricas, entrena modelos predictivos y estima la demanda futura por familia de productos.</p>
+          <p class="intro-copy">Panel de apoyo a la toma de decisiones que consolida ventas históricas, entrena modelos predictivos y estima la demanda futura por producto.</p>
         </div>
         <div class="date-card">
-          <span>ÚLTIMO DATO INCORPORADO</span>
-          <strong id="last-date">Sin historial</strong>
-          <small>Fecha más reciente en el historial</small>
+          <span>ÚLTIMA FECHA DE VENTA</span>
+          <strong id="last-sale-date">Sin historial</strong>
+          <small id="history-updated-at">Historial aún no actualizado</small>
         </div>
       </section>
 
@@ -41,7 +43,7 @@
         </div>
         <div class="context-item">
           <span class="context-index">02</span>
-          <div><strong>Proceso analítico</strong><p>Consolidación de datos y entrenamiento por familia.</p></div>
+          <div><strong>Proceso analítico</strong><p>Consolidación de datos y entrenamiento por producto.</p></div>
         </div>
         <div class="context-item">
           <span class="context-index">03</span>
@@ -60,7 +62,7 @@
           <div class="action-content">
             <p class="action-label">CARGAR REPORTE</p>
             <h2>Incorpore las ventas registradas</h2>
-            <p>Formatos compatibles: Excel o PDF. Los datos se consolidan por fecha y familia.</p>
+            <p>Formatos compatibles: Excel o PDF. Los datos se consolidan por fecha y producto.</p>
             <label class="file-control" for="report">
               <span id="file-name">Seleccionar archivo</span>
               <span class="file-button">Examinar</span>
@@ -90,7 +92,7 @@
           <div class="action-content">
             <p class="action-label">PRONÓSTICO</p>
             <h2 id="forecast-heading">Genere la estimación futura</h2>
-            <p>Obtiene una proyección por familia de productos y periodo.</p>
+            <p>Obtiene una proyección por producto y periodo.</p>
             <div class="forecast-controls">
               <label for="days">Horizonte</label>
               <select id="days" name="days">
@@ -113,7 +115,7 @@
         </div>
         <div class="stats" aria-label="Resumen del historial">
           <article><span>REGISTROS PROCESADOS</span><strong id="records">—</strong><small>observaciones consolidadas</small></article>
-          <article><span>FAMILIAS ANALIZADAS</span><strong id="categories-count">—</strong><small>categorías de productos</small></article>
+          <article><span>PRODUCTOS ANALIZADOS</span><strong id="products-count">—</strong><small>productos distintos</small></article>
           <article><span>UNIDADES HISTÓRICAS</span><strong id="total-quantity">—</strong><small>demanda acumulada</small></article>
         </div>
       </section>
@@ -121,7 +123,7 @@
       <section class="content-grid">
         <article class="panel category-panel">
           <div class="panel-heading">
-            <div><p class="eyebrow">HISTORIAL</p><h2>Demanda por familia</h2></div>
+            <div><p class="eyebrow">HISTORIAL</p><h2>Demanda por producto</h2></div>
             <span class="panel-note">Acumulado</span>
           </div>
           <div id="category-bars" class="category-bars">
@@ -135,7 +137,7 @@
           </div>
           <div class="table-wrap">
             <table>
-              <thead><tr><th>Fecha</th><th>Familia</th><th>Unidades</th></tr></thead>
+              <thead><tr><th>Fecha</th><th>Producto</th><th>Unidades</th></tr></thead>
               <tbody id="recent-table"><tr><td colspan="3" class="empty-state">Cargando historial…</td></tr></tbody>
             </table>
           </div>
@@ -150,6 +152,6 @@
         <div id="prediction-list" class="prediction-list"></div>
       </section>
     </main>
-    <script src="{{ url_for('static', filename='dashboard.js') }}"></script>
+    <script src="{{ url_for('static', filename='dashboard.js', v='2') }}"></script>
   </body>
 </html>

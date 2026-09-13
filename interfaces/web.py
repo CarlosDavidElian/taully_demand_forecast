@@ -13,7 +13,6 @@ from application.services.ingest_service import IngestService
 from application.services.predict_service import PredictService
 from application.services.train_service import TrainService
 from config.settings import BASE_DIR, MODELS_FILE
-from infrastructure.repositories.catalog_repository import ExcelCatalogRepository
 from infrastructure.repositories.csv_repository import CSVDemandRepository
 
 
@@ -40,10 +39,16 @@ def create_app(test_config: dict[str, Any] | None = None) -> Flask:
         """Entrega el logo corporativo que se muestra en el encabezado."""
         return send_from_directory(str(BASE_DIR), "logo.jpg")
 
+    @app.get("/favicon.ico")
+    def favicon():
+        """Entrega el formato estándar que los navegadores buscan en una pestaña."""
+        static_dir = BASE_DIR / "interfaces" / "static"
+        return send_from_directory(str(static_dir), "taully-favicon.ico", mimetype="image/vnd.microsoft.icon")
+
     @app.get("/api/dashboard")
     def dashboard_data():
         try:
-            return jsonify(_build_dashboard(CSVDemandRepository()))
+            return _json_response(_build_dashboard(CSVDemandRepository()))
         except Exception as exc:  # La respuesta debe ser útil para la interfaz.
             return _error_response(exc, 500)
 
@@ -65,13 +70,14 @@ def create_app(test_config: dict[str, Any] | None = None) -> Flask:
                 temporary_path = Path(temporary_file.name)
 
             demand_repo = CSVDemandRepository()
-            ingest_service = IngestService(ExcelCatalogRepository(), demand_repo)
+            ingest_service = IngestService(demand_repo)
             demands = ingest_service.process_file(str(temporary_path))
 
-            return jsonify(
+            return _json_response(
                 {
                     "message": f"{filename} se procesó correctamente.",
                     "records": len(demands),
+                    "save_summary": ingest_service.last_save_summary,
                     "dashboard": _build_dashboard(demand_repo),
                 }
             )
@@ -89,7 +95,7 @@ def create_app(test_config: dict[str, Any] | None = None) -> Flask:
             metrics = TrainService(CSVDemandRepository()).run()
             if not metrics:
                 return _error_response("No hay suficientes datos por categoría para entrenar.", 400)
-            return jsonify(
+            return _json_response(
                 {
                     "message": "Modelo entrenado correctamente.",
                     "metrics": {name: round(float(value), 2) for name, value in metrics.items()},
@@ -115,7 +121,7 @@ def create_app(test_config: dict[str, Any] | None = None) -> Flask:
 
         try:
             predictions = PredictService(CSVDemandRepository()).predict_future(days)
-            return jsonify(
+            return _json_response(
                 {
                     "message": f"Pronóstico generado para los próximos {days} días.",
                     "days": days,
@@ -145,19 +151,25 @@ def _build_dashboard(demand_repo: CSVDemandRepository) -> dict[str, Any]:
     demands = demand_repo.get_all_demands()
     if not demands:
         return {
-            "summary": {"records": 0, "categories": 0, "total_quantity": 0, "last_date": None},
-            "categories": [],
+            "summary": {
+                "records": 0,
+                "products": 0,
+                "total_quantity": 0,
+                "last_sale_date": None,
+                "history_updated_at": None,
+            },
+            "products": [],
             "recent": [],
         }
 
-    category_totals: dict[str, float] = {}
+    product_totals: dict[str, float] = {}
     for demand in demands:
-        category_totals[demand.category] = category_totals.get(demand.category, 0) + float(demand.quantity)
+        product_totals[demand.category] = product_totals.get(demand.category, 0) + float(demand.quantity)
 
     sorted_demands = sorted(demands, key=lambda demand: demand.date, reverse=True)
-    categories = [
+    products = [
         {"name": name, "quantity": round(quantity, 2)}
-        for name, quantity in sorted(category_totals.items(), key=lambda item: item[1], reverse=True)
+        for name, quantity in sorted(product_totals.items(), key=lambda item: item[1], reverse=True)
     ]
     recent = [
         {
@@ -170,14 +182,25 @@ def _build_dashboard(demand_repo: CSVDemandRepository) -> dict[str, Any]:
     return {
         "summary": {
             "records": len(demands),
-            "categories": len(category_totals),
-            "total_quantity": round(sum(category_totals.values()), 2),
-            "last_date": sorted_demands[0].date.strftime("%Y-%m-%d"),
+            "products": len(product_totals),
+            "total_quantity": round(sum(product_totals.values()), 2),
+            "last_sale_date": sorted_demands[0].date.strftime("%Y-%m-%d"),
+            "history_updated_at": (
+                demand_repo.get_last_updated_at().isoformat() if demand_repo.get_last_updated_at() else None
+            ),
         },
-        "categories": categories,
+        "products": products,
         "recent": recent,
     }
 
 
 def _error_response(error: Exception | str, status: int):
-    return jsonify({"error": str(error)}), status
+    return _json_response({"error": str(error)}, status)
+
+
+def _json_response(payload: dict[str, Any], status: int = 200):
+    """Evita que el navegador muestre un resumen anterior desde su caché."""
+    response = jsonify(payload)
+    response.status_code = status
+    response.headers["Cache-Control"] = "no-store"
+    return response

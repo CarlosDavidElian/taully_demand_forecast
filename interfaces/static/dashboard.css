@@ -212,13 +212,14 @@ h1 em { color: var(--blue); font-style: italic; }
   transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
 }
 .button:hover { transform: translateY(-2px); box-shadow: 0 0.5rem 1.1rem rgba(9, 31, 53, 0.16); }
-.button:focus-visible, select:focus-visible, .file-control:focus-within { outline: 3px solid rgba(43, 108, 145, 0.35); outline-offset: 3px; }
+.button:focus-visible, select:focus-visible, input:focus-visible, .file-control:focus-within { outline: 3px solid rgba(43, 108, 145, 0.35); outline-offset: 3px; }
 .button:disabled { cursor: wait; opacity: 0.6; transform: none; box-shadow: none; }
 .button-primary { background: var(--gold); color: var(--navy-deep); }
 .button-dark { margin-top: auto; background: var(--navy); color: #fff; }
 .button-outline { margin-top: 1rem; border-color: var(--navy); background: transparent; color: var(--navy); }
-.forecast-controls { display: flex; width: 100%; align-items: center; justify-content: space-between; margin-top: auto; color: var(--navy); font-family: "DM Mono", monospace; font-size: 0.64rem; letter-spacing: 0.04em; }
-.forecast-controls select { border: 1px solid var(--line-dark); border-radius: 0.15rem; padding: 0.38rem 0.45rem; background: #fff; color: var(--navy); font-family: "Manrope", Arial, sans-serif; font-size: 0.72rem; font-weight: 700; }
+.forecast-controls { display: grid; width: 100%; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 0.55rem 0.7rem; margin-top: auto; color: var(--navy); font-family: "DM Mono", monospace; font-size: 0.64rem; letter-spacing: 0.04em; }
+.forecast-controls select, .forecast-controls input { max-width: 9.5rem; border: 1px solid var(--line-dark); border-radius: 0.15rem; padding: 0.38rem 0.45rem; background: #fff; color: var(--navy); font-family: "Manrope", Arial, sans-serif; font-size: 0.72rem; font-weight: 700; }
+.forecast-cutoff-note { margin: 0.65rem 0 0 !important; color: var(--muted); font-size: 0.62rem !important; line-height: 1.45 !important; }
 .metrics { display: grid; width: 100%; grid-template-columns: repeat(3, 1fr); gap: 0.4rem; margin: 1rem 0 0; }
 .metrics div { border-top: 1px solid var(--line-dark); padding-top: 0.48rem; }
 .metrics dt { color: var(--muted); font-family: "DM Mono", monospace; font-size: 0.57rem; letter-spacing: 0.03em; }
@@ -244,11 +245,13 @@ h1 em { color: var(--blue); font-style: italic; }
 .panel-heading h2 { margin: 0; color: var(--navy); font-family: "DM Serif Display", Georgia, serif; font-size: 1.35rem; font-weight: 400; letter-spacing: -0.02em; }
 .panel-note { padding: 0.32rem 0.48rem; border: 1px solid var(--line); color: var(--muted); font-family: "DM Mono", monospace; font-size: 0.59rem; letter-spacing: 0.04em; }
 .category-bars { display: grid; gap: 1rem; }
-.bar-row { display: grid; grid-template-columns: minmax(5rem, 0.95fr) 2.5fr auto; align-items: center; gap: 0.8rem; font-size: 0.75rem; }
+.bar-row { display: grid; grid-template-columns: minmax(5rem, 0.95fr) 2.5fr minmax(5.7rem, auto); align-items: center; gap: 0.8rem; font-size: 0.75rem; }
 .bar-label { overflow: hidden; color: var(--ink); text-overflow: ellipsis; white-space: nowrap; font-weight: 700; }
 .bar-track { height: 0.5rem; overflow: hidden; border-radius: 1rem; background: #e8eef2; }
 .bar-value { height: 100%; min-width: 0.35rem; border-radius: inherit; background: linear-gradient(90deg, var(--blue), #5f97b9); }
+.bar-metrics { display: grid; justify-items: end; gap: 0.06rem; }
 .bar-number { color: var(--muted); font-family: "DM Mono", monospace; font-size: 0.66rem; }
+.bar-percentage { color: var(--navy); font-family: "DM Mono", monospace; font-size: 0.68rem; font-weight: 700; }
 .history-explanation { margin: 1.1rem 0 0; padding-top: 0.85rem; border-top: 1px solid #edf1f4; color: var(--muted); font-size: 0.68rem; line-height: 1.55; }
 .table-wrap { overflow-x: auto; }
 table { width: 100%; border-collapse: collapse; font-size: 0.74rem; }
@@ -313,7 +316,7 @@ td { max-width: 9rem; overflow: hidden; padding: 0.72rem 0; border-top: 1px soli
   .action-card { min-height: 18rem; }
   .action-content { min-height: 14.8rem; }
   .stats article + article { border-top: 1px solid var(--line); border-left: 0; }
-  .bar-row { grid-template-columns: minmax(4.5rem, 0.95fr) 1.9fr auto; gap: 0.5rem; }
+  .bar-row { grid-template-columns: minmax(4.5rem, 0.95fr) 1.9fr minmax(5rem, auto); gap: 0.5rem; }
   .panel { padding: 1.1rem; }
   .prediction-list { grid-template-columns: minmax(0, 1fr); }
   .prediction-card { padding: 1rem; }

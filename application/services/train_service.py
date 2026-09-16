@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import joblib
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 from typing import Dict
 
 from domain.interfaces.repositories import DemandRepository
@@ -16,11 +16,14 @@ class TrainService:
         self.demand_repo = demand_repo
         self.last_training_summary = {"trained_categories": 0, "excluded_categories": {}}
 
-    def run(self) -> Dict[str, float]:
+    def run(self, cutoff_date: date | None = None) -> Dict[str, float]:
         # 1. Obtener historial
         demands = self.demand_repo.get_all_demands()
+        if cutoff_date is not None:
+            demands = [demand for demand in demands if demand.date.date() <= cutoff_date]
         if len({demand.date.date() for demand in demands}) < 30:
-            raise ValueError("Se necesitan al menos 30 días de datos históricos para entrenar")
+            period = f" hasta el {cutoff_date.strftime('%Y-%m-%d')}" if cutoff_date else ""
+            raise ValueError(f"Se necesitan al menos 30 días de datos históricos{period} para entrenar")
 
         # 2. Convertir a DataFrame y crear features temporales
         df = pd.DataFrame([
@@ -95,6 +98,9 @@ class TrainService:
                     "trained_categories": sorted(models_by_category),
                     "excluded_categories": excluded_categories,
                     "validation_by_category": validation_by_category,
+                    # Cuando existe una fecha de corte, el modelo se usa para
+                    # una prueba histórica y no debe aprovechar ventas futuras.
+                    "cutoff_date": cutoff_date.isoformat() if cutoff_date else None,
                 },
             },
             MODELS_FILE,
@@ -106,6 +112,7 @@ class TrainService:
             "trained_categories": len(models_by_category),
             "excluded_categories": excluded_categories,
             "validation_by_category": validation_by_category,
+            "cutoff_date": cutoff_date.isoformat() if cutoff_date else None,
         }
         return {
             name: self._mean_valid_metric(metrics_by_category, name)

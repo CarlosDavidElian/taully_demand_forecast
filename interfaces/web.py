@@ -5,6 +5,7 @@ from __future__ import annotations
 import csv
 import os
 import tempfile
+from datetime import date, datetime
 from pathlib import Path
 from typing import Any
 
@@ -24,6 +25,16 @@ ALLOWED_REPORT_EXTENSIONS = {".xlsx", ".xls", ".pdf"}
 ALLOWED_CATALOG_EXTENSIONS = {".xlsx"}
 
 
+def _parse_cutoff_date(value: Any) -> date | None:
+    """Convierte la fecha base enviada por la interfaz a una fecha válida."""
+    if value in (None, ""):
+        return None
+    try:
+        return datetime.strptime(str(value), "%Y-%m-%d").date()
+    except (TypeError, ValueError) as exc:
+        raise ValueError("La fecha base debe tener el formato AAAA-MM-DD.") from exc
+
+
 def create_app(test_config: dict[str, Any] | None = None) -> Flask:
     """Crea la aplicación Flask sin ejecutar el servidor.
 
@@ -34,12 +45,20 @@ def create_app(test_config: dict[str, Any] | None = None) -> Flask:
     app.config.from_mapping(
         MAX_CONTENT_LENGTH=20 * 1024 * 1024,
         CATALOG_FILE=CATALOG_FILE,
+        SEND_FILE_MAX_AGE_DEFAULT=0,
     )
     if test_config:
         app.config.update(test_config)
 
     def catalog_service() -> CatalogService:
         return CatalogService(ExcelCatalogRepository(Path(app.config["CATALOG_FILE"])))
+
+    @app.after_request
+    def prevent_stale_dashboard(response):
+        """Evita que el navegador conserve una interfaz JavaScript anterior."""
+        if request.path == "/" or request.path == "/static/dashboard.js":
+            response.headers["Cache-Control"] = "no-store, max-age=0"
+        return response
 
     @app.get("/")
     def dashboard() -> str:
@@ -114,6 +133,7 @@ def create_app(test_config: dict[str, Any] | None = None) -> Flask:
                 {
                     "message": f"{filename} se procesó correctamente.",
                     "records": len(demands),
+                    "report_dates": sorted({demand.date.strftime("%Y-%m-%d") for demand in demands}),
                     "save_summary": ingest_service.last_save_summary,
                     "catalog_summary": ingest_service.last_catalog_summary,
                     "dashboard": _build_dashboard(demand_repo, active_catalog_service),
@@ -175,18 +195,26 @@ def create_app(test_config: dict[str, Any] | None = None) -> Flask:
     @app.post("/api/train")
     def train_model():
         try:
+            body = request.get_json(silent=True) or {}
+            cutoff_date = _parse_cutoff_date(body.get("cutoff_date"))
             service = TrainService(CSVDemandRepository())
-            metrics = service.run()
+            metrics = service.run(cutoff_date=cutoff_date)
             if not metrics:
                 return _error_response("No hay suficientes datos por categoría para entrenar.", 400)
+            mode_message = (
+                f"Modelo de prueba histórica entrenado hasta el {cutoff_date.strftime('%d/%m/%Y')}."
+                if cutoff_date
+                else "Modelo entrenado con todo el historial disponible."
+            )
             return _json_response(
                 {
                     "message": (
-                        "Modelo entrenado con validación histórica para "
+                        f"{mode_message} Validación histórica para "
                         f"{service.last_training_summary['trained_categories']} categorías."
                     ),
                     "metrics": {name: round(float(value), 2) for name, value in metrics.items()},
                     "training_summary": service.last_training_summary,
+                    "cutoff_date": cutoff_date.isoformat() if cutoff_date else None,
                 }
             )
         except (FileNotFoundError, ValueError) as exc:
@@ -199,8 +227,9 @@ def create_app(test_config: dict[str, Any] | None = None) -> Flask:
         body = request.get_json(silent=True) or {}
         try:
             days = int(body.get("days", 7))
+            cutoff_date = _parse_cutoff_date(body.get("cutoff_date"))
         except (TypeError, ValueError):
-            return _error_response("Indica una cantidad válida de días.", 400)
+            return _error_response("Indica una cantidad válida de días y una fecha base válida.", 400)
 
         if not 1 <= days <= 90:
             return _error_response("Puedes pronosticar entre 1 y 90 días.", 400)
@@ -209,7 +238,7 @@ def create_app(test_config: dict[str, Any] | None = None) -> Flask:
 
         try:
             service = PredictService(CSVDemandRepository())
-            predictions = service.predict_future(days)
+            predictions = service.predict_future(days, cutoff_date=cutoff_date)
             products_by_category = _load_category_products()
             serialized_predictions = {
                 category: [
@@ -220,8 +249,13 @@ def create_app(test_config: dict[str, Any] | None = None) -> Flask:
             }
             return _json_response(
                 {
-                    "message": f"Pronóstico generado para los próximos {days} días.",
+                    "message": (
+                        f"Pronóstico histórico generado desde el día posterior al {cutoff_date.strftime('%d/%m/%Y')} para {days} días."
+                        if cutoff_date
+                        else f"Pronóstico generado para los próximos {days} días."
+                    ),
                     "days": days,
+                    "cutoff_date": cutoff_date.isoformat() if cutoff_date else None,
                     "predictions": serialized_predictions,
                     "products_by_category": {
                         category: products_by_category.get(category, [])
@@ -278,8 +312,13 @@ def _build_dashboard(demand_repo: CSVDemandRepository, catalog_service: CatalogS
 
     sorted_demands = sorted(demands, key=lambda demand: demand.date, reverse=True)
     active_categories = set(catalog_service.get_categories())
+    total_quantity = sum(category_totals.values())
     categories = [
-        {"name": name, "quantity": round(quantity, 2)}
+        {
+            "name": name,
+            "quantity": round(quantity, 2),
+            "percentage": round((quantity / total_quantity) * 100, 2) if total_quantity else 0,
+        }
         for name, quantity in sorted(category_totals.items(), key=lambda item: item[1], reverse=True)
     ]
     recent = [
@@ -294,7 +333,7 @@ def _build_dashboard(demand_repo: CSVDemandRepository, catalog_service: CatalogS
         "summary": {
             "records": len(demands),
             "categories": len(category_totals),
-            "total_quantity": round(sum(category_totals.values()), 2),
+            "total_quantity": round(total_quantity, 2),
             "first_sale_date": sorted_demands[-1].date.strftime("%Y-%m-%d"),
             "last_sale_date": sorted_demands[0].date.strftime("%Y-%m-%d"),
             "history_updated_at": (

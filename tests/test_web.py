@@ -1,16 +1,102 @@
 from __future__ import annotations
 
+from datetime import date, datetime
 from io import BytesIO
 from pathlib import Path
 from tempfile import TemporaryDirectory
+from types import SimpleNamespace
 from unittest.mock import patch
 import unittest
 
 from interfaces import web
+from domain.entities.demand import Demand
 from infrastructure.repositories.csv_repository import CSVDemandRepository
 
 
 class WebTests(unittest.TestCase):
+    def test_parse_cutoff_date_accepts_iso_dates_and_rejects_invalid_values(self):
+        self.assertEqual(web._parse_cutoff_date("2026-06-15"), date(2026, 6, 15))
+        self.assertIsNone(web._parse_cutoff_date(""))
+        with self.assertRaisesRegex(ValueError, "formato AAAA-MM-DD"):
+            web._parse_cutoff_date("15/06/2026")
+
+    def test_historical_cutoff_is_sent_to_training_and_forecast(self):
+        class TrainServiceStub:
+            received_cutoff = None
+
+            def __init__(self, _repository):
+                self.last_training_summary = {"trained_categories": 1}
+
+            def run(self, cutoff_date=None):
+                TrainServiceStub.received_cutoff = cutoff_date
+                return {"wape": 10.0, "rmse": 2.0, "mae": 1.0}
+
+        class PredictServiceStub:
+            received_cutoff = None
+
+            def __init__(self, _repository):
+                self.predictor = SimpleNamespace(metadata={"validation_by_category": {}})
+
+            def predict_future(self, days, cutoff_date=None):
+                PredictServiceStub.received_cutoff = cutoff_date
+                return {
+                    "ABARROTES": [
+                        Demand(datetime(2026, 6, 16), "ABARROTES", 4.0)
+                        for _ in range(days)
+                    ]
+                }
+
+        with TemporaryDirectory() as folder:
+            model_path = Path(folder) / "models.pkl"
+            model_path.touch()
+            with patch.object(web, "TrainService", TrainServiceStub), patch.object(
+                web, "PredictService", PredictServiceStub
+            ), patch.object(web, "MODELS_FILE", model_path), patch.object(
+                web, "_load_category_products", return_value={"ABARROTES": []}
+            ):
+                client = web.create_app({"TESTING": True}).test_client()
+                trained = client.post("/api/train", json={"cutoff_date": "2026-06-15"})
+                forecast = client.post("/api/forecast", json={"days": 2, "cutoff_date": "2026-06-15"})
+
+            self.assertEqual(trained.status_code, 200)
+            self.assertEqual(trained.get_json()["cutoff_date"], "2026-06-15")
+            self.assertEqual(TrainServiceStub.received_cutoff, date(2026, 6, 15))
+            self.assertEqual(forecast.status_code, 200)
+            self.assertEqual(forecast.get_json()["cutoff_date"], "2026-06-15")
+            self.assertEqual(PredictServiceStub.received_cutoff, date(2026, 6, 15))
+
+    def test_dashboard_category_percentages_cover_the_full_history_and_recalculate(self):
+        class CatalogStub:
+            def get_summary(self):
+                return {"products": 2, "families": 1, "categories": 2}
+
+            def get_categories(self):
+                return ["ABARROTES", "BEBIDAS"]
+
+        with TemporaryDirectory() as folder:
+            repository = CSVDemandRepository(Path(folder) / "history.csv")
+            repository.save_demands([
+                Demand(datetime(2026, 1, 1), "ABARROTES", 10),
+                Demand(datetime(2026, 1, 1), "BEBIDAS", 30),
+            ])
+
+            first_dashboard = web._build_dashboard(repository, CatalogStub())
+            self.assertEqual(first_dashboard["summary"]["first_sale_date"], "2026-01-01")
+            self.assertEqual(first_dashboard["summary"]["last_sale_date"], "2026-01-01")
+            self.assertEqual(first_dashboard["categories"], [
+                {"name": "BEBIDAS", "quantity": 30.0, "percentage": 75.0},
+                {"name": "ABARROTES", "quantity": 10.0, "percentage": 25.0},
+            ])
+
+            repository.save_demands([Demand(datetime(2026, 1, 2), "ABARROTES", 30)])
+            updated_dashboard = web._build_dashboard(repository, CatalogStub())
+            self.assertEqual(updated_dashboard["summary"]["first_sale_date"], "2026-01-01")
+            self.assertEqual(updated_dashboard["summary"]["last_sale_date"], "2026-01-02")
+            self.assertEqual(updated_dashboard["categories"], [
+                {"name": "ABARROTES", "quantity": 40.0, "percentage": 57.14},
+                {"name": "BEBIDAS", "quantity": 30.0, "percentage": 42.86},
+            ])
+
     def test_category_product_ranking_includes_historical_units(self):
         ranking = web._load_category_products()
 

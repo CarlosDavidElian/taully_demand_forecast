@@ -124,7 +124,10 @@
                 <option value="14">14 días</option>
                 <option value="30">30 días</option>
               </select>
+              <label for="forecast-cutoff">Fecha base de prueba</label>
+              <input id="forecast-cutoff" name="forecast-cutoff" type="date" aria-describedby="forecast-cutoff-note">
             </div>
+            <p id="forecast-cutoff-note" class="forecast-cutoff-note">Vacía: pronóstico normal desde el último reporte. Al procesar un reporte se usará su última fecha para hacer una prueba histórica.</p>
             <button id="forecast-button" class="button button-outline" type="button">Generar pronóstico <span aria-hidden="true">→</span></button>
           </div>
         </section>
@@ -166,23 +169,24 @@
               <tbody id="recent-table"><tr><td colspan="3" class="empty-state">Cargando historial…</td></tr></tbody>
             </table>
           </div>
+          <p class="history-explanation">Actividad reciente: muestra ventas reales por fecha y categoría de los últimos reportes cargados. Cada fila corresponde a un día específico; no es un pronóstico ni un acumulado.</p>
         </article>
       </section>
 
       <section id="forecast-results" class="panel results-panel" hidden aria-labelledby="results-title">
         <div class="panel-heading">
-          <div><p class="eyebrow">RESULTADO</p><h2 id="results-title">Próxima demanda estimada</h2></div>
+          <div><p class="eyebrow">RESULTADO</p><h2 id="results-title">Compra sugerida por período</h2></div>
           <span id="forecast-period" class="panel-note"></span>
         </div>
-        <p class="forecast-explanation">Selecciona una fecha para ver la demanda estimada de cada producto, su categoría y las unidades previstas para ese día. Las unidades indican la venta que se espera cubrir; para decidir una compra se deben contrastar con el stock disponible.</p>
+        <p class="forecast-explanation">El panel muestra primero la compra sugerida para los 7, 14 o 30 días seleccionados. Puedes elegir una fecha para consultar solo ese día. Las cantidades se convierten en paquetes enteros y no consideran el stock disponible.</p>
         <div id="forecast-date-control" class="forecast-date-control" hidden>
-          <label for="forecast-date">FECHA A CONSULTAR</label>
+          <label for="forecast-date">PERÍODO O FECHA A CONSULTAR</label>
           <select id="forecast-date" aria-describedby="forecast-date-note"></select>
-          <p id="forecast-date-note">Cambia la fecha para consultar las unidades estimadas de ese día.</p>
+          <p id="forecast-date-note">El período completo suma todos los días. Selecciona una fecha para ver solo ese día.</p>
         </div>
         <div id="prediction-list" class="prediction-list"></div>
       </section>
     </main>
-    <script src="{{ url_for('static', filename='dashboard.js', v='15') }}"></script>
+    <script src="{{ url_for('static', filename='dashboard.js', v='22') }}"></script>
   </body>
 </html>

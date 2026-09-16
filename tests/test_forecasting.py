@@ -47,3 +47,19 @@ class ForecastingTests(unittest.TestCase):
                 repository.save_demands([Demand(datetime(2026, 2, 5), "PRODUCTO A", 9)])
                 with self.assertRaisesRegex(ValueError, "historial cambió"):
                     PredictService(repository).predict_future(1)
+
+    def test_historical_cutoff_trains_and_predicts_after_the_selected_date(self):
+        with TemporaryDirectory() as folder:
+            repository = self._repository_with_varied_data(folder)
+            model_path = Path(folder) / "models.pkl"
+            cutoff = datetime(2026, 3, 1).date()
+            with patch("application.services.train_service.MODELS_FILE", model_path), patch(
+                "application.services.predict_service.MODELS_FILE", model_path
+            ):
+                TrainService(repository).run(cutoff_date=cutoff)
+                predictions = PredictService(repository).predict_future(3, cutoff_date=cutoff)
+
+                self.assertTrue(all(rows[0].date.date() == datetime(2026, 3, 2).date() for rows in predictions.values()))
+                self.assertTrue(all(len(rows) == 3 for rows in predictions.values()))
+                with self.assertRaisesRegex(ValueError, "fecha de corte distinta"):
+                    PredictService(repository).predict_future(1)

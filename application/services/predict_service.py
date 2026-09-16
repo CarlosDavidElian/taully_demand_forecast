@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-from datetime import timedelta
+from datetime import date, timedelta
 from typing import List, Dict
 
 from domain.entities.demand import Demand
@@ -14,18 +14,27 @@ class PredictService:
         self.demand_repo = demand_repo
         self.predictor = ModelPredictor()
 
-    def predict_future(self, days: int = 7) -> Dict[str, List[Demand]]:
+    def predict_future(self, days: int = 7, cutoff_date: date | None = None) -> Dict[str, List[Demand]]:
         # 1. Obtener historial antes de cargar el modelo para comprobar que no
         #    haya quedado desactualizado después de una carga de reportes.
         demands = self.demand_repo.get_all_demands()
+        if cutoff_date is not None:
+            demands = [demand for demand in demands if demand.date.date() <= cutoff_date]
         if len({demand.date.date() for demand in demands}) < 30:
-            raise ValueError("Se necesitan al menos 30 días de datos históricos")
+            period = f" hasta el {cutoff_date.strftime('%Y-%m-%d')}" if cutoff_date else ""
+            raise ValueError(f"Se necesitan al menos 30 días de datos históricos{period}")
 
         # 2. Cargar el modelo guardado
         try:
             self.predictor.load_models(MODELS_FILE)
         except FileNotFoundError:
             raise FileNotFoundError("Primero debes entrenar el modelo usando 'python main.py train'")
+        trained_cutoff = self.predictor.metadata.get("cutoff_date")
+        requested_cutoff = cutoff_date.isoformat() if cutoff_date else None
+        if trained_cutoff != requested_cutoff:
+            raise ValueError(
+                "El modelo se entrenó para una fecha de corte distinta. Entrénalo nuevamente antes de pronosticar."
+            )
         if self.predictor.history_fingerprint != history_fingerprint(demands):
             raise ValueError("El historial cambió desde el último entrenamiento. Entrena el modelo nuevamente.")
 

@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Panel de gestión y pronóstico de demanda de Minimarket Taully." />
-    <title>Taully · Demanda</title>
+    <meta name="description" content="Modelo de machine learning para predecir la demanda diaria por categoría de producto en Minimarket Taully, Comas 2026." />
+    <title>Modelo de machine learning · Demanda diaria por categoría · Comas 2026</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="icon" href="{{ url_for('favicon', v='3') }}" sizes="any" />
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='taully-favicon.png', v='3') }}" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css', v='2') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css', v='14') }}" />
   </head>
   <body>
     <main class="shell">
@@ -26,8 +26,8 @@
       <section class="intro" aria-labelledby="page-title">
         <div>
           <p class="eyebrow">MINIMARKET TAULLY · ANÁLISIS PREDICTIVO</p>
-          <h1 id="page-title">Sistema de pronóstico<br /><em>de demanda.</em></h1>
-          <p class="intro-copy">Panel de apoyo a la toma de decisiones que consolida ventas históricas, entrena modelos predictivos y estima la demanda futura por producto.</p>
+          <h1 id="page-title">Modelo de machine learning para predecir la demanda diaria por <em>categoría de producto.</em></h1>
+          <p class="intro-copy">Minimarket Taully · distrito de Comas · 2026. El modelo consolida ventas POS diarias y estima demanda futura por categoría comercial.</p>
         </div>
         <div class="date-card">
           <span>ÚLTIMA FECHA DE VENTA</span>
@@ -43,12 +43,33 @@
         </div>
         <div class="context-item">
           <span class="context-index">02</span>
-          <div><strong>Proceso analítico</strong><p>Consolidación de datos y entrenamiento por producto.</p></div>
+          <div><strong>Proceso analítico</strong><p>Consolidación diaria y entrenamiento por categoría comercial.</p></div>
         </div>
         <div class="context-item">
           <span class="context-index">03</span>
           <div><strong>Resultado esperado</strong><p>Pronóstico para la planificación de inventario.</p></div>
         </div>
+      </section>
+
+      <section class="catalog-section" aria-labelledby="catalog-title">
+        <div class="catalog-copy">
+          <p class="eyebrow">CATÁLOGO MAESTRO</p>
+          <h2 id="catalog-title">Clasificación activa de productos</h2>
+          <p>El catálogo asocia cada venta con su familia, categoría, marca y costo. Las ventas sin coincidencia quedan identificadas para completar el catálogo antes de atribuirlas al modelo.</p>
+        </div>
+        <dl class="catalog-stats" aria-label="Resumen del catálogo">
+          <div><dt>PRODUCTOS</dt><dd id="catalog-products">—</dd></div>
+          <div><dt>FAMILIAS</dt><dd id="catalog-families">—</dd></div>
+          <div><dt>CATEGORÍAS</dt><dd id="catalog-categories">—</dd></div>
+        </dl>
+        <form id="catalog-form" class="catalog-upload">
+          <label class="catalog-file-control" for="catalog">
+            <span id="catalog-file-name">Nuevo catálogo .xlsx</span>
+            <span class="file-button">Examinar</span>
+          </label>
+          <input id="catalog" name="catalog" type="file" accept=".xlsx" />
+          <button class="button button-outline" type="submit">Actualizar catálogo <span aria-hidden="true">↗</span></button>
+        </form>
       </section>
 
       <div class="section-heading">
@@ -62,7 +83,7 @@
           <div class="action-content">
             <p class="action-label">CARGAR REPORTE</p>
             <h2>Incorpore las ventas registradas</h2>
-            <p>Formatos compatibles: Excel o PDF. Los datos se consolidan por fecha y producto.</p>
+            <p>Formatos compatibles: Excel o PDF. Los datos se consolidan por fecha y categoría comercial.</p>
             <label class="file-control" for="report">
               <span id="file-name">Seleccionar archivo</span>
               <span class="file-button">Examinar</span>
@@ -80,7 +101,7 @@
             <p>Actualiza el modelo con el historial de demanda consolidado.</p>
             <button id="train-button" class="button button-dark" type="button">Entrenar modelo <span aria-hidden="true">→</span></button>
             <dl id="metrics" class="metrics" hidden>
-              <div><dt>MAPE</dt><dd id="metric-mape">—</dd></div>
+              <div><dt>WAPE</dt><dd id="metric-wape">—</dd></div>
               <div><dt>RMSE</dt><dd id="metric-rmse">—</dd></div>
               <div><dt>MAE</dt><dd id="metric-mae">—</dd></div>
             </dl>
@@ -92,7 +113,7 @@
           <div class="action-content">
             <p class="action-label">PRONÓSTICO</p>
             <h2 id="forecast-heading">Genere la estimación futura</h2>
-            <p>Obtiene una proyección por producto y periodo.</p>
+            <p>Obtiene una proyección diaria por categoría y periodo.</p>
             <div class="forecast-controls">
               <label for="days">Horizonte</label>
               <select id="days" name="days">
@@ -115,20 +136,21 @@
         </div>
         <div class="stats" aria-label="Resumen del historial">
           <article><span>REGISTROS PROCESADOS</span><strong id="records">—</strong><small>observaciones consolidadas</small></article>
-          <article><span>PRODUCTOS ANALIZADOS</span><strong id="products-count">—</strong><small>productos distintos</small></article>
-          <article><span>UNIDADES HISTÓRICAS</span><strong id="total-quantity">—</strong><small>demanda acumulada</small></article>
+          <article><span>CATEGORÍAS ANALIZADAS</span><strong id="categories-count">—</strong><small>categorías comerciales distintas</small></article>
+          <article><span>UNIDADES CATEGORIZADAS</span><strong id="total-quantity">—</strong><small>demanda acumulada atribuida al catálogo</small></article>
         </div>
       </section>
 
       <section class="content-grid">
         <article class="panel category-panel">
           <div class="panel-heading">
-            <div><p class="eyebrow">HISTORIAL</p><h2>Demanda por producto</h2></div>
+            <div><p class="eyebrow">HISTORIAL</p><h2>Demanda por categoría</h2></div>
             <span class="panel-note">Acumulado</span>
           </div>
           <div id="category-bars" class="category-bars">
             <p class="empty-state">Cargando historial…</p>
           </div>
+          <p id="category-history-explanation" class="history-explanation">Las cantidades se calculan con todos los reportes del historial cargado.</p>
         </article>
 
         <article class="panel recent-panel">
@@ -137,7 +159,7 @@
           </div>
           <div class="table-wrap">
             <table>
-              <thead><tr><th>Fecha</th><th>Producto</th><th>Unidades</th></tr></thead>
+              <thead><tr><th>Fecha</th><th>Categoría</th><th>Unidades</th></tr></thead>
               <tbody id="recent-table"><tr><td colspan="3" class="empty-state">Cargando historial…</td></tr></tbody>
             </table>
           </div>
@@ -149,9 +171,10 @@
           <div><p class="eyebrow">RESULTADO</p><h2 id="results-title">Próxima demanda estimada</h2></div>
           <span id="forecast-period" class="panel-note"></span>
         </div>
+        <p class="forecast-explanation">El modelo estima la demanda diaria por categoría. Debajo se muestra el total por fecha y, una sola vez, el detalle completo de todos los productos para el período solicitado. Las unidades de los productos se distribuyen según sus ventas históricas y suman exactamente el total de su categoría.</p>
         <div id="prediction-list" class="prediction-list"></div>
       </section>
     </main>
-    <script src="{{ url_for('static', filename='dashboard.js', v='2') }}"></script>
+    <script src="{{ url_for('static', filename='dashboard.js', v='14') }}"></script>
   </body>
 </html>

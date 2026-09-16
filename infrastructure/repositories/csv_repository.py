@@ -68,6 +68,25 @@ class CSVDemandRepository(DemandRepository):
             for _, row in df.iterrows()
         ]
 
+    def replace_demands(self, demands: List[Demand]) -> None:
+        """Reemplaza el historial por una reconstrucción completa y validada.
+
+        Se usa únicamente cuando existen reportes fuente para todo el periodo.
+        ``save_demands`` mantiene su comportamiento incremental para las cargas
+        diarias desde la interfaz.
+        """
+        dataframe = self._normalise_dataframe(
+            pd.DataFrame(
+                [
+                    {"date": demand.date, "category": demand.category, "quantity": demand.quantity}
+                    for demand in demands
+                ]
+            )
+        )
+        if dataframe.empty:
+            raise ValueError("La reconstrucción del historial no contiene demanda categorizada.")
+        self._atomic_write(dataframe.sort_values(["date", "category"], kind="stable").reset_index(drop=True))
+
     def get_demands_by_date_range(self, start_date, end_date) -> List[Demand]:
         all_demands = self.get_all_demands()
         return [

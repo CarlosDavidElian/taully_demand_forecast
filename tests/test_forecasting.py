@@ -17,12 +17,12 @@ class ForecastingTests(unittest.TestCase):
         repository = CSVDemandRepository(Path(folder) / "history.csv")
         start = datetime(2026, 1, 1)
         demands = []
-        for day in range(35):
+        for day in range(70):
             date = start + timedelta(days=day)
             demands.extend(
                 [
-                    Demand(date, "PRODUCTO A", 5 + (day % 4)),
-                    Demand(date, "PRODUCTO B", 12 + ((day * 2) % 5)),
+                    Demand(date, "PRODUCTO A", 5 + (day % 7)),
+                    Demand(date, "PRODUCTO B", 12 + (day % 7)),
                 ]
             )
         repository.save_demands(demands)
@@ -37,7 +37,7 @@ class ForecastingTests(unittest.TestCase):
             ):
                 metrics = TrainService(repository).run()
                 self.assertTrue(model_path.exists())
-                self.assertEqual(set(metrics), {"mae", "rmse", "mape"})
+                self.assertEqual(set(metrics), {"mae", "rmse", "wape"})
 
                 predictions = PredictService(repository).predict_future(3)
                 self.assertEqual(set(predictions), {"PRODUCTO A", "PRODUCTO B"})
@@ -47,4 +47,3 @@ class ForecastingTests(unittest.TestCase):
                 repository.save_demands([Demand(datetime(2026, 2, 5), "PRODUCTO A", 9)])
                 with self.assertRaisesRegex(ValueError, "historial cambió"):
                     PredictService(repository).predict_future(1)
-

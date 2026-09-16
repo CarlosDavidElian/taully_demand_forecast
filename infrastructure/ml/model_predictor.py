@@ -6,6 +6,7 @@ class ModelPredictor:
     def __init__(self):
         self.models: dict[str, Any] = {}
         self.history_fingerprint: str | None = None
+        self.metadata: dict[str, Any] = {}
 
     def load_models(self, path: str):
         artifact = joblib.load(path)
@@ -17,6 +18,7 @@ class ModelPredictor:
             raise ValueError("El modelo no tiene trazabilidad del historial. Entrénalo nuevamente.")
         self.models = artifact["models"]
         self.history_fingerprint = str(fingerprint)
+        self.metadata = metadata
 
     def predict(self, category: str, X: np.ndarray) -> np.ndarray:
         model = self.models.get(category)

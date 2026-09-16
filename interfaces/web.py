@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import csv
+import os
 import tempfile
 from pathlib import Path
 from typing import Any
@@ -9,14 +11,17 @@ from typing import Any
 from flask import Flask, jsonify, render_template, request, send_from_directory
 from werkzeug.utils import secure_filename
 
+from application.services.catalog_service import CatalogService
 from application.services.ingest_service import IngestService
 from application.services.predict_service import PredictService
 from application.services.train_service import TrainService
-from config.settings import BASE_DIR, MODELS_FILE
+from config.settings import BASE_DIR, CATEGORY_PRODUCT_MIX_FILE, CATALOG_FILE, MODELS_FILE
+from infrastructure.repositories.catalog_repository import ExcelCatalogRepository
 from infrastructure.repositories.csv_repository import CSVDemandRepository
 
 
 ALLOWED_REPORT_EXTENSIONS = {".xlsx", ".xls", ".pdf"}
+ALLOWED_CATALOG_EXTENSIONS = {".xlsx"}
 
 
 def create_app(test_config: dict[str, Any] | None = None) -> Flask:
@@ -26,9 +31,15 @@ def create_app(test_config: dict[str, Any] | None = None) -> Flask:
     el servidor se inicie al importar este módulo.
     """
     app = Flask(__name__)
-    app.config.from_mapping(MAX_CONTENT_LENGTH=20 * 1024 * 1024)
+    app.config.from_mapping(
+        MAX_CONTENT_LENGTH=20 * 1024 * 1024,
+        CATALOG_FILE=CATALOG_FILE,
+    )
     if test_config:
         app.config.update(test_config)
+
+    def catalog_service() -> CatalogService:
+        return CatalogService(ExcelCatalogRepository(Path(app.config["CATALOG_FILE"])))
 
     @app.get("/")
     def dashboard() -> str:
@@ -48,8 +59,33 @@ def create_app(test_config: dict[str, Any] | None = None) -> Flask:
     @app.get("/api/dashboard")
     def dashboard_data():
         try:
-            return _json_response(_build_dashboard(CSVDemandRepository()))
+            return _json_response(_build_dashboard(CSVDemandRepository(), catalog_service()))
         except Exception as exc:  # La respuesta debe ser útil para la interfaz.
+            return _error_response(exc, 500)
+
+    @app.get("/api/catalog")
+    def active_catalog():
+        try:
+            service = catalog_service()
+            products = service.get_all_products()
+            return _json_response(
+                {
+                    "summary": service.get_summary(),
+                    "products": [
+                        {
+                            "name": product.product_name,
+                            "family": product.family,
+                            "category": product.category,
+                            "brand": product.brand,
+                            "cost": round(product.cost, 2),
+                        }
+                        for product in products
+                    ],
+                }
+            )
+        except (FileNotFoundError, ValueError) as exc:
+            return _error_response(exc, 400)
+        except Exception as exc:
             return _error_response(exc, 500)
 
     @app.post("/api/reports")
@@ -70,7 +106,8 @@ def create_app(test_config: dict[str, Any] | None = None) -> Flask:
                 temporary_path = Path(temporary_file.name)
 
             demand_repo = CSVDemandRepository()
-            ingest_service = IngestService(demand_repo)
+            active_catalog_service = catalog_service()
+            ingest_service = IngestService(demand_repo, active_catalog_service)
             demands = ingest_service.process_file(str(temporary_path))
 
             return _json_response(
@@ -78,7 +115,8 @@ def create_app(test_config: dict[str, Any] | None = None) -> Flask:
                     "message": f"{filename} se procesó correctamente.",
                     "records": len(demands),
                     "save_summary": ingest_service.last_save_summary,
-                    "dashboard": _build_dashboard(demand_repo),
+                    "catalog_summary": ingest_service.last_catalog_summary,
+                    "dashboard": _build_dashboard(demand_repo, active_catalog_service),
                 }
             )
         except (FileNotFoundError, ValueError) as exc:
@@ -89,16 +127,66 @@ def create_app(test_config: dict[str, Any] | None = None) -> Flask:
             if temporary_path is not None:
                 temporary_path.unlink(missing_ok=True)
 
+    @app.post("/api/catalog")
+    def update_catalog():
+        catalog = request.files.get("catalog")
+        if catalog is None or not catalog.filename:
+            return _error_response("Selecciona un catálogo Excel en formato .xlsx.", 400)
+
+        filename = secure_filename(catalog.filename)
+        suffix = Path(filename).suffix.lower()
+        if suffix not in ALLOWED_CATALOG_EXTENSIONS:
+            return _error_response("Formato no soportado. Usa un archivo .xlsx.", 400)
+
+        temporary_path: Path | None = None
+        try:
+            with tempfile.NamedTemporaryFile(delete=False, suffix=suffix) as temporary_file:
+                catalog.save(temporary_file)
+                temporary_path = Path(temporary_file.name)
+
+            # Se valida por completo antes de reemplazar el catálogo activo.
+            ExcelCatalogRepository(temporary_path)
+            target_path = Path(app.config["CATALOG_FILE"])
+            target_path.parent.mkdir(parents=True, exist_ok=True)
+            os.replace(temporary_path, target_path)
+            temporary_path = None
+
+            active_catalog_service = catalog_service()
+            return _json_response(
+                {
+                    "message": f"{filename} se actualizó correctamente como catálogo maestro.",
+                    "catalog": active_catalog_service.get_summary(),
+                    "dashboard": _build_dashboard(CSVDemandRepository(), active_catalog_service),
+                }
+            )
+        except (FileNotFoundError, ValueError) as exc:
+            return _error_response(exc, 400)
+        except PermissionError:
+            return _error_response(
+                "No se puede reemplazar el catálogo porque está abierto en otra aplicación. Ciérralo e inténtalo otra vez.",
+                400,
+            )
+        except Exception as exc:
+            return _error_response(exc, 500)
+        finally:
+            if temporary_path is not None:
+                temporary_path.unlink(missing_ok=True)
+
     @app.post("/api/train")
     def train_model():
         try:
-            metrics = TrainService(CSVDemandRepository()).run()
+            service = TrainService(CSVDemandRepository())
+            metrics = service.run()
             if not metrics:
                 return _error_response("No hay suficientes datos por categoría para entrenar.", 400)
             return _json_response(
                 {
-                    "message": "Modelo entrenado correctamente.",
+                    "message": (
+                        "Modelo entrenado con validación histórica para "
+                        f"{service.last_training_summary['trained_categories']} categorías."
+                    ),
                     "metrics": {name: round(float(value), 2) for name, value in metrics.items()},
+                    "training_summary": service.last_training_summary,
                 }
             )
         except (FileNotFoundError, ValueError) as exc:
@@ -120,17 +208,31 @@ def create_app(test_config: dict[str, Any] | None = None) -> Flask:
             return _error_response("Primero entrena el modelo para generar el pronóstico.", 400)
 
         try:
-            predictions = PredictService(CSVDemandRepository()).predict_future(days)
+            service = PredictService(CSVDemandRepository())
+            predictions = service.predict_future(days)
+            products_by_category = _load_category_products()
+            serialized_predictions = {
+                category: [
+                    {"date": demand.date.strftime("%Y-%m-%d"), "quantity": round(float(demand.quantity), 2)}
+                    for demand in demands
+                ]
+                for category, demands in predictions.items()
+            }
             return _json_response(
                 {
                     "message": f"Pronóstico generado para los próximos {days} días.",
                     "days": days,
-                    "predictions": {
-                        category: [
-                            {"date": demand.date.strftime("%Y-%m-%d"), "quantity": round(float(demand.quantity), 2)}
-                            for demand in demands
-                        ]
-                        for category, demands in predictions.items()
+                    "predictions": serialized_predictions,
+                    "products_by_category": {
+                        category: products_by_category.get(category, [])
+                        for category in predictions
+                    },
+                    "product_forecasts_by_category": _build_product_forecasts(
+                        serialized_predictions, products_by_category
+                    ),
+                    "validation_by_category": {
+                        category: (service.predictor.metadata.get("validation_by_category") or {}).get(category, {})
+                        for category in predictions
                     },
                 }
             )
@@ -146,30 +248,39 @@ def create_app(test_config: dict[str, Any] | None = None) -> Flask:
     return app
 
 
-def _build_dashboard(demand_repo: CSVDemandRepository) -> dict[str, Any]:
+def _build_dashboard(demand_repo: CSVDemandRepository, catalog_service: CatalogService) -> dict[str, Any]:
     """Prepara datos simples y serializables para el tablero."""
     demands = demand_repo.get_all_demands()
+    catalog_summary = catalog_service.get_summary()
     if not demands:
         return {
             "summary": {
                 "records": 0,
-                "products": 0,
+                "categories": 0,
                 "total_quantity": 0,
+                "first_sale_date": None,
                 "last_sale_date": None,
                 "history_updated_at": None,
             },
-            "products": [],
+            "categories": [],
             "recent": [],
+            "catalog": {
+                **catalog_summary,
+                "historical_categories": 0,
+                "mapped_historical_categories": 0,
+                "unmapped_historical_categories": [],
+            },
         }
 
-    product_totals: dict[str, float] = {}
+    category_totals: dict[str, float] = {}
     for demand in demands:
-        product_totals[demand.category] = product_totals.get(demand.category, 0) + float(demand.quantity)
+        category_totals[demand.category] = category_totals.get(demand.category, 0) + float(demand.quantity)
 
     sorted_demands = sorted(demands, key=lambda demand: demand.date, reverse=True)
-    products = [
+    active_categories = set(catalog_service.get_categories())
+    categories = [
         {"name": name, "quantity": round(quantity, 2)}
-        for name, quantity in sorted(product_totals.items(), key=lambda item: item[1], reverse=True)
+        for name, quantity in sorted(category_totals.items(), key=lambda item: item[1], reverse=True)
     ]
     recent = [
         {
@@ -177,20 +288,27 @@ def _build_dashboard(demand_repo: CSVDemandRepository) -> dict[str, Any]:
             "category": demand.category,
             "quantity": round(float(demand.quantity), 2),
         }
-        for demand in sorted_demands[:12]
-    ]
+        for demand in (demand for demand in sorted_demands if demand.quantity > 0)
+    ][:12]
     return {
         "summary": {
             "records": len(demands),
-            "products": len(product_totals),
-            "total_quantity": round(sum(product_totals.values()), 2),
+            "categories": len(category_totals),
+            "total_quantity": round(sum(category_totals.values()), 2),
+            "first_sale_date": sorted_demands[-1].date.strftime("%Y-%m-%d"),
             "last_sale_date": sorted_demands[0].date.strftime("%Y-%m-%d"),
             "history_updated_at": (
                 demand_repo.get_last_updated_at().isoformat() if demand_repo.get_last_updated_at() else None
             ),
         },
-        "products": products,
+        "categories": categories,
         "recent": recent,
+        "catalog": {
+            **catalog_summary,
+            "historical_categories": len(category_totals),
+            "mapped_historical_categories": len(set(category_totals) & active_categories),
+            "unmapped_historical_categories": sorted(set(category_totals) - active_categories),
+        },
     }
 
 
@@ -204,3 +322,98 @@ def _json_response(payload: dict[str, Any], status: int = 200):
     response.status_code = status
     response.headers["Cache-Control"] = "no-store"
     return response
+
+
+def _load_category_products(max_products: int | None = None) -> dict[str, list[dict[str, float | int | str]]]:
+    """Obtiene todos los productos y su participación histórica por categoría.
+
+    ``max_products`` se conserva solo para consultas que quieran limitar el
+    resultado. El pronóstico usa el valor predeterminado para no ocultar una
+    parte de la categoría bajo una fila genérica.
+    """
+    if not CATEGORY_PRODUCT_MIX_FILE.exists():
+        return {}
+    product_totals: dict[str, dict[str, float]] = {}
+    with CATEGORY_PRODUCT_MIX_FILE.open(encoding="utf-8", newline="") as source:
+        for row in csv.DictReader(source):
+            category = str(row.get("category", "")).strip()
+            product = str(row.get("product", "")).strip()
+            if not category or not product:
+                continue
+            try:
+                quantity = float(row.get("historical_quantity", 0))
+            except (TypeError, ValueError):
+                continue
+            category_products = product_totals.setdefault(category, {})
+            category_products[product] = category_products.get(product, 0.0) + quantity
+
+    rankings: dict[str, list[dict[str, float | int | str]]] = {}
+    for category, products in product_totals.items():
+        category_total = sum(products.values())
+        if category_total <= 0:
+            continue
+        ordered_products = sorted(products.items(), key=lambda item: (-item[1], item[0]))
+        if max_products is not None:
+            ordered_products = ordered_products[:max_products]
+        rankings[category] = [
+            {
+                "rank": rank,
+                "name": product,
+                "historical_quantity": round(quantity, 2),
+                "historical_share": quantity / category_total,
+            }
+            for rank, (product, quantity) in enumerate(ordered_products, start=1)
+        ]
+    return rankings
+
+
+def _build_product_forecasts(
+    predictions: dict[str, list[dict[str, float | str]]],
+    products_by_category: dict[str, list[dict[str, float | int | str]]],
+) -> dict[str, list[dict[str, Any]]]:
+    """Distribuye cada pronóstico de categoría según la mezcla histórica de ventas.
+
+    Los productos no se entrenan como modelos independientes: esta asignación
+    conserva el total validado de la categoría y muestra cómo se repartiría entre
+    todos sus productos según su participación histórica.
+    """
+    result: dict[str, list[dict[str, Any]]] = {}
+    for category, demands in predictions.items():
+        ranking = products_by_category.get(category, [])
+        total_share = sum(max(0.0, float(product["historical_share"])) for product in ranking)
+        normalized_ranking = [
+            (product, max(0.0, float(product["historical_share"])) / total_share)
+            for product in ranking
+        ] if total_share > 0 else []
+        daily_forecasts: list[dict[str, Any]] = []
+        for demand in demands:
+            category_quantity = round(float(demand["quantity"]), 2)
+            products: list[dict[str, Any]] = []
+            allocated_quantity = 0.0
+            for product, historical_share in normalized_ranking:
+                quantity = round(category_quantity * historical_share, 2)
+                products.append(
+                    {
+                        "name": product["name"],
+                        "quantity": quantity,
+                        "historical_share": round(historical_share * 100, 2),
+                    }
+                )
+                allocated_quantity += quantity
+
+            residual = round(category_quantity - allocated_quantity, 2)
+            if residual and products:
+                # La diferencia solo procede del redondeo a dos decimales. Se
+                # asigna al producto con mayor participación para que el total
+                # de productos coincida exactamente con el total de categoría.
+                products[0]["quantity"] = round(products[0]["quantity"] + residual, 2)
+
+            daily_forecasts.append(
+                {
+                    "date": demand["date"],
+                    "category_quantity": category_quantity,
+                    "products": products,
+                }
+            )
+        result[category] = daily_forecasts
+    return result

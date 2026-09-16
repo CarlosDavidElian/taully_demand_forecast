@@ -7,7 +7,7 @@ from domain.entities.demand import Demand
 from domain.interfaces.repositories import DemandRepository
 from application.services.history_fingerprint import history_fingerprint
 from infrastructure.ml.model_predictor import ModelPredictor
-from config.settings import MODELS_FILE, TIME_FEATURES
+from config.settings import MODELS_FILE
 
 class PredictService:
     def __init__(self, demand_repo: DemandRepository):
@@ -35,37 +35,37 @@ class PredictService:
         ])
         df = df.sort_values('date').reset_index(drop=True)
 
-        categories = df['category'].unique()
+        last_history_date = df['date'].max()
         predictions_by_category = {}
 
-        for cat in categories:
-            # La selección es dinámica: solo se pronostican productos que el
-            # entrenamiento anterior consideró aptos y para los que guardó un
-            # modelo vigente. No se usa un mínimo fijo de filas aquí.
-            if cat not in self.predictor.models:
-                continue
-
+        for cat in sorted(self.predictor.models):
             df_cat = df[df['category'] == cat].copy()
             if df_cat.empty:
                 continue
 
-            last_date = df_cat['date'].max()
-            # Generar fechas futuras
-            future_dates = [last_date + timedelta(days=i+1) for i in range(days)]
+            future_dates = [last_history_date + timedelta(days=i + 1) for i in range(days)]
+            values = [float(quantity) for quantity in df_cat.sort_values('date')['quantity']]
+            if len(values) < 28:
+                continue
 
-            # El modelo solo recibe variables disponibles antes de la fecha
-            # futura. No se emplean ventas futuras ni medias que las incluyan.
+            # El pronóstico multi-día es recursivo: cada estimación posterior
+            # usa solo ventas históricas y predicciones ya generadas.
             predictions = []
             for dt in future_dates:
                 features = [
-                    dt.weekday(),          # day_of_week
-                    dt.month,              # month
-                    dt.timetuple().tm_yday, # day_of_year
-                    1 if dt.weekday() >= 5 else 0, # is_weekend
+                    dt.weekday(),
+                    dt.month,
+                    dt.timetuple().tm_yday,
+                    1 if dt.weekday() >= 5 else 0,
+                    values[-1],
+                    values[-7],
+                    float(np.mean(values[-7:])),
+                    float(np.mean([values[-7], values[-14], values[-21], values[-28]])),
                 ]
                 prediction = float(self.predictor.predict(cat, np.array([features]))[0])
                 prediction = max(0, round(prediction, 2))
                 predictions.append(prediction)
+                values.append(prediction)
 
             # Crear entidades Demand
             demands_future = [

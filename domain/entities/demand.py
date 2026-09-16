@@ -3,9 +3,9 @@ from datetime import datetime
 
 @dataclass
 class Demand:
-    """Representa la demanda consolidada de un producto en un día."""
+    """Representa la demanda consolidada de una categoría comercial en un día."""
     date: datetime
-    category: str       # Nombre del producto; se conserva por compatibilidad del almacenamiento.
+    category: str
     quantity: float
 
     def __post_init__(self):

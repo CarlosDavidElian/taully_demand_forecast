@@ -12,6 +12,11 @@ def parse_arguments():
     # Comando: train
     parser_train = subparsers.add_parser('train', help='Entrenar el modelo con el historial actual')
 
+    subparsers.add_parser(
+        'rebuild-history',
+        help='Reconstruir el historial diario por categoría desde los reportes POS',
+    )
+
     # Comando: predict
     parser_predict = subparsers.add_parser('predict', help='Predecir demanda futura')
     parser_predict.add_argument('--days', type=int, default=7, help='Número de días a predecir (default: 7)')

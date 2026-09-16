@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="icon" href="{{ url_for('favicon', v='3') }}" sizes="any" />
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='taully-favicon.png', v='3') }}" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css', v='14') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css', v='16') }}" />
   </head>
   <body>
     <main class="shell">
@@ -100,11 +100,14 @@
             <h2 id="train-heading">Entrene el modelo predictivo</h2>
             <p>Actualiza el modelo con el historial de demanda consolidado.</p>
             <button id="train-button" class="button button-dark" type="button">Entrenar modelo <span aria-hidden="true">→</span></button>
-            <dl id="metrics" class="metrics" hidden>
-              <div><dt>WAPE</dt><dd id="metric-wape">—</dd></div>
-              <div><dt>RMSE</dt><dd id="metric-rmse">—</dd></div>
-              <div><dt>MAE</dt><dd id="metric-mae">—</dd></div>
-            </dl>
+            <div id="metrics" class="metrics-panel" hidden>
+              <dl class="metrics">
+                <div><dt>WAPE</dt><dd id="metric-wape">—</dd></div>
+                <div><dt>RMSE</dt><dd id="metric-rmse">—</dd></div>
+                <div><dt>MAE</dt><dd id="metric-mae">—</dd></div>
+              </dl>
+              <p class="metrics-explanation"><strong>WAPE:</strong> porcentaje de error total. <strong>RMSE:</strong> error en unidades que penaliza más los errores grandes. <strong>MAE:</strong> error promedio en unidades. En los tres casos, un valor menor es mejor.</p>
+            </div>
           </div>
         </section>
 
@@ -171,10 +174,15 @@
           <div><p class="eyebrow">RESULTADO</p><h2 id="results-title">Próxima demanda estimada</h2></div>
           <span id="forecast-period" class="panel-note"></span>
         </div>
-        <p class="forecast-explanation">El modelo estima la demanda diaria por categoría. Debajo se muestra el total por fecha y, una sola vez, el detalle completo de todos los productos para el período solicitado. Las unidades de los productos se distribuyen según sus ventas históricas y suman exactamente el total de su categoría.</p>
+        <p class="forecast-explanation">Selecciona una fecha para ver la demanda estimada de cada producto, su categoría y las unidades previstas para ese día. Las unidades indican la venta que se espera cubrir; para decidir una compra se deben contrastar con el stock disponible.</p>
+        <div id="forecast-date-control" class="forecast-date-control" hidden>
+          <label for="forecast-date">FECHA A CONSULTAR</label>
+          <select id="forecast-date" aria-describedby="forecast-date-note"></select>
+          <p id="forecast-date-note">Cambia la fecha para consultar las unidades estimadas de ese día.</p>
+        </div>
         <div id="prediction-list" class="prediction-list"></div>
       </section>
     </main>
-    <script src="{{ url_for('static', filename='dashboard.js', v='14') }}"></script>
+    <script src="{{ url_for('static', filename='dashboard.js', v='15') }}"></script>
   </body>
 </html>

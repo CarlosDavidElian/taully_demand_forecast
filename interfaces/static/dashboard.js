@@ -6,6 +6,10 @@ const catalogForm = document.querySelector("#catalog-form");
 const trainButton = document.querySelector("#train-button");
 const forecastButton = document.querySelector("#forecast-button");
 const forecastDays = document.querySelector("#days");
+const forecastDate = document.querySelector("#forecast-date");
+const forecastDateControl = document.querySelector("#forecast-date-control");
+
+let currentForecast = null;
 
 const numberFormat = new Intl.NumberFormat("es-PE", { maximumFractionDigits: 2 });
 const dateFormat = new Intl.DateTimeFormat("es-PE", { day: "2-digit", month: "short", year: "numeric", timeZone: "UTC" });
@@ -41,6 +45,9 @@ function hideForecastResults() {
   results.hidden = true;
   document.querySelector("#forecast-period").textContent = "";
   document.querySelector("#prediction-list").innerHTML = "";
+  forecastDateControl.hidden = true;
+  forecastDate.innerHTML = "";
+  currentForecast = null;
 }
 
 async function request(url, options = {}) {
@@ -101,6 +108,10 @@ catalogInput.addEventListener("change", () => {
 forecastDays.addEventListener("change", () => {
   hideForecastResults();
   setStatus("Selecciona «Generar pronóstico» para ver la estimación del nuevo periodo.", "");
+});
+
+forecastDate.addEventListener("change", () => {
+  if (currentForecast) renderForecast(currentForecast, forecastDate.value, false);
 });
 
 uploadForm.addEventListener("submit", async (event) => {
@@ -197,13 +208,23 @@ forecastButton.addEventListener("click", async () => {
   }
 });
 
-function renderForecast(data) {
+function renderForecast(data, selectedDate = null, shouldScroll = true) {
   const results = document.querySelector("#forecast-results");
   const list = document.querySelector("#prediction-list");
   const entries = Object.entries(data.predictions);
   const productForecastsByCategory = data.product_forecasts_by_category || {};
   const validationByCategory = data.validation_by_category || {};
+  const availableDates = entries[0]?.[1].map((demand) => demand.date) || [];
+  const dateToShow = availableDates.includes(selectedDate)
+    ? selectedDate
+    : (availableDates.includes(forecastDate.value) ? forecastDate.value : availableDates[0]);
+
+  currentForecast = data;
   document.querySelector("#forecast-period").textContent = `${data.days} días`;
+  forecastDateControl.hidden = !dateToShow;
+  forecastDate.innerHTML = availableDates.map((date) => `
+    <option value="${escapeHtml(date)}">${formatDate(date)}</option>`).join("");
+  forecastDate.value = dateToShow || "";
   results.hidden = false;
   list.innerHTML = entries.length
     ? entries.map(([category, demands]) => {
@@ -212,44 +233,39 @@ function renderForecast(data) {
         category_quantity: demand.quantity,
         products: []
       }));
-      const productTotals = new Map();
-      dailyProductForecasts.forEach((forecast) => {
-        (forecast.products || []).forEach((product) => {
-          productTotals.set(product.name, (productTotals.get(product.name) || 0) + Number(product.quantity));
-        });
-      });
-      const dailyRows = demands.map((demand) => `
-        <li>
-          <span>${formatDate(demand.date)}</span>
-          <strong>${numberFormat.format(demand.quantity)} unidades</strong>
-        </li>`).join("");
-      const productRows = productTotals.size
-        ? [...productTotals.entries()].map(([product, quantity]) => `
+      const selectedForecast = dailyProductForecasts.find((forecast) => forecast.date === dateToShow)
+        || dailyProductForecasts[0];
+      const categoryQuantity = selectedForecast?.category_quantity
+        ?? demands.find((demand) => demand.date === dateToShow)?.quantity
+        ?? 0;
+      const products = selectedForecast?.products || [];
+      const productRows = products.length
+        ? products.map((product) => `
             <li>
-              <span class="forecast-product-name" title="${escapeHtml(product)}">${escapeHtml(product)}</span>
+              <span class="forecast-product-name" title="${escapeHtml(product.name)}">${escapeHtml(product.name)}</span>
               <span class="forecast-product-category">${escapeHtml(category)}</span>
-              <strong>${numberFormat.format(quantity)}</strong>
+              <strong>${numberFormat.format(product.quantity)}</strong>
             </li>`).join("")
         : '<li><span class="forecast-product-name">Sin detalle disponible</span><span class="forecast-product-category">—</span><strong>—</strong></li>';
 
       return `
         <article class="prediction-card">
           <h3>${escapeHtml(category)}</h3>
-          <p class="prediction-category-label">Pronóstico de la categoría ${escapeHtml(category)} y detalle completo de sus productos para el período solicitado.</p>
+          <p class="prediction-category-label">Pronóstico de demanda por producto dentro de la categoría ${escapeHtml(category)} para la fecha seleccionada.</p>
           <p class="prediction-validation">Validación histórica: WAPE ${numberFormat.format(validationByCategory[category]?.wape ?? 0)}% · ${escapeHtml(validationByCategory[category]?.method || "método validado")}</p>
-          <div class="category-forecast-section">
-            <div class="category-forecast-heading"><span>FECHA PRONOSTICADA</span><span>TOTAL ESTIMADO · ${escapeHtml(category)}</span></div>
-            <ul class="category-forecast-days">${dailyRows}</ul>
+          <div class="forecast-selected-day">
+            <span><small>FECHA SELECCIONADA</small>${formatDate(selectedForecast?.date || dateToShow)}</span>
+            <strong><small>DEMANDA ESTIMADA · ${escapeHtml(category)}</small>${numberFormat.format(categoryQuantity)} unidades</strong>
           </div>
           <div class="period-product-section">
-            <p>Detalle completo para ${data.days} días: ${numberFormat.format(productTotals.size)} productos.</p>
-            <div class="forecast-product-head"><span>PRODUCTO</span><span>CATEGORÍA</span><span>UNIDADES ESTIMADAS</span></div>
+            <p>Productos estimados para ${formatDate(selectedForecast?.date || dateToShow)}: ${numberFormat.format(products.length)} productos.</p>
+            <div class="forecast-product-head"><span>PRODUCTO</span><span>CATEGORÍA</span><span>DEMANDA ESTIMADA</span></div>
             <ul class="forecast-product-breakdown">${productRows}</ul>
           </div>
         </article>`;
     }).join("")
     : '<p class="empty-state">No se pudo generar un pronóstico para las categorías disponibles.</p>';
-  results.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  if (shouldScroll) results.scrollIntoView({ behavior: "smooth", block: "nearest" });
 }
 
 loadDashboard();

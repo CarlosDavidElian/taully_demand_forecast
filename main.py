@@ -63,7 +63,14 @@ def main():
                 uncategorized_sales_path=UNCATEGORIZED_SALES_FILE,
                 category_product_mix_path=CATEGORY_PRODUCT_MIX_FILE,
             )
-            result = service.rebuild(DATA_DIR.glob('Reporte_Taully_*.xlsx'))
+            # Se conservan ambos nombres de exportación que han usado los
+            # reportes del minimarket. El servicio detecta fechas duplicadas
+            # para evitar mezclar dos archivos del mismo día.
+            report_paths = sorted({
+                *DATA_DIR.glob('Reporte_Taully_*.xlsx'),
+                *DATA_DIR.glob('reporte_ventas_*.xlsx'),
+            })
+            result = service.rebuild(report_paths)
             print(
                 f"Historial reconstruido con {result.reports} reportes, {result.dates} días, "
                 f"{result.categories} categorías y {result.demand_records} observaciones."

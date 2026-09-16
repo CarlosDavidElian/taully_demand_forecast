@@ -2,6 +2,7 @@ import pandas as pd
 import re
 from typing import List
 from datetime import datetime
+import unicodedata
 
 from domain.interfaces.repositories import SaleReader
 from domain.entities.sale import Sale
@@ -9,14 +10,15 @@ from infrastructure.utils.date_cleaner import clean_sales_dataframe
 
 class ExcelReader(SaleReader):
     """
-    Lee archivos Excel que siguen el formato del sistema POS:
-    - Encabezado con 'FECHAI: dd/mm/yyyy' y 'FECHAF: dd/mm/yyyy'.
-    - Tabla con columnas: PROD, DESC, CANT, TOTAL.
+    Lee los dos formatos de reportes Excel que usa el proyecto:
+    - POS: encabezado ``FECHAI`` y tabla ``PROD`` / ``CANT``.
+    - Reporte diario: título ``REPORTE DE VENTAS - dd/mm/aaaa`` y tabla
+      ``PRODUCTO`` / ``CANTIDAD VENDIDA``.
     """
     def read_sales(self, file_path: str) -> List[Sale]:
         # Leemos la hoja completa una sola vez. El reporte POS suele tener
         # información antes de la tabla y no siempre fija sus columnas en A:D.
-        df_raw = pd.read_excel(file_path, header=None, dtype=str)
+        df_raw = pd.read_excel(file_path, header=None, dtype=object)
         fecha = self._extract_start_date(df_raw)
         header_index, column_indexes = self._find_table_header(df_raw)
 
@@ -54,14 +56,18 @@ class ExcelReader(SaleReader):
 
     @staticmethod
     def _extract_start_date(dataframe: pd.DataFrame) -> datetime:
-        """Encuentra FECHAI aun cuando etiqueta y fecha estén en celdas distintas."""
-        pattern = re.compile(r"FECHAI\s*:?\s*(\d{1,2}/\d{1,2}/\d{4})", re.IGNORECASE)
+        """Encuentra la fecha en el encabezado POS o en el título diario."""
+        patterns = (
+            re.compile(r"FECHAI\s*:?\s*(\d{1,2}/\d{1,2}/\d{4})", re.IGNORECASE),
+            re.compile(r"REPORTE\s+DE\s+VENTAS\s*-\s*(\d{1,2}/\d{1,2}/\d{4})", re.IGNORECASE),
+        )
         for _, row in dataframe.iterrows():
             values = [str(value).strip() for value in row.values if pd.notna(value)]
             row_text = " ".join(values)
-            match = pattern.search(row_text)
-            if match:
-                return datetime.strptime(match.group(1), "%d/%m/%Y")
+            for pattern in patterns:
+                match = pattern.search(row_text)
+                if match:
+                    return datetime.strptime(match.group(1), "%d/%m/%Y")
 
             # Algunos exportadores separan "FECHAI" y "12/09/2026" en
             # dos celdas. Solo aceptamos una fecha de la misma fila.
@@ -70,19 +76,27 @@ class ExcelReader(SaleReader):
                     date_match = re.fullmatch(r"\d{1,2}/\d{1,2}/\d{4}", value)
                     if date_match:
                         return datetime.strptime(date_match.group(0), "%d/%m/%Y")
-        raise ValueError("No se encontró 'FECHAI' en el archivo Excel")
+        raise ValueError("No se encontró una fecha de venta en el archivo Excel")
 
     @staticmethod
     def _find_table_header(dataframe: pd.DataFrame) -> tuple[int, dict[str, int]]:
+        aliases = {
+            "PROD": "PROD",
+            "PRODUCTO": "PROD",
+            "CANT": "CANT",
+            "CANTIDAD VENDIDA": "CANT",
+            "TOTAL": "TOTAL",
+        }
         required = {"PROD", "CANT"}
         for row_index, row in dataframe.iterrows():
             headers: dict[str, int] = {}
             for column_index, value in enumerate(row.values):
                 if pd.isna(value):
                     continue
-                header = str(value).strip().upper()
-                if header in {"PROD", "DESC", "CANT", "TOTAL"}:
-                    headers.setdefault(header, column_index)
+                header = unicodedata.normalize("NFKD", str(value)).encode("ASCII", "ignore").decode().strip().upper()
+                canonical_name = aliases.get(header)
+                if canonical_name:
+                    headers.setdefault(canonical_name, column_index)
             if required.issubset(headers):
                 return row_index, headers
-        raise ValueError("No se encontró la tabla con las columnas 'PROD' y 'CANT'")
+        raise ValueError("No se encontró una tabla con producto y cantidad vendida")

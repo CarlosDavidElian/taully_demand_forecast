@@ -6,12 +6,14 @@ const catalogForm = document.querySelector("#catalog-form");
 const trainButton = document.querySelector("#train-button");
 const forecastButton = document.querySelector("#forecast-button");
 const forecastDays = document.querySelector("#days");
-const forecastCutoff = document.querySelector("#forecast-cutoff");
-const forecastCutoffNote = document.querySelector("#forecast-cutoff-note");
 const forecastDate = document.querySelector("#forecast-date");
 const forecastDateControl = document.querySelector("#forecast-date-control");
 
 let currentForecast = null;
+// Se conserva internamente la fecha del último reporte procesado. Así una
+// prueba histórica se calcula desde ese reporte sin exponer otro campo en la
+// interfaz. Al recargar la página vuelve al pronóstico normal.
+let reportForecastCutoff = null;
 
 const numberFormat = new Intl.NumberFormat("es-PE", { maximumFractionDigits: 2 });
 const dateFormat = new Intl.DateTimeFormat("es-PE", { day: "2-digit", month: "short", year: "numeric", timeZone: "UTC" });
@@ -23,17 +25,6 @@ function formatDate(value) {
 
 function formatDateTime(value) {
   return value ? `Historial actualizado: ${dateTimeFormat.format(new Date(value))}` : "Historial aún no actualizado";
-}
-
-function selectedCutoff() {
-  return forecastCutoff.value || null;
-}
-
-function updateCutoffNote() {
-  const cutoff = selectedCutoff();
-  forecastCutoffNote.textContent = cutoff
-    ? `Prueba histórica: se entrenará solo con ventas hasta el ${formatDate(cutoff)} y el pronóstico empezará al día siguiente.`
-    : "Pronóstico normal: se usa todo el historial y se estima desde el día posterior al último reporte.";
 }
 
 function escapeHtml(value) {
@@ -110,6 +101,7 @@ async function loadDashboard() {
 }
 
 reportInput.addEventListener("change", () => {
+  reportForecastCutoff = null;
   document.querySelector("#file-name").textContent = reportInput.files[0]?.name || "Seleccionar archivo";
 });
 
@@ -120,12 +112,6 @@ catalogInput.addEventListener("change", () => {
 forecastDays.addEventListener("change", () => {
   hideForecastResults();
   setStatus("Selecciona «Generar pronóstico» para ver la estimación del nuevo periodo.", "");
-});
-
-forecastCutoff.addEventListener("change", () => {
-  hideForecastResults();
-  updateCutoffNote();
-  setStatus("La fecha base cambió. Entrena el modelo antes de generar el pronóstico.", "");
 });
 
 forecastDate.addEventListener("change", () => {
@@ -148,15 +134,12 @@ uploadForm.addEventListener("submit", async (event) => {
       ? ` Productos sin catálogo: ${catalogSummary.unmatched_products.join(", ")}.`
       : " Todos los productos del reporte se asociaron al catálogo.";
     const reportDates = data.report_dates || [];
-    if (reportDates.length) {
-      forecastCutoff.value = reportDates.at(-1);
-      updateCutoffNote();
-    }
-    const historicalMessage = reportDates.length
-      ? ` Se configuró la prueba histórica hasta el ${formatDate(reportDates.at(-1))}.`
+    reportForecastCutoff = reportDates.at(-1) || null;
+    const cutoffMessage = reportForecastCutoff
+      ? ` La siguiente prueba usará ventas hasta el ${formatDate(reportForecastCutoff)}.`
       : "";
     setStatus(
-      `${data.message} Nuevos: ${numberFormat.format(summary.added)} · actualizados: ${numberFormat.format(summary.updated)} · sin cambios: ${numberFormat.format(summary.unchanged)}.${catalogMessage}${historicalMessage} Entrena nuevamente antes de pronosticar.`,
+      `${data.message} Nuevos: ${numberFormat.format(summary.added)} · actualizados: ${numberFormat.format(summary.updated)} · sin cambios: ${numberFormat.format(summary.unchanged)}.${catalogMessage}${cutoffMessage} Entrena nuevamente antes de pronosticar.`,
       "success"
     );
     document.querySelector("#metrics").hidden = true;
@@ -198,11 +181,11 @@ catalogForm.addEventListener("submit", async (event) => {
 });
 
 trainButton.addEventListener("click", async () => {
-  const cutoffDate = selectedCutoff();
+  const cutoffDate = reportForecastCutoff;
   setButtonLoading(trainButton, true, "Entrenando");
   setStatus(
     cutoffDate
-      ? `Entrenando la prueba histórica hasta el ${formatDate(cutoffDate)}…`
+      ? `Entrenando con ventas hasta el ${formatDate(cutoffDate)}…`
       : "Entrenando el modelo con todo el historial disponible…",
     "working"
   );
@@ -227,11 +210,11 @@ trainButton.addEventListener("click", async () => {
 
 forecastButton.addEventListener("click", async () => {
   const days = Number(forecastDays.value);
-  const cutoffDate = selectedCutoff();
+  const cutoffDate = reportForecastCutoff;
   setButtonLoading(forecastButton, true, "Calculando");
   setStatus(
     cutoffDate
-      ? `Calculando el pronóstico histórico desde el día posterior al ${formatDate(cutoffDate)}…`
+      ? `Calculando el pronóstico desde el día posterior al ${formatDate(cutoffDate)}…`
       : "Calculando el pronóstico por categoría…",
     "working"
   );
@@ -342,5 +325,4 @@ function renderForecast(data, selectedDate = null, shouldScroll = true) {
   if (shouldScroll) results.scrollIntoView({ behavior: "smooth", block: "nearest" });
 }
 
-updateCutoffNote();
 loadDashboard();

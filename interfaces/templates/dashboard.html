@@ -124,10 +124,7 @@
                 <option value="14">14 días</option>
                 <option value="30">30 días</option>
               </select>
-              <label for="forecast-cutoff">Fecha base de prueba</label>
-              <input id="forecast-cutoff" name="forecast-cutoff" type="date" aria-describedby="forecast-cutoff-note">
             </div>
-            <p id="forecast-cutoff-note" class="forecast-cutoff-note">Vacía: pronóstico normal desde el último reporte. Al procesar un reporte se usará su última fecha para hacer una prueba histórica.</p>
             <button id="forecast-button" class="button button-outline" type="button">Generar pronóstico <span aria-hidden="true">→</span></button>
           </div>
         </section>
@@ -187,6 +184,6 @@
         <div id="prediction-list" class="prediction-list"></div>
       </section>
     </main>
-    <script src="{{ url_for('static', filename='dashboard.js', v='22') }}"></script>
+    <script src="{{ url_for('static', filename='dashboard.js', v='24') }}"></script>
   </body>
 </html>

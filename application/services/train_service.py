@@ -11,6 +11,9 @@ from config.settings import FORECAST_FEATURES, MAX_VALIDATION_WAPE, MODELS_FILE
 
 class TrainService:
     MIN_ACTIVE_DAYS = 30
+    # El rezago más largo es de 28 días y se requieren al menos 20 filas
+    # resultantes para separar entrenamiento y validación sin inventar datos.
+    MIN_HISTORY_DAYS = 48
 
     def __init__(self, demand_repo: DemandRepository):
         self.demand_repo = demand_repo
@@ -21,9 +24,12 @@ class TrainService:
         demands = self.demand_repo.get_all_demands()
         if cutoff_date is not None:
             demands = [demand for demand in demands if demand.date.date() <= cutoff_date]
-        if len({demand.date.date() for demand in demands}) < 30:
+        if len({demand.date.date() for demand in demands}) < self.MIN_HISTORY_DAYS:
             period = f" hasta el {cutoff_date.strftime('%Y-%m-%d')}" if cutoff_date else ""
-            raise ValueError(f"Se necesitan al menos 30 días de datos históricos{period} para entrenar")
+            raise ValueError(
+                f"Se necesitan al menos {self.MIN_HISTORY_DAYS} días de datos históricos{period} para entrenar. "
+                "El modelo compara las cuatro semanas previas y necesita 20 días adicionales para aprender."
+            )
 
         # 2. Convertir a DataFrame y crear features temporales
         df = pd.DataFrame([

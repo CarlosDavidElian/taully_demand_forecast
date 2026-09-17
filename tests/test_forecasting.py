@@ -13,11 +13,11 @@ from infrastructure.repositories.csv_repository import CSVDemandRepository
 
 
 class ForecastingTests(unittest.TestCase):
-    def _repository_with_varied_data(self, folder: str) -> CSVDemandRepository:
+    def _repository_with_varied_data(self, folder: str, days: int = 70) -> CSVDemandRepository:
         repository = CSVDemandRepository(Path(folder) / "history.csv")
         start = datetime(2026, 1, 1)
         demands = []
-        for day in range(70):
+        for day in range(days):
             date = start + timedelta(days=day)
             demands.extend(
                 [
@@ -63,3 +63,9 @@ class ForecastingTests(unittest.TestCase):
                 self.assertTrue(all(len(rows) == 3 for rows in predictions.values()))
                 with self.assertRaisesRegex(ValueError, "fecha de corte distinta"):
                     PredictService(repository).predict_future(1)
+
+    def test_training_explains_the_48_day_minimum_required_by_weekly_lags(self):
+        with TemporaryDirectory() as folder:
+            repository = self._repository_with_varied_data(folder, days=47)
+            with self.assertRaisesRegex(ValueError, "al menos 48 días"):
+                TrainService(repository).run()

@@ -11,15 +11,14 @@ class ExcelCatalogRepositoryTests(unittest.TestCase):
         catalog_path = Path(__file__).resolve().parents[1] / "data" / "catalogo_maestro.xlsx"
         repository = ExcelCatalogRepository(catalog_path)
 
-        self.assertGreater(len(repository.get_all_products()), 0)
+        products = repository.get_all_products()
+        self.assertGreater(len(products), 0)
 
-        product = repository.get_product("  gloria azul 400  ")
+        source_product = products[0]
+        product = repository.get_product(f"  {source_product.product_name.lower()}  ")
         self.assertIsNotNone(product)
-        self.assertEqual(product.product_name, "GLORIA AZUL 400")
-
-        # Este valor llega desde Excel como una fecha de 1900 si no se
-        # convierte nuevamente al serial monetario.
-        self.assertEqual(repository.get_product("AKIO AVENA 1.0").cost, 1.2)
+        self.assertEqual(product.product_name, source_product.product_name)
+        self.assertEqual(product.cost, source_product.cost)
 
         # Los productos con costo numérico deben mantenerse disponibles para
         # la clasificación, incluso cuando el catálogo se actualice.

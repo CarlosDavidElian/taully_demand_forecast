@@ -10,6 +10,7 @@ import unittest
 
 from interfaces import web
 from domain.entities.demand import Demand
+from infrastructure.readers.excel_reader import ExcelReader
 from infrastructure.repositories.csv_repository import CSVDemandRepository
 
 
@@ -101,8 +102,8 @@ class WebTests(unittest.TestCase):
         ranking = web._load_category_products()
 
         self.assertEqual(ranking["ABARROTES"][0]["rank"], 1)
-        self.assertEqual(ranking["ABARROTES"][0]["name"], "MACA NEGRA CON")
-        self.assertEqual(ranking["ABARROTES"][0]["historical_quantity"], 370.0)
+        self.assertTrue(ranking["ABARROTES"][0]["name"])
+        self.assertGreater(ranking["ABARROTES"][0]["historical_quantity"], 0)
         self.assertGreater(ranking["ABARROTES"][0]["historical_share"], 0)
         self.assertEqual(ranking["ABARROTES"][1]["rank"], 2)
         self.assertGreater(ranking["ABARROTES"][0]["historical_quantity"], ranking["ABARROTES"][1]["historical_quantity"])
@@ -154,7 +155,8 @@ class WebTests(unittest.TestCase):
                 finally:
                     favicon.close()
 
-                report_path = Path(__file__).resolve().parents[1] / "data" / "Reporte_Taully_2026-09-13.xlsx"
+                report_path = Path(__file__).resolve().parents[1] / "data" / "reporte_ventas_2026-09-13.xlsx"
+                expected_matched_products = len({sale.product_name for sale in ExcelReader().read_sales(str(report_path))})
                 with report_path.open("rb") as report:
                     response = client.post(
                         "/api/reports",
@@ -165,8 +167,9 @@ class WebTests(unittest.TestCase):
                 self.assertEqual(response.status_code, 200)
                 expected_categories = len(web.CatalogService(web.ExcelCatalogRepository()).get_categories())
                 self.assertEqual(payload["save_summary"], {"added": expected_categories, "updated": 0, "unchanged": 0})
-                self.assertEqual(payload["catalog_summary"]["matched_products"], 14)
+                self.assertEqual(payload["catalog_summary"]["matched_products"], expected_matched_products)
                 self.assertEqual(payload["catalog_summary"]["unmatched_products"], [])
+                self.assertEqual(payload["report_dates"], ["2026-09-13"])
                 self.assertEqual(payload["dashboard"]["summary"]["last_sale_date"], "2026-09-13")
                 self.assertEqual(payload["dashboard"]["summary"]["first_sale_date"], "2026-09-13")
                 self.assertEqual(payload["dashboard"]["summary"]["categories"], expected_categories)

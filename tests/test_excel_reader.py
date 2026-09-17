@@ -51,3 +51,21 @@ class ExcelReaderTests(unittest.TestCase):
         self.assertEqual(len(sales), 1)
         self.assertEqual(sales[0].date, datetime(2026, 9, 13))
         self.assertEqual(sales[0].product_name, "A01")
+
+    def test_keeps_a_product_that_contains_the_word_total(self):
+        with TemporaryDirectory() as folder:
+            report = Path(folder) / "reporte_ventas_2026-04-01.xlsx"
+            workbook = Workbook()
+            sheet = workbook.active
+            sheet.append(["REPORTE DE VENTAS - 01/04/2026"])
+            sheet.append([])
+            sheet.append(["PRODUCTO", "CANTIDAD VENDIDA", "TOTAL"])
+            sheet.append(["DETERGENTE BOLÍVAR CUIDADO TOTAL 730 G", 2, 18])
+            sheet.append(["Total", 2, 18])
+            workbook.save(report)
+
+            sales = ExcelReader().read_sales(str(report))
+
+        self.assertEqual(len(sales), 1)
+        self.assertEqual(sales[0].product_name, "DETERGENTE BOLÍVAR CUIDADO TOTAL 730 G")
+        self.assertEqual(sales[0].quantity, 2)

@@ -219,7 +219,6 @@ h1 em { color: var(--blue); font-style: italic; }
 .button-outline { margin-top: 1rem; border-color: var(--navy); background: transparent; color: var(--navy); }
 .forecast-controls { display: grid; width: 100%; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 0.55rem 0.7rem; margin-top: auto; color: var(--navy); font-family: "DM Mono", monospace; font-size: 0.64rem; letter-spacing: 0.04em; }
 .forecast-controls select, .forecast-controls input { max-width: 9.5rem; border: 1px solid var(--line-dark); border-radius: 0.15rem; padding: 0.38rem 0.45rem; background: #fff; color: var(--navy); font-family: "Manrope", Arial, sans-serif; font-size: 0.72rem; font-weight: 700; }
-.forecast-cutoff-note { margin: 0.65rem 0 0 !important; color: var(--muted); font-size: 0.62rem !important; line-height: 1.45 !important; }
 .metrics { display: grid; width: 100%; grid-template-columns: repeat(3, 1fr); gap: 0.4rem; margin: 1rem 0 0; }
 .metrics div { border-top: 1px solid var(--line-dark); padding-top: 0.48rem; }
 .metrics dt { color: var(--muted); font-family: "DM Mono", monospace; font-size: 0.57rem; letter-spacing: 0.03em; }

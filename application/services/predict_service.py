@@ -10,6 +10,8 @@ from infrastructure.ml.model_predictor import ModelPredictor
 from config.settings import MODELS_FILE
 
 class PredictService:
+    MIN_HISTORY_DAYS = 48
+
     def __init__(self, demand_repo: DemandRepository):
         self.demand_repo = demand_repo
         self.predictor = ModelPredictor()
@@ -20,9 +22,9 @@ class PredictService:
         demands = self.demand_repo.get_all_demands()
         if cutoff_date is not None:
             demands = [demand for demand in demands if demand.date.date() <= cutoff_date]
-        if len({demand.date.date() for demand in demands}) < 30:
+        if len({demand.date.date() for demand in demands}) < self.MIN_HISTORY_DAYS:
             period = f" hasta el {cutoff_date.strftime('%Y-%m-%d')}" if cutoff_date else ""
-            raise ValueError(f"Se necesitan al menos 30 días de datos históricos{period}")
+            raise ValueError(f"Se necesitan al menos {self.MIN_HISTORY_DAYS} días de datos históricos{period}")
 
         # 2. Cargar el modelo guardado
         try:

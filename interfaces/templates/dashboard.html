@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="icon" href="{{ url_for('favicon', v='3') }}" sizes="any" />
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='taully-favicon.png', v='3') }}" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css', v='16') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css', v='19') }}" />
   </head>
   <body>
     <main class="shell">
@@ -124,6 +124,10 @@
                 <option value="14">14 días</option>
                 <option value="30">30 días</option>
               </select>
+              <label for="forecast-cutoff">Corte de prueba</label>
+              <input id="forecast-cutoff" name="forecast-cutoff" type="date" aria-describedby="forecast-cutoff-note" />
+              <p id="forecast-cutoff-note" class="forecast-cutoff-note">Opcional: elige una fecha pasada para comparar el pronóstico con ventas reales.</p>
+              <button id="clear-forecast-cutoff" class="clear-forecast-cutoff" type="button">Usar todo el historial</button>
             </div>
             <button id="forecast-button" class="button button-outline" type="button">Generar pronóstico <span aria-hidden="true">→</span></button>
           </div>
@@ -138,9 +142,21 @@
           <p>Indicadores calculados a partir de los reportes incorporados.</p>
         </div>
         <div class="stats" aria-label="Resumen del historial">
-          <article><span>REGISTROS PROCESADOS</span><strong id="records">—</strong><small>observaciones consolidadas</small></article>
-          <article><span>CATEGORÍAS ANALIZADAS</span><strong id="categories-count">—</strong><small>categorías comerciales distintas</small></article>
-          <article><span>UNIDADES CATEGORIZADAS</span><strong id="total-quantity">—</strong><small>demanda acumulada atribuida al catálogo</small></article>
+          <article>
+            <span>REGISTROS PROCESADOS</span>
+            <strong id="records">—</strong>
+            <small>Cantidad de datos diarios por categoría. No equivale al número de productos vendidos.</small>
+          </article>
+          <article>
+            <span>CATEGORÍAS ANALIZADAS</span>
+            <strong id="categories-count">—</strong>
+            <small>Grupos de productos distintos que tienen ventas registradas en el historial.</small>
+          </article>
+          <article>
+            <span>UNIDADES CATEGORIZADAS</span>
+            <strong id="total-quantity">—</strong>
+            <small>Suma de productos vendidos y asignados a una categoría. No representa dinero.</small>
+          </article>
         </div>
       </section>
 
@@ -159,6 +175,7 @@
         <article class="panel recent-panel">
           <div class="panel-heading">
             <div><p class="eyebrow">ÚLTIMOS MOVIMIENTOS</p><h2>Actividad reciente</h2></div>
+            <span class="panel-note">Ventas reales</span>
           </div>
           <div class="table-wrap">
             <table>
@@ -173,9 +190,12 @@
       <section id="forecast-results" class="panel results-panel" hidden aria-labelledby="results-title">
         <div class="panel-heading">
           <div><p class="eyebrow">RESULTADO</p><h2 id="results-title">Compra sugerida por período</h2></div>
-          <span id="forecast-period" class="panel-note"></span>
+          <div class="forecast-actions">
+            <span id="forecast-period" class="panel-note"></span>
+            <button id="download-forecast-button" class="download-forecast-button" type="button" hidden>Descargar Excel <span aria-hidden="true">↓</span></button>
+          </div>
         </div>
-        <p class="forecast-explanation">El panel muestra primero la compra sugerida para los 7, 14 o 30 días seleccionados. Puedes elegir una fecha para consultar solo ese día. Las cantidades se convierten en paquetes enteros y no consideran el stock disponible.</p>
+        <p class="forecast-explanation">El panel muestra primero la compra sugerida para los 7, 14 o 30 días seleccionados. Puedes elegir una fecha para consultar solo ese día. Los paquetes enteros se distribuyen sin exceder el total pronosticado por categoría y no consideran el stock disponible.</p>
         <div id="forecast-date-control" class="forecast-date-control" hidden>
           <label for="forecast-date">PERÍODO O FECHA A CONSULTAR</label>
           <select id="forecast-date" aria-describedby="forecast-date-note"></select>
@@ -184,6 +204,6 @@
         <div id="prediction-list" class="prediction-list"></div>
       </section>
     </main>
-    <script src="{{ url_for('static', filename='dashboard.js', v='24') }}"></script>
+    <script src="{{ url_for('static', filename='dashboard.js', v='28') }}"></script>
   </body>
 </html>

@@ -54,6 +54,8 @@ class WebTests(unittest.TestCase):
                 web, "PredictService", PredictServiceStub
             ), patch.object(web, "MODELS_FILE", model_path), patch.object(
                 web, "_load_category_products", return_value={"ABARROTES": []}
+            ), patch.object(
+                web, "_load_product_sale_history", return_value=({}, set())
             ):
                 client = web.create_app({"TESTING": True}).test_client()
                 trained = client.post("/api/train", json={"cutoff_date": "2026-06-15"})
@@ -127,6 +129,135 @@ class WebTests(unittest.TestCase):
             {"name": "PRODUCTO B", "quantity": 40.0, "historical_share": 40.0},
         ])
         self.assertEqual(sum(item["quantity"] for item in detail["products"]), detail["category_quantity"])
+
+    def test_product_allocation_uses_recent_sales_not_only_the_same_weekday(self):
+        forecast_date = date(2026, 1, 29)
+        recent_dates = {
+            date(2026, 1, 20),
+            date(2026, 1, 22),
+        }
+        product_forecast = web._build_seasonal_product_forecasts(
+            {"ABARROTES": [{"date": forecast_date.isoformat(), "quantity": 20.0}]},
+            {
+                "ABARROTES": {
+                    "PRODUCTO A": {date(2026, 1, 22): 6.0},
+                    "PRODUCTO B": {date(2026, 1, 20): 4.0},
+                    "PRODUCTO SIN VENTA": {},
+                }
+            },
+            recent_dates,
+            {"ABARROTES": []},
+        )
+
+        detail = product_forecast["ABARROTES"][0]
+        self.assertEqual(detail["products"], [
+            {"name": "PRODUCTO A", "quantity": 12.0, "allocation_share": 60.0},
+            {"name": "PRODUCTO B", "quantity": 8.0, "allocation_share": 40.0},
+        ])
+        self.assertEqual(sum(item["quantity"] for item in detail["products"]), detail["category_quantity"])
+
+    def test_forecast_export_contains_the_selected_purchase_view(self):
+        client = web.create_app({"TESTING": True}).test_client()
+        response = client.post(
+            "/api/forecast/export",
+            json={
+                "scope": {
+                    "view": "date",
+                    "days": 7,
+                    "start_date": "2026-09-11",
+                    "end_date": "2026-09-11",
+                    "cutoff_date": "2026-09-10",
+                },
+                "rows": [
+                    {
+                        "category": "ABARROTES",
+                        "product": "ARROZ COSTEÑO 1 KG",
+                        "quantity": 3.2,
+                        "allocation_share": 12.5,
+                    },
+                    {
+                        "category": "BEBIDAS",
+                        "product": "GASEOSA INCA KOLA 2.25 L",
+                        "quantity": 0.2,
+                        "allocation_share": 4.5,
+                    },
+                ],
+            },
+        )
+
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(
+            response.mimetype,
+            "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        )
+        self.assertIn("pronostico_compra_2026-09-11.xlsx", response.headers["Content-Disposition"])
+
+        from openpyxl import load_workbook
+
+        workbook = load_workbook(BytesIO(response.data), data_only=True)
+        worksheet = workbook["Pronóstico"]
+        self.assertEqual(worksheet["B3"].value, "11/09/2026")
+        self.assertEqual(worksheet["A6"].value, "CATEGORÍA")
+        self.assertEqual(worksheet["B7"].value, "ARROZ COSTEÑO 1 KG")
+        self.assertEqual(worksheet["C7"].value, 3.2)
+        self.assertEqual(worksheet["D7"].value, 4)
+        self.assertEqual(worksheet["D8"].value, 1)
+
+    def test_forecast_export_rejects_an_invalid_period(self):
+        client = web.create_app({"TESTING": True}).test_client()
+        response = client.post(
+            "/api/forecast/export",
+            json={
+                "scope": {
+                    "view": "date",
+                    "days": 7,
+                    "start_date": "2026-09-12",
+                    "end_date": "2026-09-11",
+                },
+                "rows": [{"category": "ABARROTES", "product": "ARROZ", "quantity": 1}],
+            },
+        )
+
+        self.assertEqual(response.status_code, 400)
+        self.assertIn("período", response.get_json()["error"].lower())
+
+    def test_forecast_export_keeps_the_supplied_whole_package_plan(self):
+        client = web.create_app({"TESTING": True}).test_client()
+        response = client.post(
+            "/api/forecast/export",
+            json={
+                "scope": {
+                    "view": "date",
+                    "days": 7,
+                    "start_date": "2026-09-11",
+                    "end_date": "2026-09-11",
+                },
+                "rows": [
+                    {
+                        "category": "ABARROTES",
+                        "product": "ARROZ COSTEÑO 1 KG",
+                        "quantity": 3.2,
+                        "suggested_packages": 3,
+                        "allocation_share": 94.12,
+                    },
+                    {
+                        "category": "ABARROTES",
+                        "product": "SAL DE MESA 1 KG",
+                        "quantity": 0.2,
+                        "suggested_packages": 1,
+                        "allocation_share": 5.88,
+                    },
+                ],
+            },
+        )
+
+        self.assertEqual(response.status_code, 200)
+        from openpyxl import load_workbook
+
+        workbook = load_workbook(BytesIO(response.data), data_only=True)
+        worksheet = workbook["Pronóstico"]
+        self.assertEqual(worksheet["D7"].value, 3)
+        self.assertEqual(worksheet["D8"].value, 1)
 
     def test_dashboard_and_upload_report(self):
         with TemporaryDirectory() as folder:

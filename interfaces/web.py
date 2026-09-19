@@ -3,21 +3,27 @@
 from __future__ import annotations
 
 import csv
+import math
 import os
 import tempfile
-from datetime import date, datetime
+from collections import defaultdict
+from datetime import date, datetime, timedelta
+from io import BytesIO
 from pathlib import Path
 from typing import Any
 
-from flask import Flask, jsonify, render_template, request, send_from_directory
+from flask import Flask, jsonify, render_template, request, send_file, send_from_directory
+from openpyxl import Workbook
+from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 from werkzeug.utils import secure_filename
 
 from application.services.catalog_service import CatalogService
 from application.services.ingest_service import IngestService
 from application.services.predict_service import PredictService
 from application.services.train_service import TrainService
-from config.settings import BASE_DIR, CATEGORY_PRODUCT_MIX_FILE, CATALOG_FILE, MODELS_FILE
+from config.settings import BASE_DIR, CATEGORY_PRODUCT_MIX_FILE, CATALOG_FILE, DATA_DIR, MODELS_FILE
 from infrastructure.repositories.catalog_repository import ExcelCatalogRepository
+from infrastructure.readers.excel_reader import ExcelReader
 from infrastructure.repositories.csv_repository import CSVDemandRepository
 
 
@@ -247,6 +253,21 @@ def create_app(test_config: dict[str, Any] | None = None) -> Flask:
                 ]
                 for category, demands in predictions.items()
             }
+            forecast_dates = [
+                date.fromisoformat(item["date"])
+                for demands in serialized_predictions.values()
+                for item in demands
+            ]
+            reference_date = min(forecast_dates) - timedelta(days=1)
+            product_history, source_dates = _load_product_sale_history(
+                catalog_service(), reference_date
+            )
+            product_forecasts = _build_seasonal_product_forecasts(
+                serialized_predictions,
+                product_history,
+                source_dates,
+                products_by_category,
+            )
             return _json_response(
                 {
                     "message": (
@@ -261,8 +282,11 @@ def create_app(test_config: dict[str, Any] | None = None) -> Flask:
                         category: products_by_category.get(category, [])
                         for category in predictions
                     },
-                    "product_forecasts_by_category": _build_product_forecasts(
-                        serialized_predictions, products_by_category
+                    "product_forecasts_by_category": product_forecasts,
+                    "product_allocation_method": (
+                        "Participación de ventas de los últimos 120 días anteriores."
+                        if source_dates
+                        else "Participación histórica disponible."
                     ),
                     "validation_by_category": {
                         category: (service.predictor.metadata.get("validation_by_category") or {}).get(category, {})
@@ -271,6 +295,23 @@ def create_app(test_config: dict[str, Any] | None = None) -> Flask:
                 }
             )
         except (FileNotFoundError, ValueError) as exc:
+            return _error_response(exc, 400)
+        except Exception as exc:
+            return _error_response(exc, 500)
+
+    @app.post("/api/forecast/export")
+    def export_forecast():
+        """Entrega en Excel la misma vista de compra sugerida del panel."""
+        try:
+            workbook_bytes, filename = _create_forecast_export(request.get_json(silent=True))
+            return send_file(
+                workbook_bytes,
+                as_attachment=True,
+                download_name=filename,
+                mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                max_age=0,
+            )
+        except ValueError as exc:
             return _error_response(exc, 400)
         except Exception as exc:
             return _error_response(exc, 500)
@@ -456,3 +497,303 @@ def _build_product_forecasts(
             )
         result[category] = daily_forecasts
     return result
+
+
+def _load_product_sale_history(
+    catalog_service: CatalogService,
+    reference_date: date,
+) -> tuple[dict[str, dict[str, dict[date, float]]], set[date]]:
+    """Lee ventas por SKU anteriores a la fecha que se va a pronosticar.
+
+    La separación por fecha evita usar las ventas reales futuras al ejecutar
+    una prueba histórica. Cada SKU queda asociado al nombre canónico y a la
+    categoría del catálogo maestro.
+    """
+    report_paths = sorted(
+        {
+            *DATA_DIR.glob("Reporte_Taully_*.xlsx"),
+            *DATA_DIR.glob("reporte_ventas_*.xlsx"),
+        }
+    )
+    sales_by_product: defaultdict[str, defaultdict[str, defaultdict[date, float]]] = defaultdict(
+        lambda: defaultdict(lambda: defaultdict(float))
+    )
+    source_dates: set[date] = set()
+    sale_reader = ExcelReader()
+
+    for report_path in report_paths:
+        sales = sale_reader.read_sales(str(report_path))
+        report_dates = {sale.date.date() for sale in sales}
+        if len(report_dates) != 1:
+            raise ValueError(f"El reporte '{report_path.name}' contiene más de una fecha de venta.")
+        report_date = report_dates.pop()
+        if report_date > reference_date:
+            continue
+        if report_date in source_dates:
+            raise ValueError(f"Hay más de un reporte para la fecha {report_date:%Y-%m-%d}.")
+        source_dates.add(report_date)
+
+        for sale in sales:
+            catalog_product = catalog_service.get_product(sale.product_name)
+            if catalog_product is None:
+                continue
+            sales_by_product[catalog_product.category][catalog_product.product_name][report_date] += float(
+                sale.quantity
+            )
+
+    return (
+        {
+            category: {product: dict(daily_sales) for product, daily_sales in products.items()}
+            for category, products in sales_by_product.items()
+        },
+        source_dates,
+    )
+
+
+def _build_seasonal_product_forecasts(
+    predictions: dict[str, list[dict[str, float | str]]],
+    product_history: dict[str, dict[str, dict[date, float]]],
+    source_dates: set[date],
+    fallback_products_by_category: dict[str, list[dict[str, float | int | str]]],
+) -> dict[str, list[dict[str, Any]]]:
+    """Distribuye el total de categoría mediante el patrón reciente por SKU.
+
+    El modelo sigue estimando la demanda de la categoría. Para repartirla por
+    producto se usan las ventas de los últimos 120 días disponibles. Esta
+    ventana es más estable que una muestra corta de un único día de la semana
+    y evita sugerir artículos que no tuvieron ventas recientes.
+    """
+    result: dict[str, list[dict[str, Any]]] = {}
+    for category, demands in predictions.items():
+        product_series = product_history.get(category, {})
+        daily_forecasts: list[dict[str, Any]] = []
+        for demand in demands:
+            forecast_date = date.fromisoformat(str(demand["date"]))
+            weights = _seasonal_product_weights(product_series, source_dates, forecast_date)
+            if not weights:
+                weights = {
+                    str(product["name"]): max(0.0, float(product["historical_share"]))
+                    for product in fallback_products_by_category.get(category, [])
+                }
+
+            total_weight = sum(weights.values())
+            category_quantity = round(float(demand["quantity"]), 2)
+            products: list[dict[str, float | str]] = []
+            allocated_quantity = 0.0
+            if total_weight > 0:
+                for product, weight in sorted(weights.items(), key=lambda item: (-item[1], item[0])):
+                    allocation_share = weight / total_weight
+                    quantity = round(category_quantity * allocation_share, 2)
+                    products.append(
+                        {
+                            "name": product,
+                            "quantity": quantity,
+                            "allocation_share": round(allocation_share * 100, 2),
+                        }
+                    )
+                    allocated_quantity += quantity
+
+            residual = round(category_quantity - allocated_quantity, 2)
+            if residual and products:
+                products[0]["quantity"] = round(float(products[0]["quantity"]) + residual, 2)
+
+            daily_forecasts.append(
+                {
+                    "date": demand["date"],
+                    "category_quantity": category_quantity,
+                    "products": products,
+                }
+            )
+        result[category] = daily_forecasts
+    return result
+
+
+def _seasonal_product_weights(
+    product_series: dict[str, dict[date, float]],
+    source_dates: set[date],
+    forecast_date: date,
+) -> dict[str, float]:
+    """Calcula pesos por SKU a partir de las ventas recientes disponibles."""
+    recent_dates = [
+        sale_date
+        for sale_date in source_dates
+        if sale_date < forecast_date and (forecast_date - sale_date).days <= 120
+    ]
+    if not recent_dates:
+        return {}
+
+    weights = {
+        product: sum(daily_sales.get(sale_date, 0.0) for sale_date in recent_dates)
+        for product, daily_sales in product_series.items()
+    }
+    return {product: weight for product, weight in weights.items() if weight > 0}
+
+
+def _create_forecast_export(payload: Any) -> tuple[BytesIO, str]:
+    """Crea un Excel compacto a partir de la vista actualmente mostrada.
+
+    El navegador envía las filas ya calculadas por el pronóstico. Aquí se
+    validan y se vuelve a calcular el redondeo de compra para que el archivo
+    conserve el mismo criterio que el panel.
+    """
+    if not isinstance(payload, dict):
+        raise ValueError("No hay datos de pronóstico para exportar.")
+
+    scope = payload.get("scope")
+    rows = payload.get("rows")
+    if not isinstance(scope, dict) or not isinstance(rows, list) or not rows:
+        raise ValueError("No hay filas de pronóstico para exportar.")
+    if len(rows) > 2_000:
+        raise ValueError("El pronóstico contiene demasiadas filas para exportar.")
+
+    view = scope.get("view")
+    if view not in {"period", "date"}:
+        raise ValueError("La vista del pronóstico no es válida.")
+
+    try:
+        days = int(scope.get("days"))
+    except (TypeError, ValueError) as exc:
+        raise ValueError("El horizonte del pronóstico no es válido.") from exc
+    if not 1 <= days <= 90:
+        raise ValueError("El horizonte del pronóstico no es válido.")
+
+    start_date = _parse_export_date(scope.get("start_date"), "La fecha inicial")
+    end_date = _parse_export_date(scope.get("end_date"), "La fecha final")
+    if end_date < start_date:
+        raise ValueError("El período del pronóstico no es válido.")
+    if view == "date" and start_date != end_date:
+        raise ValueError("La fecha seleccionada no es válida.")
+
+    normalized_rows: list[dict[str, Any]] = []
+    for row in rows:
+        if not isinstance(row, dict):
+            raise ValueError("Una fila del pronóstico no es válida.")
+        category = str(row.get("category", "")).strip()
+        product = str(row.get("product", "")).strip()
+        if not category or not product:
+            raise ValueError("Cada fila debe incluir categoría y producto.")
+        try:
+            quantity = float(row.get("quantity"))
+            allocation_share = float(row.get("allocation_share", row.get("historical_share", 0)))
+        except (TypeError, ValueError) as exc:
+            raise ValueError("La cantidad estimada no es válida.") from exc
+        if not math.isfinite(quantity) or quantity < 0 or not math.isfinite(allocation_share):
+            raise ValueError("La cantidad estimada no es válida.")
+
+        suggested_packages = row.get("suggested_packages")
+        if suggested_packages is None:
+            suggested_packages = math.ceil(quantity)
+        try:
+            suggested_value = float(suggested_packages)
+        except (TypeError, ValueError) as exc:
+            raise ValueError("La compra sugerida no es válida.") from exc
+        if not math.isfinite(suggested_value) or suggested_value < 0 or not suggested_value.is_integer():
+            raise ValueError("La compra sugerida no es válida.")
+        suggested_packages = int(suggested_value)
+
+        normalized_rows.append(
+            {
+                "category": category,
+                "product": product,
+                "quantity": round(quantity, 2),
+                "suggested_packages": suggested_packages,
+                "allocation_share": max(0.0, allocation_share) / 100,
+            }
+        )
+
+    period_label = (
+        start_date.strftime("%d/%m/%Y")
+        if start_date == end_date
+        else f"Del {start_date.strftime('%d/%m/%Y')} al {end_date.strftime('%d/%m/%Y')}"
+    )
+    mode_label = "Prueba histórica" if scope.get("cutoff_date") else "Pronóstico futuro"
+
+    workbook = Workbook()
+    worksheet = workbook.active
+    worksheet.title = "Pronóstico"
+    worksheet.sheet_view.showGridLines = False
+    worksheet.freeze_panes = "A6"
+    worksheet.sheet_properties.pageSetUpPr.fitToPage = True
+    worksheet.page_setup.orientation = "landscape"
+    worksheet.page_setup.fitToWidth = 1
+    worksheet.page_setup.fitToHeight = 0
+
+    navy = "091F35"
+    gold = "F0C400"
+    line = "D9E2E8"
+    muted = "64748B"
+    thin_line = Side(style="thin", color=line)
+
+    worksheet["A1"] = "Pronóstico de compra sugerida"
+    worksheet["A1"].font = Font(name="Arial", size=14, bold=True, color=navy)
+    worksheet["A1"].border = Border(bottom=Side(style="medium", color=gold))
+
+    metadata = [
+        ("Tipo de consulta", mode_label),
+        ("Período consultado", period_label),
+        ("Horizonte (días)", days),
+        ("Criterio", "Mezcla de ventas recientes y paquetes enteros asignados por categoría."),
+    ]
+    for row_number, (label, value) in enumerate(metadata, start=2):
+        worksheet.cell(row=row_number, column=1, value=label)
+        worksheet.cell(row=row_number, column=1).font = Font(name="Arial", size=10, bold=True, color=navy)
+        worksheet.cell(row=row_number, column=2, value=value)
+        worksheet.cell(row=row_number, column=2).font = Font(name="Arial", size=10, color=muted)
+
+    headers = [
+        "CATEGORÍA",
+        "PRODUCTO",
+        "DEMANDA ESTIMADA",
+        "COMPRA SUGERIDA",
+        "PARTICIPACIÓN DE ASIGNACIÓN",
+    ]
+    for column, header in enumerate(headers, start=1):
+        cell = worksheet.cell(row=6, column=column, value=header)
+        cell.fill = PatternFill("solid", fgColor=navy)
+        cell.font = Font(name="Arial", size=10, bold=True, color="FFFFFF")
+        cell.alignment = Alignment(horizontal="center", vertical="center")
+        cell.border = Border(bottom=thin_line, right=Side(style="thin", color="FFFFFF"))
+
+    for row_number, item in enumerate(normalized_rows, start=7):
+        values = [
+            _excel_safe_text(item["category"]),
+            _excel_safe_text(item["product"]),
+            item["quantity"],
+            item["suggested_packages"],
+            item["allocation_share"],
+        ]
+        for column, value in enumerate(values, start=1):
+            cell = worksheet.cell(row=row_number, column=column, value=value)
+            cell.font = Font(name="Arial", size=10, color=navy)
+            cell.alignment = Alignment(vertical="center")
+            cell.border = Border(bottom=thin_line)
+        worksheet.cell(row=row_number, column=3).number_format = "#,##0.00"
+        worksheet.cell(row=row_number, column=4).number_format = "#,##0"
+        worksheet.cell(row=row_number, column=5).number_format = "0.0%"
+
+    worksheet.auto_filter.ref = f"A6:E{len(normalized_rows) + 6}"
+    worksheet.column_dimensions["A"].width = 20
+    worksheet.column_dimensions["B"].width = 52
+    worksheet.column_dimensions["C"].width = 20
+    worksheet.column_dimensions["D"].width = 20
+    worksheet.column_dimensions["E"].width = 25
+    worksheet.row_dimensions[1].height = 24
+    worksheet.row_dimensions[6].height = 22
+
+    filename_period = start_date.isoformat() if start_date == end_date else f"{start_date.isoformat()}_a_{end_date.isoformat()}"
+    workbook_bytes = BytesIO()
+    workbook.save(workbook_bytes)
+    workbook_bytes.seek(0)
+    return workbook_bytes, f"pronostico_compra_{filename_period}.xlsx"
+
+
+def _parse_export_date(value: Any, message: str) -> date:
+    try:
+        return date.fromisoformat(str(value))
+    except (TypeError, ValueError) as exc:
+        raise ValueError(f"{message} no es válida.") from exc
+
+
+def _excel_safe_text(value: str) -> str:
+    """Evita que nombres de productos se interpreten como fórmulas en Excel."""
+    return f"'{value}" if value[:1] in {"=", "+", "-", "@"} else value

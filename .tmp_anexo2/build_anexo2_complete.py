@@ -1,4 +1,6 @@
 from pathlib import Path
+from datetime import date, timedelta
+import json
 import sys
 
 from docx import Document
@@ -18,9 +20,88 @@ from build_anexo2 import (
 
 
 PREVIEW = "--vista-previa" in sys.argv
+FIFTEEN_PRODUCTS = "--quince-productos" in sys.argv
 OFFICIAL_OUT = Path(r"C:\taully_demand_forecast\outputs\01a0b651-7620-73f0-8f6a-8b68b14f7a17\Anexo_2_Instrumentos_de_recoleccion_de_datos.docx")
 PREVIEW_OUT = Path(r"C:\taully_demand_forecast\outputs\01a0b651-7620-73f0-8f6a-8b68b14f7a17\Anexo_2_vista_previa_inventario_calculado.docx")
-OUT = PREVIEW_OUT if PREVIEW else OFFICIAL_OUT
+PREVIEW_15_OUT = Path(r"C:\taully_demand_forecast\outputs\01a0b651-7620-73f0-8f6a-8b68b14f7a17\Anexo_2_vista_previa_15_productos.docx")
+OUT = PREVIEW_15_OUT if PREVIEW and FIFTEEN_PRODUCTS else PREVIEW_OUT if PREVIEW else OFFICIAL_OUT
+
+
+def format_number(value):
+    return f"{value:,.0f}"
+
+
+def build_product_preview_rows():
+    """Return 15 traceable product records with no test-inventory stockout.
+
+    The inventory file keeps only sale days, so the period balances are rebuilt
+    from the same reproducible daily test rule used to create that file. The
+    chosen products have no stockout in that rule; therefore CD, SI, EN and SF
+    reconcile exactly on every row.
+    """
+    source_path = Path(r"C:\taully_demand_forecast\.tmp_inventory_demo\product_sales_from_reports.json")
+    source = json.loads(source_path.read_text(encoding="utf-8"))
+    metadata = source["metadata"]
+    start = date.fromisoformat(metadata["start_date"])
+    dates = [start + timedelta(days=index) for index in range(metadata["date_count"])]
+    date_keys = [current.isoformat() for current in dates]
+
+    product_info = {}
+    sales_by_date_product = {}
+    for sale in source["records"]:
+        product_info[sale["product"]] = sale
+        sales_by_date_product[(sale["date"], sale["product"])] = sale["quantity"]
+
+    metrics = []
+    for product, info in product_info.items():
+        daily_sales = [sales_by_date_product.get((day, product), 0) for day in date_keys]
+        total_sales = sum(daily_sales)
+        average_daily_sales = total_sales / len(dates)
+        stock_target = max(int(-(-average_daily_sales // 1)), max(daily_sales) * 2, 1)
+        reorder_point = max(int(-(-average_daily_sales * 3 // 1)), 1)
+        opening_stock = stock_target
+        entries_total = 0
+        fulfilled_total = 0
+        stockout_days = 0
+
+        for quantity in daily_sales:
+            entries = stock_target - opening_stock if opening_stock <= reorder_point else 0
+            available = opening_stock + entries
+            fulfilled_total += min(quantity, available)
+            if quantity > available:
+                stockout_days += 1
+            entries_total += entries
+            opening_stock = max(0, available - quantity)
+
+        if stockout_days == 0:
+            metrics.append({
+                "product": product,
+                "category": info["category"],
+                "si": stock_target,
+                "en": entries_total,
+                "sf": opening_stock,
+                "cd": fulfilled_total,
+                "dqs": stockout_days,
+                "dd": len(dates),
+                "isi": fulfilled_total / (stock_target + entries_total),
+                "tqs": stockout_days / len(dates),
+                "total_sales": total_sales,
+            })
+
+    selected = []
+    for category in sorted({row["category"] for row in metrics}):
+        category_rows = [row for row in metrics if row["category"] == category]
+        selected.extend(sorted(category_rows, key=lambda row: (-row["total_sales"], row["product"]))[:3])
+
+    if len(selected) != 15:
+        raise RuntimeError("No se encontraron 15 productos sin quiebre en el inventario de prueba.")
+
+    selected.sort(key=lambda row: (row["category"], -row["total_sales"], row["product"]))
+    return selected
+
+
+PRODUCT_INVENTORY_15 = build_product_preview_rows()
+PRODUCT_SALES_15 = sorted(PRODUCT_INVENTORY_15, key=lambda row: (-row["total_sales"], row["product"]))
 
 CATEGORIES = [
     ("1", "ABARROTES", "8,577"),
@@ -71,12 +152,15 @@ def title_page(doc):
     title.alignment = WD_ALIGN_PARAGRAPH.CENTER
     title.paragraph_format.space_after = Pt(8)
     run = title.add_run(
+        "Anexo 2 Vista previa con 15 productos de inventario calculado" if PREVIEW and FIFTEEN_PRODUCTS else
         "Anexo 2 Vista previa de instrumentos con inventario calculado"
         if PREVIEW else "Anexo 2 Instrumentos de recolección de datos"
     )
     set_run_font(run, size=16, bold=True, color="000000")
 
     intro = (
+        "Esta vista previa presenta 15 productos identificados, tres por cada categoría comercial. Sus valores se calcularon con la misma regla diaria usada en el inventario de prueba, a partir de los reportes de venta del 1 de abril al 15 de septiembre de 2026. No reemplaza el kardex real de la empresa ni debe utilizarse como resultado definitivo de tesis."
+        if PREVIEW and FIFTEEN_PRODUCTS else
         "Esta vista previa permite revisar las tablas de inventario con valores calculados a partir de los reportes de venta del 1 de abril al 15 de septiembre de 2026. No reemplaza el kardex real de la empresa ni debe utilizarse como resultado definitivo de tesis."
         if PREVIEW else
         "Este anexo presenta los ocho instrumentos definidos en la tesis para el pretest. Las cifras de ventas y estacionalidad corresponden al historial procesado entre el 1 de abril y el 15 de septiembre de 2026."
@@ -99,6 +183,8 @@ def title_page(doc):
         [0.4, 2.7, 0.8, 3.0],
     )
     note = (
+        "Las 15 filas de inventario se presentan por producto porque SI, EN, SF, ISI y TQS se miden a ese nivel. La vista previa muestra stock calculado, no registrado por la tienda."
+        if PREVIEW and FIFTEEN_PRODUCTS else
         "La vista previa muestra stock calculado, no registrado por la tienda. La diferencia entre la demanda de los reportes (43,105) y la cantidad atendida por el stock calculado (42,945) es de 160 unidades."
         if PREVIEW else
         "Los 168 reportes diarios generan 840 registros consolidados en cinco categorías, con 43,105 unidades vendidas. Los campos de stock solo pueden usarse como resultados reales cuando provienen del kardex de la empresa."
@@ -116,9 +202,17 @@ def instrument_1(doc):
         "Kardex real y reportes de venta consolidados.",
         "Pretest. Del 1 de abril al 15 de septiembre de 2026.",
     )
-    rows = [(n, cat, si, en, sf, cd) for n, cat, si, en, sf, cd, _, _, _ in INVENTORY_PREVIEW] if PREVIEW else [(n, cat, "N.A.", "N.A.", "N.A.", cd) for n, cat, cd in CATEGORIES]
-    add_data_table(doc, ["N", "Categoría", "SI", "EN", "SF", "CD"], rows, [0.4, 2.0, 1.0, 1.0, 1.0, 1.2], numeric_cols=[0, 2, 3, 4, 5])
-    add_note(doc, "Vista previa: CD se calcula como SI + EN - SF. Estos valores son de un inventario calculado desde ventas y no sustituyen el kardex real." if PREVIEW else "La CD proviene de ventas reales. SI, EN y SF no se consignan porque no existe kardex real para aplicar esta fórmula de inventario.")
+    if PREVIEW and FIFTEEN_PRODUCTS:
+        rows = [
+            (str(index), row["product"], row["category"], format_number(row["si"]), format_number(row["en"]), format_number(row["sf"]), format_number(row["cd"]))
+            for index, row in enumerate(PRODUCT_INVENTORY_15, start=1)
+        ]
+        add_data_table(doc, ["N", "Producto", "Categoría", "SI", "EN", "SF", "CD"], rows, [0.35, 2.55, 0.8, 0.55, 0.65, 0.55, 0.65], numeric_cols=[0, 3, 4, 5, 6])
+        add_note(doc, "Las 15 filas corresponden a productos del inventario de prueba. En cada fila, CD = SI + EN - SF y coincide con la venta registrada porque no hubo quiebre calculado para esos productos.")
+    else:
+        rows = [(n, cat, si, en, sf, cd) for n, cat, si, en, sf, cd, _, _, _ in INVENTORY_PREVIEW] if PREVIEW else [(n, cat, "N.A.", "N.A.", "N.A.", cd) for n, cat, cd in CATEGORIES]
+        add_data_table(doc, ["N", "Categoría", "SI", "EN", "SF", "CD"], rows, [0.4, 2.0, 1.0, 1.0, 1.0, 1.2], numeric_cols=[0, 2, 3, 4, 5])
+        add_note(doc, "Vista previa: CD se calcula como SI + EN - SF. Estos valores son de un inventario calculado desde ventas y no sustituyen el kardex real." if PREVIEW else "La CD proviene de ventas reales. SI, EN y SF no se consignan porque no existe kardex real para aplicar esta fórmula de inventario.")
 
 
 def instrument_2(doc):
@@ -131,9 +225,17 @@ def instrument_2(doc):
         "Kardex real con stock inicial y entradas por producto o categoría.",
         "Pretest. Del 1 de abril al 15 de septiembre de 2026.",
     )
-    rows = [(n, cat, cd, si, en, isi) for n, cat, si, en, _, cd, isi, _, _ in INVENTORY_PREVIEW] if PREVIEW else [(n, cat, cd, "N.A.", "N.A.", "N.A.") for n, cat, cd in CATEGORIES]
-    add_data_table(doc, ["N", "Categoría", "CD", "SI", "EN", "ISI"], rows, [0.4, 2.0, 1.2, 1.0, 1.0, 1.2], numeric_cols=[0, 2, 3, 4, 5])
-    add_note(doc, "Vista previa: ISI se calcula con las cifras del inventario calculado. No representa el índice real de salida de la tienda." if PREVIEW else "No se calcula ISI porque faltarían SI y EN reales. Un valor automático derivado de las ventas no representa la salida real de inventario de la tienda.")
+    if PREVIEW and FIFTEEN_PRODUCTS:
+        rows = [
+            (str(index), row["product"], row["category"], format_number(row["cd"]), format_number(row["si"]), format_number(row["en"]), f'{row["isi"] * 100:.2f}%')
+            for index, row in enumerate(PRODUCT_INVENTORY_15, start=1)
+        ]
+        add_data_table(doc, ["N", "Producto", "Categoría", "CD", "SI", "EN", "ISI"], rows, [0.35, 2.45, 0.8, 0.6, 0.55, 0.65, 0.6], numeric_cols=[0, 3, 4, 5, 6])
+        add_note(doc, "ISI = CD / (SI + EN). Se muestran 15 productos del inventario de prueba. Los valores sirven para revisar la fórmula, no para afirmar el índice real de salida de la tienda.")
+    else:
+        rows = [(n, cat, cd, si, en, isi) for n, cat, si, en, _, cd, isi, _, _ in INVENTORY_PREVIEW] if PREVIEW else [(n, cat, cd, "N.A.", "N.A.", "N.A.") for n, cat, cd in CATEGORIES]
+        add_data_table(doc, ["N", "Categoría", "CD", "SI", "EN", "ISI"], rows, [0.4, 2.0, 1.2, 1.0, 1.0, 1.2], numeric_cols=[0, 2, 3, 4, 5])
+        add_note(doc, "Vista previa: ISI se calcula con las cifras del inventario calculado. No representa el índice real de salida de la tienda." if PREVIEW else "No se calcula ISI porque faltarían SI y EN reales. Un valor automático derivado de las ventas no representa la salida real de inventario de la tienda.")
 
 
 def instrument_3(doc):
@@ -146,9 +248,17 @@ def instrument_3(doc):
         "Kardex o control diario de productos agotados.",
         "Pretest. Del 1 de abril al 15 de septiembre de 2026.",
     )
-    rows = [(n, cat, dqs, "168", tqs) for n, cat, _, _, _, _, _, dqs, tqs in INVENTORY_PREVIEW] if PREVIEW else [(n, cat, "N.A.", "168", "N.A.") for n, cat, _ in CATEGORIES]
-    add_data_table(doc, ["N", "Categoría", "DQS", "DD", "TQS"], rows, [0.4, 2.3, 1.1, 1.1, 1.2], numeric_cols=[0, 2, 3, 4])
-    add_note(doc, "Vista previa: DQS cuenta los días con al menos un producto de la categoría sin stock calculado suficiente. No equivale a un registro real de agotados." if PREVIEW else "Los 168 días corresponden al periodo de ventas. Un día sin venta no demuestra por sí solo que hubo quiebre; por ello DQS queda pendiente de un registro real de agotados.")
+    if PREVIEW and FIFTEEN_PRODUCTS:
+        rows = [
+            (str(index), row["product"], row["category"], str(row["dqs"]), str(row["dd"]), f'{row["tqs"] * 100:.2f}%')
+            for index, row in enumerate(PRODUCT_INVENTORY_15, start=1)
+        ]
+        add_data_table(doc, ["N", "Producto", "Categoría", "DQS", "DD", "TQS"], rows, [0.35, 2.65, 0.9, 0.55, 0.65, 0.6], numeric_cols=[0, 3, 4, 5])
+        add_note(doc, "DQS registra 0 en estos 15 productos porque fueron elegidos sin quiebre dentro de la regla del inventario de prueba. Un valor de 0 no demuestra que la tienda real no haya tenido agotados.")
+    else:
+        rows = [(n, cat, dqs, "168", tqs) for n, cat, _, _, _, _, _, dqs, tqs in INVENTORY_PREVIEW] if PREVIEW else [(n, cat, "N.A.", "168", "N.A.") for n, cat, _ in CATEGORIES]
+        add_data_table(doc, ["N", "Categoría", "DQS", "DD", "TQS"], rows, [0.4, 2.3, 1.1, 1.1, 1.2], numeric_cols=[0, 2, 3, 4])
+        add_note(doc, "Vista previa: DQS cuenta los días con al menos un producto de la categoría sin stock calculado suficiente. No equivale a un registro real de agotados." if PREVIEW else "Los 168 días corresponden al periodo de ventas. Un día sin venta no demuestra por sí solo que hubo quiebre; por ello DQS queda pendiente de un registro real de agotados.")
 
 
 def instrument_4(doc):
@@ -207,15 +317,23 @@ def instrument_6(doc):
         "Reportes diarios de ventas procesados por el sistema.",
         "Pretest. Del 1 de abril al 15 de septiembre de 2026.",
     )
-    rows = [
-        ("1", "PACK MINI COCA COLA + INCA KOLA + FANTA + SPRITE 300 ML", "714", "714"),
-        ("2", "SPORADE APPLE ICE SIN AZÚCAR 500 ML", "673", "673"),
-        ("3", "GASEOSA COCA COLA PLUS LATA 320 ML", "608", "608"),
-        ("4", "GASEOSA COCA COLA ORIGINAL 600 ML", "591", "591"),
-        ("5", "SPORADE UVA 500 ML", "577", "577"),
-    ]
-    add_data_table(doc, ["N", "Producto", "Cantidad vendida", "CD"], rows, [0.4, 4.1, 1.1, 0.9], numeric_cols=[0, 2, 3])
-    add_note(doc, "Se presentan los cinco productos con mayor cantidad vendida en el periodo. La ficha completa se alimenta con los 200 productos registrados en los reportes.")
+    if PREVIEW and FIFTEEN_PRODUCTS:
+        rows = [
+            (str(index), row["product"], row["category"], format_number(row["total_sales"]), format_number(row["total_sales"]))
+            for index, row in enumerate(PRODUCT_SALES_15, start=1)
+        ]
+        add_data_table(doc, ["N", "Producto", "Categoría", "Cantidad vendida", "CD"], rows, [0.35, 3.4, 0.9, 0.9, 0.65], numeric_cols=[0, 3, 4])
+        add_note(doc, "Se presentan 15 productos seleccionados para esta vista previa, tres por categoría comercial. La ficha completa se alimenta con los 200 productos registrados en los reportes.")
+    else:
+        rows = [
+            ("1", "PACK MINI COCA COLA + INCA KOLA + FANTA + SPRITE 300 ML", "714", "714"),
+            ("2", "SPORADE APPLE ICE SIN AZÚCAR 500 ML", "673", "673"),
+            ("3", "GASEOSA COCA COLA PLUS LATA 320 ML", "608", "608"),
+            ("4", "GASEOSA COCA COLA ORIGINAL 600 ML", "591", "591"),
+            ("5", "SPORADE UVA 500 ML", "577", "577"),
+        ]
+        add_data_table(doc, ["N", "Producto", "Cantidad vendida", "CD"], rows, [0.4, 4.1, 1.1, 0.9], numeric_cols=[0, 2, 3])
+        add_note(doc, "Se presentan los cinco productos con mayor cantidad vendida en el periodo. La ficha completa se alimenta con los 200 productos registrados en los reportes.")
 
 
 def instrument_7(doc):

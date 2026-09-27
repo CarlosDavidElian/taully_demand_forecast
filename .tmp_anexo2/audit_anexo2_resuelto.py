@@ -13,7 +13,10 @@ import pandas as pd
 from docx import Document
 
 ROOT = Path(r"C:\taully_demand_forecast")
-DOCX = ROOT / "outputs" / "01a0b651-7620-73f0-8f6a-8b68b14f7a17" / "Anexo_2_vista_previa_inventario_calculado.docx"
+FIFTEEN_PRODUCTS = "--quince-productos" in sys.argv
+DOCX = ROOT / "outputs" / "01a0b651-7620-73f0-8f6a-8b68b14f7a17" / (
+    "Anexo_2_vista_previa_15_productos.docx" if FIFTEEN_PRODUCTS else "Anexo_2_vista_previa_inventario_calculado.docx"
+)
 HISTORY = ROOT / "data" / "historial_demanda.csv"
 
 sys.path.insert(0, str(ROOT))
@@ -121,7 +124,8 @@ def main() -> None:
     all_paragraphs = " ".join(clean(p.text) for p in document.paragraphs)
     if "N.A." in all_text:
         fail("Aún existe un N.A. en la versión resuelta.")
-    if "Vista previa" not in all_paragraphs or "160 unidades" not in all_paragraphs:
+    preview_marker = "inventario de prueba" if FIFTEEN_PRODUCTS else "160 unidades"
+    if "Vista previa" not in all_paragraphs or preview_marker not in all_paragraphs:
         fail("El Anexo no comunica que el stock mostrado es calculado de prueba.")
 
     ns = {"w": "http://schemas.openxmlformats.org/wordprocessingml/2006/main"}
@@ -129,6 +133,62 @@ def main() -> None:
         xml = ET.fromstring(archive.read("word/document.xml"))
     if len(xml.findall(".//w:br[@w:type='page']", ns)) != 8:
         fail("El Anexo no contiene los ocho saltos de página esperados.")
+
+    if FIFTEEN_PRODUCTS:
+        sys.path.insert(0, str(ROOT / ".tmp_anexo2"))
+        from build_anexo2_complete import PRODUCT_INVENTORY_15
+
+        expected_products = {row["product"]: row for row in PRODUCT_INVENTORY_15}
+        if len(expected_products) != 15:
+            fail("La selección no contiene 15 productos distintos.")
+
+        # Instrumentos 1, 2 y 3: cada producto debe conservar el mismo balance.
+        balances = {}
+        for row in table_rows(document.tables[2])[1:]:
+            product, si, en, sf, cd = row[1], number(row[3]), number(row[4]), number(row[5]), number(row[6])
+            expected = expected_products.get(product)
+            if expected is None or cd != si + en - sf:
+                fail(f"CD no cuadra en {product}.")
+            if (si, en, sf, cd) != (expected["si"], expected["en"], expected["sf"], expected["cd"]):
+                fail(f"El balance de {product} no coincide con la fuente calculada.")
+            balances[product] = (si, en, sf, cd)
+        if len(balances) != 15:
+            fail("El instrumento 1 no tiene 15 filas de productos.")
+
+        for row in table_rows(document.tables[4])[1:]:
+            product, cd, si, en, isi = row[1], number(row[3]), number(row[4]), number(row[5]), number(row[6])
+            expected = expected_products.get(product)
+            if expected is None or (si, en, cd) != (balances[product][0], balances[product][1], balances[product][3]):
+                fail(f"ISI no usa el mismo balance en {product}.")
+            if round(cd / (si + en) * 100, 2) != round(isi, 2):
+                fail(f"ISI incorrecto en {product}.")
+            if round(isi, 2) != round(expected["isi"] * 100, 2):
+                fail(f"ISI no coincide con el cálculo fuente en {product}.")
+
+        for row in table_rows(document.tables[6])[1:]:
+            product, dqs, dd, tqs = row[1], number(row[3]), number(row[4]), number(row[5])
+            expected = expected_products.get(product)
+            if expected is None or dd != 168 or round(dqs / dd * 100, 2) != round(tqs, 2):
+                fail(f"TQS incorrecta en {product}.")
+            if int(dqs) != expected["dqs"]:
+                fail(f"DQS no coincide con el cálculo fuente en {product}.")
+
+        for row in table_rows(document.tables[12])[1:]:
+            product, sold, cd = row[1], number(row[3]), number(row[4])
+            expected = expected_products.get(product)
+            if expected is None or sold != cd or sold != expected["total_sales"]:
+                fail(f"La venta y CD no coinciden en {product}.")
+
+        categories = Counter(row["category"] for row in expected_products.values())
+        if categories != Counter({"ABARROTES": 3, "BEBIDAS": 3, "GOLOSINAS": 3, "HELADOS": 3, "LIMPIEZA": 3}):
+            fail("La muestra no contiene tres productos por cada categoría.")
+
+        print("AUDITORÍA APROBADA")
+        print("OK: los 15 productos son distintos y representan tres productos de cada una de las cinco categorías.")
+        print("OK: CD, SI, EN y SF cuadran en las 15 filas; ISI y TQS se recalcularon correctamente.")
+        print("OK: las ventas mostradas coinciden con los reportes que alimentan el inventario de prueba.")
+        print("LÍMITE: SI, EN, SF y DQS siguen siendo valores calculados de prueba, no kardex real de la empresa.")
+        return
 
     # Instrumentos 1, 2 y 3: comprobar las fórmulas de inventario en cada categoría.
     quantities = {}

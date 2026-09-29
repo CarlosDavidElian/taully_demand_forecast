@@ -2,3 +2,8 @@ venv/
 .venv/
 __pycache__/
 *.pkl
+
+# Evidencias y archivos operativos creados en la computadora del usuario.
+# Se conservan localmente, pero no deben subirse al repositorio por accidente.
+data/inventarios_cargados/
+data/posttests/

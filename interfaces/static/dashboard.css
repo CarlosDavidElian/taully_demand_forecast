@@ -196,7 +196,7 @@ h1 em { color: var(--blue); font-style: italic; }
 }
 .file-control > span:first-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .file-button { flex: none; background: rgba(255,255,255,0.13); padding: 0.35rem 0.48rem; color: #fff; font-family: "DM Mono", monospace; font-size: 0.61rem; letter-spacing: 0.03em; }
-#report, #catalog { position: absolute; width: 1px; height: 1px; clip: rect(0 0 0 0); clip-path: inset(50%); overflow: hidden; white-space: nowrap; }
+#report, #catalog, #inventory { position: absolute; width: 1px; height: 1px; clip: rect(0 0 0 0); clip-path: inset(50%); overflow: hidden; white-space: nowrap; }
 
 .button {
   display: inline-flex;
@@ -294,7 +294,12 @@ tbody tr:hover { background: #f7fbfd; }
 .forecast-date-control p { margin: 0; color: var(--muted); font-size: 0.63rem; line-height: 1.4; }
 .prediction-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr)); gap: 1rem; }
 .prediction-card { border: 1px solid #e1e7eb; border-radius: 0.18rem; background: #f3f7f2; padding: 1.25rem; }
+.prediction-card-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 0.75rem; }
 .prediction-card h3 { margin: 0 0 0.55rem; color: var(--navy); font-family: "DM Serif Display", Georgia, serif; font-size: 1.22rem; font-weight: 400; }
+.download-category-forecast-button { flex: 0 0 auto; display: inline-flex; align-items: center; gap: 0.35rem; border: 1px solid var(--navy); border-radius: 0.16rem; padding: 0.3rem 0.44rem; background: #fff; color: var(--navy); cursor: pointer; font-family: "DM Mono", monospace; font-size: 0.54rem; font-weight: 700; letter-spacing: 0.02em; transition: background 160ms ease, color 160ms ease, transform 160ms ease; }
+.download-category-forecast-button:hover { background: var(--navy); color: #fff; transform: translateY(-1px); }
+.download-category-forecast-button:focus-visible { outline: 3px solid rgba(43, 108, 145, 0.35); outline-offset: 3px; }
+.download-category-forecast-button:disabled { cursor: wait; opacity: 0.65; transform: none; }
 .prediction-category-label { margin: 0 0 0.45rem; color: var(--muted); font-size: 0.66rem; line-height: 1.45; }
 .prediction-validation { margin: 0 0 0.85rem; color: var(--muted); font-size: 0.61rem; line-height: 1.4; }
 .forecast-selected-day { display: flex; align-items: flex-end; justify-content: space-between; gap: 0.8rem; margin-bottom: 0.9rem; padding: 0.75rem; border: 1px solid #dfe8e2; background: rgba(255, 255, 255, 0.56); color: var(--navy); font-family: "DM Mono", monospace; font-size: 0.74rem; font-weight: 700; }
@@ -312,6 +317,64 @@ tbody tr:hover { background: #f7fbfd; }
 .forecast-product-breakdown strong { color: var(--navy); font-family: "DM Mono", monospace; font-size: 0.68rem; text-align: right; }
 .prediction-card strong { color: var(--navy); }
 
+.posttest-panel { margin-top: 1rem; border-top: 4px solid var(--blue); }
+.posttest-intro { max-width: 52rem; margin: -0.15rem 0 1.2rem; color: var(--muted); font-size: 0.74rem; line-height: 1.55; }
+.posttest-intro strong { color: var(--navy); }
+.posttest-workflow { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.inventory-upload-card, .posttest-run-card { display: flex; min-height: 17.6rem; flex-direction: column; border: 1px solid #dce6ea; border-radius: 0.2rem; padding: 1.15rem; }
+.inventory-upload-card { background: #f6fafb; border-left: 3px solid var(--blue); }
+.posttest-run-card { background: #fffdf3; border-left: 3px solid var(--gold); }
+.inventory-upload-card .action-label, .posttest-run-card .action-label { color: var(--blue); margin-bottom: 0.42rem; }
+.posttest-run-card .action-label { color: #a17900; }
+.inventory-upload-card h3, .posttest-run-card h3 { margin: 0 0 0.45rem; color: var(--navy); font-family: "DM Serif Display", Georgia, serif; font-size: 1.25rem; font-weight: 400; line-height: 1.08; }
+.inventory-upload-card p:not(.action-label), .posttest-run-card p:not(.action-label) { margin-bottom: 0; color: var(--muted); font-size: 0.69rem; line-height: 1.5; }
+.inventory-file-control { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; margin-top: auto; padding: 0.62rem 0.7rem; border: 1px dashed var(--line-dark); border-radius: 0.18rem; color: var(--muted); font-size: 0.68rem; }
+.inventory-file-control > span:first-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.inventory-file-control .file-button { color: var(--navy); background: #dff4fb; }
+.inventory-file-control:focus-within { outline: 3px solid rgba(43, 108, 145, 0.35); outline-offset: 3px; }
+.inventory-upload-card .button { margin-top: 0.6rem; padding: 0.7rem 0.78rem; }
+.inventory-file-note { min-height: 1.7rem; margin-top: 0.62rem !important; color: var(--muted); font-size: 0.61rem !important; }
+.posttest-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.45rem; margin: 0.9rem 0 0; }
+.posttest-steps div { min-width: 0; padding: 0.52rem; border: 1px solid #eee5bf; background: rgba(255, 255, 255, 0.56); }
+.posttest-steps dt { color: #9a7600; font-family: "DM Mono", monospace; font-size: 0.64rem; font-weight: 800; }
+.posttest-steps dd { margin: 0.28rem 0 0; color: var(--muted); font-size: 0.6rem; line-height: 1.35; }
+.posttest-run-card .button { margin-top: auto; }
+.inventory-preview { margin-top: 1rem; border: 1px solid #dce6ea; border-radius: 0.2rem; padding: 0.95rem; background: #f9fcfd; }
+.inventory-preview-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; margin-bottom: 0.7rem; }
+.inventory-preview-heading .eyebrow { margin-bottom: 0.36rem; }
+.inventory-preview-heading h3 { margin: 0; color: var(--navy); font-family: "DM Serif Display", Georgia, serif; font-size: 1.08rem; font-weight: 400; }
+.inventory-preview-heading > p { margin: 0; color: var(--muted); font-family: "DM Mono", monospace; font-size: 0.58rem; text-align: right; }
+.posttest-results { margin-top: 1.15rem; padding-top: 1.15rem; border-top: 1px solid var(--line); }
+.posttest-results-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; }
+.posttest-results-heading .eyebrow { margin-bottom: 0.4rem; }
+.posttest-results-heading h3 { margin: 0; color: var(--navy); font-family: "DM Serif Display", Georgia, serif; font-size: 1.28rem; font-weight: 400; }
+.posttest-summary { margin: 0.42rem 0 0; color: var(--muted); font-size: 0.68rem; line-height: 1.45; }
+.posttest-metrics { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem; margin-top: 1rem; }
+.posttest-metric-card { border: 1px solid #dce6ea; border-radius: 0.18rem; padding: 0.85rem; background: #fbfdfe; }
+.posttest-metric-card h4 { margin: 0 0 0.58rem; color: var(--navy); font-family: "DM Mono", monospace; font-size: 0.64rem; letter-spacing: 0.04em; }
+.posttest-metric-card dl { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.45rem; margin: 0; }
+.posttest-metric-card dl div { min-width: 0; border-left: 2px solid var(--blue); padding-left: 0.42rem; }
+.posttest-metric-card.is-baseline dl div { border-left-color: var(--gold); }
+.posttest-metric-card dt { color: var(--muted); font-family: "DM Mono", monospace; font-size: 0.52rem; letter-spacing: 0.02em; }
+.posttest-metric-card dd { margin: 0.2rem 0 0; overflow: hidden; color: var(--navy); font-family: "DM Mono", monospace; font-size: 0.72rem; font-weight: 700; text-overflow: ellipsis; white-space: nowrap; }
+.posttest-comparison { margin: 0.85rem 0 0; padding: 0.75rem 0.85rem; border-left: 3px solid var(--blue); background: #eef9fd; color: var(--ink); font-size: 0.69rem; line-height: 1.45; }
+.posttest-comparison strong { color: var(--navy); }
+.posttest-data-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: 1rem; }
+.posttest-table-card { min-width: 0; border: 1px solid #e1e8ec; border-radius: 0.18rem; padding: 0.95rem; background: #fff; }
+.posttest-table-card h4 { margin: 0 0 0.68rem; color: var(--navy); font-family: "DM Serif Display", Georgia, serif; font-size: 1.03rem; font-weight: 400; }
+.inventory-result-note { min-height: 1.9rem; margin: -0.24rem 0 0.68rem; color: var(--muted); font-size: 0.61rem; line-height: 1.4; }
+.posttest-table { min-width: 31rem; font-size: 0.65rem; }
+.posttest-table th { font-size: 0.51rem; white-space: nowrap; }
+.posttest-table th:first-child { width: 29%; }
+.posttest-table th:nth-child(2) { width: 14%; }
+.posttest-table th:nth-child(3), .posttest-table th:nth-child(4) { width: 20%; }
+.posttest-table th:last-child, .posttest-table td:last-child { width: 17%; }
+.posttest-table td { max-width: 8rem; font-size: 0.63rem; }
+.posttest-table .posttest-winner { color: var(--navy); font-family: "DM Mono", monospace; font-size: 0.57rem; font-weight: 700; }
+.posttest-table .posttest-winner.is-model { color: var(--success); }
+.posttest-table .posttest-winner.is-baseline { color: #9a7600; }
+
+
 @media (max-width: 820px) {
   .intro { align-items: flex-start; flex-direction: column; padding-top: 3rem; }
   .research-context, .action-grid, .stats { grid-template-columns: 1fr 1fr; }
@@ -321,6 +384,7 @@ tbody tr:hover { background: #f7fbfd; }
   .catalog-copy { grid-column: span 2; }
   .stats article:nth-child(3) { border-top: 1px solid var(--line); border-left: 0; }
   .content-grid { grid-template-columns: 1fr; }
+  .posttest-workflow, .posttest-data-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 560px) {
@@ -346,9 +410,16 @@ tbody tr:hover { background: #f7fbfd; }
   .panel { padding: 1.1rem; }
   .prediction-list { grid-template-columns: minmax(0, 1fr); }
   .prediction-card { padding: 1rem; }
+  .prediction-card-heading { align-items: flex-start; flex-direction: column; gap: 0.25rem; }
   .forecast-date-control { grid-template-columns: 1fr; gap: 0.42rem; }
   .forecast-actions { align-items: flex-end; flex-direction: column; }
   .forecast-selected-day { align-items: flex-start; flex-direction: column; gap: 0.35rem; }
   .forecast-selected-day > strong { text-align: left; }
   .forecast-product-head, .forecast-product-breakdown li { grid-template-columns: minmax(0, 1fr) minmax(4.5rem, 0.72fr) auto; gap: 0.38rem; }
+  .posttest-results-heading { align-items: flex-start; flex-direction: column; }
+  .inventory-preview-heading { align-items: flex-start; flex-direction: column; }
+  .inventory-preview-heading > p { text-align: left; }
+  .posttest-metrics { grid-template-columns: 1fr; }
+  .posttest-metric-card dl { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 0.65rem; }
+  .posttest-steps { grid-template-columns: 1fr; }
 }

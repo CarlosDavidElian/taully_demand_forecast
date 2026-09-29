@@ -3,6 +3,8 @@
 from __future__ import annotations
 
 import csv
+import hashlib
+import json
 import math
 import os
 import tempfile
@@ -19,16 +21,31 @@ from werkzeug.utils import secure_filename
 
 from application.services.catalog_service import CatalogService
 from application.services.ingest_service import IngestService
+from application.services.inventory_service import InventoryService
 from application.services.predict_service import PredictService
+from application.services.posttest_evaluation_service import PosttestEvaluationService
 from application.services.train_service import TrainService
-from config.settings import BASE_DIR, CATEGORY_PRODUCT_MIX_FILE, CATALOG_FILE, DATA_DIR, MODELS_FILE
+from config.settings import (
+    BASE_DIR,
+    CATEGORY_PRODUCT_MIX_FILE,
+    CATALOG_FILE,
+    DATA_DIR,
+    DEFAULT_INVENTORY_FILE,
+    INVENTORY_FILE,
+    INVENTORY_SELECTION_FILE,
+    INVENTORY_UPLOADS_DIR,
+    MODELS_FILE,
+    POSTTEST_RESULTS_DIR,
+)
 from infrastructure.repositories.catalog_repository import ExcelCatalogRepository
 from infrastructure.readers.excel_reader import ExcelReader
 from infrastructure.repositories.csv_repository import CSVDemandRepository
+from infrastructure.repositories.posttest_result_repository import PosttestResultRepository
 
 
 ALLOWED_REPORT_EXTENSIONS = {".xlsx", ".xls", ".pdf"}
 ALLOWED_CATALOG_EXTENSIONS = {".xlsx"}
+ALLOWED_INVENTORY_EXTENSIONS = {".xlsx"}
 
 
 def _parse_cutoff_date(value: Any) -> date | None:
@@ -51,6 +68,11 @@ def create_app(test_config: dict[str, Any] | None = None) -> Flask:
     app.config.from_mapping(
         MAX_CONTENT_LENGTH=20 * 1024 * 1024,
         CATALOG_FILE=CATALOG_FILE,
+        INVENTORY_FILE=INVENTORY_FILE,
+        DEFAULT_INVENTORY_FILE=DEFAULT_INVENTORY_FILE,
+        INVENTORY_UPLOADS_DIR=INVENTORY_UPLOADS_DIR,
+        INVENTORY_SELECTION_FILE=INVENTORY_SELECTION_FILE,
+        POSTTEST_RESULTS_DIR=POSTTEST_RESULTS_DIR,
         SEND_FILE_MAX_AGE_DEFAULT=0,
     )
     if test_config:
@@ -58,6 +80,158 @@ def create_app(test_config: dict[str, Any] | None = None) -> Flask:
 
     def catalog_service() -> CatalogService:
         return CatalogService(ExcelCatalogRepository(Path(app.config["CATALOG_FILE"])))
+
+    def _file_sha256(path: Path) -> str | None:
+        """Obtiene una huella de archivo para trazabilidad sin exponer rutas."""
+        if not path.is_file():
+            return None
+        try:
+            digest = hashlib.sha256()
+            with path.open("rb") as source:
+                for block in iter(lambda: source.read(1024 * 1024), b""):
+                    digest.update(block)
+            return digest.hexdigest()
+        except OSError:
+            return None
+
+    def _inventory_source_metadata(
+        path: Path,
+        source_id: str | None,
+        *,
+        configured: bool = False,
+    ) -> dict[str, str | bool | None]:
+        """Describe de manera honesta el origen del archivo de inventario."""
+        demonstration_id = _file_sha256(Path(app.config["DEFAULT_INVENTORY_FILE"]))
+        is_demonstration = bool(
+            demonstration_id
+            and source_id
+            and source_id == demonstration_id
+        )
+        if is_demonstration:
+            return {
+                "source_kind": "archivo de demostración del proyecto",
+                "evidence_status": "no_apto_para_evidencia",
+                "is_demonstration": True,
+            }
+        return {
+            "source_kind": "archivo de inventario configurado" if configured else "archivo cargado por el usuario",
+            "evidence_status": "requiere_verificacion_de_fuente",
+            "is_demonstration": False,
+        }
+
+    def active_inventory() -> dict[str, Any] | None:
+        """Obtiene el inventario activo sin seleccionar la demostración por defecto."""
+        uploads_directory = Path(app.config["INVENTORY_UPLOADS_DIR"])
+        selection_file = Path(app.config["INVENTORY_SELECTION_FILE"])
+        if selection_file.is_file():
+            try:
+                selection = json.loads(selection_file.read_text(encoding="utf-8"))
+                stored_name = Path(str(selection.get("stored_name", ""))).name
+                candidate = uploads_directory / stored_name
+                if stored_name and candidate.is_file():
+                    source_id = str(selection.get("source_id") or candidate.stem)
+                    return {
+                        "path": candidate,
+                        "name": str(selection.get("original_name") or candidate.name),
+                        "source_id": source_id,
+                        "uploaded_at": selection.get("updated_at"),
+                        **_inventory_source_metadata(candidate, source_id),
+                    }
+            except (OSError, TypeError, ValueError, json.JSONDecodeError):
+                # Una referencia antigua o incompleta no impide usar el archivo
+                # cargado ni volver a cargar un inventario.
+                pass
+
+        # Solo se permite una fuente configurada explícitamente. El Excel de
+        # demostración incluido con el proyecto no se usa de forma automática.
+        candidate = Path(app.config["INVENTORY_FILE"])
+        if candidate.is_file():
+            source_id = _file_sha256(candidate)
+            return {
+                "path": candidate,
+                "name": candidate.name,
+                "source_id": source_id,
+                "uploaded_at": None,
+                **_inventory_source_metadata(candidate, source_id, configured=True),
+            }
+        return None
+
+    def set_active_inventory(stored_path: Path, original_name: str, source_id: str | None) -> None:
+        """Conserva una referencia pequeña; el Excel original queda inmutable."""
+        uploads_directory = Path(app.config["INVENTORY_UPLOADS_DIR"])
+        selection_file = Path(app.config["INVENTORY_SELECTION_FILE"])
+        uploads_directory.mkdir(parents=True, exist_ok=True)
+        if stored_path.parent.resolve() != uploads_directory.resolve():
+            raise ValueError("La copia del inventario no se guardó en la ubicación esperada.")
+        payload = {
+            "stored_name": stored_path.name,
+            "original_name": original_name,
+            "source_id": source_id or stored_path.stem,
+            "updated_at": datetime.now().isoformat(),
+        }
+        temporary_path = selection_file.with_suffix(".tmp")
+        temporary_path.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
+        os.replace(temporary_path, selection_file)
+
+    def inventory_payload(
+        start_date: date | None = None,
+        end_date: date | None = None,
+    ) -> dict[str, Any]:
+        """Resume los indicadores de inventario del archivo activo."""
+        source = active_inventory()
+        if source is None:
+            return {
+                "available": False,
+                "message": "Carga el kardex real de la tienda para calcular ISI y TQS.",
+                "metrics": [],
+            }
+
+        source_path = Path(source["path"])
+        service = InventoryService()
+        imported = service.import_inventory(source_path)
+        metrics = service.calculate_category_metrics(source_path, start_date, end_date)
+        reconciliation = service.reconciliation_summary(source_path, start_date, end_date)
+        incomplete_coverage = [
+            metric.category for metric in metrics if metric.coverage_rate < 100 - 1e-6
+        ]
+        warnings: list[str] = []
+        if source["is_demonstration"]:
+            warnings.append(
+                "Este archivo es una demostración técnica del proyecto; no sustituye el kardex real ni debe usarse como evidencia de tesis."
+            )
+        if not reconciliation["reconciled"]:
+            warnings.append(
+                "Las ventas registradas y el balance de stock no cierran completamente; revisa ajustes, devoluciones, mermas y reposiciones antes de usar el indicador como evidencia."
+            )
+        if incomplete_coverage:
+            warnings.append(
+                "Hay cobertura incompleta de fechas en: " + ", ".join(incomplete_coverage) + "."
+            )
+        source_kind = str(source["source_kind"])
+        message = (
+            "Se muestran indicadores del archivo de demostración. Carga el kardex real de la tienda para resultados oficiales."
+            if source["is_demonstration"]
+            else "Indicadores calculados con el archivo de inventario activo. Verifica que sea el kardex oficial de la tienda."
+        )
+        return {
+            "available": True,
+            "message": message,
+            "inventory": {
+                "name": str(source["name"] or imported.original_name),
+                "source_id": source["source_id"],
+                "source_kind": source_kind,
+                "evidence_status": source["evidence_status"],
+                "is_demonstration": bool(source["is_demonstration"]),
+                "uploaded_at": source["uploaded_at"],
+                "records": imported.records,
+                "categories": imported.categories,
+                "start_date": imported.start_date.isoformat(),
+                "end_date": imported.end_date.isoformat(),
+            },
+            "metrics": [metric.to_dict() for metric in metrics],
+            "reconciliation": reconciliation,
+            "warnings": warnings,
+        }
 
     @app.after_request
     def prevent_stale_dashboard(response):
@@ -198,6 +372,57 @@ def create_app(test_config: dict[str, Any] | None = None) -> Flask:
             if temporary_path is not None:
                 temporary_path.unlink(missing_ok=True)
 
+    @app.get("/api/inventory")
+    def inventory_data():
+        """Muestra los indicadores calculados para el inventario activo."""
+        try:
+            return _json_response(inventory_payload())
+        except (FileNotFoundError, ValueError) as exc:
+            return _error_response(exc, 400)
+        except Exception as exc:
+            return _error_response(exc, 500)
+
+    @app.post("/api/inventory")
+    def load_inventory():
+        """Valida y conserva un kardex Excel sin reemplazar cargas anteriores."""
+        inventory = request.files.get("inventory")
+        if inventory is None or not inventory.filename:
+            return _error_response("Selecciona un archivo de inventario en formato .xlsx.", 400)
+
+        filename = secure_filename(inventory.filename)
+        suffix = Path(filename).suffix.lower()
+        if suffix not in ALLOWED_INVENTORY_EXTENSIONS:
+            return _error_response("El inventario debe estar en formato Excel (.xlsx).", 400)
+
+        temporary_path: Path | None = None
+        try:
+            with tempfile.NamedTemporaryFile(delete=False, suffix=suffix) as temporary_file:
+                inventory.save(temporary_file)
+                temporary_path = Path(temporary_file.name)
+
+            service = InventoryService(storage_directory=Path(app.config["INVENTORY_UPLOADS_DIR"]))
+            imported = service.import_inventory(temporary_path)
+            set_active_inventory(imported.stored_path, filename, imported.inventory_id)
+            payload = inventory_payload()
+            if payload.get("inventory", {}).get("is_demonstration"):
+                payload["message"] = (
+                    f"{filename} se cargó solo como demostración técnica. "
+                    "No se usará como evidencia de tesis; carga el kardex real de la tienda."
+                )
+            else:
+                payload["message"] = (
+                    f"{filename} se validó y quedó como inventario activo. "
+                    "Las cargas anteriores se conservan sin modificarse; confirma con la tienda que este sea el kardex oficial."
+                )
+            return _json_response(payload)
+        except (FileNotFoundError, ValueError) as exc:
+            return _error_response(exc, 400)
+        except Exception as exc:
+            return _error_response(exc, 500)
+        finally:
+            if temporary_path is not None:
+                temporary_path.unlink(missing_ok=True)
+
     @app.post("/api/train")
     def train_model():
         try:
@@ -316,9 +541,84 @@ def create_app(test_config: dict[str, Any] | None = None) -> Flask:
         except Exception as exc:
             return _error_response(exc, 500)
 
+    @app.post("/api/posttest")
+    def execute_posttest():
+        """Ejecuta una prueba histórica real sin alterar el modelo activo."""
+        try:
+            body = request.get_json(silent=True) or {}
+            cutoff_date = _parse_cutoff_date(body.get("cutoff_date"))
+            days = int(body.get("days", 7))
+        except (TypeError, ValueError):
+            return _error_response("Indica una fecha de corte y un horizonte válidos para el Postest.", 400)
+
+        if cutoff_date is None:
+            return _error_response(
+                "Selecciona la fecha de corte: debe ser el día anterior al primer día que quieres evaluar.",
+                400,
+            )
+        if not 1 <= days <= 90:
+            return _error_response("El Postest admite entre 1 y 90 días.", 400)
+
+        try:
+            result = PosttestEvaluationService(CSVDemandRepository()).run(cutoff_date, days)
+            period = result["period"]
+            try:
+                result["inventory"] = inventory_payload(
+                    date.fromisoformat(str(period["start_date"])),
+                    date.fromisoformat(str(period["end_date"])),
+                )
+            except (FileNotFoundError, ValueError) as exc:
+                # El postest de demanda sigue siendo válido aun cuando el
+                # inventario activo no cubra ese período.
+                result["inventory"] = {
+                    "available": False,
+                    "message": f"No se pudieron calcular ISI y TQS para este período: {exc}",
+                    "metrics": [],
+                }
+
+            record = PosttestResultRepository(Path(app.config["POSTTEST_RESULTS_DIR"])).save(result)
+            return _json_response(
+                {
+                    **result,
+                    "run_id": record["run_id"],
+                    "created_at": record["created_at"],
+                    "message": (
+                        "Postest completado: el resultado compara el modelo con las ventas reales "
+                        "posteriores y queda guardado para descargarlo."
+                    ),
+                }
+            )
+        except (FileNotFoundError, ValueError) as exc:
+            return _error_response(exc, 400)
+        except Exception as exc:
+            return _error_response(exc, 500)
+
+    @app.post("/api/posttest/export")
+    def export_posttest():
+        """Descarga exactamente el resultado de un Postest guardado."""
+        try:
+            body = request.get_json(silent=True) or {}
+            record = PosttestResultRepository(Path(app.config["POSTTEST_RESULTS_DIR"])).get(
+                str(body.get("run_id") or "")
+            )
+            workbook_bytes, filename = _create_posttest_export(record)
+            return send_file(
+                workbook_bytes,
+                as_attachment=True,
+                download_name=filename,
+                mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                max_age=0,
+            )
+        except FileNotFoundError as exc:
+            return _error_response(exc, 404)
+        except ValueError as exc:
+            return _error_response(exc, 400)
+        except Exception as exc:
+            return _error_response(exc, 500)
+
     @app.errorhandler(413)
     def file_too_large(_error):
-        return _error_response("El reporte supera el límite de 20 MB.", 413)
+        return _error_response("El archivo supera el límite de 20 MB.", 413)
 
     return app
 
@@ -657,6 +957,8 @@ def _create_forecast_export(payload: Any) -> tuple[BytesIO, str]:
     if not 1 <= days <= 90:
         raise ValueError("El horizonte del pronóstico no es válido.")
 
+    category_scope = str(scope.get("category") or "").strip()
+
     start_date = _parse_export_date(scope.get("start_date"), "La fecha inicial")
     end_date = _parse_export_date(scope.get("end_date"), "La fecha final")
     if end_date < start_date:
@@ -701,12 +1003,16 @@ def _create_forecast_export(payload: Any) -> tuple[BytesIO, str]:
             }
         )
 
+    if category_scope and any(row["category"] != category_scope for row in normalized_rows):
+        raise ValueError("El archivo por categoría solo puede incluir productos de esa categoría.")
+
     period_label = (
         start_date.strftime("%d/%m/%Y")
         if start_date == end_date
         else f"Del {start_date.strftime('%d/%m/%Y')} al {end_date.strftime('%d/%m/%Y')}"
     )
     mode_label = "Prueba histórica" if scope.get("cutoff_date") else "Pronóstico futuro"
+    category_label = category_scope or "Todas las categorías"
 
     workbook = Workbook()
     worksheet = workbook.active
@@ -724,7 +1030,7 @@ def _create_forecast_export(payload: Any) -> tuple[BytesIO, str]:
     muted = "64748B"
     thin_line = Side(style="thin", color=line)
 
-    worksheet["A1"] = "Pronóstico de compra sugerida"
+    worksheet["A1"] = f"Pronóstico de compra sugerida - {category_label}"
     worksheet["A1"].font = Font(name="Arial", size=14, bold=True, color=navy)
     worksheet["A1"].border = Border(bottom=Side(style="medium", color=gold))
 
@@ -781,10 +1087,365 @@ def _create_forecast_export(payload: Any) -> tuple[BytesIO, str]:
     worksheet.row_dimensions[6].height = 22
 
     filename_period = start_date.isoformat() if start_date == end_date else f"{start_date.isoformat()}_a_{end_date.isoformat()}"
+    category_filename = f"{secure_filename(category_scope.lower())}_" if category_scope else ""
     workbook_bytes = BytesIO()
     workbook.save(workbook_bytes)
     workbook_bytes.seek(0)
-    return workbook_bytes, f"pronostico_compra_{filename_period}.xlsx"
+    return workbook_bytes, f"pronostico_compra_{category_filename}{filename_period}.xlsx"
+
+
+def _create_posttest_export(record: Any) -> tuple[BytesIO, str]:
+    """Crea evidencia Excel desde un resultado de Postest ya almacenado.
+
+    El navegador solo entrega el identificador. Así el archivo descargado no
+    depende de filas editables en la pantalla y conserva el mismo resultado
+    que calculó el servicio para las ventas reales del período.
+    """
+    if not isinstance(record, dict) or not isinstance(record.get("result"), dict):
+        raise ValueError("No se encontró un resultado válido de Postest para exportar.")
+
+    result = record["result"]
+    model = result.get("model") if isinstance(result.get("model"), dict) else {}
+    baseline = result.get("baseline") if isinstance(result.get("baseline"), dict) else {}
+    model_metrics = model.get("metrics") if isinstance(model.get("metrics"), dict) else {}
+    baseline_metrics = baseline.get("metrics") if isinstance(baseline.get("metrics"), dict) else {}
+    period = result.get("period") if isinstance(result.get("period"), dict) else {}
+    observations = result.get("observations") if isinstance(result.get("observations"), list) else []
+    inventory = result.get("inventory") if isinstance(result.get("inventory"), dict) else {}
+    inventory_info = inventory.get("inventory") if isinstance(inventory.get("inventory"), dict) else {}
+    training = result.get("training") if isinstance(result.get("training"), dict) else {}
+    methodology = result.get("methodology") if isinstance(result.get("methodology"), dict) else {}
+
+    try:
+        cutoff_date = _parse_export_date(result.get("cutoff_date"), "La fecha de corte")
+        period_start = _parse_export_date(period.get("start_date"), "La fecha inicial")
+        period_end = _parse_export_date(period.get("end_date"), "La fecha final")
+        horizon_days = int(result.get("horizon_days"))
+    except (TypeError, ValueError) as exc:
+        raise ValueError("El resultado guardado del Postest no tiene un período válido.") from exc
+    if not 1 <= horizon_days <= 90 or period_end < period_start:
+        raise ValueError("El resultado guardado del Postest no tiene un período válido.")
+
+    navy = "091F35"
+    gold = "F0C400"
+    blue = "0B86B5"
+    line = "D9E2E8"
+    muted = "64748B"
+    thin_line = Side(style="thin", color=line)
+
+    workbook = Workbook()
+    summary_sheet = workbook.active
+    summary_sheet.title = "Resumen postest"
+    summary_sheet.sheet_view.showGridLines = False
+    summary_sheet.sheet_properties.pageSetUpPr.fitToPage = True
+    summary_sheet.page_setup.orientation = "landscape"
+    summary_sheet.page_setup.fitToWidth = 1
+    summary_sheet.page_setup.fitToHeight = 0
+
+    summary_sheet.merge_cells("A1:E1")
+    title = summary_sheet["A1"]
+    title.value = "Postest de pronóstico y comparación con PMS-7"
+    title.font = Font(name="Arial", size=15, bold=True, color=navy)
+    title.alignment = Alignment(vertical="center")
+    title.fill = PatternFill("solid", fgColor="F7FBFD")
+    title.border = Border(bottom=Side(style="medium", color=gold))
+    summary_sheet.row_dimensions[1].height = 27
+
+    evaluated_categories = result.get("categories_evaluated")
+    evaluated_names = [str(category) for category in evaluated_categories] if isinstance(evaluated_categories, list) else []
+    excluded_categories = training.get("excluded_categories")
+    if isinstance(excluded_categories, dict):
+        excluded_names = [
+            f"{category}: {reason}" for category, reason in sorted(excluded_categories.items())
+        ]
+    elif isinstance(excluded_categories, list):
+        excluded_names = [str(category) for category in excluded_categories]
+    else:
+        excluded_names = []
+
+    inventory_source = "No se cargó un inventario aplicable al período."
+    if inventory.get("available"):
+        inventory_source = (
+            f"{inventory_info.get('name') or 'Inventario activo'} · "
+            f"{inventory_info.get('source_kind') or 'origen no indicado'} · "
+            f"ID SHA-256: {inventory_info.get('source_id') or 'no disponible'}"
+        )
+    inventory_warnings = [
+        str(warning) for warning in inventory.get("warnings", []) if str(warning).strip()
+    ] if isinstance(inventory.get("warnings"), list) else []
+
+    metadata = [
+        ("Corte de entrenamiento", cutoff_date.strftime("%d/%m/%Y")),
+        ("Período evaluado", f"Del {period_start.strftime('%d/%m/%Y')} al {period_end.strftime('%d/%m/%Y')}"),
+        ("Horizonte", f"{horizon_days} días"),
+        ("Ventas reales", "Historial consolidado posterior al corte."),
+        ("Resultado guardado", str(record.get("created_at") or "—")),
+        ("Huella del historial (SHA-256)", str(methodology.get("history_fingerprint") or "No disponible")),
+        ("Categorías evaluadas", ", ".join(evaluated_names) or "No disponible"),
+        (
+            "Alcance de métricas globales",
+            "Las métricas globales consideran únicamente las categorías evaluadas por el modelo.",
+        ),
+        ("Categorías excluidas", "; ".join(excluded_names) if excluded_names else "Ninguna"),
+        ("Inventario del período", inventory_source),
+    ]
+    if inventory_warnings:
+        metadata.append(("Advertencia de inventario", " ".join(inventory_warnings)))
+    for row_number, (label, value) in enumerate(metadata, start=2):
+        label_cell = summary_sheet.cell(row=row_number, column=1, value=label)
+        label_cell.font = Font(name="Arial", size=10, bold=True, color=navy)
+        value_cell = summary_sheet.cell(
+            row=row_number, column=2, value=_excel_safe_text(str(value))
+        )
+        value_cell.font = Font(name="Arial", size=10, color=muted)
+        value_cell.alignment = Alignment(vertical="top", wrap_text=True)
+        summary_sheet.merge_cells(start_row=row_number, start_column=2, end_row=row_number, end_column=5)
+        if len(str(value)) > 120:
+            summary_sheet.row_dimensions[row_number].height = 32
+
+    metric_header_row = len(metadata) + 3
+    summary_sheet.freeze_panes = f"A{metric_header_row}"
+    metric_headers = ["INDICADOR", "MODELO PREDICTIVO", "PMS-7", "MEJORA DEL MODELO", "MEJOR RESULTADO"]
+    for column, header in enumerate(metric_headers, start=1):
+        cell = summary_sheet.cell(row=metric_header_row, column=column, value=header)
+        cell.fill = PatternFill("solid", fgColor=navy)
+        cell.font = Font(name="Arial", size=10, bold=True, color="FFFFFF")
+        cell.alignment = Alignment(horizontal="center", vertical="center")
+        cell.border = Border(bottom=thin_line, right=Side(style="thin", color="FFFFFF"))
+
+    comparison = result.get("comparison") if isinstance(result.get("comparison"), dict) else {}
+    improvements = comparison.get("improvement_vs_baseline") if isinstance(comparison.get("improvement_vs_baseline"), dict) else {}
+    winners = comparison.get("winner_by_metric") if isinstance(comparison.get("winner_by_metric"), dict) else {}
+    metric_names = {"mae": "MAE (unidades)", "rmse": "RMSE (unidades)", "mape": "MAPE", "wape": "WAPE"}
+    for row_number, metric_key in enumerate(("mae", "rmse", "mape", "wape"), start=metric_header_row + 1):
+        summary_sheet.cell(row=row_number, column=1, value=metric_names[metric_key])
+        summary_sheet.cell(row=row_number, column=2, value=_excel_number(model_metrics.get(metric_key)))
+        summary_sheet.cell(row=row_number, column=3, value=_excel_number(baseline_metrics.get(metric_key)))
+        improvement = improvements.get(metric_key) if isinstance(improvements.get(metric_key), dict) else {}
+        summary_sheet.cell(row=row_number, column=4, value=_excel_number(improvement.get("percent")))
+        winner = str(winners.get(metric_key) or "not_available")
+        winner_label = {"model": "Modelo predictivo", "pms_7": "PMS-7", "tie": "Empate"}.get(winner, "No disponible")
+        summary_sheet.cell(row=row_number, column=5, value=winner_label)
+        for column in range(1, 6):
+            cell = summary_sheet.cell(row=row_number, column=column)
+            cell.font = Font(name="Arial", size=10, color=navy)
+            cell.border = Border(bottom=thin_line)
+            cell.alignment = Alignment(vertical="center", horizontal="center" if column > 1 else "left")
+        for column in (2, 3):
+            summary_sheet.cell(row=row_number, column=column).number_format = '0.00"%"' if metric_key in {"mape", "wape"} else "#,##0.00"
+        summary_sheet.cell(row=row_number, column=4).number_format = '0.00"%"'
+
+    category_start = metric_header_row + 8
+    summary_sheet.merge_cells(start_row=category_start, start_column=1, end_row=category_start, end_column=5)
+    category_title = summary_sheet.cell(row=category_start, column=1, value="Resultados por categoría")
+    category_title.font = Font(name="Arial", size=11, bold=True, color=navy)
+    category_title.fill = PatternFill("solid", fgColor="EAF7FB")
+    category_headers = ["CATEGORÍA", "DEMANDA REAL", "MODELO (WAPE)", "PMS-7 (WAPE)", "MEJOR WAPE"]
+    for column, header in enumerate(category_headers, start=1):
+        cell = summary_sheet.cell(row=category_start + 1, column=column, value=header)
+        cell.fill = PatternFill("solid", fgColor=blue)
+        cell.font = Font(name="Arial", size=9, bold=True, color="FFFFFF")
+        cell.alignment = Alignment(horizontal="center", vertical="center")
+
+    model_by_category = model.get("by_category") if isinstance(model.get("by_category"), dict) else {}
+    baseline_by_category = baseline.get("by_category") if isinstance(baseline.get("by_category"), dict) else {}
+    categories = sorted(set(model_by_category) | set(baseline_by_category))
+    for row_number, category in enumerate(categories, start=category_start + 2):
+        model_category = model_by_category.get(category) if isinstance(model_by_category.get(category), dict) else {}
+        baseline_category = baseline_by_category.get(category) if isinstance(baseline_by_category.get(category), dict) else {}
+        model_wape = _excel_number(model_category.get("wape"))
+        baseline_wape = _excel_number(baseline_category.get("wape"))
+        if model_wape is None or baseline_wape is None:
+            winner = "No disponible"
+        elif math.isclose(model_wape, baseline_wape, rel_tol=0, abs_tol=1e-9):
+            winner = "Empate"
+        elif model_wape < baseline_wape:
+            winner = "Modelo predictivo"
+        else:
+            winner = "PMS-7"
+        values = [
+            _excel_safe_text(str(category)),
+            _excel_number(model_category.get("actual_total")),
+            model_wape,
+            baseline_wape,
+            winner,
+        ]
+        for column, value in enumerate(values, start=1):
+            cell = summary_sheet.cell(row=row_number, column=column, value=value)
+            cell.font = Font(name="Arial", size=10, color=navy)
+            cell.border = Border(bottom=thin_line)
+        summary_sheet.cell(row=row_number, column=2).number_format = "#,##0.00"
+        summary_sheet.cell(row=row_number, column=3).number_format = '0.00"%"'
+        summary_sheet.cell(row=row_number, column=4).number_format = '0.00"%"'
+
+    summary_sheet.column_dimensions["A"].width = 26
+    summary_sheet.column_dimensions["B"].width = 24
+    summary_sheet.column_dimensions["C"].width = 22
+    summary_sheet.column_dimensions["D"].width = 22
+    summary_sheet.column_dimensions["E"].width = 24
+
+    # La pantalla mantiene la comparación por WAPE compacta, pero el archivo
+    # de evidencia conserva los cuatro indicadores por categoría para que el
+    # análisis pueda revisarse sin recalcular nada fuera del programa.
+    category_metrics_sheet = workbook.create_sheet("Métricas categoría")
+    category_metrics_sheet.sheet_view.showGridLines = False
+    category_metrics_sheet.freeze_panes = "A2"
+    category_metric_headers = [
+        "CATEGORÍA", "DEMANDA REAL", "MODELO MAE", "MODELO RMSE",
+        "MODELO MAPE", "MODELO WAPE", "PMS-7 MAE", "PMS-7 RMSE",
+        "PMS-7 MAPE", "PMS-7 WAPE", "MEJOR WAPE",
+    ]
+    for column, header in enumerate(category_metric_headers, start=1):
+        cell = category_metrics_sheet.cell(row=1, column=column, value=header)
+        cell.fill = PatternFill("solid", fgColor=navy)
+        cell.font = Font(name="Arial", size=10, bold=True, color="FFFFFF")
+        cell.alignment = Alignment(horizontal="center", vertical="center")
+        cell.border = Border(bottom=thin_line, right=Side(style="thin", color="FFFFFF"))
+
+    for row_number, category in enumerate(categories, start=2):
+        model_category = model_by_category.get(category) if isinstance(model_by_category.get(category), dict) else {}
+        baseline_category = baseline_by_category.get(category) if isinstance(baseline_by_category.get(category), dict) else {}
+        model_wape = _excel_number(model_category.get("wape"))
+        baseline_wape = _excel_number(baseline_category.get("wape"))
+        if model_wape is None or baseline_wape is None:
+            winner = "No disponible"
+        elif math.isclose(model_wape, baseline_wape, rel_tol=0, abs_tol=1e-9):
+            winner = "Empate"
+        elif model_wape < baseline_wape:
+            winner = "Modelo predictivo"
+        else:
+            winner = "PMS-7"
+        values = [
+            _excel_safe_text(str(category)),
+            _excel_number(model_category.get("actual_total", baseline_category.get("actual_total"))),
+            _excel_number(model_category.get("mae")),
+            _excel_number(model_category.get("rmse")),
+            _excel_number(model_category.get("mape")),
+            model_wape,
+            _excel_number(baseline_category.get("mae")),
+            _excel_number(baseline_category.get("rmse")),
+            _excel_number(baseline_category.get("mape")),
+            baseline_wape,
+            winner,
+        ]
+        for column, value in enumerate(values, start=1):
+            cell = category_metrics_sheet.cell(row=row_number, column=column, value=value)
+            cell.font = Font(name="Arial", size=10, color=navy)
+            cell.border = Border(bottom=thin_line)
+            if column in {5, 6, 9, 10}:
+                cell.number_format = '0.00"%"'
+            elif 2 <= column <= 4 or 7 <= column <= 8:
+                cell.number_format = "#,##0.00"
+    for column, width in {
+        "A": 24, "B": 18, "C": 15, "D": 16, "E": 16, "F": 16,
+        "G": 15, "H": 16, "I": 16, "J": 16, "K": 21,
+    }.items():
+        category_metrics_sheet.column_dimensions[column].width = width
+    category_metrics_sheet.auto_filter.ref = f"A1:K{max(1, len(categories) + 1)}"
+
+    detail_sheet = workbook.create_sheet("Detalle diario")
+    detail_sheet.sheet_view.showGridLines = False
+    detail_sheet.freeze_panes = "A2"
+    detail_headers = ["FECHA", "CATEGORÍA", "DEMANDA REAL", "MODELO PREDICTIVO", "PMS-7", "ERROR ABS. MODELO", "ERROR ABS. PMS-7"]
+    for column, header in enumerate(detail_headers, start=1):
+        cell = detail_sheet.cell(row=1, column=column, value=header)
+        cell.fill = PatternFill("solid", fgColor=navy)
+        cell.font = Font(name="Arial", size=10, bold=True, color="FFFFFF")
+        cell.alignment = Alignment(horizontal="center", vertical="center")
+    for row_number, observation in enumerate(observations, start=2):
+        if not isinstance(observation, dict):
+            continue
+        actual = _excel_number(observation.get("actual_demand"))
+        prediction = _excel_number(observation.get("model_prediction"))
+        baseline_prediction = _excel_number(observation.get("pms_7_prediction"))
+        values = [
+            str(observation.get("date") or ""),
+            _excel_safe_text(str(observation.get("category") or "")),
+            actual,
+            prediction,
+            baseline_prediction,
+            abs(actual - prediction) if actual is not None and prediction is not None else None,
+            abs(actual - baseline_prediction) if actual is not None and baseline_prediction is not None else None,
+        ]
+        for column, value in enumerate(values, start=1):
+            cell = detail_sheet.cell(row=row_number, column=column, value=value)
+            cell.font = Font(name="Arial", size=10, color=navy)
+            cell.border = Border(bottom=thin_line)
+            if column >= 3:
+                cell.number_format = "#,##0.00"
+    for column, width in {"A": 16, "B": 23, "C": 18, "D": 22, "E": 14, "F": 21, "G": 20}.items():
+        detail_sheet.column_dimensions[column].width = width
+    detail_sheet.auto_filter.ref = f"A1:G{max(1, len(observations) + 1)}"
+
+    if inventory.get("available") and isinstance(inventory.get("metrics"), list):
+        inventory_sheet = workbook.create_sheet("Inventario")
+        inventory_sheet.sheet_view.showGridLines = False
+        inventory_sheet["A1"] = "Indicadores de inventario del período del Postest"
+        inventory_sheet["A1"].font = Font(name="Arial", size=14, bold=True, color=navy)
+        inventory_sheet["A2"] = "ISI = CD / (SI + EN). TQS = DQS / DD. Los resultados dependen del archivo de inventario activo."
+        inventory_sheet["A2"].font = Font(name="Arial", size=9, italic=True, color=muted)
+        inventory_sheet.merge_cells("A2:K2")
+        inventory_sheet["A3"] = _excel_safe_text(inventory_source)
+        inventory_sheet["A3"].font = Font(name="Arial", size=9, color=muted)
+        inventory_sheet["A3"].alignment = Alignment(vertical="top", wrap_text=True)
+        inventory_sheet.merge_cells("A3:K3")
+        if inventory_warnings:
+            inventory_sheet["A4"] = _excel_safe_text("ADVERTENCIA: " + " ".join(inventory_warnings))
+            inventory_sheet["A4"].font = Font(name="Arial", size=9, bold=True, color="9B1C1C")
+            inventory_sheet["A4"].alignment = Alignment(vertical="top", wrap_text=True)
+            inventory_sheet.merge_cells("A4:K4")
+            inventory_sheet.row_dimensions[4].height = 34
+        inventory_header_row = 6
+        inventory_headers = [
+            "CATEGORÍA", "SI", "EN", "SF", "CD", "ISI", "DQS", "DD",
+            "DD REGISTRADOS", "COBERTURA", "TQS",
+        ]
+        for column, header in enumerate(inventory_headers, start=1):
+            cell = inventory_sheet.cell(row=inventory_header_row, column=column, value=header)
+            cell.fill = PatternFill("solid", fgColor=navy)
+            cell.font = Font(name="Arial", size=10, bold=True, color="FFFFFF")
+            cell.alignment = Alignment(horizontal="center", vertical="center")
+        for row_number, metric in enumerate(inventory["metrics"], start=inventory_header_row + 1):
+            if not isinstance(metric, dict):
+                continue
+            values = [
+                _excel_safe_text(str(metric.get("category") or "")),
+                _excel_number(metric.get("SI")), _excel_number(metric.get("EN")),
+                _excel_number(metric.get("SF")), _excel_number(metric.get("CD")),
+                _excel_number(metric.get("ISI")), metric.get("DQS"), metric.get("DD"),
+                metric.get("DD_REGISTRADOS"), _excel_number(metric.get("COBERTURA")),
+                _excel_number(metric.get("TQS")),
+            ]
+            for column, value in enumerate(values, start=1):
+                cell = inventory_sheet.cell(row=row_number, column=column, value=value)
+                cell.font = Font(name="Arial", size=10, color=navy)
+                cell.border = Border(bottom=thin_line)
+                if column in {6, 10, 11}:
+                    cell.number_format = '0.00"%"'
+                elif column in {2, 3, 4, 5}:
+                    cell.number_format = "#,##0.00"
+        for column, width in {
+            "A": 22, "B": 14, "C": 14, "D": 14, "E": 14, "F": 12,
+            "G": 11, "H": 11, "I": 17, "J": 14, "K": 12,
+        }.items():
+            inventory_sheet.column_dimensions[column].width = width
+        inventory_sheet.auto_filter.ref = f"A{inventory_header_row}:K{max(inventory_header_row, len(inventory['metrics']) + inventory_header_row)}"
+
+    workbook_bytes = BytesIO()
+    workbook.save(workbook_bytes)
+    workbook_bytes.seek(0)
+    return workbook_bytes, f"postest_pronostico_{period_start.isoformat()}_a_{period_end.isoformat()}.xlsx"
+
+
+def _excel_number(value: Any) -> float | None:
+    """Convierte a número seguro para escribir en Excel, sin fórmulas ni NaN."""
+    if value is None:
+        return None
+    try:
+        number = float(value)
+    except (TypeError, ValueError):
+        return None
+    return number if math.isfinite(number) else None
 
 
 def _parse_export_date(value: Any, message: str) -> date:

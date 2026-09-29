@@ -259,6 +259,40 @@ class WebTests(unittest.TestCase):
         self.assertEqual(worksheet["D7"].value, 3)
         self.assertEqual(worksheet["D8"].value, 1)
 
+    def test_forecast_export_by_category_uses_only_that_category(self):
+        client = web.create_app({"TESTING": True}).test_client()
+        response = client.post(
+            "/api/forecast/export",
+            json={
+                "scope": {
+                    "view": "date",
+                    "days": 7,
+                    "start_date": "2026-09-11",
+                    "end_date": "2026-09-11",
+                    "category": "ABARROTES",
+                },
+                "rows": [
+                    {
+                        "category": "ABARROTES",
+                        "product": "ARROZ COSTEÑO 1 KG",
+                        "quantity": 3.2,
+                        "suggested_packages": 4,
+                    },
+                ],
+            },
+        )
+
+        self.assertEqual(response.status_code, 200)
+        self.assertIn("pronostico_compra_abarrotes_2026-09-11.xlsx", response.headers["Content-Disposition"])
+
+        from openpyxl import load_workbook
+
+        workbook = load_workbook(BytesIO(response.data), data_only=True)
+        worksheet = workbook["Pronóstico"]
+        self.assertIn("ABARROTES", worksheet["A1"].value)
+        self.assertEqual(worksheet["A7"].value, "ABARROTES")
+        self.assertEqual(worksheet["B7"].value, "ARROZ COSTEÑO 1 KG")
+
     def test_dashboard_and_upload_report(self):
         with TemporaryDirectory() as folder:
             repository = CSVDemandRepository(Path(folder) / "history.csv")
@@ -332,3 +366,168 @@ class WebTests(unittest.TestCase):
                 self.assertEqual(response.status_code, 200)
                 self.assertTrue(target_catalog.exists())
                 self.assertGreater(response.get_json()["catalog"]["products"], 0)
+
+    def test_inventory_upload_calculates_metrics_and_keeps_an_active_copy(self):
+        source_inventory = (
+            Path(__file__).resolve().parents[1]
+            / "data"
+            / "inventario_producto_Taully_2026-04-01_a_2026-09-15.xlsx"
+        )
+        with TemporaryDirectory() as folder:
+            temporary_root = Path(folder)
+            uploads_directory = temporary_root / "inventarios"
+            selection_file = uploads_directory / "activo.json"
+            app = web.create_app(
+                {
+                    "TESTING": True,
+                    "INVENTORY_UPLOADS_DIR": uploads_directory,
+                    "INVENTORY_SELECTION_FILE": selection_file,
+                    "INVENTORY_FILE": temporary_root / "sin_inventario.xlsx",
+                    "DEFAULT_INVENTORY_FILE": source_inventory,
+                }
+            )
+            client = app.test_client()
+            with source_inventory.open("rb") as inventory:
+                response = client.post(
+                    "/api/inventory",
+                    data={"inventory": (inventory, source_inventory.name)},
+                    content_type="multipart/form-data",
+                )
+
+            self.assertEqual(response.status_code, 200)
+            payload = response.get_json()
+            self.assertTrue(payload["available"])
+            self.assertEqual(payload["inventory"]["records"], 11748)
+            self.assertEqual(payload["inventory"]["categories"], 5)
+            self.assertEqual(len(payload["metrics"]), 5)
+            abarrotes = next(metric for metric in payload["metrics"] if metric["category"] == "ABARROTES")
+            self.assertEqual(abarrotes["CD"], 4801.0)
+            self.assertAlmostEqual(abarrotes["ISI"], 94.2666, places=4)
+            self.assertEqual(payload["inventory"]["source_kind"], "archivo de demostración del proyecto")
+            self.assertTrue(payload["inventory"]["is_demonstration"])
+            self.assertEqual(len(payload["inventory"]["source_id"]), 64)
+            self.assertFalse(payload["reconciliation"]["reconciled"])
+            self.assertTrue(selection_file.exists())
+            self.assertEqual(len(list(uploads_directory.glob("*.xlsx"))), 1)
+
+            active = client.get("/api/inventory")
+            self.assertEqual(active.status_code, 200)
+            self.assertEqual(active.get_json()["inventory"]["name"], source_inventory.name)
+            self.assertTrue(active.get_json()["inventory"]["is_demonstration"])
+
+    def test_demo_inventory_is_not_selected_automatically(self):
+        source_inventory = (
+            Path(__file__).resolve().parents[1]
+            / "data"
+            / "inventario_producto_Taully_2026-04-01_a_2026-09-15.xlsx"
+        )
+        with TemporaryDirectory() as folder:
+            temporary_root = Path(folder)
+            app = web.create_app(
+                {
+                    "TESTING": True,
+                    "INVENTORY_UPLOADS_DIR": temporary_root / "inventarios",
+                    "INVENTORY_SELECTION_FILE": temporary_root / "inventarios" / "activo.json",
+                    "INVENTORY_FILE": temporary_root / "sin_inventario.xlsx",
+                    "DEFAULT_INVENTORY_FILE": source_inventory,
+                }
+            )
+
+            response = app.test_client().get("/api/inventory")
+
+        self.assertEqual(response.status_code, 200)
+        self.assertFalse(response.get_json()["available"])
+        self.assertIn("kardex real", response.get_json()["message"].lower())
+
+    def test_posttest_endpoint_persists_and_exports_the_calculated_result(self):
+        class PosttestServiceStub:
+            received = None
+
+            def __init__(self, _repository):
+                pass
+
+            def run(self, cutoff_date, horizon_days):
+                PosttestServiceStub.received = (cutoff_date, horizon_days)
+                return {
+                    "cutoff_date": cutoff_date.isoformat(),
+                    "horizon_days": horizon_days,
+                    "period": {"start_date": "2026-09-09", "end_date": "2026-09-15"},
+                    "categories_evaluated": ["ABARROTES"],
+                    "observation_count": 7,
+                    "training": {},
+                    "model": {
+                        "name": "Modelo predictivo",
+                        "metrics": {"mae": 3.2, "rmse": 4.1, "mape": 10.5, "wape": 9.8},
+                        "by_category": {"ABARROTES": {"actual_total": 42.0, "wape": 9.8}},
+                    },
+                    "baseline": {
+                        "name": "PMS-7",
+                        "metrics": {"mae": 4.2, "rmse": 5.1, "mape": 12.5, "wape": 11.8},
+                        "by_category": {"ABARROTES": {"actual_total": 42.0, "wape": 11.8}},
+                    },
+                    "comparison": {
+                        "improvement_vs_baseline": {"wape": {"percent": 16.95}},
+                        "winner_by_metric": {"wape": "model"},
+                    },
+                    "observations": [
+                        {
+                            "date": "2026-09-09",
+                            "category": "ABARROTES",
+                            "actual_demand": 6.0,
+                            "model_prediction": 5.0,
+                            "pms_7_prediction": 4.0,
+                        }
+                    ],
+                }
+
+        with TemporaryDirectory() as folder:
+            temporary_root = Path(folder)
+            with patch.object(web, "PosttestEvaluationService", PosttestServiceStub):
+                app = web.create_app(
+                    {
+                        "TESTING": True,
+                        "POSTTEST_RESULTS_DIR": temporary_root / "posttests",
+                        "INVENTORY_FILE": temporary_root / "sin_inventario.xlsx",
+                        "DEFAULT_INVENTORY_FILE": temporary_root / "sin_inventario_default.xlsx",
+                    }
+                )
+                client = app.test_client()
+                response = client.post("/api/posttest", json={"cutoff_date": "2026-09-08", "days": 7})
+
+                self.assertEqual(response.status_code, 200)
+                payload = response.get_json()
+                self.assertEqual(PosttestServiceStub.received, (date(2026, 9, 8), 7))
+                self.assertTrue(payload["run_id"].startswith("postest_"))
+                self.assertFalse(payload["inventory"]["available"])
+                self.assertTrue((temporary_root / "posttests" / f"{payload['run_id']}.json").exists())
+
+                exported = client.post("/api/posttest/export", json={"run_id": payload["run_id"]})
+
+            self.assertEqual(exported.status_code, 200)
+            self.assertIn("postest_pronostico_2026-09-09_a_2026-09-15.xlsx", exported.headers["Content-Disposition"])
+            from openpyxl import load_workbook
+
+            workbook = load_workbook(BytesIO(exported.data), data_only=True)
+            self.assertEqual(workbook.sheetnames, ["Resumen postest", "Métricas categoría", "Detalle diario"])
+            summary = workbook["Resumen postest"]
+            self.assertEqual(summary["A1"].value, "Postest de pronóstico y comparación con PMS-7")
+            metric_rows = {
+                summary.cell(row=row, column=1).value: row
+                for row in range(1, summary.max_row + 1)
+            }
+            self.assertEqual(summary.cell(row=metric_rows["MAE (unidades)"], column=2).value, 3.2)
+            self.assertEqual(summary.cell(row=metric_rows["WAPE"], column=3).value, 11.8)
+            category_metrics = workbook["Métricas categoría"]
+            self.assertEqual(category_metrics["A1"].value, "CATEGORÍA")
+            self.assertEqual(category_metrics["A2"].value, "ABARROTES")
+            self.assertEqual(category_metrics["F1"].value, "MODELO WAPE")
+            details = workbook["Detalle diario"]
+            self.assertEqual(details["A2"].value, "2026-09-09")
+            self.assertEqual(details["F2"].value, 1.0)
+
+    def test_posttest_requires_a_cutoff_date(self):
+        client = web.create_app({"TESTING": True}).test_client()
+        response = client.post("/api/posttest", json={"days": 7})
+
+        self.assertEqual(response.status_code, 400)
+        self.assertIn("fecha de corte", response.get_json()["error"].lower())

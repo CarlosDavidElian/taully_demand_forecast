@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="icon" href="{{ url_for('favicon', v='3') }}" sizes="any" />
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='taully-favicon.png', v='3') }}" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css', v='19') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css', v='20') }}" />
   </head>
   <body>
     <main class="shell">
@@ -203,7 +203,101 @@
         </div>
         <div id="prediction-list" class="prediction-list"></div>
       </section>
+
+      <section id="posttest-panel" class="panel posttest-panel" aria-labelledby="posttest-title">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">VALIDACIÓN Y STOCK</p>
+            <h2 id="posttest-title">Postest e indicadores de inventario</h2>
+          </div>
+          <span class="panel-note">EVIDENCIA GUARDADA</span>
+        </div>
+        <p class="posttest-intro">Para el Postest, seleccione arriba un <strong>corte de prueba</strong> y el horizonte. El sistema entrena con las ventas previas, compara el resultado con las ventas reales posteriores y conserva la ejecución para descargarla.</p>
+
+        <div class="posttest-workflow">
+          <form id="inventory-form" class="inventory-upload-card">
+            <div>
+              <p class="action-label">ARCHIVO DE INVENTARIO</p>
+              <h3>Calcule ISI y TQS</h3>
+              <p>Cargue el kardex real con fecha, producto, categoría, cantidad vendida, stock inicial, entradas, stock disponible, stock final y días sin stock.</p>
+            </div>
+            <label class="inventory-file-control" for="inventory">
+              <span id="inventory-file-name">Seleccionar inventario .xlsx</span>
+              <span class="file-button">Examinar</span>
+            </label>
+            <input id="inventory" name="inventory" type="file" accept=".xlsx" />
+            <button id="inventory-upload-button" class="button button-outline" type="submit">Cargar inventario <span aria-hidden="true">↗</span></button>
+            <p id="inventory-file-note" class="inventory-file-note">Cargando estado del inventario…</p>
+          </form>
+
+          <div class="posttest-run-card">
+            <div>
+              <p class="action-label">POSTEST</p>
+              <h3>Compruebe el pronóstico con ventas reales</h3>
+              <p>El corte es el último día usado para entrenar. El período siguiente se compara automáticamente con la demanda que ya está en el historial.</p>
+            </div>
+            <dl class="posttest-steps">
+              <div><dt>1</dt><dd>Entrena hasta el corte seleccionado.</dd></div>
+              <div><dt>2</dt><dd>Pronostica el horizonte elegido.</dd></div>
+              <div><dt>3</dt><dd>Compara modelo y PMS-7 contra ventas reales.</dd></div>
+            </dl>
+            <button id="run-posttest-button" class="button button-dark" type="button">Ejecutar Postest <span aria-hidden="true">→</span></button>
+          </div>
+        </div>
+
+        <section id="inventory-preview" class="inventory-preview" hidden aria-labelledby="inventory-preview-title">
+          <div class="inventory-preview-heading">
+            <div>
+              <p class="eyebrow">INVENTARIO ACTIVO</p>
+              <h3 id="inventory-preview-title">Indicadores calculados del archivo cargado</h3>
+            </div>
+            <p id="inventory-preview-period">—</p>
+          </div>
+          <div class="table-wrap">
+            <table class="posttest-table inventory-table">
+              <thead><tr><th>Categoría</th><th>CD</th><th>ISI</th><th>DQS</th><th>TQS</th></tr></thead>
+              <tbody id="inventory-preview-rows"></tbody>
+            </table>
+          </div>
+          <p class="inventory-result-note">ISI: proporción de salida frente al stock disponible. TQS: días con quiebre frente a los días evaluados. Ambos indicadores se calculan exclusivamente con el Excel de inventario activo.</p>
+        </section>
+
+        <section id="posttest-results" class="posttest-results" hidden aria-live="polite">
+          <div class="posttest-results-heading">
+            <div>
+              <p class="eyebrow">RESULTADO DEL POSTEST</p>
+              <h3 id="posttest-period">—</h3>
+              <p id="posttest-summary" class="posttest-summary">—</p>
+            </div>
+            <button id="download-posttest-button" class="download-forecast-button" type="button">Descargar Postest <span aria-hidden="true">↓</span></button>
+          </div>
+          <div id="posttest-metrics" class="posttest-metrics"></div>
+          <p id="posttest-comparison" class="posttest-comparison"></p>
+          <div class="posttest-data-grid">
+            <article class="posttest-table-card">
+              <h4>Resultados por categoría</h4>
+              <div class="table-wrap">
+                <table class="posttest-table">
+                  <thead><tr><th>Categoría</th><th>Real</th><th>Modelo WAPE</th><th>PMS-7 WAPE</th><th>Mejor</th></tr></thead>
+                  <tbody id="posttest-category-rows"></tbody>
+                </table>
+              </div>
+            </article>
+            <article class="posttest-table-card">
+              <h4>Indicadores de inventario del período</h4>
+              <p id="inventory-result-note" class="inventory-result-note">Carga un inventario para calcular ISI y TQS en este período.</p>
+              <div class="table-wrap">
+                <table class="posttest-table inventory-table">
+                  <thead><tr><th>Categoría</th><th>CD</th><th>ISI</th><th>DQS</th><th>TQS</th></tr></thead>
+                  <tbody id="inventory-metric-rows"></tbody>
+                </table>
+              </div>
+            </article>
+          </div>
+        </section>
+      </section>
+
     </main>
-    <script src="{{ url_for('static', filename='dashboard.js', v='28') }}"></script>
+    <script src="{{ url_for('static', filename='dashboard.js', v='32') }}"></script>
   </body>
 </html>

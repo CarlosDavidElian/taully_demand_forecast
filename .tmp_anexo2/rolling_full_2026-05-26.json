@@ -1,0 +1,292 @@
+{
+  "method": {
+    "pretest": "Promedio móvil simple recursivo de 7 días.",
+    "postest": "Modelo seleccionado por el programa con entrenamiento hasta la fecha de corte."
+  },
+  "cutoff_date": "2026-05-26",
+  "training_start": "2026-04-01",
+  "period_start": "2026-05-27",
+  "period_end": "2026-06-02",
+  "dates": [
+    "2026-05-27",
+    "2026-05-28",
+    "2026-05-29",
+    "2026-05-30",
+    "2026-05-31",
+    "2026-06-01",
+    "2026-06-02"
+  ],
+  "categories": {
+    "ABARROTES": {
+      "actual": [
+        50.0,
+        45.0,
+        55.0,
+        46.0,
+        64.0,
+        50.0,
+        41.0
+      ],
+      "baseline_pms_7": [
+        51.71,
+        50.82,
+        51.65,
+        51.45,
+        51.38,
+        50.43,
+        50.35
+      ],
+      "model_forecast": [
+        51.13,
+        54.79,
+        52.47,
+        49.25,
+        45.64,
+        47.27,
+        46.94
+      ],
+      "baseline_metrics": {
+        "mae": 5.5329,
+        "rmse": 6.8096,
+        "mape": 11.0965,
+        "wape": 11.0342
+      },
+      "model_metrics": {
+        "mae": 6.2471,
+        "rmse": 8.3999,
+        "mape": 12.0452,
+        "wape": 12.4587
+      },
+      "trained_model": "random_forest",
+      "training_wape": 8.78
+    },
+    "BEBIDAS": {
+      "actual": [
+        90.0,
+        85.0,
+        72.0,
+        118.0,
+        96.0,
+        95.0,
+        88.0
+      ],
+      "baseline_pms_7": [
+        79.0,
+        83.43,
+        83.92,
+        86.62,
+        83.42,
+        78.34,
+        80.1
+      ],
+      "model_forecast": [
+        77.75,
+        82.75,
+        77.75,
+        105.0,
+        95.25,
+        86.5,
+        81.5
+      ],
+      "baseline_metrics": {
+        "mae": 13.2871,
+        "rmse": 15.8045,
+        "mape": 13.8338,
+        "wape": 14.4425
+      },
+      "model_metrics": {
+        "mae": 7.0,
+        "rmse": 8.2137,
+        "mape": 7.4823,
+        "wape": 7.6087
+      },
+      "trained_model": "promedio_estacional",
+      "training_wape": 19.41
+    },
+    "GOLOSINAS": {
+      "actual": [
+        79.0,
+        79.0,
+        69.0,
+        108.0,
+        83.0,
+        58.0,
+        122.0
+      ],
+      "baseline_pms_7": [
+        65.57,
+        67.94,
+        68.07,
+        66.08,
+        62.95,
+        64.09,
+        64.67
+      ],
+      "model_forecast": [
+        60.73,
+        61.3,
+        84.98,
+        92.88,
+        78.76,
+        62.75,
+        56.99
+      ],
+      "baseline_metrics": {
+        "mae": 21.5443,
+        "rmse": 28.7518,
+        "mape": 21.8302,
+        "wape": 25.2191
+      },
+      "model_metrics": {
+        "mae": 20.1529,
+        "rmse": 27.7692,
+        "mape": 21.3251,
+        "wape": 23.5903
+      },
+      "trained_model": "random_forest",
+      "training_wape": 10.45
+    },
+    "HELADOS": {
+      "actual": [
+        24.0,
+        20.0,
+        18.0,
+        21.0,
+        23.0,
+        33.0,
+        24.0
+      ],
+      "baseline_pms_7": [
+        26.43,
+        27.35,
+        28.83,
+        27.66,
+        27.32,
+        25.8,
+        27.34
+      ],
+      "model_forecast": [
+        21.39,
+        22.68,
+        28.01,
+        26.36,
+        25.46,
+        27.25,
+        20.2
+      ],
+      "baseline_metrics": {
+        "mae": 6.0186,
+        "rmse": 6.5817,
+        "mape": 27.6105,
+        "wape": 25.8466
+      },
+      "model_metrics": {
+        "mae": 4.6671,
+        "rmse": 5.298,
+        "mape": 21.3376,
+        "wape": 20.0429
+      },
+      "trained_model": "random_forest",
+      "training_wape": 20.06
+    },
+    "LIMPIEZA": {
+      "actual": [
+        16.0,
+        8.0,
+        11.0,
+        27.0,
+        19.0,
+        15.0,
+        9.0
+      ],
+      "baseline_pms_7": [
+        13.14,
+        12.73,
+        11.84,
+        11.53,
+        11.03,
+        11.04,
+        11.9
+      ],
+      "model_forecast": [
+        19.89,
+        19.54,
+        20.08,
+        20.34,
+        20.63,
+        16.99,
+        15.44
+      ],
+      "baseline_metrics": {
+        "mae": 5.5329,
+        "rmse": 7.1533,
+        "mape": 34.6432,
+        "wape": 36.8857
+      },
+      "model_metrics": {
+        "mae": 5.89,
+        "rmse": 6.7949,
+        "mape": 52.7394,
+        "wape": 39.2667
+      },
+      "trained_model": "random_forest",
+      "training_wape": 37.6
+    }
+  },
+  "overall": {
+    "actual": [
+      259.0,
+      237.0,
+      225.0,
+      320.0,
+      285.0,
+      251.0,
+      284.0
+    ],
+    "baseline_pms_7": [
+      235.85000000000002,
+      242.26999999999998,
+      244.30999999999997,
+      243.33999999999997,
+      236.1,
+      229.70000000000002,
+      234.36
+    ],
+    "model_forecast": [
+      230.89,
+      241.05999999999997,
+      263.28999999999996,
+      293.83,
+      265.74,
+      240.76000000000002,
+      221.07
+    ],
+    "baseline_metrics": {
+      "mae": 34.89,
+      "rmse": 41.6145,
+      "mape": 12.4033,
+      "wape": 13.1236
+    },
+    "model_metrics": {
+      "mae": 27.0086,
+      "rmse": 32.4998,
+      "mape": 10.1083,
+      "wape": 10.1591
+    }
+  },
+  "all_category_day_observations": {
+    "count": 35,
+    "baseline_metrics": {
+      "mae": 10.3831,
+      "rmse": 15.6033,
+      "mape": 21.8028,
+      "wape": 19.5277
+    },
+    "model_metrics": {
+      "mae": 8.7914,
+      "rmse": 14.0242,
+      "mape": 22.9859,
+      "wape": 16.5341
+    }
+  }
+}

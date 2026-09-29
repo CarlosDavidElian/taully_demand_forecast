@@ -1,0 +1,170 @@
+{
+  "input": "C:\\taully_demand_forecast\\outputs\\01a0b651-7620-73f0-8f6a-8b68b14f7a17\\Anexo_2_Instrumentos_Completos_Pretest_Postest.docx",
+  "fonts_by_char_count": {
+    "Arial": 12381
+  },
+  "direct_run_formatting_runs": 540,
+  "direct_paragraph_formatting_paragraphs": 794,
+  "heading_like_paragraphs_not_heading_style": [
+    {
+      "para_index": 1,
+      "text": "Anexo 2 Instrumentos de recolecci\u00f3n de datos",
+      "style": "Title"
+    },
+    {
+      "para_index": 10,
+      "text": "Registro por categor\u00eda",
+      "style": "Normal"
+    },
+    {
+      "para_index": 16,
+      "text": "Registro por categor\u00eda",
+      "style": "Normal"
+    },
+    {
+      "para_index": 22,
+      "text": "Registro por categor\u00eda",
+      "style": "Normal"
+    },
+    {
+      "para_index": 28,
+      "text": "Registro por categor\u00eda",
+      "style": "Normal"
+    },
+    {
+      "para_index": 34,
+      "text": "Registro por categor\u00eda",
+      "style": "Normal"
+    },
+    {
+      "para_index": 40,
+      "text": "Registro por categor\u00eda",
+      "style": "Normal"
+    },
+    {
+      "para_index": 46,
+      "text": "Registro por categor\u00eda",
+      "style": "Normal"
+    },
+    {
+      "para_index": 52,
+      "text": "Registro por categor\u00eda",
+      "style": "Normal"
+    },
+    {
+      "para_index": 58,
+      "text": "Registro por categor\u00eda",
+      "style": "Normal"
+    },
+    {
+      "para_index": 64,
+      "text": "Registro por categor\u00eda",
+      "style": "Normal"
+    },
+    {
+      "para_index": 67,
+      "text": "Datos de ejecuci\u00f3n del Postest",
+      "style": "Normal"
+    },
+    {
+      "para_index": 73,
+      "text": "Secuencia",
+      "style": "Normal"
+    },
+    {
+      "para_index": 74,
+      "text": "Aplicaci\u00f3n",
+      "style": "Normal"
+    },
+    {
+      "para_index": 75,
+      "text": "Evidencia m\u00ednima",
+      "style": "Normal"
+    },
+    {
+      "para_index": 85,
+      "text": "N",
+      "style": "Normal"
+    },
+    {
+      "para_index": 86,
+      "text": "Indicador",
+      "style": "Normal"
+    },
+    {
+      "para_index": 87,
+      "text": "F\u00f3rmula",
+      "style": "Normal"
+    },
+    {
+      "para_index": 103,
+      "text": "Campo",
+      "style": "Normal"
+    },
+    {
+      "para_index": 104,
+      "text": "Registro",
+      "style": "Normal"
+    }
+  ],
+  "examples": {
+    "direct_run_formatting": [
+      {
+        "para_index": 1,
+        "run_text": "Anexo 2 Instrumentos de recolecci\u00f3n de datos",
+        "style": "Title"
+      },
+      {
+        "para_index": 2,
+        "run_text": "Este anexo contiene las fichas para registrar los cinco indicadores del estudio ",
+        "style": "Normal"
+      },
+      {
+        "para_index": 3,
+        "run_text": "O1 Pretest corresponde a la medici\u00f3n previa a la implementaci\u00f3n del modelo. X co",
+        "style": "Normal"
+      },
+      {
+        "para_index": 4,
+        "run_text": "Comparaci\u00f3n de pron\u00f3stico. ",
+        "style": "Normal"
+      },
+      {
+        "para_index": 4,
+        "run_text": "PMS-7 es una l\u00ednea de referencia para contrastar el error del modelo. No sustitu",
+        "style": "Normal"
+      }
+    ],
+    "direct_paragraph_formatting": [
+      {
+        "para_index": 2,
+        "text": "Este anexo contiene las fichas para registrar los cinco indicadores del estudio en los dos momentos de medici\u00f3n. Cada fi",
+        "style": "Normal"
+      },
+      {
+        "para_index": 3,
+        "text": "O1 Pretest corresponde a la medici\u00f3n previa a la implementaci\u00f3n del modelo. X corresponde a la implementaci\u00f3n y uso del ",
+        "style": "Normal"
+      },
+      {
+        "para_index": 4,
+        "text": "Comparaci\u00f3n de pron\u00f3stico. PMS-7 es una l\u00ednea de referencia para contrastar el error del modelo. No sustituye la ficha O",
+        "style": "Normal"
+      },
+      {
+        "para_index": 5,
+        "text": "Instrumentos incluidos",
+        "style": "Heading 1"
+      },
+      {
+        "para_index": 6,
+        "text": "Regla de fuente. Para CD, ISI y TQS se requiere un kardex oficial con stock inicial, entradas, stock final y d\u00edas sin st",
+        "style": "Normal"
+      }
+    ]
+  },
+  "notes": [
+    "Direct formatting is not always wrong, but it often causes inconsistent output when templates change.",
+    "Heading-like paragraphs not using Heading styles can break TOC and accessibility."
+  ]
+}

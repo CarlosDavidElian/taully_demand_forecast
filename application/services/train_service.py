@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import joblib
 from datetime import date, datetime, timezone
+from pathlib import Path
 from typing import Dict
 
 from domain.interfaces.repositories import DemandRepository
@@ -15,8 +16,9 @@ class TrainService:
     # resultantes para separar entrenamiento y validación sin inventar datos.
     MIN_HISTORY_DAYS = 48
 
-    def __init__(self, demand_repo: DemandRepository):
+    def __init__(self, demand_repo: DemandRepository, models_file: str | Path | None = None):
         self.demand_repo = demand_repo
+        self.models_file = Path(models_file) if models_file is not None else MODELS_FILE
         self.last_training_summary = {"trained_categories": 0, "excluded_categories": {}}
 
     def run(self, cutoff_date: date | None = None) -> Dict[str, float]:
@@ -109,7 +111,7 @@ class TrainService:
                     "cutoff_date": cutoff_date.isoformat() if cutoff_date else None,
                 },
             },
-            MODELS_FILE,
+            self.models_file,
         )
 
         # La interfaz muestra un resumen representativo de las categorías

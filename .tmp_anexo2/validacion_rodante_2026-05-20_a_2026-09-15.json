@@ -1,0 +1,2204 @@
+{
+  "design": {
+    "source_period": {
+      "start": "2026-04-01",
+      "end": "2026-09-15"
+    },
+    "first_cutoff": "2026-05-19",
+    "last_cutoff": "2026-09-08",
+    "test_period": {
+      "start": "2026-05-20",
+      "end": "2026-09-15"
+    },
+    "folds": 17,
+    "horizon_days": 7,
+    "observations": 595,
+    "pretest_method": "Promedio móvil simple recursivo de siete días (PMS-7).",
+    "postest_method": "Modelo elegido por la aplicación tras entrenarse hasta cada fecha de corte."
+  },
+  "overall": {
+    "pms": {
+      "mae": 10.42042,
+      "rmse": 14.258889,
+      "mape": 26.087894,
+      "wape": 19.956708
+    },
+    "model": {
+      "mae": 10.021916,
+      "rmse": 13.791527,
+      "mape": 24.672108,
+      "wape": 19.193511
+    },
+    "actual_total": 31068.0,
+    "pms_total": 31356.75,
+    "model_total": 31131.6
+  },
+  "by_category": {
+    "ABARROTES": {
+      "observations": 119,
+      "actual_total": 6248.0,
+      "pms_total": 6292.69,
+      "model_total": 6149.38,
+      "pms": {
+        "mae": 9.930672,
+        "rmse": 12.412612,
+        "mape": 20.862295,
+        "wape": 18.914052
+      },
+      "model": {
+        "mae": 9.717479,
+        "rmse": 12.179089,
+        "mape": 19.663278,
+        "wape": 18.508003
+      }
+    },
+    "BEBIDAS": {
+      "observations": 119,
+      "actual_total": 10950.0,
+      "pms_total": 10997.55,
+      "model_total": 10898.13,
+      "pms": {
+        "mae": 15.073697,
+        "rmse": 19.104441,
+        "mape": 17.641728,
+        "wape": 16.381461
+      },
+      "model": {
+        "mae": 14.75084,
+        "rmse": 18.271979,
+        "mape": 16.854185,
+        "wape": 16.030594
+      }
+    },
+    "GOLOSINAS": {
+      "observations": 119,
+      "actual_total": 8928.0,
+      "pms_total": 9036.71,
+      "model_total": 9233.46,
+      "pms": {
+        "mae": 15.402101,
+        "rmse": 19.759685,
+        "mape": 23.040606,
+        "wape": 20.529234
+      },
+      "model": {
+        "mae": 14.400504,
+        "rmse": 19.205183,
+        "mape": 21.847795,
+        "wape": 19.19422
+      }
+    },
+    "HELADOS": {
+      "observations": 119,
+      "actual_total": 2944.0,
+      "pms_total": 3037.79,
+      "model_total": 2901.9,
+      "pms": {
+        "mae": 6.914538,
+        "rmse": 8.381431,
+        "mape": 34.280053,
+        "wape": 27.949389
+      },
+      "model": {
+        "mae": 6.33563,
+        "rmse": 8.068937,
+        "mape": 30.501128,
+        "wape": 25.609375
+      }
+    },
+    "LIMPIEZA": {
+      "observations": 119,
+      "actual_total": 1998.0,
+      "pms_total": 1992.01,
+      "model_total": 1948.73,
+      "pms": {
+        "mae": 4.781092,
+        "rmse": 6.069056,
+        "mape": 34.614784,
+        "wape": 28.475976
+      },
+      "model": {
+        "mae": 4.905126,
+        "rmse": 5.906684,
+        "mape": 34.494155,
+        "wape": 29.214715
+      }
+    }
+  },
+  "folds": [
+    {
+      "number": 1,
+      "cutoff_date": "2026-05-19",
+      "test_start": "2026-05-20",
+      "test_end": "2026-05-26",
+      "global_metrics": {
+        "pms": {
+          "mae": 11.3,
+          "rmse": 15.131075,
+          "mape": 32.909202,
+          "wape": 23.955179
+        },
+        "model": {
+          "mae": 11.098857,
+          "rmse": 15.137988,
+          "mape": 30.661062,
+          "wape": 23.52877
+        }
+      },
+      "categories": [
+        {
+          "category": "ABARROTES",
+          "actual_total": 362.0,
+          "pms_total": 346.21,
+          "model_total": 328.0,
+          "pms_metrics": {
+            "mae": 5.172857,
+            "rmse": 5.99978,
+            "mape": 9.889884,
+            "wape": 10.002762
+          },
+          "model_metrics": {
+            "mae": 7.0,
+            "rmse": 8.882165,
+            "mape": 12.918639,
+            "wape": 13.535912
+          },
+          "selected_method": "promedio_estacional",
+          "internal_validation_wape": 19.36
+        },
+        {
+          "category": "BEBIDAS",
+          "actual_total": 553.0,
+          "pms_total": 675.17,
+          "model_total": 605.8,
+          "pms_metrics": {
+            "mae": 26.33,
+            "rmse": 28.591265,
+            "mape": 40.334199,
+            "wape": 33.329114
+          },
+          "model_metrics": {
+            "mae": 24.637143,
+            "rmse": 27.220145,
+            "mape": 35.222814,
+            "wape": 31.186257
+          },
+          "selected_method": "random_forest",
+          "internal_validation_wape": 18.35
+        },
+        {
+          "category": "GOLOSINAS",
+          "actual_total": 459.0,
+          "pms_total": 487.02,
+          "model_total": 520.0,
+          "pms_metrics": {
+            "mae": 11.502857,
+            "rmse": 13.009383,
+            "mape": 18.765124,
+            "wape": 17.542484
+          },
+          "model_metrics": {
+            "mae": 11.571429,
+            "rmse": 14.971401,
+            "mape": 20.485707,
+            "wape": 17.647059
+          },
+          "selected_method": "promedio_estacional",
+          "internal_validation_wape": 20.83
+        },
+        {
+          "category": "HELADOS",
+          "actual_total": 185.0,
+          "pms_total": 170.62,
+          "model_total": 175.5,
+          "pms_metrics": {
+            "mae": 8.485714,
+            "rmse": 9.108738,
+            "mape": 34.37618,
+            "wape": 32.108108
+          },
+          "model_metrics": {
+            "mae": 7.5,
+            "rmse": 8.52622,
+            "mape": 31.174973,
+            "wape": 28.378378
+          },
+          "selected_method": "promedio_estacional",
+          "internal_validation_wape": 21.37
+        },
+        {
+          "category": "LIMPIEZA",
+          "actual_total": 92.0,
+          "pms_total": 122.98,
+          "model_total": 113.5,
+          "pms_metrics": {
+            "mae": 5.008571,
+            "rmse": 6.251098,
+            "mape": 61.180626,
+            "wape": 38.108696
+          },
+          "model_metrics": {
+            "mae": 4.785714,
+            "rmse": 5.396758,
+            "mape": 53.503178,
+            "wape": 36.413043
+          },
+          "selected_method": "promedio_estacional",
+          "internal_validation_wape": 25.0
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "cutoff_date": "2026-05-26",
+      "test_start": "2026-05-27",
+      "test_end": "2026-06-02",
+      "global_metrics": {
+        "pms": {
+          "mae": 10.383143,
+          "rmse": 15.603252,
+          "mape": 21.802822,
+          "wape": 19.527673
+        },
+        "model": {
+          "mae": 8.791429,
+          "rmse": 14.024196,
+          "mape": 22.985922,
+          "wape": 16.534121
+        }
+      },
+      "categories": [
+        {
+          "category": "ABARROTES",
+          "actual_total": 351.0,
+          "pms_total": 357.79,
+          "model_total": 347.49,
+          "pms_metrics": {
+            "mae": 5.532857,
+            "rmse": 6.809587,
+            "mape": 11.096528,
+            "wape": 11.034188
+          },
+          "model_metrics": {
+            "mae": 6.247143,
+            "rmse": 8.399919,
+            "mape": 12.045154,
+            "wape": 12.458689
+          },
+          "selected_method": "random_forest",
+          "internal_validation_wape": 8.78
+        },
+        {
+          "category": "BEBIDAS",
+          "actual_total": 644.0,
+          "pms_total": 574.83,
+          "model_total": 606.5,
+          "pms_metrics": {
+            "mae": 13.287143,
+            "rmse": 15.80451,
+            "mape": 13.833763,
+            "wape": 14.442547
+          },
+          "model_metrics": {
+            "mae": 7.0,
+            "rmse": 8.213665,
+            "mape": 7.482316,
+            "wape": 7.608696
+          },
+          "selected_method": "promedio_estacional",
+          "internal_validation_wape": 19.41
+        },
+        {
+          "category": "GOLOSINAS",
+          "actual_total": 598.0,
+          "pms_total": 459.37,
+          "model_total": 498.39,
+          "pms_metrics": {
+            "mae": 21.544286,
+            "rmse": 28.751793,
+            "mape": 21.830153,
+            "wape": 25.219064
+          },
+          "model_metrics": {
+            "mae": 20.152857,
+            "rmse": 27.769196,
+            "mape": 21.325149,
+            "wape": 23.590301
+          },
+          "selected_method": "random_forest",
+          "internal_validation_wape": 10.45
+        },
+        {
+          "category": "HELADOS",
+          "actual_total": 163.0,
+          "pms_total": 190.73,
+          "model_total": 171.35,
+          "pms_metrics": {
+            "mae": 6.018571,
+            "rmse": 6.581683,
+            "mape": 27.610487,
+            "wape": 25.846626
+          },
+          "model_metrics": {
+            "mae": 4.667143,
+            "rmse": 5.297955,
+            "mape": 21.337593,
+            "wape": 20.042945
+          },
+          "selected_method": "random_forest",
+          "internal_validation_wape": 20.06
+        },
+        {
+          "category": "LIMPIEZA",
+          "actual_total": 105.0,
+          "pms_total": 83.21,
+          "model_total": 132.91,
+          "pms_metrics": {
+            "mae": 5.532857,
+            "rmse": 7.153336,
+            "mape": 34.643179,
+            "wape": 36.885714
+          },
+          "model_metrics": {
+            "mae": 5.89,
+            "rmse": 6.794917,
+            "mape": 52.739399,
+            "wape": 39.266667
+          },
+          "selected_method": "random_forest",
+          "internal_validation_wape": 37.6
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "cutoff_date": "2026-06-02",
+      "test_start": "2026-06-03",
+      "test_end": "2026-06-09",
+      "global_metrics": {
+        "pms": {
+          "mae": 10.256857,
+          "rmse": 14.209102,
+          "mape": 24.248376,
+          "wape": 19.899667
+        },
+        "model": {
+          "mae": 10.543429,
+          "rmse": 13.760463,
+          "mape": 25.438751,
+          "wape": 20.455654
+        }
+      },
+      "categories": [
+        {
+          "category": "ABARROTES",
+          "actual_total": 339.0,
+          "pms_total": 350.43,
+          "model_total": 357.56,
+          "pms_metrics": {
+            "mae": 7.635714,
+            "rmse": 8.616303,
+            "mape": 16.978936,
+            "wape": 15.766962
+          },
+          "model_metrics": {
+            "mae": 7.774286,
+            "rmse": 9.582399,
+            "mape": 17.914379,
+            "wape": 16.053097
+          },
+          "selected_method": "random_forest",
+          "internal_validation_wape": 10.83
+        },
+        {
+          "category": "BEBIDAS",
+          "actual_total": 657.0,
+          "pms_total": 652.77,
+          "model_total": 614.0,
+          "pms_metrics": {
+            "mae": 10.624286,
+            "rmse": 12.686541,
+            "mape": 10.940212,
+            "wape": 11.319635
+          },
+          "model_metrics": {
+            "mae": 9.857143,
+            "rmse": 14.5547,
+            "mape": 9.774876,
+            "wape": 10.502283
+          },
+          "selected_method": "promedio_estacional",
+          "internal_validation_wape": 7.61
+        },
+        {
+          "category": "GOLOSINAS",
+          "actual_total": 481.0,
+          "pms_total": 617.17,
+          "model_total": 527.75,
+          "pms_metrics": {
+            "mae": 20.495714,
+            "rmse": 26.016505,
+            "mape": 39.047685,
+            "wape": 29.827443
+          },
+          "model_metrics": {
+            "mae": 21.535714,
+            "rmse": 22.688693,
+            "mape": 35.015277,
+            "wape": 31.340956
+          },
+          "selected_method": "promedio_estacional",
+          "internal_validation_wape": 19.77
+        },
+        {
+          "category": "HELADOS",
+          "actual_total": 195.0,
+          "pms_total": 168.8,
+          "model_total": 174.81,
+          "pms_metrics": {
+            "mae": 8.425714,
+            "rmse": 8.549999,
+            "mape": 34.469282,
+            "wape": 30.246154
+          },
+          "model_metrics": {
+            "mae": 8.801429,
+            "rmse": 10.033448,
+            "mape": 39.87935,
+            "wape": 31.594872
+          },
+          "selected_method": "random_forest",
+          "internal_validation_wape": 28.78
+        },
+        {
+          "category": "LIMPIEZA",
+          "actual_total": 132.0,
+          "pms_total": 106.12,
+          "model_total": 111.22,
+          "pms_metrics": {
+            "mae": 4.102857,
+            "rmse": 4.933848,
+            "mape": 19.805764,
+            "wape": 21.757576
+          },
+          "model_metrics": {
+            "mae": 4.748571,
+            "rmse": 5.257677,
+            "mape": 24.609873,
+            "wape": 25.181818
+          },
+          "selected_method": "random_forest",
+          "internal_validation_wape": 34.24
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "cutoff_date": "2026-06-09",
+      "test_start": "2026-06-10",
+      "test_end": "2026-06-16",
+      "global_metrics": {
+        "pms": {
+          "mae": 11.501143,
+          "rmse": 16.526061,
+          "mape": 30.928622,
+          "wape": 21.912901
+        },
+        "model": {
+          "mae": 10.18,
+          "rmse": 13.258645,
+          "mape": 27.637567,
+          "wape": 19.395754
+        }
+      },
+      "categories": [
+        {
+          "category": "ABARROTES",
+          "actual_total": 339.0,
+          "pms_total": 338.79,
+          "model_total": 352.75,
+          "pms_metrics": {
+            "mae": 7.475714,
+            "rmse": 8.908449,
+            "mape": 17.762381,
+            "wape": 15.436578
+          },
+          "model_metrics": {
+            "mae": 8.75,
+            "rmse": 10.149331,
+            "mape": 20.275103,
+            "wape": 18.067847
+          },
+          "selected_method": "promedio_estacional",
+          "internal_validation_wape": 13.95
+        },
+        {
+          "category": "BEBIDAS",
+          "actual_total": 678.0,
+          "pms_total": 654.05,
+          "model_total": 629.0,
+          "pms_metrics": {
+            "mae": 24.352857,
+            "rmse": 29.210587,
+            "mape": 26.030537,
+            "wape": 25.143068
+          },
+          "model_metrics": {
+            "mae": 17.357143,
+            "rmse": 20.649282,
+            "mape": 17.91196,
+            "wape": 17.920354
+          },
+          "selected_method": "promedio_estacional",
+          "internal_validation_wape": 10.0
+        },
+        {
+          "category": "GOLOSINAS",
+          "actual_total": 535.0,
+          "pms_total": 482.16,
+          "model_total": 525.17,
+          "pms_metrics": {
+            "mae": 15.685714,
+            "rmse": 18.742012,
+            "mape": 22.614563,
+            "wape": 20.523364
+          },
+          "model_metrics": {
+            "mae": 13.792857,
+            "rmse": 16.305765,
+            "mape": 20.405418,
+            "wape": 18.046729
+          },
+          "selected_method": "random_forest",
+          "internal_validation_wape": 29.85
+        },
+        {
+          "category": "HELADOS",
+          "actual_total": 195.0,
+          "pms_total": 196.51,
+          "model_total": 180.5,
+          "pms_metrics": {
+            "mae": 4.504286,
+            "rmse": 5.782633,
+            "mape": 17.226913,
+            "wape": 16.169231
+          },
+          "model_metrics": {
+            "mae": 6.357143,
+            "rmse": 7.430632,
+            "mape": 23.736228,
+            "wape": 22.820513
+          },
+          "selected_method": "promedio_estacional",
+          "internal_validation_wape": 25.69
+        },
+        {
+          "category": "LIMPIEZA",
+          "actual_total": 90.0,
+          "pms_total": 123.95,
+          "model_total": 111.5,
+          "pms_metrics": {
+            "mae": 5.487143,
+            "rmse": 6.944979,
+            "mape": 71.008714,
+            "wape": 42.677778
+          },
+          "model_metrics": {
+            "mae": 4.642857,
+            "rmse": 5.335193,
+            "mape": 55.859124,
+            "wape": 36.111111
+          },
+          "selected_method": "promedio_estacional",
+          "internal_validation_wape": 24.04
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "cutoff_date": "2026-06-16",
+      "test_start": "2026-06-17",
+      "test_end": "2026-06-23",
+      "global_metrics": {
+        "pms": {
+          "mae": 11.705429,
+          "rmse": 14.737121,
+          "mape": 28.562969,
+          "wape": 23.357469
+        },
+        "model": {
+          "mae": 10.305143,
+          "rmse": 13.80944,
+          "mape": 25.91746,
+          "wape": 20.563284
+        }
+      },
+      "categories": [
+        {
+          "category": "ABARROTES",
+          "actual_total": 314.0,
+          "pms_total": 356.45,
+          "model_total": 345.01,
+          "pms_metrics": {
+            "mae": 10.381429,
+            "rmse": 12.434285,
+            "mape": 27.15058,
+            "wape": 23.143312
+          },
+          "model_metrics": {
+            "mae": 10.138571,
+            "rmse": 12.259749,
+            "mape": 25.00504,
+            "wape": 22.601911
+          },
+          "selected_method": "random_forest",
+          "internal_validation_wape": 14.33
+        },
+        {
+          "category": "BEBIDAS",
+          "actual_total": 558.0,
+          "pms_total": 695.5,
+          "model_total": 633.0,
+          "pms_metrics": {
+            "mae": 19.642857,
+            "rmse": 21.703694,
+            "mape": 26.934112,
+            "wape": 24.641577
+          },
+          "model_metrics": {
+            "mae": 15.642857,
+            "rmse": 19.833233,
+            "mape": 19.660439,
+            "wape": 19.623656
+          },
+          "selected_method": "promedio_estacional",
+          "internal_validation_wape": 14.52
+        },
+        {
+          "category": "GOLOSINAS",
+          "actual_total": 587.0,
+          "pms_total": 529.9,
+          "model_total": 570.41,
+          "pms_metrics": {
+            "mae": 15.542857,
+            "rmse": 18.458403,
+            "mape": 17.988754,
+            "wape": 18.534923
+          },
+          "model_metrics": {
+            "mae": 14.452857,
+            "rmse": 17.605555,
+            "mape": 18.464489,
+            "wape": 17.235094
+          },
+          "selected_method": "random_forest",
+          "internal_validation_wape": 22.1
+        },
+        {
+          "category": "HELADOS",
+          "actual_total": 166.0,
+          "pms_total": 186.93,
+          "model_total": 176.15,
+          "pms_metrics": {
+            "mae": 5.207143,
+            "rmse": 5.826944,
+            "mape": 24.931754,
+            "wape": 21.957831
+          },
+          "model_metrics": {
+            "mae": 4.112857,
+            "rmse": 5.198361,
+            "mape": 18.853461,
+            "wape": 17.343373
+          },
+          "selected_method": "random_forest",
+          "internal_validation_wape": 21.9
+        },
+        {
+          "category": "LIMPIEZA",
+          "actual_total": 129.0,
+          "pms_total": 91.01,
+          "model_total": 104.75,
+          "pms_metrics": {
+            "mae": 7.752857,
+            "rmse": 9.251269,
+            "mape": 45.809643,
+            "wape": 42.069767
+          },
+          "model_metrics": {
+            "mae": 7.178571,
+            "rmse": 8.536163,
+            "mape": 47.603872,
+            "wape": 38.953488
+          },
+          "selected_method": "promedio_estacional",
+          "internal_validation_wape": 30.29
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "cutoff_date": "2026-06-23",
+      "test_start": "2026-06-24",
+      "test_end": "2026-06-30",
+      "global_metrics": {
+        "pms": {
+          "mae": 13.486286,
+          "rmse": 18.451889,
+          "mape": 33.301807,
+          "wape": 24.687238
+        },
+        "model": {
+          "mae": 12.712286,
+          "rmse": 17.588107,
+          "mape": 33.734251,
+          "wape": 23.270397
+        }
+      },
+      "categories": [
+        {
+          "category": "ABARROTES",
+          "actual_total": 408.0,
+          "pms_total": 308.89,
+          "model_total": 332.77,
+          "pms_metrics": {
+            "mae": 14.69,
+            "rmse": 16.90451,
+            "mape": 23.344652,
+            "wape": 25.203431
+          },
+          "model_metrics": {
+            "mae": 13.495714,
+            "rmse": 15.354053,
+            "mape": 21.808995,
+            "wape": 23.154412
+          },
+          "selected_method": "random_forest",
+          "internal_validation_wape": 16.33
+        },
+        {
+          "category": "BEBIDAS",
+          "actual_total": 669.0,
+          "pms_total": 545.87,
+          "model_total": 634.25,
+          "pms_metrics": {
+            "mae": 21.63,
+            "rmse": 25.615534,
+            "mape": 21.455314,
+            "wape": 22.632287
+          },
+          "model_metrics": {
+            "mae": 18.464286,
+            "rmse": 19.923739,
+            "mape": 20.06522,
+            "wape": 19.31988
+          },
+          "selected_method": "promedio_estacional",
+          "internal_validation_wape": 17.63
+        },
+        {
+          "category": "GOLOSINAS",
+          "actual_total": 598.0,
+          "pms_total": 584.35,
+          "model_total": 532.99,
+          "pms_metrics": {
+            "mae": 19.15,
+            "rmse": 25.406218,
+            "mape": 22.489295,
+            "wape": 22.416388
+          },
+          "model_metrics": {
+            "mae": 17.398571,
+            "rmse": 27.450663,
+            "mape": 18.052503,
+            "wape": 20.366221
+          },
+          "selected_method": "random_forest",
+          "internal_validation_wape": 20.21
+        },
+        {
+          "category": "HELADOS",
+          "actual_total": 121.0,
+          "pms_total": 171.72,
+          "model_total": 179.75,
+          "pms_metrics": {
+            "mae": 7.245714,
+            "rmse": 8.906248,
+            "mape": 60.929097,
+            "wape": 41.917355
+          },
+          "model_metrics": {
+            "mae": 9.107143,
+            "rmse": 11.205467,
+            "mape": 77.103037,
+            "wape": 52.68595
+          },
+          "selected_method": "promedio_estacional",
+          "internal_validation_wape": 19.36
+        },
+        {
+          "category": "LIMPIEZA",
+          "actual_total": 116.0,
+          "pms_total": 135.69,
+          "model_total": 102.59,
+          "pms_metrics": {
+            "mae": 4.715714,
+            "rmse": 5.970419,
+            "mape": 38.290678,
+            "wape": 28.456897
+          },
+          "model_metrics": {
+            "mae": 5.095714,
+            "rmse": 5.907947,
+            "mape": 31.641501,
+            "wape": 30.75
+          },
+          "selected_method": "random_forest",
+          "internal_validation_wape": 31.0
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "cutoff_date": "2026-06-30",
+      "test_start": "2026-07-01",
+      "test_end": "2026-07-07",
+      "global_metrics": {
+        "pms": {
+          "mae": 8.968857,
+          "rmse": 11.859194,
+          "mape": 20.13972,
+          "wape": 15.983198
+        },
+        "model": {
+          "mae": 7.191714,
+          "rmse": 10.679008,
+          "mape": 12.587234,
+          "wape": 12.816191
+        }
+      },
+      "categories": [
+        {
+          "category": "ABARROTES",
+          "actual_total": 359.0,
+          "pms_total": 414.93,
+          "model_total": 330.67,
+          "pms_metrics": {
+            "mae": 12.812857,
+            "rmse": 13.284986,
+            "mape": 25.79103,
+            "wape": 24.983287
+          },
+          "model_metrics": {
+            "mae": 6.327143,
+            "rmse": 9.671711,
+            "mape": 10.74113,
+            "wape": 12.337047
+          },
+          "selected_method": "random_forest",
+          "internal_validation_wape": 22.68
+        },
+        {
+          "category": "BEBIDAS",
+          "actual_total": 699.0,
+          "pms_total": 669.91,
+          "model_total": 640.5,
+          "pms_metrics": {
+            "mae": 9.072857,
+            "rmse": 13.876765,
+            "mape": 8.357567,
+            "wape": 9.085837
+          },
+          "model_metrics": {
+            "mae": 13.571429,
+            "rmse": 16.831624,
+            "mape": 13.109359,
+            "wape": 13.590844
+          },
+          "selected_method": "promedio_estacional",
+          "internal_validation_wape": 20.53
+        },
+        {
+          "category": "GOLOSINAS",
+          "actual_total": 620.0,
+          "pms_total": 638.13,
+          "model_total": 550.25,
+          "pms_metrics": {
+            "mae": 11.572857,
+            "rmse": 15.317153,
+            "mape": 13.928376,
+            "wape": 13.066129
+          },
+          "model_metrics": {
+            "mae": 9.964286,
+            "rmse": 12.7514,
+            "mape": 10.518313,
+            "wape": 11.25
+          },
+          "selected_method": "promedio_estacional",
+          "internal_validation_wape": 19.02
+        },
+        {
+          "category": "HELADOS",
+          "actual_total": 181.0,
+          "pms_total": 123.35,
+          "model_total": 169.25,
+          "pms_metrics": {
+            "mae": 8.235714,
+            "rmse": 9.381475,
+            "mape": 30.157018,
+            "wape": 31.850829
+          },
+          "model_metrics": {
+            "mae": 3.321429,
+            "rmse": 4.113349,
+            "mape": 11.999567,
+            "wape": 12.845304
+          },
+          "selected_method": "promedio_estacional",
+          "internal_validation_wape": 34.89
+        },
+        {
+          "category": "LIMPIEZA",
+          "actual_total": 105.0,
+          "pms_total": 119.21,
+          "model_total": 93.38,
+          "pms_metrics": {
+            "mae": 3.15,
+            "rmse": 3.39406,
+            "mape": 22.464608,
+            "wape": 21.0
+          },
+          "model_metrics": {
+            "mae": 2.774286,
+            "rmse": 3.720568,
+            "mape": 16.5678,
+            "wape": 18.495238
+          },
+          "selected_method": "random_forest",
+          "internal_validation_wape": 33.37
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "cutoff_date": "2026-07-07",
+      "test_start": "2026-07-08",
+      "test_end": "2026-07-14",
+      "global_metrics": {
+        "pms": {
+          "mae": 10.987714,
+          "rmse": 15.295426,
+          "mape": 27.11118,
+          "wape": 22.796088
+        },
+        "model": {
+          "mae": 9.066571,
+          "rmse": 13.493066,
+          "mape": 21.718262,
+          "wape": 18.810314
+        }
+      },
+      "categories": [
+        {
+          "category": "ABARROTES",
+          "actual_total": 343.0,
+          "pms_total": 359.25,
+          "model_total": 355.0,
+          "pms_metrics": {
+            "mae": 6.661429,
+            "rmse": 7.393038,
+            "mape": 13.679261,
+            "wape": 13.594752
+          },
+          "model_metrics": {
+            "mae": 4.0,
+            "rmse": 4.657943,
+            "mape": 8.802838,
+            "wape": 8.163265
+          },
+          "selected_method": "promedio_estacional",
+          "internal_validation_wape": 16.85
+        },
+        {
+          "category": "BEBIDAS",
+          "actual_total": 602.0,
+          "pms_total": 695.1,
+          "model_total": 636.9,
+          "pms_metrics": {
+            "mae": 15.965714,
+            "rmse": 19.793464,
+            "mape": 21.614862,
+            "wape": 18.564784
+          },
+          "model_metrics": {
+            "mae": 15.368571,
+            "rmse": 18.918325,
+            "mape": 19.052243,
+            "wape": 17.870432
+          },
+          "selected_method": "random_forest",
+          "internal_validation_wape": 13.85
+        },
+        {
+          "category": "GOLOSINAS",
+          "actual_total": 469.0,
+          "pms_total": 624.99,
+          "model_total": 585.0,
+          "pms_metrics": {
+            "mae": 22.47,
+            "rmse": 25.384425,
+            "mape": 38.66378,
+            "wape": 33.537313
+          },
+          "model_metrics": {
+            "mae": 17.214286,
+            "rmse": 21.642798,
+            "mape": 28.566743,
+            "wape": 25.692964
+          },
+          "selected_method": "promedio_estacional",
+          "internal_validation_wape": 14.78
+        },
+        {
+          "category": "HELADOS",
+          "actual_total": 146.0,
+          "pms_total": 179.75,
+          "model_total": 165.75,
+          "pms_metrics": {
+            "mae": 4.87,
+            "rmse": 6.939427,
+            "mape": 35.149439,
+            "wape": 23.349315
+          },
+          "model_metrics": {
+            "mae": 3.75,
+            "rmse": 5.389308,
+            "mape": 25.430633,
+            "wape": 17.979452
+          },
+          "selected_method": "promedio_estacional",
+          "internal_validation_wape": 28.81
+        },
+        {
+          "category": "LIMPIEZA",
+          "actual_total": 127.0,
+          "pms_total": 98.26,
+          "model_total": 99.56,
+          "pms_metrics": {
+            "mae": 4.971429,
+            "rmse": 5.548639,
+            "mape": 26.448557,
+            "wape": 27.401575
+          },
+          "model_metrics": {
+            "mae": 5.0,
+            "rmse": 5.767094,
+            "mape": 26.738853,
+            "wape": 27.559055
+          },
+          "selected_method": "random_forest",
+          "internal_validation_wape": 23.03
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "cutoff_date": "2026-07-14",
+      "test_start": "2026-07-15",
+      "test_end": "2026-07-21",
+      "global_metrics": {
+        "pms": {
+          "mae": 8.900571,
+          "rmse": 11.391409,
+          "mape": 19.897968,
+          "wape": 16.730397
+        },
+        "model": {
+          "mae": 11.242857,
+          "rmse": 14.912551,
+          "mape": 23.9385,
+          "wape": 21.13319
+        }
+      },
+      "categories": [
+        {
+          "category": "ABARROTES",
+          "actual_total": 421.0,
+          "pms_total": 342.79,
+          "model_total": 356.0,
+          "pms_metrics": {
+            "mae": 11.784286,
+            "rmse": 14.153186,
+            "mape": 18.147272,
+            "wape": 19.593824
+          },
+          "model_metrics": {
+            "mae": 14.428571,
+            "rmse": 16.703293,
+            "mape": 22.574495,
+            "wape": 23.990499
+          },
+          "selected_method": "promedio_estacional",
+          "internal_validation_wape": 12.64
+        },
+        {
+          "category": "BEBIDAS",
+          "actual_total": 622.0,
+          "pms_total": 583.04,
+          "model_total": 659.64,
+          "pms_metrics": {
+            "mae": 9.551429,
+            "rmse": 11.860693,
+            "mape": 10.127381,
+            "wape": 10.749196
+          },
+          "model_metrics": {
+            "mae": 15.477143,
+            "rmse": 19.294488,
+            "mape": 17.868298,
+            "wape": 17.418006
+          },
+          "selected_method": "random_forest",
+          "internal_validation_wape": 14.79
+        },
+        {
+          "category": "GOLOSINAS",
+          "actual_total": 519.0,
+          "pms_total": 475.67,
+          "model_total": 568.5,
+          "pms_metrics": {
+            "mae": 11.932857,
+            "rmse": 14.43692,
+            "mape": 16.171594,
+            "wape": 16.094412
+          },
+          "model_metrics": {
+            "mae": 14.785714,
+            "rmse": 19.074572,
+            "mape": 23.710641,
+            "wape": 19.942197
+          },
+          "selected_method": "promedio_estacional",
+          "internal_validation_wape": 16.53
+        },
+        {
+          "category": "HELADOS",
+          "actual_total": 175.0,
+          "pms_total": 146.49,
+          "model_total": 150.7,
+          "pms_metrics": {
+            "mae": 7.555714,
+            "rmse": 8.715637,
+            "mape": 31.533846,
+            "wape": 30.222857
+          },
+          "model_metrics": {
+            "mae": 7.645714,
+            "rmse": 8.56535,
+            "mape": 32.911006,
+            "wape": 30.582857
+          },
+          "selected_method": "random_forest",
+          "internal_validation_wape": 20.48
+        },
+        {
+          "category": "LIMPIEZA",
+          "actual_total": 125.0,
+          "pms_total": 124.67,
+          "model_total": 112.36,
+          "pms_metrics": {
+            "mae": 3.678571,
+            "rmse": 4.842038,
+            "mape": 23.509745,
+            "wape": 20.6
+          },
+          "model_metrics": {
+            "mae": 3.877143,
+            "rmse": 4.841393,
+            "mape": 22.628061,
+            "wape": 21.712
+          },
+          "selected_method": "random_forest",
+          "internal_validation_wape": 20.45
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "cutoff_date": "2026-07-21",
+      "test_start": "2026-07-22",
+      "test_end": "2026-07-28",
+      "global_metrics": {
+        "pms": {
+          "mae": 11.325429,
+          "rmse": 14.586774,
+          "mape": 34.454679,
+          "wape": 22.912717
+        },
+        "model": {
+          "mae": 11.173429,
+          "rmse": 14.080484,
+          "mape": 29.999991,
+          "wape": 22.605202
+        }
+      },
+      "categories": [
+        {
+          "category": "ABARROTES",
+          "actual_total": 323.0,
+          "pms_total": 424.11,
+          "model_total": 372.22,
+          "pms_metrics": {
+            "mae": 16.352857,
+            "rmse": 18.785068,
+            "mape": 44.693618,
+            "wape": 35.439628
+          },
+          "model_metrics": {
+            "mae": 12.568571,
+            "rmse": 13.667511,
+            "mape": 32.694136,
+            "wape": 27.23839
+          },
+          "selected_method": "random_forest",
+          "internal_validation_wape": 13.92
+        },
+        {
+          "category": "BEBIDAS",
+          "actual_total": 632.0,
+          "pms_total": 600.67,
+          "model_total": 679.83,
+          "pms_metrics": {
+            "mae": 14.007143,
+            "rmse": 16.275003,
+            "mape": 15.182636,
+            "wape": 15.514241
+          },
+          "model_metrics": {
+            "mae": 14.584286,
+            "rmse": 15.842464,
+            "mape": 17.302533,
+            "wape": 16.153481
+          },
+          "selected_method": "random_forest",
+          "internal_validation_wape": 16.08
+        },
+        {
+          "category": "GOLOSINAS",
+          "actual_total": 488.0,
+          "pms_total": 505.41,
+          "model_total": 551.5,
+          "pms_metrics": {
+            "mae": 12.375714,
+            "rmse": 17.667574,
+            "mape": 22.68902,
+            "wape": 17.752049
+          },
+          "model_metrics": {
+            "mae": 15.285714,
+            "rmse": 20.409644,
+            "mape": 28.45681,
+            "wape": 21.92623
+          },
+          "selected_method": "promedio_estacional",
+          "internal_validation_wape": 19.17
+        },
+        {
+          "category": "HELADOS",
+          "actual_total": 161.0,
+          "pms_total": 170.57,
+          "model_total": 155.75,
+          "pms_metrics": {
+            "mae": 8.278571,
+            "rmse": 9.384377,
+            "mape": 45.023862,
+            "wape": 35.993789
+          },
+          "model_metrics": {
+            "mae": 7.821429,
+            "rmse": 9.570696,
+            "mape": 37.151551,
+            "wape": 34.006211
+          },
+          "selected_method": "promedio_estacional",
+          "internal_validation_wape": 19.23
+        },
+        {
+          "category": "LIMPIEZA",
+          "actual_total": 126.0,
+          "pms_total": 125.97,
+          "model_total": 102.29,
+          "pms_metrics": {
+            "mae": 5.612857,
+            "rmse": 6.775366,
+            "mape": 44.684256,
+            "wape": 31.18254
+          },
+          "model_metrics": {
+            "mae": 5.607143,
+            "rmse": 6.735266,
+            "mape": 34.394925,
+            "wape": 31.150794
+          },
+          "selected_method": "random_forest",
+          "internal_validation_wape": 22.27
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "cutoff_date": "2026-07-28",
+      "test_start": "2026-07-29",
+      "test_end": "2026-08-04",
+      "global_metrics": {
+        "pms": {
+          "mae": 8.855429,
+          "rmse": 11.234198,
+          "mape": 17.752423,
+          "wape": 16.30405
+        },
+        "model": {
+          "mae": 7.259429,
+          "rmse": 9.438419,
+          "mape": 16.0368,
+          "wape": 13.365597
+        }
+      },
+      "categories": [
+        {
+          "category": "ABARROTES",
+          "actual_total": 394.0,
+          "pms_total": 338.13,
+          "model_total": 366.73,
+          "pms_metrics": {
+            "mae": 8.955714,
+            "rmse": 11.561218,
+            "mape": 14.300269,
+            "wape": 15.911168
+          },
+          "model_metrics": {
+            "mae": 7.09,
+            "rmse": 9.497692,
+            "mape": 11.573113,
+            "wape": 12.596447
+          },
+          "selected_method": "random_forest",
+          "internal_validation_wape": 17.82
+        },
+        {
+          "category": "BEBIDAS",
+          "actual_total": 651.0,
+          "pms_total": 646.8,
+          "model_total": 638.75,
+          "pms_metrics": {
+            "mae": 12.605714,
+            "rmse": 15.355842,
+            "mape": 13.325965,
+            "wape": 13.554531
+          },
+          "model_metrics": {
+            "mae": 9.892857,
+            "rmse": 11.653096,
+            "mape": 10.726029,
+            "wape": 10.637481
+          },
+          "selected_method": "promedio_estacional",
+          "internal_validation_wape": 14.31
+        },
+        {
+          "category": "GOLOSINAS",
+          "actual_total": 539.0,
+          "pms_total": 504.71,
+          "model_total": 557.92,
+          "pms_metrics": {
+            "mae": 13.09,
+            "rmse": 13.799627,
+            "mape": 17.809756,
+            "wape": 17.0
+          },
+          "model_metrics": {
+            "mae": 9.242857,
+            "rmse": 11.736966,
+            "mape": 13.355006,
+            "wape": 12.003711
+          },
+          "selected_method": "random_forest",
+          "internal_validation_wape": 21.85
+        },
+        {
+          "category": "HELADOS",
+          "actual_total": 169.0,
+          "pms_total": 170.97,
+          "model_total": 166.76,
+          "pms_metrics": {
+            "mae": 4.467143,
+            "rmse": 5.291542,
+            "mape": 21.388284,
+            "wape": 18.502959
+          },
+          "model_metrics": {
+            "mae": 3.931429,
+            "rmse": 4.579791,
+            "mape": 18.214462,
+            "wape": 16.284024
+          },
+          "selected_method": "random_forest",
+          "internal_validation_wape": 25.82
+        },
+        {
+          "category": "LIMPIEZA",
+          "actual_total": 148.0,
+          "pms_total": 111.89,
+          "model_total": 105.54,
+          "pms_metrics": {
+            "mae": 5.158571,
+            "rmse": 6.568278,
+            "mape": 21.937842,
+            "wape": 24.398649
+          },
+          "model_metrics": {
+            "mae": 6.14,
+            "rmse": 7.790193,
+            "mape": 26.315388,
+            "wape": 29.040541
+          },
+          "selected_method": "random_forest",
+          "internal_validation_wape": 25.17
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "cutoff_date": "2026-08-04",
+      "test_start": "2026-08-05",
+      "test_end": "2026-08-11",
+      "global_metrics": {
+        "pms": {
+          "mae": 9.608,
+          "rmse": 13.239142,
+          "mape": 21.946026,
+          "wape": 17.736287
+        },
+        "model": {
+          "mae": 9.859714,
+          "rmse": 14.445525,
+          "mape": 19.273033,
+          "wape": 18.200949
+        }
+      },
+      "categories": [
+        {
+          "category": "ABARROTES",
+          "actual_total": 366.0,
+          "pms_total": 394.59,
+          "model_total": 373.63,
+          "pms_metrics": {
+            "mae": 9.932857,
+            "rmse": 12.553685,
+            "mape": 23.514462,
+            "wape": 18.997268
+          },
+          "model_metrics": {
+            "mae": 10.815714,
+            "rmse": 12.001698,
+            "mape": 22.906382,
+            "wape": 20.685792
+          },
+          "selected_method": "random_forest",
+          "internal_validation_wape": 18.21
+        },
+        {
+          "category": "BEBIDAS",
+          "actual_total": 684.0,
+          "pms_total": 651.38,
+          "model_total": 626.75,
+          "pms_metrics": {
+            "mae": 15.297143,
+            "rmse": 20.110223,
+            "mape": 14.917915,
+            "wape": 15.654971
+          },
+          "model_metrics": {
+            "mae": 20.392857,
+            "rmse": 25.290632,
+            "mape": 19.454981,
+            "wape": 20.869883
+          },
+          "selected_method": "promedio_estacional",
+          "internal_validation_wape": 12.42
+        },
+        {
+          "category": "GOLOSINAS",
+          "actual_total": 529.0,
+          "pms_total": 545.58,
+          "model_total": 557.45,
+          "pms_metrics": {
+            "mae": 10.354286,
+            "rmse": 13.463882,
+            "mape": 15.940815,
+            "wape": 13.701323
+          },
+          "model_metrics": {
+            "mae": 6.495714,
+            "rmse": 10.219643,
+            "mape": 11.097476,
+            "wape": 8.595463
+          },
+          "selected_method": "random_forest",
+          "internal_validation_wape": 14.92
+        },
+        {
+          "category": "HELADOS",
+          "actual_total": 189.0,
+          "pms_total": 178.89,
+          "model_total": 150.05,
+          "pms_metrics": {
+            "mae": 9.204286,
+            "rmse": 10.904183,
+            "mape": 35.924902,
+            "wape": 34.089947
+          },
+          "model_metrics": {
+            "mae": 9.161429,
+            "rmse": 12.042052,
+            "mape": 30.652215,
+            "wape": 33.931217
+          },
+          "selected_method": "random_forest",
+          "internal_validation_wape": 23.03
+        },
+        {
+          "category": "LIMPIEZA",
+          "actual_total": 128.0,
+          "pms_total": 145.04,
+          "model_total": 114.13,
+          "pms_metrics": {
+            "mae": 3.251429,
+            "rmse": 3.765763,
+            "mape": 19.432032,
+            "wape": 17.78125
+          },
+          "model_metrics": {
+            "mae": 2.432857,
+            "rmse": 3.202657,
+            "mape": 12.25411,
+            "wape": 13.304688
+          },
+          "selected_method": "random_forest",
+          "internal_validation_wape": 23.9
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "cutoff_date": "2026-08-11",
+      "test_start": "2026-08-12",
+      "test_end": "2026-08-18",
+      "global_metrics": {
+        "pms": {
+          "mae": 8.890286,
+          "rmse": 11.224746,
+          "mape": 23.605672,
+          "wape": 16.551064
+        },
+        "model": {
+          "mae": 9.526286,
+          "rmse": 13.00247,
+          "mape": 22.35134,
+          "wape": 17.735106
+        }
+      },
+      "categories": [
+        {
+          "category": "ABARROTES",
+          "actual_total": 371.0,
+          "pms_total": 366.41,
+          "model_total": 408.77,
+          "pms_metrics": {
+            "mae": 6.904286,
+            "rmse": 9.089411,
+            "mape": 13.305795,
+            "wape": 13.026954
+          },
+          "model_metrics": {
+            "mae": 8.601429,
+            "rmse": 9.940326,
+            "mape": 17.54505,
+            "wape": 16.229111
+          },
+          "selected_method": "random_forest",
+          "internal_validation_wape": 21.17
+        },
+        {
+          "category": "BEBIDAS",
+          "actual_total": 663.0,
+          "pms_total": 664.17,
+          "model_total": 638.68,
+          "pms_metrics": {
+            "mae": 7.327143,
+            "rmse": 8.940311,
+            "mape": 7.813859,
+            "wape": 7.736048
+          },
+          "model_metrics": {
+            "mae": 10.785714,
+            "rmse": 13.078496,
+            "mape": 10.894754,
+            "wape": 11.387632
+          },
+          "selected_method": "random_forest",
+          "internal_validation_wape": 14.42
+        },
+        {
+          "category": "GOLOSINAS",
+          "actual_total": 521.0,
+          "pms_total": 547.74,
+          "model_total": 548.37,
+          "pms_metrics": {
+            "mae": 13.725714,
+            "rmse": 16.761706,
+            "mape": 22.007627,
+            "wape": 18.441459
+          },
+          "model_metrics": {
+            "mae": 15.075714,
+            "rmse": 21.220628,
+            "mape": 25.611123,
+            "wape": 20.255278
+          },
+          "selected_method": "random_forest",
+          "internal_validation_wape": 14.69
+        },
+        {
+          "category": "HELADOS",
+          "actual_total": 182.0,
+          "pms_total": 185.83,
+          "model_total": 169.05,
+          "pms_metrics": {
+            "mae": 11.221429,
+            "rmse": 12.118599,
+            "mape": 49.770847,
+            "wape": 43.159341
+          },
+          "model_metrics": {
+            "mae": 8.418571,
+            "rmse": 10.023046,
+            "mape": 33.692652,
+            "wape": 32.379121
+          },
+          "selected_method": "random_forest",
+          "internal_validation_wape": 23.23
+        },
+        {
+          "category": "LIMPIEZA",
+          "actual_total": 143.0,
+          "pms_total": 124.63,
+          "model_total": 131.75,
+          "pms_metrics": {
+            "mae": 5.272857,
+            "rmse": 6.293871,
+            "mape": 25.130232,
+            "wape": 25.811189
+          },
+          "model_metrics": {
+            "mae": 4.75,
+            "rmse": 4.968652,
+            "mape": 24.01312,
+            "wape": 23.251748
+          },
+          "selected_method": "promedio_estacional",
+          "internal_validation_wape": 22.14
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "cutoff_date": "2026-08-18",
+      "test_start": "2026-08-19",
+      "test_end": "2026-08-25",
+      "global_metrics": {
+        "pms": {
+          "mae": 11.511143,
+          "rmse": 16.279058,
+          "mape": 32.132436,
+          "wape": 21.836856
+        },
+        "model": {
+          "mae": 11.016857,
+          "rmse": 14.796598,
+          "mape": 28.729772,
+          "wape": 20.899187
+        }
+      },
+      "categories": [
+        {
+          "category": "ABARROTES",
+          "actual_total": 406.0,
+          "pms_total": 373.45,
+          "model_total": 378.26,
+          "pms_metrics": {
+            "mae": 10.892857,
+            "rmse": 13.441448,
+            "mape": 18.571884,
+            "wape": 18.780788
+          },
+          "model_metrics": {
+            "mae": 10.402857,
+            "rmse": 13.574895,
+            "mape": 17.218298,
+            "wape": 17.935961
+          },
+          "selected_method": "random_forest",
+          "internal_validation_wape": 13.19
+        },
+        {
+          "category": "BEBIDAS",
+          "actual_total": 652.0,
+          "pms_total": 656.28,
+          "model_total": 657.5,
+          "pms_metrics": {
+            "mae": 14.382857,
+            "rmse": 21.602434,
+            "mape": 20.261059,
+            "wape": 15.441718
+          },
+          "model_metrics": {
+            "mae": 15.857143,
+            "rmse": 18.697307,
+            "mape": 20.754003,
+            "wape": 17.02454
+          },
+          "selected_method": "promedio_estacional",
+          "internal_validation_wape": 13.65
+        },
+        {
+          "category": "GOLOSINAS",
+          "actual_total": 500.0,
+          "pms_total": 510.01,
+          "model_total": 519.25,
+          "pms_metrics": {
+            "mae": 19.43,
+            "rmse": 23.450637,
+            "mape": 31.411104,
+            "wape": 27.202
+          },
+          "model_metrics": {
+            "mae": 16.178571,
+            "rmse": 20.656848,
+            "mape": 27.831029,
+            "wape": 22.65
+          },
+          "selected_method": "promedio_estacional",
+          "internal_validation_wape": 14.52
+        },
+        {
+          "category": "HELADOS",
+          "actual_total": 185.0,
+          "pms_total": 208.23,
+          "model_total": 158.03,
+          "pms_metrics": {
+            "mae": 7.678571,
+            "rmse": 9.392382,
+            "mape": 45.220512,
+            "wape": 29.054054
+          },
+          "model_metrics": {
+            "mae": 7.61,
+            "rmse": 9.788339,
+            "mape": 36.710195,
+            "wape": 28.794595
+          },
+          "selected_method": "random_forest",
+          "internal_validation_wape": 27.04
+        },
+        {
+          "category": "LIMPIEZA",
+          "actual_total": 102.0,
+          "pms_total": 138.2,
+          "model_total": 136.25,
+          "pms_metrics": {
+            "mae": 5.171429,
+            "rmse": 6.289015,
+            "mape": 45.197621,
+            "wape": 35.490196
+          },
+          "model_metrics": {
+            "mae": 5.035714,
+            "rmse": 6.189709,
+            "mape": 41.135333,
+            "wape": 34.558824
+          },
+          "selected_method": "promedio_estacional",
+          "internal_validation_wape": 22.09
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "cutoff_date": "2026-08-25",
+      "test_start": "2026-08-26",
+      "test_end": "2026-09-01",
+      "global_metrics": {
+        "pms": {
+          "mae": 7.983714,
+          "rmse": 10.542112,
+          "mape": 15.469054,
+          "wape": 13.771809
+        },
+        "model": {
+          "mae": 8.194571,
+          "rmse": 10.899603,
+          "mape": 16.976819,
+          "wape": 14.135535
+        }
+      },
+      "categories": [
+        {
+          "category": "ABARROTES",
+          "actual_total": 443.0,
+          "pms_total": 393.7,
+          "model_total": 373.52,
+          "pms_metrics": {
+            "mae": 10.214286,
+            "rmse": 12.446068,
+            "mape": 15.085419,
+            "wape": 16.139955
+          },
+          "model_metrics": {
+            "mae": 11.474286,
+            "rmse": 13.423268,
+            "mape": 17.107562,
+            "wape": 18.130926
+          },
+          "selected_method": "random_forest",
+          "internal_validation_wape": 13.86
+        },
+        {
+          "category": "BEBIDAS",
+          "actual_total": 734.0,
+          "pms_total": 682.21,
+          "model_total": 641.28,
+          "pms_metrics": {
+            "mae": 12.344286,
+            "rmse": 15.039963,
+            "mape": 11.589408,
+            "wape": 11.77248
+          },
+          "model_metrics": {
+            "mae": 14.411429,
+            "rmse": 17.182551,
+            "mape": 13.074685,
+            "wape": 13.743869
+          },
+          "selected_method": "random_forest",
+          "internal_validation_wape": 14.89
+        },
+        {
+          "category": "GOLOSINAS",
+          "actual_total": 524.0,
+          "pms_total": 513.26,
+          "model_total": 533.69,
+          "pms_metrics": {
+            "mae": 8.274286,
+            "rmse": 9.531438,
+            "mape": 11.239029,
+            "wape": 11.053435
+          },
+          "model_metrics": {
+            "mae": 6.158571,
+            "rmse": 7.963785,
+            "mape": 8.887969,
+            "wape": 8.227099
+          },
+          "selected_method": "random_forest",
+          "internal_validation_wape": 16.28
+        },
+        {
+          "category": "HELADOS",
+          "actual_total": 201.0,
+          "pms_total": 198.83,
+          "model_total": 181.25,
+          "pms_metrics": {
+            "mae": 3.581429,
+            "rmse": 5.25065,
+            "mape": 11.774326,
+            "wape": 12.472637
+          },
+          "model_metrics": {
+            "mae": 3.892857,
+            "rmse": 4.683748,
+            "mape": 13.645791,
+            "wape": 13.557214
+          },
+          "selected_method": "promedio_estacional",
+          "internal_validation_wape": 29.69
+        },
+        {
+          "category": "LIMPIEZA",
+          "actual_total": 127.0,
+          "pms_total": 99.57,
+          "model_total": 130.25,
+          "pms_metrics": {
+            "mae": 5.504286,
+            "rmse": 7.493859,
+            "mape": 27.65709,
+            "wape": 30.338583
+          },
+          "model_metrics": {
+            "mae": 5.035714,
+            "rmse": 5.763958,
+            "mape": 32.168089,
+            "wape": 27.755906
+          },
+          "selected_method": "promedio_estacional",
+          "internal_validation_wape": 20.42
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "cutoff_date": "2026-09-01",
+      "test_start": "2026-09-02",
+      "test_end": "2026-09-08",
+      "global_metrics": {
+        "pms": {
+          "mae": 11.542,
+          "rmse": 15.956298,
+          "mape": 27.684339,
+          "wape": 22.644058
+        },
+        "model": {
+          "mae": 11.795143,
+          "rmse": 14.849151,
+          "mape": 27.544995,
+          "wape": 23.140695
+        }
+      },
+      "categories": [
+        {
+          "category": "ABARROTES",
+          "actual_total": 379.0,
+          "pms_total": 452.06,
+          "model_total": 371.25,
+          "pms_metrics": {
+            "mae": 12.711429,
+            "rmse": 15.941034,
+            "mape": 30.067021,
+            "wape": 23.477573
+          },
+          "model_metrics": {
+            "mae": 11.761429,
+            "rmse": 14.06747,
+            "mape": 23.637329,
+            "wape": 21.722955
+          },
+          "selected_method": "random_forest",
+          "internal_validation_wape": 15.96
+        },
+        {
+          "category": "BEBIDAS",
+          "actual_total": 641.0,
+          "pms_total": 703.51,
+          "model_total": 683.25,
+          "pms_metrics": {
+            "mae": 14.947143,
+            "rmse": 17.127746,
+            "mape": 17.669747,
+            "wape": 16.322933
+          },
+          "model_metrics": {
+            "mae": 16.392857,
+            "rmse": 18.225032,
+            "mape": 18.541111,
+            "wape": 17.901716
+          },
+          "selected_method": "promedio_estacional",
+          "internal_validation_wape": 13.48
+        },
+        {
+          "category": "GOLOSINAS",
+          "actual_total": 465.0,
+          "pms_total": 528.74,
+          "model_total": 537.44,
+          "pms_metrics": {
+            "mae": 20.908571,
+            "rmse": 25.615455,
+            "mape": 40.134864,
+            "wape": 31.475269
+          },
+          "model_metrics": {
+            "mae": 20.642857,
+            "rmse": 22.46354,
+            "mape": 36.886775,
+            "wape": 31.075269
+          },
+          "selected_method": "random_forest",
+          "internal_validation_wape": 14.13
+        },
+        {
+          "category": "HELADOS",
+          "actual_total": 184.0,
+          "pms_total": 204.56,
+          "model_total": 189.25,
+          "pms_metrics": {
+            "mae": 5.914286,
+            "rmse": 7.275187,
+            "mape": 25.861279,
+            "wape": 22.5
+          },
+          "model_metrics": {
+            "mae": 4.821429,
+            "rmse": 5.689119,
+            "mape": 21.701442,
+            "wape": 18.342391
+          },
+          "selected_method": "promedio_estacional",
+          "internal_validation_wape": 26.41
+        },
+        {
+          "category": "LIMPIEZA",
+          "actual_total": 115.0,
+          "pms_total": 128.14,
+          "model_total": 125.0,
+          "pms_metrics": {
+            "mae": 3.228571,
+            "rmse": 4.05723,
+            "mape": 24.688787,
+            "wape": 19.652174
+          },
+          "model_metrics": {
+            "mae": 5.357143,
+            "rmse": 5.95519,
+            "mape": 36.958318,
+            "wape": 32.608696
+          },
+          "selected_method": "promedio_estacional",
+          "internal_validation_wape": 23.97
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "cutoff_date": "2026-09-08",
+      "test_start": "2026-09-09",
+      "test_end": "2026-09-15",
+      "global_metrics": {
+        "pms": {
+          "mae": 9.941143,
+          "rmse": 13.264329,
+          "mape": 31.546896,
+          "wape": 20.822262
+        },
+        "model": {
+          "mae": 10.414857,
+          "rmse": 14.166069,
+          "mape": 33.894083,
+          "wape": 21.814482
+        }
+      },
+      "categories": [
+        {
+          "category": "ABARROTES",
+          "actual_total": 330.0,
+          "pms_total": 374.71,
+          "model_total": 399.75,
+          "pms_metrics": {
+            "mae": 10.71,
+            "rmse": 13.963877,
+            "mape": 31.28003,
+            "wape": 22.718182
+          },
+          "model_metrics": {
+            "mae": 14.321429,
+            "rmse": 17.74346,
+            "mape": 39.508074,
+            "wape": 30.378788
+          },
+          "selected_method": "promedio_estacional",
+          "internal_validation_wape": 16.53
+        },
+        {
+          "category": "BEBIDAS",
+          "actual_total": 611.0,
+          "pms_total": 646.29,
+          "model_total": 672.5,
+          "pms_metrics": {
+            "mae": 14.884286,
+            "rmse": 17.312538,
+            "mape": 19.520848,
+            "wape": 17.052373
+          },
+          "model_metrics": {
+            "mae": 11.071429,
+            "rmse": 15.83847,
+            "mape": 15.62553,
+            "wape": 12.684124
+          },
+          "selected_method": "promedio_estacional",
+          "internal_validation_wape": 13.65
+        },
+        {
+          "category": "GOLOSINAS",
+          "actual_total": 496.0,
+          "pms_total": 482.5,
+          "model_total": 549.38,
+          "pms_metrics": {
+            "mae": 13.78,
+            "rmse": 16.679405,
+            "mape": 18.958768,
+            "wape": 19.447581
+          },
+          "model_metrics": {
+            "mae": 14.86,
+            "rmse": 18.22611,
+            "mape": 22.742096,
+            "wape": 20.971774
+          },
+          "selected_method": "random_forest",
+          "internal_validation_wape": 20.01
+        },
+        {
+          "category": "HELADOS",
+          "actual_total": 146.0,
+          "pms_total": 185.01,
+          "model_total": 188.0,
+          "pms_metrics": {
+            "mae": 6.652857,
+            "rmse": 9.243692,
+            "mape": 51.412884,
+            "wape": 31.89726
+          },
+          "model_metrics": {
+            "mae": 6.785714,
+            "rmse": 8.373001,
+            "mape": 44.325019,
+            "wape": 32.534247
+          },
+          "selected_method": "promedio_estacional",
+          "internal_validation_wape": 23.84
+        },
+        {
+          "category": "LIMPIEZA",
+          "actual_total": 88.0,
+          "pms_total": 113.47,
+          "model_total": 121.75,
+          "pms_metrics": {
+            "mae": 3.678571,
+            "rmse": 4.620586,
+            "mape": 36.561949,
+            "wape": 29.261364
+          },
+          "model_metrics": {
+            "mae": 5.035714,
+            "rmse": 5.94994,
+            "mape": 47.269695,
+            "wape": 40.056818
+          },
+          "selected_method": "promedio_estacional",
+          "internal_validation_wape": 29.38
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "input": "C:\\taully_demand_forecast\\outputs\\01a0b651-7620-73f0-8f6a-8b68b14f7a17\\Anexo_2_Pretest_validacion_historica_rodante_hasta_2026-09-15.docx",
+  "fonts_by_char_count": {
+    "Arial": 8941
+  },
+  "direct_run_formatting_runs": 425,
+  "direct_paragraph_formatting_paragraphs": 493,
+  "heading_like_paragraphs_not_heading_style": [
+    {
+      "para_index": 1,
+      "text": "Anexo 2 Instrumentos de recolecci\u00f3n de datos Pretest",
+      "style": "Title"
+    },
+    {
+      "para_index": 35,
+      "text": "Resultado global de la validaci\u00f3n hist\u00f3rica",
+      "style": "Normal"
+    },
+    {
+      "para_index": 37,
+      "text": "Registro de reproducci\u00f3n en el programa",
+      "style": "Normal"
+    },
+    {
+      "para_index": 52,
+      "text": "N\u00b0 / categor\u00eda",
+      "style": "Normal"
+    },
+    {
+      "para_index": 53,
+      "text": "SI",
+      "style": "Normal"
+    },
+    {
+      "para_index": 54,
+      "text": "EN",
+      "style": "Normal"
+    },
+    {
+      "para_index": 55,
+      "text": "SF",
+      "style": "Normal"
+    },
+    {
+      "para_index": 56,
+      "text": "CD",
+      "style": "Normal"
+    },
+    {
+      "para_index": 94,
+      "text": "N\u00b0 / categor\u00eda",
+      "style": "Normal"
+    },
+    {
+      "para_index": 95,
+      "text": "CD",
+      "style": "Normal"
+    },
+    {
+      "para_index": 96,
+      "text": "Stock inicial SI",
+      "style": "Normal"
+    },
+    {
+      "para_index": 97,
+      "text": "Entradas EN",
+      "style": "Normal"
+    },
+    {
+      "para_index": 98,
+      "text": "ISI",
+      "style": "Normal"
+    },
+    {
+      "para_index": 136,
+      "text": "N\u00b0 / categor\u00eda",
+      "style": "Normal"
+    },
+    {
+      "para_index": 137,
+      "text": "DQS",
+      "style": "Normal"
+    },
+    {
+      "para_index": 138,
+      "text": "DD",
+      "style": "Normal"
+    },
+    {
+      "para_index": 139,
+      "text": "TQS",
+      "style": "Normal"
+    },
+    {
+      "para_index": 168,
+      "text": "N\u00b0 / categor\u00eda",
+      "style": "Normal"
+    },
+    {
+      "para_index": 169,
+      "text": "IE",
+      "style": "Normal"
+    },
+    {
+      "para_index": 170,
+      "text": "VD",
+      "style": "Normal"
+    }
+  ],
+  "examples": {
+    "direct_paragraph_formatting": [
+      {
+        "para_index": 1,
+        "text": "Anexo 2 Instrumentos de recolecci\u00f3n de datos Pretest",
+        "style": "Title"
+      },
+      {
+        "para_index": 2,
+        "text": "Nota metodol\u00f3gica. Datos reales: 840 registros de ventas, cinco categor\u00edas, del 01/04 al 15/09/2026. Se comparan 17 cort",
+        "style": "Normal"
+      },
+      {
+        "para_index": 3,
+        "text": "Instrumento de recolecci\u00f3n de datos del indicador para el pretest Cantidad demandada",
+        "style": "Heading 1"
+      },
+      {
+        "para_index": 4,
+        "text": "",
+        "style": "Normal"
+      },
+      {
+        "para_index": 5,
+        "text": "",
+        "style": "Normal"
+      }
+    ],
+    "direct_run_formatting": [
+      {
+        "para_index": 1,
+        "run_text": "Anexo 2 Instrumentos de recolecci\u00f3n de datos Pretest",
+        "style": "Title"
+      },
+      {
+        "para_index": 2,
+        "run_text": "Nota metodol\u00f3gica. Datos reales: 840 registros de ventas, cinco categor\u00edas, del ",
+        "style": "Normal"
+      },
+      {
+        "para_index": 3,
+        "run_text": "Instrumento de recolecci\u00f3n de datos del indicador para el pretest Cantidad deman",
+        "style": "Heading 1"
+      },
+      {
+        "para_index": 7,
+        "run_text": "Instrumento de recolecci\u00f3n de datos del indicador para el pretest \u00cdndice de sali",
+        "style": "Heading 1"
+      },
+      {
+        "para_index": 11,
+        "run_text": "Instrumento de recolecci\u00f3n de datos del indicador para el pretest Tasa de quiebr",
+        "style": "Heading 1"
+      }
+    ]
+  },
+  "notes": [
+    "Direct formatting is not always wrong, but it often causes inconsistent output when templates change.",
+    "Heading-like paragraphs not using Heading styles can break TOC and accessibility."
+  ]
+}

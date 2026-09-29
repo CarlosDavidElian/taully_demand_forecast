@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 from datetime import date, timedelta
+from pathlib import Path
 from typing import List, Dict
 
 from domain.entities.demand import Demand
@@ -12,8 +13,9 @@ from config.settings import MODELS_FILE
 class PredictService:
     MIN_HISTORY_DAYS = 48
 
-    def __init__(self, demand_repo: DemandRepository):
+    def __init__(self, demand_repo: DemandRepository, models_file: str | Path | None = None):
         self.demand_repo = demand_repo
+        self.models_file = Path(models_file) if models_file is not None else MODELS_FILE
         self.predictor = ModelPredictor()
 
     def predict_future(self, days: int = 7, cutoff_date: date | None = None) -> Dict[str, List[Demand]]:
@@ -28,7 +30,7 @@ class PredictService:
 
         # 2. Cargar el modelo guardado
         try:
-            self.predictor.load_models(MODELS_FILE)
+            self.predictor.load_models(self.models_file)
         except FileNotFoundError:
             raise FileNotFoundError("Primero debes entrenar el modelo usando 'python main.py train'")
         trained_cutoff = self.predictor.metadata.get("cutoff_date")

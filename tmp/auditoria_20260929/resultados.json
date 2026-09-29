@@ -1,0 +1,347 @@
+{
+  "history": {
+    "rows": 840,
+    "days": 168,
+    "calendar_days": 168,
+    "start": "2026-04-01",
+    "end": "2026-09-15",
+    "categories": [
+      "ABARROTES",
+      "BEBIDAS",
+      "GOLOSINAS",
+      "HELADOS",
+      "LIMPIEZA"
+    ],
+    "products": 203,
+    "duplicates": 0,
+    "units": 43105.0,
+    "zero_rows": 1
+  },
+  "reports": {
+    "files": 168,
+    "sales_rows": 11748,
+    "unique_dates": 168,
+    "unmatched_products": 0,
+    "unmatched_units": 0,
+    "mismatches": 0,
+    "extra_keys": 0,
+    "examples": []
+  },
+  "periods": {
+    "pre": {
+      "start": "2026-09-02",
+      "end": "2026-09-08",
+      "baseline": {
+        "actual": 1784.0,
+        "prediction": 2016.9705892709912,
+        "mae": 11.54152415668815,
+        "rmse": 15.955541169902654,
+        "mape": 27.685091242063294,
+        "wape": 22.643124746865766
+      },
+      "baseline_by_category": {
+        "ABARROTES": {
+          "actual": 379.0,
+          "prediction": 452.05282055703225,
+          "mae": 12.710169700567288,
+          "rmse": 15.939671992624493,
+          "mape": 30.064135874594456,
+          "wape": 23.47524746806623
+        },
+        "BEBIDAS": {
+          "actual": 641.0,
+          "prediction": 703.4914861761923,
+          "mae": 14.94562049930258,
+          "rmse": 17.126571610563275,
+          "mape": 17.667770361885175,
+          "wape": 16.32127043605586
+        },
+        "GOLOSINAS": {
+          "actual": 465.0,
+          "prediction": 528.7258273095637,
+          "mae": 20.90676486491034,
+          "rmse": 25.614644279786177,
+          "mape": 40.131652453129945,
+          "wape": 31.47254925900481
+        },
+        "HELADOS": {
+          "actual": 184.0,
+          "prediction": 204.5493605069802,
+          "mae": 5.914658632622357,
+          "rmse": 7.274777908506136,
+          "mape": 25.86081591357515,
+          "wape": 22.501418711063316
+        },
+        "LIMPIEZA": {
+          "actual": 115.0,
+          "prediction": 128.15109472122282,
+          "mae": 3.2304070860381815,
+          "rmse": 4.058506690891528,
+          "mape": 24.70108160713174,
+          "wape": 19.66334748023241
+        }
+      },
+      "inventory": {
+        "ABARROTES": {
+          "si": 372.0,
+          "en": 189.0,
+          "sf": 316.0,
+          "cd": 245.0,
+          "isi": 43.672014260249554,
+          "dqs": 0,
+          "tqs": 0.0,
+          "sales": 379.0,
+          "products": 38,
+          "missing_start": 23,
+          "missing_end": 18,
+          "continuity": 12
+        },
+        "BEBIDAS": {
+          "si": 705.0,
+          "en": 250.0,
+          "sf": 432.0,
+          "cd": 523.0,
+          "isi": 54.76439790575917,
+          "dqs": 1,
+          "tqs": 14.285714285714285,
+          "sales": 641.0,
+          "products": 45,
+          "missing_start": 27,
+          "missing_end": 27,
+          "continuity": 7
+        },
+        "GOLOSINAS": {
+          "si": 622.0,
+          "en": 150.0,
+          "sf": 356.0,
+          "cd": 416.0,
+          "isi": 53.8860103626943,
+          "dqs": 1,
+          "tqs": 14.285714285714285,
+          "sales": 465.0,
+          "products": 42,
+          "missing_start": 33,
+          "missing_end": 35,
+          "continuity": 4
+        },
+        "HELADOS": {
+          "si": 183.0,
+          "en": 108.0,
+          "sf": 164.0,
+          "cd": 127.0,
+          "isi": 43.6426116838488,
+          "dqs": 0,
+          "tqs": 0.0,
+          "sales": 184.0,
+          "products": 25,
+          "missing_start": 14,
+          "missing_end": 16,
+          "continuity": 6
+        },
+        "LIMPIEZA": {
+          "si": 106.0,
+          "en": 81.0,
+          "sf": 87.0,
+          "cd": 100.0,
+          "isi": 53.475935828877006,
+          "dqs": 0,
+          "tqs": 0.0,
+          "sales": 115.0,
+          "products": 17,
+          "missing_start": 10,
+          "missing_end": 11,
+          "continuity": 2
+        }
+      },
+      "inventory_total": {
+        "si": 1988.0,
+        "en": 778.0,
+        "sf": 1355.0,
+        "cd": 1411.0,
+        "dqs": 2,
+        "sales": 1784.0,
+        "products": 167,
+        "missing_start": 107,
+        "missing_end": 107,
+        "continuity": 31,
+        "isi": 51.01229211858279,
+        "tqs": 5.714285714285714
+      }
+    },
+    "post": {
+      "start": "2026-09-09",
+      "end": "2026-09-15",
+      "baseline": {
+        "actual": 1671.0,
+        "prediction": 1801.9793611262558,
+        "mae": 9.940671950341391,
+        "rmse": 13.264534415119122,
+        "mape": 31.54020946705008,
+        "wape": 20.82127577869232
+      },
+      "baseline_by_category": {
+        "ABARROTES": {
+          "actual": 330.0,
+          "prediction": 374.7278102054173,
+          "mae": 10.711693430527784,
+          "rmse": 13.96544273137206,
+          "mape": 31.28444180909235,
+          "wape": 22.721773943543784
+        },
+        "BEBIDAS": {
+          "actual": 611.0,
+          "prediction": 646.308779262285,
+          "mae": 14.884907562290527,
+          "rmse": 17.314524193956803,
+          "mape": 19.522306280889843,
+          "wape": 17.053085586912225
+        },
+        "GOLOSINAS": {
+          "actual": 496.0,
+          "prediction": 482.4909045429322,
+          "mae": 13.780290247659893,
+          "rmse": 16.678772667128893,
+          "mape": 18.95912579965931,
+          "wape": 19.44799026887485
+        },
+        "HELADOS": {
+          "actual": 146.0,
+          "prediction": 184.9926330501261,
+          "mae": 6.650487328183575,
+          "rmse": 9.241676637041195,
+          "mape": 51.39796749394765,
+          "wape": 31.88589814882536
+        },
+        "LIMPIEZA": {
+          "actual": 88.0,
+          "prediction": 113.45923406549507,
+          "mae": 3.675981183045174,
+          "rmse": 4.6176815348885825,
+          "mape": 36.53720595166124,
+          "wape": 29.24075941058661
+        }
+      },
+      "inventory": {
+        "ABARROTES": {
+          "si": 383.0,
+          "en": 175.0,
+          "sf": 276.0,
+          "cd": 282.0,
+          "isi": 50.53763440860215,
+          "dqs": 0,
+          "tqs": 0.0,
+          "sales": 330.0,
+          "products": 36,
+          "missing_start": 24,
+          "missing_end": 20,
+          "continuity": 4
+        },
+        "BEBIDAS": {
+          "si": 672.0,
+          "en": 269.0,
+          "sf": 551.0,
+          "cd": 390.0,
+          "isi": 41.445270988310305,
+          "dqs": 0,
+          "tqs": 0.0,
+          "sales": 611.0,
+          "products": 47,
+          "missing_start": 30,
+          "missing_end": 26,
+          "continuity": 12
+        },
+        "GOLOSINAS": {
+          "si": 553.0,
+          "en": 297.0,
+          "sf": 396.0,
+          "cd": 454.0,
+          "isi": 53.41176470588235,
+          "dqs": 2,
+          "tqs": 28.57142857142857,
+          "sales": 496.0,
+          "products": 42,
+          "missing_start": 25,
+          "missing_end": 26,
+          "continuity": 3
+        },
+        "HELADOS": {
+          "si": 207.0,
+          "en": 23.0,
+          "sf": 133.0,
+          "cd": 97.0,
+          "isi": 42.173913043478265,
+          "dqs": 1,
+          "tqs": 14.285714285714285,
+          "sales": 146.0,
+          "products": 25,
+          "missing_start": 19,
+          "missing_end": 16,
+          "continuity": 4
+        },
+        "LIMPIEZA": {
+          "si": 150.0,
+          "en": 22.0,
+          "sf": 84.0,
+          "cd": 88.0,
+          "isi": 51.162790697674424,
+          "dqs": 0,
+          "tqs": 0.0,
+          "sales": 88.0,
+          "products": 19,
+          "missing_start": 13,
+          "missing_end": 13,
+          "continuity": 0
+        }
+      },
+      "inventory_total": {
+        "si": 1965.0,
+        "en": 786.0,
+        "sf": 1440.0,
+        "cd": 1311.0,
+        "dqs": 3,
+        "sales": 1671.0,
+        "products": 169,
+        "missing_start": 111,
+        "missing_end": 101,
+        "continuity": 23,
+        "isi": 47.655398037077425,
+        "tqs": 8.571428571428571
+      }
+    }
+  },
+  "post_model": {
+    "actual": 1671.0,
+    "prediction": 1931.38,
+    "mae": 10.414857142857143,
+    "rmse": 14.166068715672067,
+    "mape": 33.89408284824676,
+    "wape": 21.814482345900657
+  },
+  "selected_models": {
+    "ABARROTES": {
+      "method": "promedio_estacional",
+      "wape": 16.53
+    },
+    "BEBIDAS": {
+      "method": "promedio_estacional",
+      "wape": 13.65
+    },
+    "GOLOSINAS": {
+      "method": "random_forest",
+      "wape": 20.01
+    },
+    "HELADOS": {
+      "method": "promedio_estacional",
+      "wape": 23.84
+    },
+    "LIMPIEZA": {
+      "method": "promedio_estacional",
+      "wape": 29.38
+    }
+  },
+  "replay_max_prediction_difference": 0.0,
+  "history_fingerprint_matches": true,
+  "inventory_duplicates": 0,
+  "inventory_rows": 11748,
+  "saved_result": "C:\\taully_demand_forecast\\data\\posttests\\postest_20260927t191247z_20260908_7d_70578bbb.json"
+}

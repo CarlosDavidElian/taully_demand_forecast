@@ -1,0 +1,3266 @@
+{
+  "pre": [
+    {
+      "index": 0,
+      "rows": [
+        [
+          1,
+          "394",
+          "881",
+          "315",
+          "960"
+        ],
+        [
+          2,
+          "712",
+          "1 481",
+          "597",
+          "1 596"
+        ],
+        [
+          3,
+          "645",
+          "905",
+          "413",
+          "1 137"
+        ],
+        [
+          4,
+          "191",
+          "309",
+          "151",
+          "349"
+        ],
+        [
+          5,
+          "172",
+          "335",
+          "102",
+          "405"
+        ],
+        [
+          "TOTAL",
+          "2 114",
+          "3 911",
+          "1 578",
+          "4 447"
+        ]
+      ]
+    },
+    {
+      "index": 1,
+      "rows": [
+        [
+          1,
+          "960",
+          "394",
+          "881",
+          "75,29 %"
+        ],
+        [
+          2,
+          "1 596",
+          "712",
+          "1 481",
+          "72,78 %"
+        ],
+        [
+          3,
+          "1 137",
+          "645",
+          "905",
+          "73,35 %"
+        ],
+        [
+          4,
+          "349",
+          "191",
+          "309",
+          "69,80 %"
+        ],
+        [
+          5,
+          "405",
+          "172",
+          "335",
+          "79,88 %"
+        ],
+        [
+          "TOTAL",
+          "4 447",
+          "2 114",
+          "3 911",
+          "73,81 %"
+        ]
+      ]
+    },
+    {
+      "index": 2,
+      "rows": [
+        [
+          1,
+          1,
+          30,
+          "3,33 %"
+        ],
+        [
+          2,
+          10,
+          30,
+          "33,33 %"
+        ],
+        [
+          3,
+          11,
+          30,
+          "36,67 %"
+        ],
+        [
+          4,
+          1,
+          30,
+          "3,33 %"
+        ],
+        [
+          5,
+          0,
+          30,
+          "0,00 %"
+        ],
+        [
+          "TOTAL",
+          23,
+          150,
+          "15,33 %"
+        ]
+      ]
+    },
+    {
+      "index": 3,
+      "rows": [
+        [
+          1,
+          "1,10",
+          "287",
+          "261,40"
+        ],
+        [
+          2,
+          "0,93",
+          "243",
+          "261,40"
+        ],
+        [
+          3,
+          "0,84",
+          "220",
+          "261,40"
+        ],
+        [
+          4,
+          "1,07",
+          "281",
+          "261,40"
+        ],
+        [
+          5,
+          "0,86",
+          "226",
+          "261,40"
+        ],
+        [
+          6,
+          "0,77",
+          "202",
+          "261,40"
+        ],
+        [
+          7,
+          "0,92",
+          "241",
+          "261,40"
+        ],
+        [
+          8,
+          "1,06",
+          "278",
+          "261,40"
+        ],
+        [
+          9,
+          "1,15",
+          "301",
+          "261,40"
+        ],
+        [
+          10,
+          "0,92",
+          "240",
+          "261,40"
+        ],
+        [
+          11,
+          "0,93",
+          "242",
+          "261,40"
+        ],
+        [
+          12,
+          "0,85",
+          "221",
+          "261,40"
+        ],
+        [
+          13,
+          "1,03",
+          "270",
+          "261,40"
+        ],
+        [
+          14,
+          "1,12",
+          "293",
+          "261,40"
+        ],
+        [
+          15,
+          "1,22",
+          "318",
+          "261,40"
+        ],
+        [
+          16,
+          "1,18",
+          "309",
+          "261,40"
+        ],
+        [
+          17,
+          "1,03",
+          "269",
+          "261,40"
+        ],
+        [
+          18,
+          "0,85",
+          "221",
+          "261,40"
+        ],
+        [
+          19,
+          "0,83",
+          "216",
+          "261,40"
+        ],
+        [
+          20,
+          "1,22",
+          "318",
+          "261,40"
+        ],
+        [
+          21,
+          "1,03",
+          "269",
+          "261,40"
+        ],
+        [
+          22,
+          "1,22",
+          "318",
+          "261,40"
+        ],
+        [
+          23,
+          "1,18",
+          "308",
+          "261,40"
+        ],
+        [
+          24,
+          "0,94",
+          "247",
+          "261,40"
+        ],
+        [
+          25,
+          "0,84",
+          "220",
+          "261,40"
+        ],
+        [
+          26,
+          "1,02",
+          "267",
+          "261,40"
+        ],
+        [
+          27,
+          "0,92",
+          "241",
+          "261,40"
+        ],
+        [
+          28,
+          "1,07",
+          "281",
+          "261,40"
+        ],
+        [
+          29,
+          "1,15",
+          "301",
+          "261,40"
+        ],
+        [
+          30,
+          "1,03",
+          "268",
+          "261,40"
+        ]
+      ]
+    },
+    {
+      "index": 4,
+      "rows": [
+        [
+          1,
+          "1 604",
+          "1 636,18",
+          "21,20 %"
+        ],
+        [
+          2,
+          "2 799",
+          "2 598,75",
+          "12,62 %"
+        ],
+        [
+          3,
+          "2 218",
+          "2 204,68",
+          "20,50 %"
+        ],
+        [
+          4,
+          "715",
+          "795,25",
+          "39,85 %"
+        ],
+        [
+          5,
+          "580",
+          "532,29",
+          "24,61 %"
+        ],
+        [
+          "GLOBAL",
+          "7 916",
+          "7 767,14",
+          "23,76 %"
+        ]
+      ]
+    },
+    {
+      "index": 5,
+      "rows": [
+        [
+          1,
+          "AGUA CIELO SIN GAS 1 L",
+          "68",
+          "68"
+        ],
+        [
+          2,
+          "AGUA CIELO SIN GAS 2.5 L",
+          "45",
+          "45"
+        ],
+        [
+          3,
+          "AGUA SAN MATEO SIN GAS 600 ML",
+          "105",
+          "105"
+        ],
+        [
+          4,
+          "ARROZ BLANCO AÑEJO FARAÓN VERDE 5 KG",
+          "4",
+          "4"
+        ],
+        [
+          5,
+          "ARROZ COSTEÑO EXTRA AÑEJO 5 KG",
+          "1",
+          "1"
+        ],
+        [
+          6,
+          "ARROZ COSTEÑO EXTRA AÑEJO 750 G",
+          "52",
+          "52"
+        ],
+        [
+          7,
+          "ARROZ EXTRA COSTEÑO 5 KG",
+          "3",
+          "3"
+        ],
+        [
+          8,
+          "ARROZ EXTRA FARAÓN 750 G",
+          "60",
+          "60"
+        ],
+        [
+          9,
+          "ARROZ EXTRA GRAN CHALÁN 5 KG",
+          "5",
+          "5"
+        ],
+        [
+          10,
+          "ARROZ EXTRA GRAN CHALÁN FINA SELECCIÓN 4 KG",
+          "6",
+          "6"
+        ],
+        [
+          11,
+          "ARROZ EXTRA PAISANA 1 KG",
+          "60",
+          "60"
+        ],
+        [
+          12,
+          "ARROZ EXTRA PAISANA 5 KG",
+          "3",
+          "3"
+        ],
+        [
+          13,
+          "ARROZ INTEGRAL VALLE NORTE 750 G",
+          "67",
+          "67"
+        ],
+        [
+          14,
+          "ARROZ SUPERIOR FARAÓN 750 G",
+          "84",
+          "84"
+        ],
+        [
+          15,
+          "ARROZ SUPERIOR PAISANA 1 KG",
+          "63",
+          "63"
+        ],
+        [
+          16,
+          "ARROZ SUPERIOR PAISANA 5 KG",
+          "3",
+          "3"
+        ],
+        [
+          17,
+          "AVENA 3 OSITOS PRECOCIDA CLÁSICA 250 G",
+          "33",
+          "33"
+        ],
+        [
+          18,
+          "AZÚCAR BLANCA DULFINA 1 KG",
+          "65",
+          "65"
+        ],
+        [
+          19,
+          "BARRA CHOCOLATE DELICADORE LECHE Y PISTACHO 98 G",
+          "47",
+          "47"
+        ],
+        [
+          20,
+          "BARRA DE CHOCOLATE SNICKERS 52 G",
+          "57",
+          "57"
+        ],
+        [
+          21,
+          "BARRA MILKY SIN AZÚCAR LA IBÉRICA 50 G",
+          "58",
+          "58"
+        ],
+        [
+          22,
+          "BEBIDA HEY FIT COLA 600 ML",
+          "67",
+          "67"
+        ],
+        [
+          23,
+          "BEBIDA HEY FIT GOLDEN FIZZ 600 ML",
+          "69",
+          "69"
+        ],
+        [
+          24,
+          "BEBIDA HEY FIT PIÑA COLADA 600 ML",
+          "46",
+          "46"
+        ],
+        [
+          25,
+          "BEBIDA HEY FIT TORONJA CAMU CAMU 600 ML",
+          "57",
+          "57"
+        ],
+        [
+          26,
+          "BEBIDA REHIDRATANTE GATORADE TROPICAL SIXPACK 500 ML",
+          "48",
+          "48"
+        ],
+        [
+          27,
+          "BEBIDA REHIDRATANTE POWERADE MULTISABOR SIXPACK 600 ML",
+          "14",
+          "14"
+        ],
+        [
+          28,
+          "BEBIDA REHIDRATANTE SPORADE SURTIDO PACK 12 X 500 ML",
+          "5",
+          "5"
+        ],
+        [
+          29,
+          "BIZCOCHO CHOCMAN COSTA SIXPACK 201 G",
+          "5",
+          "5"
+        ],
+        [
+          30,
+          "BOLITAS DE CEREAL CHOCO YOGURT 2 CERRITOS 125 G",
+          "22",
+          "22"
+        ],
+        [
+          31,
+          "BOMBONES BON O BON BOLSA 90 G",
+          "47",
+          "47"
+        ],
+        [
+          32,
+          "BOMBONES CHOCOLATE AMARGO FRANUÍ 150 G",
+          "12",
+          "12"
+        ],
+        [
+          33,
+          "BOMBONES CHOCOLATE CON LECHE FRANUÍ 150 G",
+          "12",
+          "12"
+        ],
+        [
+          34,
+          "BOMBONES SUBLIME CHOCOLATE BLANCO CON MANÍ 136 G",
+          "84",
+          "84"
+        ],
+        [
+          35,
+          "BOMBONES SUBLIME CREMA MANÍ DOYPACK 136 G",
+          "89",
+          "89"
+        ],
+        [
+          36,
+          "BOMBONES TRIÁNGULO CON LECHE DOYPACK 136 G",
+          "46",
+          "46"
+        ],
+        [
+          37,
+          "CABELLO DE ÁNGEL DON VITTORIO 250 G",
+          "33",
+          "33"
+        ],
+        [
+          38,
+          "CARAMELOS HALLS MENTA 27 G",
+          "84",
+          "84"
+        ],
+        [
+          39,
+          "CARAMELOS HALLS MORA 27 G",
+          "101",
+          "101"
+        ],
+        [
+          40,
+          "CHICLE TRIDENT MENTA FRESCA 30 G",
+          "108",
+          "108"
+        ],
+        [
+          41,
+          "CHICLE TRIDENT MORA AZUL 30.6 G",
+          "103",
+          "103"
+        ],
+        [
+          42,
+          "CHICLE TRIDENT SANDÍA 30 G",
+          "78",
+          "78"
+        ],
+        [
+          43,
+          "CHOCOLATE CHIN CHIN MINI BOLSA 224 G",
+          "44",
+          "44"
+        ],
+        [
+          44,
+          "CHOCOLATE LA IBÉRICA MILKY BITE SIZE 200 G",
+          "19",
+          "19"
+        ],
+        [
+          45,
+          "CHOCOLATE LA IBÉRICA MINI MILKY BOLSA 10 UND",
+          "7",
+          "7"
+        ],
+        [
+          46,
+          "CHOCOLATE LENTEJAS FIESTA MINI BOLSA 240 G",
+          "77",
+          "77"
+        ],
+        [
+          47,
+          "CHOCOLATE PRINCESA CREMA MANÍ DOYPACK 136 G",
+          "38",
+          "38"
+        ],
+        [
+          48,
+          "CHOCOLATE ROYAL MINTS RELLENO MENTA 200 G",
+          "35",
+          "35"
+        ],
+        [
+          49,
+          "CHOCOLATE SUBLIME CON GALLETA 28 G",
+          "62",
+          "62"
+        ],
+        [
+          50,
+          "CHOCOLATE SUBLIME EXTREMO 50 G",
+          "93",
+          "93"
+        ],
+        [
+          51,
+          "CHOCOLATE SUBLIME POWER SIXPACK 150 G",
+          "82",
+          "82"
+        ],
+        [
+          52,
+          "CHOCOLATE SUBLIME SONRISA CAJA 8 UND",
+          "26",
+          "26"
+        ],
+        [
+          53,
+          "CHOCOLATES VIZZIO ALMENDRA DOYPACK 96 G",
+          "71",
+          "71"
+        ],
+        [
+          54,
+          "DETERGENTE ACE LIMPIEZA COMPLETA 700 G",
+          "43",
+          "43"
+        ],
+        [
+          55,
+          "DETERGENTE BOLÍVAR CUIDADO TOTAL 730 G",
+          "53",
+          "53"
+        ],
+        [
+          56,
+          "DETERGENTE LÍQUIDO BOLÍVAR CUIDADO TOTAL 3 L",
+          "4",
+          "4"
+        ],
+        [
+          57,
+          "DETERGENTE MARSELLA LAVANDA Y ROSAS 730 G",
+          "51",
+          "51"
+        ],
+        [
+          58,
+          "DETERGENTE SAPOLIO FLORAL 730 G",
+          "47",
+          "47"
+        ],
+        [
+          59,
+          "FETUCCINI DON VITTORIO 950 G",
+          "42",
+          "42"
+        ],
+        [
+          60,
+          "FIDEO LASAGNA MOLITALIA 350 G",
+          "36",
+          "36"
+        ],
+        [
+          61,
+          "FIDEO TALLARÍN MOLITALIA 950 G",
+          "66",
+          "66"
+        ],
+        [
+          62,
+          "FIDEOS SPAGHETTI MOLITALIA 950 G",
+          "65",
+          "65"
+        ],
+        [
+          63,
+          "GALLETA CASINO MENTA SIXPACK 258 G",
+          "13",
+          "13"
+        ],
+        [
+          64,
+          "GALLETA CHIPS AHOY SIXPACK 222 G",
+          "13",
+          "13"
+        ],
+        [
+          65,
+          "GALLETA CLUB SOCIAL REGULAR SIXPACK 144 G",
+          "17",
+          "17"
+        ],
+        [
+          66,
+          "GALLETA DE SODA SAN JORGE PACK 7 UND",
+          "22",
+          "22"
+        ],
+        [
+          67,
+          "GALLETA DOÑA PEPA FIELD SIXPACK 132 G",
+          "29",
+          "29"
+        ],
+        [
+          68,
+          "GALLETA FIELD CHOKOSODA SIXPACK 216 G",
+          "12",
+          "12"
+        ],
+        [
+          69,
+          "GALLETA FIELD VAINILLA FAMILIAR 136 G",
+          "25",
+          "25"
+        ],
+        [
+          70,
+          "GALLETA MOROCHAS SIXPACK 180 G",
+          "19",
+          "19"
+        ],
+        [
+          71,
+          "GALLETA OREO ORIGINAL 135 G",
+          "56",
+          "56"
+        ],
+        [
+          72,
+          "GALLETA PÍCARAS CHIPS SIXPACK 228 G",
+          "6",
+          "6"
+        ],
+        [
+          73,
+          "GALLETA SODA FIELD SIXPACK 6 UND",
+          "27",
+          "27"
+        ],
+        [
+          74,
+          "GALLETA VICTORIA SODA V ORIGINAL SIXPACK 210 G",
+          "6",
+          "6"
+        ],
+        [
+          75,
+          "GALLETAS CHARADA CHOCOLATE VAINILLA 226.8 G",
+          "56",
+          "56"
+        ],
+        [
+          76,
+          "GALLETAS CORONITA CHOCOLATE SIXPACK 216 G",
+          "14",
+          "14"
+        ],
+        [
+          77,
+          "GALLETAS FIELD CREAM CRACKER 258 G",
+          "28",
+          "28"
+        ],
+        [
+          78,
+          "GALLETAS FIELD CREAM CRACKER 73.5 G",
+          "32",
+          "32"
+        ],
+        [
+          79,
+          "GALLETAS PÍCARAS CLÁSICAS SIXPACK 228 G",
+          "17",
+          "17"
+        ],
+        [
+          80,
+          "GALLETAS PÍCARAS LA CAPUCHINA SIXPACK 228 G",
+          "9",
+          "9"
+        ],
+        [
+          81,
+          "GALLETAS RITZ PLAIN SIXPACK 120 G",
+          "4",
+          "4"
+        ],
+        [
+          82,
+          "GALLETAS TRAVESURAS FIELD 47.6 G",
+          "33",
+          "33"
+        ],
+        [
+          83,
+          "GALLETAS VICTORIA MARGARITA SIXPACK 246 G",
+          "7",
+          "7"
+        ],
+        [
+          84,
+          "GASEOSA COCA COLA 1 L",
+          "81",
+          "81"
+        ],
+        [
+          85,
+          "GASEOSA COCA COLA 3 L",
+          "15",
+          "15"
+        ],
+        [
+          86,
+          "GASEOSA COCA COLA ORIGINAL 1.5 L",
+          "55",
+          "55"
+        ],
+        [
+          87,
+          "GASEOSA COCA COLA ORIGINAL 600 ML",
+          "142",
+          "142"
+        ],
+        [
+          88,
+          "GASEOSA COCA COLA ORIGINAL SIXPACK 600 ML",
+          "17",
+          "17"
+        ],
+        [
+          89,
+          "GASEOSA COCA COLA PACK 2 BOTELLAS 1 L",
+          "57",
+          "57"
+        ],
+        [
+          90,
+          "GASEOSA COCA COLA PLUS LATA 320 ML",
+          "96",
+          "96"
+        ],
+        [
+          91,
+          "GASEOSA COCA COLA SIN AZÚCAR 1 L",
+          "105",
+          "105"
+        ],
+        [
+          92,
+          "GASEOSA COCA COLA SIN AZÚCAR SIXPACK 300 ML",
+          "93",
+          "93"
+        ],
+        [
+          93,
+          "GASEOSA COCA COLA ZERO 2.25 L",
+          "36",
+          "36"
+        ],
+        [
+          94,
+          "GASEOSA COCA COLA ZERO PACK 2 BOTELLAS 1.5 L",
+          "27",
+          "27"
+        ],
+        [
+          95,
+          "GASEOSA COCA COLA ZERO SIXPACK 600 ML",
+          "18",
+          "18"
+        ],
+        [
+          96,
+          "GASEOSA EVERVESS PACK 2 BOTELLAS 1.5 L",
+          "7",
+          "7"
+        ],
+        [
+          97,
+          "GASEOSA FANTA KOLA INGLESA 3 L",
+          "14",
+          "14"
+        ],
+        [
+          98,
+          "GASEOSA GUARANÁ 3.01 L",
+          "48",
+          "48"
+        ],
+        [
+          99,
+          "GASEOSA GUARANÁ 450 ML",
+          "88",
+          "88"
+        ],
+        [
+          100,
+          "GASEOSA INCA KOLA 1.5 L",
+          "55",
+          "55"
+        ],
+        [
+          101,
+          "GASEOSA INCA KOLA 3 L",
+          "21",
+          "21"
+        ],
+        [
+          102,
+          "GASEOSA INCA KOLA 600 ML",
+          "109",
+          "109"
+        ],
+        [
+          103,
+          "GASEOSA INCA KOLA ZERO 2.25 L",
+          "42",
+          "42"
+        ],
+        [
+          104,
+          "GASEOSA PEPSI 3 L",
+          "15",
+          "15"
+        ],
+        [
+          105,
+          "GASEOSA PEPSI COLA 1.5 L",
+          "21",
+          "21"
+        ],
+        [
+          106,
+          "GASEOSA PEPSI COLA 450 ML",
+          "110",
+          "110"
+        ],
+        [
+          107,
+          "GASEOSA SPRITE LIMA LIMÓN 3 L",
+          "4",
+          "4"
+        ],
+        [
+          108,
+          "GATORADE TROPICAL 500 ML",
+          "130",
+          "130"
+        ],
+        [
+          109,
+          "GELATINA UNIVERSAL FRESA 130 G",
+          "39",
+          "39"
+        ],
+        [
+          110,
+          "HARINA DE ARROZ COSTEÑO 1 KG",
+          "80",
+          "80"
+        ],
+        [
+          111,
+          "HARINA DE LINAZA NATURANDES 300 G",
+          "29",
+          "29"
+        ],
+        [
+          112,
+          "HARINA DE MAÍZ BLANCO PAN 1 KG",
+          "51",
+          "51"
+        ],
+        [
+          113,
+          "HARINA DE MAÍZ PAN AMARILLO 1 KG",
+          "44",
+          "44"
+        ],
+        [
+          114,
+          "HARINA DE QUINUA MOLICUSCO 250 G",
+          "44",
+          "44"
+        ],
+        [
+          115,
+          "HARINA DE TRIGO BLANCA FLOR 1 KG",
+          "73",
+          "73"
+        ],
+        [
+          116,
+          "HARINA DE TRIGO PREPARADA BLANCA FLOR 1 KG",
+          "54",
+          "54"
+        ],
+        [
+          117,
+          "HARINA PREPARADA MOLITALIA 1 KG",
+          "35",
+          "35"
+        ],
+        [
+          118,
+          "HARINA SIN PREPARAR MOLITALIA 1 KG",
+          "37",
+          "37"
+        ],
+        [
+          119,
+          "HELADO DONOFRIO BOMBONES CAJA 72 ML",
+          "72",
+          "72"
+        ],
+        [
+          120,
+          "HELADO DONOFRIO BOMBONES VAINILLA POTE 18 UND",
+          "27",
+          "27"
+        ],
+        [
+          121,
+          "HELADO DONOFRIO DONITO NAPOLITANO 2.2 L",
+          "10",
+          "10"
+        ],
+        [
+          122,
+          "HELADO DONOFRIO DONITO VAINILLA CHIPS 2.2 L",
+          "7",
+          "7"
+        ],
+        [
+          123,
+          "HELADO DONOFRIO DONO SANDWICH VAINILLA 900 ML",
+          "34",
+          "34"
+        ],
+        [
+          124,
+          "HELADO DONOFRIO PEZIDURI CHEESECAKE FRUTOS ROJOS 900 ML",
+          "30",
+          "30"
+        ],
+        [
+          125,
+          "HELADO DONOFRIO PEZIDURI CHOCOCHIPS 2.2 L",
+          "6",
+          "6"
+        ],
+        [
+          126,
+          "HELADO DONOFRIO PEZIDURI CHOCOCHIPS 900 ML",
+          "25",
+          "25"
+        ],
+        [
+          127,
+          "HELADO DONOFRIO PEZIDURI CHOCOLÚCUMA VAINILLA 2.2 L",
+          "21",
+          "21"
+        ],
+        [
+          128,
+          "HELADO DONOFRIO PEZIDURI LÚCUMA 900 ML",
+          "37",
+          "37"
+        ],
+        [
+          129,
+          "HELADO DONOFRIO PEZIDURI TRICOLOR 2.2 L",
+          "18",
+          "18"
+        ],
+        [
+          130,
+          "HELADO DONOFRIO PRINCESA CHOCOLATE MANÍ 900 ML",
+          "8",
+          "8"
+        ],
+        [
+          131,
+          "HELADO DONOFRIO TORNADO VAINILLA CAJA 1.5 L",
+          "4",
+          "4"
+        ],
+        [
+          132,
+          "HELADO FRÍO RICO CROCANTE MARACUYÁ 900 ML",
+          "10",
+          "10"
+        ],
+        [
+          133,
+          "HELADO FRÍO RICO CROCANTE SALSA CAFÉ 900 ML",
+          "21",
+          "21"
+        ],
+        [
+          134,
+          "HELADO FRÍO RICO CROCANTE SALSA FRESA POTE 900 ML",
+          "26",
+          "26"
+        ],
+        [
+          135,
+          "HELADO FRÍO RICO VAINILLA CAJA 4 UND",
+          "14",
+          "14"
+        ],
+        [
+          136,
+          "HELADO MOROCHAS CHOCOLATE Y VAINILLA POTE 900 ML",
+          "14",
+          "14"
+        ],
+        [
+          137,
+          "HELADO PALETA DONOFRIO ALASKA FRESA",
+          "33",
+          "33"
+        ],
+        [
+          138,
+          "HELADO PALETA DONOFRIO FRÍO RICO FRESA HUAURA",
+          "56",
+          "56"
+        ],
+        [
+          139,
+          "HELADO PALETA DONOFRIO SUBLIME CHOCOLATE CON MANÍ",
+          "61",
+          "61"
+        ],
+        [
+          140,
+          "HELADO PEZIDURI CHOCOLATE POTE 900 ML",
+          "40",
+          "40"
+        ],
+        [
+          141,
+          "HELADO PEZIDURI TRICOLOR POTE 900 ML",
+          "49",
+          "49"
+        ],
+        [
+          142,
+          "HELADO PEZIDURI VAINILLA POTE 900 ML",
+          "36",
+          "36"
+        ],
+        [
+          143,
+          "HELADO SUBLIME CHOCOLATE CON MANÍ POTE 900 ML",
+          "18",
+          "18"
+        ],
+        [
+          144,
+          "HELADO TONITTO MENTA ORIENTALE 1 L",
+          "14",
+          "14"
+        ],
+        [
+          145,
+          "INCA KOLA PACK 2 BOTELLAS 1 L",
+          "51",
+          "51"
+        ],
+        [
+          146,
+          "INCA KOLA SIN AZÚCAR SIXPACK 300 ML",
+          "55",
+          "55"
+        ],
+        [
+          147,
+          "INCA KOLA ZERO PACK 2 BOTELLAS 1.5 L",
+          "36",
+          "36"
+        ],
+        [
+          148,
+          "JABÓN DE LAVAR BOLÍVAR 190 G",
+          "33",
+          "33"
+        ],
+        [
+          149,
+          "KETCHUP ALACENA DOYPACK 200 G",
+          "17",
+          "17"
+        ],
+        [
+          150,
+          "LAVAVAJILLA AYUDÍN LIMÓN Y SÁBILA 900 ML",
+          "27",
+          "27"
+        ],
+        [
+          151,
+          "LAVAVAJILLA SAPOLIO LIMA LIMÓN 1.25 L",
+          "53",
+          "53"
+        ],
+        [
+          152,
+          "LEJÍA CLOROX TRADICIONAL 1 KG",
+          "44",
+          "44"
+        ],
+        [
+          153,
+          "LEJÍA SAPOLIO ORIGINAL 1.6 KG",
+          "51",
+          "51"
+        ],
+        [
+          154,
+          "LENTEJA COSTEÑO 500 G",
+          "65",
+          "65"
+        ],
+        [
+          155,
+          "LENTEJAS CONFITADO CHOCOLATE 30 G",
+          "69",
+          "69"
+        ],
+        [
+          156,
+          "MAYONESA ALACENA DOYPACK 235 G",
+          "31",
+          "31"
+        ],
+        [
+          157,
+          "MOSTAZA ALACENA DOYPACK 400 G",
+          "22",
+          "22"
+        ],
+        [
+          158,
+          "MUSS CREMINO CHOCOLATE TURRÓN SIXPACK 84 G",
+          "6",
+          "6"
+        ],
+        [
+          159,
+          "PACK COCA COLA 3 L + INCA KOLA 3 L",
+          "11",
+          "11"
+        ],
+        [
+          160,
+          "PACK INCA KOLA + COCA COLA + FANTA 3 BOTELLAS 2.25 L",
+          "41",
+          "41"
+        ],
+        [
+          161,
+          "PACK INCA KOLA 1.5 L + COCA COLA SIN AZÚCAR 1.5 L",
+          "102",
+          "102"
+        ],
+        [
+          162,
+          "PACK INCA KOLA 2.25 L + COCA COLA 2.25 L",
+          "53",
+          "53"
+        ],
+        [
+          163,
+          "PACK MINI COCA COLA + INCA KOLA + FANTA + SPRITE 300 ML",
+          "131",
+          "131"
+        ],
+        [
+          164,
+          "QUINUA COSTEÑO 500 G",
+          "49",
+          "49"
+        ],
+        [
+          165,
+          "QUITAMANCHAS VANISH ROPA COLOR 450 ML",
+          "33",
+          "33"
+        ],
+        [
+          166,
+          "SAL DE MAR MARINA MESA 1 KG",
+          "39",
+          "39"
+        ],
+        [
+          167,
+          "SALSA POMAROLA CLÁSICA 145 G",
+          "45",
+          "45"
+        ],
+        [
+          168,
+          "SPAGUETTI DON VITTORIO 950 G",
+          "45",
+          "45"
+        ],
+        [
+          169,
+          "SPORADE APPLE ICE SIN AZÚCAR 500 ML",
+          "124",
+          "124"
+        ],
+        [
+          170,
+          "SPORADE BLUEBERRY 500 ML",
+          "64",
+          "64"
+        ],
+        [
+          171,
+          "SPORADE MANDARINA 500 ML",
+          "76",
+          "76"
+        ],
+        [
+          172,
+          "SPORADE SURTIDO SIXPACK 500 ML",
+          "25",
+          "25"
+        ],
+        [
+          173,
+          "SPORADE UVA 500 ML",
+          "94",
+          "94"
+        ],
+        [
+          174,
+          "SUAVIZANTE BOLÍVAR BEBÉS Y NIÑOS 2.8 L",
+          "4",
+          "4"
+        ],
+        [
+          175,
+          "SUAVIZANTE BOLÍVAR CUIDADO TOTAL FLORAL 1.5 L",
+          "10",
+          "10"
+        ],
+        [
+          176,
+          "SUAVIZANTE BOLÍVAR CUIDADO TOTAL FLORAL 4.8 L",
+          "2",
+          "2"
+        ],
+        [
+          177,
+          "SUAVIZANTE BOLÍVAR PLUS LAVANDA 2.8 L",
+          "4",
+          "4"
+        ],
+        [
+          178,
+          "SUAVIZANTE BOLÍVAR PLUS ORQUÍDEA 2.8 L",
+          "4",
+          "4"
+        ],
+        [
+          179,
+          "SUAVIZANTE DOWNY FRESH 1.4 L",
+          "27",
+          "27"
+        ],
+        [
+          180,
+          "SUAVIZANTE DOWNY INTENSE AMANECER 1.4 L",
+          "28",
+          "28"
+        ],
+        [
+          181,
+          "SUAVIZANTE DOWNY INTENSE AMANECER 2.6 L",
+          "2",
+          "2"
+        ],
+        [
+          182,
+          "SUAVIZANTE DOWNY INTENSE FLORAL 2.6 L",
+          "5",
+          "5"
+        ],
+        [
+          183,
+          "SUAVIZANTE SUAVITEL FRESCA PRIMAVERA 1.5 L",
+          "9",
+          "9"
+        ],
+        [
+          184,
+          "SUAVIZANTE SUAVITEL FRESCA PRIMAVERA BOTELLA 2.8 L",
+          "5",
+          "5"
+        ],
+        [
+          185,
+          "SUAVIZANTE SUAVITEL FRESCURA MANZANA 2.3 L",
+          "2",
+          "2"
+        ],
+        [
+          186,
+          "SUAVIZANTE XPLEND CARICIA DE ALGODÓN 2.8 L",
+          "1",
+          "1"
+        ],
+        [
+          187,
+          "SUAVIZANTE XPLEND SUEÑO FLORAL 800 ML",
+          "27",
+          "27"
+        ],
+        [
+          188,
+          "SUAVIZANTE XPLEND SUEÑO FLORAL BOTELLA 2.8 L",
+          "7",
+          "7"
+        ],
+        [
+          189,
+          "SUAVIZANTE XPLEND SUEÑO FLORAL DOYPACK 2.3 L",
+          "4",
+          "4"
+        ],
+        [
+          190,
+          "TORNILLO DON VITTORIO 500 G",
+          "54",
+          "54"
+        ],
+        [
+          191,
+          "TRIPACK COCA COLA 3 L + INCA KOLA 3 L + FANTA 3 L",
+          "6",
+          "6"
+        ],
+        [
+          192,
+          "WAFER FIELD CUA CUA PACK 9 UND",
+          "73",
+          "73"
+        ],
+        [
+          193,
+          "WAFER KIT KAT CHOCOLATE 41.5 G",
+          "81",
+          "81"
+        ],
+        [
+          194,
+          "WAFER NIK CHOCOLATE SIXPACK 162 G",
+          "26",
+          "26"
+        ],
+        [
+          195,
+          "WAFER NIK VAINILLA SIXPACK 162 G",
+          "35",
+          "35"
+        ],
+        [
+          "",
+          "TOTAL",
+          "7 916",
+          "7 916"
+        ]
+      ]
+    },
+    {
+      "index": 6,
+      "rows": [
+        [
+          1,
+          "1 604",
+          "1 491,00",
+          "1,08"
+        ],
+        [
+          2,
+          "2 799",
+          "2 745,00",
+          "1,02"
+        ],
+        [
+          3,
+          "2 218",
+          "2 381,00",
+          "0,93"
+        ],
+        [
+          4,
+          "715",
+          "734,00",
+          "0,97"
+        ],
+        [
+          5,
+          "580",
+          "491,00",
+          "1,18"
+        ],
+        [
+          "TOTAL",
+          "7 916",
+          "7 842,00",
+          "1,01"
+        ]
+      ]
+    },
+    {
+      "index": 7,
+      "rows": [
+        [
+          1,
+          "1 604",
+          "1 636,18",
+          "21,20 %"
+        ],
+        [
+          2,
+          "2 799",
+          "2 598,75",
+          "12,62 %"
+        ],
+        [
+          3,
+          "2 218",
+          "2 204,68",
+          "20,50 %"
+        ],
+        [
+          4,
+          "715",
+          "795,25",
+          "39,85 %"
+        ],
+        [
+          5,
+          "580",
+          "532,29",
+          "24,61 %"
+        ],
+        [
+          "GLOBAL",
+          "7 916",
+          "7 767,14",
+          "23,76 %"
+        ]
+      ]
+    }
+  ],
+  "post": [
+    {
+      "index": 0,
+      "rows": [
+        [
+          1,
+          "372",
+          "949",
+          "290",
+          "1 031"
+        ],
+        [
+          2,
+          "738",
+          "1 433",
+          "559",
+          "1 612"
+        ],
+        [
+          3,
+          "638",
+          "984",
+          "448",
+          "1 174"
+        ],
+        [
+          4,
+          "210",
+          "365",
+          "141",
+          "434"
+        ],
+        [
+          5,
+          "169",
+          "227",
+          "107",
+          "289"
+        ],
+        [
+          "TOTAL",
+          "2 127",
+          "3 958",
+          "1 545",
+          "4 540"
+        ]
+      ]
+    },
+    {
+      "index": 1,
+      "rows": [
+        [
+          1,
+          "1 031",
+          "372",
+          "949",
+          "78,05 %"
+        ],
+        [
+          2,
+          "1 612",
+          "738",
+          "1 433",
+          "74,25 %"
+        ],
+        [
+          3,
+          "1 174",
+          "638",
+          "984",
+          "72,38 %"
+        ],
+        [
+          4,
+          "434",
+          "210",
+          "365",
+          "75,48 %"
+        ],
+        [
+          5,
+          "289",
+          "169",
+          "227",
+          "72,98 %"
+        ],
+        [
+          "TOTAL",
+          "4 540",
+          "2 127",
+          "3 958",
+          "74,61 %"
+        ]
+      ]
+    },
+    {
+      "index": 2,
+      "rows": [
+        [
+          1,
+          1,
+          30,
+          "3,33 %"
+        ],
+        [
+          2,
+          2,
+          30,
+          "6,67 %"
+        ],
+        [
+          3,
+          7,
+          30,
+          "23,33 %"
+        ],
+        [
+          4,
+          3,
+          30,
+          "10,00 %"
+        ],
+        [
+          5,
+          0,
+          30,
+          "0,00 %"
+        ],
+        [
+          "TOTAL",
+          13,
+          150,
+          "8,67 %"
+        ]
+      ]
+    },
+    {
+      "index": 3,
+      "rows": [
+        [
+          1,
+          "0,96",
+          "250",
+          "261,40"
+        ],
+        [
+          2,
+          "1,04",
+          "272",
+          "261,40"
+        ],
+        [
+          3,
+          "0,71",
+          "185",
+          "261,40"
+        ],
+        [
+          4,
+          "0,96",
+          "250",
+          "261,40"
+        ],
+        [
+          5,
+          "1,23",
+          "322",
+          "261,40"
+        ],
+        [
+          6,
+          "1,25",
+          "326",
+          "261,40"
+        ],
+        [
+          7,
+          "1,04",
+          "272",
+          "261,40"
+        ],
+        [
+          8,
+          "0,80",
+          "209",
+          "261,40"
+        ],
+        [
+          9,
+          "1,07",
+          "281",
+          "261,40"
+        ],
+        [
+          10,
+          "1,04",
+          "271",
+          "261,40"
+        ],
+        [
+          11,
+          "1,09",
+          "284",
+          "261,40"
+        ],
+        [
+          12,
+          "1,19",
+          "312",
+          "261,40"
+        ],
+        [
+          13,
+          "1,28",
+          "334",
+          "261,40"
+        ],
+        [
+          14,
+          "1,22",
+          "319",
+          "261,40"
+        ],
+        [
+          15,
+          "0,96",
+          "251",
+          "261,40"
+        ],
+        [
+          16,
+          "0,99",
+          "258",
+          "261,40"
+        ],
+        [
+          17,
+          "0,76",
+          "198",
+          "261,40"
+        ],
+        [
+          18,
+          "0,93",
+          "244",
+          "261,40"
+        ],
+        [
+          19,
+          "1,19",
+          "311",
+          "261,40"
+        ],
+        [
+          20,
+          "1,12",
+          "292",
+          "261,40"
+        ],
+        [
+          21,
+          "1,09",
+          "284",
+          "261,40"
+        ],
+        [
+          22,
+          "0,85",
+          "222",
+          "261,40"
+        ],
+        [
+          23,
+          "0,89",
+          "233",
+          "261,40"
+        ],
+        [
+          24,
+          "0,77",
+          "200",
+          "261,40"
+        ],
+        [
+          25,
+          "0,78",
+          "205",
+          "261,40"
+        ],
+        [
+          26,
+          "0,96",
+          "250",
+          "261,40"
+        ],
+        [
+          27,
+          "0,98",
+          "257",
+          "261,40"
+        ],
+        [
+          28,
+          "0,96",
+          "252",
+          "261,40"
+        ],
+        [
+          29,
+          "0,96",
+          "252",
+          "261,40"
+        ],
+        [
+          30,
+          "0,98",
+          "255",
+          "261,40"
+        ]
+      ]
+    },
+    {
+      "index": 4,
+      "rows": [
+        [
+          1,
+          "1 653",
+          "1 506,70",
+          "21,19 %"
+        ],
+        [
+          2,
+          "2 810",
+          "2 666,39",
+          "15,08 %"
+        ],
+        [
+          3,
+          "2 129",
+          "2 226,85",
+          "22,53 %"
+        ],
+        [
+          4,
+          "792",
+          "708,73",
+          "31,42 %"
+        ],
+        [
+          5,
+          "467",
+          "575,62",
+          "40,81 %"
+        ],
+        [
+          "GLOBAL",
+          "7 851",
+          "7 684,29",
+          "26,21 %"
+        ]
+      ]
+    },
+    {
+      "index": 5,
+      "rows": [
+        [
+          1,
+          "AGUA CIELO SIN GAS 1 L",
+          "67",
+          "67"
+        ],
+        [
+          2,
+          "AGUA CIELO SIN GAS 2.5 L",
+          "46",
+          "46"
+        ],
+        [
+          3,
+          "AGUA SAN MATEO SIN GAS 600 ML",
+          "103",
+          "103"
+        ],
+        [
+          4,
+          "ARROZ BLANCO AÑEJO FARAÓN VERDE 5 KG",
+          "7",
+          "7"
+        ],
+        [
+          5,
+          "ARROZ COSTEÑO EXTRA AÑEJO 5 KG",
+          "5",
+          "5"
+        ],
+        [
+          6,
+          "ARROZ COSTEÑO EXTRA AÑEJO 750 G",
+          "61",
+          "61"
+        ],
+        [
+          7,
+          "ARROZ EXTRA COSTEÑO 5 KG",
+          "3",
+          "3"
+        ],
+        [
+          8,
+          "ARROZ EXTRA FARAÓN 750 G",
+          "62",
+          "62"
+        ],
+        [
+          9,
+          "ARROZ EXTRA GRAN CHALÁN 5 KG",
+          "7",
+          "7"
+        ],
+        [
+          10,
+          "ARROZ EXTRA GRAN CHALÁN FINA SELECCIÓN 4 KG",
+          "8",
+          "8"
+        ],
+        [
+          11,
+          "ARROZ EXTRA PAISANA 1 KG",
+          "74",
+          "74"
+        ],
+        [
+          12,
+          "ARROZ EXTRA PAISANA 5 KG",
+          "5",
+          "5"
+        ],
+        [
+          13,
+          "ARROZ FARAÓN EXTRA 5 KG",
+          "2",
+          "2"
+        ],
+        [
+          14,
+          "ARROZ FARAÓN EXTRA AÑEJO PREMIUM 10 KG",
+          "1",
+          "1"
+        ],
+        [
+          15,
+          "ARROZ INTEGRAL VALLE NORTE 750 G",
+          "52",
+          "52"
+        ],
+        [
+          16,
+          "ARROZ SUPERIOR FARAÓN 750 G",
+          "59",
+          "59"
+        ],
+        [
+          17,
+          "ARROZ SUPERIOR PAISANA 1 KG",
+          "72",
+          "72"
+        ],
+        [
+          18,
+          "ARROZ SUPERIOR PAISANA 5 KG",
+          "8",
+          "8"
+        ],
+        [
+          19,
+          "AVENA 3 OSITOS PRECOCIDA CLÁSICA 250 G",
+          "32",
+          "32"
+        ],
+        [
+          20,
+          "AZÚCAR BLANCA DULFINA 1 KG",
+          "58",
+          "58"
+        ],
+        [
+          21,
+          "BARRA CHOCOLATE DELICADORE LECHE Y PISTACHO 98 G",
+          "76",
+          "76"
+        ],
+        [
+          22,
+          "BARRA DE CHOCOLATE SNICKERS 52 G",
+          "58",
+          "58"
+        ],
+        [
+          23,
+          "BARRA MILKY SIN AZÚCAR LA IBÉRICA 50 G",
+          "53",
+          "53"
+        ],
+        [
+          24,
+          "BEBIDA HEY FIT COLA 600 ML",
+          "54",
+          "54"
+        ],
+        [
+          25,
+          "BEBIDA HEY FIT GOLDEN FIZZ 600 ML",
+          "36",
+          "36"
+        ],
+        [
+          26,
+          "BEBIDA HEY FIT PIÑA COLADA 600 ML",
+          "35",
+          "35"
+        ],
+        [
+          27,
+          "BEBIDA HEY FIT TORONJA CAMU CAMU 600 ML",
+          "50",
+          "50"
+        ],
+        [
+          28,
+          "BEBIDA REHIDRATANTE GATORADE TROPICAL SIXPACK 500 ML",
+          "41",
+          "41"
+        ],
+        [
+          29,
+          "BEBIDA REHIDRATANTE POWERADE MULTISABOR SIXPACK 600 ML",
+          "34",
+          "34"
+        ],
+        [
+          30,
+          "BEBIDA REHIDRATANTE SPORADE SURTIDO PACK 12 X 500 ML",
+          "6",
+          "6"
+        ],
+        [
+          31,
+          "BIZCOCHO CHOCMAN COSTA SIXPACK 201 G",
+          "12",
+          "12"
+        ],
+        [
+          32,
+          "BOLITAS DE CEREAL CHOCO YOGURT 2 CERRITOS 125 G",
+          "35",
+          "35"
+        ],
+        [
+          33,
+          "BOMBONES BON O BON BOLSA 90 G",
+          "46",
+          "46"
+        ],
+        [
+          34,
+          "BOMBONES CHOCOLATE AMARGO FRANUÍ 150 G",
+          "21",
+          "21"
+        ],
+        [
+          35,
+          "BOMBONES CHOCOLATE CON LECHE FRANUÍ 150 G",
+          "21",
+          "21"
+        ],
+        [
+          36,
+          "BOMBONES SUBLIME CHOCOLATE BLANCO CON MANÍ 136 G",
+          "48",
+          "48"
+        ],
+        [
+          37,
+          "BOMBONES SUBLIME CREMA MANÍ DOYPACK 136 G",
+          "66",
+          "66"
+        ],
+        [
+          38,
+          "BOMBONES TRIÁNGULO CON LECHE DOYPACK 136 G",
+          "27",
+          "27"
+        ],
+        [
+          39,
+          "CABELLO DE ÁNGEL DON VITTORIO 250 G",
+          "41",
+          "41"
+        ],
+        [
+          40,
+          "CARAMELOS HALLS MENTA 27 G",
+          "71",
+          "71"
+        ],
+        [
+          41,
+          "CARAMELOS HALLS MORA 27 G",
+          "93",
+          "93"
+        ],
+        [
+          42,
+          "CHICLE TRIDENT MENTA FRESCA 30 G",
+          "77",
+          "77"
+        ],
+        [
+          43,
+          "CHICLE TRIDENT MORA AZUL 30.6 G",
+          "74",
+          "74"
+        ],
+        [
+          44,
+          "CHICLE TRIDENT SANDÍA 30 G",
+          "85",
+          "85"
+        ],
+        [
+          45,
+          "CHOCOLATE CHIN CHIN MINI BOLSA 224 G",
+          "42",
+          "42"
+        ],
+        [
+          46,
+          "CHOCOLATE LA IBÉRICA MILKY BITE SIZE 200 G",
+          "17",
+          "17"
+        ],
+        [
+          47,
+          "CHOCOLATE LA IBÉRICA MINI MILKY BOLSA 10 UND",
+          "6",
+          "6"
+        ],
+        [
+          48,
+          "CHOCOLATE LENTEJAS FIESTA MINI BOLSA 240 G",
+          "65",
+          "65"
+        ],
+        [
+          49,
+          "CHOCOLATE PRINCESA CREMA MANÍ DOYPACK 136 G",
+          "48",
+          "48"
+        ],
+        [
+          50,
+          "CHOCOLATE ROYAL MINTS RELLENO MENTA 200 G",
+          "49",
+          "49"
+        ],
+        [
+          51,
+          "CHOCOLATE SUBLIME CON GALLETA 28 G",
+          "70",
+          "70"
+        ],
+        [
+          52,
+          "CHOCOLATE SUBLIME EXTREMO 50 G",
+          "70",
+          "70"
+        ],
+        [
+          53,
+          "CHOCOLATE SUBLIME POWER SIXPACK 150 G",
+          "52",
+          "52"
+        ],
+        [
+          54,
+          "CHOCOLATE SUBLIME SONRISA CAJA 8 UND",
+          "25",
+          "25"
+        ],
+        [
+          55,
+          "CHOCOLATES VIZZIO ALMENDRA DOYPACK 96 G",
+          "68",
+          "68"
+        ],
+        [
+          56,
+          "DETERGENTE ACE LIMPIEZA COMPLETA 700 G",
+          "29",
+          "29"
+        ],
+        [
+          57,
+          "DETERGENTE BOLÍVAR CUIDADO TOTAL 730 G",
+          "36",
+          "36"
+        ],
+        [
+          58,
+          "DETERGENTE MARSELLA LAVANDA Y ROSAS 730 G",
+          "51",
+          "51"
+        ],
+        [
+          59,
+          "DETERGENTE SAPOLIO FLORAL 730 G",
+          "40",
+          "40"
+        ],
+        [
+          60,
+          "FETUCCINI DON VITTORIO 950 G",
+          "32",
+          "32"
+        ],
+        [
+          61,
+          "FIDEO LASAGNA MOLITALIA 350 G",
+          "48",
+          "48"
+        ],
+        [
+          62,
+          "FIDEO TALLARÍN MOLITALIA 950 G",
+          "66",
+          "66"
+        ],
+        [
+          63,
+          "FIDEOS SPAGHETTI MOLITALIA 950 G",
+          "65",
+          "65"
+        ],
+        [
+          64,
+          "GALLETA CASINO MENTA SIXPACK 258 G",
+          "14",
+          "14"
+        ],
+        [
+          65,
+          "GALLETA CHIPS AHOY SIXPACK 222 G",
+          "15",
+          "15"
+        ],
+        [
+          66,
+          "GALLETA CLUB SOCIAL REGULAR SIXPACK 144 G",
+          "13",
+          "13"
+        ],
+        [
+          67,
+          "GALLETA DE SODA SAN JORGE PACK 7 UND",
+          "28",
+          "28"
+        ],
+        [
+          68,
+          "GALLETA DOÑA PEPA FIELD SIXPACK 132 G",
+          "22",
+          "22"
+        ],
+        [
+          69,
+          "GALLETA FIELD CHOKOSODA SIXPACK 216 G",
+          "12",
+          "12"
+        ],
+        [
+          70,
+          "GALLETA FIELD VAINILLA FAMILIAR 136 G",
+          "36",
+          "36"
+        ],
+        [
+          71,
+          "GALLETA MOROCHAS SIXPACK 180 G",
+          "37",
+          "37"
+        ],
+        [
+          72,
+          "GALLETA OREO ORIGINAL 135 G",
+          "75",
+          "75"
+        ],
+        [
+          73,
+          "GALLETA PÍCARAS CHIPS SIXPACK 228 G",
+          "31",
+          "31"
+        ],
+        [
+          74,
+          "GALLETA SODA FIELD SIXPACK 6 UND",
+          "12",
+          "12"
+        ],
+        [
+          75,
+          "GALLETA VICTORIA SODA V ORIGINAL SIXPACK 210 G",
+          "10",
+          "10"
+        ],
+        [
+          76,
+          "GALLETAS CHARADA CHOCOLATE VAINILLA 226.8 G",
+          "85",
+          "85"
+        ],
+        [
+          77,
+          "GALLETAS CORONITA CHOCOLATE SIXPACK 216 G",
+          "7",
+          "7"
+        ],
+        [
+          78,
+          "GALLETAS FIELD CREAM CRACKER 258 G",
+          "36",
+          "36"
+        ],
+        [
+          79,
+          "GALLETAS FIELD CREAM CRACKER 73.5 G",
+          "52",
+          "52"
+        ],
+        [
+          80,
+          "GALLETAS PÍCARAS CLÁSICAS SIXPACK 228 G",
+          "8",
+          "8"
+        ],
+        [
+          81,
+          "GALLETAS PÍCARAS LA CAPUCHINA SIXPACK 228 G",
+          "12",
+          "12"
+        ],
+        [
+          82,
+          "GALLETAS RITZ PLAIN SIXPACK 120 G",
+          "22",
+          "22"
+        ],
+        [
+          83,
+          "GALLETAS TRAVESURAS FIELD 47.6 G",
+          "34",
+          "34"
+        ],
+        [
+          84,
+          "GALLETAS VICTORIA MARGARITA SIXPACK 246 G",
+          "4",
+          "4"
+        ],
+        [
+          85,
+          "GASEOSA COCA COLA 1 L",
+          "58",
+          "58"
+        ],
+        [
+          86,
+          "GASEOSA COCA COLA 3 L",
+          "13",
+          "13"
+        ],
+        [
+          87,
+          "GASEOSA COCA COLA ORIGINAL 1.5 L",
+          "62",
+          "62"
+        ],
+        [
+          88,
+          "GASEOSA COCA COLA ORIGINAL 600 ML",
+          "96",
+          "96"
+        ],
+        [
+          89,
+          "GASEOSA COCA COLA ORIGINAL SIXPACK 600 ML",
+          "20",
+          "20"
+        ],
+        [
+          90,
+          "GASEOSA COCA COLA PACK 2 BOTELLAS 1 L",
+          "49",
+          "49"
+        ],
+        [
+          91,
+          "GASEOSA COCA COLA PLUS LATA 320 ML",
+          "139",
+          "139"
+        ],
+        [
+          92,
+          "GASEOSA COCA COLA SIN AZÚCAR 1 L",
+          "95",
+          "95"
+        ],
+        [
+          93,
+          "GASEOSA COCA COLA SIN AZÚCAR SIXPACK 300 ML",
+          "94",
+          "94"
+        ],
+        [
+          94,
+          "GASEOSA COCA COLA ZERO 2.25 L",
+          "41",
+          "41"
+        ],
+        [
+          95,
+          "GASEOSA COCA COLA ZERO PACK 2 BOTELLAS 1.5 L",
+          "26",
+          "26"
+        ],
+        [
+          96,
+          "GASEOSA COCA COLA ZERO SIXPACK 600 ML",
+          "63",
+          "63"
+        ],
+        [
+          97,
+          "GASEOSA EVERVESS PACK 2 BOTELLAS 1.5 L",
+          "11",
+          "11"
+        ],
+        [
+          98,
+          "GASEOSA FANTA KOLA INGLESA 3 L",
+          "10",
+          "10"
+        ],
+        [
+          99,
+          "GASEOSA GUARANÁ 3.01 L",
+          "29",
+          "29"
+        ],
+        [
+          100,
+          "GASEOSA GUARANÁ 450 ML",
+          "51",
+          "51"
+        ],
+        [
+          101,
+          "GASEOSA INCA KOLA 1.5 L",
+          "44",
+          "44"
+        ],
+        [
+          102,
+          "GASEOSA INCA KOLA 3 L",
+          "32",
+          "32"
+        ],
+        [
+          103,
+          "GASEOSA INCA KOLA 600 ML",
+          "77",
+          "77"
+        ],
+        [
+          104,
+          "GASEOSA INCA KOLA ZERO 2.25 L",
+          "43",
+          "43"
+        ],
+        [
+          105,
+          "GASEOSA PEPSI 3 L",
+          "18",
+          "18"
+        ],
+        [
+          106,
+          "GASEOSA PEPSI COLA 1.5 L",
+          "56",
+          "56"
+        ],
+        [
+          107,
+          "GASEOSA PEPSI COLA 450 ML",
+          "93",
+          "93"
+        ],
+        [
+          108,
+          "GASEOSA SPRITE LIMA LIMÓN 3 L",
+          "15",
+          "15"
+        ],
+        [
+          109,
+          "GATORADE TROPICAL 500 ML",
+          "85",
+          "85"
+        ],
+        [
+          110,
+          "GELATINA UNIVERSAL FRESA 130 G",
+          "28",
+          "28"
+        ],
+        [
+          111,
+          "HARINA DE ARROZ COSTEÑO 1 KG",
+          "83",
+          "83"
+        ],
+        [
+          112,
+          "HARINA DE LINAZA NATURANDES 300 G",
+          "40",
+          "40"
+        ],
+        [
+          113,
+          "HARINA DE MAÍZ BLANCO PAN 1 KG",
+          "42",
+          "42"
+        ],
+        [
+          114,
+          "HARINA DE MAÍZ PAN AMARILLO 1 KG",
+          "47",
+          "47"
+        ],
+        [
+          115,
+          "HARINA DE QUINUA MOLICUSCO 250 G",
+          "30",
+          "30"
+        ],
+        [
+          116,
+          "HARINA DE TRIGO BLANCA FLOR 1 KG",
+          "45",
+          "45"
+        ],
+        [
+          117,
+          "HARINA DE TRIGO PREPARADA BLANCA FLOR 1 KG",
+          "57",
+          "57"
+        ],
+        [
+          118,
+          "HARINA PREPARADA MOLITALIA 1 KG",
+          "44",
+          "44"
+        ],
+        [
+          119,
+          "HARINA SIN PREPARAR MOLITALIA 1 KG",
+          "59",
+          "59"
+        ],
+        [
+          120,
+          "HELADO DONOFRIO BOMBONES CAJA 72 ML",
+          "50",
+          "50"
+        ],
+        [
+          121,
+          "HELADO DONOFRIO BOMBONES VAINILLA POTE 18 UND",
+          "47",
+          "47"
+        ],
+        [
+          122,
+          "HELADO DONOFRIO DONITO NAPOLITANO 2.2 L",
+          "2",
+          "2"
+        ],
+        [
+          123,
+          "HELADO DONOFRIO DONITO VAINILLA CHIPS 2.2 L",
+          "1",
+          "1"
+        ],
+        [
+          124,
+          "HELADO DONOFRIO DONO SANDWICH VAINILLA 900 ML",
+          "58",
+          "58"
+        ],
+        [
+          125,
+          "HELADO DONOFRIO PEZIDURI CHEESECAKE FRUTOS ROJOS 900 ML",
+          "24",
+          "24"
+        ],
+        [
+          126,
+          "HELADO DONOFRIO PEZIDURI CHOCOCHIPS 2.2 L",
+          "10",
+          "10"
+        ],
+        [
+          127,
+          "HELADO DONOFRIO PEZIDURI CHOCOCHIPS 900 ML",
+          "36",
+          "36"
+        ],
+        [
+          128,
+          "HELADO DONOFRIO PEZIDURI CHOCOLÚCUMA VAINILLA 2.2 L",
+          "19",
+          "19"
+        ],
+        [
+          129,
+          "HELADO DONOFRIO PEZIDURI LÚCUMA 900 ML",
+          "46",
+          "46"
+        ],
+        [
+          130,
+          "HELADO DONOFRIO PEZIDURI TRICOLOR 2.2 L",
+          "9",
+          "9"
+        ],
+        [
+          131,
+          "HELADO DONOFRIO PRINCESA CHOCOLATE MANÍ 900 ML",
+          "15",
+          "15"
+        ],
+        [
+          132,
+          "HELADO DONOFRIO TORNADO VAINILLA CAJA 1.5 L",
+          "3",
+          "3"
+        ],
+        [
+          133,
+          "HELADO FRÍO RICO CROCANTE MARACUYÁ 900 ML",
+          "18",
+          "18"
+        ],
+        [
+          134,
+          "HELADO FRÍO RICO CROCANTE SALSA CAFÉ 900 ML",
+          "8",
+          "8"
+        ],
+        [
+          135,
+          "HELADO FRÍO RICO CROCANTE SALSA FRESA POTE 900 ML",
+          "13",
+          "13"
+        ],
+        [
+          136,
+          "HELADO FRÍO RICO VAINILLA CAJA 4 UND",
+          "25",
+          "25"
+        ],
+        [
+          137,
+          "HELADO MOROCHAS CHOCOLATE Y VAINILLA POTE 900 ML",
+          "14",
+          "14"
+        ],
+        [
+          138,
+          "HELADO PALETA DONOFRIO ALASKA FRESA",
+          "52",
+          "52"
+        ],
+        [
+          139,
+          "HELADO PALETA DONOFRIO FRÍO RICO FRESA HUAURA",
+          "59",
+          "59"
+        ],
+        [
+          140,
+          "HELADO PALETA DONOFRIO SUBLIME CHOCOLATE CON MANÍ",
+          "66",
+          "66"
+        ],
+        [
+          141,
+          "HELADO PEZIDURI CHOCOLATE POTE 900 ML",
+          "42",
+          "42"
+        ],
+        [
+          142,
+          "HELADO PEZIDURI TRICOLOR POTE 900 ML",
+          "42",
+          "42"
+        ],
+        [
+          143,
+          "HELADO PEZIDURI VAINILLA POTE 900 ML",
+          "40",
+          "40"
+        ],
+        [
+          144,
+          "HELADO SUBLIME CHOCOLATE CON MANÍ POTE 900 ML",
+          "34",
+          "34"
+        ],
+        [
+          145,
+          "HELADO TONITTO MENTA ORIENTALE 1 L",
+          "17",
+          "17"
+        ],
+        [
+          146,
+          "INCA KOLA PACK 2 BOTELLAS 1 L",
+          "36",
+          "36"
+        ],
+        [
+          147,
+          "INCA KOLA SIN AZÚCAR SIXPACK 300 ML",
+          "105",
+          "105"
+        ],
+        [
+          148,
+          "INCA KOLA ZERO PACK 2 BOTELLAS 1.5 L",
+          "22",
+          "22"
+        ],
+        [
+          149,
+          "JABÓN DE LAVAR BOLÍVAR 190 G",
+          "22",
+          "22"
+        ],
+        [
+          150,
+          "KETCHUP ALACENA DOYPACK 200 G",
+          "30",
+          "30"
+        ],
+        [
+          151,
+          "LAVAVAJILLA AYUDÍN LIMÓN Y SÁBILA 900 ML",
+          "13",
+          "13"
+        ],
+        [
+          152,
+          "LAVAVAJILLA SAPOLIO LIMA LIMÓN 1.25 L",
+          "31",
+          "31"
+        ],
+        [
+          153,
+          "LEJÍA CLOROX TRADICIONAL 1 KG",
+          "50",
+          "50"
+        ],
+        [
+          154,
+          "LEJÍA SAPOLIO ORIGINAL 1.6 KG",
+          "48",
+          "48"
+        ],
+        [
+          155,
+          "LENTEJA COSTEÑO 500 G",
+          "67",
+          "67"
+        ],
+        [
+          156,
+          "LENTEJAS CONFITADO CHOCOLATE 30 G",
+          "36",
+          "36"
+        ],
+        [
+          157,
+          "MAYONESA ALACENA DOYPACK 235 G",
+          "22",
+          "22"
+        ],
+        [
+          158,
+          "MOSTAZA ALACENA DOYPACK 400 G",
+          "49",
+          "49"
+        ],
+        [
+          159,
+          "MUSS CREMINO CHOCOLATE TURRÓN SIXPACK 84 G",
+          "7",
+          "7"
+        ],
+        [
+          160,
+          "PACK COCA COLA 3 L + INCA KOLA 3 L",
+          "23",
+          "23"
+        ],
+        [
+          161,
+          "PACK INCA KOLA + COCA COLA + FANTA 3 BOTELLAS 2.25 L",
+          "60",
+          "60"
+        ],
+        [
+          162,
+          "PACK INCA KOLA 1.5 L + COCA COLA SIN AZÚCAR 1.5 L",
+          "111",
+          "111"
+        ],
+        [
+          163,
+          "PACK INCA KOLA 2.25 L + COCA COLA 2.25 L",
+          "45",
+          "45"
+        ],
+        [
+          164,
+          "PACK MINI COCA COLA + INCA KOLA + FANTA + SPRITE 300 ML",
+          "136",
+          "136"
+        ],
+        [
+          165,
+          "QUINUA COSTEÑO 500 G",
+          "59",
+          "59"
+        ],
+        [
+          166,
+          "QUITAMANCHAS VANISH ROPA COLOR 450 ML",
+          "30",
+          "30"
+        ],
+        [
+          167,
+          "SAL DE MAR MARINA MESA 1 KG",
+          "49",
+          "49"
+        ],
+        [
+          168,
+          "SALSA POMAROLA CLÁSICA 145 G",
+          "54",
+          "54"
+        ],
+        [
+          169,
+          "SPAGUETTI DON VITTORIO 950 G",
+          "34",
+          "34"
+        ],
+        [
+          170,
+          "SPORADE APPLE ICE SIN AZÚCAR 500 ML",
+          "130",
+          "130"
+        ],
+        [
+          171,
+          "SPORADE BLUEBERRY 500 ML",
+          "121",
+          "121"
+        ],
+        [
+          172,
+          "SPORADE MANDARINA 500 ML",
+          "72",
+          "72"
+        ],
+        [
+          173,
+          "SPORADE SURTIDO SIXPACK 500 ML",
+          "25",
+          "25"
+        ],
+        [
+          174,
+          "SPORADE UVA 500 ML",
+          "131",
+          "131"
+        ],
+        [
+          175,
+          "SUAVIZANTE BOLÍVAR BEBÉS Y NIÑOS 2.8 L",
+          "3",
+          "3"
+        ],
+        [
+          176,
+          "SUAVIZANTE BOLÍVAR CUIDADO TOTAL FLORAL 1.5 L",
+          "3",
+          "3"
+        ],
+        [
+          177,
+          "SUAVIZANTE BOLÍVAR CUIDADO TOTAL FLORAL 2.3 L",
+          "2",
+          "2"
+        ],
+        [
+          178,
+          "SUAVIZANTE BOLÍVAR CUIDADO TOTAL FLORAL 4.8 L",
+          "1",
+          "1"
+        ],
+        [
+          179,
+          "SUAVIZANTE BOLÍVAR PLUS LAVANDA 2.8 L",
+          "10",
+          "10"
+        ],
+        [
+          180,
+          "SUAVIZANTE DOWNY FRESH 1.4 L",
+          "15",
+          "15"
+        ],
+        [
+          181,
+          "SUAVIZANTE DOWNY INTENSE AMANECER 1.4 L",
+          "20",
+          "20"
+        ],
+        [
+          182,
+          "SUAVIZANTE DOWNY INTENSE AMANECER 2.6 L",
+          "5",
+          "5"
+        ],
+        [
+          183,
+          "SUAVIZANTE DOWNY INTENSE FLORAL 2.6 L",
+          "2",
+          "2"
+        ],
+        [
+          184,
+          "SUAVIZANTE SUAVITEL FRESCA PRIMAVERA 1.5 L",
+          "15",
+          "15"
+        ],
+        [
+          185,
+          "SUAVIZANTE SUAVITEL FRESCA PRIMAVERA 2.3 L",
+          "1",
+          "1"
+        ],
+        [
+          186,
+          "SUAVIZANTE SUAVITEL FRESCA PRIMAVERA BOTELLA 2.8 L",
+          "2",
+          "2"
+        ],
+        [
+          187,
+          "SUAVIZANTE SUAVITEL FRESCURA MANZANA 2.3 L",
+          "2",
+          "2"
+        ],
+        [
+          188,
+          "SUAVIZANTE XPLEND CARICIA DE ALGODÓN 2.8 L",
+          "2",
+          "2"
+        ],
+        [
+          189,
+          "SUAVIZANTE XPLEND SUEÑO FLORAL 800 ML",
+          "29",
+          "29"
+        ],
+        [
+          190,
+          "SUAVIZANTE XPLEND SUEÑO FLORAL BOTELLA 2.8 L",
+          "3",
+          "3"
+        ],
+        [
+          191,
+          "SUAVIZANTE XPLEND SUEÑO FLORAL DOYPACK 2.3 L",
+          "2",
+          "2"
+        ],
+        [
+          192,
+          "TORNILLO DON VITTORIO 500 G",
+          "46",
+          "46"
+        ],
+        [
+          193,
+          "TRIPACK COCA COLA 3 L + INCA KOLA 3 L + FANTA 3 L",
+          "1",
+          "1"
+        ],
+        [
+          194,
+          "WAFER FIELD CUA CUA PACK 9 UND",
+          "90",
+          "90"
+        ],
+        [
+          195,
+          "WAFER KIT KAT CHOCOLATE 41.5 G",
+          "57",
+          "57"
+        ],
+        [
+          196,
+          "WAFER NIK CHOCOLATE SIXPACK 162 G",
+          "19",
+          "19"
+        ],
+        [
+          197,
+          "WAFER NIK VAINILLA SIXPACK 162 G",
+          "22",
+          "22"
+        ],
+        [
+          "",
+          "TOTAL",
+          "7 851",
+          "7 851"
+        ]
+      ]
+    },
+    {
+      "index": 6,
+      "rows": [
+        [
+          1,
+          "1 653",
+          "1 491,00",
+          "1,11"
+        ],
+        [
+          2,
+          "2 810",
+          "2 745,00",
+          "1,02"
+        ],
+        [
+          3,
+          "2 129",
+          "2 381,00",
+          "0,89"
+        ],
+        [
+          4,
+          "792",
+          "734,00",
+          "1,08"
+        ],
+        [
+          5,
+          "467",
+          "491,00",
+          "0,95"
+        ],
+        [
+          "TOTAL",
+          "7 851",
+          "7 842,00",
+          "1,00"
+        ]
+      ]
+    },
+    {
+      "index": 7,
+      "rows": [
+        [
+          1,
+          "1 653",
+          "1 506,70",
+          "21,19 %"
+        ],
+        [
+          2,
+          "2 810",
+          "2 666,39",
+          "15,08 %"
+        ],
+        [
+          3,
+          "2 129",
+          "2 226,85",
+          "22,53 %"
+        ],
+        [
+          4,
+          "792",
+          "708,73",
+          "31,42 %"
+        ],
+        [
+          5,
+          "467",
+          "575,62",
+          "40,81 %"
+        ],
+        [
+          "GLOBAL",
+          "7 851",
+          "7 684,29",
+          "26,21 %"
+        ]
+      ]
+    }
+  ]
+}

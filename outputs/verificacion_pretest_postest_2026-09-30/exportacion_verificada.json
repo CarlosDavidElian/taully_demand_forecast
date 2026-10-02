@@ -1,0 +1,12 @@
+{
+  "run_id": "postest_20260930t090912z_20260908_7d_f195a94a",
+  "sheets": [
+    "Resumen postest",
+    "Métricas categoría",
+    "Detalle diario",
+    "Inventario"
+  ],
+  "checks": 40,
+  "failures": 0,
+  "sha256": "f16947274bb975a56c061191630fc6651ef9ed787f48760687c52e5144a2827a"
+}

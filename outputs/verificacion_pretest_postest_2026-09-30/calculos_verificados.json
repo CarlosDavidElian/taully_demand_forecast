@@ -1,0 +1,1509 @@
+{
+  "review_date": "2026-09-30",
+  "reports": {
+    "files": 168,
+    "sales_rows": 11748,
+    "units": 43105.0,
+    "history_rows": 840,
+    "catalog_products": 203,
+    "unmatched_products": [],
+    "differences": []
+  },
+  "periods": {
+    "pre": {
+      "dates": [
+        "2026-09-02",
+        "2026-09-03",
+        "2026-09-04",
+        "2026-09-05",
+        "2026-09-06",
+        "2026-09-07",
+        "2026-09-08"
+      ],
+      "by_category": {
+        "ABARROTES": {
+          "actual": 379.0,
+          "prediction": 452.05282055703225,
+          "mape": 30.064135874594456
+        },
+        "BEBIDAS": {
+          "actual": 641.0,
+          "prediction": 703.4914861761923,
+          "mape": 17.667770361885175
+        },
+        "GOLOSINAS": {
+          "actual": 465.0,
+          "prediction": 528.7258273095637,
+          "mape": 40.131652453129945
+        },
+        "HELADOS": {
+          "actual": 184.0,
+          "prediction": 204.5493605069802,
+          "mape": 25.86081591357515
+        },
+        "LIMPIEZA": {
+          "actual": 115.0,
+          "prediction": 128.15109472122282,
+          "mape": 24.70108160713174
+        }
+      },
+      "global": {
+        "actual": 1784.0,
+        "prediction": 2016.9705892709912,
+        "mape": 27.685091242063294
+      },
+      "pms_same_week_mape": 27.685091242063294,
+      "inventory": {
+        "ABARROTES": {
+          "si": 372,
+          "en": 189,
+          "sf": 316,
+          "cd": 245,
+          "isi": 43.672014260249554,
+          "dqs": 0,
+          "tqs": 0.0,
+          "stockout_dates": [],
+          "products": 38,
+          "missing_start": 23,
+          "missing_end": 18,
+          "continuity_gaps": 12,
+          "row_differences": 0,
+          "sold": 379
+        },
+        "BEBIDAS": {
+          "si": 705,
+          "en": 250,
+          "sf": 432,
+          "cd": 523,
+          "isi": 54.76439790575916,
+          "dqs": 1,
+          "tqs": 14.285714285714285,
+          "stockout_dates": [
+            "2026-09-08"
+          ],
+          "products": 45,
+          "missing_start": 27,
+          "missing_end": 27,
+          "continuity_gaps": 7,
+          "row_differences": 1,
+          "sold": 641
+        },
+        "GOLOSINAS": {
+          "si": 622,
+          "en": 150,
+          "sf": 356,
+          "cd": 416,
+          "isi": 53.8860103626943,
+          "dqs": 1,
+          "tqs": 14.285714285714285,
+          "stockout_dates": [
+            "2026-09-07"
+          ],
+          "products": 42,
+          "missing_start": 33,
+          "missing_end": 35,
+          "continuity_gaps": 4,
+          "row_differences": 1,
+          "sold": 465
+        },
+        "HELADOS": {
+          "si": 183,
+          "en": 108,
+          "sf": 164,
+          "cd": 127,
+          "isi": 43.6426116838488,
+          "dqs": 0,
+          "tqs": 0.0,
+          "stockout_dates": [],
+          "products": 25,
+          "missing_start": 14,
+          "missing_end": 16,
+          "continuity_gaps": 6,
+          "row_differences": 0,
+          "sold": 184
+        },
+        "LIMPIEZA": {
+          "si": 106,
+          "en": 81,
+          "sf": 87,
+          "cd": 100,
+          "isi": 53.475935828877006,
+          "dqs": 0,
+          "tqs": 0.0,
+          "stockout_dates": [],
+          "products": 17,
+          "missing_start": 10,
+          "missing_end": 11,
+          "continuity_gaps": 2,
+          "row_differences": 0,
+          "sold": 115
+        }
+      },
+      "inventory_total": {
+        "si": 1988,
+        "en": 778,
+        "sf": 1355,
+        "cd": 1411,
+        "dqs": 2,
+        "sold": 1784,
+        "products": 167,
+        "missing_start": 107,
+        "missing_end": 107,
+        "continuity_gaps": 31,
+        "row_differences": 2,
+        "isi": 51.01229211858279,
+        "tqs": 5.714285714285714,
+        "difference": 373
+      },
+      "word_sha256": "eb4af91969eba144eecbb5b1d02574c98fc0431b72070251e50eb4b531c4dc40"
+    },
+    "post": {
+      "dates": [
+        "2026-09-09",
+        "2026-09-10",
+        "2026-09-11",
+        "2026-09-12",
+        "2026-09-13",
+        "2026-09-14",
+        "2026-09-15"
+      ],
+      "by_category": {
+        "ABARROTES": {
+          "actual": 330.0,
+          "prediction": 399.75,
+          "mape": 39.50807428176065
+        },
+        "BEBIDAS": {
+          "actual": 611.0,
+          "prediction": 672.5,
+          "mape": 15.625529568043536
+        },
+        "GOLOSINAS": {
+          "actual": 496.0,
+          "prediction": 549.38,
+          "mape": 22.74209649376005
+        },
+        "HELADOS": {
+          "actual": 146.0,
+          "prediction": 188.0,
+          "mape": 44.325019306546395
+        },
+        "LIMPIEZA": {
+          "actual": 88.0,
+          "prediction": 121.75,
+          "mape": 47.26969459112316
+        }
+      },
+      "global": {
+        "actual": 1671.0,
+        "prediction": 1931.38,
+        "mape": 33.89408284824676
+      },
+      "pms_same_week_mape": 31.54020946705008,
+      "inventory": {
+        "ABARROTES": {
+          "si": 383,
+          "en": 175,
+          "sf": 276,
+          "cd": 282,
+          "isi": 50.53763440860215,
+          "dqs": 0,
+          "tqs": 0.0,
+          "stockout_dates": [],
+          "products": 36,
+          "missing_start": 24,
+          "missing_end": 20,
+          "continuity_gaps": 4,
+          "row_differences": 0,
+          "sold": 330
+        },
+        "BEBIDAS": {
+          "si": 672,
+          "en": 269,
+          "sf": 551,
+          "cd": 390,
+          "isi": 41.445270988310305,
+          "dqs": 0,
+          "tqs": 0.0,
+          "stockout_dates": [],
+          "products": 47,
+          "missing_start": 30,
+          "missing_end": 26,
+          "continuity_gaps": 12,
+          "row_differences": 0,
+          "sold": 611
+        },
+        "GOLOSINAS": {
+          "si": 553,
+          "en": 297,
+          "sf": 396,
+          "cd": 454,
+          "isi": 53.411764705882355,
+          "dqs": 2,
+          "tqs": 28.57142857142857,
+          "stockout_dates": [
+            "2026-09-11",
+            "2026-09-14"
+          ],
+          "products": 42,
+          "missing_start": 25,
+          "missing_end": 26,
+          "continuity_gaps": 3,
+          "row_differences": 3,
+          "sold": 496
+        },
+        "HELADOS": {
+          "si": 207,
+          "en": 23,
+          "sf": 133,
+          "cd": 97,
+          "isi": 42.17391304347826,
+          "dqs": 1,
+          "tqs": 14.285714285714285,
+          "stockout_dates": [
+            "2026-09-13"
+          ],
+          "products": 25,
+          "missing_start": 19,
+          "missing_end": 16,
+          "continuity_gaps": 4,
+          "row_differences": 1,
+          "sold": 146
+        },
+        "LIMPIEZA": {
+          "si": 150,
+          "en": 22,
+          "sf": 84,
+          "cd": 88,
+          "isi": 51.16279069767442,
+          "dqs": 0,
+          "tqs": 0.0,
+          "stockout_dates": [],
+          "products": 19,
+          "missing_start": 13,
+          "missing_end": 13,
+          "continuity_gaps": 0,
+          "row_differences": 0,
+          "sold": 88
+        }
+      },
+      "inventory_total": {
+        "si": 1965,
+        "en": 786,
+        "sf": 1440,
+        "cd": 1311,
+        "dqs": 3,
+        "sold": 1671,
+        "products": 169,
+        "missing_start": 111,
+        "missing_end": 101,
+        "continuity_gaps": 23,
+        "row_differences": 4,
+        "isi": 47.655398037077425,
+        "tqs": 8.571428571428571,
+        "difference": 360
+      },
+      "word_sha256": "14de75df1b3367c57dbb4773d67d122e8eb69c8301fa42cdcce536fac91a7e40"
+    }
+  },
+  "august_daily_reference": {
+    "ABARROTES": 56.38709677419355,
+    "BEBIDAS": 97.93548387096774,
+    "GOLOSINAS": 74.70967741935483,
+    "HELADOS": 27.225806451612904,
+    "LIMPIEZA": 18.225806451612904
+  },
+  "numeric_cells_checked": 542,
+  "checks": [
+    {
+      "check": "Historial sin claves duplicadas",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Reportes coinciden con historial",
+      "passed": true,
+      "detail": {
+        "differences": [],
+        "unmatched": [],
+        "category_labels": []
+      }
+    },
+    {
+      "check": "Inventario sin duplicados",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ejecucion visible corresponde al periodo del postest",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Predicciones repetidas coinciden con ejecucion original",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "pre tabla 1 completa",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "pre tabla 3 completa",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "pre tabla 5 completa",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "pre tabla 7 completa",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "pre tabla 8 completa",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "pre tabla 10 completa",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "pre tabla 16 completa",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "pre tabla 12 completa",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "pre tabla 14 completa",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "pre formulas originales conservadas",
+      "passed": true,
+      "detail": {
+        "document": [
+          "CD=(SI+EN)-SF",
+          "ISI=CD/(SI+EN)",
+          "TQS=(DQS/DD)×100",
+          "IE=VD/VPM",
+          "MAPE=(100/n)×Σ|(DemandaReal−DemandaPronosticada)/DemandaReal|",
+          "CD=ΣVentasrealizadas",
+          "IE=VP/VPR",
+          "MAPE=(100/n)×Σ|(DR−DP)/DR|"
+        ],
+        "thesis": [
+          "CD=(SI+EN)-SF",
+          "ISI=CD/(SI+EN)",
+          "TQS=(DQS/DD)×100",
+          "IE=VD/VPM",
+          "MAPE=(100/n)×Σ|(DemandaReal−DemandaPronosticada)/DemandaReal|",
+          "CD=ΣVentasrealizadas",
+          "IE=VP/VPR",
+          "MAPE=(100/n)×Σ|(DR−DP)/DR|"
+        ]
+      }
+    },
+    {
+      "check": "pre fecha ficha 0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "pre fecha ficha 2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "pre fecha ficha 4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "pre fecha ficha 6",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "pre fecha ficha 9",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "pre fecha ficha 11",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "pre fecha ficha 13",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "pre fecha ficha 15",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "post tabla 1 completa",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "post tabla 3 completa",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "post tabla 5 completa",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "post tabla 7 completa",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "post tabla 8 completa",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "post tabla 10 completa",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "post tabla 16 completa",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "post tabla 12 completa",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "post tabla 14 completa",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "post formulas originales conservadas",
+      "passed": true,
+      "detail": {
+        "document": [
+          "CD=(SI+EN)-SF",
+          "ISI=CD/(SI+EN)",
+          "TQS=(DQS/DD)×100",
+          "IE=VD/VPM",
+          "MAPE=(100/n)×Σ|(DemandaReal−DemandaPronosticada)/DemandaReal|",
+          "CD=ΣVentasrealizadas",
+          "IE=VP/VPR",
+          "MAPE=(100/n)×Σ|(DR−DP)/DR|"
+        ],
+        "thesis": [
+          "CD=(SI+EN)-SF",
+          "ISI=CD/(SI+EN)",
+          "TQS=(DQS/DD)×100",
+          "IE=VD/VPM",
+          "MAPE=(100/n)×Σ|(DemandaReal−DemandaPronosticada)/DemandaReal|",
+          "CD=ΣVentasrealizadas",
+          "IE=VP/VPR",
+          "MAPE=(100/n)×Σ|(DR−DP)/DR|"
+        ]
+      }
+    },
+    {
+      "check": "post fecha ficha 0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "post fecha ficha 2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "post fecha ficha 4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "post fecha ficha 6",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "post fecha ficha 9",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "post fecha ficha 11",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "post fecha ficha 13",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "post fecha ficha 15",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Postest MAPE servicio igual al recalculo",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Pretest sin ceros y postest sin ceros",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Postest inventario servicio ABARROTES si",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Postest inventario servicio ABARROTES en",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Postest inventario servicio ABARROTES sf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Postest inventario servicio ABARROTES cd",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Postest inventario servicio ABARROTES isi",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Postest inventario servicio ABARROTES dqs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Postest inventario servicio ABARROTES tqs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Postest inventario servicio BEBIDAS si",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Postest inventario servicio BEBIDAS en",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Postest inventario servicio BEBIDAS sf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Postest inventario servicio BEBIDAS cd",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Postest inventario servicio BEBIDAS isi",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Postest inventario servicio BEBIDAS dqs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Postest inventario servicio BEBIDAS tqs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Postest inventario servicio GOLOSINAS si",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Postest inventario servicio GOLOSINAS en",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Postest inventario servicio GOLOSINAS sf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Postest inventario servicio GOLOSINAS cd",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Postest inventario servicio GOLOSINAS isi",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Postest inventario servicio GOLOSINAS dqs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Postest inventario servicio GOLOSINAS tqs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Postest inventario servicio HELADOS si",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Postest inventario servicio HELADOS en",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Postest inventario servicio HELADOS sf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Postest inventario servicio HELADOS cd",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Postest inventario servicio HELADOS isi",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Postest inventario servicio HELADOS dqs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Postest inventario servicio HELADOS tqs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Postest inventario servicio LIMPIEZA si",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Postest inventario servicio LIMPIEZA en",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Postest inventario servicio LIMPIEZA sf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Postest inventario servicio LIMPIEZA cd",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Postest inventario servicio LIMPIEZA isi",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Postest inventario servicio LIMPIEZA dqs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Postest inventario servicio LIMPIEZA tqs",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "failures": [],
+  "live_run": {
+    "path": "C:\\taully_demand_forecast\\data\\posttests\\postest_20260930t090912z_20260908_7d_f195a94a.json",
+    "run_id": "postest_20260930t090912z_20260908_7d_f195a94a",
+    "created_at": "2026-09-30T09:09:12.506713+00:00",
+    "model_methods": {
+      "ABARROTES": {
+        "method": "promedio_estacional",
+        "wape": 16.53
+      },
+      "BEBIDAS": {
+        "method": "promedio_estacional",
+        "wape": 13.65
+      },
+      "GOLOSINAS": {
+        "method": "random_forest",
+        "wape": 20.01
+      },
+      "HELADOS": {
+        "method": "promedio_estacional",
+        "wape": 23.84
+      },
+      "LIMPIEZA": {
+        "method": "promedio_estacional",
+        "wape": 29.38
+      }
+    },
+    "inventory_source": {
+      "name": "inventario_producto_Taully_2026-04-01_a_2026-09-15.xlsx",
+      "source_id": "b72605497ca7b241ad7611013dc71af25fd877dc297e8504e6eb68782ac49a4b",
+      "source_kind": "archivo de demostración del proyecto",
+      "evidence_status": "no_apto_para_evidencia",
+      "is_demonstration": true,
+      "uploaded_at": "2026-09-27T12:17:15.979384",
+      "records": 11748,
+      "categories": 5,
+      "start_date": "2026-04-01",
+      "end_date": "2026-09-15"
+    }
+  },
+  "manifest": [
+    {
+      "file": "data\\reporte_ventas_2026-04-01.xlsx",
+      "sha256": "2795eee3497a219b25fae1374678707bc714cd2da9de2a5d2ed283f03ab7b39e"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-02.xlsx",
+      "sha256": "85f3cb6badf3cc41aa6446afb5459346277c6c3e95816785d5f99d5608ef460a"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-03.xlsx",
+      "sha256": "7b96d3450a63413b212b11d96b23e06e8e9003e6fff44f0e2b4626e08d4b99cc"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-04.xlsx",
+      "sha256": "465714afeb2cd2272f772a21a3450762950705d132e22dd63f0fc821f67c0816"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-05.xlsx",
+      "sha256": "086ed36e51271c088433ea68833495a9a3b865998e597cd2743b1b44ffb9c397"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-06.xlsx",
+      "sha256": "af4c5841c1bb7bf5485d9e5794f9c9727f1802e2f95e4f1bccd3288feb9cd004"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-07.xlsx",
+      "sha256": "b4884ce7edaba716cffa8080eb35249bf91c22b8260f9d58e9ad4d388aa6af24"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-08.xlsx",
+      "sha256": "185d8ec1153518c4635e96339fbad162dd6f8606d4425edb6191f3afc602ed14"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-09.xlsx",
+      "sha256": "5c176296d51d9fa13e810eb1939774bd0698650cae4551005bb33fa6aa13b948"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-10.xlsx",
+      "sha256": "bcbcdbe1a25d0f02c634d587c5c9eb1133df9bf690bf6897f1e2c3399cd90fd0"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-11.xlsx",
+      "sha256": "b56550449608de0fd6f4d8f4a193fae62c7e3a09a8eaa36e996c4b1f4537dbe5"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-12.xlsx",
+      "sha256": "71c56af5981ee1bf1b7c2aa07494a11726a588c258a770b1fb6fb0d8d141b633"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-13.xlsx",
+      "sha256": "73119987c489288593377b509fcd495faf922b6b685f174185bb4675d639cb26"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-14.xlsx",
+      "sha256": "dda7de43c25bfdb8f6bf34ad24552823b24e6c2fce287e26c189d16d71f0aed9"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-15.xlsx",
+      "sha256": "2d1e9b18f4d958e343f5ad65024d22c040d5f716e57c32d0f382381a938554e6"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-16.xlsx",
+      "sha256": "a76f44b833fb13f349a6822389ac4999d7b539a111a469e5b7823721ac86e5a0"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-17.xlsx",
+      "sha256": "dea7508516e23588f04120cc3d96784fa19f9818fb53bf1b3a5da43798007660"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-18.xlsx",
+      "sha256": "6d6d3828a74c4d83560c3532ab79901275287d8ea8a4a71eb29cf57a6ab98b03"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-19.xlsx",
+      "sha256": "bab3aaf4f7fe7dd5461b8133ba73e41441c0c830c56c49699eadf73b01b1e671"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-20.xlsx",
+      "sha256": "5098aae764b51c6e1f1706a10fc604eb8c57c3cf64e70e90f6896200e753585a"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-21.xlsx",
+      "sha256": "f6775be93c38cbfac17a07e1d16430ba26f117869c1e7299be567141d89f1246"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-22.xlsx",
+      "sha256": "37b9ded80279142f1576919ac266230a282de318838f3bbf748ab74cc1402b68"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-23.xlsx",
+      "sha256": "d96401141f0ff28fb98d5c36cf8e511d41bf7dae36182743e0841d922973e9cb"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-24.xlsx",
+      "sha256": "696b0d048224065588265268c38a2712486ff0a49206de0143fe0a625fff10d3"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-25.xlsx",
+      "sha256": "7377dfb95538fe4c165e2a4e12fb1008bf015dd96e97793613d62803bb8973dd"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-26.xlsx",
+      "sha256": "9ccfe30a0c9224fdbaf7bbba1c62c5240c68543c66c0542d477e48a132697649"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-27.xlsx",
+      "sha256": "e871bb9361dbaf08f172de32d76d6621be1b9beb011ae574f583b12060babd3b"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-28.xlsx",
+      "sha256": "dd913dfb26f62c1dca12069d7c33c3e3e89d54cb1c77ca355f696f718aac5f5c"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-29.xlsx",
+      "sha256": "8f1f71699d4a49aa5f5bdd9ad414d67cad8542815835d9a8e24627575fe191f5"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-30.xlsx",
+      "sha256": "83cc4890674d20a92f7d766da576f9144df22f8d3c460f67e66da5aee3e654f4"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-01.xlsx",
+      "sha256": "e3b98dc2e3b5e72e203485c6ded431b93fcc6a0f8f858a3aaa421c94cdfb4dc2"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-02.xlsx",
+      "sha256": "d5bdd8051da8f1e6ac08517a36fa9384f8f8ce7bd5a996073c692260272689ff"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-03.xlsx",
+      "sha256": "1327a9a8ba2d3a93ae0b88369fc7288af774388596c15ae0bce3eebe80ae08db"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-04.xlsx",
+      "sha256": "92ed19f0c2941a6dd2b97e0486729816f355b8e7ac0cb2c319773d91a8c6b420"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-05.xlsx",
+      "sha256": "0473d429feb4c0c732a7b8309f5bcf8b47a89785bd1a6cba673198e75da606de"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-06.xlsx",
+      "sha256": "209db90b7d13272a1964538251d79ce8d759dc1c8bc40a9b2751f015f104f57d"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-07.xlsx",
+      "sha256": "e38d1606e792a402a13b5f7862bcd2cbbe7bcc31df20a9d276f56332e8a228f0"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-08.xlsx",
+      "sha256": "f5e0e87f46d99eb3d72d21c783014833b0d5f29199e50744b882fa842546bafc"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-09.xlsx",
+      "sha256": "db3e5c28a9a4b1fa6d583bc0d6478f190e2b2876d94a582e60542c633735819d"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-10.xlsx",
+      "sha256": "519bef8b5cd77a24349d91806e4c20a7899e502be25fce6009b13ba26f982d07"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-11.xlsx",
+      "sha256": "1e86fb7935b529b944d0411d1249e7f91f6624eddc0812441e5246e3c55aa362"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-12.xlsx",
+      "sha256": "c3053140c9375c3a4204a1b9cba9f6c7b0130ab24ef4d80e16b30699ea7f01a4"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-13.xlsx",
+      "sha256": "968cb02a3298117ea4c6e49beab4b7e371e9e8220e9aeabe733edae02e7487e2"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-14.xlsx",
+      "sha256": "1c88744514c68087bfd3cd76052daf95faa706d187952f67c6de41524239a332"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-15.xlsx",
+      "sha256": "1d32c27697c428a951641f1eaeef6e656f9a9c76bb89fc908c3d823cd23b0ce1"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-16.xlsx",
+      "sha256": "55d38cebcffed1ceed7d0a2e24b92c52fc23d78a7a1335dac1aa6cb2d55369a7"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-17.xlsx",
+      "sha256": "3aa12a69803107389167769ccff3fbed1fca8567ddfde5a7758fe2e4713b72e1"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-18.xlsx",
+      "sha256": "d3473d2367db99b98bbc2fff199fa707e15af16ef4ae6594f95444abd435199a"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-19.xlsx",
+      "sha256": "9ac65339f98072f62eff2db8b6269a406521c7013eff503e686403ff09527775"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-20.xlsx",
+      "sha256": "d016996da0f9dfb7b0e44742cf2884d329829f3a8ced85fbe8db777b34a0d25e"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-21.xlsx",
+      "sha256": "d015c85b641896ebfab1061b73d883b101ad72f46a79112ce771a7e8b90ad052"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-22.xlsx",
+      "sha256": "a14956662f0de20b89927f2455f4fbafa937d1b015077d657e96ec746a2a701c"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-23.xlsx",
+      "sha256": "da5180483d17b3ed51ddeebfa40351c1f2c2ab2347b030d7e88b1470a05f4bb2"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-24.xlsx",
+      "sha256": "88a356b3d5eafe7ae66ef980c403be23c9c8023ec7980442a596e9eb69c6b84f"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-25.xlsx",
+      "sha256": "b7c15a355fef92ac21128bc79f95659e62d3076f9c67bb7b665942706fff71bb"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-26.xlsx",
+      "sha256": "2d4bc745076b673af0c6f5f8c6c6ad8d6d56072199faab14fb522d120298ccad"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-27.xlsx",
+      "sha256": "68f86739ed5b2a34839c59314611e2729e2fce6913ecee9b2233ebd128cb3541"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-28.xlsx",
+      "sha256": "a8a2c3808463bb25619739b7580dfb77baeb95c5c9847245f302b8b8b70c5cbb"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-29.xlsx",
+      "sha256": "9d1b8c242102e8a8b4d3f8dc77c0bc07c69b4efb8fdf14d07028b0a4d3133f51"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-30.xlsx",
+      "sha256": "cef3bb00ddc7f746927b72e868f92593d7fadbf141128ad7e04f0fa97a10b4d5"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-31.xlsx",
+      "sha256": "1d7da62fa3e5caa3f3be4c824753d9f2cc39bef994cd5799651fccbae7eaf16f"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-01.xlsx",
+      "sha256": "f1f4c8b181e4b40f86d6531f0e37025fe44b248b7bded5773b5ed051adb6b961"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-02.xlsx",
+      "sha256": "2d3aac244e667d6df55141e1dabf1656066c09da1216a349c4843843c84f5fc8"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-03.xlsx",
+      "sha256": "40308a378b377c0e318e2a7e16e0b0d3bfa570ce677f8d1c0785f3ef801ab118"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-04.xlsx",
+      "sha256": "af5edc71081a23ac88cdb19ccd0e1cce73341adf1f927461478d3368ae1ed23f"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-05.xlsx",
+      "sha256": "40c9e1b364bf7ea266efc5afba5f982d17028efb95c91ea281c5e78115f33656"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-06.xlsx",
+      "sha256": "cab9841257e5ea852a123b5a278eca61ca18b8d8f66c82bdd2fbda4ee0ccac94"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-07.xlsx",
+      "sha256": "b437a7ad9096fed521e28c4852d4184226b9a2cb11fcd36563671b272c1254e8"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-08.xlsx",
+      "sha256": "ac924defb9ba848c1a6236192241fbba0db49687b0fbca86502243eeaeee6569"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-09.xlsx",
+      "sha256": "132dc4affcca69bc10fa64a477213d549e009e9e92dadccef672a79b96be0a29"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-10.xlsx",
+      "sha256": "7bc1140733cd2bd27d08f54a4dbcf940d63dcf3b3f9febe4b6876349f911373f"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-11.xlsx",
+      "sha256": "4e69962d7b1dd7aa1e76a21874edd6a073b69d69f6fcf10b6ce37089a52b9e17"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-12.xlsx",
+      "sha256": "6037bbeba67efbac0436a1b8c5cc4e560c1c732dc451aa31037169d04e02a3be"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-13.xlsx",
+      "sha256": "9fb54832a01c4e7b7593cfb2dfd8c9b1d3e0b1616d4e4ea88e02b5e945382087"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-14.xlsx",
+      "sha256": "b5cca87d20600b341568334f01880033db2519c5937d8f14253cb854bb01a27e"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-15.xlsx",
+      "sha256": "20ba960f8ede0985aa103a8d7ec0240f75b4c3fcc8b2c9cc7871681df676970d"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-16.xlsx",
+      "sha256": "fc3b09abb8d74de7212a46f3ceddd18675e430c6f187021c3c7a56916ca11547"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-17.xlsx",
+      "sha256": "93635ea1512c3693e4f92a2eead78bdff3954cad164c327349c0c3a3e1eba6ad"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-18.xlsx",
+      "sha256": "47911b251bbbdd30da207cdb30758c2cdb821b93131a31df3615f204ebe1e2bf"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-19.xlsx",
+      "sha256": "10155722f3f69b189e2b728f36af26b3b41f3b68aa29c118620c2287fe5fe826"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-20.xlsx",
+      "sha256": "7de8532ceae6362db367a967889665e0c1f51e308cf242df2e678ddc5974d4c9"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-21.xlsx",
+      "sha256": "d831990cc8ce4cba5b0ee53925fc2d2e5963b8d271d45ccc28c2b2bc80328f1f"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-22.xlsx",
+      "sha256": "daa0ee7754fc5f3dccd1995eb69380076e5487aaa32c17c202731f8fa556136e"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-23.xlsx",
+      "sha256": "8012d319a00e574a57d6eeb2db6c4d47646aadea12678d166aefe2cd2174cb94"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-24.xlsx",
+      "sha256": "767c8804654c2107a4da4d16aa5001cb4f3b1650cfede51906581f7a68846ec1"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-25.xlsx",
+      "sha256": "e799a475f38e359597e87622f77c195b2a30b3c03901990b09c5de3498c64cc7"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-26.xlsx",
+      "sha256": "e222f36b3f1878257a8388eb8391b100212a708e738fd1b76d8d21c872a085f7"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-27.xlsx",
+      "sha256": "a601bff563adce8d25f9c59b255b421322a865bcb07ab5f8a8a3ecacd3e95681"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-28.xlsx",
+      "sha256": "e6af09636388360fddd4dec2aeae2fb116370c06cb8fc875374c88c95fc2d825"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-29.xlsx",
+      "sha256": "cca92236f9344a6cf43953e00e5fff565b824d6354241469e8879228d525bb83"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-30.xlsx",
+      "sha256": "555a90b87168731f2f5515941496af6bcf77b4149766f93de15c38cb5b5d5df7"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-01.xlsx",
+      "sha256": "c692c513919d5d85a0270d89f677d1ded10ea3b8931c95799e8072986cdee959"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-02.xlsx",
+      "sha256": "79ede1449eafcd8fe62c203c4f35391414362b27c97a33ef4661d6f3949d50b9"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-03.xlsx",
+      "sha256": "be1a9373b22eb370fb9bc277f10ff20e0a7a90f548612a323331d09136bc060e"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-04.xlsx",
+      "sha256": "b8d8cf2776f311542da5243aeab5ef447cb54d2ed4605460df8b285d522ba54c"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-05.xlsx",
+      "sha256": "4a350b849cf81fd1ad91407c5acb91551228908e15484e77d892a9addea81d6b"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-06.xlsx",
+      "sha256": "7eb8fc1d56c93fd95cb01f565edc9f8e6c5aa9f08465325f9a06a16c04ab9590"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-07.xlsx",
+      "sha256": "21a71138a9ff970eb98555c4612ee5c7fc992b74e312262aecbb9f7054e5a182"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-08.xlsx",
+      "sha256": "4f013b4e0cb78d0ab36c8a2a91d1d46ad420e3ec3884a1b75b6ca1926c5541f4"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-09.xlsx",
+      "sha256": "3fee323029955f8ff3022da076e56d1799edbdc68bd71a77ff2f6b480d1492c6"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-10.xlsx",
+      "sha256": "2f2a8068cbd85b13b28ec1746deea9e5744cb79d56fbf7cba39fb1c932c3d968"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-11.xlsx",
+      "sha256": "adb9bc1ac7cc5a2b96849326b06d3797151779f9700323325229e4521254c68a"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-12.xlsx",
+      "sha256": "b7ae18cfcddb29e2691c404569018f834d338c8058888c96b4d439063b90422b"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-13.xlsx",
+      "sha256": "b52d8ee1b31090f7b3b66cd4995e32e6ebfc48afd819f501642432a50c576bbe"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-14.xlsx",
+      "sha256": "11cdde53638de85812b0da05c762a70afb32cfc0e381dde0dd48c013bd7f8b15"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-15.xlsx",
+      "sha256": "94125e6b383400a08741c29e58edbae1b6cffe012f4ef6ef78d35608d224fadb"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-16.xlsx",
+      "sha256": "e5497e471d7eb16bbf3c7932c717bd023ad87827be33268bd0dc39e35065034b"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-17.xlsx",
+      "sha256": "8f933d9335703f11c414dfa24f6b6f508bc5b6be0f1bd6bfa9fd4839cccbfd0e"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-18.xlsx",
+      "sha256": "91cf89bf39b1455f77dbf99e4f51ea1485ebdf9615f1486e93e9d65bd6efe3f6"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-19.xlsx",
+      "sha256": "e3a23474068a815ad739c0b741d026968abc97c571b48aba56ecafaf2048f0a5"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-20.xlsx",
+      "sha256": "ad71b871a2ce87649485f649a3b63090e55badd63ff72f1864ae5ca6629749fa"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-21.xlsx",
+      "sha256": "de47fbd85201efd358aee4eb29751fdd6014d98e7872ff3c6041a6534f09704d"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-22.xlsx",
+      "sha256": "2a03f3c86af91bea8c497cee5ecc52d472b2ecbacdcd728773913804f28aca0d"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-23.xlsx",
+      "sha256": "c20c0f4ee06b0a0c86382f98827b2250ba6b34584740b0538aace13b83d920c6"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-24.xlsx",
+      "sha256": "3a37348f69caf536ef0af20db346963b54a6794b62d1f1fef48657d3cc7b6b9e"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-25.xlsx",
+      "sha256": "499db0786bfeee184d053d1b194039923bb695bc6c3522e4d625f827f24cd14b"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-26.xlsx",
+      "sha256": "e0980fd8e450daa199ddfdd2c2fa870fcaf3a7f4278b519edb2436a85c11010a"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-27.xlsx",
+      "sha256": "612b287465bdd1464dc22893e16590d365b95797048fc88808145b5253c5de2d"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-28.xlsx",
+      "sha256": "6daf5ef862590464e403dae11ad6144bb1ec8b623f2c92950356dfd65698f851"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-29.xlsx",
+      "sha256": "40e53456ac7925ff49c0a441d1cdf3cee52c30036e2ea7f8c0fda07a02ee1f04"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-30.xlsx",
+      "sha256": "cb88eb6237456c0fea1f19ae13de3aef65d71f0a0e1fcdcf59fc100cbb9fda9b"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-31.xlsx",
+      "sha256": "cc3cd53dba258c13259378884d53028badfcdcdce96535775ec427e39f28f293"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-01.xlsx",
+      "sha256": "cc2bc5c8cafe0d6491a1e6e6a2c308e519fe890f6d301badce8e6f57fd1555fb"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-02.xlsx",
+      "sha256": "27702f2d4dc2f2a261590a93be1b875faf92822058a070d2ba48e871c64fd10b"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-03.xlsx",
+      "sha256": "a8bf8f4d5ae1296fcb6752981a826aa6103a76dc7a6a5fe522da409ff8594bbb"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-04.xlsx",
+      "sha256": "ab094611d80250336123a89230e8f36eb0ae56687d19ae72015bb830c3edf9e9"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-05.xlsx",
+      "sha256": "6dd3b1078d1ad31be0eee7432428b49e18a8b5b4403fcc51501f12d9cf6e273e"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-06.xlsx",
+      "sha256": "2b464e8d713f3801365bbc627d08eda94b9a3ad35a805836b7b035d94713a4ac"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-07.xlsx",
+      "sha256": "16be68c4cc6511d952b7371c729d2f754dd055faf566ae32b790969623546089"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-08.xlsx",
+      "sha256": "48b6ac02a456f18cbd5d58dd44e79c026a4d58a2fba79a19050f8eb63692b82d"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-09.xlsx",
+      "sha256": "adcf833365f930eb141b8c8014713988c896f19361a1b8f690a3d01f4fb006bb"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-10.xlsx",
+      "sha256": "2df5f269907481d0e0969269815f0c9432dff9311dffcd2720469ae0b9ae004f"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-11.xlsx",
+      "sha256": "2f1e6e3dbb455f75471319411ec7189e3f8d173609c14ebac2a02708fb0a27d8"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-12.xlsx",
+      "sha256": "3ee3890a258e375be589a3b1848de9b616d1b0fe8ef61e5bd13b8900ad7b880e"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-13.xlsx",
+      "sha256": "d7d95e242ed71d43fafba9448b01aa74b6e9ed7e142b00e8e2eec02a6dfe4c1a"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-14.xlsx",
+      "sha256": "a3857ff8d70c6d6a0dd93d837b57eef26d252e29567a949896984d96e255d34b"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-15.xlsx",
+      "sha256": "4e3adb0d84b89f3880222fdb1a3db84717dd4693c4c2a06b551fa3aefe896017"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-16.xlsx",
+      "sha256": "bb6efbe1631fc02fc1aec68e4e7ded54efe660cb5688cf2080463a663746eb2e"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-17.xlsx",
+      "sha256": "ae9ae2dff9843b48cecee794884594daa1aaa0cd356adbe454adf364e6bf9e19"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-18.xlsx",
+      "sha256": "e8cf5b9b90575e573453569429877638541ed8ca691d83d520371dbb3c34e001"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-19.xlsx",
+      "sha256": "466ea841c1fb45ec316f2a6e805edf5ffa53e86c5d196b934e16639bde334a5f"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-20.xlsx",
+      "sha256": "23f81c1b3f2cb3154c1e103594dcd2a2490f10501c1548b7be7f3577c39e2e3c"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-21.xlsx",
+      "sha256": "dd6807f9d29c3c900ad90ec90edb74f649f3723c1120445f5940cdbf2e551868"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-22.xlsx",
+      "sha256": "705c8df2f548b70a35dfda2ef40e78022b49673eea9015f938d7536c52a7d8a4"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-23.xlsx",
+      "sha256": "3b1343ec041585064fd44c49e18e3c08f0b44229daeaceed54869a64012daad7"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-24.xlsx",
+      "sha256": "eb891fc7307604046982ea80f33b0dd88fd23be8fd80d8b2d441f7966faed4f5"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-25.xlsx",
+      "sha256": "02dae31537f179b5be7facdc91cd5c842c26467064b413002a26a644ec12f077"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-26.xlsx",
+      "sha256": "4234076ae9e922877c1c84ee9fd132b245b9ebc45e5222edc33a81693dad4161"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-27.xlsx",
+      "sha256": "b4a54df413928dc7f2858949b107b9bb34c5b3672e2c94d2785a34c39a48c978"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-28.xlsx",
+      "sha256": "6a4a98358296558a399c983c778b1fa47d005561bf7793ac1c33815886610320"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-29.xlsx",
+      "sha256": "e554dfacb1de95b93cd7d3ed6dc40628a486923eae98e494182c1a418b403c31"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-30.xlsx",
+      "sha256": "61a74f8357353a59bc842f04e9ef0a2e27024d0bb1be467c589f3561eebe4cfd"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-31.xlsx",
+      "sha256": "11ace99c2744fb4e8b945b3c025a503127676248c51139ce4c48aacff568e774"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-09-01.xlsx",
+      "sha256": "f05e08e3cf982ffe1e974dd39f101cc5f164b26cb63716cb21cd56bd730e612c"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-09-02.xlsx",
+      "sha256": "f08865345601353ada8ed3cfd0021f0a4defca6cb98d86d4109fcf07bbb9186b"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-09-03.xlsx",
+      "sha256": "7bcca0853b69de10cc5c8dcf59f8a9a1fd3fc0d61f720288c3fe02cd5b45c7d2"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-09-04.xlsx",
+      "sha256": "a77546195f56e4ff4b0ba2cd9f4f8d5b6751791636f5056bdae264dfd6b18ed1"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-09-05.xlsx",
+      "sha256": "a69c2c6cb99830b3b498c5a2be27a43bd43719552880b3e71fa122cd45aaca0a"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-09-06.xlsx",
+      "sha256": "728ebe02fc2a93d05fa0eca4450c64e7159b6bf3b90eba86d39e936fc654ef41"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-09-07.xlsx",
+      "sha256": "05b211032035cca59a320d2bf07a28e81f425d7b78162df52a9f6ceb8f6d3241"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-09-08.xlsx",
+      "sha256": "b35b034decc03224279f1e554cac7cd6e90b0f6b9995018bbbd3093ac1d41bd8"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-09-09.xlsx",
+      "sha256": "4cbe28a728c4cc8ba3d8df81189157e96309ce20ff49998dd91b3874ef95fd29"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-09-10.xlsx",
+      "sha256": "8d18e2712c097f1978dc501543f23a2022250737beede52de6ef0409db9f6535"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-09-11.xlsx",
+      "sha256": "8df5459a8ba06a40c1a382d00597483891e9af0fa42bb7ae875b4514959d4305"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-09-12.xlsx",
+      "sha256": "0266fee201551eaafdbd32abc7692df781a961538aa65e9268f8af012458031f"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-09-13.xlsx",
+      "sha256": "49fea1d1fa47525b26aa10a46c443ce2a7c61ba9791dde14620c4b77b54955aa"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-09-14.xlsx",
+      "sha256": "cb006ee950058de976e32ae4ba6786fac5b4f6d122f7b547737bfecfca216121"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-09-15.xlsx",
+      "sha256": "5e5ce7cb67c6f2d8bd198f3ad12e098d0dd990d7d8c189c95979ca112341b764"
+    },
+    {
+      "file": "outputs\\postest_visualizado\\Pretest_corregido.docx",
+      "sha256": "eb4af91969eba144eecbb5b1d02574c98fc0431b72070251e50eb4b531c4dc40"
+    },
+    {
+      "file": "outputs\\postest_visualizado\\Postest_corregido.docx",
+      "sha256": "14de75df1b3367c57dbb4773d67d122e8eb69c8301fa42cdcce536fac91a7e40"
+    },
+    {
+      "file": "data\\historial_demanda.csv",
+      "sha256": "f776c9b97f4d3cab5a116babce2ff93f670e5528bbbf72ad16a6fd51b56fe2c7"
+    },
+    {
+      "file": "data\\catalogo_maestro.xlsx",
+      "sha256": "43d04fd6c9abdea39ac5224e26ab5d544815a0e8f15abf479b207b308b66630e"
+    },
+    {
+      "file": "data\\inventario_producto_Taully_2026-04-01_a_2026-09-15.xlsx",
+      "sha256": "b72605497ca7b241ad7611013dc71af25fd877dc297e8504e6eb68782ac49a4b"
+    },
+    {
+      "file": "data\\posttests\\postest_20260927t191247z_20260908_7d_70578bbb.json",
+      "sha256": "e62173b09db7589ec203feef9dfe1cc2fa25def689266b0a687e65356c88792a"
+    },
+    {
+      "file": "data\\posttests\\postest_20260930t090912z_20260908_7d_f195a94a.json",
+      "sha256": "3c8cf7575d831da0a49b5bfce09485d1f78a640b828567c97e8749b632f8e7b5"
+    },
+    {
+      "file": "application\\services\\posttest_evaluation_service.py",
+      "sha256": "be35a9b5c1216913baa8de705942b642e26d0e75a231a248fdb80ccfdf8752fe"
+    },
+    {
+      "file": "application\\services\\inventory_service.py",
+      "sha256": "568a916dd0b92723a27dd2a39b258e74c3133ab1628c6ef6a56a88639d9e54eb"
+    },
+    {
+      "file": "interfaces\\web.py",
+      "sha256": "bf14d46bee2da73c828554e3fe03854a2cdfe5c0cb277540a8c18157f5e944db"
+    }
+  ]
+}

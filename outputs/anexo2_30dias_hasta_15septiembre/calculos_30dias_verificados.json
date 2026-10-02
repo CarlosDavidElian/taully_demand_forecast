@@ -1,0 +1,5575 @@
+{
+  "periods": {
+    "pre": {
+      "start": "2026-07-18",
+      "end": "2026-08-16",
+      "cutoff": "2026-07-17",
+      "days": [
+        "2026-07-18",
+        "2026-07-19",
+        "2026-07-20",
+        "2026-07-21",
+        "2026-07-22",
+        "2026-07-23",
+        "2026-07-24",
+        "2026-07-25",
+        "2026-07-26",
+        "2026-07-27",
+        "2026-07-28",
+        "2026-07-29",
+        "2026-07-30",
+        "2026-07-31",
+        "2026-08-01",
+        "2026-08-02",
+        "2026-08-03",
+        "2026-08-04",
+        "2026-08-05",
+        "2026-08-06",
+        "2026-08-07",
+        "2026-08-08",
+        "2026-08-09",
+        "2026-08-10",
+        "2026-08-11",
+        "2026-08-12",
+        "2026-08-13",
+        "2026-08-14",
+        "2026-08-15",
+        "2026-08-16"
+      ],
+      "by_category": {
+        "ABARROTES": {
+          "DR": 1604.0,
+          "DP": 1636.1783848802963,
+          "MAPE": 21.204972745970604,
+          "VP": 1604.0,
+          "VPR": 1491.0,
+          "IE": 1.0757880617035547
+        },
+        "BEBIDAS": {
+          "DR": 2799.0,
+          "DP": 2598.750786151455,
+          "MAPE": 12.619634443950028,
+          "VP": 2799.0,
+          "VPR": 2745.0,
+          "IE": 1.019672131147541
+        },
+        "GOLOSINAS": {
+          "DR": 2218.0,
+          "DP": 2204.6774910301515,
+          "MAPE": 20.49782972113241,
+          "VP": 2218.0,
+          "VPR": 2381.0,
+          "IE": 0.9315413691726165
+        },
+        "HELADOS": {
+          "DR": 715.0,
+          "DP": 795.2492698599798,
+          "MAPE": 39.85383385196118,
+          "VP": 715.0,
+          "VPR": 734.0,
+          "IE": 0.9741144414168937
+        },
+        "LIMPIEZA": {
+          "DR": 580.0,
+          "DP": 532.2857425687461,
+          "MAPE": 24.60883343258097,
+          "VP": 580.0,
+          "VPR": 491.0,
+          "IE": 1.1812627291242364
+        }
+      },
+      "global": {
+        "DR": 7916.0,
+        "DP": 7767.141674490629,
+        "VP": 7916.0,
+        "VPR": 7842.0,
+        "MAPE": 23.757020839119036,
+        "IE": 1.0094363682733996
+      },
+      "inventory": {
+        "ABARROTES": {
+          "SI": 394,
+          "EN": 881,
+          "SF": 315,
+          "CD": 960,
+          "ISI": 75.29411764705883,
+          "DQS": 1,
+          "DD": 30,
+          "TQS": 3.3333333333333335,
+          "missing_start": 20,
+          "missing_end": 20,
+          "gaps": 55,
+          "products": 39,
+          "stockout_dates": [
+            "2026-07-30"
+          ]
+        },
+        "BEBIDAS": {
+          "SI": 712,
+          "EN": 1481,
+          "SF": 597,
+          "CD": 1596,
+          "ISI": 72.77701778385773,
+          "DQS": 10,
+          "DD": 30,
+          "TQS": 33.33333333333333,
+          "missing_start": 30,
+          "missing_end": 29,
+          "gaps": 66,
+          "products": 49,
+          "stockout_dates": [
+            "2026-07-24",
+            "2026-07-25",
+            "2026-07-26",
+            "2026-07-29",
+            "2026-07-31",
+            "2026-08-02",
+            "2026-08-05",
+            "2026-08-06",
+            "2026-08-09",
+            "2026-08-15"
+          ]
+        },
+        "GOLOSINAS": {
+          "SI": 645,
+          "EN": 905,
+          "SF": 413,
+          "CD": 1137,
+          "ISI": 73.35483870967742,
+          "DQS": 11,
+          "DD": 30,
+          "TQS": 36.666666666666664,
+          "missing_start": 32,
+          "missing_end": 43,
+          "gaps": 66,
+          "products": 52,
+          "stockout_dates": [
+            "2026-07-18",
+            "2026-07-22",
+            "2026-07-23",
+            "2026-07-27",
+            "2026-07-28",
+            "2026-07-29",
+            "2026-07-30",
+            "2026-08-05",
+            "2026-08-06",
+            "2026-08-07",
+            "2026-08-09"
+          ]
+        },
+        "HELADOS": {
+          "SI": 191,
+          "EN": 309,
+          "SF": 151,
+          "CD": 349,
+          "ISI": 69.8,
+          "DQS": 1,
+          "DD": 30,
+          "TQS": 3.3333333333333335,
+          "missing_start": 16,
+          "missing_end": 16,
+          "gaps": 41,
+          "products": 28,
+          "stockout_dates": [
+            "2026-08-01"
+          ]
+        },
+        "LIMPIEZA": {
+          "SI": 172,
+          "EN": 335,
+          "SF": 102,
+          "CD": 405,
+          "ISI": 79.88165680473372,
+          "DQS": 0,
+          "DD": 30,
+          "TQS": 0.0,
+          "missing_start": 20,
+          "missing_end": 17,
+          "gaps": 23,
+          "products": 27,
+          "stockout_dates": []
+        }
+      },
+      "inventory_total": {
+        "SI": 2114,
+        "EN": 3911,
+        "SF": 1578,
+        "CD": 4447,
+        "DQS": 23,
+        "DD": 150,
+        "missing_start": 118,
+        "missing_end": 125,
+        "gaps": 251,
+        "products": 195,
+        "ISI": 73.80912863070539,
+        "TQS": 15.333333333333332,
+        "sales_difference": 3469.0
+      },
+      "run_id": "postest_20260930t203048z_20260717_30d_e1b32b76",
+      "baseline_same_period": 23.757021,
+      "model_methods": {
+        "ABARROTES": {
+          "method": "promedio_estacional",
+          "wape": 12.95
+        },
+        "BEBIDAS": {
+          "method": "random_forest",
+          "wape": 14.55
+        },
+        "GOLOSINAS": {
+          "method": "promedio_estacional",
+          "wape": 15.99
+        },
+        "HELADOS": {
+          "method": "promedio_estacional",
+          "wape": 18.38
+        },
+        "LIMPIEZA": {
+          "method": "random_forest",
+          "wape": 19.51
+        }
+      }
+    },
+    "post": {
+      "start": "2026-08-17",
+      "end": "2026-09-15",
+      "cutoff": "2026-08-16",
+      "days": [
+        "2026-08-17",
+        "2026-08-18",
+        "2026-08-19",
+        "2026-08-20",
+        "2026-08-21",
+        "2026-08-22",
+        "2026-08-23",
+        "2026-08-24",
+        "2026-08-25",
+        "2026-08-26",
+        "2026-08-27",
+        "2026-08-28",
+        "2026-08-29",
+        "2026-08-30",
+        "2026-08-31",
+        "2026-09-01",
+        "2026-09-02",
+        "2026-09-03",
+        "2026-09-04",
+        "2026-09-05",
+        "2026-09-06",
+        "2026-09-07",
+        "2026-09-08",
+        "2026-09-09",
+        "2026-09-10",
+        "2026-09-11",
+        "2026-09-12",
+        "2026-09-13",
+        "2026-09-14",
+        "2026-09-15"
+      ],
+      "by_category": {
+        "ABARROTES": {
+          "DR": 1653.0,
+          "DP": 1506.7,
+          "MAPE": 21.194051735592964,
+          "VP": 1653.0,
+          "VPR": 1491.0,
+          "IE": 1.108651911468813
+        },
+        "BEBIDAS": {
+          "DR": 2810.0,
+          "DP": 2666.39,
+          "MAPE": 15.078092644451214,
+          "VP": 2810.0,
+          "VPR": 2745.0,
+          "IE": 1.02367941712204
+        },
+        "GOLOSINAS": {
+          "DR": 2129.0,
+          "DP": 2226.85,
+          "MAPE": 22.525624846929666,
+          "VP": 2129.0,
+          "VPR": 2381.0,
+          "IE": 0.8941621167576649
+        },
+        "HELADOS": {
+          "DR": 792.0,
+          "DP": 708.73,
+          "MAPE": 31.423424892023892,
+          "VP": 792.0,
+          "VPR": 734.0,
+          "IE": 1.0790190735694822
+        },
+        "LIMPIEZA": {
+          "DR": 467.0,
+          "DP": 575.62,
+          "MAPE": 40.81296245497613,
+          "VP": 467.0,
+          "VPR": 491.0,
+          "IE": 0.9511201629327902
+        }
+      },
+      "global": {
+        "DR": 7851.0,
+        "DP": 7684.29,
+        "VP": 7851.0,
+        "VPR": 7842.0,
+        "MAPE": 26.206831314794773,
+        "IE": 1.0011476664116297
+      },
+      "inventory": {
+        "ABARROTES": {
+          "SI": 372,
+          "EN": 949,
+          "SF": 290,
+          "CD": 1031,
+          "ISI": 78.04693414080242,
+          "DQS": 1,
+          "DD": 30,
+          "TQS": 3.3333333333333335,
+          "missing_start": 25,
+          "missing_end": 25,
+          "gaps": 59,
+          "products": 41,
+          "stockout_dates": [
+            "2026-08-19"
+          ]
+        },
+        "BEBIDAS": {
+          "SI": 738,
+          "EN": 1433,
+          "SF": 559,
+          "CD": 1612,
+          "ISI": 74.25149700598801,
+          "DQS": 2,
+          "DD": 30,
+          "TQS": 6.666666666666667,
+          "missing_start": 30,
+          "missing_end": 28,
+          "gaps": 69,
+          "products": 49,
+          "stockout_dates": [
+            "2026-08-28",
+            "2026-09-08"
+          ]
+        },
+        "GOLOSINAS": {
+          "SI": 638,
+          "EN": 984,
+          "SF": 448,
+          "CD": 1174,
+          "ISI": 72.37977805178791,
+          "DQS": 7,
+          "DD": 30,
+          "TQS": 23.333333333333332,
+          "missing_start": 36,
+          "missing_end": 36,
+          "gaps": 62,
+          "products": 52,
+          "stockout_dates": [
+            "2026-08-23",
+            "2026-08-25",
+            "2026-08-29",
+            "2026-08-30",
+            "2026-09-07",
+            "2026-09-11",
+            "2026-09-14"
+          ]
+        },
+        "HELADOS": {
+          "SI": 210,
+          "EN": 365,
+          "SF": 141,
+          "CD": 434,
+          "ISI": 75.47826086956522,
+          "DQS": 3,
+          "DD": 30,
+          "TQS": 10.0,
+          "missing_start": 17,
+          "missing_end": 19,
+          "gaps": 38,
+          "products": 28,
+          "stockout_dates": [
+            "2026-08-17",
+            "2026-08-22",
+            "2026-09-13"
+          ]
+        },
+        "LIMPIEZA": {
+          "SI": 169,
+          "EN": 227,
+          "SF": 107,
+          "CD": 289,
+          "ISI": 72.97979797979798,
+          "DQS": 0,
+          "DD": 30,
+          "TQS": 0.0,
+          "missing_start": 17,
+          "missing_end": 21,
+          "gaps": 22,
+          "products": 27,
+          "stockout_dates": []
+        }
+      },
+      "inventory_total": {
+        "SI": 2127,
+        "EN": 3958,
+        "SF": 1545,
+        "CD": 4540,
+        "DQS": 13,
+        "DD": 150,
+        "missing_start": 125,
+        "missing_end": 129,
+        "gaps": 250,
+        "products": 197,
+        "ISI": 74.60969597370584,
+        "TQS": 8.666666666666668,
+        "sales_difference": 3311.0
+      },
+      "run_id": "postest_20260930t203110z_20260816_30d_5f23567f",
+      "baseline_same_period": 29.13829,
+      "model_methods": {
+        "ABARROTES": {
+          "method": "random_forest",
+          "wape": 14.65
+        },
+        "BEBIDAS": {
+          "method": "random_forest",
+          "wape": 13.76
+        },
+        "GOLOSINAS": {
+          "method": "promedio_estacional",
+          "wape": 14.91
+        },
+        "HELADOS": {
+          "method": "random_forest",
+          "wape": 25.67
+        },
+        "LIMPIEZA": {
+          "method": "random_forest",
+          "wape": 21.33
+        }
+      }
+    }
+  },
+  "reference_month": "2026-06",
+  "reference_daily": {
+    "ABARROTES": 49.7,
+    "BEBIDAS": 91.5,
+    "GOLOSINAS": 79.36666666666666,
+    "HELADOS": 24.466666666666665,
+    "LIMPIEZA": 16.366666666666667
+  },
+  "categories": [
+    "ABARROTES",
+    "BEBIDAS",
+    "GOLOSINAS",
+    "HELADOS",
+    "LIMPIEZA"
+  ],
+  "products": {
+    "pre": {
+      "HARINA DE MAÍZ PAN AMARILLO 1 KG": 44.0,
+      "TORNILLO DON VITTORIO 500 G": 54.0,
+      "GASEOSA INCA KOLA ZERO 2.25 L": 42.0,
+      "HARINA DE LINAZA NATURANDES 300 G": 29.0,
+      "LEJÍA CLOROX TRADICIONAL 1 KG": 44.0,
+      "ARROZ EXTRA GRAN CHALÁN 5 KG": 5.0,
+      "CARAMELOS HALLS MORA 27 G": 101.0,
+      "DETERGENTE MARSELLA LAVANDA Y ROSAS 730 G": 51.0,
+      "DETERGENTE ACE LIMPIEZA COMPLETA 700 G": 43.0,
+      "CHOCOLATE SUBLIME SONRISA CAJA 8 UND": 26.0,
+      "CHICLE TRIDENT MENTA FRESCA 30 G": 108.0,
+      "SUAVIZANTE XPLEND SUEÑO FLORAL BOTELLA 2.8 L": 7.0,
+      "CHOCOLATE LA IBÉRICA MILKY BITE SIZE 200 G": 19.0,
+      "GASEOSA COCA COLA ORIGINAL 600 ML": 142.0,
+      "HELADO PEZIDURI CHOCOLATE POTE 900 ML": 40.0,
+      "GASEOSA COCA COLA ZERO 2.25 L": 36.0,
+      "GASEOSA COCA COLA SIN AZÚCAR 1 L": 105.0,
+      "CHOCOLATE SUBLIME POWER SIXPACK 150 G": 82.0,
+      "BOMBONES SUBLIME CREMA MANÍ DOYPACK 136 G": 89.0,
+      "QUINUA COSTEÑO 500 G": 49.0,
+      "ARROZ SUPERIOR PAISANA 1 KG": 63.0,
+      "INCA KOLA PACK 2 BOTELLAS 1 L": 51.0,
+      "CHOCOLATE SUBLIME EXTREMO 50 G": 93.0,
+      "SPORADE APPLE ICE SIN AZÚCAR 500 ML": 124.0,
+      "SALSA POMAROLA CLÁSICA 145 G": 45.0,
+      "ARROZ SUPERIOR FARAÓN 750 G": 84.0,
+      "GALLETA SODA FIELD SIXPACK 6 UND": 27.0,
+      "MOSTAZA ALACENA DOYPACK 400 G": 22.0,
+      "AGUA CIELO SIN GAS 1 L": 68.0,
+      "HELADO FRÍO RICO CROCANTE MARACUYÁ 900 ML": 10.0,
+      "SUAVIZANTE BOLÍVAR BEBÉS Y NIÑOS 2.8 L": 4.0,
+      "CHICLE TRIDENT MORA AZUL 30.6 G": 103.0,
+      "HELADO FRÍO RICO VAINILLA CAJA 4 UND": 14.0,
+      "PACK COCA COLA 3 L + INCA KOLA 3 L": 11.0,
+      "BARRA MILKY SIN AZÚCAR LA IBÉRICA 50 G": 58.0,
+      "GASEOSA PEPSI COLA 1.5 L": 21.0,
+      "SPAGUETTI DON VITTORIO 950 G": 45.0,
+      "CABELLO DE ÁNGEL DON VITTORIO 250 G": 33.0,
+      "HELADO PEZIDURI VAINILLA POTE 900 ML": 36.0,
+      "WAFER FIELD CUA CUA PACK 9 UND": 73.0,
+      "BOMBONES TRIÁNGULO CON LECHE DOYPACK 136 G": 46.0,
+      "HELADO SUBLIME CHOCOLATE CON MANÍ POTE 900 ML": 18.0,
+      "HELADO DONOFRIO PEZIDURI CHOCOLÚCUMA VAINILLA 2.2 L": 21.0,
+      "GELATINA UNIVERSAL FRESA 130 G": 39.0,
+      "HELADO FRÍO RICO CROCANTE SALSA FRESA POTE 900 ML": 26.0,
+      "GATORADE TROPICAL 500 ML": 130.0,
+      "GALLETA CASINO MENTA SIXPACK 258 G": 13.0,
+      "CHOCOLATE PRINCESA CREMA MANÍ DOYPACK 136 G": 38.0,
+      "CHOCOLATE LENTEJAS FIESTA MINI BOLSA 240 G": 77.0,
+      "HARINA DE ARROZ COSTEÑO 1 KG": 80.0,
+      "HELADO FRÍO RICO CROCANTE SALSA CAFÉ 900 ML": 21.0,
+      "HELADO PEZIDURI TRICOLOR POTE 900 ML": 49.0,
+      "ARROZ BLANCO AÑEJO FARAÓN VERDE 5 KG": 4.0,
+      "SUAVIZANTE DOWNY FRESH 1.4 L": 27.0,
+      "LENTEJA COSTEÑO 500 G": 65.0,
+      "GASEOSA COCA COLA ZERO PACK 2 BOTELLAS 1.5 L": 27.0,
+      "GASEOSA INCA KOLA 600 ML": 109.0,
+      "GASEOSA INCA KOLA 1.5 L": 55.0,
+      "CHOCOLATE SUBLIME CON GALLETA 28 G": 62.0,
+      "HELADO DONOFRIO DONITO VAINILLA CHIPS 2.2 L": 7.0,
+      "GALLETA CHIPS AHOY SIXPACK 222 G": 13.0,
+      "GALLETAS CHARADA CHOCOLATE VAINILLA 226.8 G": 56.0,
+      "GASEOSA COCA COLA ORIGINAL SIXPACK 600 ML": 17.0,
+      "HELADO DONOFRIO DONO SANDWICH VAINILLA 900 ML": 34.0,
+      "BEBIDA HEY FIT TORONJA CAMU CAMU 600 ML": 57.0,
+      "GALLETA PÍCARAS CHIPS SIXPACK 228 G": 6.0,
+      "FIDEO TALLARÍN MOLITALIA 950 G": 66.0,
+      "ARROZ EXTRA PAISANA 5 KG": 3.0,
+      "CHOCOLATES VIZZIO ALMENDRA DOYPACK 96 G": 71.0,
+      "GASEOSA COCA COLA 3 L": 15.0,
+      "HARINA DE TRIGO BLANCA FLOR 1 KG": 73.0,
+      "HARINA DE TRIGO PREPARADA BLANCA FLOR 1 KG": 54.0,
+      "PACK INCA KOLA 2.25 L + COCA COLA 2.25 L": 53.0,
+      "PACK INCA KOLA 1.5 L + COCA COLA SIN AZÚCAR 1.5 L": 102.0,
+      "HELADO PALETA DONOFRIO ALASKA FRESA": 33.0,
+      "SUAVIZANTE BOLÍVAR PLUS LAVANDA 2.8 L": 4.0,
+      "AGUA SAN MATEO SIN GAS 600 ML": 105.0,
+      "SAL DE MAR MARINA MESA 1 KG": 39.0,
+      "LAVAVAJILLA SAPOLIO LIMA LIMÓN 1.25 L": 53.0,
+      "SUAVIZANTE BOLÍVAR CUIDADO TOTAL FLORAL 1.5 L": 10.0,
+      "AZÚCAR BLANCA DULFINA 1 KG": 65.0,
+      "GASEOSA GUARANÁ 450 ML": 88.0,
+      "WAFER KIT KAT CHOCOLATE 41.5 G": 81.0,
+      "CARAMELOS HALLS MENTA 27 G": 84.0,
+      "HELADO DONOFRIO BOMBONES CAJA 72 ML": 72.0,
+      "ARROZ EXTRA FARAÓN 750 G": 60.0,
+      "MAYONESA ALACENA DOYPACK 235 G": 31.0,
+      "HELADO MOROCHAS CHOCOLATE Y VAINILLA POTE 900 ML": 14.0,
+      "FIDEO LASAGNA MOLITALIA 350 G": 36.0,
+      "PACK INCA KOLA + COCA COLA + FANTA 3 BOTELLAS 2.25 L": 41.0,
+      "HELADO TONITTO MENTA ORIENTALE 1 L": 14.0,
+      "GASEOSA COCA COLA ORIGINAL 1.5 L": 55.0,
+      "BOMBONES BON O BON BOLSA 90 G": 47.0,
+      "JABÓN DE LAVAR BOLÍVAR 190 G": 33.0,
+      "GASEOSA PEPSI COLA 450 ML": 110.0,
+      "SUAVIZANTE XPLEND SUEÑO FLORAL 800 ML": 27.0,
+      "LAVAVAJILLA AYUDÍN LIMÓN Y SÁBILA 900 ML": 27.0,
+      "WAFER NIK VAINILLA SIXPACK 162 G": 35.0,
+      "GASEOSA COCA COLA 1 L": 81.0,
+      "SPORADE UVA 500 ML": 94.0,
+      "SPORADE MANDARINA 500 ML": 76.0,
+      "HARINA PREPARADA MOLITALIA 1 KG": 35.0,
+      "GALLETAS FIELD CREAM CRACKER 258 G": 28.0,
+      "BARRA CHOCOLATE DELICADORE LECHE Y PISTACHO 98 G": 47.0,
+      "ARROZ COSTEÑO EXTRA AÑEJO 5 KG": 1.0,
+      "GALLETAS TRAVESURAS FIELD 47.6 G": 33.0,
+      "ARROZ INTEGRAL VALLE NORTE 750 G": 67.0,
+      "AGUA CIELO SIN GAS 2.5 L": 45.0,
+      "HELADO DONOFRIO PEZIDURI LÚCUMA 900 ML": 37.0,
+      "GASEOSA INCA KOLA 3 L": 21.0,
+      "HARINA DE MAÍZ BLANCO PAN 1 KG": 51.0,
+      "TRIPACK COCA COLA 3 L + INCA KOLA 3 L + FANTA 3 L": 6.0,
+      "ARROZ EXTRA PAISANA 1 KG": 60.0,
+      "GASEOSA PEPSI 3 L": 15.0,
+      "AVENA 3 OSITOS PRECOCIDA CLÁSICA 250 G": 33.0,
+      "GASEOSA FANTA KOLA INGLESA 3 L": 14.0,
+      "GASEOSA COCA COLA SIN AZÚCAR SIXPACK 300 ML": 93.0,
+      "ARROZ COSTEÑO EXTRA AÑEJO 750 G": 52.0,
+      "PACK MINI COCA COLA + INCA KOLA + FANTA + SPRITE 300 ML": 131.0,
+      "BEBIDA HEY FIT COLA 600 ML": 67.0,
+      "SUAVIZANTE DOWNY INTENSE AMANECER 1.4 L": 28.0,
+      "GASEOSA COCA COLA PACK 2 BOTELLAS 1 L": 57.0,
+      "KETCHUP ALACENA DOYPACK 200 G": 17.0,
+      "BEBIDA REHIDRATANTE POWERADE MULTISABOR SIXPACK 600 ML": 14.0,
+      "HELADO DONOFRIO PEZIDURI CHEESECAKE FRUTOS ROJOS 900 ML": 30.0,
+      "FIDEOS SPAGHETTI MOLITALIA 950 G": 65.0,
+      "BEBIDA HEY FIT GOLDEN FIZZ 600 ML": 69.0,
+      "GALLETAS FIELD CREAM CRACKER 73.5 G": 32.0,
+      "BOMBONES CHOCOLATE CON LECHE FRANUÍ 150 G": 12.0,
+      "GALLETA OREO ORIGINAL 135 G": 56.0,
+      "DETERGENTE SAPOLIO FLORAL 730 G": 47.0,
+      "ARROZ SUPERIOR PAISANA 5 KG": 3.0,
+      "DETERGENTE BOLÍVAR CUIDADO TOTAL 730 G": 53.0,
+      "HELADO DONOFRIO PEZIDURI TRICOLOR 2.2 L": 18.0,
+      "LEJÍA SAPOLIO ORIGINAL 1.6 KG": 51.0,
+      "HARINA SIN PREPARAR MOLITALIA 1 KG": 37.0,
+      "HARINA DE QUINUA MOLICUSCO 250 G": 44.0,
+      "HELADO PALETA DONOFRIO FRÍO RICO FRESA HUAURA": 56.0,
+      "BIZCOCHO CHOCMAN COSTA SIXPACK 201 G": 5.0,
+      "HELADO PALETA DONOFRIO SUBLIME CHOCOLATE CON MANÍ": 61.0,
+      "GALLETAS PÍCARAS LA CAPUCHINA SIXPACK 228 G": 9.0,
+      "GASEOSA COCA COLA PLUS LATA 320 ML": 96.0,
+      "BOMBONES SUBLIME CHOCOLATE BLANCO CON MANÍ 136 G": 84.0,
+      "QUITAMANCHAS VANISH ROPA COLOR 450 ML": 33.0,
+      "LENTEJAS CONFITADO CHOCOLATE 30 G": 69.0,
+      "HELADO DONOFRIO PEZIDURI CHOCOCHIPS 900 ML": 25.0,
+      "FETUCCINI DON VITTORIO 950 G": 42.0,
+      "BARRA DE CHOCOLATE SNICKERS 52 G": 57.0,
+      "CHICLE TRIDENT SANDÍA 30 G": 78.0,
+      "GALLETA FIELD VAINILLA FAMILIAR 136 G": 25.0,
+      "CHOCOLATE CHIN CHIN MINI BOLSA 224 G": 44.0,
+      "GALLETA MOROCHAS SIXPACK 180 G": 19.0,
+      "GALLETA FIELD CHOKOSODA SIXPACK 216 G": 12.0,
+      "SUAVIZANTE SUAVITEL FRESCA PRIMAVERA 1.5 L": 9.0,
+      "GALLETAS RITZ PLAIN SIXPACK 120 G": 4.0,
+      "INCA KOLA SIN AZÚCAR SIXPACK 300 ML": 55.0,
+      "GALLETAS CORONITA CHOCOLATE SIXPACK 216 G": 14.0,
+      "SUAVIZANTE SUAVITEL FRESCURA MANZANA 2.3 L": 2.0,
+      "GALLETA DOÑA PEPA FIELD SIXPACK 132 G": 29.0,
+      "SPORADE BLUEBERRY 500 ML": 64.0,
+      "GASEOSA GUARANÁ 3.01 L": 48.0,
+      "INCA KOLA ZERO PACK 2 BOTELLAS 1.5 L": 36.0,
+      "BEBIDA REHIDRATANTE GATORADE TROPICAL SIXPACK 500 ML": 48.0,
+      "BOMBONES CHOCOLATE AMARGO FRANUÍ 150 G": 12.0,
+      "HELADO DONOFRIO DONITO NAPOLITANO 2.2 L": 10.0,
+      "HELADO DONOFRIO BOMBONES VAINILLA POTE 18 UND": 27.0,
+      "SUAVIZANTE DOWNY INTENSE FLORAL 2.6 L": 5.0,
+      "SUAVIZANTE SUAVITEL FRESCA PRIMAVERA BOTELLA 2.8 L": 5.0,
+      "BOLITAS DE CEREAL CHOCO YOGURT 2 CERRITOS 125 G": 22.0,
+      "WAFER NIK CHOCOLATE SIXPACK 162 G": 26.0,
+      "HELADO DONOFRIO PRINCESA CHOCOLATE MANÍ 900 ML": 8.0,
+      "GASEOSA SPRITE LIMA LIMÓN 3 L": 4.0,
+      "GALLETA DE SODA SAN JORGE PACK 7 UND": 22.0,
+      "GALLETAS VICTORIA MARGARITA SIXPACK 246 G": 7.0,
+      "BEBIDA HEY FIT PIÑA COLADA 600 ML": 46.0,
+      "GALLETAS PÍCARAS CLÁSICAS SIXPACK 228 G": 17.0,
+      "MUSS CREMINO CHOCOLATE TURRÓN SIXPACK 84 G": 6.0,
+      "GALLETA CLUB SOCIAL REGULAR SIXPACK 144 G": 17.0,
+      "SUAVIZANTE XPLEND SUEÑO FLORAL DOYPACK 2.3 L": 4.0,
+      "CHOCOLATE ROYAL MINTS RELLENO MENTA 200 G": 35.0,
+      "GASEOSA COCA COLA ZERO SIXPACK 600 ML": 18.0,
+      "GALLETA VICTORIA SODA V ORIGINAL SIXPACK 210 G": 6.0,
+      "HELADO DONOFRIO TORNADO VAINILLA CAJA 1.5 L": 4.0,
+      "GASEOSA EVERVESS PACK 2 BOTELLAS 1.5 L": 7.0,
+      "ARROZ EXTRA GRAN CHALÁN FINA SELECCIÓN 4 KG": 6.0,
+      "BEBIDA REHIDRATANTE SPORADE SURTIDO PACK 12 X 500 ML": 5.0,
+      "SPORADE SURTIDO SIXPACK 500 ML": 25.0,
+      "HELADO DONOFRIO PEZIDURI CHOCOCHIPS 2.2 L": 6.0,
+      "SUAVIZANTE BOLÍVAR CUIDADO TOTAL FLORAL 4.8 L": 2.0,
+      "DETERGENTE LÍQUIDO BOLÍVAR CUIDADO TOTAL 3 L": 4.0,
+      "ARROZ EXTRA COSTEÑO 5 KG": 3.0,
+      "SUAVIZANTE BOLÍVAR PLUS ORQUÍDEA 2.8 L": 4.0,
+      "SUAVIZANTE DOWNY INTENSE AMANECER 2.6 L": 2.0,
+      "CHOCOLATE LA IBÉRICA MINI MILKY BOLSA 10 UND": 7.0,
+      "SUAVIZANTE XPLEND CARICIA DE ALGODÓN 2.8 L": 1.0
+    },
+    "post": {
+      "GASEOSA COCA COLA ORIGINAL 1.5 L": 62.0,
+      "GALLETAS CHARADA CHOCOLATE VAINILLA 226.8 G": 85.0,
+      "LAVAVAJILLA SAPOLIO LIMA LIMÓN 1.25 L": 31.0,
+      "WAFER FIELD CUA CUA PACK 9 UND": 90.0,
+      "SAL DE MAR MARINA MESA 1 KG": 49.0,
+      "SUAVIZANTE XPLEND SUEÑO FLORAL DOYPACK 2.3 L": 2.0,
+      "ARROZ SUPERIOR FARAÓN 750 G": 59.0,
+      "FETUCCINI DON VITTORIO 950 G": 32.0,
+      "HELADO TONITTO MENTA ORIENTALE 1 L": 17.0,
+      "CHICLE TRIDENT MENTA FRESCA 30 G": 77.0,
+      "SUAVIZANTE DOWNY FRESH 1.4 L": 15.0,
+      "DETERGENTE MARSELLA LAVANDA Y ROSAS 730 G": 51.0,
+      "BEBIDA HEY FIT GOLDEN FIZZ 600 ML": 36.0,
+      "HELADO DONOFRIO PEZIDURI TRICOLOR 2.2 L": 9.0,
+      "HARINA SIN PREPARAR MOLITALIA 1 KG": 59.0,
+      "ARROZ EXTRA FARAÓN 750 G": 62.0,
+      "GALLETA OREO ORIGINAL 135 G": 75.0,
+      "AGUA CIELO SIN GAS 1 L": 67.0,
+      "GASEOSA GUARANÁ 3.01 L": 29.0,
+      "SPORADE UVA 500 ML": 131.0,
+      "HELADO DONOFRIO DONO SANDWICH VAINILLA 900 ML": 58.0,
+      "BEBIDA HEY FIT COLA 600 ML": 54.0,
+      "CHOCOLATE LENTEJAS FIESTA MINI BOLSA 240 G": 65.0,
+      "HELADO PEZIDURI VAINILLA POTE 900 ML": 40.0,
+      "ARROZ SUPERIOR PAISANA 1 KG": 72.0,
+      "HARINA DE ARROZ COSTEÑO 1 KG": 83.0,
+      "DETERGENTE ACE LIMPIEZA COMPLETA 700 G": 29.0,
+      "LENTEJAS CONFITADO CHOCOLATE 30 G": 36.0,
+      "PACK INCA KOLA 2.25 L + COCA COLA 2.25 L": 45.0,
+      "SUAVIZANTE SUAVITEL FRESCA PRIMAVERA 1.5 L": 15.0,
+      "HARINA DE MAÍZ PAN AMARILLO 1 KG": 47.0,
+      "INCA KOLA SIN AZÚCAR SIXPACK 300 ML": 105.0,
+      "SUAVIZANTE DOWNY INTENSE AMANECER 2.6 L": 5.0,
+      "HARINA PREPARADA MOLITALIA 1 KG": 44.0,
+      "GASEOSA INCA KOLA 600 ML": 77.0,
+      "BARRA DE CHOCOLATE SNICKERS 52 G": 58.0,
+      "GALLETA CLUB SOCIAL REGULAR SIXPACK 144 G": 13.0,
+      "HELADO DONOFRIO PEZIDURI LÚCUMA 900 ML": 46.0,
+      "GASEOSA COCA COLA ORIGINAL 600 ML": 96.0,
+      "CHICLE TRIDENT SANDÍA 30 G": 85.0,
+      "HELADO DONOFRIO PEZIDURI CHOCOLÚCUMA VAINILLA 2.2 L": 19.0,
+      "CARAMELOS HALLS MORA 27 G": 93.0,
+      "ARROZ COSTEÑO EXTRA AÑEJO 750 G": 61.0,
+      "DETERGENTE SAPOLIO FLORAL 730 G": 40.0,
+      "SUAVIZANTE XPLEND CARICIA DE ALGODÓN 2.8 L": 2.0,
+      "HARINA DE TRIGO PREPARADA BLANCA FLOR 1 KG": 57.0,
+      "PACK INCA KOLA + COCA COLA + FANTA 3 BOTELLAS 2.25 L": 60.0,
+      "ARROZ INTEGRAL VALLE NORTE 750 G": 52.0,
+      "BOMBONES SUBLIME CREMA MANÍ DOYPACK 136 G": 66.0,
+      "GASEOSA GUARANÁ 450 ML": 51.0,
+      "AGUA CIELO SIN GAS 2.5 L": 46.0,
+      "CARAMELOS HALLS MENTA 27 G": 71.0,
+      "GASEOSA PEPSI COLA 1.5 L": 56.0,
+      "SPORADE APPLE ICE SIN AZÚCAR 500 ML": 130.0,
+      "BARRA MILKY SIN AZÚCAR LA IBÉRICA 50 G": 53.0,
+      "AZÚCAR BLANCA DULFINA 1 KG": 58.0,
+      "BARRA CHOCOLATE DELICADORE LECHE Y PISTACHO 98 G": 76.0,
+      "BOMBONES CHOCOLATE CON LECHE FRANUÍ 150 G": 21.0,
+      "WAFER KIT KAT CHOCOLATE 41.5 G": 57.0,
+      "GASEOSA PEPSI COLA 450 ML": 93.0,
+      "GASEOSA INCA KOLA 3 L": 32.0,
+      "GASEOSA COCA COLA 1 L": 58.0,
+      "GALLETA SODA FIELD SIXPACK 6 UND": 12.0,
+      "ARROZ EXTRA COSTEÑO 5 KG": 3.0,
+      "HELADO SUBLIME CHOCOLATE CON MANÍ POTE 900 ML": 34.0,
+      "HELADO FRÍO RICO CROCANTE SALSA FRESA POTE 900 ML": 13.0,
+      "HELADO PALETA DONOFRIO SUBLIME CHOCOLATE CON MANÍ": 66.0,
+      "SUAVIZANTE XPLEND SUEÑO FLORAL 800 ML": 29.0,
+      "FIDEOS SPAGHETTI MOLITALIA 950 G": 65.0,
+      "GELATINA UNIVERSAL FRESA 130 G": 28.0,
+      "HELADO DONOFRIO BOMBONES CAJA 72 ML": 50.0,
+      "PACK INCA KOLA 1.5 L + COCA COLA SIN AZÚCAR 1.5 L": 111.0,
+      "GASEOSA COCA COLA PLUS LATA 320 ML": 139.0,
+      "HELADO DONOFRIO PEZIDURI CHOCOCHIPS 2.2 L": 10.0,
+      "SALSA POMAROLA CLÁSICA 145 G": 54.0,
+      "SPORADE MANDARINA 500 ML": 72.0,
+      "GASEOSA COCA COLA ZERO 2.25 L": 41.0,
+      "LENTEJA COSTEÑO 500 G": 67.0,
+      "GALLETA MOROCHAS SIXPACK 180 G": 37.0,
+      "GASEOSA INCA KOLA 1.5 L": 44.0,
+      "KETCHUP ALACENA DOYPACK 200 G": 30.0,
+      "HELADO DONOFRIO PEZIDURI CHOCOCHIPS 900 ML": 36.0,
+      "ARROZ EXTRA PAISANA 5 KG": 5.0,
+      "GASEOSA COCA COLA SIN AZÚCAR SIXPACK 300 ML": 94.0,
+      "SPORADE BLUEBERRY 500 ML": 121.0,
+      "BOLITAS DE CEREAL CHOCO YOGURT 2 CERRITOS 125 G": 35.0,
+      "GALLETAS TRAVESURAS FIELD 47.6 G": 34.0,
+      "HELADO PEZIDURI CHOCOLATE POTE 900 ML": 42.0,
+      "CHOCOLATE SUBLIME CON GALLETA 28 G": 70.0,
+      "SUAVIZANTE BOLÍVAR CUIDADO TOTAL FLORAL 4.8 L": 1.0,
+      "GALLETA FIELD VAINILLA FAMILIAR 136 G": 36.0,
+      "GASEOSA COCA COLA 3 L": 13.0,
+      "HELADO DONOFRIO PRINCESA CHOCOLATE MANÍ 900 ML": 15.0,
+      "FIDEO TALLARÍN MOLITALIA 950 G": 66.0,
+      "GALLETAS FIELD CREAM CRACKER 73.5 G": 52.0,
+      "GALLETAS FIELD CREAM CRACKER 258 G": 36.0,
+      "FIDEO LASAGNA MOLITALIA 350 G": 48.0,
+      "WAFER NIK VAINILLA SIXPACK 162 G": 22.0,
+      "GALLETA PÍCARAS CHIPS SIXPACK 228 G": 31.0,
+      "HELADO FRÍO RICO CROCANTE MARACUYÁ 900 ML": 18.0,
+      "GASEOSA COCA COLA SIN AZÚCAR 1 L": 95.0,
+      "SPAGUETTI DON VITTORIO 950 G": 34.0,
+      "CHOCOLATE SUBLIME SONRISA CAJA 8 UND": 25.0,
+      "HELADO DONOFRIO BOMBONES VAINILLA POTE 18 UND": 47.0,
+      "BEBIDA HEY FIT PIÑA COLADA 600 ML": 35.0,
+      "SUAVIZANTE BOLÍVAR PLUS LAVANDA 2.8 L": 10.0,
+      "HELADO PEZIDURI TRICOLOR POTE 900 ML": 42.0,
+      "CHOCOLATES VIZZIO ALMENDRA DOYPACK 96 G": 68.0,
+      "LEJÍA CLOROX TRADICIONAL 1 KG": 50.0,
+      "CHOCOLATE SUBLIME POWER SIXPACK 150 G": 52.0,
+      "SUAVIZANTE SUAVITEL FRESCA PRIMAVERA BOTELLA 2.8 L": 2.0,
+      "GALLETA CHIPS AHOY SIXPACK 222 G": 15.0,
+      "PACK MINI COCA COLA + INCA KOLA + FANTA + SPRITE 300 ML": 136.0,
+      "DETERGENTE BOLÍVAR CUIDADO TOTAL 730 G": 36.0,
+      "HELADO FRÍO RICO VAINILLA CAJA 4 UND": 25.0,
+      "ARROZ EXTRA GRAN CHALÁN 5 KG": 7.0,
+      "LEJÍA SAPOLIO ORIGINAL 1.6 KG": 48.0,
+      "CABELLO DE ÁNGEL DON VITTORIO 250 G": 41.0,
+      "HARINA DE LINAZA NATURANDES 300 G": 40.0,
+      "PACK COCA COLA 3 L + INCA KOLA 3 L": 23.0,
+      "BOMBONES BON O BON BOLSA 90 G": 46.0,
+      "QUITAMANCHAS VANISH ROPA COLOR 450 ML": 30.0,
+      "HELADO PALETA DONOFRIO ALASKA FRESA": 52.0,
+      "TORNILLO DON VITTORIO 500 G": 46.0,
+      "JABÓN DE LAVAR BOLÍVAR 190 G": 22.0,
+      "CHICLE TRIDENT MORA AZUL 30.6 G": 74.0,
+      "GASEOSA COCA COLA ORIGINAL SIXPACK 600 ML": 20.0,
+      "GASEOSA PEPSI 3 L": 18.0,
+      "CHOCOLATE LA IBÉRICA MILKY BITE SIZE 200 G": 17.0,
+      "GASEOSA INCA KOLA ZERO 2.25 L": 43.0,
+      "MOSTAZA ALACENA DOYPACK 400 G": 49.0,
+      "ARROZ EXTRA PAISANA 1 KG": 74.0,
+      "GALLETAS PÍCARAS CLÁSICAS SIXPACK 228 G": 8.0,
+      "BEBIDA REHIDRATANTE GATORADE TROPICAL SIXPACK 500 ML": 41.0,
+      "QUINUA COSTEÑO 500 G": 59.0,
+      "GASEOSA COCA COLA PACK 2 BOTELLAS 1 L": 49.0,
+      "GALLETA CASINO MENTA SIXPACK 258 G": 14.0,
+      "BOMBONES SUBLIME CHOCOLATE BLANCO CON MANÍ 136 G": 48.0,
+      "HELADO MOROCHAS CHOCOLATE Y VAINILLA POTE 900 ML": 14.0,
+      "ARROZ SUPERIOR PAISANA 5 KG": 8.0,
+      "GASEOSA COCA COLA ZERO SIXPACK 600 ML": 63.0,
+      "HARINA DE TRIGO BLANCA FLOR 1 KG": 45.0,
+      "AGUA SAN MATEO SIN GAS 600 ML": 103.0,
+      "GALLETAS RITZ PLAIN SIXPACK 120 G": 22.0,
+      "HARINA DE QUINUA MOLICUSCO 250 G": 30.0,
+      "ARROZ EXTRA GRAN CHALÁN FINA SELECCIÓN 4 KG": 8.0,
+      "CHOCOLATE SUBLIME EXTREMO 50 G": 70.0,
+      "HELADO PALETA DONOFRIO FRÍO RICO FRESA HUAURA": 59.0,
+      "SPORADE SURTIDO SIXPACK 500 ML": 25.0,
+      "SUAVIZANTE SUAVITEL FRESCA PRIMAVERA 2.3 L": 1.0,
+      "HARINA DE MAÍZ BLANCO PAN 1 KG": 42.0,
+      "GASEOSA FANTA KOLA INGLESA 3 L": 10.0,
+      "CHOCOLATE PRINCESA CREMA MANÍ DOYPACK 136 G": 48.0,
+      "MAYONESA ALACENA DOYPACK 235 G": 22.0,
+      "GALLETA DE SODA SAN JORGE PACK 7 UND": 28.0,
+      "GATORADE TROPICAL 500 ML": 85.0,
+      "HELADO FRÍO RICO CROCANTE SALSA CAFÉ 900 ML": 8.0,
+      "HELADO DONOFRIO PEZIDURI CHEESECAKE FRUTOS ROJOS 900 ML": 24.0,
+      "SUAVIZANTE BOLÍVAR BEBÉS Y NIÑOS 2.8 L": 3.0,
+      "SUAVIZANTE DOWNY INTENSE AMANECER 1.4 L": 20.0,
+      "GALLETAS PÍCARAS LA CAPUCHINA SIXPACK 228 G": 12.0,
+      "SUAVIZANTE BOLÍVAR CUIDADO TOTAL FLORAL 1.5 L": 3.0,
+      "CHOCOLATE ROYAL MINTS RELLENO MENTA 200 G": 49.0,
+      "GASEOSA COCA COLA ZERO PACK 2 BOTELLAS 1.5 L": 26.0,
+      "GALLETA DOÑA PEPA FIELD SIXPACK 132 G": 22.0,
+      "INCA KOLA PACK 2 BOTELLAS 1 L": 36.0,
+      "ARROZ BLANCO AÑEJO FARAÓN VERDE 5 KG": 7.0,
+      "MUSS CREMINO CHOCOLATE TURRÓN SIXPACK 84 G": 7.0,
+      "CHOCOLATE CHIN CHIN MINI BOLSA 224 G": 42.0,
+      "GALLETA FIELD CHOKOSODA SIXPACK 216 G": 12.0,
+      "INCA KOLA ZERO PACK 2 BOTELLAS 1.5 L": 22.0,
+      "AVENA 3 OSITOS PRECOCIDA CLÁSICA 250 G": 32.0,
+      "ARROZ COSTEÑO EXTRA AÑEJO 5 KG": 5.0,
+      "GASEOSA SPRITE LIMA LIMÓN 3 L": 15.0,
+      "BOMBONES CHOCOLATE AMARGO FRANUÍ 150 G": 21.0,
+      "ARROZ FARAÓN EXTRA AÑEJO PREMIUM 10 KG": 1.0,
+      "BIZCOCHO CHOCMAN COSTA SIXPACK 201 G": 12.0,
+      "BEBIDA REHIDRATANTE POWERADE MULTISABOR SIXPACK 600 ML": 34.0,
+      "SUAVIZANTE XPLEND SUEÑO FLORAL BOTELLA 2.8 L": 3.0,
+      "SUAVIZANTE BOLÍVAR CUIDADO TOTAL FLORAL 2.3 L": 2.0,
+      "BEBIDA HEY FIT TORONJA CAMU CAMU 600 ML": 50.0,
+      "HELADO DONOFRIO TORNADO VAINILLA CAJA 1.5 L": 3.0,
+      "SUAVIZANTE DOWNY INTENSE FLORAL 2.6 L": 2.0,
+      "WAFER NIK CHOCOLATE SIXPACK 162 G": 19.0,
+      "LAVAVAJILLA AYUDÍN LIMÓN Y SÁBILA 900 ML": 13.0,
+      "GALLETAS CORONITA CHOCOLATE SIXPACK 216 G": 7.0,
+      "GASEOSA EVERVESS PACK 2 BOTELLAS 1.5 L": 11.0,
+      "HELADO DONOFRIO DONITO NAPOLITANO 2.2 L": 2.0,
+      "ARROZ FARAÓN EXTRA 5 KG": 2.0,
+      "BEBIDA REHIDRATANTE SPORADE SURTIDO PACK 12 X 500 ML": 6.0,
+      "BOMBONES TRIÁNGULO CON LECHE DOYPACK 136 G": 27.0,
+      "GALLETAS VICTORIA MARGARITA SIXPACK 246 G": 4.0,
+      "CHOCOLATE LA IBÉRICA MINI MILKY BOLSA 10 UND": 6.0,
+      "TRIPACK COCA COLA 3 L + INCA KOLA 3 L + FANTA 3 L": 1.0,
+      "GALLETA VICTORIA SODA V ORIGINAL SIXPACK 210 G": 10.0,
+      "SUAVIZANTE SUAVITEL FRESCURA MANZANA 2.3 L": 2.0,
+      "HELADO DONOFRIO DONITO VAINILLA CHIPS 2.2 L": 1.0
+    }
+  },
+  "checks": [
+    {
+      "check": "Historial sin claves duplicadas",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Reportes coinciden con historial",
+      "passed": true,
+      "detail": {
+        "differences": [],
+        "unmatched": [],
+        "category_labels": []
+      }
+    },
+    {
+      "check": "Inventario sin duplicados",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "pre real ABARROTES 2026-07-18",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 ABARROTES 2026-07-18",
+      "passed": true
+    },
+    {
+      "check": "pre real ABARROTES 2026-07-19",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 ABARROTES 2026-07-19",
+      "passed": true
+    },
+    {
+      "check": "pre real ABARROTES 2026-07-20",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 ABARROTES 2026-07-20",
+      "passed": true
+    },
+    {
+      "check": "pre real ABARROTES 2026-07-21",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 ABARROTES 2026-07-21",
+      "passed": true
+    },
+    {
+      "check": "pre real ABARROTES 2026-07-22",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 ABARROTES 2026-07-22",
+      "passed": true
+    },
+    {
+      "check": "pre real ABARROTES 2026-07-23",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 ABARROTES 2026-07-23",
+      "passed": true
+    },
+    {
+      "check": "pre real ABARROTES 2026-07-24",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 ABARROTES 2026-07-24",
+      "passed": true
+    },
+    {
+      "check": "pre real ABARROTES 2026-07-25",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 ABARROTES 2026-07-25",
+      "passed": true
+    },
+    {
+      "check": "pre real ABARROTES 2026-07-26",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 ABARROTES 2026-07-26",
+      "passed": true
+    },
+    {
+      "check": "pre real ABARROTES 2026-07-27",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 ABARROTES 2026-07-27",
+      "passed": true
+    },
+    {
+      "check": "pre real ABARROTES 2026-07-28",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 ABARROTES 2026-07-28",
+      "passed": true
+    },
+    {
+      "check": "pre real ABARROTES 2026-07-29",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 ABARROTES 2026-07-29",
+      "passed": true
+    },
+    {
+      "check": "pre real ABARROTES 2026-07-30",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 ABARROTES 2026-07-30",
+      "passed": true
+    },
+    {
+      "check": "pre real ABARROTES 2026-07-31",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 ABARROTES 2026-07-31",
+      "passed": true
+    },
+    {
+      "check": "pre real ABARROTES 2026-08-01",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 ABARROTES 2026-08-01",
+      "passed": true
+    },
+    {
+      "check": "pre real ABARROTES 2026-08-02",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 ABARROTES 2026-08-02",
+      "passed": true
+    },
+    {
+      "check": "pre real ABARROTES 2026-08-03",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 ABARROTES 2026-08-03",
+      "passed": true
+    },
+    {
+      "check": "pre real ABARROTES 2026-08-04",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 ABARROTES 2026-08-04",
+      "passed": true
+    },
+    {
+      "check": "pre real ABARROTES 2026-08-05",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 ABARROTES 2026-08-05",
+      "passed": true
+    },
+    {
+      "check": "pre real ABARROTES 2026-08-06",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 ABARROTES 2026-08-06",
+      "passed": true
+    },
+    {
+      "check": "pre real ABARROTES 2026-08-07",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 ABARROTES 2026-08-07",
+      "passed": true
+    },
+    {
+      "check": "pre real ABARROTES 2026-08-08",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 ABARROTES 2026-08-08",
+      "passed": true
+    },
+    {
+      "check": "pre real ABARROTES 2026-08-09",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 ABARROTES 2026-08-09",
+      "passed": true
+    },
+    {
+      "check": "pre real ABARROTES 2026-08-10",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 ABARROTES 2026-08-10",
+      "passed": true
+    },
+    {
+      "check": "pre real ABARROTES 2026-08-11",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 ABARROTES 2026-08-11",
+      "passed": true
+    },
+    {
+      "check": "pre real ABARROTES 2026-08-12",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 ABARROTES 2026-08-12",
+      "passed": true
+    },
+    {
+      "check": "pre real ABARROTES 2026-08-13",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 ABARROTES 2026-08-13",
+      "passed": true
+    },
+    {
+      "check": "pre real ABARROTES 2026-08-14",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 ABARROTES 2026-08-14",
+      "passed": true
+    },
+    {
+      "check": "pre real ABARROTES 2026-08-15",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 ABARROTES 2026-08-15",
+      "passed": true
+    },
+    {
+      "check": "pre real ABARROTES 2026-08-16",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 ABARROTES 2026-08-16",
+      "passed": true
+    },
+    {
+      "check": "pre MAPE ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "pre inventario ABARROTES SI",
+      "passed": true
+    },
+    {
+      "check": "pre inventario ABARROTES EN",
+      "passed": true
+    },
+    {
+      "check": "pre inventario ABARROTES SF",
+      "passed": true
+    },
+    {
+      "check": "pre inventario ABARROTES CD",
+      "passed": true
+    },
+    {
+      "check": "pre inventario ABARROTES ISI",
+      "passed": true
+    },
+    {
+      "check": "pre inventario ABARROTES DQS",
+      "passed": true
+    },
+    {
+      "check": "pre inventario ABARROTES DD",
+      "passed": true
+    },
+    {
+      "check": "pre inventario ABARROTES TQS",
+      "passed": true
+    },
+    {
+      "check": "pre real BEBIDAS 2026-07-18",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 BEBIDAS 2026-07-18",
+      "passed": true
+    },
+    {
+      "check": "pre real BEBIDAS 2026-07-19",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 BEBIDAS 2026-07-19",
+      "passed": true
+    },
+    {
+      "check": "pre real BEBIDAS 2026-07-20",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 BEBIDAS 2026-07-20",
+      "passed": true
+    },
+    {
+      "check": "pre real BEBIDAS 2026-07-21",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 BEBIDAS 2026-07-21",
+      "passed": true
+    },
+    {
+      "check": "pre real BEBIDAS 2026-07-22",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 BEBIDAS 2026-07-22",
+      "passed": true
+    },
+    {
+      "check": "pre real BEBIDAS 2026-07-23",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 BEBIDAS 2026-07-23",
+      "passed": true
+    },
+    {
+      "check": "pre real BEBIDAS 2026-07-24",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 BEBIDAS 2026-07-24",
+      "passed": true
+    },
+    {
+      "check": "pre real BEBIDAS 2026-07-25",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 BEBIDAS 2026-07-25",
+      "passed": true
+    },
+    {
+      "check": "pre real BEBIDAS 2026-07-26",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 BEBIDAS 2026-07-26",
+      "passed": true
+    },
+    {
+      "check": "pre real BEBIDAS 2026-07-27",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 BEBIDAS 2026-07-27",
+      "passed": true
+    },
+    {
+      "check": "pre real BEBIDAS 2026-07-28",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 BEBIDAS 2026-07-28",
+      "passed": true
+    },
+    {
+      "check": "pre real BEBIDAS 2026-07-29",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 BEBIDAS 2026-07-29",
+      "passed": true
+    },
+    {
+      "check": "pre real BEBIDAS 2026-07-30",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 BEBIDAS 2026-07-30",
+      "passed": true
+    },
+    {
+      "check": "pre real BEBIDAS 2026-07-31",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 BEBIDAS 2026-07-31",
+      "passed": true
+    },
+    {
+      "check": "pre real BEBIDAS 2026-08-01",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 BEBIDAS 2026-08-01",
+      "passed": true
+    },
+    {
+      "check": "pre real BEBIDAS 2026-08-02",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 BEBIDAS 2026-08-02",
+      "passed": true
+    },
+    {
+      "check": "pre real BEBIDAS 2026-08-03",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 BEBIDAS 2026-08-03",
+      "passed": true
+    },
+    {
+      "check": "pre real BEBIDAS 2026-08-04",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 BEBIDAS 2026-08-04",
+      "passed": true
+    },
+    {
+      "check": "pre real BEBIDAS 2026-08-05",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 BEBIDAS 2026-08-05",
+      "passed": true
+    },
+    {
+      "check": "pre real BEBIDAS 2026-08-06",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 BEBIDAS 2026-08-06",
+      "passed": true
+    },
+    {
+      "check": "pre real BEBIDAS 2026-08-07",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 BEBIDAS 2026-08-07",
+      "passed": true
+    },
+    {
+      "check": "pre real BEBIDAS 2026-08-08",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 BEBIDAS 2026-08-08",
+      "passed": true
+    },
+    {
+      "check": "pre real BEBIDAS 2026-08-09",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 BEBIDAS 2026-08-09",
+      "passed": true
+    },
+    {
+      "check": "pre real BEBIDAS 2026-08-10",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 BEBIDAS 2026-08-10",
+      "passed": true
+    },
+    {
+      "check": "pre real BEBIDAS 2026-08-11",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 BEBIDAS 2026-08-11",
+      "passed": true
+    },
+    {
+      "check": "pre real BEBIDAS 2026-08-12",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 BEBIDAS 2026-08-12",
+      "passed": true
+    },
+    {
+      "check": "pre real BEBIDAS 2026-08-13",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 BEBIDAS 2026-08-13",
+      "passed": true
+    },
+    {
+      "check": "pre real BEBIDAS 2026-08-14",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 BEBIDAS 2026-08-14",
+      "passed": true
+    },
+    {
+      "check": "pre real BEBIDAS 2026-08-15",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 BEBIDAS 2026-08-15",
+      "passed": true
+    },
+    {
+      "check": "pre real BEBIDAS 2026-08-16",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 BEBIDAS 2026-08-16",
+      "passed": true
+    },
+    {
+      "check": "pre MAPE BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "pre inventario BEBIDAS SI",
+      "passed": true
+    },
+    {
+      "check": "pre inventario BEBIDAS EN",
+      "passed": true
+    },
+    {
+      "check": "pre inventario BEBIDAS SF",
+      "passed": true
+    },
+    {
+      "check": "pre inventario BEBIDAS CD",
+      "passed": true
+    },
+    {
+      "check": "pre inventario BEBIDAS ISI",
+      "passed": true
+    },
+    {
+      "check": "pre inventario BEBIDAS DQS",
+      "passed": true
+    },
+    {
+      "check": "pre inventario BEBIDAS DD",
+      "passed": true
+    },
+    {
+      "check": "pre inventario BEBIDAS TQS",
+      "passed": true
+    },
+    {
+      "check": "pre real GOLOSINAS 2026-07-18",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 GOLOSINAS 2026-07-18",
+      "passed": true
+    },
+    {
+      "check": "pre real GOLOSINAS 2026-07-19",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 GOLOSINAS 2026-07-19",
+      "passed": true
+    },
+    {
+      "check": "pre real GOLOSINAS 2026-07-20",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 GOLOSINAS 2026-07-20",
+      "passed": true
+    },
+    {
+      "check": "pre real GOLOSINAS 2026-07-21",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 GOLOSINAS 2026-07-21",
+      "passed": true
+    },
+    {
+      "check": "pre real GOLOSINAS 2026-07-22",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 GOLOSINAS 2026-07-22",
+      "passed": true
+    },
+    {
+      "check": "pre real GOLOSINAS 2026-07-23",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 GOLOSINAS 2026-07-23",
+      "passed": true
+    },
+    {
+      "check": "pre real GOLOSINAS 2026-07-24",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 GOLOSINAS 2026-07-24",
+      "passed": true
+    },
+    {
+      "check": "pre real GOLOSINAS 2026-07-25",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 GOLOSINAS 2026-07-25",
+      "passed": true
+    },
+    {
+      "check": "pre real GOLOSINAS 2026-07-26",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 GOLOSINAS 2026-07-26",
+      "passed": true
+    },
+    {
+      "check": "pre real GOLOSINAS 2026-07-27",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 GOLOSINAS 2026-07-27",
+      "passed": true
+    },
+    {
+      "check": "pre real GOLOSINAS 2026-07-28",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 GOLOSINAS 2026-07-28",
+      "passed": true
+    },
+    {
+      "check": "pre real GOLOSINAS 2026-07-29",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 GOLOSINAS 2026-07-29",
+      "passed": true
+    },
+    {
+      "check": "pre real GOLOSINAS 2026-07-30",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 GOLOSINAS 2026-07-30",
+      "passed": true
+    },
+    {
+      "check": "pre real GOLOSINAS 2026-07-31",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 GOLOSINAS 2026-07-31",
+      "passed": true
+    },
+    {
+      "check": "pre real GOLOSINAS 2026-08-01",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 GOLOSINAS 2026-08-01",
+      "passed": true
+    },
+    {
+      "check": "pre real GOLOSINAS 2026-08-02",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 GOLOSINAS 2026-08-02",
+      "passed": true
+    },
+    {
+      "check": "pre real GOLOSINAS 2026-08-03",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 GOLOSINAS 2026-08-03",
+      "passed": true
+    },
+    {
+      "check": "pre real GOLOSINAS 2026-08-04",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 GOLOSINAS 2026-08-04",
+      "passed": true
+    },
+    {
+      "check": "pre real GOLOSINAS 2026-08-05",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 GOLOSINAS 2026-08-05",
+      "passed": true
+    },
+    {
+      "check": "pre real GOLOSINAS 2026-08-06",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 GOLOSINAS 2026-08-06",
+      "passed": true
+    },
+    {
+      "check": "pre real GOLOSINAS 2026-08-07",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 GOLOSINAS 2026-08-07",
+      "passed": true
+    },
+    {
+      "check": "pre real GOLOSINAS 2026-08-08",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 GOLOSINAS 2026-08-08",
+      "passed": true
+    },
+    {
+      "check": "pre real GOLOSINAS 2026-08-09",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 GOLOSINAS 2026-08-09",
+      "passed": true
+    },
+    {
+      "check": "pre real GOLOSINAS 2026-08-10",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 GOLOSINAS 2026-08-10",
+      "passed": true
+    },
+    {
+      "check": "pre real GOLOSINAS 2026-08-11",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 GOLOSINAS 2026-08-11",
+      "passed": true
+    },
+    {
+      "check": "pre real GOLOSINAS 2026-08-12",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 GOLOSINAS 2026-08-12",
+      "passed": true
+    },
+    {
+      "check": "pre real GOLOSINAS 2026-08-13",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 GOLOSINAS 2026-08-13",
+      "passed": true
+    },
+    {
+      "check": "pre real GOLOSINAS 2026-08-14",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 GOLOSINAS 2026-08-14",
+      "passed": true
+    },
+    {
+      "check": "pre real GOLOSINAS 2026-08-15",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 GOLOSINAS 2026-08-15",
+      "passed": true
+    },
+    {
+      "check": "pre real GOLOSINAS 2026-08-16",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 GOLOSINAS 2026-08-16",
+      "passed": true
+    },
+    {
+      "check": "pre MAPE GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "pre inventario GOLOSINAS SI",
+      "passed": true
+    },
+    {
+      "check": "pre inventario GOLOSINAS EN",
+      "passed": true
+    },
+    {
+      "check": "pre inventario GOLOSINAS SF",
+      "passed": true
+    },
+    {
+      "check": "pre inventario GOLOSINAS CD",
+      "passed": true
+    },
+    {
+      "check": "pre inventario GOLOSINAS ISI",
+      "passed": true
+    },
+    {
+      "check": "pre inventario GOLOSINAS DQS",
+      "passed": true
+    },
+    {
+      "check": "pre inventario GOLOSINAS DD",
+      "passed": true
+    },
+    {
+      "check": "pre inventario GOLOSINAS TQS",
+      "passed": true
+    },
+    {
+      "check": "pre real HELADOS 2026-07-18",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 HELADOS 2026-07-18",
+      "passed": true
+    },
+    {
+      "check": "pre real HELADOS 2026-07-19",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 HELADOS 2026-07-19",
+      "passed": true
+    },
+    {
+      "check": "pre real HELADOS 2026-07-20",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 HELADOS 2026-07-20",
+      "passed": true
+    },
+    {
+      "check": "pre real HELADOS 2026-07-21",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 HELADOS 2026-07-21",
+      "passed": true
+    },
+    {
+      "check": "pre real HELADOS 2026-07-22",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 HELADOS 2026-07-22",
+      "passed": true
+    },
+    {
+      "check": "pre real HELADOS 2026-07-23",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 HELADOS 2026-07-23",
+      "passed": true
+    },
+    {
+      "check": "pre real HELADOS 2026-07-24",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 HELADOS 2026-07-24",
+      "passed": true
+    },
+    {
+      "check": "pre real HELADOS 2026-07-25",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 HELADOS 2026-07-25",
+      "passed": true
+    },
+    {
+      "check": "pre real HELADOS 2026-07-26",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 HELADOS 2026-07-26",
+      "passed": true
+    },
+    {
+      "check": "pre real HELADOS 2026-07-27",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 HELADOS 2026-07-27",
+      "passed": true
+    },
+    {
+      "check": "pre real HELADOS 2026-07-28",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 HELADOS 2026-07-28",
+      "passed": true
+    },
+    {
+      "check": "pre real HELADOS 2026-07-29",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 HELADOS 2026-07-29",
+      "passed": true
+    },
+    {
+      "check": "pre real HELADOS 2026-07-30",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 HELADOS 2026-07-30",
+      "passed": true
+    },
+    {
+      "check": "pre real HELADOS 2026-07-31",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 HELADOS 2026-07-31",
+      "passed": true
+    },
+    {
+      "check": "pre real HELADOS 2026-08-01",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 HELADOS 2026-08-01",
+      "passed": true
+    },
+    {
+      "check": "pre real HELADOS 2026-08-02",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 HELADOS 2026-08-02",
+      "passed": true
+    },
+    {
+      "check": "pre real HELADOS 2026-08-03",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 HELADOS 2026-08-03",
+      "passed": true
+    },
+    {
+      "check": "pre real HELADOS 2026-08-04",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 HELADOS 2026-08-04",
+      "passed": true
+    },
+    {
+      "check": "pre real HELADOS 2026-08-05",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 HELADOS 2026-08-05",
+      "passed": true
+    },
+    {
+      "check": "pre real HELADOS 2026-08-06",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 HELADOS 2026-08-06",
+      "passed": true
+    },
+    {
+      "check": "pre real HELADOS 2026-08-07",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 HELADOS 2026-08-07",
+      "passed": true
+    },
+    {
+      "check": "pre real HELADOS 2026-08-08",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 HELADOS 2026-08-08",
+      "passed": true
+    },
+    {
+      "check": "pre real HELADOS 2026-08-09",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 HELADOS 2026-08-09",
+      "passed": true
+    },
+    {
+      "check": "pre real HELADOS 2026-08-10",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 HELADOS 2026-08-10",
+      "passed": true
+    },
+    {
+      "check": "pre real HELADOS 2026-08-11",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 HELADOS 2026-08-11",
+      "passed": true
+    },
+    {
+      "check": "pre real HELADOS 2026-08-12",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 HELADOS 2026-08-12",
+      "passed": true
+    },
+    {
+      "check": "pre real HELADOS 2026-08-13",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 HELADOS 2026-08-13",
+      "passed": true
+    },
+    {
+      "check": "pre real HELADOS 2026-08-14",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 HELADOS 2026-08-14",
+      "passed": true
+    },
+    {
+      "check": "pre real HELADOS 2026-08-15",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 HELADOS 2026-08-15",
+      "passed": true
+    },
+    {
+      "check": "pre real HELADOS 2026-08-16",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 HELADOS 2026-08-16",
+      "passed": true
+    },
+    {
+      "check": "pre MAPE HELADOS",
+      "passed": true
+    },
+    {
+      "check": "pre inventario HELADOS SI",
+      "passed": true
+    },
+    {
+      "check": "pre inventario HELADOS EN",
+      "passed": true
+    },
+    {
+      "check": "pre inventario HELADOS SF",
+      "passed": true
+    },
+    {
+      "check": "pre inventario HELADOS CD",
+      "passed": true
+    },
+    {
+      "check": "pre inventario HELADOS ISI",
+      "passed": true
+    },
+    {
+      "check": "pre inventario HELADOS DQS",
+      "passed": true
+    },
+    {
+      "check": "pre inventario HELADOS DD",
+      "passed": true
+    },
+    {
+      "check": "pre inventario HELADOS TQS",
+      "passed": true
+    },
+    {
+      "check": "pre real LIMPIEZA 2026-07-18",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 LIMPIEZA 2026-07-18",
+      "passed": true
+    },
+    {
+      "check": "pre real LIMPIEZA 2026-07-19",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 LIMPIEZA 2026-07-19",
+      "passed": true
+    },
+    {
+      "check": "pre real LIMPIEZA 2026-07-20",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 LIMPIEZA 2026-07-20",
+      "passed": true
+    },
+    {
+      "check": "pre real LIMPIEZA 2026-07-21",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 LIMPIEZA 2026-07-21",
+      "passed": true
+    },
+    {
+      "check": "pre real LIMPIEZA 2026-07-22",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 LIMPIEZA 2026-07-22",
+      "passed": true
+    },
+    {
+      "check": "pre real LIMPIEZA 2026-07-23",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 LIMPIEZA 2026-07-23",
+      "passed": true
+    },
+    {
+      "check": "pre real LIMPIEZA 2026-07-24",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 LIMPIEZA 2026-07-24",
+      "passed": true
+    },
+    {
+      "check": "pre real LIMPIEZA 2026-07-25",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 LIMPIEZA 2026-07-25",
+      "passed": true
+    },
+    {
+      "check": "pre real LIMPIEZA 2026-07-26",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 LIMPIEZA 2026-07-26",
+      "passed": true
+    },
+    {
+      "check": "pre real LIMPIEZA 2026-07-27",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 LIMPIEZA 2026-07-27",
+      "passed": true
+    },
+    {
+      "check": "pre real LIMPIEZA 2026-07-28",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 LIMPIEZA 2026-07-28",
+      "passed": true
+    },
+    {
+      "check": "pre real LIMPIEZA 2026-07-29",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 LIMPIEZA 2026-07-29",
+      "passed": true
+    },
+    {
+      "check": "pre real LIMPIEZA 2026-07-30",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 LIMPIEZA 2026-07-30",
+      "passed": true
+    },
+    {
+      "check": "pre real LIMPIEZA 2026-07-31",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 LIMPIEZA 2026-07-31",
+      "passed": true
+    },
+    {
+      "check": "pre real LIMPIEZA 2026-08-01",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 LIMPIEZA 2026-08-01",
+      "passed": true
+    },
+    {
+      "check": "pre real LIMPIEZA 2026-08-02",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 LIMPIEZA 2026-08-02",
+      "passed": true
+    },
+    {
+      "check": "pre real LIMPIEZA 2026-08-03",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 LIMPIEZA 2026-08-03",
+      "passed": true
+    },
+    {
+      "check": "pre real LIMPIEZA 2026-08-04",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 LIMPIEZA 2026-08-04",
+      "passed": true
+    },
+    {
+      "check": "pre real LIMPIEZA 2026-08-05",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 LIMPIEZA 2026-08-05",
+      "passed": true
+    },
+    {
+      "check": "pre real LIMPIEZA 2026-08-06",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 LIMPIEZA 2026-08-06",
+      "passed": true
+    },
+    {
+      "check": "pre real LIMPIEZA 2026-08-07",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 LIMPIEZA 2026-08-07",
+      "passed": true
+    },
+    {
+      "check": "pre real LIMPIEZA 2026-08-08",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 LIMPIEZA 2026-08-08",
+      "passed": true
+    },
+    {
+      "check": "pre real LIMPIEZA 2026-08-09",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 LIMPIEZA 2026-08-09",
+      "passed": true
+    },
+    {
+      "check": "pre real LIMPIEZA 2026-08-10",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 LIMPIEZA 2026-08-10",
+      "passed": true
+    },
+    {
+      "check": "pre real LIMPIEZA 2026-08-11",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 LIMPIEZA 2026-08-11",
+      "passed": true
+    },
+    {
+      "check": "pre real LIMPIEZA 2026-08-12",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 LIMPIEZA 2026-08-12",
+      "passed": true
+    },
+    {
+      "check": "pre real LIMPIEZA 2026-08-13",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 LIMPIEZA 2026-08-13",
+      "passed": true
+    },
+    {
+      "check": "pre real LIMPIEZA 2026-08-14",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 LIMPIEZA 2026-08-14",
+      "passed": true
+    },
+    {
+      "check": "pre real LIMPIEZA 2026-08-15",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 LIMPIEZA 2026-08-15",
+      "passed": true
+    },
+    {
+      "check": "pre real LIMPIEZA 2026-08-16",
+      "passed": true
+    },
+    {
+      "check": "pre PMS7 LIMPIEZA 2026-08-16",
+      "passed": true
+    },
+    {
+      "check": "pre MAPE LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "pre inventario LIMPIEZA SI",
+      "passed": true
+    },
+    {
+      "check": "pre inventario LIMPIEZA EN",
+      "passed": true
+    },
+    {
+      "check": "pre inventario LIMPIEZA SF",
+      "passed": true
+    },
+    {
+      "check": "pre inventario LIMPIEZA CD",
+      "passed": true
+    },
+    {
+      "check": "pre inventario LIMPIEZA ISI",
+      "passed": true
+    },
+    {
+      "check": "pre inventario LIMPIEZA DQS",
+      "passed": true
+    },
+    {
+      "check": "pre inventario LIMPIEZA DD",
+      "passed": true
+    },
+    {
+      "check": "pre inventario LIMPIEZA TQS",
+      "passed": true
+    },
+    {
+      "check": "pre producto volumen total",
+      "passed": true
+    },
+    {
+      "check": "pre Excel categoría ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "pre Excel categoría BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel categoría GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel categoría HELADOS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel categoría LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-18 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-19 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-20 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-21 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-22 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-23 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-24 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-25 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-26 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-27 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-28 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-29 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-30 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-31 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-01 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-02 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-03 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-04 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-05 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-06 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-07 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-08 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-09 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-10 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-11 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-12 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-13 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-14 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-15 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-16 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-18 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-19 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-20 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-21 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-22 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-23 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-24 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-25 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-26 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-27 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-28 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-29 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-30 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-31 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-01 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-02 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-03 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-04 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-05 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-06 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-07 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-08 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-09 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-10 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-11 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-12 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-13 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-14 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-15 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-16 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-18 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-19 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-20 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-21 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-22 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-23 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-24 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-25 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-26 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-27 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-28 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-29 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-30 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-31 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-01 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-02 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-03 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-04 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-05 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-06 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-07 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-08 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-09 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-10 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-11 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-12 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-13 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-14 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-15 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-16 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-18 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-19 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-20 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-21 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-22 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-23 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-24 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-25 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-26 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-27 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-28 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-29 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-30 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-31 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-01 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-02 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-03 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-04 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-05 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-06 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-07 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-08 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-09 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-10 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-11 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-12 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-13 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-14 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-15 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-16 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-18 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-19 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-20 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-21 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-22 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-23 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-24 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-25 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-26 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-27 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-28 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-29 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-30 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-07-31 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-01 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-02 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-03 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-04 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-05 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-06 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-07 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-08 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-09 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-10 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-11 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-12 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-13 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-14 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-15 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "pre Excel día 2026-08-16 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "post real ABARROTES 2026-08-17",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 ABARROTES 2026-08-17",
+      "passed": true
+    },
+    {
+      "check": "post real ABARROTES 2026-08-18",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 ABARROTES 2026-08-18",
+      "passed": true
+    },
+    {
+      "check": "post real ABARROTES 2026-08-19",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 ABARROTES 2026-08-19",
+      "passed": true
+    },
+    {
+      "check": "post real ABARROTES 2026-08-20",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 ABARROTES 2026-08-20",
+      "passed": true
+    },
+    {
+      "check": "post real ABARROTES 2026-08-21",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 ABARROTES 2026-08-21",
+      "passed": true
+    },
+    {
+      "check": "post real ABARROTES 2026-08-22",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 ABARROTES 2026-08-22",
+      "passed": true
+    },
+    {
+      "check": "post real ABARROTES 2026-08-23",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 ABARROTES 2026-08-23",
+      "passed": true
+    },
+    {
+      "check": "post real ABARROTES 2026-08-24",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 ABARROTES 2026-08-24",
+      "passed": true
+    },
+    {
+      "check": "post real ABARROTES 2026-08-25",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 ABARROTES 2026-08-25",
+      "passed": true
+    },
+    {
+      "check": "post real ABARROTES 2026-08-26",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 ABARROTES 2026-08-26",
+      "passed": true
+    },
+    {
+      "check": "post real ABARROTES 2026-08-27",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 ABARROTES 2026-08-27",
+      "passed": true
+    },
+    {
+      "check": "post real ABARROTES 2026-08-28",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 ABARROTES 2026-08-28",
+      "passed": true
+    },
+    {
+      "check": "post real ABARROTES 2026-08-29",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 ABARROTES 2026-08-29",
+      "passed": true
+    },
+    {
+      "check": "post real ABARROTES 2026-08-30",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 ABARROTES 2026-08-30",
+      "passed": true
+    },
+    {
+      "check": "post real ABARROTES 2026-08-31",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 ABARROTES 2026-08-31",
+      "passed": true
+    },
+    {
+      "check": "post real ABARROTES 2026-09-01",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 ABARROTES 2026-09-01",
+      "passed": true
+    },
+    {
+      "check": "post real ABARROTES 2026-09-02",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 ABARROTES 2026-09-02",
+      "passed": true
+    },
+    {
+      "check": "post real ABARROTES 2026-09-03",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 ABARROTES 2026-09-03",
+      "passed": true
+    },
+    {
+      "check": "post real ABARROTES 2026-09-04",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 ABARROTES 2026-09-04",
+      "passed": true
+    },
+    {
+      "check": "post real ABARROTES 2026-09-05",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 ABARROTES 2026-09-05",
+      "passed": true
+    },
+    {
+      "check": "post real ABARROTES 2026-09-06",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 ABARROTES 2026-09-06",
+      "passed": true
+    },
+    {
+      "check": "post real ABARROTES 2026-09-07",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 ABARROTES 2026-09-07",
+      "passed": true
+    },
+    {
+      "check": "post real ABARROTES 2026-09-08",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 ABARROTES 2026-09-08",
+      "passed": true
+    },
+    {
+      "check": "post real ABARROTES 2026-09-09",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 ABARROTES 2026-09-09",
+      "passed": true
+    },
+    {
+      "check": "post real ABARROTES 2026-09-10",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 ABARROTES 2026-09-10",
+      "passed": true
+    },
+    {
+      "check": "post real ABARROTES 2026-09-11",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 ABARROTES 2026-09-11",
+      "passed": true
+    },
+    {
+      "check": "post real ABARROTES 2026-09-12",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 ABARROTES 2026-09-12",
+      "passed": true
+    },
+    {
+      "check": "post real ABARROTES 2026-09-13",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 ABARROTES 2026-09-13",
+      "passed": true
+    },
+    {
+      "check": "post real ABARROTES 2026-09-14",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 ABARROTES 2026-09-14",
+      "passed": true
+    },
+    {
+      "check": "post real ABARROTES 2026-09-15",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 ABARROTES 2026-09-15",
+      "passed": true
+    },
+    {
+      "check": "post MAPE ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "post inventario ABARROTES SI",
+      "passed": true
+    },
+    {
+      "check": "post inventario ABARROTES EN",
+      "passed": true
+    },
+    {
+      "check": "post inventario ABARROTES SF",
+      "passed": true
+    },
+    {
+      "check": "post inventario ABARROTES CD",
+      "passed": true
+    },
+    {
+      "check": "post inventario ABARROTES ISI",
+      "passed": true
+    },
+    {
+      "check": "post inventario ABARROTES DQS",
+      "passed": true
+    },
+    {
+      "check": "post inventario ABARROTES DD",
+      "passed": true
+    },
+    {
+      "check": "post inventario ABARROTES TQS",
+      "passed": true
+    },
+    {
+      "check": "post real BEBIDAS 2026-08-17",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 BEBIDAS 2026-08-17",
+      "passed": true
+    },
+    {
+      "check": "post real BEBIDAS 2026-08-18",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 BEBIDAS 2026-08-18",
+      "passed": true
+    },
+    {
+      "check": "post real BEBIDAS 2026-08-19",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 BEBIDAS 2026-08-19",
+      "passed": true
+    },
+    {
+      "check": "post real BEBIDAS 2026-08-20",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 BEBIDAS 2026-08-20",
+      "passed": true
+    },
+    {
+      "check": "post real BEBIDAS 2026-08-21",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 BEBIDAS 2026-08-21",
+      "passed": true
+    },
+    {
+      "check": "post real BEBIDAS 2026-08-22",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 BEBIDAS 2026-08-22",
+      "passed": true
+    },
+    {
+      "check": "post real BEBIDAS 2026-08-23",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 BEBIDAS 2026-08-23",
+      "passed": true
+    },
+    {
+      "check": "post real BEBIDAS 2026-08-24",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 BEBIDAS 2026-08-24",
+      "passed": true
+    },
+    {
+      "check": "post real BEBIDAS 2026-08-25",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 BEBIDAS 2026-08-25",
+      "passed": true
+    },
+    {
+      "check": "post real BEBIDAS 2026-08-26",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 BEBIDAS 2026-08-26",
+      "passed": true
+    },
+    {
+      "check": "post real BEBIDAS 2026-08-27",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 BEBIDAS 2026-08-27",
+      "passed": true
+    },
+    {
+      "check": "post real BEBIDAS 2026-08-28",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 BEBIDAS 2026-08-28",
+      "passed": true
+    },
+    {
+      "check": "post real BEBIDAS 2026-08-29",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 BEBIDAS 2026-08-29",
+      "passed": true
+    },
+    {
+      "check": "post real BEBIDAS 2026-08-30",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 BEBIDAS 2026-08-30",
+      "passed": true
+    },
+    {
+      "check": "post real BEBIDAS 2026-08-31",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 BEBIDAS 2026-08-31",
+      "passed": true
+    },
+    {
+      "check": "post real BEBIDAS 2026-09-01",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 BEBIDAS 2026-09-01",
+      "passed": true
+    },
+    {
+      "check": "post real BEBIDAS 2026-09-02",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 BEBIDAS 2026-09-02",
+      "passed": true
+    },
+    {
+      "check": "post real BEBIDAS 2026-09-03",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 BEBIDAS 2026-09-03",
+      "passed": true
+    },
+    {
+      "check": "post real BEBIDAS 2026-09-04",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 BEBIDAS 2026-09-04",
+      "passed": true
+    },
+    {
+      "check": "post real BEBIDAS 2026-09-05",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 BEBIDAS 2026-09-05",
+      "passed": true
+    },
+    {
+      "check": "post real BEBIDAS 2026-09-06",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 BEBIDAS 2026-09-06",
+      "passed": true
+    },
+    {
+      "check": "post real BEBIDAS 2026-09-07",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 BEBIDAS 2026-09-07",
+      "passed": true
+    },
+    {
+      "check": "post real BEBIDAS 2026-09-08",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 BEBIDAS 2026-09-08",
+      "passed": true
+    },
+    {
+      "check": "post real BEBIDAS 2026-09-09",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 BEBIDAS 2026-09-09",
+      "passed": true
+    },
+    {
+      "check": "post real BEBIDAS 2026-09-10",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 BEBIDAS 2026-09-10",
+      "passed": true
+    },
+    {
+      "check": "post real BEBIDAS 2026-09-11",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 BEBIDAS 2026-09-11",
+      "passed": true
+    },
+    {
+      "check": "post real BEBIDAS 2026-09-12",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 BEBIDAS 2026-09-12",
+      "passed": true
+    },
+    {
+      "check": "post real BEBIDAS 2026-09-13",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 BEBIDAS 2026-09-13",
+      "passed": true
+    },
+    {
+      "check": "post real BEBIDAS 2026-09-14",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 BEBIDAS 2026-09-14",
+      "passed": true
+    },
+    {
+      "check": "post real BEBIDAS 2026-09-15",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 BEBIDAS 2026-09-15",
+      "passed": true
+    },
+    {
+      "check": "post MAPE BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "post inventario BEBIDAS SI",
+      "passed": true
+    },
+    {
+      "check": "post inventario BEBIDAS EN",
+      "passed": true
+    },
+    {
+      "check": "post inventario BEBIDAS SF",
+      "passed": true
+    },
+    {
+      "check": "post inventario BEBIDAS CD",
+      "passed": true
+    },
+    {
+      "check": "post inventario BEBIDAS ISI",
+      "passed": true
+    },
+    {
+      "check": "post inventario BEBIDAS DQS",
+      "passed": true
+    },
+    {
+      "check": "post inventario BEBIDAS DD",
+      "passed": true
+    },
+    {
+      "check": "post inventario BEBIDAS TQS",
+      "passed": true
+    },
+    {
+      "check": "post real GOLOSINAS 2026-08-17",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 GOLOSINAS 2026-08-17",
+      "passed": true
+    },
+    {
+      "check": "post real GOLOSINAS 2026-08-18",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 GOLOSINAS 2026-08-18",
+      "passed": true
+    },
+    {
+      "check": "post real GOLOSINAS 2026-08-19",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 GOLOSINAS 2026-08-19",
+      "passed": true
+    },
+    {
+      "check": "post real GOLOSINAS 2026-08-20",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 GOLOSINAS 2026-08-20",
+      "passed": true
+    },
+    {
+      "check": "post real GOLOSINAS 2026-08-21",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 GOLOSINAS 2026-08-21",
+      "passed": true
+    },
+    {
+      "check": "post real GOLOSINAS 2026-08-22",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 GOLOSINAS 2026-08-22",
+      "passed": true
+    },
+    {
+      "check": "post real GOLOSINAS 2026-08-23",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 GOLOSINAS 2026-08-23",
+      "passed": true
+    },
+    {
+      "check": "post real GOLOSINAS 2026-08-24",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 GOLOSINAS 2026-08-24",
+      "passed": true
+    },
+    {
+      "check": "post real GOLOSINAS 2026-08-25",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 GOLOSINAS 2026-08-25",
+      "passed": true
+    },
+    {
+      "check": "post real GOLOSINAS 2026-08-26",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 GOLOSINAS 2026-08-26",
+      "passed": true
+    },
+    {
+      "check": "post real GOLOSINAS 2026-08-27",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 GOLOSINAS 2026-08-27",
+      "passed": true
+    },
+    {
+      "check": "post real GOLOSINAS 2026-08-28",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 GOLOSINAS 2026-08-28",
+      "passed": true
+    },
+    {
+      "check": "post real GOLOSINAS 2026-08-29",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 GOLOSINAS 2026-08-29",
+      "passed": true
+    },
+    {
+      "check": "post real GOLOSINAS 2026-08-30",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 GOLOSINAS 2026-08-30",
+      "passed": true
+    },
+    {
+      "check": "post real GOLOSINAS 2026-08-31",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 GOLOSINAS 2026-08-31",
+      "passed": true
+    },
+    {
+      "check": "post real GOLOSINAS 2026-09-01",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 GOLOSINAS 2026-09-01",
+      "passed": true
+    },
+    {
+      "check": "post real GOLOSINAS 2026-09-02",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 GOLOSINAS 2026-09-02",
+      "passed": true
+    },
+    {
+      "check": "post real GOLOSINAS 2026-09-03",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 GOLOSINAS 2026-09-03",
+      "passed": true
+    },
+    {
+      "check": "post real GOLOSINAS 2026-09-04",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 GOLOSINAS 2026-09-04",
+      "passed": true
+    },
+    {
+      "check": "post real GOLOSINAS 2026-09-05",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 GOLOSINAS 2026-09-05",
+      "passed": true
+    },
+    {
+      "check": "post real GOLOSINAS 2026-09-06",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 GOLOSINAS 2026-09-06",
+      "passed": true
+    },
+    {
+      "check": "post real GOLOSINAS 2026-09-07",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 GOLOSINAS 2026-09-07",
+      "passed": true
+    },
+    {
+      "check": "post real GOLOSINAS 2026-09-08",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 GOLOSINAS 2026-09-08",
+      "passed": true
+    },
+    {
+      "check": "post real GOLOSINAS 2026-09-09",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 GOLOSINAS 2026-09-09",
+      "passed": true
+    },
+    {
+      "check": "post real GOLOSINAS 2026-09-10",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 GOLOSINAS 2026-09-10",
+      "passed": true
+    },
+    {
+      "check": "post real GOLOSINAS 2026-09-11",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 GOLOSINAS 2026-09-11",
+      "passed": true
+    },
+    {
+      "check": "post real GOLOSINAS 2026-09-12",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 GOLOSINAS 2026-09-12",
+      "passed": true
+    },
+    {
+      "check": "post real GOLOSINAS 2026-09-13",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 GOLOSINAS 2026-09-13",
+      "passed": true
+    },
+    {
+      "check": "post real GOLOSINAS 2026-09-14",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 GOLOSINAS 2026-09-14",
+      "passed": true
+    },
+    {
+      "check": "post real GOLOSINAS 2026-09-15",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 GOLOSINAS 2026-09-15",
+      "passed": true
+    },
+    {
+      "check": "post MAPE GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "post inventario GOLOSINAS SI",
+      "passed": true
+    },
+    {
+      "check": "post inventario GOLOSINAS EN",
+      "passed": true
+    },
+    {
+      "check": "post inventario GOLOSINAS SF",
+      "passed": true
+    },
+    {
+      "check": "post inventario GOLOSINAS CD",
+      "passed": true
+    },
+    {
+      "check": "post inventario GOLOSINAS ISI",
+      "passed": true
+    },
+    {
+      "check": "post inventario GOLOSINAS DQS",
+      "passed": true
+    },
+    {
+      "check": "post inventario GOLOSINAS DD",
+      "passed": true
+    },
+    {
+      "check": "post inventario GOLOSINAS TQS",
+      "passed": true
+    },
+    {
+      "check": "post real HELADOS 2026-08-17",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 HELADOS 2026-08-17",
+      "passed": true
+    },
+    {
+      "check": "post real HELADOS 2026-08-18",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 HELADOS 2026-08-18",
+      "passed": true
+    },
+    {
+      "check": "post real HELADOS 2026-08-19",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 HELADOS 2026-08-19",
+      "passed": true
+    },
+    {
+      "check": "post real HELADOS 2026-08-20",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 HELADOS 2026-08-20",
+      "passed": true
+    },
+    {
+      "check": "post real HELADOS 2026-08-21",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 HELADOS 2026-08-21",
+      "passed": true
+    },
+    {
+      "check": "post real HELADOS 2026-08-22",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 HELADOS 2026-08-22",
+      "passed": true
+    },
+    {
+      "check": "post real HELADOS 2026-08-23",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 HELADOS 2026-08-23",
+      "passed": true
+    },
+    {
+      "check": "post real HELADOS 2026-08-24",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 HELADOS 2026-08-24",
+      "passed": true
+    },
+    {
+      "check": "post real HELADOS 2026-08-25",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 HELADOS 2026-08-25",
+      "passed": true
+    },
+    {
+      "check": "post real HELADOS 2026-08-26",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 HELADOS 2026-08-26",
+      "passed": true
+    },
+    {
+      "check": "post real HELADOS 2026-08-27",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 HELADOS 2026-08-27",
+      "passed": true
+    },
+    {
+      "check": "post real HELADOS 2026-08-28",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 HELADOS 2026-08-28",
+      "passed": true
+    },
+    {
+      "check": "post real HELADOS 2026-08-29",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 HELADOS 2026-08-29",
+      "passed": true
+    },
+    {
+      "check": "post real HELADOS 2026-08-30",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 HELADOS 2026-08-30",
+      "passed": true
+    },
+    {
+      "check": "post real HELADOS 2026-08-31",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 HELADOS 2026-08-31",
+      "passed": true
+    },
+    {
+      "check": "post real HELADOS 2026-09-01",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 HELADOS 2026-09-01",
+      "passed": true
+    },
+    {
+      "check": "post real HELADOS 2026-09-02",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 HELADOS 2026-09-02",
+      "passed": true
+    },
+    {
+      "check": "post real HELADOS 2026-09-03",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 HELADOS 2026-09-03",
+      "passed": true
+    },
+    {
+      "check": "post real HELADOS 2026-09-04",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 HELADOS 2026-09-04",
+      "passed": true
+    },
+    {
+      "check": "post real HELADOS 2026-09-05",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 HELADOS 2026-09-05",
+      "passed": true
+    },
+    {
+      "check": "post real HELADOS 2026-09-06",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 HELADOS 2026-09-06",
+      "passed": true
+    },
+    {
+      "check": "post real HELADOS 2026-09-07",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 HELADOS 2026-09-07",
+      "passed": true
+    },
+    {
+      "check": "post real HELADOS 2026-09-08",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 HELADOS 2026-09-08",
+      "passed": true
+    },
+    {
+      "check": "post real HELADOS 2026-09-09",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 HELADOS 2026-09-09",
+      "passed": true
+    },
+    {
+      "check": "post real HELADOS 2026-09-10",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 HELADOS 2026-09-10",
+      "passed": true
+    },
+    {
+      "check": "post real HELADOS 2026-09-11",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 HELADOS 2026-09-11",
+      "passed": true
+    },
+    {
+      "check": "post real HELADOS 2026-09-12",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 HELADOS 2026-09-12",
+      "passed": true
+    },
+    {
+      "check": "post real HELADOS 2026-09-13",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 HELADOS 2026-09-13",
+      "passed": true
+    },
+    {
+      "check": "post real HELADOS 2026-09-14",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 HELADOS 2026-09-14",
+      "passed": true
+    },
+    {
+      "check": "post real HELADOS 2026-09-15",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 HELADOS 2026-09-15",
+      "passed": true
+    },
+    {
+      "check": "post MAPE HELADOS",
+      "passed": true
+    },
+    {
+      "check": "post inventario HELADOS SI",
+      "passed": true
+    },
+    {
+      "check": "post inventario HELADOS EN",
+      "passed": true
+    },
+    {
+      "check": "post inventario HELADOS SF",
+      "passed": true
+    },
+    {
+      "check": "post inventario HELADOS CD",
+      "passed": true
+    },
+    {
+      "check": "post inventario HELADOS ISI",
+      "passed": true
+    },
+    {
+      "check": "post inventario HELADOS DQS",
+      "passed": true
+    },
+    {
+      "check": "post inventario HELADOS DD",
+      "passed": true
+    },
+    {
+      "check": "post inventario HELADOS TQS",
+      "passed": true
+    },
+    {
+      "check": "post real LIMPIEZA 2026-08-17",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 LIMPIEZA 2026-08-17",
+      "passed": true
+    },
+    {
+      "check": "post real LIMPIEZA 2026-08-18",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 LIMPIEZA 2026-08-18",
+      "passed": true
+    },
+    {
+      "check": "post real LIMPIEZA 2026-08-19",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 LIMPIEZA 2026-08-19",
+      "passed": true
+    },
+    {
+      "check": "post real LIMPIEZA 2026-08-20",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 LIMPIEZA 2026-08-20",
+      "passed": true
+    },
+    {
+      "check": "post real LIMPIEZA 2026-08-21",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 LIMPIEZA 2026-08-21",
+      "passed": true
+    },
+    {
+      "check": "post real LIMPIEZA 2026-08-22",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 LIMPIEZA 2026-08-22",
+      "passed": true
+    },
+    {
+      "check": "post real LIMPIEZA 2026-08-23",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 LIMPIEZA 2026-08-23",
+      "passed": true
+    },
+    {
+      "check": "post real LIMPIEZA 2026-08-24",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 LIMPIEZA 2026-08-24",
+      "passed": true
+    },
+    {
+      "check": "post real LIMPIEZA 2026-08-25",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 LIMPIEZA 2026-08-25",
+      "passed": true
+    },
+    {
+      "check": "post real LIMPIEZA 2026-08-26",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 LIMPIEZA 2026-08-26",
+      "passed": true
+    },
+    {
+      "check": "post real LIMPIEZA 2026-08-27",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 LIMPIEZA 2026-08-27",
+      "passed": true
+    },
+    {
+      "check": "post real LIMPIEZA 2026-08-28",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 LIMPIEZA 2026-08-28",
+      "passed": true
+    },
+    {
+      "check": "post real LIMPIEZA 2026-08-29",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 LIMPIEZA 2026-08-29",
+      "passed": true
+    },
+    {
+      "check": "post real LIMPIEZA 2026-08-30",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 LIMPIEZA 2026-08-30",
+      "passed": true
+    },
+    {
+      "check": "post real LIMPIEZA 2026-08-31",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 LIMPIEZA 2026-08-31",
+      "passed": true
+    },
+    {
+      "check": "post real LIMPIEZA 2026-09-01",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 LIMPIEZA 2026-09-01",
+      "passed": true
+    },
+    {
+      "check": "post real LIMPIEZA 2026-09-02",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 LIMPIEZA 2026-09-02",
+      "passed": true
+    },
+    {
+      "check": "post real LIMPIEZA 2026-09-03",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 LIMPIEZA 2026-09-03",
+      "passed": true
+    },
+    {
+      "check": "post real LIMPIEZA 2026-09-04",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 LIMPIEZA 2026-09-04",
+      "passed": true
+    },
+    {
+      "check": "post real LIMPIEZA 2026-09-05",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 LIMPIEZA 2026-09-05",
+      "passed": true
+    },
+    {
+      "check": "post real LIMPIEZA 2026-09-06",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 LIMPIEZA 2026-09-06",
+      "passed": true
+    },
+    {
+      "check": "post real LIMPIEZA 2026-09-07",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 LIMPIEZA 2026-09-07",
+      "passed": true
+    },
+    {
+      "check": "post real LIMPIEZA 2026-09-08",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 LIMPIEZA 2026-09-08",
+      "passed": true
+    },
+    {
+      "check": "post real LIMPIEZA 2026-09-09",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 LIMPIEZA 2026-09-09",
+      "passed": true
+    },
+    {
+      "check": "post real LIMPIEZA 2026-09-10",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 LIMPIEZA 2026-09-10",
+      "passed": true
+    },
+    {
+      "check": "post real LIMPIEZA 2026-09-11",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 LIMPIEZA 2026-09-11",
+      "passed": true
+    },
+    {
+      "check": "post real LIMPIEZA 2026-09-12",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 LIMPIEZA 2026-09-12",
+      "passed": true
+    },
+    {
+      "check": "post real LIMPIEZA 2026-09-13",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 LIMPIEZA 2026-09-13",
+      "passed": true
+    },
+    {
+      "check": "post real LIMPIEZA 2026-09-14",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 LIMPIEZA 2026-09-14",
+      "passed": true
+    },
+    {
+      "check": "post real LIMPIEZA 2026-09-15",
+      "passed": true
+    },
+    {
+      "check": "post PMS7 LIMPIEZA 2026-09-15",
+      "passed": true
+    },
+    {
+      "check": "post MAPE LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "post inventario LIMPIEZA SI",
+      "passed": true
+    },
+    {
+      "check": "post inventario LIMPIEZA EN",
+      "passed": true
+    },
+    {
+      "check": "post inventario LIMPIEZA SF",
+      "passed": true
+    },
+    {
+      "check": "post inventario LIMPIEZA CD",
+      "passed": true
+    },
+    {
+      "check": "post inventario LIMPIEZA ISI",
+      "passed": true
+    },
+    {
+      "check": "post inventario LIMPIEZA DQS",
+      "passed": true
+    },
+    {
+      "check": "post inventario LIMPIEZA DD",
+      "passed": true
+    },
+    {
+      "check": "post inventario LIMPIEZA TQS",
+      "passed": true
+    },
+    {
+      "check": "post producto volumen total",
+      "passed": true
+    },
+    {
+      "check": "post Excel categoría ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "post Excel categoría BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel categoría GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel categoría HELADOS",
+      "passed": true
+    },
+    {
+      "check": "post Excel categoría LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-17 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-18 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-19 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-20 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-21 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-22 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-23 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-24 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-25 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-26 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-27 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-28 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-29 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-30 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-31 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-01 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-02 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-03 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-04 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-05 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-06 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-07 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-08 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-09 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-10 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-11 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-12 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-13 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-14 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-15 ABARROTES",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-17 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-18 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-19 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-20 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-21 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-22 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-23 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-24 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-25 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-26 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-27 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-28 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-29 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-30 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-31 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-01 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-02 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-03 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-04 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-05 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-06 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-07 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-08 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-09 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-10 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-11 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-12 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-13 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-14 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-15 BEBIDAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-17 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-18 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-19 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-20 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-21 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-22 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-23 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-24 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-25 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-26 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-27 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-28 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-29 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-30 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-31 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-01 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-02 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-03 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-04 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-05 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-06 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-07 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-08 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-09 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-10 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-11 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-12 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-13 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-14 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-15 GOLOSINAS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-17 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-18 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-19 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-20 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-21 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-22 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-23 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-24 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-25 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-26 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-27 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-28 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-29 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-30 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-31 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-01 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-02 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-03 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-04 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-05 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-06 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-07 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-08 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-09 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-10 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-11 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-12 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-13 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-14 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-15 HELADOS",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-17 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-18 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-19 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-20 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-21 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-22 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-23 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-24 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-25 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-26 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-27 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-28 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-29 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-30 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-08-31 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-01 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-02 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-03 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-04 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-05 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-06 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-07 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-08 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-09 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-10 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-11 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-12 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-13 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-14 LIMPIEZA",
+      "passed": true
+    },
+    {
+      "check": "post Excel día 2026-09-15 LIMPIEZA",
+      "passed": true
+    }
+  ],
+  "manifest": [
+    {
+      "file": "data\\reporte_ventas_2026-04-01.xlsx",
+      "sha256": "2795eee3497a219b25fae1374678707bc714cd2da9de2a5d2ed283f03ab7b39e"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-02.xlsx",
+      "sha256": "85f3cb6badf3cc41aa6446afb5459346277c6c3e95816785d5f99d5608ef460a"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-03.xlsx",
+      "sha256": "7b96d3450a63413b212b11d96b23e06e8e9003e6fff44f0e2b4626e08d4b99cc"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-04.xlsx",
+      "sha256": "465714afeb2cd2272f772a21a3450762950705d132e22dd63f0fc821f67c0816"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-05.xlsx",
+      "sha256": "086ed36e51271c088433ea68833495a9a3b865998e597cd2743b1b44ffb9c397"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-06.xlsx",
+      "sha256": "af4c5841c1bb7bf5485d9e5794f9c9727f1802e2f95e4f1bccd3288feb9cd004"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-07.xlsx",
+      "sha256": "b4884ce7edaba716cffa8080eb35249bf91c22b8260f9d58e9ad4d388aa6af24"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-08.xlsx",
+      "sha256": "185d8ec1153518c4635e96339fbad162dd6f8606d4425edb6191f3afc602ed14"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-09.xlsx",
+      "sha256": "5c176296d51d9fa13e810eb1939774bd0698650cae4551005bb33fa6aa13b948"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-10.xlsx",
+      "sha256": "bcbcdbe1a25d0f02c634d587c5c9eb1133df9bf690bf6897f1e2c3399cd90fd0"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-11.xlsx",
+      "sha256": "b56550449608de0fd6f4d8f4a193fae62c7e3a09a8eaa36e996c4b1f4537dbe5"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-12.xlsx",
+      "sha256": "71c56af5981ee1bf1b7c2aa07494a11726a588c258a770b1fb6fb0d8d141b633"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-13.xlsx",
+      "sha256": "73119987c489288593377b509fcd495faf922b6b685f174185bb4675d639cb26"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-14.xlsx",
+      "sha256": "dda7de43c25bfdb8f6bf34ad24552823b24e6c2fce287e26c189d16d71f0aed9"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-15.xlsx",
+      "sha256": "2d1e9b18f4d958e343f5ad65024d22c040d5f716e57c32d0f382381a938554e6"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-16.xlsx",
+      "sha256": "a76f44b833fb13f349a6822389ac4999d7b539a111a469e5b7823721ac86e5a0"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-17.xlsx",
+      "sha256": "dea7508516e23588f04120cc3d96784fa19f9818fb53bf1b3a5da43798007660"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-18.xlsx",
+      "sha256": "6d6d3828a74c4d83560c3532ab79901275287d8ea8a4a71eb29cf57a6ab98b03"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-19.xlsx",
+      "sha256": "bab3aaf4f7fe7dd5461b8133ba73e41441c0c830c56c49699eadf73b01b1e671"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-20.xlsx",
+      "sha256": "5098aae764b51c6e1f1706a10fc604eb8c57c3cf64e70e90f6896200e753585a"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-21.xlsx",
+      "sha256": "f6775be93c38cbfac17a07e1d16430ba26f117869c1e7299be567141d89f1246"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-22.xlsx",
+      "sha256": "37b9ded80279142f1576919ac266230a282de318838f3bbf748ab74cc1402b68"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-23.xlsx",
+      "sha256": "d96401141f0ff28fb98d5c36cf8e511d41bf7dae36182743e0841d922973e9cb"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-24.xlsx",
+      "sha256": "696b0d048224065588265268c38a2712486ff0a49206de0143fe0a625fff10d3"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-25.xlsx",
+      "sha256": "7377dfb95538fe4c165e2a4e12fb1008bf015dd96e97793613d62803bb8973dd"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-26.xlsx",
+      "sha256": "9ccfe30a0c9224fdbaf7bbba1c62c5240c68543c66c0542d477e48a132697649"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-27.xlsx",
+      "sha256": "e871bb9361dbaf08f172de32d76d6621be1b9beb011ae574f583b12060babd3b"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-28.xlsx",
+      "sha256": "dd913dfb26f62c1dca12069d7c33c3e3e89d54cb1c77ca355f696f718aac5f5c"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-29.xlsx",
+      "sha256": "8f1f71699d4a49aa5f5bdd9ad414d67cad8542815835d9a8e24627575fe191f5"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-04-30.xlsx",
+      "sha256": "83cc4890674d20a92f7d766da576f9144df22f8d3c460f67e66da5aee3e654f4"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-01.xlsx",
+      "sha256": "e3b98dc2e3b5e72e203485c6ded431b93fcc6a0f8f858a3aaa421c94cdfb4dc2"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-02.xlsx",
+      "sha256": "d5bdd8051da8f1e6ac08517a36fa9384f8f8ce7bd5a996073c692260272689ff"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-03.xlsx",
+      "sha256": "1327a9a8ba2d3a93ae0b88369fc7288af774388596c15ae0bce3eebe80ae08db"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-04.xlsx",
+      "sha256": "92ed19f0c2941a6dd2b97e0486729816f355b8e7ac0cb2c319773d91a8c6b420"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-05.xlsx",
+      "sha256": "0473d429feb4c0c732a7b8309f5bcf8b47a89785bd1a6cba673198e75da606de"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-06.xlsx",
+      "sha256": "209db90b7d13272a1964538251d79ce8d759dc1c8bc40a9b2751f015f104f57d"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-07.xlsx",
+      "sha256": "e38d1606e792a402a13b5f7862bcd2cbbe7bcc31df20a9d276f56332e8a228f0"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-08.xlsx",
+      "sha256": "f5e0e87f46d99eb3d72d21c783014833b0d5f29199e50744b882fa842546bafc"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-09.xlsx",
+      "sha256": "db3e5c28a9a4b1fa6d583bc0d6478f190e2b2876d94a582e60542c633735819d"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-10.xlsx",
+      "sha256": "519bef8b5cd77a24349d91806e4c20a7899e502be25fce6009b13ba26f982d07"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-11.xlsx",
+      "sha256": "1e86fb7935b529b944d0411d1249e7f91f6624eddc0812441e5246e3c55aa362"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-12.xlsx",
+      "sha256": "c3053140c9375c3a4204a1b9cba9f6c7b0130ab24ef4d80e16b30699ea7f01a4"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-13.xlsx",
+      "sha256": "968cb02a3298117ea4c6e49beab4b7e371e9e8220e9aeabe733edae02e7487e2"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-14.xlsx",
+      "sha256": "1c88744514c68087bfd3cd76052daf95faa706d187952f67c6de41524239a332"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-15.xlsx",
+      "sha256": "1d32c27697c428a951641f1eaeef6e656f9a9c76bb89fc908c3d823cd23b0ce1"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-16.xlsx",
+      "sha256": "55d38cebcffed1ceed7d0a2e24b92c52fc23d78a7a1335dac1aa6cb2d55369a7"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-17.xlsx",
+      "sha256": "3aa12a69803107389167769ccff3fbed1fca8567ddfde5a7758fe2e4713b72e1"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-18.xlsx",
+      "sha256": "d3473d2367db99b98bbc2fff199fa707e15af16ef4ae6594f95444abd435199a"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-19.xlsx",
+      "sha256": "9ac65339f98072f62eff2db8b6269a406521c7013eff503e686403ff09527775"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-20.xlsx",
+      "sha256": "d016996da0f9dfb7b0e44742cf2884d329829f3a8ced85fbe8db777b34a0d25e"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-21.xlsx",
+      "sha256": "d015c85b641896ebfab1061b73d883b101ad72f46a79112ce771a7e8b90ad052"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-22.xlsx",
+      "sha256": "a14956662f0de20b89927f2455f4fbafa937d1b015077d657e96ec746a2a701c"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-23.xlsx",
+      "sha256": "da5180483d17b3ed51ddeebfa40351c1f2c2ab2347b030d7e88b1470a05f4bb2"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-24.xlsx",
+      "sha256": "88a356b3d5eafe7ae66ef980c403be23c9c8023ec7980442a596e9eb69c6b84f"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-25.xlsx",
+      "sha256": "b7c15a355fef92ac21128bc79f95659e62d3076f9c67bb7b665942706fff71bb"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-26.xlsx",
+      "sha256": "2d4bc745076b673af0c6f5f8c6c6ad8d6d56072199faab14fb522d120298ccad"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-27.xlsx",
+      "sha256": "68f86739ed5b2a34839c59314611e2729e2fce6913ecee9b2233ebd128cb3541"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-28.xlsx",
+      "sha256": "a8a2c3808463bb25619739b7580dfb77baeb95c5c9847245f302b8b8b70c5cbb"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-29.xlsx",
+      "sha256": "9d1b8c242102e8a8b4d3f8dc77c0bc07c69b4efb8fdf14d07028b0a4d3133f51"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-30.xlsx",
+      "sha256": "cef3bb00ddc7f746927b72e868f92593d7fadbf141128ad7e04f0fa97a10b4d5"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-05-31.xlsx",
+      "sha256": "1d7da62fa3e5caa3f3be4c824753d9f2cc39bef994cd5799651fccbae7eaf16f"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-01.xlsx",
+      "sha256": "f1f4c8b181e4b40f86d6531f0e37025fe44b248b7bded5773b5ed051adb6b961"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-02.xlsx",
+      "sha256": "2d3aac244e667d6df55141e1dabf1656066c09da1216a349c4843843c84f5fc8"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-03.xlsx",
+      "sha256": "40308a378b377c0e318e2a7e16e0b0d3bfa570ce677f8d1c0785f3ef801ab118"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-04.xlsx",
+      "sha256": "af5edc71081a23ac88cdb19ccd0e1cce73341adf1f927461478d3368ae1ed23f"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-05.xlsx",
+      "sha256": "40c9e1b364bf7ea266efc5afba5f982d17028efb95c91ea281c5e78115f33656"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-06.xlsx",
+      "sha256": "cab9841257e5ea852a123b5a278eca61ca18b8d8f66c82bdd2fbda4ee0ccac94"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-07.xlsx",
+      "sha256": "b437a7ad9096fed521e28c4852d4184226b9a2cb11fcd36563671b272c1254e8"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-08.xlsx",
+      "sha256": "ac924defb9ba848c1a6236192241fbba0db49687b0fbca86502243eeaeee6569"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-09.xlsx",
+      "sha256": "132dc4affcca69bc10fa64a477213d549e009e9e92dadccef672a79b96be0a29"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-10.xlsx",
+      "sha256": "7bc1140733cd2bd27d08f54a4dbcf940d63dcf3b3f9febe4b6876349f911373f"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-11.xlsx",
+      "sha256": "4e69962d7b1dd7aa1e76a21874edd6a073b69d69f6fcf10b6ce37089a52b9e17"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-12.xlsx",
+      "sha256": "6037bbeba67efbac0436a1b8c5cc4e560c1c732dc451aa31037169d04e02a3be"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-13.xlsx",
+      "sha256": "9fb54832a01c4e7b7593cfb2dfd8c9b1d3e0b1616d4e4ea88e02b5e945382087"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-14.xlsx",
+      "sha256": "b5cca87d20600b341568334f01880033db2519c5937d8f14253cb854bb01a27e"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-15.xlsx",
+      "sha256": "20ba960f8ede0985aa103a8d7ec0240f75b4c3fcc8b2c9cc7871681df676970d"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-16.xlsx",
+      "sha256": "fc3b09abb8d74de7212a46f3ceddd18675e430c6f187021c3c7a56916ca11547"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-17.xlsx",
+      "sha256": "93635ea1512c3693e4f92a2eead78bdff3954cad164c327349c0c3a3e1eba6ad"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-18.xlsx",
+      "sha256": "47911b251bbbdd30da207cdb30758c2cdb821b93131a31df3615f204ebe1e2bf"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-19.xlsx",
+      "sha256": "10155722f3f69b189e2b728f36af26b3b41f3b68aa29c118620c2287fe5fe826"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-20.xlsx",
+      "sha256": "7de8532ceae6362db367a967889665e0c1f51e308cf242df2e678ddc5974d4c9"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-21.xlsx",
+      "sha256": "d831990cc8ce4cba5b0ee53925fc2d2e5963b8d271d45ccc28c2b2bc80328f1f"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-22.xlsx",
+      "sha256": "daa0ee7754fc5f3dccd1995eb69380076e5487aaa32c17c202731f8fa556136e"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-23.xlsx",
+      "sha256": "8012d319a00e574a57d6eeb2db6c4d47646aadea12678d166aefe2cd2174cb94"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-24.xlsx",
+      "sha256": "767c8804654c2107a4da4d16aa5001cb4f3b1650cfede51906581f7a68846ec1"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-25.xlsx",
+      "sha256": "e799a475f38e359597e87622f77c195b2a30b3c03901990b09c5de3498c64cc7"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-26.xlsx",
+      "sha256": "e222f36b3f1878257a8388eb8391b100212a708e738fd1b76d8d21c872a085f7"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-27.xlsx",
+      "sha256": "a601bff563adce8d25f9c59b255b421322a865bcb07ab5f8a8a3ecacd3e95681"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-28.xlsx",
+      "sha256": "e6af09636388360fddd4dec2aeae2fb116370c06cb8fc875374c88c95fc2d825"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-29.xlsx",
+      "sha256": "cca92236f9344a6cf43953e00e5fff565b824d6354241469e8879228d525bb83"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-06-30.xlsx",
+      "sha256": "555a90b87168731f2f5515941496af6bcf77b4149766f93de15c38cb5b5d5df7"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-01.xlsx",
+      "sha256": "c692c513919d5d85a0270d89f677d1ded10ea3b8931c95799e8072986cdee959"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-02.xlsx",
+      "sha256": "79ede1449eafcd8fe62c203c4f35391414362b27c97a33ef4661d6f3949d50b9"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-03.xlsx",
+      "sha256": "be1a9373b22eb370fb9bc277f10ff20e0a7a90f548612a323331d09136bc060e"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-04.xlsx",
+      "sha256": "b8d8cf2776f311542da5243aeab5ef447cb54d2ed4605460df8b285d522ba54c"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-05.xlsx",
+      "sha256": "4a350b849cf81fd1ad91407c5acb91551228908e15484e77d892a9addea81d6b"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-06.xlsx",
+      "sha256": "7eb8fc1d56c93fd95cb01f565edc9f8e6c5aa9f08465325f9a06a16c04ab9590"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-07.xlsx",
+      "sha256": "21a71138a9ff970eb98555c4612ee5c7fc992b74e312262aecbb9f7054e5a182"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-08.xlsx",
+      "sha256": "4f013b4e0cb78d0ab36c8a2a91d1d46ad420e3ec3884a1b75b6ca1926c5541f4"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-09.xlsx",
+      "sha256": "3fee323029955f8ff3022da076e56d1799edbdc68bd71a77ff2f6b480d1492c6"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-10.xlsx",
+      "sha256": "2f2a8068cbd85b13b28ec1746deea9e5744cb79d56fbf7cba39fb1c932c3d968"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-11.xlsx",
+      "sha256": "adb9bc1ac7cc5a2b96849326b06d3797151779f9700323325229e4521254c68a"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-12.xlsx",
+      "sha256": "b7ae18cfcddb29e2691c404569018f834d338c8058888c96b4d439063b90422b"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-13.xlsx",
+      "sha256": "b52d8ee1b31090f7b3b66cd4995e32e6ebfc48afd819f501642432a50c576bbe"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-14.xlsx",
+      "sha256": "11cdde53638de85812b0da05c762a70afb32cfc0e381dde0dd48c013bd7f8b15"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-15.xlsx",
+      "sha256": "94125e6b383400a08741c29e58edbae1b6cffe012f4ef6ef78d35608d224fadb"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-16.xlsx",
+      "sha256": "e5497e471d7eb16bbf3c7932c717bd023ad87827be33268bd0dc39e35065034b"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-17.xlsx",
+      "sha256": "8f933d9335703f11c414dfa24f6b6f508bc5b6be0f1bd6bfa9fd4839cccbfd0e"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-18.xlsx",
+      "sha256": "91cf89bf39b1455f77dbf99e4f51ea1485ebdf9615f1486e93e9d65bd6efe3f6"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-19.xlsx",
+      "sha256": "e3a23474068a815ad739c0b741d026968abc97c571b48aba56ecafaf2048f0a5"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-20.xlsx",
+      "sha256": "ad71b871a2ce87649485f649a3b63090e55badd63ff72f1864ae5ca6629749fa"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-21.xlsx",
+      "sha256": "de47fbd85201efd358aee4eb29751fdd6014d98e7872ff3c6041a6534f09704d"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-22.xlsx",
+      "sha256": "2a03f3c86af91bea8c497cee5ecc52d472b2ecbacdcd728773913804f28aca0d"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-23.xlsx",
+      "sha256": "c20c0f4ee06b0a0c86382f98827b2250ba6b34584740b0538aace13b83d920c6"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-24.xlsx",
+      "sha256": "3a37348f69caf536ef0af20db346963b54a6794b62d1f1fef48657d3cc7b6b9e"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-25.xlsx",
+      "sha256": "499db0786bfeee184d053d1b194039923bb695bc6c3522e4d625f827f24cd14b"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-26.xlsx",
+      "sha256": "e0980fd8e450daa199ddfdd2c2fa870fcaf3a7f4278b519edb2436a85c11010a"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-27.xlsx",
+      "sha256": "612b287465bdd1464dc22893e16590d365b95797048fc88808145b5253c5de2d"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-28.xlsx",
+      "sha256": "6daf5ef862590464e403dae11ad6144bb1ec8b623f2c92950356dfd65698f851"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-29.xlsx",
+      "sha256": "40e53456ac7925ff49c0a441d1cdf3cee52c30036e2ea7f8c0fda07a02ee1f04"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-30.xlsx",
+      "sha256": "cb88eb6237456c0fea1f19ae13de3aef65d71f0a0e1fcdcf59fc100cbb9fda9b"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-07-31.xlsx",
+      "sha256": "cc3cd53dba258c13259378884d53028badfcdcdce96535775ec427e39f28f293"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-01.xlsx",
+      "sha256": "cc2bc5c8cafe0d6491a1e6e6a2c308e519fe890f6d301badce8e6f57fd1555fb"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-02.xlsx",
+      "sha256": "27702f2d4dc2f2a261590a93be1b875faf92822058a070d2ba48e871c64fd10b"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-03.xlsx",
+      "sha256": "a8bf8f4d5ae1296fcb6752981a826aa6103a76dc7a6a5fe522da409ff8594bbb"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-04.xlsx",
+      "sha256": "ab094611d80250336123a89230e8f36eb0ae56687d19ae72015bb830c3edf9e9"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-05.xlsx",
+      "sha256": "6dd3b1078d1ad31be0eee7432428b49e18a8b5b4403fcc51501f12d9cf6e273e"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-06.xlsx",
+      "sha256": "2b464e8d713f3801365bbc627d08eda94b9a3ad35a805836b7b035d94713a4ac"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-07.xlsx",
+      "sha256": "16be68c4cc6511d952b7371c729d2f754dd055faf566ae32b790969623546089"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-08.xlsx",
+      "sha256": "48b6ac02a456f18cbd5d58dd44e79c026a4d58a2fba79a19050f8eb63692b82d"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-09.xlsx",
+      "sha256": "adcf833365f930eb141b8c8014713988c896f19361a1b8f690a3d01f4fb006bb"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-10.xlsx",
+      "sha256": "2df5f269907481d0e0969269815f0c9432dff9311dffcd2720469ae0b9ae004f"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-11.xlsx",
+      "sha256": "2f1e6e3dbb455f75471319411ec7189e3f8d173609c14ebac2a02708fb0a27d8"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-12.xlsx",
+      "sha256": "3ee3890a258e375be589a3b1848de9b616d1b0fe8ef61e5bd13b8900ad7b880e"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-13.xlsx",
+      "sha256": "d7d95e242ed71d43fafba9448b01aa74b6e9ed7e142b00e8e2eec02a6dfe4c1a"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-14.xlsx",
+      "sha256": "a3857ff8d70c6d6a0dd93d837b57eef26d252e29567a949896984d96e255d34b"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-15.xlsx",
+      "sha256": "4e3adb0d84b89f3880222fdb1a3db84717dd4693c4c2a06b551fa3aefe896017"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-16.xlsx",
+      "sha256": "bb6efbe1631fc02fc1aec68e4e7ded54efe660cb5688cf2080463a663746eb2e"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-17.xlsx",
+      "sha256": "ae9ae2dff9843b48cecee794884594daa1aaa0cd356adbe454adf364e6bf9e19"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-18.xlsx",
+      "sha256": "e8cf5b9b90575e573453569429877638541ed8ca691d83d520371dbb3c34e001"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-19.xlsx",
+      "sha256": "466ea841c1fb45ec316f2a6e805edf5ffa53e86c5d196b934e16639bde334a5f"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-20.xlsx",
+      "sha256": "23f81c1b3f2cb3154c1e103594dcd2a2490f10501c1548b7be7f3577c39e2e3c"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-21.xlsx",
+      "sha256": "dd6807f9d29c3c900ad90ec90edb74f649f3723c1120445f5940cdbf2e551868"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-22.xlsx",
+      "sha256": "705c8df2f548b70a35dfda2ef40e78022b49673eea9015f938d7536c52a7d8a4"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-23.xlsx",
+      "sha256": "3b1343ec041585064fd44c49e18e3c08f0b44229daeaceed54869a64012daad7"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-24.xlsx",
+      "sha256": "eb891fc7307604046982ea80f33b0dd88fd23be8fd80d8b2d441f7966faed4f5"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-25.xlsx",
+      "sha256": "02dae31537f179b5be7facdc91cd5c842c26467064b413002a26a644ec12f077"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-26.xlsx",
+      "sha256": "4234076ae9e922877c1c84ee9fd132b245b9ebc45e5222edc33a81693dad4161"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-27.xlsx",
+      "sha256": "b4a54df413928dc7f2858949b107b9bb34c5b3672e2c94d2785a34c39a48c978"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-28.xlsx",
+      "sha256": "6a4a98358296558a399c983c778b1fa47d005561bf7793ac1c33815886610320"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-29.xlsx",
+      "sha256": "e554dfacb1de95b93cd7d3ed6dc40628a486923eae98e494182c1a418b403c31"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-30.xlsx",
+      "sha256": "61a74f8357353a59bc842f04e9ef0a2e27024d0bb1be467c589f3561eebe4cfd"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-08-31.xlsx",
+      "sha256": "11ace99c2744fb4e8b945b3c025a503127676248c51139ce4c48aacff568e774"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-09-01.xlsx",
+      "sha256": "f05e08e3cf982ffe1e974dd39f101cc5f164b26cb63716cb21cd56bd730e612c"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-09-02.xlsx",
+      "sha256": "f08865345601353ada8ed3cfd0021f0a4defca6cb98d86d4109fcf07bbb9186b"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-09-03.xlsx",
+      "sha256": "7bcca0853b69de10cc5c8dcf59f8a9a1fd3fc0d61f720288c3fe02cd5b45c7d2"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-09-04.xlsx",
+      "sha256": "a77546195f56e4ff4b0ba2cd9f4f8d5b6751791636f5056bdae264dfd6b18ed1"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-09-05.xlsx",
+      "sha256": "a69c2c6cb99830b3b498c5a2be27a43bd43719552880b3e71fa122cd45aaca0a"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-09-06.xlsx",
+      "sha256": "728ebe02fc2a93d05fa0eca4450c64e7159b6bf3b90eba86d39e936fc654ef41"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-09-07.xlsx",
+      "sha256": "05b211032035cca59a320d2bf07a28e81f425d7b78162df52a9f6ceb8f6d3241"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-09-08.xlsx",
+      "sha256": "b35b034decc03224279f1e554cac7cd6e90b0f6b9995018bbbd3093ac1d41bd8"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-09-09.xlsx",
+      "sha256": "4cbe28a728c4cc8ba3d8df81189157e96309ce20ff49998dd91b3874ef95fd29"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-09-10.xlsx",
+      "sha256": "8d18e2712c097f1978dc501543f23a2022250737beede52de6ef0409db9f6535"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-09-11.xlsx",
+      "sha256": "8df5459a8ba06a40c1a382d00597483891e9af0fa42bb7ae875b4514959d4305"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-09-12.xlsx",
+      "sha256": "0266fee201551eaafdbd32abc7692df781a961538aa65e9268f8af012458031f"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-09-13.xlsx",
+      "sha256": "49fea1d1fa47525b26aa10a46c443ce2a7c61ba9791dde14620c4b77b54955aa"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-09-14.xlsx",
+      "sha256": "cb006ee950058de976e32ae4ba6786fac5b4f6d122f7b547737bfecfca216121"
+    },
+    {
+      "file": "data\\reporte_ventas_2026-09-15.xlsx",
+      "sha256": "5e5ce7cb67c6f2d8bd198f3ad12e098d0dd990d7d8c189c95979ca112341b764"
+    }
+  ],
+  "reports": {
+    "files": 168,
+    "rows": 11748,
+    "differences": []
+  }
+}

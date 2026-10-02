@@ -123,7 +123,15 @@ def create_app(test_config: dict[str, Any] | None = None) -> Flask:
         """Obtiene el inventario activo sin seleccionar la demostración por defecto."""
         uploads_directory = Path(app.config["INVENTORY_UPLOADS_DIR"])
         selection_file = Path(app.config["INVENTORY_SELECTION_FILE"])
-        if selection_file.is_file():
+        default_selection_file = Path(INVENTORY_SELECTION_FILE)
+
+        # En pruebas automatizadas, ignoramos la selección persistida del proyecto
+        # para que el resultado no dependa de un archivo cargado previamente en
+        # el entorno local del desarrollador.
+        if app.config.get("TESTING") and selection_file.resolve() == default_selection_file.resolve():
+            selection_file = None
+
+        if selection_file is not None and selection_file.is_file():
             try:
                 selection = json.loads(selection_file.read_text(encoding="utf-8"))
                 stored_name = Path(str(selection.get("stored_name", ""))).name

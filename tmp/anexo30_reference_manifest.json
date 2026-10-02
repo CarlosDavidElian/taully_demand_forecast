@@ -1,0 +1,17 @@
+{
+  "source": "C:\\Users\\Acer\\Downloads\\LIMA-NORTE_PI_GURRERRO_removed_removed.docx",
+  "sha256": "d30e2ccc5a6e211c0cd58065795ebec1d290a3b01e6ad76f389555891787a765",
+  "parts": {
+    "word/document.xml": "45fe553320d8c675be8c8344d017a4872b5ece41e18beb5a4aae8f45c8a01e20",
+    "word/settings.xml": "9ec5854deebc931dff8178acc514f9489c817ad9bc2952d4b5a25f8434937761",
+    "docProps/custom.xml": "035dbba01e0cbf60481651a5688de7ebdc03c92a000fc506655bb5d3da1159f8",
+    "[Content_Types].xml": "9613db0a7073d38f61392e8a597c263d1bb7be814a4754168d3632c930405478",
+    "docProps/app.xml": "153fa23335694d2e020fc326c1817c88e8502d58483257d9c4a7ed2f809068e0",
+    "docProps/core.xml": "fb600c27e768f2eabb878b7851db0f2c6e112cf242ab547bc439469d743b373e",
+    "word/_rels/document.xml.rels": "73ad0769d28f594289282d6bcd661e2047c2b6c214858a32550ed48f7de16ceb",
+    "word/fontTable.xml": "5e6b7a84e912a44f9d67dec25369873ab7bb5204c1159ac16851437d415d4366",
+    "word/styles.xml": "499f4c44c0979ca08ce86447484bd8abc98df464812b9f41ba2e938eb41b0776",
+    "word/theme/theme1.xml": "8edec8a9a6ad21a263e4cbf228112fa8abbb1866d431c6b2b9a7e32787635182",
+    "_rels/.rels": "c1b1e381560d85c476a6bb5d5cc32f0ccad55269e8e5b92726e08a54bed2a4a0"
+  }
+}

@@ -1,0 +1,117 @@
+PLAN DE PRÁCTICAS PREPROFESIONALES
+METODOLOGÍA SCRUM - 3 MESES / 12 SEMANAS
+PLANTILLA INSTITUCIONAL REUTILIZABLE
+DATOS PERSONALES DEL PRACTICANTE:
+
+TABLA
+APELLIDOS Y NOMBRES | 
+[APELLIDOS Y NOMBRES DEL PRACTICANTE] | [APELLIDOS Y NOMBRES DEL PRACTICANTE]
+DIRECCIÓN | 
+[DIRECCIÓN] | [DIRECCIÓN]
+TELÉFONO FIJO/CELULAR | 
+[TELÉFONO / CELULAR] | [TELÉFONO / CELULAR]
+E-MAIL DE LA UNIVERSIDAD | 
+[CORREO INSTITUCIONAL] | [CORREO INSTITUCIONAL]
+DATOS DE LA EMPRESA:
+
+TABLA
+RAZÓN SOCIAL | 
+[RAZÓN SOCIAL DE LA EMPRESA / INSTITUCIÓN] | [RAZÓN SOCIAL DE LA EMPRESA / INSTITUCIÓN]
+R.U.C. | 
+[RUC] | [RUC]
+DIRECCIÓN | 
+[DIRECCIÓN DE LA EMPRESA / INSTITUCIÓN] | [DIRECCIÓN DE LA EMPRESA / INSTITUCIÓN]
+REPRESENTANTE LEGAL | 
+[NOMBRE DEL REPRESENTANTE LEGAL] | [NOMBRE DEL REPRESENTANTE LEGAL]
+TELÉFONO | 
+[TELÉFONO] | [TELÉFONO]
+E-MAIL | 
+[CORREO ELECTRÓNICO] | [CORREO ELECTRÓNICO]
+
+TABLA
+ÁREA EN DONDE PRACTICA | 
+[ÁREA / UNIDAD / DEPARTAMENTO] | [ÁREA / UNIDAD / DEPARTAMENTO]
+JEFE INMEDIATO | 
+[NOMBRE DEL JEFE INMEDIATO] | [NOMBRE DEL JEFE INMEDIATO]
+CARGO | 
+[CARGO DEL JEFE INMEDIATO] | [CARGO DEL JEFE INMEDIATO]
+TELÉFONO | 
+[TELÉFONO] | [TELÉFONO]
+E-MAIL | 
+[CORREO ELECTRÓNICO] | [CORREO ELECTRÓNICO]
+DEL PROYECTO ACADÉMICO
+
+TABLA
+NOMBRE DEL PROYECTO | 
+[NOMBRE DEL PROYECTO DE PRÁCTICAS PREPROFESIONALES] | [NOMBRE DEL PROYECTO DE PRÁCTICAS PREPROFESIONALES]
+METODOLOGÍA UTILIZADA | 
+Metodología Cascada | Metodología Cascada
+ÁREA DE APLICACIÓN | 
+[ÁREA(S) BENEFICIARIA(S) / ÁREA DE APLICACIÓN] | [ÁREA(S) BENEFICIARIA(S) / ÁREA DE APLICACIÓN]
+IV.   ACTIVIDADES PRINCIPALES A REALIZARSE EN LA EMPRESA
+INSTRUCCIÓN: Complete los datos del practicante, empresa y proyecto. La metodología está definida como Scrum. Marque con “X” las semanas que correspondan a cada actividad según el proyecto y la organización. La distribución de seis Sprints de dos semanas es referencial y puede ajustarse manteniendo las 12 semanas del plan.
+Estructura de trabajo: las cinco fases PMI organizan la gestión del proyecto. En Ejecución se desarrolla el producto mediante Sprints, historias de usuario e incrementos. En Monitoreo y Control se aplican Daily Scrum, seguimiento del Sprint Goal y Sprint Backlog, Sprint Review, Sprint Retrospective, refinamiento del Product Backlog, control de impedimentos, calidad, riesgos y métricas.
+
+TABLA
+DETALLAR LAS ACTIVIDADES | TIEMPO | TIEMPO | TIEMPO | TIEMPO | TIEMPO | TIEMPO | TIEMPO | TIEMPO | TIEMPO | TIEMPO | TIEMPO | TIEMPO
+FASE / ACTIVIDAD | Mes 1 | Mes 1 | Mes 1 | Mes 1 | Mes 2 | Mes 2 | Mes 2 | Mes 2 | Mes 3 | Mes 3 | Mes 3 | Mes 3
+SPRINT | Sprint 1 | Sprint 1 | Sprint 2 | Sprint 2 | Sprint 3 | Sprint 3 | Sprint 4 | Sprint 4 | Sprint 5 | Sprint 5 | Sprint 6 | Sprint 6
+SEMANA | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
+FASE 1. INICIO (PMI) | FASE 1. INICIO (PMI) | FASE 1. INICIO (PMI) | FASE 1. INICIO (PMI) | FASE 1. INICIO (PMI) | FASE 1. INICIO (PMI) | FASE 1. INICIO (PMI) | FASE 1. INICIO (PMI) | FASE 1. INICIO (PMI) | FASE 1. INICIO (PMI) | FASE 1. INICIO (PMI) | FASE 1. INICIO (PMI) | FASE 1. INICIO (PMI)
+1. Identificación de la problemática, necesidad u oportunidad de mejora |  |  |  |  |  |  |  |  |  |  |  | 
+2. Identificación de interesados, usuarios y áreas beneficiarias |  |  |  |  |  |  |  |  |  |  |  | 
+3. Elaboración de la visión del proyecto y definición del valor esperado |  |  |  |  |  |  |  |  |  |  |  | 
+4. Definición del objetivo general y resultados esperados |  |  |  |  |  |  |  |  |  |  |  | 
+FASE 2. PLANIFICACIÓN (PMI + SCRUM) | FASE 2. PLANIFICACIÓN (PMI + SCRUM) | FASE 2. PLANIFICACIÓN (PMI + SCRUM) | FASE 2. PLANIFICACIÓN (PMI + SCRUM) | FASE 2. PLANIFICACIÓN (PMI + SCRUM) | FASE 2. PLANIFICACIÓN (PMI + SCRUM) | FASE 2. PLANIFICACIÓN (PMI + SCRUM) | FASE 2. PLANIFICACIÓN (PMI + SCRUM) | FASE 2. PLANIFICACIÓN (PMI + SCRUM) | FASE 2. PLANIFICACIÓN (PMI + SCRUM) | FASE 2. PLANIFICACIÓN (PMI + SCRUM) | FASE 2. PLANIFICACIÓN (PMI + SCRUM) | FASE 2. PLANIFICACIÓN (PMI + SCRUM)
+5. Definición del alcance, exclusiones y entregables del proyecto |  |  |  |  |  |  |  |  |  |  |  | 
+6. Identificación y análisis de requerimientos del producto |  |  |  |  |  |  |  |  |  |  |  | 
+7. Definición del Product Goal |  |  |  |  |  |  |  |  |  |  |  | 
+8. Elaboración de épicas, historias de usuario y criterios de aceptación |  |  |  |  |  |  |  |  |  |  |  | 
+9. Creación, priorización y estimación inicial del Product Backlog |  |  |  |  |  |  |  |  |  |  |  | 
+10. Elaboración del roadmap y planificación referencial de Sprints |  |  |  |  |  |  |  |  |  |  |  | 
+11. Definición de roles Scrum, disponibilidad de interesados y mecanismos de comunicación |  |  |  |  |  |  |  |  |  |  |  | 
+12. Identificación de riesgos, criterios de calidad y Definition of Done (DoD) |  |  |  |  |  |  |  |  |  |  |  | 
+FASE 3. EJECUCIÓN - SCRUM | FASE 3. EJECUCIÓN - SCRUM | FASE 3. EJECUCIÓN - SCRUM | FASE 3. EJECUCIÓN - SCRUM | FASE 3. EJECUCIÓN - SCRUM | FASE 3. EJECUCIÓN - SCRUM | FASE 3. EJECUCIÓN - SCRUM | FASE 3. EJECUCIÓN - SCRUM | FASE 3. EJECUCIÓN - SCRUM | FASE 3. EJECUCIÓN - SCRUM | FASE 3. EJECUCIÓN - SCRUM | FASE 3. EJECUCIÓN - SCRUM | FASE 3. EJECUCIÓN - SCRUM
+13. Sprint Planning al inicio de cada Sprint: definición del Sprint Goal y selección de trabajo |  |  |  |  |  |  |  |  |  |  |  | 
+14. Sprint 1 - Desarrollo de historias de usuario priorizadas y generación del primer incremento |  |  |  |  |  |  |  |  |  |  |  | 
+15. Sprint 2 - Desarrollo de historias de usuario priorizadas y generación del segundo incremento |  |  |  |  |  |  |  |  |  |  |  | 
+16. Sprint 3 - Desarrollo de historias de usuario priorizadas y generación del tercer incremento |  |  |  |  |  |  |  |  |  |  |  | 
+17. Sprint 4 - Desarrollo de historias de usuario priorizadas y generación del cuarto incremento |  |  |  |  |  |  |  |  |  |  |  | 
+18. Sprint 5 - Desarrollo de historias de usuario priorizadas y generación del quinto incremento |  |  |  |  |  |  |  |  |  |  |  | 
+19. Sprint 6 - Desarrollo de historias de usuario priorizadas y generación del incremento final / estabilización |  |  |  |  |  |  |  |  |  |  |  | 
+20. Diseño, construcción, pruebas, integración y documentación necesaria de los incrementos |  |  |  |  |  |  |  |  |  |  |  | 
+FASE 4. MONITOREO Y CONTROL - SCRUM | FASE 4. MONITOREO Y CONTROL - SCRUM | FASE 4. MONITOREO Y CONTROL - SCRUM | FASE 4. MONITOREO Y CONTROL - SCRUM | FASE 4. MONITOREO Y CONTROL - SCRUM | FASE 4. MONITOREO Y CONTROL - SCRUM | FASE 4. MONITOREO Y CONTROL - SCRUM | FASE 4. MONITOREO Y CONTROL - SCRUM | FASE 4. MONITOREO Y CONTROL - SCRUM | FASE 4. MONITOREO Y CONTROL - SCRUM | FASE 4. MONITOREO Y CONTROL - SCRUM | FASE 4. MONITOREO Y CONTROL - SCRUM | FASE 4. MONITOREO Y CONTROL - SCRUM
+21. Daily Scrum y seguimiento del progreso hacia el Sprint Goal |  |  |  |  |  |  |  |  |  |  |  | 
+22. Seguimiento y actualización del Sprint Backlog durante cada Sprint |  |  |  |  |  |  |  |  |  |  |  | 
+23. Identificación, escalamiento y gestión de impedimentos; seguimiento de riesgos |  |  |  |  |  |  |  |  |  |  |  | 
+24. Verificación continua de criterios de aceptación, calidad y Definition of Done |  |  |  |  |  |  |  |  |  |  |  | 
+25. Sprint Review: inspección del incremento y revisión del progreso hacia el Product Goal |  |  |  |  |  |  |  |  |  |  |  | 
+26. Validación del incremento y recopilación de retroalimentación de interesados |  |  |  |  |  |  |  |  |  |  |  | 
+27. Refinamiento y actualización del Product Backlog según aprendizaje y prioridades |  |  |  |  |  |  |  |  |  |  |  | 
+28. Seguimiento de métricas de avance, calidad, defectos y cumplimiento de objetivos |  |  |  |  |  |  |  |  |  |  |  | 
+29. Sprint Retrospective: inspección del trabajo del equipo e identificación de mejoras |  |  |  |  |  |  |  |  |  |  |  | 
+30. Implementación y seguimiento de acciones de mejora para el siguiente Sprint |  |  |  |  |  |  |  |  |  |  |  | 
+FASE 5. CIERRE (PMI) | FASE 5. CIERRE (PMI) | FASE 5. CIERRE (PMI) | FASE 5. CIERRE (PMI) | FASE 5. CIERRE (PMI) | FASE 5. CIERRE (PMI) | FASE 5. CIERRE (PMI) | FASE 5. CIERRE (PMI) | FASE 5. CIERRE (PMI) | FASE 5. CIERRE (PMI) | FASE 5. CIERRE (PMI) | FASE 5. CIERRE (PMI) | FASE 5. CIERRE (PMI)
+31. Validación final del producto / solución y resolución de pendientes críticos |  |  |  |  |  |  |  |  |  |  |  | 
+32. Consolidación de documentación técnica, funcional, pruebas y evidencias del proyecto |  |  |  |  |  |  |  |  |  |  |  | 
+33. Entrega formal, transferencia y aceptación de la solución por la organización |  |  |  |  |  |  |  |  |  |  |  | 
+34. Registro de lecciones aprendidas y cierre de riesgos / incidencias pendientes |  |  |  |  |  |  |  |  |  |  |  | 
+35. Presentación final de resultados y conformidad del proyecto |  |  |  |  |  |  |  |  |  |  |  | 
+Nota: La duración referencial es de 3 meses (12 semanas). Este formato propone seis Sprints de aproximadamente dos semanas, siguiendo el ejemplo institucional proporcionado. La duración de los Sprints puede ajustarse según el contexto de la organización, siempre que se mantenga la coherencia entre Product Goal, Product Backlog, Sprint Goal, incrementos y eventos Scrum.
+Conformidad del Plan de Prácticas Preprofesionales
+
+TABLA
+JEFE INMEDIATO: | COORDINADOR(a) DE PRÁCTICAS : | ALUMNO:
+[NOMBRE DEL JEFE INMEDIATO] | [NOMBRE DEL  DEL COORDINADOR PRÁCTICA] | [NOMBRE DEL ALUMNO]
+
+
+
+________________________ | 
+
+
+________________________ | 
+
+
+_____________________
+Firma y Sello | Firma y Sello | Firma 
+Lima, ____ de __________ de 20____

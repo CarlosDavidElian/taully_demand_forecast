@@ -1,0 +1,154 @@
+Metodología Scrum aplicada al sistema de pronóstico de demanda
+Proyecto identificado en el código como Sistema de Predicción de Demanda - Minimarket Taully
+
+TABLA
+Dato administrativo | Debe completarse con evidencia real
+Empresa o razón social y RUC | TAULLY MARKET E.I.R.L.
+RUC: 20610066748
+Persona de contacto proporcionada | Jaimes Mays Miguel Angel | DNI N.° 40434815
+1. Propósito y regla de evidencia
+Este documento registra únicamente lo que se pudo comprobar en el programa ubicado en la carpeta taully_demand_forecast y separa los datos administrativos, aprobaciones y actividades Scrum que requieren evidencia externa. No se consignan fechas, responsables, ubicaciones, sprints ejecutados ni firmas porque esos datos no existen en el código revisado.
+Cada campo en blanco debe completarse solo con actas, correos institucionales, registros de reunión o firmas obtenidas en la ejecución real. Las actividades futuras se presentan como pendientes de aprobación, no como realizadas.
+2. Evidencia técnica comprobada en el programa
+
+TABLA
+Componente | Evidencia encontrada | Estado
+Tecnología |  | 
+ | Aplicación Python con interfaz web Flask. | 
+ |  | Implementado.
+Ingreso de datos |  | 
+ | Acepta reportes de ventas .xlsx, .xls y .pdf; controla formatos no permitidos. | 
+ |  | Implementado.
+Catálogo maestro |  | 
+ | Valida un catálogo .xlsx antes de reemplazar el archivo activo. | 
+ |  | Implementado.
+Calidad de datos |  | 
+ | Registra productos sin categoría, evita fechas duplicadas y conserva respaldo antes de reconstruir el historial. | 
+ |  | Implementado.
+Historial |  | 
+ | Consolida demanda diaria por categoría en archivos CSV. | 
+ |  | Implementado.
+Panel |  | 
+ | Muestra resumen, categorías y fechas de cobertura. | 
+ |  | Implementado.
+Entrenamiento |  | 
+ | Entrena un modelo independiente por cada categoría con datos suficientes. | 
+ |  | Implementado.
+Pronóstico |  | 
+ | Genera proyecciones entre 1 y 90 días y detecta cambios del historial. | 
+ |  | Implementado.
+Compra sugerida |  | 
+ | Distribuye el pronóstico de categoría a productos y exporta a Excel. | 
+ |  | Implementado.
+Pruebas |  | 
+ | La ejecución revisada terminó con 20 pruebas automatizadas correctas y sin fallos. | 
+ |  | Verificado.
+3. Modelo de machine learning realmente implementado
+Entrenamiento operativo compara Random Forest Regressor y un promedio estacional de las cuatro semanas equivalentes previas. Por categoría, se selecciona el candidato con menor WAPE.
+
+TABLA
+Elemento | Configuración comprobada
+Unidad de pronóstico | 
+ | Demanda diaria por categoría de producto.
+Variables temporales | 
+ | Día de semana, mes, día del año y fin de semana.
+Rezagos | 
+ | Lag de 1 día, lag de 7 días, promedio móvil de 7 días y promedio estacional de 4 semanas.
+Datos mínimos | 
+ | 48 días de historia total y 30 días con demanda registrada por categoría.
+Validación | 
+ | Separación cronológica 80/20, sin usar datos futuros en el entrenamiento.
+Métricas | 
+ | MAE, RMSE y WAPE. MAPE se calcula solo cuando la demanda real no es cero.
+Criterio operativo | 
+ | La categoría se excluye si WAPE supera el límite configurado de 50 por ciento.
+Detalle por producto | 
+ | No es pronóstico directo por SKU: asigna la categoría según participación histórica reciente.
+4. Correspondencia con Scrum
+El código confirma incrementos técnicos, pero no contiene registros que prueben eventos Scrum. La siguiente relación sirve como Product Backlog sugerido y no afirma un orden de sprints ya ejecutados.
+
+TABLA
+ID sugerido | Incremento técnico existente | Criterio de aceptación con evidencia real
+HU01 |  | 
+ | Carga y validación de reportes. | 
+ |  | Procesar un archivo autorizado y comprobar registros y fechas.
+HU02 |  | 
+ | Catálogo y productos sin categoría. | 
+ |  | Revisar catálogo válido y reporte de productos no asociados.
+HU03 |  | 
+ | Reconstrucción trazable del historial. | 
+ |  | Demostrar respaldo, control de duplicados y cobertura.
+HU04 |  | 
+ | Tablero de demanda. | 
+ |  | Comprobar totales y fechas con datos autorizados.
+HU05 |  | 
+ | Entrenamiento y comparación. | 
+ |  | Revisar categorías, método elegido y MAE, RMSE, WAPE.
+HU06 |  | 
+ | Pronóstico y distribución por producto. | 
+ |  | Comprobar rango, fecha base y conciliación por categoría.
+HU07 |  | 
+ | Exportación para compras. | 
+ |  | Abrir el Excel exportado y comprobar contenido del periodo.
+HU08 |  | 
+ | Pruebas y documentación. | 
+ |  | Ejecutar pruebas acordadas y entregar manual actualizado.
+5. Documentos Scrum que deben completarse solo al ejecutarlos
+
+TABLA
+Documento | Momento real | Información obligatoria
+Acta de inicio |  | 
+ | Antes del primer sprint. | 
+ |  | Objetivo, alcance, responsables reales, Product Goal y fecha efectiva.
+Product Backlog |  | 
+ | Antes y durante planificación. | 
+ |  | Historias aprobadas, prioridad, criterios y responsable que valida.
+Sprint Backlog |  | 
+ | Al inicio de cada sprint. | 
+ |  | Historias elegidas, tareas, fecha de inicio y meta.
+Bitácora Daily Scrum |  | 
+ | Durante cada sprint. | 
+ |  | Avance, siguiente tarea, impedimento y acuerdo.
+Acta de Sprint Review |  | 
+ | Al finalizar cada sprint. | 
+ |  | Incremento, evidencia, decisión y observaciones.
+Retrospectiva |  | 
+ | Después de cada Review. | 
+ |  | Mejora acordada, responsable y seguimiento.
+Acta de aceptación final |  | 
+ | Al cierre real. | 
+ |  | Entregables, decisión final y firmas.
+Acta de aceptación 
+
+TABLA
+Entregable | Verificación real | Observación
+Sistema web |  | 
+ | [ x ] Conforme  [  ] Pendiente | 
+ |  | ____________________________
+Datos y catálogo |  | 
+ | [X  ] Conforme  [  ] Pendiente | 
+ |  | ____________________________
+Reporte de pruebas |  | 
+ | [ X ] Conforme  [  ] Pendiente | 
+Decisión final |  | 
+ | [ X ] Aceptado  [  ] Aceptado con observaciones | 
+ |  | ____________________________
+
+TABLA
+
+
+
+____________________________
+ | 
+
+
+____________________________
+
+Guerrero Mora Carlos David Elian | DNI N.° 71926970 | Jaimes Mays Miguel Angel | DNI N.° 40434815
+Anexo visual Capturas reales del sistema
+Las siguientes imágenes se capturaron del panel local en ejecución. No se cargaron archivos, no se entrenó el modelo y no se modificó el historial, catálogo ni resultados durante la captura.
+Figura 1. Panel principal del sistema de pronóstico en ejecución local.
+La figura acredita la existencia de la interfaz; no representa una aprobación empresarial ni una métrica de investigación.
+Continuación del anexo visual
+Figura 2. Sección de operación del panel en ejecución local.
+Estas capturas complementan el registro técnico. La aceptación de funcionalidades, las fechas de sprint, las firmas y las métricas que se presenten en la tesis deben obtenerse mediante evidencia real y documentarse en las actas incluidas en este plan.

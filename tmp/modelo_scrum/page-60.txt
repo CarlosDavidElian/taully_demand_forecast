@@ -1,0 +1,40 @@
+ 
+Distribución de 
+productos 
+Tasa de 
+cumplimiento de 
+pedidos 
+Según Garcia (2022), este 
+indicador es clave en la 
+gestión logística, que mide la 
+capacidad de un centro de 
+distribución para entregar los 
+pedidos en el tiempo y forma 
+acordados. Se calcula 
+dividiendo el número de 
+pedidos entregados a tiempo 
+entre el númer o total de 
+pedidos, y multiplicando el 
+resultado por 100, obteniendo 
+un porcentaje. Este indicador 
+es crucial para evaluar la 
+eficiencia operativa y su 
+impacto en la satisfacción del 
+cliente, ya que una alta tasa 
+refleja un sistema logístico 
+eficaz y reduc e la posibilidad 
+de quiebres de stock o 
+productos agotados. 
+Fichaje 
+Ficha de 
+registro 
+ 
+TCP = PEC
+PR × 100% 
+TCP: Tasa de 
+cumplimiento de pedidos 
+PEC: N° pedidos 
+entregados completos 
+PR: N° pedidos 
+requeridos 
+ 

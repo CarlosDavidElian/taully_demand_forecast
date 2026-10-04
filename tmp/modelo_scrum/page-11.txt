@@ -1,0 +1,34 @@
+1 
+ 
+I. Introducción 
+En un contexto reciente, las empresas comerciales enfrentaron un entorno cada vez 
+más desafiante, donde el rendimiento en la gestión logística y de la cadena de 
+suministro se volvió crítico para garantizar su sostenibilidad y crecimiento. La 
+relevancia de este aspecto radicó en la capacidad de las organizaciones para adoptar 
+tecnologías emergentes, como Business Intelligence y Machine Learning, las cuales 
+permitieron optimizar la eficacia y la toma de decisiones en áreas estratégicas.  En 
+particular, la cade na de suministro emergió como uno de los principales focos de 
+transformación, debido a la complejidad inherente en la gestión de inventarios, el 
+pronóstico de la demanda y la reducción de los gastos operativos. En el Perú, el brote 
+de la COVID-19 impulsó a numerosas empresas a revisar y mejorar el manejo de sus 
+cadenas de suministro. Según un estudio de EY Perú, solo el 34 % de las empresas 
+en el país contaba con un sistema de administración maduro, mientras que el 66 % 
+restante aún se encontraba en proceso  de desarrollo. El informe analizó tres pilares 
+fundamentales: planificación, abastecimiento y entrega. Se destacó que los sectores 
+de consumo masivo y comercio minorista mostraban mayor madurez, en comparación 
+con los sectores de manufactura y energía, los cuales evidenciaban más posibilidades 
+de mejora. Las empresas, por tanto, gestionaron la cadena de suministro de forma 
+integral, adaptándose a los cambios del entorno y apoyándose en la tecnología para 
+incrementar su eficiencia y resiliencia. La optimización de inventarios y la inversión en 
+herramientas tecnológicas para la gestión de almacenes y pedidos resultaron 
+esenciales para mejorar el desempeño, especialmente en lo referido al cumplimiento 
+de entregas completas y a tiempo. Finalmente, se destacó qu e la transformación 
+digital y la integración con proveedores y clientes constituyeron elementos clave para 
+una gestión exitosa [1]. 
+En la empresa INTERSEGUR, el procedimiento que se seguía en la gestión de la 
+cadena de suministro se realizaba de forma completamente manual, lo que generaba 
+importantes ineficiencias en todas las etapas de la operación logística. Los 
+almacenistas de cada tienda registraban el ingreso y la salida de productos utilizando 
+únicamente hoja y lápiz, lo que daba lugar a frecuentes errores humanos, como 
+omisiones o duplicaciones, que afectaban negativamente la precisión del inventario.  
+Esta falta de control en tiempo real limitaba considerablemente la visibilidad sobre los 

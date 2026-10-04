@@ -1,0 +1,32 @@
+ 
+Diseño 
+• Diseño de prototipos 
+En la Figura 26 se muestra el diseño funcional del RF05 que aprobó el Product Owner 
+para el proceso ETL de Producto , realizado en Diagrams.net, con los componentes 
+necesarios para su correcta ejecución. 
+Figura 26. Diagrama funcional del proceso ETL de Producto 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+La Tabla 42 muestra los componentes técnicos definidos para el funcionamiento del 
+proceso ETL de Producto correspondiente al requerimiento RF05. 
+Tabla 42. Componentes técnicos del RF05 – ETL de Producto 
+Elemento Descripción 
+Fuente de datos Archivo Excel (.xlsx) con registros de productos 
+Herramienta 
+ETL 
+Script Python con consultas SQL para limpiar y transformar 
+los datos 
+Tabla destino DIM_PRODUCTO del modelo dimensional 
+Frecuencia Única vez (carga inicial) 
+Validaciones Unicidad de ID_PRODUCTO, formato numérico del precio, 
+campos obligatorios 
+Uso posterior Relacionar los productos con la tabla de hechos 
+FACT_PEDIDOS mediante ID_PRODUCTO 
+Fuente: Elaboración propia 
+En la Figura 27 se muestra el diseño funcional del RF06 que aprobó el Product Owner 
+para el proceso ETL de Empleado, realizado en Diagrams.net, con los componentes 
+necesarios para su correcta ejecución. 
+ 

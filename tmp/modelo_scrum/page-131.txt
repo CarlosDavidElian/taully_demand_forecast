@@ -1,0 +1,42 @@
+ 
+empleado debe contar con su información personal y laboral 
+correctamente registrada en la base de datos dimensional. 
+Restricciones 
+Solo la Gerencia general puede administrar este proceso ETL. 
+No se deben modificar registros sin validación de estructura y 
+contenido. 
+Fuente: Elaboración propia 
+Historia de usuario Nº 6: 
+En la Tabla 13 se evidencia la Historia Nº 6, llamada Implementación de ETL de 
+cliente, donde se detallan los usuarios, la prioridad basada en la técnica MoSCoW, 
+el tiempo estimado en días, condiciones y restricciones. 
+Tabla 13. Historia de usuario Nº 6 
+Elemento Detalle 
+Nombre Implementación de ETL de cliente 
+Usuarios Gerencia general 
+Prioridad M (Must Have) - Basada en la técnica MoSCoW 
+Tiempo 
+estimado 3 días 
+Condiciones 
+Se debe desarrollar un proceso de ETL que garantice la 
+extracción, transformación y carga de datos de clientes en la 
+base de datos dimensional. La información de cada cliente debe 
+incluir nombre, tipo de cliente, identificación y dirección. 
+Restricciones 
+Solo la Gerencia general tiene acceso a la administración del 
+proceso ETL. No se deben modificar estructuras sin validación 
+previa. 
+Fuente: Elaboración propia 
+Historia de usuario Nº 7: 
+En la Tabla 14 se evidencia la Historia Nº 7, llamada Implementación de ETL de 
+ubicación, donde se detallan los usuarios, la prioridad basada en la técnica 
+MoSCoW, el tiempo estimado en días, condiciones y restricciones. 
+Tabla 14. Historia de usuario Nº 7 
+Elemento Detalle 
+Nombre Implementación de ETL de ubicación 
+Usuarios Gerencia general 
+Prioridad M (Must Have) - Basada en la técnica MoSCoW 
+Tiempo 
+estimado 3 días 
+Condiciones Se debe establecer un proceso de ETL que permita la correcta 
+integración y transformación de los datos de ubicación en la base 

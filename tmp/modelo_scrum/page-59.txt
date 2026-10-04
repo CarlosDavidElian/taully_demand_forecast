@@ -1,0 +1,45 @@
+ 
+Dimensión Indicador Descripción Técnica Instrumento Unidad de 
+Medida Fórmula 
+Abastecimiento 
+de productos 
+Precisión del 
+inventario 
+Según Bonaga (2024), este 
+indicador desempeña un 
+papel esencial en el 
+subproceso de 
+abastecimiento en la cadena 
+de suministro, al asegurar que 
+los registros del inventario 
+coincidan con la cantidad de 
+productos físicos disponibles. 
+Esto facilita una planificación 
+precisa del reabastecimiento 
+y evita tanto escaseces como 
+acumulaciones innecesarias, 
+mejorando así el movimiento 
+de productos desde la compra 
+hasta su almacenamiento. Al 
+mantener un inventario 
+exacto, las empresas logran 
+una gestión de 
+abastecimiento más continua 
+y económica, evitando el 
+exceso de inventario y 
+garantizando que los 
+productos estén listos para 
+cumplir con la demanda del 
+cliente en el momento 
+oportuno. 
+Fichaje 
+Ficha de 
+registro 
+ 
+PI = PT
+TP × 100% 
+PI: Precisión del 
+inventario 
+PT: N° productos en 
+tienda 
+TP: N° total de productos 

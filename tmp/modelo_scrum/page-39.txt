@@ -1,0 +1,31 @@
+29 
+ 
+Hipótesis H0: La implementación de un sistema basado en Business Intelligence con 
+Machine Learning no mejora la precisión de inventario en la gestión de la cadena de 
+suministro en la empresa INTERSEGUR. 
+H0: PIa>=PLd 
+Hipótesis Ha: La implementación de un sistema basado en Business Intelligence con 
+Machine Learning mejora la precisión de inventario en la gestión de la cadena de 
+suministro en la empresa INTERSEGUR. 
+H0: PId>Pla 
+Dado que los resultados de las pruebas de normalidad mediante Kolmogorov-Smirnov 
+indicaron que los datos de ambos  presentaban una distribución normal en los 
+momentos de pre-test y post-test, se procedió a aplicar la prueba T de Student para 
+muestras relacionadas. Los cuales cuyos resultados se muestran a continuación en 
+la Tabla 5 y Tabla 6. 
+Tabla 5. Prueba de T-student – Precisión de Inventario 
+Fuente: Elaboración propia 
+Como se visualiza en la tabla correspondiente, el valor calculado de la prueba t de 
+Student para el indicador de precisión del inventario fue de -13.920, el cual se muestra 
+de igual forma en la Figura 7. 
+ 
+ 
+ 
+ 
+ 
+Prueba de T-Student 
+ t gl Sig. (bilateral) 
+PRECISION DE INVENTARIO - PRE 
+TEST - PRECISION DE 
+INVENTARIO - POST TEST 
+-13,920 19 ,000 

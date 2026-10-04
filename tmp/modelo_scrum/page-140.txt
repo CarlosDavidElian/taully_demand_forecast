@@ -1,0 +1,38 @@
+ 
+SPR5-03 Generación de reportes en 
+Excel 01/06/2025 07/06/2025 7 días 
+SPR5-04 Presentación del Sprint 5 05/06/2025 06/06/2025 1 día 
+SPR5-05 Reunión de retrospectiva 
+del Sprint 5 07/06/2025 08/06/2025 1 día 
+Fuente: Elaboración propia 
+III. IMPLEMENTACIÓN 
+3.1. Sprint 1 
+El Sprint 1 fue desarrollado y documentado en cada una de sus 4 fases: Análisis, 
+Diseño, Implementación y Pruebas. 
+Análisis 
+En la Tabla 30 se presentan los requerimientos que conforman el Sprint 1. 
+Tabla 30. Sprint 1 
+Código HU Requerimiento 
+H.U.1 RF02: Sistema de autenticación: Implementar login y gestión de 
+permisos en la plataforma. 
+H.U.2 RF03: Administración de usuarios: Crear el módulo para 
+administrar usuarios y permisos. 
+H.U.3 RF04: Implementación de ETL de tiempo: Implementar la 
+extracción, transformación y carga de datos de tiempo. 
+Fuente: Elaboración propia 
+• Funcionalidades del Sprint 1 
+En la Tabla 31 se describen las funcionalidades que tendrá el sistema, mostrando la 
+interacción entre el usuario y la arquitectura de software para cada uno de los 
+requerimientos listados en el Sprint 1. 
+Tabla 31. Funcionalidades del Sprint 1 
+Código RF Funcionalidad 
+RF02 
+El usuario accede al sistema mediante una interfaz de inicio de 
+sesión donde introduce su usuario y contraseña. Esta solicitud es 
+procesada por el controlador, que valida los datos contra el modelo. 
+Si las credenciales son correctas, se permite el ingreso al sistema 
+según los permisos definidos para el perfil del usuario autenticado. 
+RF03 
+El módulo de gestión de usuarios permite visualizar el listado de 
+registros activos. El usuario puede registrar nuevos usuarios, editar 
+datos existentes o eliminar entradas. Cada acción es validada, 

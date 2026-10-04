@@ -1,0 +1,23 @@
+ 
+En la Figura 82 se muestra el HTML para la visualización del Dashboard BI del RF12, 
+evidenciándose en el archivo dashboard.html. 
+Figura 82. Dashboard BI del RF12 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 

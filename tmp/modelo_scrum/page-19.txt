@@ -1,0 +1,34 @@
+9 
+ 
+primer lugar, estas técnicas permitieron a las organizaciones automatizar tareas 
+repetitivas y que requerían mucho tiempo, como la integración y limpieza de registros, 
+así como la generación de informes. En segundo lugar, el aprendizaje por 
+computadora y l a tecnología inteligente optimizaron el análisis de datos al detectar 
+patrones complejos y tendencias que podrían haber sido pasados por alto por 
+analistas humanos. Esto resultó en pronósticos más precisos, proyecciones 
+mejoradas y una toma de decisiones más efectiva. 
+Asi también, Shobana et al. [16] mencionaron que “Business Intelligence con Machine 
+Learning” son tecnologías que funcionaron muy bien juntas, y las definieron como 
+herramientas tecnológicas utilizadas para recoger, estudiar e interpretar grandes 
+volúmenes de datos con el propósito de to mar decisiones empresariales más 
+informadas. En este contexto, el aprendizaje automático (machine learning) se aplicó 
+para prever y abordar desafíos específicos, como la rotación de clientes en el 
+comercio electrónico. Este enfoque combinó técnicas como las máquinas de vectores 
+de soporte para predecir el abandono de clientes y estrategias híbridas que 
+personalizaron las soluciones de retención basándose en datos demográficos, 
+comportamientos y preferencias.  Al integrar machine learning en el Business 
+Intelligence, las empresas pudieron optimizar sus procesos, reducir pérdidas y 
+mejorar sus ingresos al identificar patrones clave en las ventas, elevar el nivel de los 
+servicios ofrecidos y adaptar sus planes de acción comercial. Esto permitió una visión 
+más precisa, y a largo plazo, del mercado y la competencia, favoreciendo decisiones 
+estratégicas basadas en datos confiables. 
+Del mismo modo, según Patriarca et al. [17], en el Business Intelligence con Machine 
+Learning se combinó la capacidad de la inteligencia empresarial para estudiar 
+enormes conjuntos de datos con las técnicas avanzadas del aprendizaje automático, 
+como pronósticos, reducción de dimensionalidad y agrupamiento. El machine learning 
+ofreció un valor añadido al maximizar el aprovechamiento de los datos mediante 
+métodos automatizados y eficientes. Sin embargo, su implementación en entornos 
+productivos continuó siendo un reto, ya que requirió un alto nivel de  experiencia en 
+ciencia de datos y ajustes manuales.  Por su parte, se desarrollaron marcos de 
+machine learning de autoservicio que facilitaron a los analistas, incluso con poca 
+experiencia técnica, la adopción de estos algoritmos, democratizando así su uso y 

@@ -1,0 +1,41 @@
+ 
+Figura 71. Burndown del Sprint 3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+Retrospectiva del Sprint 3 
+La retrospectiva del Sprint 3 permite evaluar el desempeño del equipo durante la 
+implementación de los procesos ETL de pedidos e inventario, así como el desarrollo 
+del modelo de predicción de demanda. Esta revisión busca identificar aprendizajes, 
+obstáculos técnicos y propuestas de mejora que garanticen mayor eficiencia en el 
+desarrollo del software . En la Tabla 61 se resumen las observaciones registradas 
+durante esta iteración. 
+Tabla 61. Retrospectiva del Sprint 3 
+Problema Causas Acciones 
+Dificultades en el cruce 
+de claves durante la 
+carga de pedidos 
+Algunos registros del 
+archivo fuente contenían 
+valores inexistentes en 
+las tablas dimensionales 
+Se implementó validación 
+previa de claves foráneas 
+y reporte de errores al 
+probador 
+Inconsistencias 
+numéricas en el 
+inventario 
+Presencia de valores 
+negativos y texto en 
+campos de stock 
+Se aplicó conversión de 
+tipos y filtros lógicos para 
+omitir registros inválidos 
+Fuente: Elaboración propia 

@@ -1,0 +1,29 @@
+ 
+7.6. Resultado del Subsistema ETL 
+El subsistema ETL resultante es robusto, escalable y mantenible, y permite alimentar 
+el Data Warehouse desde múltiples archivos Excel con datos históricos y actuales de 
+la empresa. Este subsistema actúa como el puente entre los datos operacionales y el 
+sistema de inteligencia de negocios, asegurando calidad y consistencia en la 
+información que se presenta en el dashboard. 
+VIII. ESPECIFICACIÓN Y DESARROLLO DE APLICACIONES DE BI 
+El objetivo principal de este proyecto es proporcionar a la empresa comercial una 
+herramienta de Business Intelligence que permita una visualización clara, interactiva 
+y en tiempo real de los indicadores clave de la cadena de suministro. Para ello, se 
+desarrolló una aplicación web utilizando tecnologías modernas como Flask (Python) 
+para el backend y Chart.js para las visualizaciones interactivas. 
+8.1. Requisitos Funcionales del Dashboard BI 
+Se identificaron los siguientes requisitos funcionales esenciales para las aplicaciones 
+de BI: 
+• Visualizar la evolución de pedidos por mes, producto o cliente. 
+• Analizar el estado de los pedidos (completos, incompletos). 
+• Identificar los productos más vendidos y la rotación de inventario. 
+• Mostrar información de clientes frecuentes. 
+• Permitir la selección dinámica de filtros (fechas, productos) por parte del 
+usuario. 
+8.2. Arquitectura de la Aplicación BI 
+La solución BI está compuesta por: 
+• Backend (Flask - Python): Se encarga de realizar las consultas a la base de 
+datos MySQL (Data Warehouse) y devolver los datos al frontend en formato 
+JSON. De igual manera, están los scripts necesarios para la creación del 
+modelo predictivo y posteriormente mostrarlos en el frontend. 
+ 

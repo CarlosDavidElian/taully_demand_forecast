@@ -1,0 +1,41 @@
+ 
+Figura 25. Burndown del Sprint 1 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+Retrospectiva del Sprint 1 
+La retrospectiva del Sprint 1 permite analizar aspectos que funcionaron 
+correctamente, así como detectar oportunidades de mejora para las siguientes 
+iteraciones. Esta evaluación permite establecer acciones preventivas y correctivas 
+que garanticen la calidad, trazabilidad y eficiencia del producto entregado. En la Tabla 
+39 se muestra el resumen de los puntos observados durante el Sprint 1: 
+Tabla 39. Retrospectiva del Sprint 1 
+Problema Causas Acciones 
+Múltiples ajustes durante 
+el desarrollo del módulo 
+de usuarios 
+Los requerimientos 
+detallados surgieron 
+durante la implementación 
+Se decidió fortalecer la 
+revisión previa de 
+historias de usuario en la 
+reunión de planificación 
+Dificultades para validar 
+formatos de fechas en el 
+ETL de tiempo 
+Variaciones en el formato 
+de fechas en el archivo 
+Excel de origen 
+Se implementaron reglas 
+de validación automática 
+durante la transformación 
+antes de cargar a 
+DIM_TIEMPO 
+Fuente: Elaboración propia 

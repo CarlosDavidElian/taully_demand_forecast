@@ -1,0 +1,34 @@
+3 
+ 
+Frente a este escenario, el desarrollo del problema de investigación se tomó como 
+fundamento la variable independiente junto con la dependiente , lo cual llevó a la 
+siguiente pregunta: ¿Cómo un sistema basado en Business Intelligence con Machine 
+Learning puede mejorar la gestión de la cadena de suministro en la empresa 
+INTERSEGUR? Asimismo, los problemas específicos que guiaron la investigación 
+fueron dos, el primero que llevó a la siguiente interrogante: ¿De qué manera impacta 
+un sistema basado en business intelligence con machine learning en la precisión del 
+inventario de la gestión de la cadena de suministro en la empresa INTERSEGUR?, y 
+el segundo que conllevó a la pregunta: ¿De qué manera impacta un sistema basado 
+en business intelligence con machine learning en la tasa de cumplimiento de pedidos 
+de la gestión de la cadena de suministro en la empresa INTERSEGUR? 
+Justificación institucional, según Luján et al. [3], es crucial que los negocios medianos 
+y pequeños desarrollen estrategias funcionales que trabajen de manera conjunta y 
+estén alineadas con la estrategia competitiva del negocio. De lo contrario, aumenta la 
+probabilidad de fracaso, ubicando a la empresa dentro de la estadística que muestra 
+que ocho de cada diez emprendimientos no superan los primeros cinco años de 
+actividad. En el caso de la empresa INTERSEGUR, se evidenció la necesidad de un 
+cambio estraté gico en su cadena de suministro, ya que la compañía enfrentaba 
+diversos desafíos relacionados con la gestión de inventarios y la distribución 
+adecuada de productos entre sus tres tiendas. La implementación de una solución 
+basada en Business Intelligence y Machine Learning permitió predecir con precisión 
+la demanda de productos, optimizar los procesos de compra y distribución, y evitar 
+problemas como el sobrestock o el desabastecimiento.  La intención no solo fue 
+brindar una solución a estos problemas, sino también mejorar la adopción de 
+decisiones estratégicas dentro de la empresa, ayudando a mantener una imagen 
+positiva y competitiva en su sector económico. 
+Justificación tecnológica, s egún la investigación de Donbesuur  et al. [4] , la 
+implementación de innovaciones tecnológicas tuvo un gran impacto en las pequeñas 
+y medianas empresas. Al utilizar no solo innovaciones, sino también adoptar 
+estrategias tecnológicas, estas empresas lograron expandirse y aumentar su 
+competitividad en e l comercio internacional. Además, se demostró que la adopción 
+de estas tecnologías no solo mejoró la eficiencia, sino también el desempeño 

@@ -1,0 +1,31 @@
+ 
+Tabla destino DIM_UBICACION del modelo dimensional 
+Frecuencia Única vez (carga inicial) 
+Validaciones Duplicidad de ID, campos obligatorios, formato válido del tipo 
+de ubicación 
+Uso posterior Asociar ubicaciones con stock registrado en 
+FACT_INVENTARIO a través de ID_UBICACION 
+Fuente: Elaboración propia 
+• Requerimientos 
+En la Tabla 46 se muestran los requerimientos identificados previamente del Sprint 
+2, con las funcionalidades que debe poseer la herramienta para su correcta ejecución. 
+Tabla 46. Requerimientos del Sprint 2 
+Requerimientos 
+El sistema debe ejecutar un proceso de ETL que extraiga y cargue los registros de 
+productos en la tabla DIM_PRODUCTO. 
+El sistema debe ejecutar un proceso de ETL que transforme y cargue los datos de 
+empleados en la tabla DIM_EMPLEADO. 
+El sistema debe ejecutar un proceso de ETL que procese los datos de clientes, 
+asegurando formato y unicidad, y los cargue en DIM_CLIENTE. 
+El sistema debe ejecutar un proceso de ETL que cargue las ubicaciones logísticas 
+o geográficas en la tabla DIM_UBICACION. 
+Fuente: Elaboración propia 
+• Entidades 
+En la Figura 30 se muestran las entidades del Sprint 2. Teniendo bien definido los 
+requerimientos podemos determinar aquellos objetos que están involucrados y sobre 
+los que se necesita almacenar información para el desarrollo de la solución. 
+Figura 30. Entidades del Sprint 2 
+ 
+ 
+ 
+Fuente: Elaboración propia 

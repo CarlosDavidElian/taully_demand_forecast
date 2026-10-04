@@ -1,0 +1,47 @@
+ 
+La tabla FACT_PEDIDOS contiene registros válidos, únicos y consistentes, 
+relacionados correctamente con sus dimensiones. 
+Defectos Veredicto 
+No se encontraron Paso 
+Observaciones Probador 
+La prueba fue realizada en un entorno controlado. Se 
+validaron todos los campos clave y medidas, 
+asegurando integridad referencial con el modelo 
+dimensional y descartando registros erróneos o 
+duplicados. 
+• Marko Samuel Chacon 
+Ramos 
+• Erika Yanela Sancho 
+Diaz 
+Fuente: Elaboración propia 
+• Prueba de caja negra del RF10 
+En la Tabla 59 se muestra la prueba de caja negra 9 aplicada al proceso ETL para la 
+carga de inventario. Esta prueba tiene como objetivo validar que el sistema lea, 
+transforme y cargue correctamente los registros de inventario desde el archivo .xlsx 
+hacia la tabla FACT_INVENTARIO, manejando errores de formato, campos faltantes 
+o duplicación de claves. 
+Tabla 59. Prueba de caja negra 9 
+PRUEBA DE CAJA NEGRA 9 
+Código PCN-09 Fecha 01/05/2025 
+Tarea Ejecutar proceso ETL 
+de inventario Módulo Carga de hechos 
+Descripción 
+Se ejecutarán pruebas para verificar que el proceso ETL cargue 
+correctamente los datos diarios de inventario en la tabla 
+FACT_INVENTARIO, validando claves foráneas hacia las 
+dimensiones DIM_TIEMPO y DIM_UBICACION, así como la 
+consistencia de los valores numéricos del stock y la eliminación de 
+duplicados por combinación de claves primarias. 
+Precondiciones 
+• Archivo .xlsx estructurado con datos de inventario diario 
+• Dimensiones DIM_TIEMPO y DIM_UBICACION previamente pobladas 
+• Script ETL desarrollado y funcional 
+Pasos de la prueba 
+• Validar que los campos requeridos estén presentes (ID_TIEMPO, 
+ID_UBICACION, STOCK_TOTAL) 
+• Verificar que los valores del stock sean numéricos enteros y mayores o iguales 
+a cero 
+• Comprobar que los IDs referenciales existan en sus respectivas tablas 
+dimensionales 
+• Detectar y omitir registros duplicados según la clave compuesta (ID_HECHO, 
+ID_TIEMPO, ID_UBICACION) 

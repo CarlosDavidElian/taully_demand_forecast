@@ -1,0 +1,24 @@
+26 
+ 
+Figura 3. Precisión de inventario antes del sistema basado en Business Intelligence 
+con Machine Learning 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+Figura 4. Precisión de inventario después del sistema basado en Business 
+Intelligence con Machine Learning 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 

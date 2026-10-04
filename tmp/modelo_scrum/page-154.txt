@@ -1,0 +1,24 @@
+ 
+Figura 17. Controlador del RF03 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+En la Figura 18 se muestra la interfaz gráfica de usuario del RF03, definido por el 
+Product Owner y desarrollado por el equipo de trabajo. Se  muestra la tabla usuario 
+con el campo de búsqueda y los botones para agregar, editar y desactivar/activar 
+usuarios. 

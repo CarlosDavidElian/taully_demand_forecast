@@ -1,0 +1,24 @@
+ 
+Figura 3. Prototipo para agregar usuarios 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+En la Figura 4 se muestra el prototipo del RF03 que aprobó el Product Owner para la 
+vista de editar usuarios, realizado en HTML, CSS y JavaScript, con los componentes 
+necesarios para su correcta visualización. 
+Figura 4. Prototipo para editar usuarios 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+La Tabla 33 muestra las equivalencias de condiciones y los eventos definidos para el 
+funcionamiento del módulo de gestión de usuarios correspondiente al requerimiento 
+RF03. 
+ 

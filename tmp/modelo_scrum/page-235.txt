@@ -1,0 +1,26 @@
+ 
+Gráfico de Burndown del Sprint 4 
+En la Figura 88 se presenta el gráfico de Burndown correspondiente al Sprint 4. La 
+línea gris representa el esfuerzo ideal distribuido desde la reunión de planificación 
+hasta la integración final de los gráficos predictivos. La línea roja evidencia el esfuerzo 
+real registrado por el equipo, el cual muestra una caída más marcada entre el 13/05 
+y el 16/05, debido al enfoque técnico aplicado en el desarrollo del dashboard de 
+inteligencia de negocio (SPR4-02). 
+El ritmo descendente continúa del 17/05 al 20/05, etapa en la que se implementaron 
+los gráficos dinámicos de proyección de demanda mediante la integración con los 
+resultados de predicción almacenados. Finalmente, ambas líneas convergen el 
+22/05/2025, indicando la entrega puntual y completa de los requerimientos RF12 y 
+RF13, con cumplimiento efectivo del cronograma. 
+Figura 88. Burndown del Sprint 4 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+ 
+ 
+ 

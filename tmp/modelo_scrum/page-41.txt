@@ -1,0 +1,28 @@
+31 
+ 
+TCPd: Tasa de cumplimento de pedidos después de implementar el sistema basado 
+en Business Intelligence con Machine Learning. 
+Hipótesis H0: La implementación de un sistema basado en Business Intelligence con 
+Machine Learning no mejora la tasa de cumplimento de pedidos  en la gestión de la 
+cadena de suministro en la empresa INTERSEGUR. 
+H0: TCPa>=TCPd 
+Hipótesis Ha: La implementación de un sistema basado en Business Intelligence con 
+Machine Learning mejora la tasa de cumplimento de pedidos  en la gestión de la 
+cadena de suministro en la empresa INTERSEGUR. 
+H0: TCPd>TCPa 
+Tabla 6. Prueba de T-student – Tasa de cumplimiento de pedidos 
+Fuente: Elaboración propia 
+Como se visualiza en la tabla correspondiente, el valor calculado de la prueba t de 
+Student para el indicador de precisión del inventario fue de -9.182, el cual se muestra 
+de igual forma en la Figura 8. 
+Figura 8. Tasa de cumplimiento de pedidos – Prueba T-student 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+Prueba de T-Student 
+ t gl Sig. (bilateral) 
+TASA DE CUMPLIMIENTO DE PEDIDOS - PRE TEST - 
+TASA DE CUMPLIMIENTO DE PEDIDOS - POST TEST -9,182 19 ,000 

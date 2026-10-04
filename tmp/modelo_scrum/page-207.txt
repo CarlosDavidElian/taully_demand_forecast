@@ -1,0 +1,88 @@
+ 
+Descripción 
+Se ejecutarán pruebas para verificar si el proceso ETL carga 
+correctamente los registros históricos de pedidos en la tabla 
+FACT_PEDIDOS. Este procedimiento debe validar claves 
+referenciales, controlar errores en campos numéricos, evitar la 
+duplicación de r egistros y transformar los datos conforme a la 
+estructura dimensional del modelo. 
+Precondiciones 
+• Archivo .xlsx con estructura esperada de pedidos históricos 
+• Tablas dimensionales (DIM_PRODUCTO, DIM_CLIENTE, DIM_EMPLEADO, 
+DIM_TIEMPO) previamente pobladas 
+• Script ETL desarrollado y funcional 
+Pasos de la prueba 
+• Validar que los campos requeridos estén presentes (ID_PEDIDO, ID_CLIENTE, 
+ID_PRODUCTO, ID_EMPLEADO, ID_TIEMPO, CANTIDAD, 
+PRECIO_UNITARIO, SUBTOTAL, ESTADO) 
+• Verificar que los valores de cantidad, precio y subtotal sean numéricos y 
+positivos 
+• Comprobar que los IDs referenciales existan en sus dimensiones respectivas 
+• Validar que se detecten registros duplicados por combinación de claves 
+primarias 
+• Confirmar que los registros válidos se inserten correctamente en la tabla 
+FACT_PEDIDOS 
+Datos de entrada Respuesta 
+esperada 
+Coincide Respuesta 
+del Sistema Campo Valor Escenario Sí No 
+ID_CLIENTE No 
+existente 
+Clave 
+inválida 
+El sistema 
+debe 
+rechazar 
+registros 
+con claves 
+foráneas 
+inválidas 
+X  
+Registro 
+omitido por 
+inexistencia 
+en 
+DIM_CLIENT
+E 
+CANTIDAD “abc” Valor no 
+numérico 
+El sistema 
+debe 
+rechazar 
+registros 
+mal 
+formateados 
+X  
+Registro 
+ignorado por 
+error en tipo 
+de dato 
+ID_PEDIDO Repetido Pedido 
+duplicado 
+El sistema 
+debe 
+controlar 
+duplicidad 
+de pedidos 
+X  
+Pedido ya 
+existente en 
+FACT_PEDID
+OS 
+REGISTRO 
+COMPLETO Válido Carga 
+válida 
+El sistema 
+debe 
+insertar el 
+pedido 
+correctamen
+te 
+X  
+Registro 
+insertado 
+correctamente 
+en 
+FACT_PEDID
+OS 
+Post condiciones 

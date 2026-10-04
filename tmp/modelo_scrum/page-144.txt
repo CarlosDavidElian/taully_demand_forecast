@@ -1,0 +1,52 @@
+ 
+Tabla 33. Equivalencia y eventos del RF03 
+Código Condición Null Especificación 
+com_01 Máximo 200 
+caracteres Sí 
+Input que permite realizar la 
+búsqueda de un usuario 
+específico. 
+com_02 Máximo 100 
+caracteres No Nombres del usuario. 
+com_03 Máximo 100 
+caracteres No Apellidos del usuario. 
+com_04 Exactamente 
+8 dígitos No Número de DNI del usuario. 
+com_05 
+Mínimo 9 
+caracteres 
+numéricos 
+No Teléfono de contacto del usuario. 
+com_06 
+Fecha con 
+formato 
+dd/mm/aaaa 
+No Fecha de nacimiento del usuario. 
+com_07 Lista 
+desplegable No Selección del rol asignado al 
+usuario. 
+com_08 Formato email 
+válido No Correo electrónico del usuario. 
+com_09 Mínimo 6 
+caracteres Sí 
+Contraseña del usuario. 
+Opcional en modo edición si no 
+se desea actualizar. 
+com_10 Estado: 
+Activo/Inactivo No Estado del usuario mostrado en 
+el listado. 
+Objeto ID Valor Evento Especificación 
+Button btn_agregar Agregar onclick Abre el formulario de 
+registro de usuario. 
+Button btn_guardar Guardar onclick 
+Valida el formulario, 
+guarda la 
+información y 
+redirige al listado. 
+InputSearch txt_buscar — onkeyup Filtra dinámicamente 
+la tabla de usuarios. 
+IconButton btn_editar ✎ onclick 
+Carga el formulario 
+con los datos 
+existentes del 
+usuario para edición. 

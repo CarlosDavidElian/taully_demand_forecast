@@ -1,0 +1,23 @@
+ 
+Figura 36. Transformación de datos del RF05 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+En la Figura 37 se muestra la lógica para la carga de datos de producto  del RF05, 
+evidenciándose en  el archivo producto_etl_controller .py. Con esto, los datos de 
+producto se insertarán en la tabla DIM_PRODUCTO del modelo dimensional. 
+Figura 37. Carga de datos del RF05 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 

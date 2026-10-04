@@ -1,0 +1,105 @@
+ 
+Pasos de la prueba 
+• Verificar que los indicadores PI y TCP estén correctamente calculados y visibles 
+• Confirmar que el total de pedidos y pedidos completados coincida con los datos 
+históricos 
+• Validar que los gráficos por tipo de cliente y por producto estén correctamente 
+ordenados 
+• Revisar que los rankings de días con mayor PI y clientes con mejor TCP estén 
+completos y legibles 
+• Comprobar que los títulos, leyendas y etiquetas estén bien posicionados y sin 
+errores ortográficos 
+Datos de entrada Respuesta 
+esperada 
+Coincide Respuesta 
+del 
+Sistema Campo Valor Escenario Sí No 
+PI y TCP Faltantes Métricas 
+incompletas 
+El sistema 
+debe 
+mostrar las 
+métricas 
+generales 
+calculadas 
+X  
+PI = 
+40.04%, 
+TCP = 
+75.85%, 
+visibles en 
+encabezad
+o 
+Pedidos 
+completados/
+totales 
+Valores 
+erróneos 
+Datos mal 
+calculados 
+El sistema 
+debe 
+mostrar 
+datos 
+consolidado
+s de 
+pedidos 
+X  
+Completado
+s: 39, 
+Totales: 52 
+Gráfico por 
+tipo de 
+cliente 
+Barras 
+invertidas 
+Datos 
+desordenad
+os 
+El gráfico 
+debe 
+representar 
+correctamen
+te Natural 
+vs. Jurídica 
+X  
+Natural: 
+77.57%, 
+Jurídica: 
+74.4% 
+Ranking por 
+producto Incompleto Falta de 
+datos 
+El sistema 
+debe 
+mostrar los 
+productos 
+más 
+pedidos 
+X  
+Detector de 
+Humo DSW 
+lidera con 8 
+pedidos 
+Ranking de 
+días y 
+clientes 
+No legible Formato 
+poco claro 
+Los 
+rankings 
+deben estar 
+completos, 
+con fechas 
+y valores 
+coherentes 
+X  
+Tablas 
+muestran 
+días con PI 
+más alto y 
+clientes 
+destacados 
+Post condiciones 
+El dashboard RF12 muestra correctamente todos los elementos visuales estáticos 
+basados en datos históricos, sin errores de diseño ni omisiones. 

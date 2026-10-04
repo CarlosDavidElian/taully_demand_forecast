@@ -1,0 +1,25 @@
+ 
+Figura 14. Extracción de datos de FACT_INVENTARIO 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+7.2. Transformación de Datos 
+En esta fase se realizaron varias operaciones clave: 
+• Limpieza de datos:  eliminación de registros nulos, duplicados o 
+inconsistentes. 
+• Conversión de tipos de datos:  formateo de fechas, conversión de strings 
+numéricos a enteros o decimales, y normalización de campos categóricos. 
+• Generación de claves sustitutas para las tablas de dimensiones. 
+• Estandarización de nomenclaturas y formatos  para garantizar 
+compatibilidad con la base de datos MySQL. 
+• Derivación de columnas temporales  (AÑO, MES, DÍA) a partir del campo 
+fecha para la dimensión tiempo. 
+ 
+ 
+ 
+ 
+ 

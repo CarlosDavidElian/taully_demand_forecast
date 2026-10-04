@@ -1,0 +1,45 @@
+ 
+SPR2-02 Implementación de ETL de 
+producto 11/04/2025 13/04/2025 3 días 
+SPR2-03 Implementación de ETL de 
+empleado 14/04/2025 16/04/2025 3 días 
+SPR2-04 Implementación de ETL de 
+cliente 17/04/2025 19/04/2025 3 días 
+SPR2-05 Implementación de ETL de 
+ubicación 20/04/2025 22/04/2025 3 días 
+SPR2-06 Presentación del Sprint 2 23/04/2025 23/04/2025 1 día 
+SPR2-07 Reunión de retrospectiva 
+del Sprint 2 24/04/2025 24/04/2025 1 día 
+Fuente: Elaboración propia 
+Tabla 27. Cronograma del Sprint 3 
+Código Tarea Inicio Fin Duración 
+SPR3-01 Reunión de planificación del 
+Sprint 3 25/04/2025 25/04/2025 1 día 
+SPR3-02 Implementación de ETL de 
+pedidos 26/04/2025 28/04/2025 3 días 
+SPR3-03 Implementación de ETL de 
+inventario 29/04/2025 01/05/2025 3 días 
+SPR3-04 Desarrollo de predicción de 
+demanda 02/05/2025 05/05/2025 4 días 
+SPR3-05 Presentación del Sprint 3 06/05/2025 06/05/2025 1 día 
+SPR3-06 Reunión de retrospectiva 
+del Sprint 3 07/05/2025 07/05/2025 1 día 
+Fuente: Elaboración propia 
+Tabla 28. Cronograma del Sprint 4 
+Código Tarea Inicio Fin Duración 
+SPR4-01 Reunión de planificación del 
+Sprint 4 08/05/2025 08/05/2025 1 día 
+SPR4-02 Desarrollo del Dashboard 
+de Business Intelligence 13/05/2025 16/05/2025 4 días 
+SPR4-03 Gráficos de las predicciones 
+IA 17/05/2025 20/05/2025 4 días 
+SPR4-04 Presentación del Sprint 4 21/05/2025 21/05/2025 1 día 
+SPR4-05 Reunión de retrospectiva 
+del Sprint 4 22/05/2025 22/05/2025 1 día 
+Fuente: Elaboración propia 
+Tabla 29. Cronograma del Sprint 5 
+Código Tarea Inicio Fin Duración 
+SPR5-01 Reunión de planificación del 
+Sprint 5 23/05/2025 23/05/2025 1 día 
+SPR5-02 Implementación del módulo 
+de reportes 24/05/2025 31/05/2025 8 días 

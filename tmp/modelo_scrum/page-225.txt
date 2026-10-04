@@ -1,0 +1,24 @@
+ 
+En la Figura 80 se muestra la lógica para recepcionar y mostrar visualmente los datos 
+provenientes del servidor para la tabla top días de PI del RF12, evidenciándose en el 
+archivo dashboard.js. 
+Figura 80. JavaScript para la tabla top días de PI del RF12 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+En la Figura 81 se muestra la lógica para recepcionar y mostrar visualmente los datos 
+provenientes del servidor para la tabla top clientes del RF12, evidenciándose en  el 
+archivo dashboard.js. 
+Figura 81. JavaScript para la tabla top clientes del RF12 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+ 

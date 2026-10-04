@@ -1,0 +1,108 @@
+ 
+Datos de entrada Respuesta 
+esperada 
+Coincide Respuesta 
+del Sistema Campo Valor Escenario Sí No 
+Datos de 
+marzo 
+40,003 
+unidades 
+Valor 
+proyectado 
+El sistema 
+debe 
+mostrar 
+correctamen
+te la 
+demanda de 
+marzo 
+X  
+Barra de 
+marzo 
+muestra 
+40,003 
+unidades 
+Datos de 
+abril 
+39,037 
+unidades 
+Valor 
+proyectado 
+El sistema 
+debe 
+mostrar 
+correctamen
+te la 
+demanda de 
+abril 
+X  
+Barra de abril 
+muestra 
+39,037 
+unidades 
+Datos de 
+mayo 
+39,334 
+unidades 
+Valor 
+proyectado 
+El sistema 
+debe 
+mostrar 
+correctamen
+te la 
+demanda de 
+mayo 
+X  
+Barra de mayo 
+muestra 
+39,334 
+unidades 
+Ejes del 
+gráfico 
+Mes y 
+Unidades 
+Etiquetas 
+visibles 
+El sistema 
+debe 
+mostrar los 
+ejes 
+correctamen
+te rotulados 
+X  
+Ejes visibles y 
+correctamente 
+etiquetados 
+Diseño 
+gráfico Legible Visualizaci
+ón clara 
+El sistema 
+debe 
+mostrar el 
+gráfico sin 
+errores de 
+escala o 
+formato 
+X  
+Gráfico 
+renderizado 
+correctamente 
+y sin 
+distorsiones 
+Post condiciones 
+El componente gráfico del RF13 presenta correctamente las estimaciones 
+mensuales de demanda por producto, alineadas con los datos del modelo predictivo 
+y sin errores visuales. 
+Defectos Veredicto 
+No se encontraron Paso 
+Observaciones Probador 
+La prueba fue realizada sobre la interfaz visual del 
+RF13 en entorno de desarrollo. Se validaron los 
+valores proyectados, la estructura del gráfico y la 
+coherencia con los datos de la tabla predicciones_ia. 
+• Marko Samuel Chacon 
+Ramos 
+• Erika Yanela Sancho 
+Diaz 
+Fuente: Elaboración propia 

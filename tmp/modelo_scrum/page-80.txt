@@ -1,0 +1,56 @@
+ 
+Tabla 2. Requerimientos del Proyecto BI con Machine Learning 
+Categoría Descripción Prioridad 
+Objetivo del Negocio 
+Optimizar la gestión de la cadena de 
+suministro mediante Business Intelligence y 
+Machine Learning. 
+Alta 
+Usuarios del Sistema 
+Vendedores, estibadores, gerentes 
+generales. Cada perfil con necesidades 
+específicas. 
+Alta 
+Fuente de Datos 
+Datos de pedidos, inventario y empleados en 
+archivos Excel integrados en MySQL 
+mediante ETL. 
+Alta 
+KPIs Claves Precisión del Inventario y Tasa de 
+Cumplimiento de Pedidos. Alta 
+Requerimientos 
+Funcionales 
+- Dashboard interactivo con KPIs. 
+- Filtros por producto y fecha. 
+- Predicción de demanda. 
+Alta 
+Requerimientos No 
+Funcionales 
+- Accesibilidad vía navegador web. 
+- Consultas con tiempos de respuesta 
+óptimos (<5 segundos). 
+- Seguridad en acceso. 
+Media 
+Automatización del 
+ETL 
+Proceso ETL en Python para la integración y 
+limpieza de datos, con actualización diaria en 
+MySQL. 
+Alta 
+Herramientas 
+Utilizadas 
+Python, MySQL, Machine Learning para 
+predicciones, Flask para el dashboard. Alta 
+Fuente: Elaboración propia 
+III. DISEÑO DE LA ARQUITECTURA TÉCNICA 
+El diseño de la arquitectura técnica es una etapa fundamental en la metodología de 
+Ralph Kimball, ya que define los componentes tecnológicos, sus interconexiones y 
+cómo fluirán los datos desde sus fuentes hasta su consumo final en dashboards y 
+modelos predictivos. En este proyecto, se plantea una arquitectura modular, escalable 
+y de bajo costo, aprovechando herramientas open-source. 
+3.1. Visión general de la arquitectura 
+La arquitectura se compone de los siguientes niveles: 
+• Origen de datos: Archivos Excel (.xlsx) generados por el equipo de almacén, 
+compras y logística. 
+• Área de staging:  Archivos cargados y procesados temporalmente mediante 
+scripts Python para limpieza y normalización. 

@@ -1,0 +1,31 @@
+ 
+Figura 50. Tabla de ubicación poblada del RF08 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+Pruebas 
+• Prueba de caja negra del RF05 
+En la Tabla 47 se muestra la prueba de caja negra 4 aplicada al proceso ETL para la 
+carga de productos. Esta prueba tiene como objetivo validar que el sistema lea, 
+transforme y cargue correctamente los registros de productos desde el archivo .xlsx 
+hacia la tabla DIM_PRODUCTO, manejando errores de formato, campos faltantes o 
+duplicación de claves. 
+Tabla 47. Prueba de caja negra 4 
+PRUEBA DE CAJA NEGRA 4 
+Código PCN-04 Fecha 13/04/2025 
+Tarea Ejecutar proceso 
+ETL de productos Módulo Carga dimensional 
+Descripción 
+Se ejecutarán pruebas para verificar si el proceso ETL carga los 
+registros de productos correctamente en la tabla 
+DIM_PRODUCTO, valida campos requeridos, evita duplicados y 
+transforma los datos conforme a la estructura definida. 
+Precondiciones 
+• Archivo .xlsx estructurado con hojas “PERSONA NATURAL” y “PERSONA 
+JURÍDICA” 
+• Script ETL desarrollado y funcional 
+Pasos de la prueba 

@@ -1,0 +1,26 @@
+ 
+6.5. Resultado de esta etapa 
+Como resultado, se logró un almacenamiento eficiente, consistente y de alto 
+rendimiento en MySQL, alineado con las buenas prácticas del modelado dimensional. 
+Este diseño físico sustenta el proceso de integración de datos (ETL), la consulta 
+eficiente desde los dashboards implementados y la futura aplicación del modelo de 
+Machine Learning sobre la base estructurada. 
+Figura 6. Script SQL para la creación del modelo dimensional 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+VII. DISEÑO E IMPLEMENTACIÓN DEL SUBSISTEMA DE ETL 
+El subsistema de ETL (Extracción, Transformación y Carga) es una de las piezas 
+clave del Data Warehouse, ya que se encarga de integrar y preparar los datos 
+provenientes de diversas fuentes para su posterior análisis. En este proyecto, el 
+proceso ETL fue de sarrollado utilizando el lenguaje de programación Python, 
+aprovechando su robustez para el manejo de datos y su amplia disponibilidad de 
+librerías. Como primer paso del proceso, se implementó un archivo llamado 

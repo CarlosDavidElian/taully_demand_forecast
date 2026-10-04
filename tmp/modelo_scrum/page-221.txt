@@ -1,0 +1,23 @@
+ 
+En la Figura 76 se muestra la lógica para recepcionar y mostrar visualmente los datos 
+provenientes del servidor para el g ráfico de evolución diaria del PI  del RF 12, 
+evidenciándose en el archivo dashboard.js. 
+Figura 76. JavaScript para el gráfico de evolución diaria del PI del RF12 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 

@@ -1,0 +1,23 @@
+ 
+Figura 56. Diagrama Entidad/Relación del Sprint 3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+• Diagrama Lógico 
+En la Figura 57 se muestra el diagrama lógico que representa la descripción de los 
+datos con el mayor detalle posible y la estructura de los datos fundamentales del 
+negocio que participan dentro del Sprint 3. 
+Figura 57. Diagrama Lógico del Sprint 3 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 

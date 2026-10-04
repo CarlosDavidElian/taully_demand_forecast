@@ -1,0 +1,34 @@
+14 
+ 
+II. Metodología 
+Tipo, enfoque y diseño de investigación: El estudio correspondió a un enfoque 
+aplicado. Se fundamentó en la base teórica adquirida mediante estudios previos de 
+carácter básico, dirigiéndola al cumplimiento de metas prácticas específicas. Así, la 
+presente investigación hizo uso del conocimiento ex istente en un campo particular 
+para intentar resolver problemas específicos [25]. Sabiendo esto, la investigación 
+aplicada empleó conocimientos y teorías previas para solucionar problemas prácticos 
+y concretos. Su o bjetivo fue mejorar procesos, desarrollar soluciones innovadoras y 
+generar resultados aplicables en situaciones reales. A diferencia de la investigación 
+teórica, su enfoque estuvo en encontrar aplicaciones prácticas que optimizaran el 
+funcionamiento de sis temas o procesos en áreas específicas. Bajo este marco, la 
+investigación actual se enfocó en el diseño y desarrollo de un sistema basado en 
+Business Intelligence con Machine Learning para la gestión de la cadena de 
+suministro en la compañía INTERSEGUR. Est e sistema buscó aprovechar las 
+tecnologías existentes para optimizar los procedimientos de coordinación y juicio de 
+decisiones, resolviendo problemas específicos relacionados con el abastecimiento y 
+distribución de productos en la cadena de suministro. 
+Asimismo, el enfoque de investigación fue cuantitativo. Este se basó en hacer 
+predicciones y en la interpretación de hechos observados, lo que proporcionó un 
+marco predecible para el análisis. El enfoque cuantitativo implicó un proceso analítico 
+que descom puso un fenómeno en sus elementos fundamentales, permitiendo un 
+análisis que fue de lo general a lo específico. Además, estableció una relación que 
+fue del fenómeno a la ley, es decir, se movió del efecto a la causa, lo que permitió 
+entender mejor los patrones y relaciones dentro de un contexto determinado [26]. 
+Asimismo, el estudio se enmarcó en  un diseño experimental clasificado como pre -
+experimental, en el que se utilizó un único grupo de análisis  y no se contempló la 
+manipulación estricta de variables, lo cual fue  adecuado para obtener una primera 
+aproximación sobre los efectos de la intervención [25]. En el diseño pre-experimental 
+se introdujo una implementación y se observaron los cambios resultantes en los 
+indicadores operativos sin la utilización de un grupo de control. Este enfoque se utilizó 
+cuando se buscó realizar una evaluación prelimi nar de una intervención, antes de 
+emplear diseños más rigurosos. En este sentido, se pudo evaluar el impacto inicial 

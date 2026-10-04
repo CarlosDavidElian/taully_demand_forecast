@@ -1,0 +1,27 @@
+30 
+ 
+Figura 7. Precisión de inventario – Prueba T-student 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+Según se aprecia en la Figura 7 , el análisis realizado mediante el contraste de 
+hipótesis para datos con distribución normal arrojó un valor de T de -13.920. Este 
+valor es inferior al límite crítico de -1.6577, por lo tanto, se sitúa dentro de la región 
+de rechazo. En consecuencia, se descarta la hipótesis nula y se respalda la hipótesis 
+alternativa, considerando un nivel de confianza del 95%. 
+Con ello se confirma que el implementar el sistema tuvo un efecto significativo y 
+positivo sobre la precisión del inventario, mejorando el control del stock en la 
+organización evaluada. 
+Hipótesis de investigación 2: 
+H2: La implementación de un sistema basado en Business Intelligence con Machine 
+Learning mejorará la tasa de cumplimento de pedidos en la gestión de la cadena de 
+suministro en la empresa INTERSEGUR. 
+Indicador: Tasa de cumplimiento de pedidos 
+Hipótesis Estadísticas 
+Definición de variables: 
+TCPa: Tasa de cumplimento de pedidos antes de implementar el sistema basado en 
+Business Intelligence con Machine Learning. 

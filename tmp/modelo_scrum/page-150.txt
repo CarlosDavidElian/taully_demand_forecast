@@ -1,0 +1,23 @@
+ 
+Figura 12. Vista del RF02 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+En la Figura 13 se muestra el controlador del RF02, con el nombre login_controller.py, 
+el cual contiene la lógica del módulo. Cuando recibe una solicitud, genera una petición 
+al modelo usuario.py para obtener los datos y enviarlos a la vista login.html. 
+ 
+ 
+ 

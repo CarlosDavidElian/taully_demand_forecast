@@ -1,0 +1,24 @@
+ 
+Figura 14. Interfaz gráfica del RF02 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+RF03: Administración de usuarios: Crear el módulo para administrar usuarios y 
+permisos. 
+En la Figura 15 se muestra el modelo del RF03, con el nombre usuario.py, el cual se 
+encarga de obtener los datos del módulo, realizar la consulta con la base de datos y 
+enviar los datos obtenidos al controlador usuario_controller.py. 
+Figura 15. Modelo del RF03 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 

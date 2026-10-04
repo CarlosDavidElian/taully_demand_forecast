@@ -1,0 +1,32 @@
+19 
+ 
+facilitando el proceso de recolección, sino también contribuyendo a optimizar la 
+exactitud y el valor de los datos obtenidos. 
+Por otra parte, para la validación del instrumento de investigación se utilizó una ficha, 
+en la cual se determinaron ciertos criterios de validación que garantizaron la 
+completitud, claridad, congruencia e importancia del instrumento. De esta manera, se 
+avaló que los datos recopilados son confiables para su posterior procesamiento e 
+interpretación en el estudio. La validación fue fundamental para consolidar la pureza 
+y la integridad de los resultados conseguidos en función de los datos recopilados, 
+asegurando la medición efectiva y precisa de la variable dependiente mediante el 
+instrumento. 
+Métodos para el análisis de datos: Para realizar el análisis de los datos recopilados, 
+se empleó el software IBM SPSS Statistics, una herramienta ampliamente utilizada 
+en investigaciones académicas por su robustez y precisión en el procesamiento 
+estadístico descriptivo e inferencial. Además , tal como señala Mayorga et al. [40], el 
+software SPSS (Statistical Package for the Social Sciences) es un software destinado 
+al procesamiento de datos, que ejecuta cálculos aritméticos, algebraicos y 
+trigonométricos, y gestiona la información de manera dinámica y personalizada. 
+Ofreció análisis estadísticos descriptivos, que ayudaron a organizar y resumir la 
+información, e inferenciales, que permitieron caracterizar una población a partir de 
+una muestra. Ambos análisis b uscaron estimar la fiabilidad y validez de los 
+instrumentos empleados en el estudio. 
+En primera instancia, para el análisis de normalidad en los datos, se empleó la prueba 
+de Kolmogórov -Smirnov, dado que la muestra cuenta con más de 50 registros de 
+pedidos. El método se utilizó ampliamente para evaluar la adecuación de los datos de 
+muestra a una distribución habitual. Esta prueba comparó la distribución de 
+frecuencias acumuladas de los datos muestrales con la distribución de frecuencias 
+acumuladas esperada, permitiendo determinar si hay diferencias significativas entre 
+ambas. Es particularm ente útil en situaciones donde los datos no se distribuyen de 
+manera gaussiana, lo que facilita el análisis de procesos no lineales e interactivos 
+[41]. 

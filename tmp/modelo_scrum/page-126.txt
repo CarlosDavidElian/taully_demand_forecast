@@ -1,0 +1,36 @@
+ 
+C Could 
+Have 
+Funcionalidades opcionales que pueden mejorar la 
+experiencia del usuario, pero no son críticas para el éxito del 
+proyecto. 
+W Won't 
+Have 
+Funcionalidades que no se desarrollarán en esta fase, pero 
+podrían considerarse en futuras versiones del sistema. 
+Fuente: Elaboración propia 
+Tabla 5. Product Backlog Priorizado 
+Nº Historia Requerimiento Prioridad 
+1 H.U.1 RF02 - Sistema de autenticación M 
+2 H.U.2 RF03 - Administración de usuarios M 
+3 H.U.3 RF04 - Implementación de ETL de tiempo M 
+4 H.U.4 RF05 - Implementación de ETL de producto M 
+5 H.U.5 RF06 - Implementación de ETL de empleado M 
+6 H.U.6 RF07 - Implementación de ETL de cliente S 
+7 H.U.7 RF08 - Implementación de ETL de ubicación S 
+8 H.U.8 RF09 - Implementación de ETL de pedidos S 
+9 H.U.9 RF10 - Implementación de ETL de inventario S 
+10 H.U.10 RF11 - Desarrollo de predicción de demanda C 
+11 H.U.11 RF12 - Dashboard de inteligencia de negocio W 
+12 H.U.12 RF13 - Gráficos de las predicciones IA W 
+13 H.U.13 RF14 - Reportes W 
+Fuente: Elaboración propia 
+1.5. Planificación de lanzamiento 
+La planificación de lanzamiento establece el cronograma de desarrollo del sistema 
+Intersegur SCM, asegurando una implementación estructurada y eficiente. Se divide 
+en fases clave que incluyen la configuración inicial, planificación, desarrollo en sprints 
+y la entrega final del producto. 
+Tabla 6. Cronograma de planificación de lanzamiento 
+ID Nombre de tarea Duración Comienzo Fin 
+1 Inicio 3 días 01/04/25 03/04/25 
+2 Planificación y estimación 5 días 04/04/25 08/04/25 

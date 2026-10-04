@@ -1,0 +1,23 @@
+ 
+• Programación de los procesos ETL en Python como tareas automatizadas 
+periódicas (batch) para garantizar la actualización de los datos. 
+• Capacitación básica al personal encargado del análisis para el uso efectivo del 
+dashboard interactivo. 
+Figura 40. Estructura de carpetas del proyecto final 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 

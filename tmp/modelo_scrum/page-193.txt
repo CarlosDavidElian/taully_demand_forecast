@@ -1,0 +1,36 @@
+ 
+Diseño 
+• Diseño de prototipos 
+En la Figura 52 se muestra el diseño funcional del RF09 que aprobó el Product Owner 
+para el proceso ETL de Pedidos , realizado en Diagrams.net, con los componentes 
+necesarios para su correcta ejecución. 
+Figura 52. Diagrama funcional del proceso ETL de Pedidos 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+La Tabla 54 muestra los componentes técnicos definidos para el funcionamiento del 
+proceso ETL de Pedidos correspondiente al requerimiento RF09. 
+Tabla 54. Componentes técnicos del RF09 – ETL de Pedidos 
+Elemento Descripción 
+Fuente de datos Archivo Excel (.xlsx) con registros históricos de pedidos, 
+incluyendo cantidades, precios y estado del pedido 
+Herramienta 
+ETL 
+Script Python con validación de claves foráneas y 
+transformación de datos para su carga en la tabla de hechos 
+Tabla destino FACT_PEDIDOS del modelo dimensional 
+Frecuencia Única vez (carga inicial) 
+Validaciones 
+Existencia de claves en DIM_TIEMPO, DIM_PRODUCTO, 
+DIM_EMPLEADO, DIM_CLIENTE; formato numérico de 
+cantidad y precio; control de ID_PEDIDO 
+Uso posterior 
+Base principal para el análisis de comportamiento de ventas, 
+rentabilidad, y predicción de demanda mediante métricas 
+históricas 
+Fuente: Elaboración propia 
+En la Figura 53 se muestra el diseño funcional del RF10 que aprobó el Product Owner 
+para el proceso ETL de Inventario, realizado en Diagrams.net, con los componentes 
+necesarios para su correcta ejecución. 

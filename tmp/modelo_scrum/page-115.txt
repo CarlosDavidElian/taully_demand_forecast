@@ -1,0 +1,22 @@
+ 
+Figura 37. Código para cargar el gráfico de las predicciones (predicciones_ia.js) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+ 
+ 
+ 
+ 
+ 
+ 

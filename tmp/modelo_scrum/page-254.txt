@@ -1,0 +1,79 @@
+ 
+Tabla 77. Prueba de caja negra 14 
+PRUEBA DE CAJA NEGRA 14 
+Código PCN-14 Fecha 04/06/2025 
+Tarea 
+Verificar visualización de 
+la sección “Tasa de 
+Cumplimiento de 
+Pedidos” 
+Módulo RF14 – Reportes 
+estratégicos 
+Descripción 
+Se ejecutarán pruebas para validar que la subsección 
+correspondiente a la Tasa de Cumplimiento de Pedidos muestre 
+correctamente, en tabla estática, los datos por fecha: número de 
+pedidos completados (PEC), total de pedidos registrados (PR) y 
+porcentaje de cumplimiento calculado. También se revisará la 
+funcionalidad del botón de exportación para asegurar que genere 
+un archivo Excel fiel a lo visualizado. 
+Precondiciones 
+• Datos disponibles en la tabla FACT_PEDIDOS 
+• Cálculo de TCP previamente realizado: PEC / PR * 100 
+• Tabla con encabezados definidos: Fecha, PEC, PR, TCP (%) 
+• Botón de exportación operativo en entorno de presentación 
+Pasos de la prueba 
+• Verificar que la tabla muestre correctamente los registros 
+• Validar que el cálculo TCP (%) sea correcto para cada fila 
+• Comprobar que los campos PEC y PR coincidan con los datos históricos por 
+fecha 
+• Confirmar que los encabezados de columnas estén bien definidos y legibles 
+• Evaluar que el botón "Exportar" genere correctamente un archivo .xlsx con los 
+mismos datos visualizados 
+• Revisar que no existan errores tipográficos ni de formato en los valores 
+calculados 
+Datos de entrada Respuesta 
+esperada 
+Coincide Respuesta 
+del 
+Sistema Campo Valor Escenario Sí No 
+Registros por 
+fecha 
+Incompleto
+s 
+Datos 
+faltantes 
+El sistema 
+debe 
+mostrar los 
+registros 
+X  
+Fechas 
+entre 
+01/02/2025 
+y 
+28/02/2025 
+visibles en 
+la tabla 
+TCP (%) Incorrecto Cálculo 
+erróneo 
+El sistema 
+debe 
+mostrar 
+TCP = PEC 
+/ PR * 100 
+con dos 
+decimales 
+X  
+Ejemplo: 15 
+/ 21 = 
+71.43% 
+mostrado 
+correctame
+nte 
+Botón de 
+exportación Inactivo No genera 
+archivo 
+El botón 
+debe X  Archivo 
+.xlsx 

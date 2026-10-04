@@ -1,0 +1,23 @@
+ 
+En la Figura 96 se muestra la lógica para recepcionar los datos provenientes del 
+servidor para la subsección “Tasa de Cumplimiento de Pedidos”  del RF 14, 
+evidenciándose en el archivo tasa_cumplimiento_pedidos.js. 
+Figura 96. JavaScript para la subsección Tasa de Cumplimiento de Pedidos - RF14 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 

@@ -1,0 +1,31 @@
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+127.0.0.1 - - [03/Oct/2026 19:02:46] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 19:02:46] "GET /static/dashboard.js HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 19:04:34] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 19:04:35] "GET /static/dashboard.css?v=20 HTTP/1.1" 304 -
+127.0.0.1 - - [03/Oct/2026 19:04:35] "GET /static/dashboard.js?v=32 HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 19:04:35] "GET /logo.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [03/Oct/2026 19:04:35] "GET /api/dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 19:04:39] "GET /api/inventory HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 19:08:28] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 19:08:28] "GET /static/dashboard.css?v=20 HTTP/1.1" 304 -
+127.0.0.1 - - [03/Oct/2026 19:08:28] "GET /logo.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [03/Oct/2026 19:08:28] "GET /static/dashboard.js?v=32 HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 19:08:28] "GET /api/dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 19:08:29] "GET /static/taully-favicon.png?v=3 HTTP/1.1" 304 -
+127.0.0.1 - - [03/Oct/2026 19:08:36] "GET /api/inventory HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 19:09:18] "POST /api/inventory HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 19:18:55] "POST /api/reports HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 19:19:00] "POST /api/train HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 19:19:10] "POST /api/forecast HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 19:19:27] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 19:19:28] "GET /static/dashboard.js?v=32 HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 19:19:28] "GET /static/dashboard.js?v=32 HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 19:19:28] "GET /api/dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 19:19:28] "GET /static/taully-favicon.png?v=3 HTTP/1.1" 304 -
+127.0.0.1 - - [03/Oct/2026 19:19:35] "GET /api/inventory HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 19:26:33] "POST /api/reports HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 19:26:37] "POST /api/train HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 19:26:49] "POST /api/forecast HTTP/1.1" 200 -

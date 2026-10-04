@@ -1,0 +1,34 @@
+7 
+ 
+costos operativos y los tiempos de entrega. La investigación concluyó que el éxito en 
+la implementación de estas tecnologías depende de la infraestructura tecnológica 
+existente y su congruencia con las directrices prioritarias de la empresa. Estos 
+hallazgos subrayan el papel estratégico de la IA para no solo optimizar procesos, sino 
+también innovar al gestionar la cadena de suministro. 
+Por otro lado, llevándonos al entorno nacional, Rodriguez [11] en su investigación 
+realizada en la región Ayacucho, su capital, provincia de Huamanga, encuestó a la 
+población de la Municipalidad de Huamanga, los cuales fueron un total de 50 
+operadores, entre autoridades, funcionarios y empleados. La investigación llegó a la 
+conclusión de que la gestión de devoluciones contribuye a optimizar los procesos 
+logísticos en la gestión municipal de Huamanga, Ayacucho, evidenciando una relación 
+favorable con un valo r de 0.501, nivel de significancia igual a 0.000 y un margen de 
+confianza del 99%, lo que confirma que el vínculo es positivo y estadísticamente 
+relevante. 
+De la misma manera, en un estudio realizado en la Universidad Nacional de Trujillo, 
+conducida por De la Cruz et al. [12], se integraron tecnologías de IA y blockchain 
+dentro de la cadena de suministro con la intención de potenciar el manejo y 
+procesamiento de la información en tiempo real. Este estudio se enfocó en mejorar la 
+eficiencia operativa de grandes empresas, logrando una reducción significativa en los 
+errores de predicción de demanda y mejorando la transparencia en la gestión de 
+inventarios. Así mismo, esta siguió una metodología de revisión sistemática basada 
+en el método PRISMA, donde se evaluaron múltiples estudios y artículos científicos 
+relacionados con el tema de interés, donde el análisis incluyó 131 artículos relevantes 
+entre los años 2018 y  2022. Los resultados mostraron que la adopción de estas 
+tecnologías permite un ahorro del 25% en tiempo y recursos, además de una mejora 
+del 30% en la precisión de la gestión de inventarios, lo que contribuyó a una mayor 
+eficacia en los procesos logísticos. 
+Así también, en un estudio realizado por Calle  et al. [13] se analizó la utilización 
+estratégica de los softwares inteligentes en la gestion de la cadena de suministro 
+comercial orientado a mejorar la productividad, exactitud y capacidad de emplear 
+nuevas estrategias. Se realizó un análisis integral de la literat ura académica y de 
+estudios de casos empresariales pertinentes, aplicando métodos analíticos, 

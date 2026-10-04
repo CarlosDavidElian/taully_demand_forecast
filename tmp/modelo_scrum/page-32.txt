@@ -1,0 +1,34 @@
+22 
+ 
+III. Resultados 
+En esta sección se presentan los resultados obtenidos a partir del análisis estadístico 
+de los datos recolectados en las fases pre -test y post -test, relacionados con los 
+indicadores de precisión del inventario y la tasa de cumplimiento de pedidos. Para 
+dicho análisis, se empleó el software estadístico SPSS Statistics versión 25, mediante 
+el cual se realizó, en primer término, un análisis descriptivo enfocado en examinar la 
+distribución y tendencia central de los datos. Posteriormente, se aplicaron pruebas 
+inferenciales, utilizando específicamente la prueba T de Student para muestras 
+relacionadas, con el propósito de verificar si existían diferencias significativas entre 
+ambas etapas del estudio.  Finalmente, se evaluaron las hipótesis planteadas en el 
+estudio, lo que permitió determinar el impacto del sistema implementado. 
+Análisis estadístico 
+Con el propósito de desarrollar la presente investigación, se puso en marcha un 
+sistema web con un dashboard incorporado, diseñado para monitorear indicadores 
+clave como la precisión del inventario y la tasa de cumplimiento de pedidos. A fin de 
+evaluar el impacto de esta herramienta, se llevó a cabo una medición pre -test sin 
+emplear el sistema web, y posteriormente un post -test tras su implementación. De 
+esta forma, se determinaron valores iniciales y finales para cada uno de los 
+indicadores. Los análisis e stadísticos descriptivos correspondientes a estas 
+mediciones se presentan en la Tabla 1 y Tabla 2. 
+Indicador: Precisión de Inventario 
+Tabla 1. Estadístico descriptivo antes y después del uso del sistema web – 
+Precisión de Inventario 
+Fuente: Elaboración propia 
+Estadísticos descriptivos 
+ N Mínimo Máximo Media Desv. 
+Desviación 
+PRECISION DE INVENTARIO 
+- PRE TEST 20 31,41 46,06 39,4435 4,75443 
+PRECISION DE INVENTARIO 
+- POST TEST 20 40,16 56,47 49,0205 4,73891 
+N válido (por lista) 20     

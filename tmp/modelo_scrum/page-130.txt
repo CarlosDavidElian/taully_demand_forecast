@@ -1,0 +1,42 @@
+ 
+de datos dimensional. La información debe incluir fechas, años, 
+meses y días correctamente estructurados. 
+Restricciones 
+Solo la Gerencia general tiene acceso a la administración del 
+proceso ETL. No se deben modificar estructuras sin validación 
+previa. 
+Fuente: Elaboración propia 
+Historia de usuario Nº 4: 
+En la Tabla 11 se evidencia la Historia Nº 4, llamada Implementación de ETL de 
+producto, donde se detallan los usuarios, la prioridad basada en la técnica MoSCoW, 
+el tiempo estimado en días, condiciones y restricciones. 
+Tabla 11. Historia de usuario Nº 4 
+Elemento Detalle 
+Nombre Implementación de ETL de producto 
+Usuarios Gerencia general 
+Prioridad M (Must Have) - Basada en la técnica MoSCoW 
+Tiempo 
+estimado 3 días 
+Condiciones 
+Se debe desarrollar un proceso de ETL que permita la 
+integración y transformación de los datos de productos. Cada 
+producto debe contar con su categoría, unidad de medida y 
+precio correctamente almacenado. 
+Restricciones 
+Solo la Gerencia general tiene acceso a la administración del 
+ETL. No se deben modificar los datos de productos sin revisión 
+previa para garantizar la consistencia. 
+Fuente: Elaboración propia 
+Historia de usuario Nº 5: 
+En la Tabla 12 se evidencia la Historia Nº 5, llamada Implementación de ETL de 
+empleado, donde se detallan los usuarios, la prioridad basada en la técnica 
+MoSCoW, el tiempo estimado en días, condiciones y restricciones. 
+Tabla 12. Historia de usuario Nº 5 
+Elemento Detalle 
+Nombre Implementación de ETL de empleado 
+Usuarios Gerencia general 
+Prioridad M (Must Have) - Basada en la técnica MoSCoW 
+Tiempo 
+estimado 3 días 
+Condiciones Se debe establecer un proceso de ETL que permita la 
+integración y transformación de los datos de empleados. Cada 

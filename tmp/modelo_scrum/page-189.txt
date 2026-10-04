@@ -1,0 +1,50 @@
+ 
+Retrospectiva del Sprint 2 
+La retrospectiva del Sprint 2 permite evaluar el desempeño del equipo durante la 
+implementación de los procesos ETL correspondientes a productos, empleados, 
+clientes y ubicaciones. Esta revisión busca identificar aciertos, dificultades y acciones 
+de mejora para optimizar futuras iteraciones. En la Tabla 51 se resume lo observado 
+durante este sprint. 
+Tabla 51. Retrospectiva del Sprint 2 
+Problema Causas Acciones 
+Retrasos durante la carga 
+de datos de empleados 
+Formato inconsistente en 
+campos como DNI y 
+teléfono 
+Se implementó relleno 
+automático de ceros y 
+validaciones numéricas 
+antes de la 
+transformación 
+Inconsistencias en los 
+documentos de clientes 
+(DNI/RUC) 
+El archivo fuente contenía 
+columnas incompletas o 
+vacías dependiendo del 
+tipo de cliente 
+Se agregó una rutina de 
+completado por nombre y 
+tipo durante la 
+transformación 
+Advertencias en la carga 
+de ubicaciones por 
+duplicados accidentales 
+El proceso no verificaba 
+existencia previa en la 
+tabla 
+Se fortaleció la 
+verificación previa al 
+insertar registros en 
+DIM_UBICACION 
+Fuente: Elaboración propia 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

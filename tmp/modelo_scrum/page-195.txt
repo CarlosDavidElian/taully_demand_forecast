@@ -1,0 +1,34 @@
+ 
+Figura 54. Diagrama funcional de la predicción de demanda 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+La Tabla 56 muestra los componentes técnicos definidos para el funcionamiento del 
+proceso de predicción de demanda correspondiente al requerimiento RF11. 
+Tabla 56. Componentes técnicos del RF11 – Predicción de demanda 
+Elemento Descripción 
+Script de 
+entrenamiento 
+Consulta datos históricos desde FACT_PEDIDOS, 
+FACT_INVENTARIO y DIM_TIEMPO, entrena un modelo 
+XGBoost y lo guarda como modelo.pkl. 
+Script de 
+predicción 
+Carga el modelo entrenado, predice la demanda futura por 
+producto y fecha, e inserta los resultados en la tabla 
+predicciones_ia. 
+Fuente de datos Base de datos dimensional (historial de pedidos e inventario) 
+Herramienta ML Algoritmo XGBoost para regresión con parámetros 
+personalizados (tasa de aprendizaje, profundidad, etc.) 
+Salida Predicciones por producto en formato fecha–valor, listas para 
+su uso posterior en visualización (RF13) 
+Uso posterior Visualización en gráficas de comportamiento de la demanda 
+futura, planificación de reposición y análisis estratégico 
+Fuente: Elaboración propia 
+• Requerimientos 
+En la Tabla 57 se muestran los requerimientos identificados previamente del Sprint 
+3, con las funcionalidades que debe poseer la herramienta para su correcta ejecución. 

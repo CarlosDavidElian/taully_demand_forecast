@@ -1,0 +1,24 @@
+ 
+Implementación 
+• RF14: Generación de reportes estratégicos: Implementar el módulo que 
+permita generar reportes consolidados con indicadores clave del 
+sistema, incluyendo precisión del inventario, tasa de cumplimiento de 
+pedidos y predicciones. 
+En la Figura 92 se muestra la lógica para manejar la información proveniente del 
+modelo dimensional para la subsección “Precisión del Inventario” del RF 14, 
+evidenciándose en el archivo precision_inventario_controller.py. 
+Figura 92. Lógica de la Precisión del inventario del RF14 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 

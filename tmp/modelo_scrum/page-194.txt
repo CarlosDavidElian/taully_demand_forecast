@@ -1,0 +1,33 @@
+ 
+Figura 53. Diagrama funcional del proceso ETL de Inventario 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+La Tabla 55 muestra los componentes técnicos definidos para el funcionamiento del 
+proceso ETL de Inventario correspondiente al requerimiento RF10. 
+Tabla 55. Componentes técnicos del RF10 – ETL de Inventario 
+Elemento Descripción 
+Fuente de datos Archivo Excel (.xlsx) con registros de inventario diarios 
+clasificados por fecha y tipo de ubicación 
+Herramienta 
+ETL 
+Script Python que realiza la limpieza, normalización y 
+asociación de claves antes de la carga 
+Tabla destino FACT_INVENTARIO del modelo dimensional 
+Frecuencia Única vez (carga inicial) 
+Validaciones 
+Existencia previa de ID_TIEMPO y ID_UBICACION en sus 
+dimensiones; cantidad (STOCK_TOTAL) mayor o igual a cero; 
+estructura válida 
+Uso posterior Análisis de stock histórico, control de inventario, y 
+entrenamiento del modelo de predicción de demanda 
+Fuente: Elaboración propia 
+En la Figura 54 se muestra el diseño funcional del RF11 que aprobó el Product Owner 
+para el proceso de la predicción de demanda , realizado en Diagrams.net, con los 
+componentes necesarios para su correcta ejecución. 
+ 
+ 
+ 
+ 

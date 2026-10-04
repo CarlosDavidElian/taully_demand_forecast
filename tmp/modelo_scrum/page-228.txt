@@ -1,0 +1,23 @@
+ 
+Figura 84. Predicciones IA del RF13 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+En la Figura 85 se muestra la lógica para recepcionar y mostrar visualmente los datos 
+provenientes del servidor para el g ráfico de las predicciones IA  del RF 13, 
+evidenciándose en el archivo predicciones_ia.js. 
+ 
+ 
+ 
+ 
+ 

@@ -1,0 +1,34 @@
+11 
+ 
+desde su almacenamiento hasta la remisión al consumidor o cliente final. Finalmente, 
+el proceso de “logística inversa” permite administrar el desplazamiento de recursos 
+desde el lugar de destino hacia los ciclos anteriores, con el propósito de integrar 
+nuevamente estos recursos al ciclo de producción, generando así valor adicional al 
+reutilizar o recuperar materiales. 
+A su vez, Ayala [20] mencionó que la gestión de la cadena de suministro está 
+estrechamente relacionada con el concepto de logística. Se refiere al conjunto de 
+empresas, instalaciones e intermediarios por los que un producto debe pasar 
+partiendo del punto inicial hasta su llegada al usuario final. La cadena de suministro 
+se encarga de planificar y coordinar cada una de estas etapas, incluyendo a todas las 
+empresas que intervienen en procesos clave como el aprovisionamiento, producción 
+o transformación, distribución, manipulación, almacenamiento y comercialización de 
+productos o servicios. El curso de gestionar la cadena de suministro da comienzo con 
+el “abastecimiento”, que consiste en adquirir los productos o materias primas que la 
+empresa necesita para su p osterior transformación o venta. El siguiente paso en la 
+cadena es la “producción”, que abarca todas las operaciones vinculadas con la 
+conversión de los insumos en productos, ya sean semielaborados o terminados. En 
+el caso de las empresas comerciales, este  proceso puede ser diferente, ya que a 
+menudo no implica transformación, sino que se limita a la compra de productos 
+terminados para su venta a un precio superior. Luego, se da el “almacenaje”, que 
+implica el control de los inventarios de la compañía. Esto  incluye la recepción, 
+almacenamiento, manipulación, conservación, expedición y control de inventarios de 
+las mercancías que se han adquirido o producido. Posterior a esto, viene la 
+“distribución”, que se ocupa de la remisión de productos o servicios al co nsumidor 
+final. Esto implica garantizar que los productos lleguen en el tiempo, lugar, calidad y 
+cantidad requeridos. Por último, está la “logística inversa”, esta etapa se define como 
+el flujo de información y productos que se mueve desde el consumidor fi nal hacia el 
+punto de origen, permitiendo a las compañías administrar de forma más eficiente sus 
+recursos y minimizar su impacto ambiental. 
+Además, la variable dependiente se dividió en dos dimensiones, la primera fue 
+“abastecimiento de productos”, y cuando se habla de abastecimiento se refiere a 
+aquellas actividades que engloban el poder identificar y adquirir un bien o servicio que 

@@ -1,0 +1,34 @@
+20 
+ 
+Por consiguiente, para la prueba de asociación que se dio en ambos indicadores de 
+estudio, se aplicó la correlación de Pearson debido a la normalidad de los valores en 
+ambos indicadores, esto con el fin de determinar la confiabilidad del instrumento de 
+obtención de datos en cada indicador. De acuerdo con J. Ortiz y A. Ortiz  [42], la 
+correlación de Pearson es un coeficiente ampliamente utilizado para analizar la 
+relación entre variables numéricas en diversas disciplinas, incluyendo ciencias 
+sociales, economí a y salud. Este coeficiente proporcionó una proporción de la 
+dependencia lineal en medio de dos variables, con un rango que va de -1 a 1, donde 
+un resultado positivo implica que existe una asociación directa en el intervalo de 
+ambas variables, mientras que un resultado negativo señala una asociación inversa. 
+Posteriormente, para la prueba de hipótesis, primero se tuvo en cuenta que la variable 
+en estudio es de tipo cuantitativa, además, se realizó la comparación de 2 grupos, 
+uno que fue el Pre-test y el otro fue el Post-test. Dicho esto, se aplicó la T de Student 
+para muestras relacionadas debido a que se trabajó con valores paramétricos, es 
+decir, datos numéricos. Conforme a Molina [43], la T de Student se definió como una 
+distribución de probabilidad, la cual se aplica para calcular el resultado de la media 
+de una población a partir de una variable aleatoria que presenta una distribución 
+habitual, especialmente en el momento de que se extrae el factor de una muestra 
+reducida y no se conoce la varianza de la población. La prueba de la T de Student 
+comparó las m edias de una variable gradual en función de dos categorías de una 
+variable nominal dicotómica, ya sea en conjuntos autónomos, donde cada objeto 
+pertenece a una única categoría, o en muestras apareadas. 
+Aspectos éticos: Esta investigación garantizó el cumplimiento de los lineamientos 
+relacionados con la integridad académica, conforme a lo establecido en el reglamento 
+ético de investigación de la Universidad César Vallejo . Todo el trabajo se realizó de 
+manera original, garantizando que la información manifestada fue auténtica y que los 
+datos recopilados provinieron directamente de la investigación desarrollada por el 
+equipo responsable. Tanto la recolección de datos como el análisis estadístico fueron 
+llevados a cabo íntegramente por los investigadores, asegurando así la transparencia 
+y la veracidad de los resultados. 
+Se adoptaron todos los procedimientos éticos contemplados en el código institucional, 
+como la obtención de los consentimientos y asentimientos informados de los 

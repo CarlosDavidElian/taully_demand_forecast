@@ -1,0 +1,24 @@
+ 
+Figura 28. Carga de datos de FACT_INVENTARIO 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+7.4. Automatización del Proceso ETL 
+• El flujo ETL fue empaquetado en scripts modulares y secuenciales. 
+• Se desarrolló un script maestro (etl.py) que ejecuta todo el ETL de forma 
+ordenada: extracción → transformación → carga. 
+• Este script puede programarse con herramientas externas (como cron en Linux 
+o el programador de tareas de Windows) para su ejecución diaria, semanal o 
+mensual. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

@@ -1,0 +1,22 @@
+ 
+Figura 12. Extracción de datos de DIM_UBICACION 
+ 
+ 
+Fuente: Elaboración propia 
+Figura 13. Extracción de datos de FACT_PEDIDOS 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 

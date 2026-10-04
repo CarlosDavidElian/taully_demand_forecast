@@ -1,0 +1,23 @@
+ 
+En la Figura 94 se muestra la lógica para manejar la información proveniente del 
+modelo dimensional y la tabla predicciones_ia para la subsección “Predicciones” del 
+RF14, evidenciándose en el archivo prediccion_controller.py. 
+Figura 94. Lógica de las Predicciones del RF14 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 

@@ -1,0 +1,71 @@
+ 
+RF08 
+Implementación 
+de ETL de 
+ubicación 
+Implementar la extracción, 
+transformación y carga de 
+datos de ubicación 
+3 3 
+RF09 
+Implementación 
+de ETL de 
+pedidos 
+Implementar la extracción, 
+transformación y carga de 
+datos de pedidos 
+3 3 
+RF10 
+Implementación 
+de ETL de 
+inventario 
+Implementar la extracción, 
+transformación y carga de 
+datos de inventario 
+3 3 
+RF11 
+Desarrollo de 
+predicción de 
+demanda 
+Entrenar y validar el 
+modelo de Machine 
+Learning para estimar 
+demanda 
+4 4 
+RF12 
+Dashboard de 
+Business 
+Intelligence 
+Desarrollar un panel con 
+gráficos y métricas clave 
+como TCP y PI 
+4 4 
+RF13 Gráficos de las 
+predicciones IA 
+Crear visualizaciones para 
+las proyecciones de IA 4 4 
+RF14 Reportes 
+Construir el sistema de 
+generación de reportes 
+estratégicos 
+21 21 
+Fuente: Elaboración propia 
+1.4. Product Backlog Priorizado 
+El Product Backlog Priorizado define el alcance del proyecto y establece el orden de 
+importancia de cada funcionalidad. La priorización permite enfocar el desarrollo en los 
+elementos que aportan mayor valor al sistema Intersegur SCM, asegurando una 
+entrega eficiente y alineada con los objetivos estratégicos. 
+Prioridad 
+Para estructurar la prioridad de los requerimientos, se emplea la técnica MoSCoW, 
+que clasifica las funcionalidades en cuatro niveles: 
+Tabla 4. Prioridad según técnica MoSCoW 
+Abrev. Prioridad Definición 
+M Must 
+Have 
+Funcionalidades esenciales que el sistema debe incluir para 
+ser operativo. Sin ellas, el proyecto no cumple su propósito. 
+S Should 
+Have 
+Funcionalidades importantes que deberían estar presentes, 
+pero cuya ausencia no impide el funcionamiento básico del 
+sistema. 

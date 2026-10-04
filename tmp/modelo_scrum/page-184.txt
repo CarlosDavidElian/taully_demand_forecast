@@ -1,0 +1,86 @@
+ 
+hacia la tabla DIM_ EMPLEADO, manejando errores de formato, campos faltantes o 
+duplicación de claves. 
+Tabla 48. Prueba de caja negra 5 
+PRUEBA DE CAJA NEGRA 5 
+Código PCN-05 Fecha 16/04/2025 
+Tarea Ejecutar proceso 
+ETL de empleados Módulo Carga dimensional 
+Descripción 
+Se ejecutarán pruebas para verificar si el proceso ETL carga los 
+registros de empleados correctamente en la 
+tabla DIM_EMPLEADO, validando estructura, duplicados y formato 
+de campos clave como DNI y número de teléfono. 
+Precondiciones 
+• Archivo EMPLEADOS.xlsx estructurado con hoja “Hoja1” y columnas requeridas 
+• Script ETL funcional (ejecutar_etl_dim_empleado(app)) 
+Pasos de la prueba 
+• Validar que los campos requeridos (NOMBRES, APELLIDOS, DNI, EMAIL, 
+TELÉFONO) estén presentes 
+• Verificar que el sistema rechace registros con campos vacíos o mal formateados 
+• Confirmar que los DNI tengan longitud exacta de 8 dígitos y teléfonos de 9 
+• Validar que no se inserten registros ya existentes 
+• Confirmar que los nuevos empleados se carguen correctamente en la tabla 
+Datos de entrada Respuesta 
+esperada 
+Coincide Respuesta 
+del Sistema Campo Valor Escenario Sí No 
+DNI “5478” Formato 
+inválido 
+El sistema 
+debe rechazar 
+DNI de 
+longitud 
+inválida 
+X  
+Registro 
+omitido por 
+error en el 
+campo DNI 
+TELÉFONO “abc12
+3xyz” 
+Formato 
+no 
+numérico 
+El sistema 
+debe rechazar 
+teléfonos con 
+caracteres no 
+válidos 
+X  
+Registro 
+omitido por 
+error de 
+formato en 
+TELÉFONO 
+NOMBRES + 
+DNI 
+Ya 
+existen 
+Registro 
+duplicado 
+El sistema 
+debe omitir el 
+registro 
+duplicado 
+X  
+El empleado 
+ya existe en 
+DIM_EMPLEA
+DO 
+NOMBRES + 
+DNI Nuevo Carga 
+válida 
+El sistema 
+debe insertar 
+correctamente 
+al nuevo 
+empleado 
+X  
+Empleado 
+insertado 
+correctamente 
+en 
+DIM_EMPLEA
+DO 
+Post condiciones 

@@ -1,0 +1,34 @@
+16 
+ 
+“Business Intelligence con Machine Learning” implicó la cuantificación a través de un 
+sistema que gestionó los activos en la cadena de suministro mediante paneles de 
+monitoreo que integraron técnicas de aprendizaje automático. Este sistema permitió 
+a los u suarios acceder a información relevante para tomar decisiones informadas, 
+utilizando datos de productos y ventas para obtener estadísticas precisas. Los 
+indicadores de eficiencia del sistema incluyeron la precisión del inventario y el 
+cumplimiento de los pedidos [30]. 
+Por otro lado, la variable dependiente fue clave en este estudio. De acuerdo con 
+Coronel [31], estas variables fueron aquellas que se modificaron como consecuencia 
+de la acción de la variable independiente, y estuvieron constituidas por los efectos o 
+consecuencias medibles que originaron los resultados al finalizar el desarrollo de la 
+investigación. En este proyecto, se tomó como variable dependiente a la “gestión de 
+la cadena de suministro” y, en cuanto a su definición conceptual, según Martin C. [32], 
+esta se refirió a la  articulación eficaz de los procesos relacionados con la compra, 
+producción y distribución de bienes, abarcando desde los suministradores hasta los 
+destinatarios finales. Además, no solo abarcó la logística interna, sino también las 
+interacciones con los proveedores y los clientes, con el objetivo de optimizar el 
+desplazamiento de productos, información y activos monetarios a lo largo de toda la 
+cadena. Con respecto a su definición operacional, esta se centró en la forma en que 
+se midió y se analizaron los resultados de las funciones esenciales en el contexto de 
+la cadena. Considerando lo anterior, la gestión de la cadena fue medido a través de 
+métricas como el tiempo del ciclo de pedidos , la precisión y rotación de inventarios, 
+los costos de gestión logística y los indicadores relacionados al servicio al cliente [33]. 
+Estos indicadores permitieron monitorear la efectividad de los procedimientos que 
+abarcan desde la adquisición de materiales hasta la distribución definitiva de 
+productos al cliente final, asegurando así la optimización de los recursos a lo largo de 
+toda la cadena. Hasta ese punto de la investigación, se determinó que la “gestión de 
+la cadena de suministro” se dividió en dos dimensiones: “abastecimiento de 
+productos” y “distribución de productos”, las cuales, a su vez, se desglosaron en los 
+indicadores “precisión del  inventario” y “tasa de cumplimiento de pedidos”, 
+respectivamente. De esta manera, se logró la medición adecuada de la variable en 
+estudio. 

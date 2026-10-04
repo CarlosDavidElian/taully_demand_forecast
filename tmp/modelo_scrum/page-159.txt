@@ -1,0 +1,52 @@
+ 
+Pruebas 
+• Prueba de caja negra del RF02 
+En la Tabla 36 se muestra la prueba de caja negra 1 aplicada al módulo de inicio de 
+sesión. Esta prueba tiene como objetivo validar el comportamiento del sistema al 
+momento de autenticar credenciales proporcionadas por el usuario final. 
+Tabla 36. Prueba de caja negra 1 
+PRUEBA DE CAJA NEGRA 1 
+Código PCN-01 Fecha 02/04/2025 
+Tarea Acceso al sistema Módulo Login 
+Descripción 
+Se realizan pruebas para validar el comportamiento del sistema 
+ante el ingreso de credenciales válidas e inválidas por parte del 
+usuario, asegurando la correcta autenticación y la prevención de 
+accesos no autorizados. 
+Precondiciones 
+No se aplica 
+Pasos de la prueba 
+• Verificar que funcione el acceso al sistema con credenciales válidas 
+• Validar el mensaje de error al ingresar datos incorrectos 
+Datos de entrada Respuesta 
+esperada 
+Coincide Respuesta 
+del Sistema Campo Valor Escenario Sí No 
+user admin Normal Ingreso al 
+sistema X  
+Acceso 
+verificado – 
+redirección al 
+panel 
+principal 
+user prueba Error 
+Usuario o 
+contraseña 
+incorrecto 
+X  
+El usuario 
+y/o 
+contraseña 
+son 
+incorrectos 
+Post condiciones 
+• Se muestra la interfaz principal del sistema al acceder correctamente 
+• Se muestra un mensaje de advertencia cuando las credenciales son inválidas 
+Defectos Veredicto 
+No se encontraron Paso 
+Observaciones Probador 
+Ninguna 
+• Marko Samuel Chacon 
+Ramos 
+• Erika Yanela Sancho Diaz 
+Fuente: Elaboración propia 

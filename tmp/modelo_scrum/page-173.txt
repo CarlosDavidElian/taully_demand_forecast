@@ -1,0 +1,24 @@
+ 
+RF05: ETL para datos de productos: Implementar la extracción, transformación 
+y carga de productos. 
+En la Figura 35 se muestra la lógica para la extracción de datos de producto del RF05, 
+evidenciándose en  el archivo producto_etl_controller .py, el cual se encarga de 
+obtener los datos de la fuente de origen (.xlsx). 
+Figura 35. Extracción de datos del RF05 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+En la Figura 36 se muestra la lógica para la transformación de datos de producto del 
+RF05, evidenciándose en el archivo producto_etl_controller.py. 
+ 

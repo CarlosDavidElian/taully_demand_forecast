@@ -205,11 +205,11 @@ def create_app(test_config: dict[str, Any] | None = None) -> Flask:
         warnings: list[str] = []
         if source["is_demonstration"]:
             warnings.append(
-                "Este archivo es una demostración técnica del proyecto; no sustituye el kardex real ni debe usarse como evidencia de tesis."
+                "Fuente: inventario demostrativo del proyecto. Validación con el kardex de la tienda pendiente."
             )
         if not reconciliation["reconciled"]:
             warnings.append(
-                "Las ventas registradas y el balance de stock no cierran completamente; revisa ajustes, devoluciones, mermas y reposiciones antes de usar el indicador como evidencia."
+                "Conciliación de inventario pendiente: revisar diferencias entre ventas y stock, ajustes, devoluciones, mermas y reposiciones."
             )
         if incomplete_coverage:
             warnings.append(
@@ -414,8 +414,8 @@ def create_app(test_config: dict[str, Any] | None = None) -> Flask:
             payload = inventory_payload()
             if payload.get("inventory", {}).get("is_demonstration"):
                 payload["message"] = (
-                    f"{filename} se cargó solo como demostración técnica. "
-                    "No se usará como evidencia de tesis; carga el kardex real de la tienda."
+                    f"{filename} se cargó como inventario demostrativo del proyecto. "
+                    "Validación con el kardex de la tienda pendiente."
                 )
             else:
                 payload["message"] = (

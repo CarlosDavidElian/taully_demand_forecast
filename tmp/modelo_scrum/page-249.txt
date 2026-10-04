@@ -1,0 +1,23 @@
+ 
+En la Figura 97 se muestra la lógica para recepcionar los datos provenientes del 
+servidor para la subsección “Predicciones”  del RF14, evidenciándose en  el archivo 
+predicciones.js. 
+Figura 97. JavaScript para la subsección Predicciones - RF14 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 

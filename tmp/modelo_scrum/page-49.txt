@@ -1,0 +1,31 @@
+39 
+ 
+VI. Recomendaciones 
+Primero, se recomendó a la empresa INTERSEGUR implementar un sistema de 
+auditoría semanal de inventario el que permita mantener la precisión alcanzada tras 
+el uso del sistema web. Con el fin de reforzar su eficacia, se sugirió aplicar controles 
+cruzados au tomatizados mediante código QR o RFID, los cuales han demostrado 
+aumentar la precisión de inventario en otras organizaciones [10]. Asimismo, se 
+aconsejó documentar procedimientos de ingreso y salida de productos para disminuir 
+el margen de error humano. 
+En segundo lugar, se propuso fortalecer el indicador de la tasa de cumplimiento de 
+pedidos mediante la integración de módulos de alerta temprana en el sistema, que 
+permitan detectar de forma anticipada posibles rupturas de stock o retrasos logísticos. 
+El u so de estas herramientas predictivas, basadas en Machine Learning, no solo 
+mejoran el indicador TCP, sino que también incrementan la satisfacción del cliente 
+[9]. Además de ello, también se sugirió mantener reuniones quincenales de revisión 
+operativa para evaluar el desempeño y ejecutar mejoras puntuales. 
+Y, en tercer lugar, se recomendó a la empresa INTERSEGUR consolidar el sistema 
+como un instrumento de gestión integral de la cadena de suministro. Para ello, se 
+planteó ampliar su uso hacia otras áreas que conforman a la cadena de suministro, 
+tales como co mpras, logística externa, entre otras, garantizando una mejor 
+integración transversal de la información. De acuerdo con la evidencia que Calle et al. 
+[13], en su estudio, una cadena digitalizada y coordinada permite decisiones más 
+ágiles y reducción de ineficiencias operativas. Esto no solo contribuiría a sostener los 
+resultados positivos obtenidos, sino también a seguir elevando los niveles de 
+eficiencia de la empresa. 
+ 
+ 
+ 
+ 
+ 

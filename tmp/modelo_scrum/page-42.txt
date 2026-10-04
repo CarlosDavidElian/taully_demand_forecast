@@ -1,0 +1,26 @@
+32 
+ 
+Tal como se observa en la figura vinculada con la tabla, el análisis del contraste de 
+hipótesis aplicado al indicador de tasa de cumplimiento de pedidos dio como resultado 
+un valor de T = -9.182. Este resultado, al ser menor que el valor crítico de -1.6577, se 
+ubica dentro de la región de rechazo. Por lo tanto, se descarta la hipótesis nula y se 
+acepta la hipótesis alternativa, con un nivel de confianza del 95%. 
+Esto permite concluir que la implementación del sistema generó una mejora 
+estadísticamente significativa en el cumplimiento de pedidos, optimizando la eficiencia 
+del proceso en la empresa. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

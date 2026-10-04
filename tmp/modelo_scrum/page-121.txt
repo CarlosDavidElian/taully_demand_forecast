@@ -1,0 +1,29 @@
+ 
+I. INICIO 
+1.1. Introducción 
+El presente documento describe la implementación de la metodología Scrum en el 
+desarrollo de un sistema web con capacidades de Business Intelligence y Machine 
+Learning, orientado a optimizar la gestión de la cadena de suministro en la empresa 
+dedicada al rubro comercial. 
+El objetivo principal del proyecto fue diseñar una plataforma web que integre el 
+análisis de datos históricos con algoritmos de predicción de la demanda, permitiendo 
+una toma de decisiones más ágil, basada en datos confiables y visualizaciones 
+interactivas. El sistema ofrece funcionalidades como dashboards, reportes dinámicos 
+y modelos predictivos basados en Machine Learning, todo esto sustentado en un 
+entorno web accesible y seguro. 
+La metodología Scrum permitió realizar entregas incrementales de valor en intervalos 
+de 1 a 2 semanas (sprints), lo cual facilitó la retroalimentación temprana por parte del 
+usuario final, mejorando la adaptabilidad y asegurando el cumplimiento de los 
+objetivos del proyecto. 
+Alcance 
+Tomando en consideración el enfoque del proyecto, se definieron los siguientes 
+objetivos a alcanzar: 
+• Desarrollar una plataforma web que integre procesos de ETL (Extracción, 
+Transformación y Carga) de datos para consolidar información relevante sobre 
+la cadena de suministro (empleados, productos, pedidos, inventario, etc.). 
+• Diseñar un data mart optimizado para análisis multidimensional y reportes de 
+KPIs logísticos. 
+• Implementar dashboards interactivos para el monitoreo de indicadores como: 
+precisión del inventario y tasa de cumplimiento de pedidos. 
+• Desarrollar un módulo de Machine Learning para la predicción de la demanda 
+futura, entrenado con datos históricos y métricas logísticas. 

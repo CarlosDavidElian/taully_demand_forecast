@@ -1,0 +1,36 @@
+ 
+3.3. Sprint 3 
+El Sprint 3 fue desarrollado y documentado en cada una de sus 4 fases: Análisis, 
+Diseño, Implementación y Pruebas. 
+Análisis 
+En la Tabla 52 se presentan los requerimientos que conforman el Sprint 3. 
+Tabla 52. Sprint 3 
+Código HU Requerimiento 
+H.U.8 RF09: ETL para datos de pedidos: Implementar la extracción, 
+transformación y carga de pedidos. 
+H.U.9 RF10: ETL para datos de inventario: Implementar la extracción, 
+transformación y carga de inventario. 
+H.U.10 RF11: Modelo de predicción de demanda: Desarrollar el algoritmo 
+para predecir demanda en base histórica. 
+Fuente: Elaboración propia 
+• Funcionalidades del Sprint 3 
+En la Tabla 53 se describen las funcionalidades que tendrá el sistema, mostrando la 
+interacción entre el usuario y la arquitectura de software para cada uno de los 
+requerimientos listados en el Sprint 3. 
+Tabla 53. Funcionalidades del Sprint 3 
+Código RF Funcionalidad 
+RF09 
+Se desarrolla el proceso de ETL que extrae información detallada de 
+pedidos desde el archivo fuente, normaliza las relaciones con 
+dimensiones y carga los registros en FACT_PEDIDOS. 
+RF10 
+Se implementa el proceso de ETL que procesa datos de inventario 
+consolidando cantidades, fechas y ubicaciones, y los almacena en la 
+tabla FACT_INVENTARIO. 
+RF11 
+Se diseña e implementa un modelo de predicción de demanda que 
+utiliza datos históricos de pedidos e inventario para generar 
+estimaciones por producto en función del comportamiento pasado. 
+Fuente: Elaboración propia 
+ 
+ 

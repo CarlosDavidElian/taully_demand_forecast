@@ -1,0 +1,29 @@
+ 
+enviada al controlador, y este actualiza los datos en la base mediante 
+el modelo correspondiente. 
+RF04 
+Se desarrolla el proceso de ETL que extrae datos históricos de 
+fechas (día, mes, año), realiza la transformación y limpieza 
+necesarias, y los carga en la tabla DIM_TIEMPO de la base de datos 
+dimensional para integrarse con el resto del sistema de inteligencia 
+de negocio. 
+Fuente: Elaboración propia 
+Diseño 
+• Diseño de prototipos 
+En la Figura 1 se muestra el prototipo del RF02 que aprobó el Product Owner para el 
+login del sistema, realizado con HTML, CSS y JavaScript, el cual contiene todos los 
+campos requeridos para el inicio de sesión. 
+Figura 1. Prototipo para el requerimiento RF02 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+La Tabla 32 muestra las equivalencias de condiciones y los eventos definidos para el 
+funcionamiento del formulario de autenticación correspondiente al requerimiento 
+RF02. 
+ 
+ 
+ 

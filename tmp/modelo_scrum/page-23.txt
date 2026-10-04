@@ -1,0 +1,27 @@
+13 
+ 
+eficaz, minimizando así la posibilidad de quiebres de stock o productos agotados, lo 
+cual pudo afectar negativamente las operaciones y la confianza del cliente. 
+Concluido hasta este punto, se detallaron las hipótesis de la investigación, siendo la 
+general: “La implementación de un sistema basado en Business Intelligence con 
+Machine Learning mejorará la gestión de la cadena de suministro en la empresa 
+INTERSEGUR”. Asimismo, las hipótesis específicas de la investigación fueron “Un 
+sistema basado en Business Intelligence con Machine Learning aumenta la precisión 
+del inventario de la gestión de la cadena de suministro en la empresa INTERSEGUR” 
+y “Un sistema basado en B usiness Intelligence con Machine Learning incrementa la 
+tasa de cumplimiento de pedidos de la gestión de la cadena de suministro en la 
+empresa INTERSEGUR”. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

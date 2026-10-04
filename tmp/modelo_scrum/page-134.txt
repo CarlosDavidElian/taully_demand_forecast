@@ -1,0 +1,42 @@
+ 
+Condiciones 
+Se debe desarrollar un dashboard interactivo que integre los 
+indicadores clave del sistema. Debe permitir visualizar datos en 
+tiempo real y facilitar el análisis de tendencias relacionadas con 
+la Tasa de Cumplimiento de Pedidos (TCP) y la Precisión del 
+Inventario (PI). 
+Restricciones 
+Solo la Gerencia general puede gestionar la configuración del 
+dashboard. Las métricas deben ser extraídas directamente del 
+sistema para evitar inconsistencias. 
+Fuente: Elaboración propia 
+Historia de usuario Nº 12: 
+En la Tabla 19 se evidencia la Historia Nº 12, llamada Gráficos de las predicciones 
+IA, donde se detallan los usuarios, la prioridad basada en la técnica MoSCoW, el 
+tiempo estimado en días, condiciones y restricciones. 
+Tabla 19. Historia de usuario Nº 12 
+Elemento Detalle 
+Nombre Gráficos de las predicciones IA 
+Usuarios Gerencia general 
+Prioridad M (Must Have) - Basada en la técnica MoSCoW 
+Tiempo 
+estimado 4 días 
+Condiciones 
+Se debe implementar una visualización gráfica de los modelos 
+predictivos desarrollados en el sistema. Los gráficos deben 
+mostrar proyecciones sobre la demanda futura y la evolución de 
+la Precisión del Inventario (PI). 
+Restricciones 
+Solo la Gerencia general tiene acceso a la administración de 
+gráficos predictivos. Las métricas deben actualizarse con datos 
+reales para validar la precisión del modelo. 
+Fuente: Elaboración propia 
+Historia de usuario Nº 13: 
+En la Tabla 20 se evidencia la Historia Nº 13, llamada Reportes, donde se detallan 
+los usuarios, la prioridad basada en la técnica MoSCoW, los pedidos  por meses, 
+condiciones y restricciones. 
+Tabla 20. Historia de usuario Nº 13 
+Elemento Detalle 
+Nombre Reportes 
+Usuarios Gerencia general 
+Prioridad M (Must Have) - Basada en la técnica MoSCoW 

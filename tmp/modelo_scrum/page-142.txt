@@ -1,0 +1,33 @@
+ 
+Tabla 32. Equivalencia y eventos del RF02 
+Código Condición Null Especificación 
+<COM_01> Máximo 200 
+caracteres No 
+Debe introducir el correo 
+electrónico asignado por el 
+administrador. 
+<COM_02> Máximo 150 
+caracteres No Debe introducir la contraseña 
+correspondiente a su cuenta. 
+Objeto ID Valor Evento Especificación 
+Button btn_login Iniciar sesión onclick 
+Verifica credenciales 
+y redirige al menú 
+principal. 
+Fuente: Elaboración propia 
+En la Figura 2 se muestra el prototipo del RF03 que aprobó el Product Owner para la 
+vista de listar usuarios, realizado en HTML, CSS y JavaScript, con los componentes 
+necesarios para su correcta visualización. 
+Figura 2. Prototipo para listar usuarios 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+En la Figura 3 se muestra el prototipo del RF03 que aprobó el Product Owner para la 
+vista de agregar usuarios, realizado en  HTML, CSS y JavaScript , con los 
+componentes necesarios para su correcta visualización. 
+ 
+ 

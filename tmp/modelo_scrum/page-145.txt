@@ -1,0 +1,34 @@
+ 
+IconButton btn_estado ON/OFF onclick 
+Cambia el estado del 
+usuario (activo ↔ 
+inactivo). 
+Fuente: Elaboración propia 
+En la Figura 5 se muestra el diseño funcional del RF04 que aprobó el Product Owner 
+para el proceso ETL de Tiempo , realizado en Diagrams.net, con los componentes 
+necesarios para su correcta ejecución. 
+Figura 5. Diagrama funcional del proceso ETL de Tiempo 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+La Tabla 34 muestra los componentes técnicos definidos para el funcionamiento del 
+proceso ETL de Tiempo correspondiente al requerimiento RF04. 
+Tabla 34. Componentes técnicos del RF04 – ETL de Tiempo 
+Elemento Descripción 
+Fuente de datos Archivos Excel (.xlsx) con fechas históricas 
+Herramienta 
+ETL 
+Script Python con procedimiento SQL para cargar y 
+transformar datos 
+Tabla destino DIM_TIEMPO del modelo dimensional 
+Frecuencia Única vez (carga inicial) 
+Validaciones Unicidad de fechas, formato correcto, ausencia de nulos 
+Uso posterior Asociación con hechos en FACT_PEDIDOS y 
+FACT_INVENTARIO vía ID_TIEMPO 
+Fuente: Elaboración propia 
+• Requerimientos 
+En la Tabla 35 se muestran los requerimientos identificados previamente del Sprint 
+1, con las funcionalidades que debe poseer la herramienta para su correcta ejecución. 
+ 

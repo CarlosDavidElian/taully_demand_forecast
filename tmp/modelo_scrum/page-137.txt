@@ -1,0 +1,65 @@
+ 
+Exportación de análisis de 
+cumplimiento (TCP) 
+Exportación de precisión de 
+inventario (PI) 
+Fuente: Elaboración propia 
+2.3. Sprint Backlog 
+El Sprint Backlog es la lista de tareas y funcionalidades priorizadas para cada sprint 
+dentro del proceso de desarrollo. Cada sprint agrupa un conjunto de historias de 
+usuario, con sus respectivos requerimientos y estimaciones, garantizando una 
+ejecución iterativa y controlada del proyecto. 
+Tabla 23. Definición del Sprint 
+Sprint Historias de Usuario Requerimientos Estimación 
+Sprint 1 H.U.1, H.U.2, H.U.3 RF02, RF03, RF04 6 
+Sprint 2 H.U.4, H.U.5, H.U.6, H.U.7 RF05, RF06, RF07, 
+RF08 12 
+Sprint 3 H.U.8, H.U.9, H.U.10 RF09, RF10, RF11 10 
+Sprint 4 H.U.11, H.U.12 RF12, RF13 8 
+Sprint 5 H.U.13 RF14 21 
+Fuente: Elaboración propia 
+Tabla 24. Sprint Backlog 
+Sprint Código 
+HU 
+Historia de 
+Usuario 
+Código 
+RF Requerimiento Estimación 
+Sprint 1 
+H.U.1 Acceso al 
+sistema RF02 Sistema de 
+autenticación 1 
+H.U.2 Administración 
+de usuarios RF03 Gestión de 
+usuarios 2 
+H.U.3 
+Implementación 
+de ETL de 
+tiempo 
+RF04 ETL para datos 
+de tiempo 3 
+Sprint 2 
+H.U.4 
+Implementación 
+de ETL de 
+producto 
+RF05 ETL para datos 
+de productos 3 
+H.U.5 
+Implementación 
+de ETL de 
+empleado 
+RF06 ETL para datos 
+de empleados 3 
+H.U.6 
+Implementación 
+de ETL de 
+cliente 
+RF07 ETL para datos 
+de clientes 3 
+H.U.7 
+Implementación 
+de ETL de 
+ubicación 
+RF08 ETL para datos 
+de ubicación 3 

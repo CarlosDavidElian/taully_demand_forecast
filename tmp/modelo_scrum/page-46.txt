@@ -1,0 +1,32 @@
+36 
+ 
+cliente en tiempo y forma. Una mejora en este indicador implica no solo una mayor 
+eficiencia operativa, sino también un incremento en la satisfacción del cliente y en la 
+confiabilidad del sistema de distribución, aspectos que se alcanzaron en el presente 
+estudio a través de la implementación de tecnologías inteligentes. 
+En este contexto, al analizar el objetivo general de la investigación, se concluye que 
+al implementar un sistema basado en Business Intelligence con Machine Learning se 
+obtuvo un impacto positivo y significativo sobre la gestión de la cadena de suministro 
+en la empresa INTERSEGUR. La combinación de estas tecnologías no solo permitió 
+mejorar el control de inventarios y el cumplimiento de pedidos, sino que también 
+facilitó la toma de decisiones operativas mediante un dashboard interactivo. 
+Este resultado respalda lo planteado por Li et al. [9], quienes identificaron una 
+asociación directa entre el uso de inteligencia artificial generativa y la estabilidad en 
+la gestión de la cadena de suministro en organizaciones manufactureras chinas. En 
+su estudio, la incorporación de IA generativa permitió una gestión más consistente, 
+revelando su potencial como una herramienta estratégica para afrontar la complejidad 
+de las cadenas actuales. 
+Del mismo modo, Zhao y Zhang [15] señalaron que el uso de algoritmos de Machine 
+Learning en entornos de Business Intelligence potencia las capacidades analíticas de 
+las empresas, permitiéndoles automatizar procesos repetitivos, detectar patrones 
+complejos, generar informes precisos y mejorar la toma de decisiones estratégicas. 
+Esto coincide con los beneficios evidenciados en la empresa INTERSEGUR, donde 
+el sistema propuesto mejoró la eficiencia operativa y la adaptabilidad ante condiciones 
+cambiantes del entorno. 
+Asimismo, Shobana et al. [16] destacaron que la sinergia entre BI y ML permite 
+recoger, estudiar e interpretar grandes volúmenes de datos, favoreciendo decisiones 
+empresariales más informadas y estrategias adaptadas a las necesidades del 
+mercado. Su enfoque, aplicado en contextos de comercio electrónico, mostró cómo 
+estas tecnologías pueden reducir pérdidas y mejorar ingresos, lo cual resulta aplicable 
+al caso de INTERSEGUR al considerarse una empresa que también debe gestionar 
+activos críticos con alta trazabilidad. 

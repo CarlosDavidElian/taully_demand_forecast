@@ -1,0 +1,26 @@
+viii 
+ 
+Índice de figuras 
+Figura 1. Precisión de inventario antes y despues del sistema basado en Business 
+Intelligence con Machine Learning……………………………………………………….23 
+Figura 2. Tasa de cumplimiento de pedidos antes del sistema basado en Business 
+Intelligence con Machine Learning……………………………………………………….24 
+Figura 3. Precisión de inventario antes del sistema basado en Business Intelligence 
+con Machine Learning……………………………………………………………………..26 
+Figura 4.  Precisión de inventario después del sistema basado en Business 
+Intelligence con Machine Learning……………………………………………………….26 
+Figura 5. Tasa de cumplimiento de pedidos antes del sistema basado en Business 
+Intelligence con Machine Learning……………………………………………………….27 
+Figura 6. Tasa de cumplimiento de pedidos después del sistema basado en Business 
+Intelligence con Machine Learning……………………………………………………….28 
+Figura 7. Precisión de inventario – Prueba T-student…………………………………..30 
+Figura 8. Tasa de cumplimiento de pedidos – Prueba T-student……………………...31 
+ 
+ 
+ 
+ 
+  
+  
+ 
+ 
+ 

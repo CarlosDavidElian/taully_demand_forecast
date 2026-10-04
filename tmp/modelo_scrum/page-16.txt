@@ -1,0 +1,34 @@
+6 
+ 
+información geoespacial (GIS) y la base de datos de Teikoku Databank Ltd. Este 
+enfoque superó a modelos tradicionales que no consideraban las relaciones 
+complejas entre empresas, demostrando una capacidad superior para prever el 
+rendimiento de recuperación empresarial. Los resultados indicaron que factores como 
+la proximidad geográfica y la centralidad en la red de suministro eran determinantes 
+para la resiliencia de las empresas.  
+Asimismo, Li et al. [9] en su investigación encuestaron a 213 empresas 
+manufactureras chinas para examinar el uso de la inteligencia artificial generativa 
+dentro de la cadena de suministro. Utilizaron la técnica de la traducción inversa, 
+mediante la cual se aplicó la encuesta tanto de la traducción del inglés al chino como 
+del chino al inglés, esto para observar si existía alguna variación de datos. Al final de 
+la investigación, se llegó a la conclusión de que la IA generativa ofrece soluciones 
+prometedoras a los desafíos del manejo estable de la cadena de suministro; sin 
+embargo, no todas las organizaciones pueden aprovechar sus beneficios. El artículo 
+reveló una asociación positiva entre el consumo de IA generativa y la gestión 
+consistente de la cadena de suministro (GSCC). El estudio contribuyó al conjunto de 
+competencias relacionadas con la gestión de la cadena de suministro apoyada por IA, 
+así mismo también esta proporcionó nuevos conocimientos para las empresas que 
+navegan por el panorama dinámico de las cadenas de suministro mundiales. 
+De igual manera, en una investigación realizada en Jordania por Sharabati et al. [10], 
+en la cual se examinó el impacto de la inteligencia artificial sobre la cadena de 
+suministro digital, con la intención de optimizar el rendimiento operativo , se obtuvo 
+como resultado un incremento significativo en la agilidad y transparencia de las 
+cadenas de suministro industrial. El estudio empleó una metodología exploratoria que 
+combinó el análisis de casos empíricos y marcos teóricos como la teoría de la 
+Información Orientada a la Decisión y el marco Empresa-Orientación-Tecnológica. La 
+investigación adoptó una metodología mixta, aplicando instrumentos como encuestas 
+dirigidas a 208 gerentes y altos cargos del sector industrial en Jordania, seleccionados 
+mediante una técnica de muestreo aleatorio. La incorporación de algoritmos basados 
+en aprendizaje automático facilitó una mayor precisión al anticipar la demanda  y 
+optimizar la gestión del riesgo en entornos volátiles. Además, el uso de robótica y 
+automatización en las operaciones logísticas incrementó la eficiencia, reduciendo los 

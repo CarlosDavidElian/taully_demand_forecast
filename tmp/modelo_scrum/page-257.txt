@@ -1,0 +1,67 @@
+ 
+estar 
+completas y 
+visibles 
+OR” → 
+10.22 
+Botón de 
+exportación Inactivo No genera 
+archivo 
+Debe 
+exportarse 
+la tabla 
+visualizada 
+sin 
+transformaci
+ón ni 
+pérdida de 
+datos 
+X  
+Archivo 
+.xlsx 
+generado 
+con los 
+registros 
+coincidente
+s 
+Encabezados Ambiguos Rotulación 
+confusa 
+Deben ser 
+“N°”, 
+“Fecha”, 
+“Producto” y 
+“Predicción” 
+  
+Encabezad
+os 
+correctame
+nte 
+presentado
+s 
+Post condiciones 
+El sistema presenta correctamente los datos de predicción IA por fecha, utilizando 
+los nombres de productos desde el modelo dimensional y los valores proyectados 
+desde la base relacional. La exportación funciona correctamente y refleja los datos 
+visualizados. 
+Defectos Veredicto 
+No se encontraron Paso 
+Observaciones Probador 
+La prueba fue ejecutada sobre la subsección 
+“Predicciones IA” del RF14. Se validó el filtrado por fecha, 
+la correcta resolución de nombres, los valores numéricos 
+proyectados y la funcionalidad de exportación. 
+• Marko Samuel 
+Chacon Ramos 
+• Erika Yanela Sancho 
+Diaz 
+Fuente: Elaboración propia 
+Gráfico de Burndown del Sprint 5 
+En la Figura 101 se presenta el gráfico de Burndown correspondiente al Sprint 5. La 
+línea gris representa el esfuerzo ideal distribuido desde la reunión de planificación 
+hasta la generación completa de los reportes en Excel. La línea roja representa el 
+esfuerzo real registrado por el equipo, mostrando una caída progresiva entre el 24/05 
+y el 31/05, etapa dedicada al desarrollo del módulo de reportes estratégicos (SPR5 -
+02). 
+Posteriormente, el descenso continúa del 01/06 al 07/06, período en el que se 
+implementa la funcionalidad de exportación y se realiza la validación de las tablas en 
+formato Excel (SPR5 -03). Finalmente, ambas líneas convergen el 08/06/2025, 

@@ -718,7 +718,7 @@ function renderPosttest(data) {
     const inventoryFile = inventory.inventory?.name ? ` Archivo: ${inventory.inventory.name}.` : "";
     const inventoryWarnings = Array.isArray(inventory.warnings) ? inventory.warnings.filter(Boolean) : [];
     const demonstrationNote = inventory.inventory?.is_demonstration
-      ? " Este archivo es demostrativo y no debe usarse como evidencia de tesis."
+      ? " Fuente: inventario demostrativo del proyecto."
       : "";
     const warningsNote = inventoryWarnings.length ? ` Advertencia: ${inventoryWarnings.join(" ")}` : "";
     inventoryNote.textContent = `${inventory.message || "Indicadores calculados"} ISI = salida frente a stock disponible; TQS = días con quiebre frente a días evaluados.${inventoryFile}${demonstrationNote}${warningsNote}`;

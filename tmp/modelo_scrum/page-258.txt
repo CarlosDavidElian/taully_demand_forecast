@@ -1,0 +1,36 @@
+ 
+indicando la entrega puntual y completa del requerimiento RF14, cumpliendo 
+satisfactoriamente con el cronograma establecido para esta iteración. 
+Figura 101. Burndown del Sprint 5 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+Retrospectiva del Sprint 5 
+La retrospectiva del Sprint 5 permite evaluar el desempeño del equipo durante la 
+implementación del módulo de reportes estratégicos (RF14), compuesto por las 
+subsecciones de precisión del inventario, tasa de cumplimiento de pedidos y 
+predicciones IA. Esta revisión busca identificar dificultades técnicas, limitaciones 
+visuales y oportunidades de mejora para optimizar el manejo de datos consolidados, 
+las interfaces de exportación y la experiencia del usuario en entornos estáticos. En la 
+Tabla 79 se resumen las observaciones registradas durante esta iteración. 
+Tabla 79. Retrospectiva del Sprint 5 
+Problema Causas Acciones 
+Inconsistencias en 
+valores exportados en 
+Excel 
+El archivo no incluía 
+todos los registros 
+visualizados; error en 
+conexión entre vista y 
+función de exportación 
+Se ajustó el script de 
+exportación para 
+garantizar que la tabla 
+completa se transfiera sin 
+truncamientos 

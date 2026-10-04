@@ -1,0 +1,79 @@
+ 
+• Validar que los campos requeridos (PRODUCTO, PRECIO) estén presentes 
+• Verificar que se detecten registros con campos vacíos o precio no numérico 
+• Validar que se eliminen productos duplicados antes de la carga 
+• Verificar que los datos válidos se carguen en la tabla DIM_PRODUCTO sin 
+errores 
+Datos de entrada Respuesta 
+esperada 
+Coincide Respuesta 
+del Sistema Campo Valor Escenario Sí No 
+- - Formato 
+inválido 
+El sistema 
+debe validar 
+campos vacíos 
+o mal 
+estructurados 
+X  
+El sistema 
+muestra 
+mensaje de 
+validación de 
+campos 
+obligatorios 
+- - Precio con 
+texto 
+El sistema 
+debe rechazar 
+el registro 
+X  
+Registro 
+omitido por 
+error en el 
+formato del 
+precio 
+- - Registro 
+duplicado 
+El sistema 
+debe ignorar el 
+duplicado 
+X  
+El producto ya 
+existe en 
+DIM_PRODU
+CTO 
+- - 
+Carga 
+válida de 
+datos 
+El sistema 
+debe insertar 
+el producto 
+correctamente 
+X  
+Producto 
+cargado 
+correctamente 
+en 
+DIM_PRODU
+CTO 
+Post condiciones 
+La tabla DIM_PRODUCTO contiene registros únicos, correctos y completos según 
+la estructura establecida. 
+Defectos Veredicto 
+No se encontraron Paso 
+Observaciones Probador 
+La prueba fue ejecutada exitosamente en un entorno 
+de desarrollo controlado. Se validaron correctamente 
+los datos, se descartaron inconsistencias y los 
+productos válidos fueron insertados. 
+• Marko Samuel Chacon 
+Ramos 
+• Erika Yanela Sancho 
+Diaz 
+Fuente: Elaboración propia 
+• Prueba de caja negra del RF06 
+En la Tabla 48 se muestra la prueba de caja negra 5 aplicada al proceso ETL para la 
+carga de empleados. Esta prueba tiene como objetivo validar que el sistema lea, 
+transforme y cargue correctamente los registros de empleados desde el archivo .xlsx 

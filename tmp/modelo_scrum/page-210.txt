@@ -1,0 +1,85 @@
+ 
+validar que el sistema ejecute correctamente el modelo previamente entrenado, 
+genere predicciones estructuradas por producto y fecha futura. 
+Tabla 60. Prueba de caja negra 10 
+PRUEBA DE CAJA NEGRA 10 
+Código PCN-10 Fecha 05/05/2025 
+Tarea 
+Ejecutar la 
+predicción de 
+demanda 
+Módulo Generación y carga de 
+predicciones 
+Descripción 
+Se ejecutarán pruebas para verificar si el proceso de generación de 
+predicciones inserta los registros correctamente en la tabla 
+predicciones_ia, asegurando la limpieza previa de la tabla, la 
+creación estructurada de combinaciones entre productos y fechas 
+futuras, la integración de campos obligatorios (id_producto, 
+fecha_prediccion, prediccion) y el formato numérico adecuado para 
+los valores estimados por el modelo. 
+Precondiciones 
+• Archivo del modelo entrenado (modelo.pkl) existente y accesible 
+• Base de datos dimensional correctamente poblada (FACT_PEDIDOS, 
+FACT_INVENTARIO) 
+• Script de predicción funcional (prediccion.py) 
+• Tabla predicciones_ia disponible y vacía al inicio 
+Pasos de la prueba 
+• Ejecutar el script de predicción desde entorno controlado 
+• Verificar que se genere un conjunto de combinaciones válidas de producto y 
+fecha 
+• Validar que los valores estimados estén dentro de un rango numérico positivo 
+• Confirmar que la tabla predicciones_ia se limpie antes de la inserción 
+• Verificar que los resultados se inserten sin errores y sin omisiones estructurales 
+Datos de entrada Respuesta 
+esperada 
+Coincide Respuesta 
+del Sistema Campo Valor Escenario Sí No 
+id_producto 
+Valor 
+no 
+existen
+te 
+Clave 
+inválida 
+El sistema 
+debe omitir 
+predicciones 
+para productos 
+inexistentes 
+X  
+No se genera 
+predicción 
+para ID no 
+vinculado 
+prediccion Negati
+va 
+Valor 
+inválido 
+(simulado) 
+El sistema 
+debe evitar 
+guardar 
+valores 
+menores a 
+cero 
+X  
+Registro 
+descartado 
+por 
+inconsistencia 
+lógica 
+Registro 
+completo Válido Carga 
+correcta 
+El sistema 
+debe insertar 
+la predicción 
+en 
+predicciones_i
+a 
+X  
+Predicción 
+registrada 
+correctamente 
+en la tabla 

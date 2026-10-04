@@ -1,0 +1,40 @@
+ 
+de datos dimensional. Cada ubicación debe contar con su tipo 
+asignado y garantizar la coherencia con los datos de inventario y 
+pedidos. 
+Restricciones Solo la Gerencia general tiene acceso a la administración del 
+ETL. No se deben modificar registros sin validación previa. 
+Fuente: Elaboración propia 
+Historia de usuario Nº 8: 
+En la Tabla 15 se evidencia la Historia Nº 8, llamada Implementación de ETL de 
+pedidos, donde se detallan los usuarios, la prioridad basada en la técnica MoSCoW, 
+el tiempo estimado en días, condiciones y restricciones. 
+Tabla 15. Historia de usuario Nº 8 
+Elemento Detalle 
+Nombre Implementación de ETL de pedidos 
+Usuarios Gerencia general 
+Prioridad M (Must Have) - Basada en la técnica MoSCoW 
+Tiempo 
+estimado 3 días 
+Condiciones 
+Se debe desarrollar un proceso de ETL que asegure la 
+extracción, transformación y carga de los datos de pedidos en la 
+base de datos dimensional. La información debe contener 
+identificación de pedido, fecha, cliente, productos y estado del 
+pedido. 
+Restricciones 
+Solo la Gerencia general tiene acceso a la administración del 
+proceso ETL. No se deben modificar estructuras sin validación 
+previa. 
+Fuente: Elaboración propia 
+Historia de usuario Nº 9: 
+En la Tabla 16 se evidencia la Historia Nº 9, llamada Implementación de ETL de 
+inventario, donde se detallan los usuarios, la prioridad basada en la técnica 
+MoSCoW, el tiempo estimado en días, condiciones y restricciones. 
+Tabla 16. Historia de usuario Nº 9 
+Elemento Detalle 
+Nombre Implementación de ETL de inventario 
+Usuarios Gerencia general 
+Prioridad M (Must Have) - Basada en la técnica MoSCoW 
+Tiempo 
+estimado 3 días 

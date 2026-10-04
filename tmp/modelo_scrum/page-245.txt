@@ -1,0 +1,23 @@
+ 
+En la Figura 93 se muestra la lógica para manejar la información proveniente del 
+modelo dimensional para la subsección “Tasa de Cumplimiento de Pedidos” del RF14, 
+evidenciándose en el archivo tasa_cumplimiento_pedidos_controller.py. 
+Figura 93. Lógica de la Tasa de Cumplimiento de Pedidos del RF14 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 

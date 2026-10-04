@@ -1,0 +1,28 @@
+ 
+2.4. Fuente de datos 
+Los datos provienen de archivos Excel con registros históricos de: 
+• Distribución de productos (tienda y almacén) 
+• Pedidos de los clientes 
+• Entregas completas o incompletas 
+Estos datos son integrados mediante un proceso ETL en Python, estructurados en un 
+modelo dimensional en MySQL. 
+2.5. Indicadores clave (KPIs) a visualizar 
+• Precisión del Inventario 
+• Tasa de Cumplimiento de Pedidos 
+2.6. Requerimientos funcionales 
+• El sistema debe mostrar un dashboard interactivo evidenciando cada KPI. 
+• Se debe poder filtrar la información por producto y fecha. 
+• Debe incluir un componente de predicción usando Machine Learning 
+(predicción de demanda). 
+• Los datos deben actualizarse diariamente mediante el proceso ETL. 
+2.7. Requerimientos no funcionales 
+• El sistema debe ser accesible desde un navegador web interno. 
+• El rendimiento de las consultas debe ser óptimo (respuesta en menos de 5 
+segundos). 
+• El modelo predictivo debe tener un mínimo de 80% de precisión. 
+• Seguridad en el acceso: solo personal autorizado podrá visualizar cada tipo de 
+información. 
+2.8. Resultado de esta etapa 
+Como resultado de esta fase, se obtuvo un documento de requerimientos priorizados 
+y validados con los usuarios clave. Este documento es la base para el diseño técnico 
+y el desarrollo de las siguientes fases del proyecto. 

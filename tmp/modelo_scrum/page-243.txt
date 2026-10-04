@@ -1,0 +1,26 @@
+ 
+• Requerimientos 
+En la Tabla 75 se muestran los requerimientos identificados previamente del Sprint 
+5, con las funcionalidades que debe poseer la herramienta para su correcta ejecución. 
+Tabla 75. Requerimientos del Sprint 5 
+Requerimientos 
+El sistema debe implementar un módulo de reportes estratégicos que consolide 
+indicadores clave del sistema en tres subsecciones: precisión del inventario, tasa 
+de cumplimiento de pedidos y predicciones. 
+Cada subsección debe presentar una tabla estática con los datos correspondientes 
+y permitir su exportación directa en formato Excel, sin aplicar filtros ni 
+transformaciones adicionales. 
+Fuente: Elaboración propia 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

@@ -1,0 +1,41 @@
+ 
+la pantalla principal y los módulos correspondientes a su perfil. 
+La contraseña debe estar encriptada para garantizar la 
+seguridad. 
+Restricciones 
+Solo los usuarios registrados en el sistema podrán acceder. Se 
+debe validar que el usuario tenga permisos para visualizar los 
+módulos asignados. 
+Fuente: Elaboración propia 
+Historia de usuario Nº 2: 
+En la Tabla 9 se evidencia la Historia Nº 2, llamada Administración de usuarios, 
+donde se detallan los usuarios, la prioridad basada en la técnica MoSCoW, el tiempo 
+estimado en días, condiciones y restricciones. 
+Tabla 9. Historia de usuario Nº 2 
+Elemento Detalle 
+Nombre Administración de usuarios 
+Usuarios Gerencia general 
+Prioridad M (Must Have) - Basada en la técnica MoSCoW 
+Tiempo 
+estimado 2 días 
+Condiciones 
+Se debe permitir la creación, modificación y eliminación de 
+usuarios. Cada usuario debe contar con un rol asignado y 
+permisos definidos. Los cambios en los usuarios deben 
+registrarse en el sistema. 
+Restricciones Solo la Gerencia general puede administrar usuarios. No se 
+pueden eliminar usuarios que estén activos en el sistema. 
+Fuente: Elaboración propia 
+Historia de usuario Nº 3: 
+En la Tabla 10 se evidencia la Historia Nº 3, llamada Implementación de ETL de 
+tiempo, donde se detallan los usuarios, la prioridad basada en la técnica MoSCoW, 
+el tiempo estimado en días, condiciones y restricciones. 
+Tabla 10. Historia de usuario Nº 3 
+Elemento Detalle 
+Nombre Implementación de ETL de tiempo 
+Usuarios Gerencia general 
+Prioridad M (Must Have) - Basada en la técnica MoSCoW 
+Tiempo 
+estimado 3 días 
+Condiciones Se debe desarrollar un proceso de ETL que permita la 
+extracción, transformación y carga de datos de tiempo en la base 

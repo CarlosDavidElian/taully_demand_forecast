@@ -1,0 +1,87 @@
+ 
+Tabla 78. Prueba de caja negra 15 
+PRUEBA DE CAJA NEGRA 15 
+Código PCN-15 Fecha 07/06/2025 
+Tarea Verificar visualización de 
+la sección “Predicciones” Módulo RF14 – Reportes 
+estratégicos 
+Descripción 
+Se ejecutarán pruebas para validar que la interfaz muestre una 
+tabla de predicciones por producto según la fecha elegida. El 
+selector debe filtrar correctamente los registros relacionados en la 
+base de datos relacional (predicciones_ia) y mostrarlos junto con 
+los nombres obtenidos desde la tabla dimensional 
+DIM_PRODUCTOS. El botón de exportación debe generar un 
+archivo .xlsx fiel al contenido visible. 
+Precondiciones 
+• Tabla predicciones_ia poblada con estimaciones por producto y fecha 
+• Tabla DIM_PRODUCTO disponible para resolver el nombre del producto 
+• Selector de fecha funcional en la interfaz 
+• Tabla con columnas: N°, Fecha, Producto, Predicción 
+• Botón de exportación habilitado 
+Pasos de la prueba 
+• Seleccionar la fecha 01/04/2025 desde el componente de fecha 
+• Verificar que los registros correspondientes a esa fecha sean mostrados 
+• Validar que los nombres de productos estén correctamente tomados desde 
+DIM_PRODUCTO 
+• Confirmar que los valores de predicción numérica sean consistentes y completos 
+• Comprobar que el botón "Exportar" genere un archivo .xlsx con los mismos 
+registros 
+• Revisar que el formato de columnas y títulos sea claro y sin errores 
+Datos de entrada Respuesta 
+esperada 
+Coincide Respuesta 
+del 
+Sistema Campo Valor Escenario Sí No 
+Fecha 
+seleccionada 1/04/2025 Filtrado por 
+fecha 
+El sistema 
+debe 
+mostrar 
+registros 
+solo del 
+01/04/2025 
+X  
+Tabla 
+muestra 
+todos los 
+productos 
+proyectado
+s para esa 
+fecha 
+Nombre de 
+producto 
+ID sin 
+resolución 
+Falla en 
+cruce de 
+claves 
+Debe 
+mostrarse el 
+nombre 
+desde 
+DIM_PROD
+UCTOS, no 
+solo ID de 
+producto 
+X  
+Nombres 
+correctos: 
+“BALUM”, 
+“BATERIA 
+12V 4A 
+HAGROY”, 
+etc. 
+Valor de 
+predicción Incompleto 
+Datos 
+faltantes o 
+nulos 
+Todas las 
+prediccione
+s deben 
+X  
+Ejemplo: 
+“AISLADOR 
+TEMPLAD

@@ -1,0 +1,30 @@
+ 
+9.2. Mantenimiento del Sistema 
+Para asegurar la continuidad y confiabilidad del sistema BI, se establecieron 
+procedimientos de mantenimiento que incluyen: 
+• Revisión periódica de los procesos ETL, especialmente los scripts en Python, 
+para garantizar que las rutas de los archivos Excel y los formatos no hayan 
+cambiado. 
+• Monitoreo del rendimiento de las consultas SQL del Data Warehouse para 
+optimizar la velocidad de respuesta en la aplicación. 
+• Backups de la base de datos y del código fuente de la aplicación web. 
+• Actualización del archivo limpieza_dm_controller.py en caso de cambios en la 
+estructura de tablas o necesidades específicas de depuración. 
+9.3. Escalabilidad y Crecimiento Futuro 
+Siguiendo el enfoque incremental de Kimball, se dejó planificada la expansión del 
+sistema BI en base a las futuras necesidades del negocio. Algunas oportunidades de 
+crecimiento identificadas incluyen: 
+• Integración de nuevas áreas funcionales como compras, proveedores o 
+recursos humanos, mediante la creación de nuevos data marts. 
+• Incorporación de fuentes de datos adicionales, como archivos de texto, APIs o 
+sistemas transaccionales internos. 
+• Aplicación de técnicas de Machine Learning sobre los datos consolidados para 
+hacer predicciones (Por ejemplo: detección de clientes inactivos). 
+• Mejora en la experiencia del usuario del dashboard, incluyendo alertas 
+automáticas, recomendaciones y filtros avanzados. 
+9.4. Conclusión de la Etapa Final 
+El proyecto ha logrado implementar una solución BI escalable para una cultura de 
+toma de decisiones basada en datos. Con una arquitectura robusta, procesos ETL 
+automatizados y visualizaciones interactivas, la empresa del rubro comercial puede 
+ahora gestion ar eficientemente su cadena de suministro y prepararse para una 
+evolución constante del sistema, en línea con el crecimiento del negocio. 

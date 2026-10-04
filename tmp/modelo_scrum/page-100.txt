@@ -1,0 +1,22 @@
+ 
+Figura 18. Transformación de datos de DIM_CLIENTE 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+Figura 19. Transformación de datos de DIM_UBICACION 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+ 

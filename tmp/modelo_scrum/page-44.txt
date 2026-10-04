@@ -1,0 +1,33 @@
+34 
+ 
+precisión de la gestión de inventarios y un ahorro del 25% en tiempo y recursos. Su 
+estudio concluyó que la adopción de estas tecnologías permitió una toma de 
+decisiones más precisa, una mayor visibilidad de la cadena y una reducción en los 
+errores de pred icción de demanda, lo cual refuerza la validez de los resultados 
+obtenidos en este estudio. 
+Del mismo modo, Sharabati et al. [10] encontraron que el uso de algoritmos de 
+aprendizaje automático en cadenas de suministro industriales permitió anticipar la 
+demanda y optimizar la gestión del riesgo, lo cual se tradujo en una mayor precisión 
+en los procesos de abastecimiento y una reducción de los tiempos de entrega y costos 
+operativos. Esto coincide con la mejora estadísticamente significativa en la precisión 
+del inventario observada en esta investigación. 
+Asimismo, el estudio de Li et al. [9], al encuestar a empresas manufactureras chinas, 
+concluyó que el consumo de inteligencia artificial generativa guarda una relación 
+positiva con la gestión consistente de la cadena de suministro, destacando que no 
+todas las orga nizaciones están preparadas para aprovechar sus beneficios, pero 
+aquellas que sí lo hacen, logran mayor estabilidad y eficiencia en el manejo del 
+abastecimiento, aspecto que también se evidenció en esta investigación. 
+En este sentido, se puede concluir que el sistema permitió un control más exacto del 
+stock, reduciendo errores de registro y mejorando la trazabilidad de productos en 
+almacén. 
+Respecto al objetivo específico 2, vinculado con la mejora en la tasa de cumplimiento 
+de pedidos, los datos reflejan una elevación significativa en la media, pasando de 
+79.85% en el pre-test a 85.88% en el post-test. La prueba T de Student arrojó un valor 
+de -9.182, nuevamente dentro de la región de rechazo, lo que confirma una diferencia 
+significativa desde el punto de vista estadístico  entre ambas etapas de medición del 
+indicador. Este resultado permite validar la hipótesis alterna, destacando la influencia 
+del sistema en la eficiencia del proceso de distribución y entrega. 
+Este hallazgo coincide con lo planteado por Sharabati et al. [10], quienes concluyen 
+que la aplicación de inteligencia artificial en la cadena de suministro permite anticipar 
+la demanda con mayor precisión, optimizando la gestión del riesgo y aumentando 
+tanto la agilidad como la transparencia en las entregas. El uso de algoritmos 

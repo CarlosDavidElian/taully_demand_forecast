@@ -1,0 +1,64 @@
+ 
+H.U.5 Implementación de ETL de 
+empleado 
+Extracción y transformación 
+de datos de empleados 
+3 Validación de información 
+laboral 
+Carga en la tabla 
+DIM_EMPLEADO 
+H.U.6 Implementación de ETL de 
+cliente 
+Extracción y limpieza de 
+registros de clientes 
+3 Validación de datos 
+(DNI/RUC) 
+Carga en la tabla 
+DIM_CLIENTE 
+H.U.7 Implementación de ETL de 
+ubicación 
+Extracción y estructuración 
+de datos de ubicación 
+3 Integración con datos de 
+inventario 
+Carga en la tabla 
+DIM_UBICACION 
+H.U.8 Implementación de ETL de 
+pedidos 
+Extracción y consolidación 
+de datos de pedidos 
+3 Validación y procesamiento 
+de estados de pedido 
+Carga en la tabla 
+FACT_PEDIDOS 
+H.U.9 Implementación de ETL de 
+inventario 
+Extracción de datos de 
+stock 
+3 Integración con ubicaciones 
+y fechas 
+Carga en la tabla 
+FACT_INVENTARIO 
+H.U.10 Desarrollo de predicción de 
+demanda 
+Recopilación de datos 
+históricos de ventas 
+4 
+Implementación del modelo 
+predictivo IA 
+Validación y entrenamiento 
+del modelo 
+Integración con datos de 
+pedidos e inventario 
+H.U.11 Dashboard de inteligencia 
+de negocio 
+Desarrollo del módulo de 
+visualización 4 Integración de KPIs (TCP y 
+PI) 
+H.U.12 Gráficos de las predicciones 
+IA 
+Creación de gráficos 
+dinámicos 4 Implementación de análisis 
+comparativo 
+H.U.13 Reportes Generación de reportes en 
+Excel 21 

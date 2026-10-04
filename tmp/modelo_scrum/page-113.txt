@@ -1,0 +1,23 @@
+ 
+Figura 35. Código para cargar el gráfico de las predicciones 
+(prediccion_ia_controller.py) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+• Frontend (HTML, CSS, JS y Chart.js): Interfaz amigable con el usuario donde 
+se representan gráficamente los indicadores. Chart.js permite los gráficos 
+interactivos y dinámicos como líneas, barras, tortas y mapas de calor. 
+ 
+ 
+ 
+ 

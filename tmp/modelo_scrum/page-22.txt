@@ -1,0 +1,33 @@
+12 
+ 
+dicha empresa necesite para poder realizar sin problemas sus operaciones que la 
+conforman. Asimismo, se puede definir como un macroproceso en el cual intervienen 
+más procesos que al trabajar de manera conjunta se produce un ciclo que lleva a cabo 
+una operación específica dentro de una organización [21]. 
+A su vez, la dimensión “abastecimiento de productos” tuvo un indicador, el cual fue la 
+“precisión del inventario”, según Bonaga [22], es un indicador crucial para el 
+subproceso de abastecimiento en la cadena de suministro , ya que garantiza que los 
+registros reflejen con exactitud el inventario real. Esto permitió planificar de manera 
+eficiente el reabastecimiento y evitar faltantes o excesos, optimizando así el flujo de 
+productos desde la adquisición hasta su disponibilidad en almacén. Al mantener una 
+alta precisión, las organizaciones mejoraron la continuidad del abastecimiento, 
+redujeron costos asociados con inventario inactivo o sobrante, y aseguraron que los 
+productos estuvieran disponibles para atender la necesidad del usuario final en el 
+momento adecuado. 
+Por otra parte, la segunda dimensión de la variable dependiente fue “distribución de 
+productos”, siendo el proceso mediante el cual los productos son trasladados desde 
+las instalaciones de origen o depósito hasta los destinatarios finales, ya sea en tiendas 
+físicas o mediante entregas directas al cliente. En las ciudades, este proceso ha 
+ganado una importancia significativa dentro de la cadena de suministro como 
+resultado del rápido aumento en los núcleos urbanos , lo que generó desafíos como 
+la congestión vehicular, la contaminación y la falta de infraestructuras adecuadas para 
+la carga y descarga de mercancías [23]. 
+De igual manera, la dimensión “distribución de productos” tuvo un indicador, el cual 
+fue la “tasa de cumplimiento de pedidos”, según García [24], este es un indicador 
+clave utilizado en la gestión logística para medir la efectividad con la que un centro de 
+distribución cumple con los pedidos de sus clientes dentro del límite de plazo 
+acordado. Este indicador permitió evaluar la proporción de pedidos que se entregaron 
+en tiempo y forma con respecto al total de pedidos realizados durante un período 
+determinado. El cálculo de este KPI resultó importante para examinar la eficiencia 
+operacional en la cadena de suministro y tuvo un impacto en el bienestar del cliente. 
+Una alta tasa de cumplimiento de este indicador mostró si el sistema logístico fue 

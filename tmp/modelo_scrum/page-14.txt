@@ -1,0 +1,34 @@
+4 
+ 
+internacional. En concordancia con este estudio, se predijo que la implementación de 
+tecnologías emergentes, como Business Intelligence y Machine Learning, 
+implementadas para gestionar la cadena de suministro, resultarían altamente 
+beneficiosas. Incorporar dichas tecnologías  en los procesos logísticos permitió una 
+mayor optimización en la manera en que se llevaron a cabo, resultando en 
+consecuencias positivas como la reducción de costos, mejor gestión de inventarios, 
+predicciones más precisas de ventas y una mejora en la comunicación entre las partes 
+involucradas. Asimismo, la integración de estas tecnologías contribuyó al 
+mejoramiento de la permitiendo observar los procesos que conforman la cadena de 
+suministro de forma más visual e intuitiva mediante un dashboard, lo cual apoyó la 
+ejecución de decisiones tanto tácticas como estratégicas. 
+Justificación operativa, según lo planteado por  Pannuti [5], la inteligencia artificial 
+simuló la inteligencia humana, haciéndola tangible a través de dispositivos, los cuales 
+aportaron habilidades como el razonamiento, aprendizaje, creatividad e incluso el 
+planeamiento. Esta tecnología resultó de gran ayuda para las organizaciones, a pesar 
+de que su implementación no fue fácil, pero valió la pena por la simplificación de los 
+diversos procesos dentro de una empresa, reduciendo así las tareas rutinarias que 
+demandaban mucho tiempo.  Teniendo esto en cuenta, la implementación de la 
+inteligencia artificial, incluso con el apoyo de otras tecnologías emergentes, ayudó 
+significativamente a aprovechar la capacidad del análisis de datos y la transformación 
+de la información en valor, lo que resultó en decisiones estratégicas más acertadas. 
+La meta principal consistió en asegurar el bienestar de la organización  y de aquellos 
+que la conforman. En consecuencia, incorporar este tipo de soluciones tecnológicas 
+dentro de las empresas, sin discriminar su tamaño, trajo grandes beneficios. 
+Justificación económica, según Díaz [6], tener una cadena de suministro eficiente y 
+sostenible no solo aseguró la automatización en el abastecimiento y entrega de 
+mercancías en las empresas, sino que también permitió garantizar un crecimiento 
+económico en el sector al que pertenecían. De esta ma nera, la empresa 
+INTERSEGUR, gracias a la aplicación de herramientas de Business Intelligence y 
+Machine Learning, redujo significativamente el costo asociado al almacenamiento 
+excesivo de productos y al desabastecimiento, lo que conllevó a pérdidas potenciales 
+por ventas no realizadas.  Esto no solo ayudó a mantener una estructura de costos 

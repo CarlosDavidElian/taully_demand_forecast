@@ -1,0 +1,33 @@
+33 
+ 
+IV. Discusión 
+Los objetivos establecidos en el presente estudio se concluyeron de forma 
+satisfactoria, lo cual se refleja en mejoras notables en la gestión de la cadena de 
+suministro tras implementar un sistema basado en Business Intelligence y Machine 
+Learning. Además, se observaron progresos en los dos indicadores fundamentales: 
+la precisión del inventari o y la tasa de cumplimiento de pedidos. Estos hallazgos 
+respaldan la efectividad del sistema propuesto y su coherencia con los objetivos de la 
+investigación. 
+En relación con el objetivo específico 1, dirigido a mejorar la precisión del inventario, 
+los resultados estadísticos descriptivos mostraron un incremento en la media de este 
+indicador, pasando de 39.44% en el pre -test a 49.02% en el post -test. Esta mejora  
+fue confirmada por el análisis inferencial mediante la prueba T de Student, cuyo valor 
+obtenido fue de -13.920, ubicándose dentro de la región crítica de rechazo, lo que nos 
+permitió aceptar la hipótesis alterna con un 95% de confianza. 
+Este resultado es coherente con lo planteado por Bonaga [22], quien sostiene que la 
+precisión del inventario es un indicador crucial dentro del subproceso de 
+abastecimiento en la cadena de suministro, pues asegura que los registros reflejen 
+con exactitud e l inventario real, lo cual facilita una planificación eficiente, evita 
+faltantes o excesos, y optimiza el flujo de productos desde la adquisición hasta su 
+disponibilidad en almacén. Una mayor precisión, como la alcanzada en este estudio, 
+permite reducir los costos asociados a inventario inactivo y mejora la continuidad del 
+abastecimiento. 
+Asimismo, en la investigación de Calle et al. [13], se evidenció que la implementación 
+de herramientas inteligentes en empresas como Walmart y Procter & Gamble permitió 
+reducir hasta en un 30% los niveles de inventario y mejorar entre 15% y 20% la 
+exactitud de las previsiones de ventas, fortaleciendo así la eficiencia operativa. Esto 
+guarda relación directa con los resultados obtenidos en la presente investigación, en 
+tanto que el uso de soluciones basadas en inteligencia artificial contribuyó a mejorar 
+los procesos de control y gestión de inventarios. 
+Por otro lado, De la Cruz et al. [12] integraron tecnologías de inteligencia artificial y 
+blockchain en la cadena de suministro, lo que resultó en una mejora del 30% en la 

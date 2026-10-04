@@ -1,0 +1,85 @@
+ 
+Tabla 50. Prueba de caja negra 7 
+PRUEBA DE CAJA NEGRA 7 
+Código PCN-07 Fecha 22/04/2025 
+Tarea Ejecutar proceso ETL 
+de ubicaciones Módulo Carga dimensional 
+Descripción 
+Se ejecutarán pruebas para verificar si el proceso ETL carga 
+correctamente los tipos de ubicación en la tabla DIM_UBICACION, 
+asignando identificadores únicos y transformando los registros para 
+su uso posterior en el modelo dimensional. 
+Precondiciones 
+• El script ETL está operativo 
+• La tabla DIM_UBICACION se encuentra vacía o lista para carga 
+• Se requiere ingresar únicamente dos registros: “ALMACÉN” y “TIENDA” 
+Pasos de la prueba 
+• Ejecutar la función ejecutar_etl_dim_ubicacion(app) 
+• Validar que los valores "ALMACÉN" y "TIENDA" se extraigan correctamente 
+• Verificar que se asignen correctamente los campos ID_UBICACION y 
+TIPO_UBICACION 
+• Comprobar que los datos se carguen exitosamente en DIM_UBICACION 
+Datos de entrada Respuesta 
+esperada 
+Coincide Respuesta 
+del Sistema Campo Valor Escenario Sí No 
+TIPO_UBICA
+CION Vacío Campo 
+faltante 
+El sistema 
+no debe 
+insertar 
+ubicaciones 
+vacías 
+X  
+Registro 
+omitido por 
+estructura 
+incompleta 
+TIPO_UBICA
+CION Duplicado Valor 
+repetido 
+El sistema 
+debe evitar 
+duplicar 
+ubicaciones 
+iguales 
+X  
+Ya existe el 
+valor en 
+DIM_UBICA
+CION 
+TIPO_UBICA
+CION ALMACÉN Carga 
+válida 
+El sistema 
+debe 
+insertar 
+correctamen
+te el registro 
+X  
+Ubicación 
+“ALMACÉN” 
+insertada 
+con éxito en 
+DIM_UBICA
+CION 
+TIPO_UBICA
+CION TIENDA Carga 
+válida 
+El sistema 
+debe 
+insertar 
+correctamen
+te el registro 
+X  
+Ubicación 
+“TIENDA” 
+insertada 
+con éxito en 
+DIM_UBICA
+CION 
+Post condiciones 
+La tabla DIM_UBICACION contiene únicamente los valores “ALMACÉN” y 
+“TIENDA” con identificadores únicos. 
+Defectos Veredicto 

@@ -1,0 +1,35 @@
+17 
+ 
+Unidad de análisis: El estudio tuvo como población a un grupo de individuos que 
+poseían características específicas relevantes para la investigación. Para que la 
+cantidad obtenida de una muestra pudiera aplicarse a esta población, fue fundamental 
+que la muestra fuera representativa. Además, fue esencial que la cantidad de 
+elementos seleccionados reflejara adecuadamente las cualidades de la población en 
+relación con la variable investigada [34]. En este sentido, la población de l presente 
+estudio estuvo conformada en un total de 174 registros de pedidos, los cuales fueron 
+obtenidos minuciosamente durante el mes de febrero de 2025 para llevar a cabo la 
+evaluación del Pre -test. Posteriormente, durante el mes de mayo de 2025, se 
+recolectó la información, pero esta vez  tras la implementación de la solución, con el 
+objetivo de realizar la evaluación del Post -Test sobre la misma muestra.  Asimismo, 
+los parámetros de selección considerados para definir la población objeto del estudio 
+fueron los pedidos confirmados y aprobad os para su procesamiento, los pedidos 
+completos y entregados en su totalidad, y los pedidos con datos completos y 
+correctamente registrados. A su vez, los criterios de exclusión considerados para 
+garantizar que no se recolectara información errónea fueron los pedidos cancelados, 
+los pedidos incompletos y los pedidos devueltos o rechazados por el cliente. 
+La muestra, en el ámbito de la investigación, se definió como un conjunto reducido de 
+individuos que representaron una fracción del estudio principal. Su tamaño fue 
+determinado de manera que permitiera cumplir con los objetivos específicos del 
+estudio. Par a establecer dicho tamaño, se consideraron posibles situaciones 
+indeseables, así como la recolección de datos que permitieran calcular la muestra 
+adecuada para el estudio principal, ajustando los valores de error y significancia 
+conforme a lo permitido en el diseño metodológico [35]. En este contexto, se calculó 
+que la proporción de la muestra fuera finita, por lo que se trabajó con una muestra 
+compuesta por 120 registros de pedidos, cantidad obtenida tras la aplicación de la 
+fórmula correspondiente al muestreo. Estos registros fueron distribuidos a lo largo de 
+20 días para evaluar los indicadores de precisión del inventario y la tasa de 
+cumplimiento de pedidos.  Cabe mencionar que, para el proceso de muestreo, se 
+empleó un método de muestreo probabilístico, específicamente el muestreo aleatorio 
+simple. Este procedimiento garantizó que todas las unidades pertenecientes al 
+universo muestral tuvieran igualdad de oportunidades para ser elegidas . En este 
+enfoque, la elección de una unidad para el estudio no estuvo influenciada por la 

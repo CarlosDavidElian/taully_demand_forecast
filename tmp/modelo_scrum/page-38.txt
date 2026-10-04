@@ -1,0 +1,25 @@
+28 
+ 
+Figura 6. Tasa de cumplimiento de pedidos después del sistema basado en 
+Business Intelligence con Machine Learning 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+Prueba de hipótesis 
+Hipótesis de investigación 1: 
+H1: La implementación de un sistema basado en Business Intelligence con Machine 
+Learning mejorará la precisión de inventario en la gestión de la cadena de suministro 
+en la empresa INTERSEGUR. 
+Indicador: Precisión de Inventario 
+Hipótesis Estadísticas 
+Definición de variables: 
+PIa: Precisión de inventario antes de implementar el sistema basado en Business 
+Intelligence con Machine Learning. 
+PId: Precisión de inventario después de implementar el sistema basado en Business 
+Intelligence con Machine Learning. 

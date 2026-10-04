@@ -1,0 +1,34 @@
+5 
+ 
+más saludable, sino que también incrementó el flujo de caja al reducir el capital 
+inmovilizado en inventarios innecesarios. La capacidad de optimizar la distribución 
+entre sus tres tiendas también redujo los costos logísticos y mejoró los márgenes de 
+ganancia. En suma, este proyecto incrementó el funcionamiento eficiente y la 
+productividad de la empresa, contribuyendo a su crecimiento económico sostenible. 
+El presente estudio tuvo como objetivo general “Determinar de qué manera un 
+sistema basado en Business Intelligence con Machine Learning influye en la gestión 
+de la cadena de suministro de la empresa INTERSEGUR”. Y para lograrlo, se 
+plantearon dos objetivos específicos en la investigación, el primero fue “Determinar la 
+influencia de un sistema basado en Business Intelligence con Machine Learning en la 
+precisión del inventario de la gestión de la cadena de suministro en la empresa 
+INTERSEGUR”, y el segundo fue “Determinar la influencia de un sistema basado en 
+Business Intelligence con Machine Learning en la tasa de cumplimiento de pedidos 
+de la gestión de la cadena de suministro en la empresa INTERSEGUR”. 
+En el plano internacional, tenemos a Pap et al. [7], en su investigación realizaron 
+entrevistas a especialistas vinculados con etapas  de la cadena de suministro y 
+logístico, entre los cuales estuvieron miembros de un proyecto de servicios logísticos 
+desarrollado en Tokio, Japón, tales como el jefe de Operaciones de Mercado Asia -
+Pacífico-Japón, a su vez, estuvo el director de un proyecto similar realizado en Brasil. 
+Como hallazgo de este artículo se tuvo un modelo de sistema experto basado en 
+inteligencia artificial que permite la selección tanto de proveedores como de productos 
+mediante el abastecimiento estratégico, en donde las empresas pudieron establecer 
+relaciones a largo plazo con sus proveedores. 
+Así también, en el estudio realizado en Japón por Yang et al. [8], se desarrolló un 
+modelo de red neuronal de grafos para pronosticar los cambios en las ventas de las 
+empresas después de desastres naturales, con el objetivo de optimizar el manejo de 
+riesgos en la cadena de abastecimiento. Utilizando datos históricos de inundaciones 
+y redes interempresariales, su investigación se centró en el impacto de estas 
+relaciones en el desempeño de las empresas post -desastre. La investigación se 
+desarrolló bajo un enfoque cuantitativo, utilizando un diseño tanto correlacional como 
+predictivo, en el que se analizaron datos de más de 17,995 empresas afectadas por 
+el tifón Hagibis de 2018. Para la recopilación de datos, utilizaron el sistema de 

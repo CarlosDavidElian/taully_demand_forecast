@@ -1,0 +1,23 @@
+ 
+• Diagrama Entidad/Relación 
+En la Figura 31 se muestra el diagrama conceptual de la base de datos del Sprint 2, 
+identificados las entidades se procede definir sus atributos que los conforman. 
+Figura 31. Diagrama Entidad/Relación del Sprint 2 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+• Diagrama Lógico 
+En la Figura 32 se muestra el diagrama lógico que representa la descripción de los 
+datos con el mayor detalle posible y la estructura de los datos fundamentales del 
+negocio que participan dentro del Sprint 2. 
+Figura 32. Diagrama Lógico del Sprint 2 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 

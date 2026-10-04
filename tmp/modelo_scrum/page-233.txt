@@ -1,0 +1,47 @@
+ 
+Defectos Veredicto 
+No se encontraron Paso 
+Observaciones Probador 
+La prueba se realizó sobre el dashboard BI y se validaron 
+métricas, comparaciones gráficas y rankings con base en 
+datos reales almacenados en el sistema, cumpliendo con 
+los criterios establecidos por el Product Owner. 
+• Marko Samuel 
+Chacon Ramos 
+• Erika Yanela Sancho 
+Diaz 
+Fuente: Elaboración propia 
+• Prueba de caja negra del RF13 
+En la Tabla 68 se muestra la prueba de caja negra 12 aplicada a  la creación de 
+gráficos predictivos de IA. Esta prueba tiene como objetivo validar que el sistema lea 
+y muestre gráficamente las predicciones cargadas en la base de datos, manejando la 
+renderización de los gráficos y la coherencia de la información proyectada. 
+Tabla 68. Prueba de caja negra 12 
+PRUEBA DE CAJA NEGRA 12 
+Código PCN-12 Fecha 20/05/2025 
+Tarea Verificar visualización 
+de gráficos predictivos Módulo Gráficos de demanda 
+proyectada 
+Descripción 
+Se ejecutarán pruebas para validar que el sistema muestre 
+correctamente los gráficos de demanda futura generados por el 
+modelo predictivo. Esta interfaz debe representar visualmente las 
+estimaciones mensuales por producto, utilizando los datos 
+previamente almacenados en la tabla predicciones_ia. La prueba 
+se enfoca en la correcta renderización del gráfico de barras, la 
+coherencia de los valores proyectados, la legibilidad de etiquetas y 
+la alineación temporal de los datos. 
+Precondiciones 
+• Modelo predictivo entrenado y funcional 
+• Tabla predicciones_ia poblada con estimaciones por producto y fecha 
+• Interfaz de usuario desarrollada y cargada en entorno de visualización 
+Pasos de la prueba 
+• Validar que el gráfico de barras muestre los valores proyectados por mes (marzo, 
+abril, mayo 2025) 
+• Verificar que los valores de demanda estén correctamente agregados por 
+producto y fecha 
+• Confirmar que los ejes del gráfico estén correctamente rotulados (“Mes” y 
+“Unidades”) 
+• Comprobar que los valores numéricos coincidan con los datos reales de 
+predicciones_ia 
+• Evaluar que el diseño gráfico sea legible, sin distorsiones ni errores de escala 

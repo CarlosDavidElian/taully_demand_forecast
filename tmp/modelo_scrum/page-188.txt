@@ -1,0 +1,32 @@
+ 
+No se encontraron Paso 
+Observaciones Probador 
+La prueba fue ejecutada exitosamente. Se validó la 
+inserción de registros únicos y simples, asegurando 
+consistencia estructural de la dimensión de 
+ubicaciones. 
+• Marko Samuel 
+Chacon Ramos 
+• Erika Yanela Sancho 
+Diaz 
+Fuente: Elaboración propia 
+Gráfico de Burndown del Sprint 2 
+En la Figura 51  se presenta el gráfico de Burndown del Sprint 2. La línea gris 
+representa el esfuerzo ideal desde la planificación hasta la carga final de los datos de 
+ubicación. La línea roja muestra el esfuerzo real registrado, donde se observa un 
+ligero desfase entre los días 11 y 16 debido al ajuste en los procesos de 
+transformación de datos de empleados y clientes. Sin embargo, este retraso fue 
+recuperado antes de la fecha de presentación (SPR2 -06), reflejando una entrega 
+completa y oportuna de los requerimientos: RF05, RF06, RF07 y RF08. 
+La convergencia de ambas líneas al día 22/04 indica la culminación satisfactoria del 
+Sprint 2. 
+Figura 51. Burndown del Sprint 2 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 

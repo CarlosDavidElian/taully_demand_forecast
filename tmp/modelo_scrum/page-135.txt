@@ -1,0 +1,52 @@
+ 
+Tiempo 
+estimado 21 días 
+Condiciones 
+Se debe desarrollar un módulo de generación de reportes que 
+permita exportar datos en formato Excel. Los reportes deben 
+incluir análisis sobre la Tasa de Cumplimiento de Pedidos 
+(TCP) y la Precisión del Inventario (PI), permitiendo 
+segmentación por períodos. 
+Restricciones 
+Solo la Gerencia general tiene acceso a la administración de 
+reportes. La estructura de los reportes debe garantizar la claridad 
+y utilidad de la información. 
+Fuente: Elaboración propia 
+2.2. Tareas 
+Una tarea es una unidad de trabajo necesaria para completar una historia de usuario. 
+Para la correcta implementación de cada historia, el equipo debe realizar actividades 
+estructuradas en forma de tareas, asegurando un desarrollo iterativo y eficiente dentro 
+del marco Scrum. 
+Tabla 22. Tareas de cada historia de usuario y estimación 
+Código Historia de Usuario Tarea Estimación 
+H.U.1 Acceso al sistema 
+Diseño de interfaz de login 
+1 
+Implementación de 
+autenticación 
+Validación de credenciales 
+Gestión de perfiles y 
+permisos 
+H.U.2 Administración de usuarios 
+Creación de módulo de 
+gestión de usuarios 
+2 Implementación de 
+funciones de listado 
+Registro, edición y 
+eliminación de usuarios 
+H.U.3 Implementación de ETL de 
+tiempo 
+Extracción de datos 
+históricos de fechas 
+3 Transformación y limpieza 
+de datos temporales 
+Carga en la tabla 
+DIM_TIEMPO 
+H.U.4 Implementación de ETL de 
+producto 
+Extracción de datos de 
+productos 
+3 Transformación y 
+validación de categorías 
+Carga en la tabla 
+DIM_PRODUCTO 

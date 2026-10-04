@@ -1,0 +1,23 @@
+ 
+En la Figura 78 se muestra la lógica para recepcionar y mostrar visualmente los datos 
+provenientes del servidor para el g ráfico TCP por tipo de cliente del RF 12, 
+evidenciándose en el archivo dashboard.js. 
+Figura 78. JavaScript para el gráfico TCP por tipo de cliente del RF12 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 

@@ -1,0 +1,28 @@
+ 
+Tabla 57. Requerimientos del Sprint 3 
+Requerimientos 
+El sistema debe ejecutar un proceso de ETL que extraiga y cargue los registros 
+históricos de pedidos en la tabla FACT_PEDIDOS, integrando claves 
+dimensionales. 
+El sistema debe ejecutar un proceso de ETL que transforme y cargue las cantidades 
+consolidadas de inventario en la tabla FACT_INVENTARIO. 
+El sistema debe desarrollar un modelo de predicción de demanda que utilice 
+información histórica para estimar el comportamiento futuro de cada producto. 
+Fuente: Elaboración propia 
+• Entidades 
+En la Figura 55 se muestran las entidades del Sprint 3. Teniendo bien definido los 
+requerimientos podemos determinar aquellos objetos que están involucrados y sobre 
+los que se necesita almacenar información para el desarrollo de la solución. 
+Figura 55. Entidades del Sprint 3 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+• Diagrama Entidad/Relación 
+En la Figura 56 se muestra el diagrama conceptual de la base de datos del Sprint 3, 
+identificados las entidades se procede definir sus atributos que los conforman. 
+ 
+ 
+ 
+ 
+ 

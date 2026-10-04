@@ -1,0 +1,24 @@
+ 
+En la Figura 41 se muestra la lógica para la carga de datos de empleado  del RF06, 
+evidenciándose en  el archivo empleado_etl_controller .py. Con esto, los datos de 
+producto se insertarán en la tabla DIM_EMPLEADO del modelo dimensional. 
+Figura 41. Carga de datos del RF06 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+En la Figura 42 se muestra la carga de datos del RF06 en la tabla DIM_EMPLEADO 
+del modelo dimensional, definido por el Product Owner y desarrollado por el equipo 
+de trabajo. 
+Figura 42. Tabla de empleado poblada del RF06 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 

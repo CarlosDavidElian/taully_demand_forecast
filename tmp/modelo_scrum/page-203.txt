@@ -1,0 +1,24 @@
+ 
+En la Figura 66 se muestra la lógica para la carga de datos de inventario  del RF10, 
+evidenciándose en  el archivo inventario_etl_controller .py. Con esto, los datos de 
+inventario se insertarán en la tabla FACT_INVENTARIO del modelo dimensional. 
+Figura 66. Carga de datos del RF10 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+En la Figura 67 se muestra la carga de datos del RF10 en la tabla 
+FACT_INVENTARIO del modelo dimensional , definido por el Product  Owner y 
+desarrollado por el equipo de trabajo. 
+Figura 67. Tabla de inventario poblada del RF10 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 

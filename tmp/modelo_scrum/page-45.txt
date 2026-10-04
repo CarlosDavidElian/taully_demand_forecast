@@ -1,0 +1,33 @@
+35 
+ 
+predictivos y sistemas automatizados en su estudio permitió reducir significativamente 
+los tiempos de entrega y mejorar la satisfacción del cliente, reforzando la importancia 
+de incorporar tecnología para lograr una distribución más eficaz. 
+De igual forma, Calle et al. [13] analizaron casos empresariales de compañías líderes 
+como Walmart y Procter & Gamble, destacando que el uso de software inteligente en 
+la cadena de suministro permitió mejorar la productividad y la exactitud en los 
+procesos logísticos, lo que se tradujo en una mejora de la precisión en las previsiones 
+de ventas y una distribución más alineada con la demanda. Esto contribuyó 
+directamente al cumplimiento de los pedidos, al reducir los errores de entrega y 
+anticipar necesidades logísticas. 
+Por su parte, el trabajo de Pap et al. [7] propuso un modelo de sistema experto basado 
+en IA que facilitó la selección estratégica de productos y proveedores, fortaleciendo 
+así la logística de distribución al establecer relaciones sostenibles y confiables dentro 
+de la cadena de suministro. Esto favoreció la planificación y cumplimiento de 
+entregas, reflejando una mayor consistencia operativa en entornos de abastecimiento 
+global. 
+Además, el estudio de Yang et al. [8] demostró que el uso de redes neuronales 
+gráficas permitió prever el impacto de desastres naturales en la cadena de suministro, 
+ofreciendo información valiosa para planificar la distribución post -desastre y mitigar 
+retrasos o fallos en la entrega de productos. Si bien el contexto fue de recuperación, 
+su enfoque predictivo aportó evidencia sobre cómo las tecnologías inteligentes 
+mejoran la resiliencia y cumplimiento de entregas en contextos críticos. 
+A nivel conceptual, Rocha et al. [19] señalaron que una adecuada gestión de la 
+cadena de suministro debe contemplar todas las etapas, desde el aprovisionamiento 
+hasta la distribución física y logística inversa, destacando que una coordinación 
+eficiente de estas fases garantiza la entrega oportuna de bienes, en volúmenes y 
+tiempos precisos. Esto se alinea con los resultados obtenidos en la presente 
+investigación, donde se evidenció una mejora significativa en el indicador de 
+distribución. 
+Asimismo, según García [24], la tasa de cumplimiento de pedidos es un indicador 
+clave que refleja la capacidad del sistema logístico para responder a los pedidos del 

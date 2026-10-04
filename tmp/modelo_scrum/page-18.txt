@@ -1,0 +1,34 @@
+8 
+ 
+inductivos y deductivos. Para aplicar estas técnicas, se ejecutó una revisión 
+sistemática de la literatura y se seleccionaron investigaciones de caso de empresas 
+líderes como Walmart y Procter & Gamble. Los datos fueron analizados cuantitativa 
+y cualitativ amente, permitiendo identificar las asociaciones entre las variables de 
+estudio.  Los hallazgos revelaron que la implementación de la IA en empresas como 
+Walmart y Procter & Gamble conllevó una disminución considerable en los volúmenes 
+de inventario, logrando disminuirlos en un 20% y 30% respectivamente, además de 
+una mejora en la precisión de las previsiones de ventas en un 15% y 20%. 
+A su vez, Bellido et al. [14] en su investigación concretada en Lima, Perú; se mantuvo 
+una muestra de tipo no probabilístico por ser una investigación cualitativa. Como 
+instrumento del estudio se tuvo a las entrevistas detalladas a profesionales del campo, 
+la cantidad de estas entrevistas se basó en conseguir el grado de plenitud. En esta 
+investigación se llegó a la conclusión de que el diagrama de la cadena de suministro 
+de compuestos farmacológicos y equipos clínicos en los EESS destaca que se 
+necesita te ner sistemas informáticos que se comuniquen entre sí, suficiente 
+financiamiento disponible, personal capacitado, espacios de almacenamiento 
+adecuados con sistemas de gestión (WMS) y herramientas para rastrear los 
+productos, un sistema logístico eficaz, y r egulaciones transparentes y flexibles 
+orientadas a satisfacer al paciente. Todo esto estuvo coordinado e integrado bajo la 
+supervisión de CENARES como organismo técnico encargado (OTE). 
+La variable independiente del presente estudio fue “Business Intelligence con 
+Machine Learning”. Según Zhao y Zhang [15], estas tecnologías se complementaron 
+mutuamente, ya que los algoritmos de machine learning, o aprendizaje automático, 
+tuvieron varias aplicaciones en Business Intelligence, también conocido como 
+inteligencia de negocios. Entre estas aplicaciones se incluy ó el análisis mejorado de 
+datos, la búsqueda de patrones ocultos en los datos y la provisión de datos clave que 
+facilitan la toma de dec isiones informadas. El Business Intelligence empleó técnicas 
+de inteligencia artificial, como la percepción visual computacional y el análisis 
+lingüístico computacional, para extraer información de fuentes no estructuradas, que 
+incluyeron documentos de texto, imágenes y videos. Esto permitió a las e mpresas 
+obtener datos de una mayor diversidad de fuentes y formatos.  La inteligencia de 
+negocios que integró IA y aprendizaje automático presentó múltiples beneficios. En 

@@ -1,0 +1,26 @@
+ 
+5.3. Ventajas del Modelo Dimensional Implementado 
+• Claridad analítica: Los usuarios pueden consultar fácilmente métricas clave 
+sin conocer la estructura física de la base de datos. 
+• Rendimiento: La estructura en estrella favorece consultas rápidas para 
+dashboard y análisis en tiempo real. 
+• Escalabilidad: Se pueden incorporar más dimensiones (por ejemplo, canales 
+de venta, promociones) sin modificar el modelo base. 
+5.4. Resultado de esta etapa 
+Se ha implementado un modelo dimensional en estrella en MySQL con base en la 
+estructura de negocio de la empresa, enfocándose en los procesos clave de pedidos 
+e inventario. Este modelo constituye el fundamento del Data Warehouse y permite 
+alimentar visuali zaciones, reportes estratégicos y modelos predictivos aplicando 
+técnicas de Machine Learning. 
+Figura 4. Diseño lógico del modelo dimensional 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+ 

@@ -1,0 +1,26 @@
+ 
+VI. DISEÑO FÍSICO 
+El diseño físico del Data Warehouse se centró en la implementación eficiente y 
+estructurada del modelo dimensional previamente definido, utilizando el sistema de 
+gestión de bases de datos MySQL como motor principal. El objetivo fue garantizar un 
+almacenamiento optimizado, consultas de alto rendimiento y una sólida integridad 
+referencial. 
+6.1. Implementación del Modelo Dimensional en MySQL 
+El modelo dimensional en estrella fue implementado directamente en MySQL, 
+manteniendo una estructura clara entre tablas de hechos y tablas de dimensiones. 
+Las relaciones entre estas tablas fueron establecidas mediante claves foráneas, 
+asegurando la consistencia y coherencia de los datos. 
+Las tablas de hechos (FACT_PEDIDOS, FACT_INVENTARIO) almacenan las 
+métricas cuantitativas del negocio y se vinculan con las tablas de dimensiones 
+(DIM_TIEMPO, DIM_PRODUCTO, DIM_EMPLEADO, DIM_CLIENTE, 
+DIM_UBICACION) a través de claves primarias y foráneas. 
+Figura 5. Diseño físico del modelo dimensional 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+ 
+ 

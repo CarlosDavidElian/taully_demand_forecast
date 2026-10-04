@@ -1,0 +1,23 @@
+ 
+Figura 7. Diagrama Entidad/Relación del Sprint 1 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+• Diagrama Lógico 
+En la Figura 8 se muestra el diagrama lógico que representa la descripción de los 
+datos con el mayor detalle posible, la estructura y las relaciones de los datos 
+fundamentales del negocio que participan dentro del Sprint 1. 
+Figura 8. Diagrama Lógico del Sprint 1 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+ 

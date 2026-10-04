@@ -1,0 +1,82 @@
+ 
+registros 
+correspondi
+entes 
+correctame
+nte 
+Precisión (%) Erróneo Cálculo 
+incorrecto 
+El 
+porcentaje 
+debe ser PT 
+/ TP * 100, 
+con dos 
+decimales 
+X  
+Ejemplo: 
+223 / 710 = 
+31.41% 
+mostrado 
+correctame
+nte 
+Botón de 
+exportación Inactivo No genera 
+archivo 
+El botón 
+debe 
+descargar la 
+tabla 
+visualizada 
+en .xlsx 
+X  
+Archivo 
+Excel 
+generado 
+con 
+contenido 
+idéntico al 
+mostrado 
+Títulos de 
+columnas Ambiguo 
+Encabezado
+s mal 
+definidos 
+Los títulos 
+deben 
+reflejar PT, 
+TP y 
+Precisión 
+del 
+Inventario 
+(%) 
+X  
+Títulos 
+correctos y 
+legibles: 
+PT, TP, 
+Precisión 
+(%) 
+Post condiciones 
+La interfaz presenta correctamente la tabla de precisión del inventario por fecha, 
+con valores alineados a los cálculos esperados. El botón de exportación cumple su 
+función sin generar errores, y el diseño mantiene claridad visual y precisión 
+estructural. 
+Defectos Veredicto 
+No se encontraron Paso 
+Observaciones Probador 
+La prueba fue ejecutada sobre la interfaz de la 
+subsección “Precisión del Inventario” del RF14. Se 
+validaron los datos, cálculos, encabezados y exportación 
+correctamente, cumpliendo con los criterios establecidos 
+por el Product Owner. 
+• Marko Samuel 
+Chacon Ramos 
+• Erika Yanela Sancho 
+Diaz 
+Fuente: Elaboración propia 
+En la Tabla 77 se muestra la prueba de caja negra 1 4 aplicada al desarrollo de la 
+subsección “Tasa de Cumplimiento de Pedidos” del módulo de reportes estratégicos. 
+Esta prueba tiene como objetivo validar que el sistema muestre correctamente los 
+datos históricos de la TCP por fecha en formato tabular, manejando la coherencia del 
+cálculo visualizado, la correcta disposición de los elementos de la interfaz y la 
+funcionalidad de exportación en formato Excel. 

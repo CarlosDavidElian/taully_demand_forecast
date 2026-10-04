@@ -1,0 +1,29 @@
+21 
+ 
+participantes involucrados, se garantizó que estos reciban información clara sobre los 
+objetivos, procedimientos, beneficios y riesgos antes de otorgar su consentimiento. 
+Los documentos de autorización necesarios, tanto de las instituciones o empresas 
+colaboradoras como de los participantes, fueron incluidos en los anexos del informe 
+final. Sin embargo, en caso de que fuese necesario conservar la confidencialidad de 
+las entidades asociadas, estos archivos no estarán anunciados en el repositorio 
+institucional, protegiendo la información sensible. 
+Además, se priorizó el respeto por el aislamiento y resguardo de la información 
+personal, aplicando técnicas de anonimización cuando sea posible. Los datos fueron 
+gestionados de manera confidencial y segura, cumpliendo con las normativas éticas 
+y legales vigentes, y evitando su uso no autorizado. 
+Cabe destacar que este proyecto fue completamente nuevo y no tuvo precedentes en 
+la compañía donde se llevó a desarrollo. El uso de las tecnologías de Business 
+Intelligence y Machine Learning en la gestión de la cadena de suministro fue 
+implementado exclusivamente para esta investigación, honrando los derechos y la 
+confidencialidad de los individuos y organizaciones implicadas. En ningún momento 
+se comprometieron datos sensibles. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

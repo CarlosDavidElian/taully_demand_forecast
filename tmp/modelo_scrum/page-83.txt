@@ -1,0 +1,44 @@
+ 
+4.2. Herramientas seleccionadas 
+Tabla 4. Herramientas seleccionadas 
+Componente Herramienta Justificación 
+Origen de datos Microsoft Excel 
+(.xlsx) 
+Fuente actual utilizada por la 
+empresa. Accesible y de uso 
+extendido. 
+ETL (procesamiento) Python (Pandas, 
+openpyxl) 
+Versátil, eficiente para 
+procesamiento de datos y 
+automatizable. 
+Almacén de datos 
+(DWH) MySQL 
+Sistema robusto, gratuito, y con 
+buen rendimiento para estructuras 
+dimensionales. 
+Modelo dimensional Modelo estrella Facilita el análisis y visualización 
+multidimensional. 
+ML & Analítica Python (Scikit-
+learn) 
+Librerías ampliamente utilizadas 
+para aprendizaje automático y 
+predicción. 
+Backend Web Flask Framework ligero y flexible para 
+construir aplicaciones web. 
+Visualización Chart.js Permite crear dashboards 
+interactivos con gráficos atractivos. 
+Fuente: Elaboración propia 
+4.3. Implementación de cada componente 
+a) ETL 
+• Implementado con Python, utilizando las librerías: 
+1. pandas: para limpieza y transformación. 
+2. openpyxl: para lectura de archivos Excel. 
+3. SQLAlchemy, mysqlclient: para cargar los datos en MySQL. 
+• El proceso ETL se automatiza con scripts que pueden ejecutarse diariamente. 
+b) Modelo dimensional en MySQL 
+• Diseño en estrella con tablas de hechos (pedidos e inventario) y dimensiones 
+(tiempo, producto, empleado, cliente, ubicación). 
+• Uso de claves foráneas para garantizar la integridad referencial. 
+ 
+ 

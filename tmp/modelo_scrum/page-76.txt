@@ -1,0 +1,24 @@
+ 
+• Establecer los recursos tecnológicos y humanos necesarios para el desarrollo 
+del sistema. 
+• Definir el cronograma de trabajo, considerando iteraciones en la construcción 
+de los componentes de BI. 
+• Garantizar la escalabilidad del sistema para futuros crecimientos en volumen 
+de datos y nuevas áreas del negocio. 
+La planificación se realizó considerando una metodología incremental, permitiendo 
+generar entregables funcionales en cada iteración. Este enfoque favorece la 
+retroalimentación constante por parte de los usuarios y una mejora continua del 
+sistema, conforme a los principios del modelo propuesto por Kimball. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

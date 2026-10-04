@@ -1,0 +1,77 @@
+ 
+documentos 
+mal 
+estructurados 
+error en DNI o 
+RUC 
+CLIENTE 
++ TIPO 
+Ya 
+existen 
+Registro 
+duplicado 
+El sistema 
+debe ignorar 
+duplicados 
+previamente 
+registrados 
+X  
+Cliente ya 
+existe en 
+DIM_CLIENT
+E 
+CLIENTE Nuevo y 
+válido 
+Carga 
+válida 
+El sistema 
+debe insertar 
+correctamente 
+el cliente con 
+ID incremental 
+X  
+Cliente 
+insertado 
+correctamente 
+en 
+DIM_CLIENT
+E 
+Dirección / 
+Ciudad Faltantes Falta de 
+referencia 
+El sistema 
+debe dejar 
+campo de 
+dirección vacío 
+si no es 
+aplicable 
+X  
+Cliente 
+cargado con 
+dirección 
+vacía o 
+combinada 
+según el caso 
+Post condiciones 
+La tabla DIM_CLIENTE contiene registros consolidados, únicos y completos según 
+tipo de cliente y estructura dimensional. 
+Defectos Veredicto 
+No se encontraron Paso 
+Observaciones Probador 
+La prueba se ejecutó correctamente. El proceso ETL 
+aplicó transformaciones específicas por tipo de cliente, 
+limpió campos sensibles y cargó los datos nuevos de 
+manera íntegra. 
+• Marko Samuel Chacon 
+Ramos 
+• Erika Yanela Sancho 
+Diaz 
+Fuente: Elaboración propia 
+• Prueba de caja negra del RF08 
+En la Tabla 50 se muestra la prueba de caja negra 7 aplicada al proceso ETL para la 
+carga de ubicaciones. Esta prueba tiene como objetivo validar que el sistema lea, 
+transforme y cargue correctamente los registros de ubicaciones desde el archivo .xlsx 
+hacia la tabla DIM_ UBICACION, manejando errores de formato, campos faltantes o 
+duplicación de claves. 
+ 
+ 

@@ -1,0 +1,23 @@
+ 
+En la Figura 95 se muestra la lógica para recepcionar los datos provenientes del 
+servidor para la subsección “Precisión del Inventario” del RF14, evidenciándose en el 
+archivo precision_inventario.js. 
+Figura 95. JavaScript para la subsección Precisión del Inventario - RF14 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 

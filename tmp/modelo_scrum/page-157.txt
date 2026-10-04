@@ -1,0 +1,24 @@
+ 
+En la Figura 22 se muestra la lógica para la transformación de datos de tiempo  del 
+RF04, evidenciándose en el archivo tiempo_etl_controller.py. 
+Figura 22. Transformación de datos del RF04 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+En la Figura 23 se muestra la lógica para la carga de datos de tiempo  del RF04, 
+evidenciándose en el archivo tiempo_etl_controller.py. Con esto, los datos de tiempo 
+se insertarán en la tabla DIM_TIEMPO del modelo dimensional. 
+ 
+ 
+ 
+ 

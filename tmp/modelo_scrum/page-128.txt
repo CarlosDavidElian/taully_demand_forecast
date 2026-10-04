@@ -1,0 +1,55 @@
+ 
+Tabla 7. Resumen de Historias de Usuario 
+Código Nombre Fecha Área 
+Implicado Estimación 
+H.U.1 Acceso al sistema 01/04/2025 Gerencia 
+general 1 
+H.U.2 Administración de 
+usuarios 02/04/2025 Gerencia 
+general 2 
+H.U.3 Implementación de ETL 
+de tiempo 04/04/2025 Gerencia 
+general 3 
+H.U.4 Implementación de ETL 
+de producto 07/04/2025 Gerencia 
+general 3 
+H.U.5 Implementación de ETL 
+de empleado 10/04/2025 Gerencia 
+general 3 
+H.U.6 Implementación de ETL 
+de cliente 13/04/2025 Gerencia 
+general 3 
+H.U.7 Implementación de ETL 
+de ubicación 16/04/2025 Gerencia 
+general 3 
+H.U.8 Implementación de ETL 
+de pedidos 19/04/2025 Gerencia 
+general 3 
+H.U.9 Implementación de ETL 
+de inventario 22/04/2025 Gerencia 
+general 3 
+H.U.10 Desarrollo de predicción 
+de demanda 25/04/2025 Gerencia 
+general 4 
+H.U.11 Dashboard de inteligencia 
+de negocio 03/05/2025 Gerencia 
+general 4 
+H.U.12 Gráficos de las 
+predicciones IA 07/05/2025 Gerencia 
+general 4 
+H.U.13 Reportes 11/05/2025 Gerencia 
+general 21 
+Fuente: Elaboración propia 
+Historia de usuario Nº 1: 
+En la Tabla 8 se evidencia la Historia Nº 1, llamada Acceso al sistema, donde se 
+detallan los usuarios, la prioridad basada en la técnica MoSCoW, el tiempo estimado 
+en días, condiciones y restricciones. 
+Tabla 8. Historia de usuario Nº 1 
+Elemento Detalle 
+Nombre Acceso al sistema 
+Usuarios Todos los usuarios del sistema 
+Prioridad M (Must Have) - Basada en la técnica MoSCoW 
+Tiempo 
+estimado 1 día 
+Condiciones Se debe contar con una interfaz de acceso con los campos de 
+usuario y contraseña. Al iniciar sesión, el usuario debe visualizar 

@@ -1,0 +1,54 @@
+ 
+- - Registro 
+duplicado 
+Usuario o 
+contraseña 
+incorrecto 
+X  
+El sistema 
+omite duplicado 
+y continúa con 
+el proceso 
+- - 
+Carga 
+válida de 
+fechas 
+ X  
+Registros 
+cargados 
+correctamente 
+en 
+DIM_TIEMPO 
+- - Archivo sin 
+estructura  X  
+El proceso no 
+se ejecuta y 
+lanza 
+advertencia 
+Post condiciones 
+La tabla DIM_TIEMPO contiene registros únicos, correctos y referenciales por clave 
+ID_TIEMPO 
+Defectos Veredicto 
+No se encontraron Paso 
+Observaciones Probador 
+La prueba fue ejecutada exitosamente en un 
+entorno de desarrollo controlado. El proceso validó 
+el contenido del archivo, ejecutó las 
+transformaciones y cargó los registros en la tabla 
+destino sin errores. 
+• Marko Samuel Chacon 
+Ramos 
+• Erika Yanela Sancho Diaz 
+Fuente: Elaboración propia 
+Gráfico de Burndown del Sprint 1 
+En la Figura 25 se presenta el gráfico de Burndown correspondiente al Sprint 1. La 
+línea gris representa el esfuerzo ideal de desarrollo, que decrece de forma uniforme 
+desde el inicio hasta el cierre del sprint. En cambio, la línea roja refleja el esfuerzo 
+real acumulado por día. 
+Durante los primeros días del Sprint (SPR1 -02 al SPR1 -03), se observa un ligero 
+retraso respecto al ritmo ideal. Sin embargo, el equipo logró recuperar terreno durante 
+la implementación del RF04, finalizando con todos los requerimientos completos 
+antes de la presentación programada. La convergencia de ambas líneas al final del 
+gráfico indica que el sprint culminó exitosamente. 
+ 
+ 

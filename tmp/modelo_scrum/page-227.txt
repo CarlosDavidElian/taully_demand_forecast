@@ -1,0 +1,25 @@
+ 
+En la Figura 83 se muestra la interfaz gráfica de l Dashboard BI del RF12, definido 
+por el Product Owner y desarrollado por el equipo de trabajo . Se muestran el gráfico 
+de evolución diaria del PI , el gráfico de evolución diaria del TCP , el gráfico TCP por 
+tipo de cliente, el gráfico top productos más pedidos, la tabla top días PI y la tabla top 
+clientes. 
+Figura 83. Interfaz gráfica del RF12 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+• RF13: Gráficos predictivos: Desarrollar el componente gráfico que 
+muestre visualmente las estimaciones generadas por el modelo de IA. 
+En la Figura 84 se muestra la lógica para manejar la información proveniente de la 
+base de datos para las predicciones IA del RF 13, evidenciándose en  el archivo 
+prediccion_ia_controller.py. 
+ 
+ 
+ 
+ 

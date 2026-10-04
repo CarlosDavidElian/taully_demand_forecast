@@ -1,0 +1,24 @@
+ 
+En la Figura 69 se muestra la lógica para generar las predicciones del modelo de 
+demanda del RF 11, evidenciándose en  el archivo prediccion .py. Se encarga de 
+invocar el modelo entrenado, generar combinaciones de producto y fecha, estimar la 
+demanda diaria y almacenar los resultados en la tabla predicciones_ia del sistema 
+operacional. 
+Figura 69. Predicción de demanda del RF11 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 

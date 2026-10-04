@@ -1,0 +1,33 @@
+37 
+ 
+Por otro lado, Patriarca et al. [17] indicaron que la combinación de BI y ML representa 
+una evolución en la forma de gestionar información, ya que permite pronósticos más 
+certeros, reducción de la dimensionalidad y agrupamiento de datos complejos, todo 
+ello con el objetivo de tomar mejores decisiones. Además, señalaron que el desarrollo 
+de marcos de machine learning de autoservicio ha democratizado el acceso a estas 
+herramientas, facilitando su adopción en empresas con distintos niveles de madurez 
+tecnológica, como es el caso de INTERSEGUR. 
+A nivel de resultados operativos, los hallazgos de De la Cruz et al. [12] demostraron 
+que al integrar IA y blockchain en la cadena de suministro se logró una mejora 
+considerable en la eficiencia logística, con una reducción del 25% en recursos y un 
+30% de mejora en precisión, lo cual está alineado con el impacto observado en esta 
+investigación. Igualmente, Calle et al. [13] evidenciaron cómo empresas líderes como 
+Walmart y Procter & Gamble lograron disminuir el inventario y mejorar la exactitud de 
+previsiones de ventas al implementar soluciones inteligentes, resultados similares a 
+los alcanzados por INTERSEGUR con el sistema propuesto. 
+Desde una perspectiva funcional, Rocha et al. [19] y Ayala [20] describen que la 
+gestión de la cadena de suministro abarca desde el abastecimiento, producción, 
+almacenamiento y distribución, hasta la logística inversa. En este marco, la aplicación 
+de tecno logías como BI con ML permitió coordinar de manera más efectiva todos 
+estos eslabones, garantizando entregas oportunas, reducción de errores y 
+disponibilidad de productos en el momento y lugar requerido. 
+Finalmente, los beneficios de esta implementación se vieron reflejados en la mejora 
+simultánea de las dos dimensiones claves de la cadena de suministro: el 
+abastecimiento, evidenciado a través del incremento en la precisión del inventario, y 
+la distribución, reflejado en la mejora de la tasa de cumplimiento de pedidos. Por tanto, 
+se concluye que el sistema basado en Business Intelligence con Machine Learning 
+contribuyó a optimizar integralmente los procesos logísticos de la empresa 
+INTERSEGUR, fortaleciendo  la eficiencia operativa, reduciendo sobrestock y 
+potenciando su capacidad de respuesta ante las variaciones del entorno comercial. 
+ 
+ 

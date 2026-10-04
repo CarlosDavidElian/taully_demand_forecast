@@ -1,0 +1,31 @@
+ 
+Figura 27. Diagrama funcional del proceso ETL de Empleado 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+La Tabla 43 muestra los componentes técnicos definidos para el funcionamiento del 
+proceso ETL de Empleado correspondiente al requerimiento RF06. 
+Tabla 43. Componentes técnicos del RF06 – ETL de Empleado 
+Elemento Descripción 
+Fuente de datos Archivo Excel (.xlsx) con datos del personal 
+Herramienta 
+ETL 
+Script Python con manejo de formatos y consultas SQL para 
+la normalización de datos 
+Tabla destino DIM_EMPLEADO del modelo dimensional 
+Frecuencia Única vez (carga inicial) 
+Validaciones Longitud exacta del DNI (8 dígitos), validez del correo, 
+unicidad de ID_EMPLEADO 
+Uso posterior Relacionar pedidos con el personal responsable a través de 
+ID_EMPLEADO en FACT_PEDIDOS 
+Fuente: Elaboración propia 
+En la Figura 28 se muestra el diseño funcional del RF07 que aprobó el Product Owner 
+para el proceso ETL de Cliente , realizado en Diagrams.net, con los componentes 
+necesarios para su correcta ejecución. 
+Figura 28. Diagrama funcional del proceso ETL de Cliente 
+ 
+ 
+ 
+Fuente: Elaboración propia 

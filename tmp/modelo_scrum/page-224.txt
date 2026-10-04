@@ -1,0 +1,23 @@
+ 
+En la Figura 79 se muestra la lógica para recepcionar y mostrar visualmente los datos 
+provenientes del servidor para el g ráfico top productos más pedidos del RF 12, 
+evidenciándose en el archivo dashboard.js. 
+Figura 79. JavaScript para el gráfico top productos más pedidos del RF12 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 

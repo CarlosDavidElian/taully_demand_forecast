@@ -1,0 +1,22 @@
+ 
+Figura 34. Código para cargar las gráficas del Dashboard (dashboard_controller.py) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+ 
+ 
+ 
+ 
+ 
+ 

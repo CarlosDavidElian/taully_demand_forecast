@@ -1,0 +1,34 @@
+ 
+Figura 89. Prototipo para la subsección Precisión del Inventario - RF14 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+Fuente: Elaboración propia 
+La Tabla 72 muestra los componentes visuales definidos  para el funcionamiento de 
+la subsección Precisión del Inventario, correspondiente al requerimiento RF14 del 
+módulo de reportes estratégicos. 
+Tabla 72. Componentes visuales de la subsección Precisión del Inventario – RF14 
+Código Componente Interacción Especificación visual 
+<REP_PI_01> Tabla de precisión 
+diaria No 
+Muestra por fecha la 
+cantidad de productos en 
+tienda (PT), total general 
+(TP) y porcentaje 
+calculado 
+<BTN_PI_EX> Botón de exportación Sí 
+Descarga la misma tabla 
+en formato .xlsx, sin 
+transformar ni agregar 
+nuevas columnas 
+Fuente: Elaboración propia 
+En la Figura 90 se muestra el prototipo para la subsección “Tasa de Cumplimiento de 
+Pedidos” correspondiente al RF14, aprobado por el Product Owner. Esta vista forma 
+parte del módulo de reportes  del sistema y permite visualizar, mediante una tabla 
+estática, los indicadores diarios relacionados con la tasa de cumplimiento de pedidos. 
+Asimismo, se puede exportar la tabla en Excel mediante el botón “Exportar”. 

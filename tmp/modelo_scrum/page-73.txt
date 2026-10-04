@@ -1,0 +1,32 @@
+ 
+Anexo 7. Análisis complementario 
+Cálculo N° 1: Tamaño de la muestra 
+𝑛 =
+𝑍(1−𝛼
+2)
+2 𝜎2𝑁
+𝐸2(𝑁 − 1) + 𝑍(1−𝛼
+2)
+2 𝜎2 
+Fórmula del muestreo aleatorio simple (variable cuantitativa – población finita). 
+Donde: 
+• n = tamaño de la muestra (N° de pedidos) 
+• 𝑍(1−𝛼
+2) = para un nivel de confianza del 95%, Z es equivalente a 1.96 
+• σ = desviación estándar equivalente a 0.5 
+• N = tamaño de la población equivalente a 174 pedidos 
+• E = margen de error permitido del 5%, equivalente a 0.05 
+• α = nivel de significancia 
+𝑛 = 1.962 × 0.52 × 1500
+0.052 × (1500 − 1) + 1.962 × 0.52 
+𝑛 = 120 
+El cálculo del tamaño de la muestra dio como resultado un total de 120 pedidos 
+(redondeado al entero más cercano), distribuidos en un periodo de 20 días para los 
+indicadores de investigación. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

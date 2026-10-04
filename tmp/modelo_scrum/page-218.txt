@@ -1,0 +1,44 @@
+ 
+Tabla 65. Equivalencia y eventos del RF13 
+Código Condición Null Especificación 
+<COM_01> 
+Producto 
+seleccionable 
+vía lista 
+No 
+El usuario debe seleccionar un 
+producto desde el tag <select> del 
+sistema de predicción 
+Objeto ID Valor Evento Especificación 
+Select select_producto -- Todos los 
+productos -- onchange 
+Muestra o reinicia la 
+selección; activa el 
+botón de predicción 
+Button btn_ver Ver onclick 
+Ejecuta la predicción 
+del modelo y actualiza 
+dinámicamente el 
+gráfico de demanda 
+Gráfico chart_prediccion — render 
+Muestra los resultados 
+proyectados de 
+demanda por mes 
+según el producto 
+elegido 
+Fuente: Elaboración propia 
+• Requerimientos 
+En la Tabla 66 se muestran los requerimientos identificados previamente del Sprint 
+4, con las funcionalidades que debe poseer la herramienta para su correcta ejecución. 
+Tabla 66. Requerimientos del Sprint 4 
+Requerimientos 
+El sistema debe implementar un dashboard de inteligencia de negocio que visualice 
+métricas claves relacionadas con el comportamiento de pedidos, cumplimiento y  
+precisión del inventario. 
+El sistema debe generar gráficos predictivos que representen visualmente las 
+estimaciones de demanda futura por producto, utilizando los resultados del modelo 
+de IA desarrollado en el Sprint 3 – RF11. 
+Fuente: Elaboración propia 
+ 
+ 
+ 

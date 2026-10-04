@@ -1,0 +1,22 @@
+ 
+Figura 10. Extracción de datos de DIM_EMPLEADO 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+Figura 11. Extracción de datos de DIM_CLIENTE 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 

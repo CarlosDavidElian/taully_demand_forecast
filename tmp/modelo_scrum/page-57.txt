@@ -1,0 +1,58 @@
+ 
+Anexos 
+Anexo 1. Tabla de operacionalización de variables 
+Variables de 
+estudio Definición conceptual Definición operacional Dimensiones Indicadores Escala de 
+medición 
+Variable 
+independiente: 
+Business 
+Intelligence 
+con Machine 
+Learning 
+Business Intelligence con Machine 
+Learning es la integración de 
+técnicas avanzadas de aprendizaje 
+automático con herramientas de 
+inteligencia empresarial. El 
+aprendizaje automático (ML) permite 
+que las computadoras aprendan de 
+datos históricos y hagan 
+predicciones sin instrucciones 
+explícitas, mientras que la 
+inteligencia empresarial (BI) se 
+centra en recopilar y analizar 
+información relevante para mejorar 
+la toma de decisiones estratégicas. 
+La combinación de BI con ML crea 
+un sistema poderoso que optimiza 
+procesos, mejora el servicio al 
+cliente y detecta amenazas como los 
+delitos cibernéticos, brindando a las 
+empresas ventajas competitivas al 
+predecir tendencias con mayor 
+precisión y eficiencia (Tamang et al., 
+2021). 
+Business Intelligence con Machine 
+Learning se cuantificará mediante un 
+sistema basado en dichas tecnologías 
+que gestionará los activos que se 
+trabajen a lo largo de la cadena de 
+suministro en la empresa, esto 
+mediante paneles de control que 
+integren técnicas de aprendizaje 
+automático, permitiendo a los usuarios 
+empresariales acceder a información 
+relevante y tomar decisiones más 
+informadas. El sistema usará 
+información de los productos y ventas 
+en la empresa para lograr obtener 
+estadísticas exactas, ayudand o a 
+gestionar los activos provenientes de 
+los proveedores hasta el cliente final. 
+Además, los indicadores que 
+garantizarán la eficiencia del sistema 
+serán la precisión del inventario y el 
+cumplimiento de los pedidos (Carrillo y 
+Fasabi, 2021). 
+   

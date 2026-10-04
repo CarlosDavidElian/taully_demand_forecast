@@ -1,0 +1,35 @@
+23 
+ 
+Figura 1. Precisión de inventario antes y despues del sistema basado en Business 
+Intelligence con Machine Learning 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+Para el indicador de precisión del inventario, se obtuvo una media de 39.44% en el 
+pre-test, mientras que en el post -test se registró una media de 49.02%, lo cual 
+representa una mejora significativa en la exactitud del control de  inventario tras la 
+implementación del sistema web. Según los datos obtenidos, el valor mínimo durante 
+el pre-test fue de 31.41% y el máximo alcanzó 46.06%. En c omparación, en el post-
+test los valores estaban entre un mínimo de 40.16% y un máximo de 56.47%, 
+evidenciando una mejora generalizada en el control del inventario. 
+Indicador: Tasa de cumplimiento de pedidos 
+Tabla 2. Estadístico descriptivo antes y después del uso del sistema web – Tasa de 
+cumplimiento de pedidos 
+Estadísticos descriptivos 
+ N Mínimo Máximo Media Desv. Desviación 
+TASA DE 
+CUMPLIMIENTO DE 
+PEDIDOS - PRE TEST 
+20 66,67 100,00 79,8540 10,19589 
+TASA DE 
+CUMPLIMIENTO DE 
+PEDIDOS - POST TEST 
+20 71,90 100,00 85,8760 8,48276 
+N válido (por lista) 20     
+Fuente: Elaboración propia 
+ 

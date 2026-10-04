@@ -1,0 +1,18 @@
+x 
+ 
+Abstract 
+This research aligned with the ninth Sustainable Development Goal (SDG), which 
+promotes industry, innovation, and infrastructure. The purpose of the study was to 
+determine how a system based on Business Intelligence and Machine Learning 
+influences supply c hain management in the company INTERSEGUR. This was an 
+applied research study with a quantitative approach and a pre -experimental design. 
+The sample consisted of 120 orders, obtained through the simple random sampling 
+formula. For data collection, a registration form was used as the instrument. The main 
+findings showed that the solution based on Business Intelligence and Machine 
+Learning improved inventory accuracy in INTERSEGUR, increasing from 39.44% in 
+the pre-test to 49.02% in the post-test. Furthermore, the order fulfillment rate improved 
+from 79.85% in the pre -test to 85.88% in the post -test. Therefore, it was concluded 
+that the implemented solution had a significant and positive impact on improving 
+supply chain management at INTERSEGUR. 
+Keywords: Data analysis, Artificial intelligence, Information management, Supply and 
+demand.

@@ -1,0 +1,23 @@
+ 
+Figura 18. Interfaz gráfica del RF03 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+En la Figura 19 se muestra la interfaz gráfica de usuario del RF0 3, definido por el 
+Product Owner y desarrollado por el equipo de trabajo . S e muestran los campos 
+necesarios para agregar un nuevo usuario, el botón de guardar y el botón de cerrar. 
+Figura 19. Interfaz gráfica para agregar usuario en el RF03 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+ 
+ 
+ 

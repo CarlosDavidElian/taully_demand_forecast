@@ -1,0 +1,22 @@
+ 
+Figura 30. Registros cargados de la tabla FACT_PEDIDOS 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+Figura 31. Registros cargados de la tabla FACT_INVENTARIO 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 

@@ -1,0 +1,23 @@
+ 
+Implementación 
+• RF12: Interfaz de dashboard BI: Implementar la interfaz visual que 
+muestre gráficamente información de los indicadores claves. 
+En la Figura 74 y Figura 75  se muestra la lógica para manejar la información 
+proveniente del modelo dimensional para el Dashboard BI del RF12, evidenciándose 
+en el archivo dashboard_controller.py. 
+Figura 74. Lógica del Dashboard BI del RF12 – 1° parte 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 

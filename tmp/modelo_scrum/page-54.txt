@@ -1,0 +1,30 @@
+44 
+ 
+[29] M. Tamang et al., “Mejorando la inteligencia empresarial mediante algoritmos de 
+aprendizaje automático”, en 2021 5th International Conference on Intelligent 
+Computing and Control Systems (ICICCS),  Reino Unido, 2021. [En línea]. 
+Consultado: 12 oct. 2024. Disponible: 
+https://ieeexplore.ieee.org/abstract/document/9445344 
+[30] B. Carrillo y J. Fasabi, “Implementación de Business Intelligence para 
+incrementar la efectividad en la cadena de suministro en una empresa del rubro 
+logístico”, Tesis de licenciatura, Univ. Ricardo Palma, Lima, Perú, 2021. [En 
+línea]. Disponible: https://repositorio.urp.edu.pe/handle/20.500.14138/4869 
+[31] C. Coronel, “Las variables y su operacionalización”, Arch. Méd. Camagüey, vol. 
+27, feb. 2023. [En línea]. Consultado: 11 oct. 2024. Disponible: 
+https://revistaamc.sld.cu/index.php/amc/article/view/8775/4510 
+[32] C. Martin, Logistics and supply chain management , 6th ed., 2023. [En línea]. 
+Disponible: 
+https://elib.vku.udn.vn/bitstream/123456789/4159/1/2023.%20Logistics%20and
+%20Supply%20Chain%20Management%20%286th%20Edition%29.pdf 
+[33] J. D. Wisner et al., Principles of supply chain management: A balanced 
+approach. South -Western, Cengage Learning, 2021. [En línea]. Disponible: 
+http://dspace.vnbrims.org:13000/jspui/bitstream/123456789/4491/1/Supply%20
+Chain%20Management.pdf 
+[34] T. Otzen y C. Manterola. [En línea]. Univ. de Tarapacá, Chile, 2022. Consultado: 
+19 oct. 2024. Disponible: http://www.intjmorphol.com/es/resumen/?art_id=4049 
+[35] G. Díaz, “Metodología del estudio piloto”, Rev. Chil. Radiol., vol. 26, no. 3, sept. 
+2020. [En línea]. Consultado: 18 oct. 2024. Disponible: 
+https://www.scielo.cl/scielo.php?pid=S0717-
+93082020000300100&script=sci_arttext 
+[36] B. Almaguer y E. Cossio, “Métodos de Muestreo para la Optimización de Diseño 
+de Experimentos”, Acad. Journals, vol. 14, no. 9, nov. 2022. [En línea]. 

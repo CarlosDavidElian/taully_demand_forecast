@@ -1,0 +1,31 @@
+ 
+II. DEFINICIÓN DE REQUERIMIENTOS DEL NEGOCIO 
+2.1. Objetivo del negocio 
+El objetivo principal del proyecto es mejorar la gestión de la cadena de suministro de 
+una empresa del rubro comercial mediante la implementación de un sistema de 
+Business Intelligence (BI) complementado con Machine Learning, que permita 
+optimizar la toma de decisiones en tiempo real y anticiparse a problemas logísticos 
+como desabastecimientos, exceso de inventario o retrasos en la distribución. 
+2.2. Necesidades identificadas 
+Tras el levantamiento de información con el equipo de la empresa, se identificaron los 
+siguientes requerimientos clave: 
+• Visualizar en tiempo real el nivel de stock por producto y ubicación. 
+• Detectar productos con altos niveles de rotación y productos de baja rotación. 
+• Anticipar rupturas de stock mediante modelos predictivos de demanda. 
+• Monitorear los tiempos de entrega de proveedores y generar alertas en caso 
+de desviaciones. 
+• Consolidar datos de múltiples archivos Excel dispersos en una fuente única y 
+confiable. 
+• Generar reportes automáticos para la gerencia logística, con indicadores clave 
+como: la Precisión del Inventario y la Tasa de Cumplimiento de Pedidos. 
+2.3. Usuarios del sistema 
+El sistema de BI está dirigido a distintos perfiles dentro de la empresa: 
+Tabla 1. Usuarios del sistema 
+Perfil Necesidades principales 
+Vendedor Visualizar reportes estratégicos de la 
+Tasa de Cumplimiento de Pedidos 
+Estibador Controlar rotación, niveles de stock y la 
+Precisión del Inventario 
+Gerente general Tomar decisiones estratégicas sobre 
+compras e inversiones en stock 
+Fuente: Elaboración propia 

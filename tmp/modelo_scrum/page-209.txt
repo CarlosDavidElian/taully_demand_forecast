@@ -1,0 +1,85 @@
+ 
+• Confirmar que los registros válidos sean insertados correctamente 
+Datos de entrada Respuesta 
+esperada 
+Coincide Respuesta 
+del Sistema Campo Valor Escenario Sí No 
+ID_UBICACI
+ON 
+No 
+existente 
+Clave 
+inválida 
+El sistema 
+debe 
+rechazar 
+registros 
+con 
+ubicación 
+no 
+registrada 
+X  
+Registro 
+omitido por 
+error de 
+referencia 
+STOCK_TOT
+AL Texto Formato 
+incorrecto 
+El sistema 
+debe 
+rechazar 
+valores no 
+numéricos 
+X  
+Registro 
+omitido por 
+error de tipo 
+de dato 
+Clave 
+compuesta Repetida Registro 
+duplicado 
+El sistema 
+debe evitar 
+registros 
+duplicados 
+X  
+Registro 
+ignorado, ya 
+existe en 
+FACT_INVEN
+TARIO 
+REGISTRO 
+COMPLETO Válido Carga 
+válida 
+El sistema 
+debe 
+insertar el 
+inventario 
+correctamen
+te 
+X  
+Registro 
+insertado 
+correctamente 
+en 
+FACT_INVEN
+TARIO 
+Post condiciones 
+La tabla FACT_INVENTARIO contiene registros válidos, completos y únicos, 
+enlazados correctamente con sus claves dimensionales. 
+Defectos Veredicto 
+No se encontraron Paso 
+Observaciones Probador 
+La prueba fue realizada en ambiente de desarrollo. Se 
+validaron las claves referenciales, tipos de datos y 
+restricciones de unicidad. La carga se completó 
+exitosamente con datos válidos. 
+• Marko Samuel Chacon 
+Ramos 
+• Erika Yanela Sancho 
+Diaz 
+Fuente: Elaboración propia 
+• Prueba de caja negra del RF11 
+En la Tabla 60 se muestra la prueba de caja negra 10 aplicada al proceso lógico de 
+predicción desarrollado en el requerimiento RF11. Esta prueba tiene como objetivo 

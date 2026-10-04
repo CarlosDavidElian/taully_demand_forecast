@@ -1,0 +1,29 @@
+ 
+• Permitir la gestión de usuarios, autenticación segura y personalización de 
+vistas por roles. 
+• Mejorar la toma de decisiones en la empresa a través de un sistema 
+centralizado, visual, ágil y predictivo. 
+Valores 
+Para asegurar el éxito del desarrollo bajo la metodología Scrum, se promovieron los 
+siguientes valores en todo momento: 
+• Compromiso: Cada miembro del equipo asumió responsabilidades claras en 
+cada sprint para cumplir con los entregables planificados. 
+• Coraje: El equipo enfrentó con decisión los retos técnicos, especialmente al 
+implementar el modelo de predicción y el proceso de limpieza de datos. 
+• Respeto: Se fomentó el respeto a las ideas de cada integrante, permitiendo 
+un trabajo colaborativo y participativo. 
+• Foco: Durante cada sprint, se mantuvo el enfoque en funcionalidades 
+específicas como el módulo de predicción o los dashboards de KPIs. 
+• Apertura: Se compartió de manera constante el estado de avance, errores 
+encontrados y mejoras necesarias con todos los involucrados. 
+1.2. Roles 
+Durante el desarrollo del presente proyecto de tesis, se optó por utilizar la metodología 
+ágil Scrum, adaptada a un equipo reducido conformado únicamente por los dos 
+tesistas. En este contexto, ambos asumieron de forma simultánea y colaborativa los 
+tres ro les fundamentales de Scrum: Product Owner, Scrum Master y Equipo de 
+Desarrollo, ajustando las responsabilidades según las necesidades del proyecto. 
+Product Owner 
+El rol de Product Owner lo desempeñó el Sr. Cesar Augusto Chacon Palacin, gerente 
+general de la empresa, encargándose de establecer las prioridades del backlog del 
+producto, definir los requerimientos clave del negocio en coordinación con los 
+responsables de la actividad logística en la empresa, validar los entregables de cada 

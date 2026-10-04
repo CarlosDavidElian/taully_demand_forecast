@@ -1,0 +1,26 @@
+ 
+En la Figura 70 se muestra la carga de datos del RF11 en la tabla PREDICCIONES_IA 
+del sistema operacional, definido por el Product Owner y desarrollado por el equipo 
+de trabajo. 
+Figura 70. Tabla de predicciones poblada del RF11 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+Pruebas 
+• Prueba de caja negra del RF09 
+En la Tabla 58 se muestra la prueba de caja negra 8 aplicada al proceso ETL para la 
+carga de pedidos. Esta prueba tiene como objetivo validar que el sistema lea, 
+transforme y cargue correctamente los registros de pedidos desde el archivo .xlsx 
+hacia la tabla FACT_PEDIDOS, manejando errores de formato, campos faltantes o 
+duplicación de claves. 
+Tabla 58. Prueba de caja negra 8 
+PRUEBA DE CAJA NEGRA 8 
+Código PCN-08 Fecha 28/04/2025 
+Tarea Ejecutar proceso ETL 
+de pedidos Módulo Carga de hechos 

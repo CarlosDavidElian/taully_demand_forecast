@@ -1,0 +1,34 @@
+ 
+Figura 90. Prototipo para la subsección Tasa de Cumplimiento de Pedidos - RF14 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+Fuente: Elaboración propia 
+La Tabla 73 muestra los componentes visuales definidos  para el funcionamiento de 
+la subsección Tasa de Cumplimiento de Pedidos , correspondiente al requerimiento 
+RF14 del módulo de reportes estratégicos. 
+Tabla 73. Componentes visuales de la subsección Tasa de Cumplimiento de 
+Pedidos – RF14 
+Código Componente Interacción Especificación visual 
+<REP_TCP_01> Tabla de tasa de 
+cumplimiento diaria No 
+Muestra por fecha la 
+cantidad de pedidos 
+completados (PEC), total 
+de pedidos (PR) y el 
+porcentaje TCP 
+calculado 
+<BTN_TCP_EX> Botón de exportación Sí 
+Descarga la tabla 
+visualizada en un archivo 
+.xlsx, sin agregar lógica 
+o filtros adicionales 
+Fuente: Elaboración propia 
+En la Figura 91 se muestra el prototipo para la subsección “Predicciones” 
+correspondiente al RF14, aprobado por el Product Owner. Esta interfaz presenta una 
+tabla estática con estimaciones generadas por el modelo de predicción para una fecha 

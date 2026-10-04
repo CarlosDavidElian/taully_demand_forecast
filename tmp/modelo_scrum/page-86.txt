@@ -1,0 +1,37 @@
+ 
+5.2. Modelo estrella 
+Se han definido dos tablas de hechos: FACT_PEDIDOS y FACT_INVENTARIO, y 
+cinco dimensiones: DIM_TIEMPO, DIM_PRODUCTO, DIM_EMPLEADO, 
+DIM_CLIENTE y DIM_UBICACION. 
+Tabla de Hechos: FACT_PEDIDOS 
+Tabla 5. Tabla de Hechos FACT_PEDIDOS 
+Campo Descripción 
+ID_HECHO Identificador del hecho 
+ID_TIEMPO FK a DIM_TIEMPO 
+ID_PRODUCTO FK a DIM_PRODUCTO 
+ID_EMPLEADO FK a DIM_EMPLEADO 
+ID_CLIENTE FK a DIM_CLIENTE 
+ID_PEDIDO Código único del pedido 
+CANTIDAD Unidades pedidas 
+PRECIO_UNITARIO Precio del producto en el pedido 
+SUBTOTAL Total por ítem (cantidad × precio) 
+ESTADO Estado del pedido (completo, incompleto) 
+Fuente: Elaboración propia 
+Tabla de Hechos: FACT_INVENTARIO 
+Tabla 6. Tabla de Hechos FACT_INVENTARIO 
+Campo Descripción 
+ID_HECHO Identificador del hecho 
+ID_TIEMPO FK a DIM_TIEMPO 
+ID_UBICACION FK a DIM_UBICACION 
+STOCK_TOTAL Cantidad disponible en inventario 
+Fuente: Elaboración propia 
+Tabla de Dimensión: DIM_TIEMPO 
+Tabla 7. Tabla de Dimensión DIM_TIEMPO 
+Campo Descripción 
+ID_TIEMPO Clave primaria 
+FECHA Fecha completa 
+ANIO Año 
+MES Mes (1-12) 
+DIA Día del mes 
+Fuente: Elaboración propia 
+ 

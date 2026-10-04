@@ -1,0 +1,23 @@
+ 
+• Diagrama Físico 
+En la Figura 9 se muestra el diagrama físico que representa como se construirá el 
+modelo en la base de datos, en donde está incluido el nombre de la tabla, el tipo de 
+datos, llaves y relaciones entre tablas del Sprint 1. 
+Figura 9. Diagrama Físico del Sprint 1 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+Implementación 
+• Diagrama de la Base de Datos 
+En la Figura 10 se muestra el diagrama de la base de datos realizados en MySQL, el 
+cual contiene las tablas necesarias para el funcionamiento del Sprint 1. 
+Figura 10. Diagrama de base de datos del Sprint 1 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+ 

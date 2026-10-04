@@ -1,0 +1,28 @@
+25 
+ 
+Sig. < 0.05: Se rechaza la normalidad (distribución no normal). 
+Sig. ≥ 0.05: No se rechaza la normalidad (distribución normal). 
+Sig. : Nivel crítico. 
+A continuación, se detallan los resultados que se obtuvieron  en cada una de las 
+pruebas aplicadas en la Tabla 3 y Tabla 4. 
+Indicador: Precisión de Inventario 
+Tabla 3. Prueba de normalidad – Precisión de Inventario 
+Pruebas de normalidad 
+ 
+Kolmogorov-Smirnov 
+Estadístico Gl Sig. 
+PRECISION DE INVENTARIO - PRE TEST ,157 20 ,200 
+PRECISION DE INVENTARIO - POST TEST ,160 20 ,194 
+Fuente: Elaboración propia 
+Tal como se aprecia en la tabla correspondiente, los resultados obtenidos a través de 
+la prueba de normalidad de Kolmogorov-Smirnov, realizada en el software estadístico 
+SPSS, reflejan que el nivel de significancia para el indicador precisión del inventari o 
+fue de 0.200 en el pre-test y de 0.194 en el post-test. En ambos casos, estos valores 
+superan el umbral de 0.05, lo que confirma que los datos presentan una distribución 
+normal en las dos etapas de evaluación. Los resultados respectivos pueden 
+visualizarse en la Figura 3 y Figura 4. 
+ 
+ 
+ 
+ 
+ 

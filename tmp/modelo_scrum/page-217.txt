@@ -1,0 +1,36 @@
+ 
+<COM_04> Gráfico de productos 
+más pedidos No 
+Barras que representan el 
+volumen de pedidos por 
+producto 
+<COM_05> Tabla de clientes con 
+mayor TCP No 
+Ranking por cantidad de 
+pedidos y tasa de 
+cumplimiento 
+<COM_06> Tabla de días con 
+mayor precisión PI No 
+Muestra fechas específicas 
+con valores altos de 
+precisión y productos en 
+tienda 
+Fuente: Elaboración propia 
+En la Figura 73 se muestra el prototipo del RF13 que aprobó el Product Owner para 
+los gráficos de las predicciones IA, realizado con HTML, CSS y JavaScript. Esta 
+interfaz permite al usuario seleccionar un producto desde una lista desplegable y 
+visualizar las predicciones generadas por el modelo de IA en un gráfico de barras 
+actualizado automáticamente. 
+Figura 73. Prototipo para el requerimiento RF13 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+La Tabla 65 muestra las equivalencias de condiciones y los eventos definidos para el 
+funcionamiento de los gráficos de las predicciones IA  correspondientes al 
+requerimiento RF13. 

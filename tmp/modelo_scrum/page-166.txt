@@ -1,0 +1,41 @@
+ 
+3.2. Sprint 2 
+El Sprint 2 fue desarrollado y documentado en cada una de sus 4 fases: Análisis, 
+Diseño, Implementación y Pruebas. 
+Análisis 
+En la Tabla 40 se presentan los requerimientos que conforman el Sprint 2. 
+Tabla 40. Sprint 2 
+Código HU Requerimiento 
+H.U.4 RF05: ETL para datos de productos: Implementar la extracción, 
+transformación y carga de productos. 
+H.U.5 RF06: ETL para datos de empleados: Implementar la extracción, 
+transformación y carga de empleados. 
+H.U.6 RF07: ETL para datos de clientes: Implementar la extracción, 
+transformación y carga de clientes. 
+H.U.7 RF08: ETL para datos de ubicación: Implementar la extracción, 
+transformación y carga de ubicación. 
+Fuente: Elaboración propia 
+• Funcionalidades del Sprint 2 
+En la Tabla 41 se describen las funcionalidades que tendrá el sistema, mostrando la 
+interacción entre el usuario y la arquitectura de software para cada uno de los 
+requerimientos listados en el Sprint 2. 
+Tabla 41. Funcionalidades del Sprint 2 
+Código RF Funcionalidad 
+RF05 
+Se implementa el proceso de ETL que extrae información de 
+productos desde archivos estructurados, realiza transformaciones y 
+la carga en la tabla DIM_PRODUCTO. 
+RF06 
+Se desarrolla el ETL que procesa los datos de empleados, validando 
+su estructura y formato, para integrarlos a la tabla DIM_EMPLEADO 
+del modelo dimensional. 
+RF07 
+Se crea el proceso de ETL que transforma y carga los registros de 
+clientes en la tabla DIM_CLIENTE, garantizando unicidad de campos 
+clave y consistencia. 
+RF08 
+Se diseña el ETL de ubicación, el cual permite cargar los datos 
+geográficos o logísticos a la tabla DIM_UBICACION para su uso 
+posterior en análisis de inventario. 
+Fuente: Elaboración propia 
+ 

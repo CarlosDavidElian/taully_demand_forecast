@@ -1,0 +1,23 @@
+ 
+Figura 13. Controlador del RF02 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+En la Figura 14 se muestra la interfaz gráfica de usuario del RF0 2, definido por el 
+Product Owner y desarrollado por el equipo de trabajo . Se muestra los campos de 
+usuario, contraseña y el botón de iniciar sesión. 

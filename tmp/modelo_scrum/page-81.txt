@@ -1,0 +1,31 @@
+ 
+• ETL (Extracción, Transformación y Carga): Realizado con scripts en Python, 
+donde se automatiza la lectura, validación y carga de los datos hacia la base 
+de datos dimensional en MySQL. 
+• Almacén de datos (Data Warehouse):  Implementado en MySQL, con un 
+modelo dimensional en estrella que facilita el análisis multidimensional. 
+• Motor analítico y Machine Learning:  Scripts Python con librerías como 
+Pandas y Scikit-learn para modelado predictivo (predicción de demanda). 
+• Visualización de datos:  Desarrollo de un dashboard interactivo mediante 
+Flask como framework backend y Chart.js para la visualización web de los 
+datos. 
+3.2. Diagrama de la arquitectura técnica 
+Figura 2. Diagrama de la arquitectura técnica 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+3.3. Herramientas y tecnologías utilizadas 
+Tabla 3. Herramientas y tecnologías utilizadas 
+Componente Tecnología 
+Fuente de datos Archivos Excel (.xlsx) 
+Procesamiento ETL Python (Pandas, openpyxl) 
+Almacén de datos MySQL 
+Modelado Dimensional Esquema Estrella 
+Machine Learning Scikit-learn 
+Visualización Flask (backend), Chart.js 
+Infraestructura local PC interno de la empresa 
+Fuente: Elaboración propia 

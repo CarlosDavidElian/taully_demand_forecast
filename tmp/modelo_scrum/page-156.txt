@@ -1,0 +1,24 @@
+ 
+En la Figura 20 se muestra la interfaz gráfica de usuario del RF0 3, definido por el 
+Product Owner y desarrollado por el equipo de trabajo . S e muestran los campos 
+necesarios para editar un usuario, el botón de guardar y el botón de cerrar. 
+Figura 20. Interfaz gráfica para editar usuario en el RF03 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+RF04: Implementación de ETL de tiempo: Implementar la extracción, 
+transformación y carga de datos de tiempo. 
+En la Figura 21 se muestra la lógica para la extracción de datos de tiempo del RF04, 
+evidenciándose en el archivo tiempo_etl_controller.py, el cual se encarga de obtener 
+los datos de la fuente de origen (.xlsx). 
+Figura 21. Extracción de datos del RF04 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 

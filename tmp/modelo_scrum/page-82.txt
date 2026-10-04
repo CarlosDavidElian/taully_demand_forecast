@@ -1,0 +1,30 @@
+ 
+3.4. Consideraciones técnicas 
+• Escalabilidad: Se puede migrar a una base de datos más robusta (como 
+PostgreSQL o un motor cloud como BigQuery) en caso de crecimiento. 
+• Seguridad: El acceso a dashboards se gestiona mediante autenticación en 
+Flask. 
+• Automatización: El proceso ETL puede ejecutarse mediante tareas 
+programadas (cron jobs o schedule en Python). 
+• Modularidad: Cada componente es independiente, facilitando la actualización 
+o mejora sin afectar el sistema completo. 
+3.5. Resultado de esta etapa 
+El diseño técnico establece una base sólida para el desarrollo y despliegue del 
+sistema de BI. Esta arquitectura permite integrar los datos históricos, analizarlos de 
+manera eficiente y ofrecer dashboards que apoyan la toma de decisiones estratégicas 
+y operativas. 
+IV. SELECCIÓN DE PRODUCTOS E IMPLEMENTACIÓN 
+En esta etapa se definen las herramientas y tecnologías específicas que serán 
+utilizadas para implementar cada componente de la arquitectura técnica. La selección 
+se realizó considerando criterios como: compatibilidad, facilidad de uso, soporte 
+comunitario, costo (preferentemente open-source) y adecuación a los requerimientos 
+del negocio. 
+4.1. Criterios de selección 
+Para seleccionar los productos y tecnologías se consideraron los siguientes factores: 
+• Costo: Preferencia por herramientas gratuitas o de código abierto. 
+• Compatibilidad: Capacidad de integrarse con otros componentes del sistema. 
+• Escalabilidad: Potencial de adaptación al crecimiento de datos. 
+• Facilidad de implementación:  Curva de aprendizaje razonable y buena 
+documentación. 
+• Soporte comunitario: Existencia de una comunidad activa y recursos 
+disponibles. 

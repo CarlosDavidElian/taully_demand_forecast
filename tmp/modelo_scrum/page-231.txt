@@ -1,0 +1,34 @@
+ 
+Figura 87. Interfaz gráfica del RF13 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+Pruebas 
+• Prueba de caja negra del RF12 
+En la Tabla 67 se muestra la prueba de caja negra 11 aplicada al desarrollo del 
+dashboard BI. Esta prueba tiene como objetivo validar que el sistema lea  y muestre 
+los indicadores clave del BI en graficos, manejando la renderización de los gráficos y 
+la coherencia de la información proyectada. 
+Tabla 67. Prueba de caja negra 11 
+PRUEBA DE CAJA NEGRA 11 
+Código PCN-11 Fecha 16/05/2025 
+Tarea Verificar visualización del 
+dashboard BI Módulo Dashboard de 
+inteligencia de negocio 
+Descripción 
+Se ejecutarán pruebas para validar que el sistema presente 
+correctamente los elementos del dashboard  correspondiente al 
+requerimiento RF12. Esta interfaz debe mostrar métricas generales 
+como el total de pedidos completados, tasa de cumplimiento (TCP), 
+precisión de inventario (PI), y comparaciones por tipo de cliente, 
+producto y fecha. La validación se enfocará en los datos agregados 
+históricos obtenidos desde las tablas FACT_PEDIDOS y 
+FACT_INVENTARIO. 
+Precondiciones 
+• Datos históricos disponibles en la base de datos dimensional 
+• Cálculos agregados ejecutados previamente (PI, TCP, totales) 
+• Elementos visuales disponibles (gráficos, tablas, métricas) 

@@ -1,0 +1,25 @@
+ 
+Figura 39. Gráficas de las predicciones IA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+IX. IMPLEMENTACIÓN, MANTENIMIENTO Y CRECIMIENTO 
+La fase final del proyecto de Business Intelligence bajo la metodología de Ralph 
+Kimball considera no solo la implementación del sistema desarrollado, sino también 
+su mantenimiento continuo y su escalabilidad futura. Esta etapa es esencial para 
+asegurar que el Data Warehouse y las aplicaciones de BI sigan siendo útiles, vigentes 
+y adaptables a los cambios del negocio. 
+9.1. Implementación 
+La implementación se realizó de manera planificada, considerando los siguientes 
+aspectos: 
+• Migración del modelo dimensional a un entorno de producción en MySQL, 
+asegurando la integridad referencial y el rendimiento mediante el uso de 
+índices. 
+• Despliegue de la aplicación web (Flask + Chart.js) en un servidor interno de la 
+empresa, accesible para el equipo de gestión. 

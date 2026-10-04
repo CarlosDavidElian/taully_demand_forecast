@@ -1,0 +1,65 @@
+ 
+Sprint 3 
+H.U.8 
+Implementación 
+de ETL de 
+pedidos 
+RF09 ETL para datos 
+de pedidos 3 
+H.U.9 
+Implementación 
+de ETL de 
+inventario 
+RF10 ETL para datos 
+de inventario 3 
+H.U.10 
+Desarrollo de 
+predicción de 
+demanda 
+RF11 
+Modelo de 
+predicción de 
+demanda 
+4 
+Sprint 4 
+H.U.11 
+Dashboard de 
+inteligencia de 
+negocio 
+RF12 Desarrollo del 
+dashboard BI 4 
+H.U.12 Gráficos de las 
+predicciones IA RF13 
+Creación de 
+gráficos 
+predictivos de 
+IA 
+4 
+Sprint 5 H.U.13 Reportes RF14 
+Generación de 
+reportes 
+estratégicos 
+21 
+Fuente: Elaboración propia 
+2.4. Cronograma del Sprint 
+El cronograma de cada Sprint detalla la planificación de las tareas asignadas, junto 
+con sus fechas de inicio y fin, asegurando una ejecución estructurada dentro del 
+marco Scrum. 
+Tabla 25. Cronograma del Sprint 1 
+Código Tarea Inicio Fin Duración 
+SPR1-01 Reunión de planificación del 
+Sprint 1 01/04/2025 01/04/2025 1 día 
+SPR1-02 Implementación del sistema 
+de autenticación 02/04/2025 02/04/2025 1 día 
+SPR1-03 Desarrollo del módulo de 
+gestión de usuarios 03/04/2025 04/04/2025 2 días 
+SPR1-04 Implementación de ETL de 
+tiempo 05/04/2025 07/04/2025 3 días 
+SPR1-05 Presentación del Sprint 1 08/04/2025 08/04/2025 1 día 
+SPR1-06 Reunión de retrospectiva 
+del Sprint 1 09/04/2025 09/04/2025 1 día 
+Fuente: Elaboración propia 
+Tabla 26. Cronograma del Sprint 2 
+Código Tarea Inicio Fin Duración 
+SPR2-01 Reunión de planificación del 
+Sprint 2 10/04/2025 10/04/2025 1 día 

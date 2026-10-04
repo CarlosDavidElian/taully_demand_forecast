@@ -1,0 +1,22 @@
+ 
+Figura 36. Código para cargar las gráficas del Dashboard (dashboard.js) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

@@ -1,0 +1,40 @@
+ 
+específica. Cada fila contiene el nombre del producto y su volumen estimado de 
+demanda, proyectado por la IA.  Asimismo, se puede exportar la tabla en Excel 
+mediante el botón “Exportar”. 
+Figura 91. Prototipo para la subsección Predicciones - RF14 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+Fuente: Elaboración propia 
+La Tabla 74 muestra los componentes visuales definidos  para el funcionamiento de 
+la subsección Predicciones, correspondiente al requerimiento RF14 del módulo de 
+reportes estratégicos. 
+Tabla 74. Componentes visuales de la subsección Predicciones – RF14 
+Código Componente Interacción Especificación visual 
+<REP_PRE_01> Selector de 
+fecha Sí 
+Permite elegir una fecha 
+específica para visualizar las 
+predicciones correspondientes 
+<REP_PRE_02> 
+Tabla de 
+predicciones 
+IA 
+No 
+Muestra por fecha el nombre 
+del producto y su volumen de 
+demanda estimado por el 
+modelo predictivo 
+<BTN_PRE_EX> Botón de 
+exportación Sí 
+Descarga la tabla visualizada 
+en un archivo .xlsx, sin 
+modificar ni ampliar los datos 
+presentados 
+Fuente: Elaboración propia 

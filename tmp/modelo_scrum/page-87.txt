@@ -1,0 +1,35 @@
+ 
+Tabla de Dimensión: DIM_PRODUCTO 
+Tabla 8. Tabla de Dimensión DIM_PRODUCTO 
+Campo Descripción 
+ID_PRODUCTO Clave primaria 
+NOMBRE_PRODUCTO Nombre del producto 
+CATEGORIA_PRODUCTO Tipo o categoría 
+UNIDAD_MEDIDA Unidad de medición 
+PRECIO Precio base del producto 
+Fuente: Elaboración propia 
+Tabla de Dimensión: DIM_EMPLEADO 
+Tabla 9. Tabla de Dimensión DIM_EMPLEADO 
+Campo Descripción 
+ID_EMPLEADO Clave primaria 
+NOMBRES Nombre del empleado 
+DNI Documento de identidad 
+EMAIL Correo electrónico 
+TELEFONO Teléfono de contacto 
+Fuente: Elaboración propia 
+Tabla de Dimensión: DIM_CLIENTE 
+Tabla 10. Tabla de Dimensión DIM_CLIENTE 
+Campo Descripción 
+ID_CLIENTE Clave primaria 
+NOMBRE_CLIENTE Nombre o razón social 
+TIPO_CLIENTE Natural o Jurídico 
+DNI Documento (si es natural) 
+RUC RUC (si es empresa) 
+DIRECCION_CLIENTE Ubicación del cliente 
+Fuente: Elaboración propia 
+Tabla de Dimensión: DIM_UBICACION 
+Tabla 11. Tabla de Dimensión DIM_UBICACION 
+Campo Descripción 
+ID_UBICACION Clave primaria 
+TIPO_UBICACION Nombre del almacén o zona 
+Fuente: Elaboración propia 

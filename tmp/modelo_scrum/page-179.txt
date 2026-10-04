@@ -1,0 +1,23 @@
+ 
+Figura 44. Transformación de datos del RF07 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+En la Figura 45 se muestra la lógica para la carga de datos de clientes  del RF07, 
+evidenciándose en el archivo cliente_etl_controller.py. Con esto, los datos de cliente 
+se insertarán en la tabla DIM_CLIENTE del modelo dimensional. 
+Figura 45. Carga de datos del RF07 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 

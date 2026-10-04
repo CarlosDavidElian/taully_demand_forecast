@@ -1,0 +1,34 @@
+15 
+ 
+del machine learning  en la cadena de suministro, analizando variables como la 
+precisión del inventario y el aumento de la tasa de cumplimiento de pedidos. 
+Además, la investigación tuvo un alcance explicativo, ya que precisó encontrar una 
+relación entre la aplicación de Business Intelligence  con Machine Learning  y la 
+optimización al gestionar la cadena de suministro. Este tipo de investigación, según 
+Ramos [27], se centró en la explicación y determinación de los fenómenos, 
+permitiendo identificar asociaciones relevantes entre variables mediante el uso de 
+estudios predictivos y experimentales. En este caso, se analizaron los efectos de la 
+variable independiente e n procesos operativos como los tiempos de entrega y los 
+costos logísticos, con el objetivo de entender el impacto directo y cuantificable de 
+dichas tecnologías. Este enfoque permitió no solo describir los cambios observados, 
+sino también explicar cómo y por qué ocurrieron, proporcionando una comprensión 
+más profunda de las etapas subyacentes en la cadena de suministro. 
+Variables: La variable independiente de la investigación fue de tipo cuantitativa, al 
+tratarse de una característica o fenómeno que pudo ser medido y expresado 
+numéricamente. Esta variable se refirió a la frecuencia con la que ocurrió un rasgo 
+específico o a la magni tud de dicho rasgo en un conjunto de datos. Para analizarla, 
+se contaron o midieron las instancias en que se presentó o no el fenómeno en 
+cuestión, obteniendo cifras que permitieron comparar y establecer patrones. Este tipo 
+de variable fue funda mental en estudios donde se buscó cuantificar diferencias o 
+similitudes entre grupos, como, por ejemplo, la frecuencia de un comportamiento o la 
+intensidad de una característica [28]. Según Tamang et al. [29], la definición 
+conceptual de “Business Intelligence con Machine Learning” describió estas 
+tecnologías como una combinación del potencial de los modelos de aprendizaje 
+computacional, capaces de aprender de los datos y tomar decisiones sin 
+programación prev ia, con las herramientas de inteligencia de nego cios, que 
+analizaron y presentaron contenido clave para la resolución de decisiones. Esta 
+integración permitió a las empresas examinar enormes conjuntos de datos 
+instantáneamente, optimizar sus procesos y mejorar la experiencia del cliente. Al 
+utilizar Mac hine Learning, se potenció la capacidad del Business Intelligence para 
+predecir tendencias y detectar amenazas, brindando un análisis más preciso y 
+eficiente. Por su parte, la definición operacional de esta variable se detalló en que 

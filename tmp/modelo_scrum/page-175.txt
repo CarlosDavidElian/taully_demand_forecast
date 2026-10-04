@@ -1,0 +1,24 @@
+ 
+En la Figura 38 se muestra la carga de datos del RF05 en la tabla DIM_PRODUCTO 
+del modelo dimensional, definido por el Product Owner y desarrollado por el equipo 
+de trabajo. 
+Figura 38. Tabla de producto poblada del RF05 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+RF06: ETL para datos de empleados: Implementar la extracción, transformación 
+y carga de empleados. 
+En la Figura 39 se muestra la lógica para la extracción de datos de empleado  del 
+RF06, evidenciándose en  el archivo empleado_etl_controller.py, el cual se encarga 
+de obtener los datos de la fuente de origen (.xlsx). 
+ 
+ 
+ 
+ 
+ 

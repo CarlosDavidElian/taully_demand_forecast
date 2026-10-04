@@ -1,0 +1,65 @@
+ 
+ Tabla 2. Implicados del proyecto 
+Rol Apellidos y nombres 
+Product owner Chacon Palacin, Cesar Augusto 
+Scrum Master Chacon Ramos, Marko Samuel 
+Sancho Diaz, Erika Yanela Development team 
+Fuente: Elaboración propia 
+1.3. Product Backlog 
+El Product Backlog es la lista de requerimientos necesarios para el desarrollo del 
+sistema Intersegur SCM. Contiene funcionalidades clave que permitirán gestionar la 
+cadena de suministro de manera eficiente, además de servir como fuente para realizar 
+ajustes y mejoras según las necesidades del negocio. 
+A continuación, se presenta el Product Backlog, con una descripción de cada 
+elemento, su tiempo estimado, tiempo real y prioridad. 
+Tabla 3. Product Backlog 
+Código Requerimiento Descripción Tiempo 
+estimado 
+Tiempo 
+real 
+RF01 Configuración 
+inicial del entorno 
+Preparar el entorno de 
+desarrollo, bases de datos 
+y librerías 
+5 6 
+RF02 Sistema de 
+autenticación 
+Implementar login y 
+gestión de permisos en la 
+plataforma 
+1 1 
+RF03 Administración de 
+usuarios 
+Crear el módulo para 
+administrar usuarios y 
+permisos 
+2 2 
+RF04 Implementación 
+de ETL de tiempo 
+Implementar la extracción, 
+transformación y carga de 
+datos de tiempo 
+3 3 
+RF05 
+Implementación 
+de ETL de 
+producto 
+Implementar la extracción, 
+transformación y carga de 
+datos de productos 
+3 3 
+RF06 
+Implementación 
+de ETL de 
+empleado 
+Implementar la extracción, 
+transformación y carga de 
+datos de empleados 
+3 3 
+RF07 Implementación 
+de ETL de cliente 
+Implementar la extracción, 
+transformación y carga de 
+datos de clientes 
+3 3 

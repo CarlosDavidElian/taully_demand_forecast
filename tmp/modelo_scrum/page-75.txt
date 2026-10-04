@@ -1,0 +1,31 @@
+ 
+I. PLANIFICACIÓN DEL PROYECTO 
+La planificación del proyecto es la fase inicial en la metodología propuesta por Ralph 
+Kimball para el desarrollo de soluciones de Business Intelligence (BI). Esta etapa es 
+fundamental, ya que define el alcance, los objetivos, los recursos y el cronograma 
+necesario para garantizar el éxito del proyecto. En el presente trabajo, se ha 
+desarrollado un sistema de BI orientado a mejorar la gestión de la cadena de 
+suministro en una empresa del rubro comercial, incorporando herramientas de 
+análisis avanzado y técnicas de Machine Learning. 
+El objetivo principal del proyecto es implementar una solución de BI que permita a la 
+empresa tomar decisiones basadas en datos confiables y actualizados, optimizando 
+los procesos logísticos como la planificación de compras, control de inventarios, 
+rotación de productos y cumplimiento de tiempos de entrega. Esta solución se enfoca, 
+además, en predecir comportamientos futuros en la cadena de suministro a través de 
+modelos de aprendizaje automático, brindando una ventaja competitiva en la toma de 
+decisiones estratégicas. 
+En esta fase se identificaron los siguientes componentes clave del proyecto: 
+• Origen de datos: Se utilizan archivos en formato Excel, generados de manera 
+descentralizada por distintas actividades del negocio. 
+• Repositorio de datos: Se construyó un modelo dimensional en MySQL, que 
+permite almacenar la información de manera estructurada y orientada al 
+análisis. 
+• Procesos ETL: Se desarrolló un subsistema ETL en Python para automatizar 
+la extracción, transformación y carga de datos desde los archivos Excel hacia 
+la base de datos. 
+• Visualización y análisis : Se diseñó una interfaz web utilizando Flask  y 
+Chart.js para la visualización interactiva de indicadores clave y resultados de 
+modelos predictivos. 
+Además, se establecieron los siguientes objetivos específicos para la planificación del 
+proyecto: 
+• Determinar las necesidades de información de los usuarios clave del negocio. 

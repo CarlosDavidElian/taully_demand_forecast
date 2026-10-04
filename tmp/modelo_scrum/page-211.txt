@@ -1,0 +1,51 @@
+ 
+id_producto 
+Valor 
+no 
+existen
+te 
+Clave 
+inválida 
+El sistema 
+debe omitir 
+predicciones 
+para productos 
+inexistentes 
+X  
+No se genera 
+predicción 
+para ID no 
+vinculado 
+Post condiciones 
+La tabla predicciones_ia contiene registros válidos, positivos y estructurados, 
+organizados por producto y fecha futura, listos para su visualización y análisis 
+posterior. 
+Defectos Veredicto 
+No se encontraron Paso 
+Observaciones Probador 
+La prueba se ejecutó con éxito en entorno de 
+desarrollo. Se verificó el flujo completo: carga del 
+modelo, generación de predicciones, validación de 
+estructura y registro final en la base de datos. 
+• Marko Samuel Chacon 
+Ramos 
+• Erika Yanela Sancho 
+Diaz 
+Fuente: Elaboración propia 
+Gráfico de Burndown del Sprint 3 
+En la Figura 71 se presenta el gráfico de Burndown correspondiente al Sprint 3. La 
+línea gris representa el esfuerzo ideal distribuido desde la reunión de planificación 
+hasta la carga final del modelo de predicción. La línea roja muestra el esfuerzo real 
+acumulado, donde se evidencia una curva descendente sostenida entre el 26/04 y el 
+01/05, resultado del trabajo técnico en los procesos ETL de pedidos e inventario 
+(SPR3-02 y SPR3-03). 
+Entre el 02/05 y el 05/05, el descenso se mantiene gracias al desarrollo del módulo 
+lógico de predicción de demanda, finalizando con la presentación del sprint y la 
+reunión de retrospectiva en los días posteriores. La convergencia de ambas líneas el 
+07/05/2025 indica que el equipo logró cerrar el Sprint 3 con la implementación efectiva 
+de los requerimientos RF09, RF10 y RF11, cumpliendo los plazos establecidos y 
+manteniendo la calidad técnica. 
+ 
+ 
+ 
+ 

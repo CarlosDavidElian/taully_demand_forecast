@@ -1,0 +1,29 @@
+ix 
+ 
+Resumen 
+La presente investigación se aline ó con el noveno Objetivo de Desarrollo Sostenible 
+(ODS), que promueve la industria, innovación e infraestructura.  Asimismo, el 
+propósito del estudio consistió en establecer como un sistema basado en Business 
+Intelligence con Machine Learning influye en la gestión de la cadena de suministro de 
+la empresa INTERSEGUR. Se trato de una investigación de tipo aplicada, con un 
+enfoque cuantitativo y un diseño experimental de tipo pre -experimental. La muestra 
+se conformó por un total de 120 pedidos, obtenidos mediante la fórmula del muestreo 
+aleatorio simple. A su vez, para la recolección de datos se aplicó la ficha de registro 
+como instrumento. Los principales resultados obtenidos fueron que la solución basada 
+en Business Intelligence con Machine Learning mejoró la precisión del inventario en 
+la empresa INTE RSEGUR, pasando de un pre -test de 39.44% a un post -test de 
+49.02%, asimismo, mejoró la tasa de cumplimiento de pedidos, pasando de un pre -
+test de 79.85% a un post-test de 85.88%. Por lo tanto, se llegó a la conclusión de que 
+la solución implementada influyó de manera significativa y positiva en la mejora de la 
+gestión de la cadena de suministro en la empresa INTERSEGUR. 
+Palabras clave: Análisis de datos , Inteligencia artificial, Gestión de la información , 
+Oferta y demanda. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

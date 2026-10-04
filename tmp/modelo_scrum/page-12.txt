@@ -1,0 +1,34 @@
+2 
+ 
+niveles de stock en las distintas tiendas, lo cual complicaba la planificación de 
+compras y dificultaba la reposición oportuna de inventarios. A ello se sumaba el hecho 
+de que la empresa mantenía relaciones comerciales con marcas internacionales que 
+tenían sus sedes en Lima. Las demoras en los pedidos a estos proveedores 
+provocaban desabastecimientos en las tiendas, lo que  afectaba de forma directa la 
+habilidad de la organización para atender las demandas de los clientes finales.  Por 
+otro lado, INTERSEGUR n o contaba con una herramienta eficiente para analizar 
+datos ni para tomar decisiones estratégicas basadas en información confiable. Esta 
+deficiencia comprometía su habilidad para prever las necesidades del mercado y 
+reaccionar con rapidez a los requerimientos del área comercial. Como consecuencia, 
+la competitividad de la empresa se veía comprometida, ya que dependía de procesos 
+manuales y del criterio subjetivo de sus colaboradores, en lugar de apoyarse en un 
+sistema automatizado que permitiera optimizar la gestión de inventarios y garantizar 
+una eficaz distribución de los pedidos, asegurando entregas completas y dentro de 
+los plazos establecidos. 
+Esta investigación se enmarcó en los principios establecidos por el Objetivo de 
+Desarrollo Sostenible (ODS) 9, cuyo propósito era fomentar la industria, la innovación 
+y la infraestructura. En particular, se alineó con la meta 9.4, que planteaba la 
+necesidad de modernizar la infraestructura industrial mediante la adopción de 
+tecnologías más eficientes y sostenibles, con el objetivo de incrementar la 
+productividad y reducir el impacto ambiental.  A través de la implementación de 
+soluciones tecnológicas avanzadas, como Business Intelligence y Machine Learning, 
+se esperaba no solo mejorar la competitividad de las empresas comerciales, sino 
+también contribuir a la sostenibilidad de sus operaciones, disminuyendo gastos y 
+mejorando la eficiencia en la utilización de recursos. 
+Entrando en contexto respecto a los problemas de investigación, es necesario señalar 
+que la formulación de estos se dio a través de las variables, dimensiones e 
+indicadores relacionados con el tema de estudio. Además, resultó crucial considerar 
+la relevancia de los m étodos de adquisición de datos, los cuales estuvieron 
+comprendidos por protocolos y tareas específicas. Estos métodos fueron 
+fundamentales, ya que ayudaron a proporcionar soluciones a las interrogantes 
+planteadas en la investigación [2]. 

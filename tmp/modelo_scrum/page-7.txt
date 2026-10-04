@@ -1,0 +1,24 @@
+vii 
+ 
+Índice de tablas 
+Tabla 1. Estadístico descriptivo antes y después del uso del sistema web – Precisión 
+de Inventario………………………………………………………………………………..22 
+Tabla 2. Estadístico descriptivo antes y después del uso del sistema web – Tasa de 
+cumplimiento de pedidos…………………………………………………………………..23 
+Tabla 3. Prueba de normalidad – Precisión de Inventario……………………………...25 
+Tabla 4. Prueba de normalidad – Tasa de cumplimiento de pedidos………………….27 
+Tabla 5. Prueba de T-student – Precisión de Inventario………………………………..29 
+Tabla 6. Prueba de T-student – Tasa de cumplimiento de pedidos……………………31 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

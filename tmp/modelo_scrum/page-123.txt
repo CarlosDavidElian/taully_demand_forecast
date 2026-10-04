@@ -1,0 +1,29 @@
+ 
+sprint y asegurar que el desarrollo del sistema se mantuviera alineado con los 
+objetivos reales de la organización. 
+Scrum Master 
+Ambos tesistas asumieron el rol de Scrum Master, organizando y facilitando las 
+reuniones diarias (Daily Scrum), coordinando las sesiones de revisión y retrospectiva, 
+eliminando impedimentos técnicos, y promoviendo el cumplimiento de los principios y 
+buenas prácticas de la metodología Scrum durante todo el ciclo de desarrollo. 
+Equipo de Desarrollo 
+Como Equipo de Desarrollo, también ambos tesistas compartieron las tareas técnicas 
+esenciales del proyecto, colaborando activamente en las siguientes actividades: 
+• Diseño y codificación del sistema web con arquitectura modular utilizando 
+Python (Flask). 
+• Implementación de procesos ETL con archivos Excel proporcionados por la 
+empresa. 
+• Diseño de la base de datos relacional y construcción del data mart mediante 
+MySQL. 
+• Desarrollo de dashboard e interfaces interactivas con HTML, CSS, JavaScript, 
+Chart.js y Jinja2. 
+• Entrenamiento, validación e integración del modelo de Machine Learning 
+usando la biblioteca Scikit-learn. 
+• Integración del modelo predictivo en la plataforma web. 
+• Pruebas de funcionalidad y validación del sistema con los usuarios finales. 
+Tabla 1. Roles del proyecto 
+Rol Apellidos y nombres 
+Product owner Chacon Palacin, Cesar Augusto 
+Scrum Master Chacon Ramos, Marko Samuel 
+Sancho Diaz, Erika Yanela Development team 
+Fuente: Elaboración propia 

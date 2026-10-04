@@ -1,0 +1,24 @@
+ 
+En la Figura 62 se muestra la lógica para la carga de datos de pedidos  del RF09, 
+evidenciándose en  el archivo pedidos_etl_controller .py. Con esto, los datos de 
+pedidos se insertarán en la tabla FACT_PEDIDOS del modelo dimensional. 
+Figura 62. Carga de datos del RF09 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+En la Figura 63 se muestra la carga de datos del RF09 en la tabla FACT_PEDIDOS 
+del modelo dimensional, definido por el Product Owner y desarrollado por el equipo 
+de trabajo. 
+Figura 63. Tabla de pedidos poblada del RF09 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 

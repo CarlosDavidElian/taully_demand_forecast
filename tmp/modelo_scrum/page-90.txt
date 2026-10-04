@@ -1,0 +1,28 @@
+ 
+6.2. Normalización de las Dimensiones 
+Para evitar redundancias y mejorar la integridad de los datos, las dimensiones fueron 
+parcialmente normalizadas. Esto permitió separar atributos que podrían cambiar con 
+el tiempo o repetirse innecesariamente, sin perder la simplicidad requerida por el 
+enfoque dimensional. 
+Por ejemplo: 
+• La dimensión cliente mantiene atributos separados por tipo de identificación 
+(DNI o RUC). 
+• La dimensión producto normaliza información repetitiva como unidades de 
+medida y categorías de producto. 
+6.3. Integridad Referencial con Claves Foráneas 
+Las relaciones entre hechos y dimensiones fueron reforzadas mediante restricciones 
+de claves foráneas (FOREIGN KEY). Esto garantiza que todos los registros en las 
+tablas de hechos tengan una correspondencia válida en las tablas de dimensiones, 
+asegurando: 
+• Consistencia de datos históricos. 
+• Trazabilidad en los reportes y análisis. 
+• Prevención de inserciones inválidas en los procesos ETL. 
+6.4. Consideraciones de Rendimiento 
+Se tomaron en cuenta varios aspectos técnicos para garantizar el rendimiento del 
+Data Warehouse: 
+• Separación física de tablas por categorías funcionales (pedidos e inventario). 
+• Particionado lógico temporal sobre la dimensión tiempo, útil para gestionar 
+grandes volúmenes de datos históricos. 
+• Estrategias de carga incremental en el ETL, reduciendo el procesamiento de 
+datos repetitivos. 
+ 

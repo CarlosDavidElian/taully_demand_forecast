@@ -1,0 +1,56 @@
+ 
+La tabla DIM_EMPLEADO contiene únicamente registros válidos, nuevos, con 
+estructura limpia y claves únicas. 
+Defectos Veredicto 
+No se encontraron Paso 
+Observaciones Probador 
+La prueba fue ejecutada exitosamente. Se validaron 
+correctamente los campos requeridos, el formato de 
+los datos y la existencia de duplicados, confirmando el 
+correcto funcionamiento del proceso ETL. 
+• Marko Samuel Chacon 
+Ramos 
+• Erika Yanela Sancho 
+Diaz 
+Fuente: Elaboración propia 
+• Prueba de caja negra del RF07 
+En la Tabla 49 se muestra la prueba de caja negra 6 aplicada al proceso ETL para la 
+carga de clientes. Esta prueba tiene como objetivo validar que el sistema lea, 
+transforme y cargue correctamente los registros de clientes desde el archivo .xlsx 
+hacia la tabla DIM_ CLIENTE, manejando errores de formato, campos faltantes o 
+duplicación de claves. 
+Tabla 49. Prueba de caja negra 6 
+PRUEBA DE CAJA NEGRA 6 
+Código PCN-06 Fecha 19/04/2025 
+Tarea Ejecutar proceso ETL 
+de clientes Módulo Carga dimensional 
+Descripci
+ón 
+Se ejecutarán pruebas para verificar si el proceso ETL carga los 
+registros de clientes correctamente en la tabla DIM_CLIENTE, 
+asegurando la limpieza de datos, la eliminación de duplicados, la 
+integración de campos obligatorios (DNI/RUC) y el formato adecuado 
+por tipo de cliente. 
+Precondiciones 
+• Archivo PEDIDOS.xlsx estructurado con hojas “PERSONA NATURAL” y 
+“PERSONA JURÍDICA” 
+• Script ETL implementado y funcional 
+Pasos de la prueba 
+• Validar que los campos requeridos estén presentes en ambas hojas 
+• Verificar que se completen DNI/RUC correctamente según tipo de cliente 
+• Confirmar que se combinen campos de dirección y ciudad si corresponde 
+• Validar que no se carguen registros duplicados 
+• Verificar la inserción correcta de nuevos clientes con asignación de ID_CLIENTE 
+Datos de entrada Respuesta 
+esperada 
+Coincide Respuesta 
+del Sistema Campo Valor Escenario Sí No 
+DNI / RUC Vacíos o 
+inválidos 
+Formato 
+incorrecto 
+El sistema 
+debe omitir 
+registros con 
+X  Registros 
+omitidos por 

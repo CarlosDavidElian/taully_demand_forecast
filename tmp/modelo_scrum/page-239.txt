@@ -1,0 +1,34 @@
+ 
+3.5. Sprint 5 
+El Sprint 5 fue desarrollado y documentado en cada una de sus 4 fases: Análisis, 
+Diseño, Implementación y Pruebas. 
+Análisis 
+En la Tabla 70 se presentan los requerimientos que conforman el Sprint 5. 
+Tabla 70. Sprint 5 
+Código HU Requerimiento 
+H.U.13 
+RF14: Generación de reportes estratégicos: Implementar el módulo 
+que permita generar reportes consolidados con indicadores clave 
+del sistema, incluyendo precisión del inventario, tasa de 
+cumplimiento de pedidos y predicciones. 
+Fuente: Elaboración propia 
+• Funcionalidades del Sprint 5 
+En la Tabla 71 se describen las funcionalidades que tendrá el sistema, mostrando la 
+interacción entre el usuario y la arquitectura de software para cada uno de los 
+requerimientos listados en el Sprint 5. 
+Tabla 71. Funcionalidades del Sprint 5 
+Código RF Funcionalidad 
+RF14 
+Se implementa un módulo de reportes estratégicos que incluye tres 
+subsecciones: precisión del inventario, tasa de cumplimiento de 
+pedidos y predicciones. Cada subsección presenta una tabla estática 
+con los datos históricos y un botón de exportación que des carga 
+dicha tabla con los datos en formato Excel. 
+Fuente: Elaboración propia 
+Diseño 
+• Diseño de prototipos 
+En la Figura 89 se muestra el prototipo para la subsección “Precisión del Inventario” 
+correspondiente al RF14, aprobado por el Product Owner. Esta vista forma parte del 
+módulo de reportes estratégicos del sistema y permite visualizar, mediante una tabla 
+estática, los indicadores diarios relacionados con la precisión del inventario. 
+Asimismo, se puede exportar la tabla en Excel mediante el botón “Exportar”. 

@@ -1,0 +1,24 @@
+ 
+RF11: Modelo de predicción de demanda: Desarrollar el algoritmo para predecir 
+demanda en base histórica. 
+En la Figura 68 se muestra la lógica para el entrenamiento del algoritmo de IA  del 
+RF11, evidenciándose en  el archivo entrenamiento .py, el cual se encarga de l 
+procesamiento de datos históricos, limpieza, extracción de variables relevantes y 
+entrenamiento del algoritmo de aprendizaje automático XGBoost, que posteriormente 
+es serializado para su uso en futuras predicciones. 
+Figura 68. Entrenamiento del modelo predictivo del RF11 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 

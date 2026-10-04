@@ -1,0 +1,34 @@
+ 
+Diseño 
+• Diseño de prototipos 
+En la Figura 72 se muestra el prototipo correspondiente al RF12, aprobado por el 
+Product Owner. Esta interfaz permite visualizar métricas de rendimiento e indicadores 
+del sistema predictivo, como tasa de cumplimiento, precisión de inventario y productos 
+más pedidos. 
+Figura 72. Prototipo para el requerimiento RF12 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+Fuente: Elaboración propia 
+La Tabla 64 muestra los componentes visuales definidos  para el funcionamiento 
+dashboard de BI correspondiente al requerimiento RF12. 
+Tabla 64. Componentes visuales del RF12 – Dashboard BI 
+Código Componente Interacción Especificación visual 
+<COM_01> Panel resumen de 
+métricas No Muestra PI, TCP, pedidos 
+completos y totales 
+<COM_02> Gráfico de evolución 
+diaria (PI/TCP) No 
+Línea temporal de 
+indicadores entre el 
+01/02/2025 y el 27/02/2025 
+<COM_03> Gráfico TCP por tipo de 
+cliente No 
+Comparación en barras 
+entre clientes naturales y 
+jurídicos 

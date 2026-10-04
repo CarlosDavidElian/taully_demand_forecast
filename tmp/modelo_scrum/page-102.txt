@@ -1,0 +1,24 @@
+ 
+Figura 21. Transformación de datos de FACT_INVENTARIO 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+7.3. Carga de Datos a MySQL 
+La carga de datos se realizó de forma automatizada utilizando la librería sqlalchemy 
+en conjunto con mysqlclient, que permite la conexión entre Python y MySQL. 
+• Se cargaron primero las dimensiones para mantener la integridad referencial. 
+• Posteriormente se cargaron los hechos, vinculando con las dimensiones 
+mediante sus claves sustitutas. 
+• Se optó por una carga incremental, lo que permite actualizar los datos sin 
+necesidad de reprocesar el histórico completo. 

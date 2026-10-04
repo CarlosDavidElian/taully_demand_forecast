@@ -1,0 +1,62 @@
+ 
+Retrospectiva del Sprint 4 
+La retrospectiva del Sprint 4 permite evaluar el desempeño del equipo durante el 
+desarrollo del dashboard de inteligencia de negocio (RF12) y la implementación del 
+componente gráfico de predicciones IA (RF13). Esta revisión busca identificar 
+aciertos, dificultades visuales y propuestas de mejora para fortalecer la conexión entre 
+diseño técnico y representación funcional en futuras iteraciones. En la Tabla 69 se 
+resumen las observaciones registradas durante esta etapa. 
+Tabla 69. Retrospectiva del Sprint 4 
+Problema Causas Acciones 
+Inconsistencias en 
+métricas mostradas en el 
+dashboard 
+Los cálculos iniciales de 
+PI y TCP no coincidían 
+con los valores reales 
+agregados 
+Se recalcularon los 
+indicadores desde 
+FACT_PEDIDOS y 
+FACT_INVENTARIO; se 
+validó visualización con 
+datos corregidos 
+Desalineación en los 
+gráficos por tipo de 
+cliente 
+Los porcentajes de 
+cumplimiento se 
+mostraban invertidos en 
+el gráfico de barras 
+Se ajustó el orden lógico 
+del componente gráfico 
+para reflejar 
+correctamente la 
+segmentación por cliente 
+Formato incorrecto en 
+etiquetas y títulos 
+visuales 
+Algunos elementos del 
+prototipo contenían 
+rotulación ambigua o 
+incompleta 
+Se revisó toda la 
+nomenclatura de la IU y 
+se aplicaron correcciones 
+tipográficas y semánticas 
+Altura desigual en barras 
+del gráfico de predicción 
+Escala no proporcional al 
+valor real en la 
+visualización del RF13 
+Se aplicó normalización 
+de ejes y ajuste 
+automático para 
+mantener coherencia con 
+la unidad proyectada 
+Fuente: Elaboración propia 
+ 
+ 
+ 
+ 
+ 

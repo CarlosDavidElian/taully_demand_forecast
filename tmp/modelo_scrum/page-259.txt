@@ -1,0 +1,52 @@
+ 
+Resolución incompleta de 
+nombres de producto en 
+predicciones 
+La vista mostraba 
+identificadores sin 
+nombre asociado en 
+algunos casos 
+Se depuró el cruce entre 
+predicciones_ia y 
+DIM_PRODUCTO; se 
+aplicó verificación de 
+claves foráneas 
+Cálculos de TCP por 
+fecha con desviaciones 
+puntuales 
+Algunos porcentajes 
+diferían del valor real por 
+falta de actualización en 
+FACT_PEDIDOS 
+Se ejecutó proceso de 
+sincronización y se 
+validaron los porcentajes 
+diarios desde la fuente 
+original 
+Confusión en 
+encabezados de tabla de 
+precisión 
+Algunas etiquetas no 
+diferenciaban entre 
+productos en tienda y 
+totales 
+Se aplicaron ajustes 
+tipográficos y semánticos 
+en los títulos de columna 
+para mayor claridad 
+visual 
+Fuente: Elaboración propia 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

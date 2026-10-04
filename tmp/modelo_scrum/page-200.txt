@@ -1,0 +1,23 @@
+ 
+En la Figura 61 se muestra la lógica para la transformación de datos de pedidos  del 
+RF09, evidenciándose en el archivo pedidos_etl_controller.py. 
+Figura 61. Transformación de datos del RF09 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 

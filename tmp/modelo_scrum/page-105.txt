@@ -1,0 +1,22 @@
+ 
+Figura 26. Carga de datos de DIM_UBICACION 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+Figura 27. Carga de datos de FACT_PEDIDOS 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+ 
+ 
+ 

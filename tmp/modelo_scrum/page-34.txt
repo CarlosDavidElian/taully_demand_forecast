@@ -1,0 +1,42 @@
+24 
+ 
+Figura 2. Tasa de cumplimiento de pedidos antes del sistema basado en Business 
+Intelligence con Machine Learning 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+Respecto al indicador tasa de cumplimiento de pedidos, los hallazgos evidencian que, 
+en el pre -test, se obtuvo una media de 79.85%, mientras que en el post -test dicha 
+media ascendió a 85.88%, lo que refleja una mejora en la eficiencia del proceso de 
+atención de pedidos luego de la implementación del sistema web. En la fase pre-test, 
+los valores oscilaron entre 66.67% y 100%, mientras que en el post -test el rango 
+observado fue de 71.90% a 100%. 
+Análisis Inferencial 
+Dado que la muestra utilizada en esta investigación consistió en 120 registros de 
+pedidos, considerados tanto en la fase pre -test como en la  del post-test, se llevó a 
+cabo un análisis inferencial con el propósito de identificar si las diferencias en los 
+indicadores eran estadísticamente significativas. Para ello, se aplicó inicialmente la 
+prueba de normalidad de Kolmogorov -Smirnov, con la finalida d de determinar si los 
+datos seguían una distribución normal. 
+Las pruebas fueron ejecutadas en el software SPSS  el cual es usado para análisis 
+estadísticos, bajo un nivel de confianza del 95%, aplicando los siguientes criterios de 
+decisión: 
+79.85%
+85.88%
+76.00
+78.00
+80.00
+82.00
+84.00
+86.00
+88.00
+Cumplimiento de pedidos Pretest Cumplimiento de pedidos Postest
+Porcentaje
+Tasa de cumplimiento de pedidos
+Tasa de cumplimiento de pedidos -
+Pretest vs Postest

@@ -1,0 +1,30 @@
+27 
+ 
+Indicador: Tasa de cumplimiento de pedidos 
+Tabla 4. Prueba de normalidad – Tasa de cumplimiento de pedidos 
+Pruebas de normalidad 
+ 
+Kolmogorov-Smirnov 
+Estadístico Gl Sig. 
+TASA DE CUMPLIMIENTO DE PEDIDOS - 
+PRE TEST ,144 20 ,200 
+TASA DE CUMPLIMIENTO DE PEDIDOS - 
+POST TEST ,146 20 ,200 
+Fuente: Elaboración propia 
+Considerando los resultados obtenidos a través de la prueba de normalidad de 
+Kolmogorov-Smirnov, aplicada al indicador tasa de cumplimiento de pedidos, se 
+identificó que el valor de significancia fue de 0.200 tanto en el pre -test como en el 
+post-test. Dado que ambos valores superan el umbral de 0.05, se concluye que los 
+datos correspondientes a ambas etapas presentan una distribución normal. Esta 
+información se detalla en la Figura 5 y Figura 6. 
+Figura 5. Tasa de cumplimiento de pedidos antes del sistema basado en Business 
+Intelligence con Machine Learning 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 

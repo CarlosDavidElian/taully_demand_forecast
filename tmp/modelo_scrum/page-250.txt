@@ -1,0 +1,24 @@
+ 
+En la Figura 98 se muestra la interfaz gráfica de la subsección “Precisión del 
+Inventario” del RF14, definido por el Product Owner y desarrollado por el equipo de 
+trabajo. Se muestran en tabla los registros por fecha del KPI Precisión del Inventario 
+y un botón para exportar la tabla en Excel. 
+Figura 98. Interfaz gráfica de la subsección Precisión del Inventario - RF14 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+En la Figura 99 se muestra la interfaz gráfica de la subsección “Tasa de Cumplimiento 
+de Pedidos” del RF14, definido por el Product Owner y desarrollado por el equipo de 
+trabajo. Se muestran en tabla los registros por fecha del KPI Tasa de Cumplimiento 
+de Pedidos y un botón para exportar la tabla en Excel. 
+ 
+ 
+ 
+ 
+ 

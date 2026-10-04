@@ -1,0 +1,23 @@
+ 
+Figura 23. Carga de datos del RF04 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+En la Figura 24 se muestra la carga de datos del RF04 en la tabla DIM_TIEMPO del 
+modelo dimensional, definido por el Product Owner y desarrollado por el equipo de 
+trabajo. 
+Figura 24. Tabla de tiempo poblada del RF04 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 

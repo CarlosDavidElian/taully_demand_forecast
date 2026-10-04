@@ -1,0 +1,22 @@
+ 
+Figura 24. Carga de datos de DIM_EMPLEADO 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+Figura 25. Carga de datos de DIM_CLIENTE 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+ 
+ 
+ 

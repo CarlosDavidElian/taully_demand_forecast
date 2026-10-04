@@ -1,0 +1,65 @@
+ 
+• Prueba de caja negra del RF03 
+En la Tabla 37 se muestra la prueba de caja negra 2 aplicada al módulo de gestión 
+de usuarios. Esta prueba tiene como objetivo verificar que el sistema permita registrar, 
+listar y editar usuarios correctamente, de acuerdo con los criterios definidos en la 
+estructura de la tabla usuarios. 
+Tabla 37. Prueba de caja negra 2 
+PRUEBA DE CAJA NEGRA 2 
+Código PCN-02 Fecha 04/04/2025 
+Tarea Administrar usuario Módulo Gestión de usuarios 
+Descripción 
+Se ejecutarán pruebas para verificar si el sistema realiza 
+correctamente las validaciones al registrar un nuevo usuario, 
+controla duplicidades y permite modificar registros existentes en el 
+módulo de gestión de usuarios. 
+Precondiciones 
+• El usuario administrador ha iniciado sesión exitosamente 
+• El módulo de gestión de usuarios está disponible en el menú principal 
+Pasos de la prueba 
+• Validar los campos obligatorios del formulario de registro 
+• Validar que el sistema no permita registrar usuarios con campos duplicados (dni, 
+email) 
+• Validar que el sistema permita guardar el usuario con datos válidos 
+• Validar que el sistema muestre el usuario en el listado después del registro 
+• Validar que el sistema permita editar un usuario y reflejar los cambios  
+correctamente 
+Datos de entrada Respuesta 
+esperada 
+Coincide Respuesta del 
+Sistema Campo Valor Escenario Sí No 
+- - Valores no 
+permitidos 
+Ingreso al 
+sistema X  
+Un label indica 
+que hay 
+campos 
+inválidos o 
+incompletos 
+- - Usuario ya 
+registrado 
+Usuario o 
+contraseña 
+incorrecto 
+X  
+El usuario ya 
+existe en la 
+base de datos 
+- - 
+Registro 
+válido de 
+usuario 
+ X  
+Usuario 
+registrado 
+correctamente 
+y listado como 
+activo 
+- - Edición del 
+usuario  X  
+Se modificó el 
+usuario 
+correctamente 
+y se reflejó el 
+cambio 

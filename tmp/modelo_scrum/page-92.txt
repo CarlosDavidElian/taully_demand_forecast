@@ -1,0 +1,25 @@
+ 
+limpieza_dm_controller.py, encargado de eliminar previamente los datos existentes 
+en las tablas del modelo dimensional antes de ejecutar una nueva carga. Esto 
+garantiza que la información cargada esté actualizada y libre de duplicados o residuos 
+de ejecuciones anteriores, especialmente en entornos de desarrollo o pruebas. 
+Figura 7. Código del archivo limpieza_dm_controller.py 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+7.1. Extracción de Datos 
+La fuente de datos principal está conformada por archivos Excel, los cuales contienen 
+información de pedidos, inventario y empleados relacionados con la cadena de 
+suministro. Se utilizó la librería pandas para leer los archivos .xlsx, permitiendo 
+convertir las hojas de cálculo en estructuras tipo DataFrame para su manipulación. 
+La extracción se diseñó para ser parametrizable y repetible, permitiendo adaptarse 
+fácilmente a nuevos archivos o estructuras. 
+ 
+ 
+ 
+ 

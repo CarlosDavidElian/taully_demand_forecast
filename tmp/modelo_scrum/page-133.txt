@@ -1,0 +1,42 @@
+ 
+Condiciones 
+Se debe establecer un proceso de ETL que garantice la 
+extracción, transformación y carga de los datos de inventario en 
+la base de datos dimensional. Debe permitir gestionar el stock 
+total por ubicación y fecha, asegurando la coherencia con el 
+sistema de pedidos. 
+Restricciones Solo la Gerencia general tiene acceso a la administración del 
+ETL. No se deben modificar registros sin validación previa. 
+Fuente: Elaboración propia 
+Historia de usuario Nº 10: 
+En la Tabla 17 se evidencia la Historia Nº 10, llamada Desarrollo de predicción de 
+demanda, donde se detallan los usuarios, la prioridad basada en la técnica MoSCoW, 
+el tiempo estimado en días, condiciones y restricciones. 
+Tabla 17. Historia de usuario Nº 10 
+Elemento Detalle 
+Nombre Desarrollo de predicción de demanda 
+Usuarios Gerencia general 
+Prioridad M (Must Have) - Basada en la técnica MoSCoW 
+Tiempo 
+estimado 4 días 
+Condiciones 
+Se debe desarrollar un modelo de predicción de demanda 
+basado en aprendizaje automático. La solución debe analizar 
+históricos de pedidos y tendencias para generar pronósticos 
+precisos sobre futuro pedidos. 
+Restricciones 
+Solo la Gerencia general puede administrar el sistema de 
+predicción. Los modelos deben ser evaluados periódicamente 
+para garantizar su precisión. 
+Fuente: Elaboración propia 
+Historia de usuario Nº 11: 
+En la Tabla 18 se evidencia la Historia Nº 11, llamada Dashboard de inteligencia 
+de negocio , donde se detallan los usuarios, la prioridad basada en la técnica 
+MoSCoW, el tiempo estimado en días, condiciones y restricciones. 
+Tabla 18. Historia de usuario Nº 11 
+Elemento Detalle 
+Nombre Dashboard de inteligencia de negocio 
+Usuarios Gerencia general 
+Prioridad M (Must Have) - Basada en la técnica MoSCoW 
+Tiempo 
+estimado 4 días 

@@ -1,0 +1,36 @@
+ 
+La Tabla 44 muestra los componentes técnicos definidos para el funcionamiento del 
+proceso ETL de Cliente correspondiente al requerimiento RF07. 
+Tabla 44. Componentes técnicos del RF07 – ETL de Cliente 
+Elemento Descripción 
+Fuente de datos Archivo Excel (.xlsx) con datos de clientes 
+Herramienta 
+ETL 
+Script Python con transformaciones y reglas condicionales 
+según el tipo de cliente (DNI/RUC) 
+Tabla destino DIM_CLIENTE del modelo dimensional 
+Frecuencia Única vez (carga inicial) 
+Validaciones Formato de documento (8 dígitos para DNI, 11 para RUC), 
+duplicados, campos obligatorios 
+Uso posterior Asociar clientes con los pedidos realizados en la tabla 
+FACT_PEDIDOS mediante ID_CLIENTE 
+Fuente: Elaboración propia 
+En la Figura 29 se muestra el diseño funcional del RF08 que aprobó el Product Owner 
+para el proceso ETL de Ubicación, realizado en Diagrams.net, con los componentes 
+necesarios para su correcta ejecución. 
+Figura 29. Diagrama funcional del proceso ETL de Ubicación 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+La Tabla 45 muestra los componentes técnicos definidos para el funcionamiento del 
+proceso ETL de Ubicación correspondiente al requerimiento RF08. 
+Tabla 45. Componentes técnicos del RF08 – ETL de Ubicación 
+Elemento Descripción 
+Fuente de datos Archivo Excel (.xlsx) con clasificaciones de ubicaciones 
+logísticas (almacén y tienda) 
+Herramienta 
+ETL 
+Script Python con control de valores únicos y transformación 
+de etiquetas 

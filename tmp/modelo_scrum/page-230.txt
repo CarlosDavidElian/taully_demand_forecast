@@ -1,0 +1,24 @@
+ 
+En la Figura 86 se muestra el HTML para la visualización de los gráficos de las 
+predicciones IA del RF13, evidenciándose en el archivo predicciones_ia.html. 
+Figura 86. Predicciones IA del RF13 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+En la Figura 87 se muestra la interfaz gráfica de las predicciones IA del RF13, definido 
+por el Product Owner y desarrollado por el equipo de trabajo . Se muestra un gráfico 
+de barras donde se evidencian las predicciones en los meses de marzo, abril y mayo 
+del 2025, el cual se actualiza de acuerdo con el producto específico que se seleccione. 

@@ -1,0 +1,31 @@
+ 
+3 Implementación 45 días 09/04/25 31/05/25 
+4 Sprint 1 10 días 09/04/25 18/04/25 
+5 Planificación y estimación del Sprint 1 día 09/04/25 09/04/25 
+6 Implementación del Sprint 7 días 10/04/25 16/04/25 
+7 Revisión y retrospectiva del Sprint 2 días 17/04/25 18/04/25 
+8 Sprint 2 10 días 19/04/25 28/04/25 
+9 Planificación y estimación del Sprint 1 día 19/04/25 19/04/25 
+10 Implementación del Sprint 7 días 20/04/25 26/04/25 
+11 Revisión y retrospectiva del Sprint 2 días 27/04/25 28/04/25 
+12 Sprint 3 10 días 29/04/25 08/05/25 
+13 Planificación y estimación del Sprint 1 día 29/04/25 29/04/25 
+14 Implementación del Sprint 7 días 30/04/25 06/05/25 
+15 Revisión y retrospectiva del Sprint 2 días 07/05/25 08/05/25 
+16 Sprint 4 10 días 09/05/25 18/05/25 
+17 Planificación y estimación del Sprint 1 día 09/05/25 09/05/25 
+18 Implementación del Sprint 7 días 10/05/25 16/05/25 
+19 Revisión y retrospectiva del Sprint 2 días 17/05/25 18/05/25 
+20 Sprint 5 10 días 19/05/25 28/05/25 
+21 Planificación y estimación del Sprint 1 día 19/05/25 19/05/25 
+22 Implementación del Sprint 7 días 20/05/25 26/05/25 
+23 Revisión y retrospectiva del Sprint 2 días 27/05/25 28/05/25 
+24 Lanzamiento 0 días 31/05/25 31/05/25 
+Fuente: Elaboración propia 
+II. PLANIFICACIÓN Y ESTIMACIÓN 
+2.1. Historias de usuario 
+Las historias de usuario representan funcionalidades clave que resuelven 
+necesidades o problemas específicos del usuario o cliente dentro del sistema 
+Intersegur SCM. Se redactan de manera concisa, utilizando un lenguaje accesible 
+para facilitar la comprensión y priorización de los requerimientos. 
+ 

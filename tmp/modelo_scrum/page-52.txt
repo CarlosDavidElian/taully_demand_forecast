@@ -1,0 +1,31 @@
+42 
+ 
+[15] L. Zhao y J. Zhang, “Machine learning based business intelligence security and 
+privacy analysis with gaming model in training complexity application”, Entertain. 
+Comput., no. 50, may. 2024. [En línea]. Consultado: 1 oct. 2024. Disponible: 
+https://www.sciencedirect.com/science/article/pii/S1875952124000636?via%3D
+ihub 
+[16] J. Shobana et al.,  “E-commerce customer churn prevention using machine 
+learning-based business intelligence strategy”, Meas.: Sens., no. 27, mar. 2023. 
+[En línea]. Consultado: 1 oct. 2024. Disponible: 
+https://www.sciencedirect.com/science/article/pii/S2665917423000648 
+[17] R. Patriarca, G. Di, R. Cioponea y A. Licu, “Democratizing business intelligence 
+and machine learning for air traffic management safety”, Saf. Sci., oct. 2021. [En 
+línea]. Consultado: 1 oct. 2024. Disponible: 
+https://www.sciencedirect.com/science/article/pii/S0925753521003738 
+[18] N. Jasman y N. Ariffin, “Risk factors analysis in halal supply chain management 
+system”, J. Adv. Res. Appl. Sci. Eng. Technol., jun. 2024. [En línea]. Consultado: 
+2 oct. 2024. Disponible: 
+https://semarakilmu.com.my/journals/index.php/applied_sciences_eng_tech/arti
+cle/view/2081 
+[19] L. Rocha et al.,  Gestión empresarial de la cadena de suministro , 1ª ed. 
+Colombia: Ediciones de la U, 2020. [En línea]. Consultado: 5 oct. 2024. 
+Disponible: 
+https://www.google.com.pe/books/edition/Gesti%C3%B3n_empresarial_de_la_
+cadena_de_sum/DeEZEAAAQBAJ?hl=es&gbpv=1 
+[20] J. Ayala, “Gestión de compras”,  1ª ed. España: Editex S.A., 2021. [En línea]. 
+Consultado: 5 oct. 2024. Disponible: 
+https://www.google.com.pe/books/edition/Gesti%C3%B3n_de_compras/Dg4tE
+AAAQBAJ?hl=es&gbpv=1 
+[21] D. Palacios y M. Rodríguez, “Herramientas de logística esbelta aplicadas a un 
+sistema de abastecimiento de materiales”, Rev. Iberoam. Cienc., vol. 8, no. 2, 

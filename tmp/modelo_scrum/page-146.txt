@@ -1,0 +1,28 @@
+ 
+Tabla 35. Requerimientos del Sprint 1 
+Requerimientos 
+El sistema debe tener una ventana de inicio de sesión permitiendo el ingreso por 
+medio de un usuario y contraseña. 
+El sistema debe tener un módulo de usuarios en donde se podrá gestionar la vista, 
+creación, modificación y desactivación/activación de un usuario. 
+El sistema debe ejecutar un proceso de ETL que extraiga datos históricos de fechas 
+y los cargue en la tabla DIM_TIEMPO del Data Warehouse para alimentar la 
+inteligencia de negocio. 
+Fuente: Elaboración propia 
+• Entidades 
+En la Figura 6 se muestran las entidades del Sprint 1. Teniendo bien definido los 
+requerimientos podemos determinar aquellos objetos que están involucrados y sobre 
+los que se necesita almacenar información para el desarrollo de la solución. 
+Figura 6. Entidades del Sprint 1 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+• Diagrama Entidad/Relación 
+En la Figura 7 se muestra el diagrama conceptual de la base de datos del Sprint 1, 
+identificados las entidades se procede definir sus relaciones, los atributos que los 
+conforman y la cardinalidad. 
+ 
+ 

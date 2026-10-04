@@ -1,0 +1,25 @@
+ 
+En la Figura 16 se muestra la vista del RF0 3, con el nombre usuarios.html el cual 
+recibe los datos del controlador usuario_ controller.py, aplica los estilos, gestiona la 
+información, valida los campos y construye la página para la interacción con el 
+usuario. 
+Figura 16. Vista del RF03 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+En la Figura 1 7 se muestra el controlador del RF0 3, con el nombre 
+usuario_controller.py, el cual contiene la lógica del módulo . C uando recibe una 
+solicitud, genera una petición al modelo usuario.py para obtener los datos y enviarlos 
+a la vista usuarios.html. 

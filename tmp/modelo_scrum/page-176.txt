@@ -1,0 +1,23 @@
+ 
+Figura 39. Extracción de datos del RF06 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+En la Figura 40 se muestra la lógica para la transformación de datos de empleado  
+del RF06, evidenciándose en el archivo empleado_etl_controller.py. 
+Figura 40. Transformación de datos del RF06 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 

@@ -1,0 +1,31 @@
+38 
+ 
+V. Conclusiones 
+Con respecto al primer objetivo específico, se concluye que tras la implementación de 
+un sistema basado en Business Intelligence con Machine Learning, se presentó un 
+efecto altamente positivo en la precisión del inventario dentro de la cadena de 
+suministro de la empresa INTERSEGUR. A través del presente análisis estadístico 
+evidenció un incremento en la media de precisión de inventario de un 39.44% a un 
+49.02%; lo cual ayudo a concluir que dicha mejora fue significativa indicando así 
+también una reducción de errores en el registro y control de productos, favoreciendo 
+una mayor exactitud en la gestión del stock. 
+Con respecto al segundo objetivo específico, se determina que la tasa de 
+cumplimiento de pedidos también mejoró significativamente con el uso del sistema 
+implementado. La media pasó de un 79.85% a un 85.88%. Además, el análisis 
+inferencial que se realizó p reviamente confirmó que esta diferencia fue 
+estadísticamente significativa, lo cual evidenció una mayor eficiencia en la atención 
+de pedidos, reducción en los quiebres de stock y cumplimiento más oportuno con los 
+clientes de la empresa, lo cual es una mejo ra significativa para la empresa en su 
+respectivo proceso realizado. 
+Finalmente, con respecto al objetivo general, se llega a concluir que el sistema 
+propuesto influyó de forma altamente significativa y positiva en la mejora de la gestión 
+de la cadena de suministro en la empresa INTERSEGUR. La aplicación de 
+tecnologías como Business Intelligence y Machine Learning que se usaron para dicho 
+estudio, no solo permitió mejorar los indicadores operativos como el inventario y los 
+pedidos, sino que también brindó apoyo al momento de tomar decisiones a través de 
+herramientas gráficas interactivas. Esto fortaleció la eficiencia operativa y la rapidez 
+con la que la organización responde a los cambios en la demanda del mercado. 
+ 
+ 
+ 
+ 

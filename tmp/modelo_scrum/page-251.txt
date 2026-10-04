@@ -1,0 +1,24 @@
+ 
+Figura 99. Interfaz gráfica de la subsección Tasa de Cumplimiento de Pedidos - 
+RF14 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+En la Figura 100 se muestra la interfaz gráfica de la subsección “Predicciones”  del 
+RF14, definido por el Product Owner y desarrollado por el equipo de trabajo . S e 
+muestran en tabla los registros de las Predicciones IA, un botón para exportar la tabla 
+en Excel y un input para mostrar las predicciones por fecha específica. 
+Figura 100. Interfaz gráfica de la subsección Predicciones - RF14 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 

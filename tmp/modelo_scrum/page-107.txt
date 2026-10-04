@@ -1,0 +1,23 @@
+ 
+Figura 29. Código para ejecutar el flujo ETL 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+7.5. Validación y Verificación 
+Después de cada carga: 
+• Se validó que la cantidad de registros cargados coincida con los extraídos. 
+• Se verificó la integridad referencial mediante consultas de prueba. 
+• Se implementaron logs y mensajes de error para identificar rápidamente fallos 
+en el proceso. 
+ 
+ 

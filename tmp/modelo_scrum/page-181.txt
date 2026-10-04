@@ -1,0 +1,24 @@
+ 
+En la Figura 48 se muestra la lógica para la transformación de datos de ubicación del 
+RF08, evidenciándose en el archivo ubicacion_etl_controller.py. 
+Figura 48. Transformación de datos del RF08 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+En la Figura 49 se muestra la lógica para la carga de datos de ubicación  del RF08, 
+evidenciándose en  el archivo ubicacion_etl_controller .py. Con esto, los datos de 
+ubicación se insertarán en la tabla DIM_UBICACION del modelo dimensional. 
+Figura 49. Carga de datos del RF08 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+En la Figura 50 se muestra la carga de datos del RF08 en la tabla DIM_UBICACION 
+del modelo dimensional, definido por el Product Owner y desarrollado por el equipo 
+de trabajo. 
+ 

@@ -1,0 +1,34 @@
+10 
+ 
+permitiendo que se centraran más en el análisis y menos en la programación. Esto 
+permitió una integración más accesible y flexible del aprendizaje automático en el 
+análisis empresarial. 
+Por otra parte, l a variable dependiente del estudio fue la "gestión de la cadena de 
+suministro", la cual, según Jasman y Ariffin [18], es el proceso en el que participaron 
+tres o más partes en el movimiento de comercio, servicios, fondos o datos desde un 
+origen a varios lugares. La administración de la cadena de suministro comprendió el 
+proceso de adquisición mediante la producción y la distribución  en línea con la 
+demanda del mercado, centrándose en las siguientes áreas principales: proveedores, 
+colocación, inventarios de almacenamiento, entrega y datos. Además, su objetivo fue 
+aumentar la contribución de los actores involucrados en los procesos logísticos, 
+fortaleciendo la gestión de inventarios y elevando la efectividad operativa. 
+Asimismo, según Rocha et al. [19], el gestionar la cadena de suministro conllevó a la 
+proyección integral de todo el proceso desde el inicio hasta el final, incorporando la 
+coordinación de los procesos de gestión relacionados con proveedores, transporte, 
+almacenamiento, distribución y entrega en puntos de venta. Esto garantizó que los 
+bienes se puedan garantizar el suministro, producción y entrega en volúmenes 
+precisos, en el sitio y tiempo oportunos . Para lograr esto, las empresas gestionaron 
+eficazmente l os movimientos de información, materiales y recursos financieros, 
+asegurando el cumplimiento de los requisitos internacionales de importación y 
+exportación. Según indicaron los autores, la elaboración de la gestión de la cadena 
+de suministro comienza con el “servicio al cliente”, donde se reciben las solicitudes y 
+necesidades del cliente, las cuales son remitidas a la ejecución de las “compras y 
+aprovisionamiento”. En este punto es donde se gestiona ta nto los recursos 
+económicos como la información relacion ada con los requerimientos internos y las 
+cotizaciones de proveedores. Luego, está el procedimiento de “almacenamiento e 
+inventarios”, en el cual se gestiona el recibo, depósito y control de recursos como 
+suministros primarios, artículos en desarrollo y artículos culminados. Posteriormente, 
+se da la “logística de producción”, el cual tiene como objetivo coordinar el movimiento 
+de recursos esenciales para el proceso de transformación de los mismos en productos 
+terminados o servicios prestados. Una vez culmin ados los productos, entra la 
+“distribución física y transporte”, encargándose de gestionar el traslado de estos 

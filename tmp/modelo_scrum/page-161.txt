@@ -1,0 +1,48 @@
+ 
+Post condiciones 
+No se aplica 
+Defectos Veredicto 
+No se encontraron Paso 
+Observaciones Probador 
+Ninguna 
+• Marko Samuel Chacon 
+Ramos 
+• Erika Yanela Sancho Diaz 
+Fuente: Elaboración propia 
+• Prueba de caja negra del RF04 
+En la Tabla 38 se muestra la prueba de caja negra 3 aplicada al proceso de carga 
+ETL de datos de tiempo. Esta prueba tiene como objetivo validar que el sistema 
+realiza correctamente la lectura, transformación y carga de fechas en la tabla 
+DIM_TIEMPO, manejando errores, duplicados o formatos inválidos durante el 
+procedimiento. 
+Tabla 38. Prueba de caja negra 3 
+PRUEBA DE CAJA NEGRA 3 
+Código PCN-03 Fecha 07/04/2025 
+Tarea Ejecutar proceso 
+ETL de tiempo Módulo Carga dimensional 
+Descripción 
+Se ejecutarán pruebas para verificar si el proceso ETL carga los 
+registros de tiempo correctamente en la tabla DIM_TIEMPO, valida 
+el formato de las fechas, evita duplicidad y transforma los campos 
+según la estructura establecida. 
+Precondiciones 
+• Archivo .xlsx de fechas preparado con estructura válida 
+• Script ETL desarrollado y en funcionamiento 
+Pasos de la prueba 
+• Validar que los campos requeridos (fecha, año, mes, día) estén presentes 
+• Verificar que el proceso identifique fechas con formato inválido 
+• Validar que se eliminen registros duplicados antes de la carga 
+• Verificar que los datos correctos se carguen en la tabla DIM_TIEMPO sin errores 
+Datos de entrada Respuesta 
+esperada 
+Coincide Respuesta del 
+Sistema Campo Valor Escenario Sí No 
+- - Formato 
+inválido 
+Ingreso al 
+sistema X  
+El sistema 
+muestra 
+mensaje de 
+validación de 
+formato 

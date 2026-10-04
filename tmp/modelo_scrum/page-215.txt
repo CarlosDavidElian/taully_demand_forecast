@@ -1,0 +1,34 @@
+ 
+3.4. Sprint 4 
+El Sprint 4 fue desarrollado y documentado en cada una de sus 4 fases: Análisis, 
+Diseño, Implementación y Pruebas. 
+Análisis 
+En la Tabla 62 se presentan los requerimientos que conforman el Sprint 4. 
+Tabla 62. Sprint 4 
+Código HU Requerimiento 
+H.U.11 RF12: Interfaz de dashboard BI: Implementar la interfaz visual que 
+muestre gráficamente información de los indicadores claves. 
+H.U.12 
+RF13: Gráficos predictivos: Desarrollar el componente gráfico que 
+muestre visualmente las estimaciones generadas por el modelo de 
+IA. 
+Fuente: Elaboración propia 
+• Funcionalidades del Sprint 4 
+En la Tabla 63 se describen las funcionalidades que tendrá el sistema, mostrando la 
+interacción entre el usuario y la arquitectura de software para cada uno de los 
+requerimientos listados en el Sprint 4. 
+Tabla 63. Funcionalidades del Sprint 4 
+Código RF Funcionalidad 
+RF12 
+Se desarrolla una interfaz web que permite mostrar gráficamente la 
+información de los indicadores claves (precisión del inventario y tasa 
+de cumplimiento de pedidos). 
+RF13 
+Se implementa un gráfico dinámico que representa la demanda 
+proyectada por mes, utilizando los resultados generados por el 
+modelo predictivo de IA. 
+Fuente: Elaboración propia 
+ 
+ 
+ 
+ 

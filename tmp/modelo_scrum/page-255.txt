@@ -1,0 +1,56 @@
+ 
+exportar la 
+tabla actual 
+en formato 
+Excel 
+generado 
+con datos 
+coincidente
+s 
+Encabezados Mal 
+definidos 
+Rotulación 
+ambigua 
+Las 
+columnas 
+deben ser 
+“Fecha”, 
+“PEC”, “PR” 
+y “Tasa de 
+Cumplimient
+o (%)” 
+X  
+Encabezad
+os visibles y 
+correctame
+nte 
+rotulados 
+Post condiciones 
+La interfaz presenta correctamente los datos históricos de cumplimiento por fecha. 
+El cálculo porcentual es preciso, los valores coinciden con los registros originales, 
+y el archivo exportado refleja lo visualizado. No se detectan errores en el diseño ni 
+funcionalidad del módulo. 
+Defectos Veredicto 
+No se encontraron Paso 
+Observaciones Probador 
+La prueba fue ejecutada sobre la subsección “Tasa de 
+Cumplimiento de Pedidos” del RF14. Se validaron 
+correctamente los cálculos de TCP, los encabezados de 
+columna, la cantidad de registros y la funcionalidad de 
+exportación. 
+• Marko Samuel 
+Chacon Ramos 
+• Erika Yanela Sancho 
+Diaz 
+Fuente: Elaboración propia 
+En la Tabla 78 se muestra la prueba de caja negra 1 5 aplicada al desarrollo de la 
+subsección “ Predicciones” del módulo de reportes estratégicos. Esta prueba tiene 
+como objetivo validar que el sistema muestre correctamente las estimaciones de 
+demanda proyectada por producto para la fecha seleccionada, garantizando la 
+correcta lectura de datos desde predicciones_ia, el cruce con nombres de producto 
+desde DIM_PRODUCTO, y la funcionalidad de exportación en Excel. 
+ 
+ 
+ 
+ 
+ 

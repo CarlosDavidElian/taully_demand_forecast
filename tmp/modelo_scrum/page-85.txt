@@ -1,0 +1,24 @@
+ 
+Figura 3. Dashboard inicial 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: Elaboración propia 
+V. MODELADO DIMENSIONAL 
+El modelado dimensional es el eje estructural del Data Warehouse. En este proyecto 
+se ha implementado un modelo en estrella centrado en dos procesos clave del 
+negocio: los pedidos y el inventario, permitiendo  un análisis integral de la cadena de 
+suministro desde la perspectiva comercial y logística. 
+5.1. Objetivo del modelo dimensional 
+El objetivo principal del modelo dimensional es: 
+• Estructurar los datos de forma que faciliten su análisis desde múltiples 
+perspectivas: temporal, producto, cliente, empleado y ubicación. 
+• Habilitar reportes detallados y análisis predictivos sobre la gestión de 
+inventario, comportamiento de pedidos y desempeño comercial. 
+• Servir como base para la visualización de KPIs logísticos. 

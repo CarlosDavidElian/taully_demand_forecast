@@ -1,0 +1,30 @@
+41 
+ 
+[En línea]. Consultado: 28 sept. 2024. Disponible: https://dmame-
+journal.org/index.php/dmame/article/view/1115 
+[8] S. Yang et al., “Post-hazard supply chain disruption: Predicting firm -level sales 
+using graph neural network”, Int. J. Disaster Risk Reduct., vol. 110, art. 104664, 
+2024. doi: 10.1016/j.ijdrr.2024.104664 
+[9] L. Li, W. Zhu, L. Chen y Y. Liu, “Generative AI usage and sustainable supply 
+chain performance: A practice-based view”, Transp. Res. E Logist. Transp. Rev., 
+dec. 2024. [En línea]. Consultado: 28 sept. 2024. Disponible: 
+https://www.sciencedirect.com/science/article/pii/S1366554524003521?pes=vor 
+[10] A. A. Sharabati et al., “The role of artificial intelligence on digital supply chain in 
+industrial companies mediating effect of operational efficiency”, Uncertain Supply 
+Chain Manag., vol. 12, no. 3, pp. 1867 –1878, 2024. doi: 
+10.5267/j.uscm.2024.2.016 
+[11] M. Rodríguez, “Logística inversa y su incidencia en la cadena de suministro de 
+la municipalidad provincial de Huamanga, Ayacucho”, Tesis de maestría, Univ. 
+Nac. San Cristóbal de Huamanga, Ayacucho, Perú, 2023. [En línea]. Disponible: 
+https://repositorio.unsch.edu.pe/items/3780b3a4-ff5e-48be-a44f-e886dd582fae 
+[12] G. de la Cruz et al., “Inteligencia artificial para la integración de blockchain en la 
+cadena de suministros: una revisión sistemática”, Gest. Oper. Ind., vol. 1, no. 2, 
+pp. 38–51, 2022. doi: 10.17268/goi4.0.2022.08 
+[13] J. Calle et al., “Uso estratégico de la inteligencia artificial en la gestión de la 
+cadena de suministro empresarial”, Cienc. Desarro., vol. 27, no. 2, pp. 267–276, 
+2024. doi: 10.21503/cyd.v27i2.2620 
+[14] J. Bellido, J. Gonzales y J. Montalva, “Propuesta de diseño de la cadena de 
+suministro de productos farmacéuticos y dispositivos médicos para el sector 
+público a partir de un modelo conceptual”, Tesis de maestría, Univ. del Pacífico, 
+Lima, Perú, 2021. [En línea]. Disponible: 
+https://repositorio.up.edu.pe/handle/11354/3208 

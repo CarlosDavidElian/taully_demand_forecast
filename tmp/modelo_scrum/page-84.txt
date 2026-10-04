@@ -1,0 +1,26 @@
+ 
+c) Predicción de demanda 
+• Se implementa un modelo de predicción de series temporales (modelos de 
+regresión con Scikit-learn). 
+• Entrenamiento con datos históricos de pedidos. 
+d) Dashboard 
+• Construcción de interfaz web con Flask, con rutas protegidas por autenticación. 
+• El dashboard se genera con Chart.js embebido en HTML, mostrando: 
+1. Tendencias de demanda 
+2. KPIs logísticos 
+4.4. Pruebas e integración 
+• Se realizaron pruebas funcionales en cada etapa del ETL y del modelo de 
+predicción. 
+• Se validó la integridad del modelo dimensional importando datos reales. 
+• Se probaron filtros, vistas interactivas y predicciones en el dashboard. 
+4.5. Resultado de esta etapa 
+Se completó exitosamente la implementación de todos los componentes tecnológicos. 
+El sistema se encuentra integrado y funcional, permitiendo el acceso web a 
+dashboards dinámicos que se alimentan automáticamente de los datos procesados y 
+almacenados. 
+ 
+ 
+ 
+ 
+ 
+ 

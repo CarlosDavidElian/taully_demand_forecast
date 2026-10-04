@@ -1,0 +1,58 @@
+ 
+Pruebas 
+• Prueba de caja negra del RF14 
+En la Tabla 76 se muestra la prueba de caja negra 1 3 aplicada al desarrollo de la 
+subsección “Precisión del Inventario” del módulo de reportes estratégicos. Esta 
+prueba tiene como objetivo validar que el sistema muestre correctamente los datos 
+históricos de precisión por fecha en formato tabular, manejando la coherencia del 
+cálculo visualizado, la correcta disposición de los elementos de la interfaz y la 
+funcionalidad de exportación en formato Excel. 
+Tabla 76. Prueba de caja negra 13 
+PRUEBA DE CAJA NEGRA 13 
+Código PCN-13 Fecha 02/06/2025 
+Tarea 
+Verificar visualización de 
+la sección “Precisión del 
+Inventario” 
+Módulo RF14 – Reportes 
+estratégicos 
+Descripción 
+Se ejecutarán pruebas para validar que la interfaz correspondiente 
+a la subsección “Precisión del Inventario” muestre correctamente la 
+tabla con indicadores agregados por fecha. La visualización debe 
+incluir los valores de productos en tienda (PT), product os totales 
+(TP) y la precisión del inventario calculada (%). También se revisará 
+el funcionamiento del botón de exportación, que debe generar un 
+archivo .xlsx fiel a lo que se muestra en pantalla. 
+Precondiciones 
+• Datos agregados históricos disponibles en la tabla FACT_INVENTARIO 
+• Cálculo de precisión previamente ejecutado (PT / TP * 100) 
+• Elementos visuales correctamente estructurados en la interfaz 
+• Botón de exportación funcional y accesible desde la vista 
+Pasos de la prueba 
+• Verificar que la tabla muestre fechas correspondientes a febrero de 2025 
+• Confirmar que los valores PT y TP se reflejen correctamente por fecha 
+• Validar que los porcentajes de precisión estén calculados y presentados sin 
+errores 
+• Comprobar que el botón "Exportar" descargue un archivo .xlsx que coincida con 
+la tabla visualizada 
+• Revisar que los títulos de columnas estén correctamente rotulados y legibles 
+• Evaluar que la estructura visual sea clara, ordenada y sin omisiones 
+Datos de entrada Respuesta 
+esperada 
+Coincide Respuesta 
+del 
+Sistema Campo Valor Escenario Sí No 
+Registros por 
+fecha 
+Incompleto
+s 
+Datos 
+faltantes 
+El sistema 
+debe 
+mostrar los 
+X  
+Tabla visual 
+presenta 
+los registros 

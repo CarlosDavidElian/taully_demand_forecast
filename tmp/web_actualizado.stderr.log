@@ -29,3 +29,9 @@ Press CTRL+C to quit
 127.0.0.1 - - [03/Oct/2026 19:26:33] "POST /api/reports HTTP/1.1" 200 -
 127.0.0.1 - - [03/Oct/2026 19:26:37] "POST /api/train HTTP/1.1" 200 -
 127.0.0.1 - - [03/Oct/2026 19:26:49] "POST /api/forecast HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 22:20:38] "POST /api/reports HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 22:20:44] "POST /api/train HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 22:21:25] "POST /api/forecast HTTP/1.1" 400 -
+127.0.0.1 - - [03/Oct/2026 22:21:28] "POST /api/train HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 22:21:34] "POST /api/forecast HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 22:21:46] "POST /api/posttest HTTP/1.1" 200 -

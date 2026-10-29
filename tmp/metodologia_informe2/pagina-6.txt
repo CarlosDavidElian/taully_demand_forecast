@@ -1,0 +1,48 @@
+ 
+3 
+ 
+aproximadamente un 4% en comparación con los tres métodos tradicionales 
+evaluados [2].  
+ 
+El análisis estadístico reveló que la distribución Exponencial -Poisson puede generar 
+valores cercanos a las ventas reales con un margen de error inferior al 7% [4]. 
+Superaron a los métodos tradicionales en un rango del 9% al 35% en términos de 
+error cuadrático medio (MSE) [4]. Asimismo, Auppakorn y Phumchusri [3] propusieron 
+métodos para el pronóstico de ventas diarias en negocios retail  con productos de 
+distintas categorías y precios variables. Este antecedente se relacionó directamente 
+con el tema de investigación, ya que trabajó con ventas diarias, categorías de 
+productos y un entorno comercial minorista. En el caso de un minimarket, la demanda 
+diaria pudo variar considerablemente entre días laborables, fines de semana, fechas 
+de pago, campañas escolares, feriados o temporadas de mayor consumo.  
+ 
+Debido a ello, una estimación mensual o general pudo resultar poco precisa para 
+orientar decisiones de compra a corto plazo. En cambio, la predicción diaria ofreció 
+una referencia más cercana a la realidad operativa del negocio. El problema también 
+estuvo relacionado con la presencia de productos con demanda irregular. Ahmadov 
+et al. [4] abordaron la predicción de ventas 4 intermitentes mediante técnicas de deep 
+learning, resaltando la dificultad de anticipar el comportamiento de productos que no 
+se vendieron todos los días o que presentaron patrones de consumo variables. Este 
+aspecto resultó importante para los minimarkets, ya que no todas las categorías 
+tuvieron la misma frecuencia de rotación.  
+ 
+Mientras algunos productos pudieron venderse diariamente, otros dependieron de 
+necesidades ocasionales, promociones o cambios en las preferencias de los 
+consumidores. En consecuencia, un modelo de predicción debió considerar que la 
+demanda de determinadas categorías podía presentar una alta variabilidad y no 
+seguir siempre patrones simples o constantes, ya que el comportamiento de compra 
+de los consumidores pudo cambiar según distintos factores Las entrevistas realizadas 
+tuvieron una duración promedio de 59 minutos [5]. Las fallas o errores operativos de 
+los empleados en los puntos de venta (POS) representan el 24% de las diferencias 
+de inventario en la industria minorista [5]. Otro factor que influyó en la demanda dentro 
+del sector retail fue el contexto externo.  
+ 
+Chan y Wahab [5] analizaron el impacto de las condiciones climáticas en las ventas 
+mediante técnicas de machine learning, demostrando que factores como el calor, el 
+frío o las lluvias podían influir en el comportamiento de compra de los consumidores. 
+Este aspecto es relevante para un minimarket ubicado en Comas, ya que la demanda 
+de algunas categorías, como bebidas, helados, productos de limpieza y alimentos de 
+consumo rápido, puede variar según las condiciones climáticas y la temporada del 
+año. Por ello, la presente investigación busca estimar la demanda diaria a partir del 
+análisis del historial de ventas de cada categoría de producto. 
+ 
+ 

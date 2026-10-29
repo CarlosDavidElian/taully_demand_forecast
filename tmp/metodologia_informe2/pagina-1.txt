@@ -1,0 +1,29 @@
+ 
+ 
+ FACULTAD DE INGENIERÍA Y ARQUITECTURA 
+ESCUELA PROFESIONAL DE INGENIERÍA DE 
+SISTEMAS 
+  
+Modelo de machine learning para predecir la demanda diaria por categoría 
+de producto en minimarket del distrito de Comas 2026 
+ 
+  
+  
+Tesis para obtener el título profesional de: 
+Ingeniería de Sistemas 
+ 
+  Autor : 
+Guerrero Mora, Carlos David Elian (orcid.org/0000-0002-2045-0688)   
+  
+Asesor(a)(es): 
+Mg. Perez Farfan, Ivan Martin (orcid.org/0000-0001-5833-9400) 
+ 
+   
+Línea de investigación: 
+Sistemas de Información y Comunicaciones 
+  
+Línea de responsabilidad social universitaria: 
+Innovación Tecnológica y Transformación Digital 
+ 
+LIMA – PERÚ 
+2026  

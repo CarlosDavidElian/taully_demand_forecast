@@ -1,0 +1,3627 @@
+\n=== PDF PAGINA 1 ===\n 
+ 
+ FACULTAD DE INGENIERÍA Y ARQUITECTURA 
+ESCUELA PROFESIONAL DE INGENIERÍA DE 
+SISTEMAS 
+  
+Modelo de machine learning para predecir la demanda diaria por categoría 
+de producto en minimarket del distrito de Comas 2026 
+ 
+  
+  
+Tesis para obtener el título profesional de: 
+Ingeniería de Sistemas 
+ 
+  Autor : 
+Guerrero Mora, Carlos David Elian (orcid.org/0000-0002-2045-0688)   
+  
+Asesor(a)(es): 
+Mg. Perez Farfan, Ivan Martin (orcid.org/0000-0001-5833-9400) 
+ 
+   
+Línea de investigación: 
+Sistemas de Información y Comunicaciones 
+  
+Línea de responsabilidad social universitaria: 
+Innovación Tecnológica y Transformación Digital 
+ 
+LIMA – PERÚ 
+2026  
+
+\n=== PDF PAGINA 2 ===\n 
+ii 
+ 
+Declaratoria de autenticidad del asesor 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+\n=== PDF PAGINA 3 ===\n 
+iii 
+ 
+Declaratoria de originalidad del autor 
+ 
+ 
+ 
+ 
+
+\n=== PDF PAGINA 4 ===\n 
+iv 
+ 
+ 
+Dedicatoria 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+\n=== PDF PAGINA 5 ===\n 
+v 
+ 
+ 
+Agradecimiento 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+\n=== PDF PAGINA 6 ===\n 
+vi 
+ 
+ 
+Índice de contenidos 
+ 
+Caratula…………………………………………………………………………………i 
+ 
+Declaratoria de autenticidad del asesor ............................................................. II 
+Declaratoria de originalidad del/os autor/es ...................................................... III 
+Dedicatoria ........................................................................................................ IV 
+Agradecimiento .................................................................................................. V 
+Índice de contenidos ......................................................................................... VI 
+Índice de tablas ............................................................................................... VIII 
+Índice de figuras ............................................................................................... IX 
+Resumen ........................................................................................................... X 
+Abstract ............................................................................................................. XI 
+I. Introducción .................................................................................................... 1 
+II. Metodología ................................................................................................. 12 
+III. Resultados .................................................................................................. 16 
+IV. Discusión .................................................................................................... 17 
+V. Conclusiones ............................................................................................... 18 
+VI. Recomendaciones ...................................................................................... 19 
+Referencias ...................................................................................................... 20 
+Anexos ............................................................................................................. 25 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+\n=== PDF PAGINA 7 ===\n 
+vii 
+ 
+ 
+\n=== PDF PAGINA 8 ===\n 
+viii 
+ 
+Índice de tablas 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+\n=== PDF PAGINA 9 ===\n 
+ix 
+ 
+Índice de figuras 
+ 
+ 
+Fig. 1. Formula mape [3]. ................................................................................... 2 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+\n=== PDF PAGINA 10 ===\n 
+x 
+ 
+ 
+ 
+Resumen 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+\n=== PDF PAGINA 11 ===\n 
+xi 
+ 
+Abstract 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+\n=== PDF PAGINA 12 ===\n 
+1 
+ 
+I. Introducción 
+ 
+En los últimos años, la gestión de la demanda se convirtió en una necesidad 
+relevante para los negocios dedicados a la comercialización de productos de 
+consumo diario, debido al comportamiento de compra de los clientes presentó 
+variaciones constantes y difíciles de anticipar mediante métodos tradicionales. 
+En el sector retail, estas variaciones se observaron con mayor claridad en 
+empresas que manejaron diversos productos, categorías, precios, promociones 
+y temporadas de venta. Esta situación afectó especialmente a pequeños 
+negocios, como bodegas, tiendas y minimarkets , debido a que muchas de sus 
+decisiones de compra, reposición y abastecimiento continuaron dependiendo de 
+la experiencia del encargado o de revisiones manuales de las ventas. 
+En ese contexto, la predicción de la demanda pasó a ser una herramienta clave 
+para disminuir la incertidumbre y optimizar la planificación de productos dentro 
+del negocio. Las fallas o errores operativos de los empleados en los puntos de 
+venta (POS) representan el 24% de las diferencias de inventario en la industria 
+minorista. [1]. 
+  
+La problemática de la demanda no estuvo relacionada únicamente con vender 
+una mayor o menor cantidad de productos, sino también con factores 
+importantes como la disponibilidad del inventario, la satisfacción de los clientes 
+y el uso eficiente de los recursos del negocio. Cuando un minimarket no lograba 
+estimar de manera aproximada la cantidad de productos que serían solicitados 
+en un determinado periodo, podían generarse distintas dificultades en la 
+operación diaria. Por un lado, el exceso de productos ocasionaba acumulación 
+de mercadería, vencimiento de artículos perecibles, uso innecesario de espacio 
+y pérdidas económicas.  
+ 
+Por otro lado, la escasez de productos provocaba quiebres de stock, pérdida de 
+ventas e incluso la posibilidad de que los clientes optaran por acudir a otros 
+establecimientos. Considerando que en estudios del sector se ha identificado 
+que los errores operativos en los puntos de venta representan el 24% de las 
+diferencias de inventario [1], [3]. Donde el uso de modelos de Machine Learning 
+ha demostrado reducir las tasas de error de pronóstico (WMAPE) en rangos 
+significativos, alcanzando mejoras de precisión de hasta un 4.779% frente a 2 
+métodos tradicionales [1], [2], [3].  
+ 
+Debido a ello, la predicción de la demanda diaria por categoría de producto se 
+convirtió en una necesidad importante para este tipo de negocios, ya que 
+permitió mejorar la organización de las compras y responder de manera más 
+adecuada al comportamiento de los consumidores. 
+ 
+
+\n=== PDF PAGINA 13 ===\n 
+2 
+ 
+ 
+ 
+Fig. 1. Formula MAPE [3]. 
+ 
+ 
+ 
+A nivel internacional, el uso de machine learning en el sector retail adquirió una mayor 
+importancia debido a su capacidad para analizar datos históricos de ventas e 
+identificar patrones que muchas veces no podían detectarse fácilmente mediante 
+procedimientos manuales. Brackmann, Friedrich y Urbach [1] destacan que el 
+machine learning ofrece un abanico de soluciones muy prácticas para el sector retail, 
+especialmente al momento de administrar las ventas, el inventario y la rutina operativa 
+diaria. Esto demuestra que los modelos predictivos funcionan como un respaldo real 
+para que cualquier comercio mejore su dinámica interna, aunque el éxito de estos 
+pronósticos no pasa solamente por tener el algoritmo más avanzado.  
+ 
+Para que la herramienta realmente funcione, es obligatorio hacer un trabajo de fondo 
+que implica limpiar a detalle la base de datos histórica, clasificar los productos con 
+lógica y tener la habilidad administrativa para traducir esos cálculos en verdaderas  
+acciones de compra o reposición en la tienda. Una vez que se realiza correctamente 
+toda esta preparación técnica, arquitecturas más complejas como las Redes 
+Neuronales Profundas (DNN) logran sacar a relucir todo su potencial, llegando a 
+superar en precisi ón hasta en un 35 % a los métodos estadísticos convencionales 
+como el Promedio Móvil, el método de Croston, ARIMA o el Suavizado Exponencial 
+[4].  
+ 
+En este mismo sentido, el trabajo de Wang y Luo [2] resulta clave, ya que ellos 
+armaron un método para proyectar las ventas dividiendo los productos por categorías 
+a través de modelos como CatBoost, Decision Tree y XGBoost. Tomar en cuenta este 
+antecedente es muy útil para nuestro proyecto porque 3 aborda justo lo que buscamos 
+hacer: predecir cómo se moverá la mercadería según su grupo o familia, lo cual encaja 
+perfectamente con el objetivo del estudio. Sumado a esto, los r esultados que 
+obtuvieron demostraron que el uso de machine learning realmente logró generar 
+estimaciones más precisas y útiles para la planificación comercial y la gestión del 
+inventario.  
+ 
+En el caso de un minimarket, la demanda no se comportó igual en todas las áreas del 
+negocio. Por ejemplo, categorías como bebidas, abarrotes, productos de limpieza, 
+golosinas o artículos de primera necesidad pudieron variar según el día de la semana, 
+la temporada, los precios o los hábitos de compra de los clientes. Por esta razón, 
+analizar solo las ventas totales del negocio no resultó suficiente para tomar decisiones 
+específicas sobre reposición y planificación de productos. La predicción por categoría 
+permitió una visión más detal lada y útil para la gestión diaria del establecimiento. El 
+método híbrido propuesto logró una mejora media en el desempeño de 
+\n=== PDF PAGINA 14 ===\n 
+3 
+ 
+aproximadamente un 4% en comparación con los tres métodos tradicionales 
+evaluados [2].  
+ 
+El análisis estadístico reveló que la distribución Exponencial -Poisson puede generar 
+valores cercanos a las ventas reales con un margen de error inferior al 7% [4]. 
+Superaron a los métodos tradicionales en un rango del 9% al 35% en términos de 
+error cuadrático medio (MSE) [4]. Asimismo, Auppakorn y Phumchusri [3] propusieron 
+métodos para el pronóstico de ventas diarias en negocios retail  con productos de 
+distintas categorías y precios variables. Este antecedente se relacionó directamente 
+con el tema de investigación, ya que trabajó con ventas diarias, categorías de 
+productos y un entorno comercial minorista. En el caso de un minimarket, la demanda 
+diaria pudo variar considerablemente entre días laborables, fines de semana, fechas 
+de pago, campañas escolares, feriados o temporadas de mayor consumo.  
+ 
+Debido a ello, una estimación mensual o general pudo resultar poco precisa para 
+orientar decisiones de compra a corto plazo. En cambio, la predicción diaria ofreció 
+una referencia más cercana a la realidad operativa del negocio. El problema también 
+estuvo relacionado con la presencia de productos con demanda irregular. Ahmadov 
+et al. [4] abordaron la predicción de ventas 4 intermitentes mediante técnicas de deep 
+learning, resaltando la dificultad de anticipar el comportamiento de productos que no 
+se vendieron todos los días o que presentaron patrones de consumo variables. Este 
+aspecto resultó importante para los minimarkets, ya que no todas las categorías 
+tuvieron la misma frecuencia de rotación.  
+ 
+Mientras algunos productos pudieron venderse diariamente, otros dependieron de 
+necesidades ocasionales, promociones o cambios en las preferencias de los 
+consumidores. En consecuencia, un modelo de predicción debió considerar que la 
+demanda de determinadas categorías podía presentar una alta variabilidad y no 
+seguir siempre patrones simples o constantes, ya que el comportamiento de compra 
+de los consumidores pudo cambiar según distintos factores Las entrevistas realizadas 
+tuvieron una duración promedio de 59 minutos [5]. Las fallas o errores operativos de 
+los empleados en los puntos de venta (POS) representan el 24% de las diferencias 
+de inventario en la industria minorista [5]. Otro factor que influyó en la demanda dentro 
+del sector retail fue el contexto externo.  
+ 
+Chan y Wahab [5] analizaron el impacto de las condiciones climáticas en las ventas 
+mediante técnicas de machine learning, demostrando que factores como el calor, el 
+frío o las lluvias podían influir en el comportamiento de compra de los consumidores. 
+Este aspecto es relevante para un minimarket ubicado en Comas, ya que la demanda 
+de algunas categorías, como bebidas, helados, productos de limpieza y alimentos de 
+consumo rápido, puede variar según las condiciones climáticas y la temporada del 
+año. Por ello, la presente investigación busca estimar la demanda diaria a partir del 
+análisis del historial de ventas de cada categoría de producto. 
+ 
+ 
+\n=== PDF PAGINA 15 ===\n 
+4 
+ 
+ 
+Sin embargo, la salida de los productos no depende únicamente de la información 
+registrada en el minimarket. También existen factores externos que pueden modificar 
+las decisiones de compra de los consumidores y que no siempre aparecen reflejados 
+en los registros de los puntos de venta (POS). Por esta razón, futuras investigaciones 
+podrían incluir estas variables para mejorar la capacidad de los modelos al momento 
+de estimar la demanda. 
+ 
+Asimismo, desde la perspectiva de la Inteligencia Artificial Explicable (XAI), distintos 
+estudios señalan que las características físicas y comerciales de los productos 
+pueden influir en su nivel de venta. En un minimarket, elementos como el tamaño del 
+envase, la presentación o la forma en que cada artículo es registrado en el sistema 
+suelen formar parte de la gestión cotidiana. Sin embargo, al momento de desarrollar 
+un modelo de pronóstico, estas características pueden convertirse en variables útiles 
+para comprender mejor el comportamiento de la demanda. 
+ 
+En el caso del Minimarket Taully, ello pone de manifiesto que, antes de implementar 
+un modelo de machine learning, es necesario revisar, organizar y depurar el catálogo 
+de productos para disponer de información comercial consistente y confiable De esta 
+manera, el proceso de predicción se fundamentará en datos correctamente 
+estructurados, favoreciendo un entrenamiento más adecuado del modelo y una 
+estimación más precisa de la demanda. Si juntamos los productos de forma 
+desordenada o simplemente co mo el encargado está acostumbrado a ubicarlos en 
+los estantes, el sistema va a recibir información cruzada durante su fase de 
+entrenamiento. El resultado de este error es que el algoritmo nunca logrará identificar 
+los verdaderos patrones de consumo de los clientes.  
+ 
+Por este motivo, estimar cuánto se va a vender va mucho más allá de aplicar una 
+ecuación matemática; la verdadera clave está en hacer el trabajo previo de depurar, 
+organizar y estructurar toda la base de datos del local para que la computadora 
+procese información limpia y apegada a la realidad. 
+A nivel local, también logramos identificar distintos trabajos de investigación 
+enfocados en aplicar el machine learning para solucionar problemas reales de ventas, 
+inventario y cálculo de la demanda. Un referente directo de esto es el proyecto 
+desarrollado en la Universidad Tecnológica del Perú [7], donde estructuraron un 
+modelo dedicado específicamente a predecir la neces idad de mercadería dentro de 
+un minimarket basándose en este tipo de técnicas predictivas. 
+ 
+Este antecedente se relacionó directamente con el presente estudio, ya que abordó 
+un contexto similar y demostró que este tipo de 6 modelos también pudo aplicarse en 
+pequeños negocios comerciales. Este aporte permitió evidenciar que el problema de 
+anticipar la demanda no fue exclusivo de grandes cadenas comerciales, sino que 
+también afectó a pequeños y medianos negocios del contexto peruano. Sin embargo, 
+se debió considerar que cada minimarket  presentó características particulares en 
+cuanto a ubicación, tipo de clientes, variedad de productos, frecuencia de compra y 
+\n=== PDF PAGINA 16 ===\n 
+5 
+ 
+nivel de digitalización. Por ello, los resultados obtenidos en otros estudios no pudieron 
+aplicarse automáticamente al caso del minimarket en estudio sin realizar previamente 
+un análisis de sus propios datos.  
+ 
+Palomino Huarilloclla [8] implementó un modelo de machine learning para la 
+predicción de la demanda en una ferretería de Moquegua, relacionando la predicción 
+con la gestión de inventarios y la toma de decisiones dentro de una empresa comercial 
+local. Aunque una ferretería no perteneció al mismo rubro que un minimarket, ambos 
+negocios compartieron una dificultad similar: anticipar qué productos serían más 
+solicitados y en qué momento sería necesario reponerlos. Este antecedente permitió 
+sostener que los modelos predictivos pudieron adaptarse a distintos tipos de 
+negocios, siempre que existiera información histórica suficiente y una adecuada 
+selección de variables.  
+ 
+En el caso del minimarket  en estudio, dicha adaptación resultó necesaria debido a 
+que el comportamiento de compra estuvo asociado a productos de consumo frecuente 
+y a categorías con diferentes niveles de rotación. Montero López [9] propuso un 
+sistema web inteligente basado en mach ine learning  para mejorar la gestión y el 
+análisis de información relacionada con las ventas, la demanda y el inventario de una 
+empresa. Este estudio fue relevante porque relacionó los modelos predictivos con el 
+control de stock y demostró que la predicción pudo aplicarse a necesidades concretas 
+de gestión.  
+ 
+En el caso de un minimarket , un modelo predictivo no solo permitiría estimar 
+cantidades futuras, sino también apoyar decisiones sobre compras, reposición, 
+almacenamiento y disponibilidad de productos. Desde esta perspectiva, el machine 
+learning pudo ayudar a reducir decisiones impro visadas y fortalecer una gestión 
+basada en datos.  Ponce Illacutipa [10] desarrolló un modelo basado en machine 
+learning para optimizar el pronóstico de ventas de la empresa Ricos Pan durante el 
+periodo 2020-2021.  
+ 
+Este estudio mostró que las técnicas de aprendizaje automático pudieron mejorar la 
+estimación de ventas y servir como apoyo para la toma de decisiones en una empresa 
+comercial. Asimismo, demostró la importancia de trabajar con datos históricos para 
+identificar patrones de comportamiento en las ventas y obtener proyecciones más 
+precisas. Este estudio aportó al presente trabajo al evidenciar que el pronóstico de 
+ventas pudo utilizarse como una herramienta para estimar la demanda en negocios 
+del contexto perua no. Aunque el rubro de panificación presentó características 
+distintas al de un minimarket, ambos contextos compartieron la necesidad de anticipar 
+el comportamiento de compra para evitar pérdidas por exceso de producción, falta de 
+productos o mala planificación.  
+ 
+Flores Taquiri y Montalvo Celis [11] analizaron el uso de machine learning para 
+mejorar la predicción en la gestión de inventario dirigida a PYMES de venta de 
+productos tecnológicos. Su investigación fue útil porque abordó el problema desde la 
+\n=== PDF PAGINA 17 ===\n 
+6 
+ 
+realidad de pequeñas y medianas empresas, donde muchas decisiones continuaron 
+dependiendo de registros básicos, hojas de cálculo o criterios empíricos. Esta 
+situación fue cercana al contexto de un minimarket, donde la falta de herramientas 
+predictivas pudo  limitar la planificación de compras y ocasionar errores en la 
+reposición.  
+ 
+Sin embargo, también se reconoció que la aplicación de machine learning  en una 
+PYME exigió condiciones mínimas, como disponibilidad de datos históricos, 
+categorización correcta de productos y evaluación objetiva del desempeño del 
+modelo. León Villavicencio y Vinces Chumbes [12] aplicaron machine learning para la 
+gestión de ventas en la empresa Forever Group SAC, considerando la predicción de 
+ingresos y cantidades vendidas. Este antecedente permitió observar que las técnicas 
+de aprendizaje automático pudieron apoyar el análisis comercial en empresas 
+peruanas. Asimismo, Anchante Aybar y Fernández Chávez [13] estudiaron el machine 
+learning para la toma de decisiones en la gestión de ventas en Lima, reforzando la 
+idea de que los modelos predictivos no solo tuvieron valor técnico, sino también valor 
+8 administrativo.  
+ 
+Rojas Vilca [14] desarrolló un aplicativo móvil con machine learning para la gestión de 
+ventas en productos de una empresa de Lima, relacionando tecnología, productos, 
+ventas y modelos predictivos dentro de una solución aplicada. Serna Berrocal [15] 
+planteó un modelo de machine learning para predecir las ventas de una empresa 
+retail, y González Jauregui y Mariscal Cruzado [16] propusieron mejoras basadas en 
+machine learning, Big Data y DDMRP para optimizar el cumplimiento del pronóstico 
+en una empresa de bienes de consumo. Separa Desde el enfoque teórico, el machine 
+learning se entiende como una rama de la inteligencia artificial orientada al desarrollo 
+de modelos capaces de aprender patrones a partir de datos históricos para realizar 
+predicciones o clasificaciones.  
+ 
+En el caso de la predicción de demanda, el aprendizaje automático permite utilizar 
+registros históricos de ventas para estimar comportamientos futuros. Padmanabham 
+[17] propone un marco de machine learning para el pronóstico de ventas en el sector 
+retail, considerando etapas como el preprocesamiento de datos, el análisis 
+exploratorio, la ingeniería de características y la comparación de modelos de 
+regresión. Este enfoque resulta importante para el presente estudio, porque muestra 
+que el rendimiento de un modelo no depende solo del algoritmo seleccionado, sino 
+también de la preparación adecuada de los datos, la calidad de la información 
+utilizada y la correcta selección de variables para el proceso de predicción. 
+  
+Mustapha y Sithole [18] evalúan modelos como Random Forest, XGBoost, regresión 
+lineal y ARIMA para el pronóstico de ventas en el sector retail, comparando métodos 
+tradicionales con modelos basados en machine learning. Este antecedente muestra 
+que la elección de un modelo no debe depender solo de qué tan complejo fuera, sino 
+también de su desempeño, su facilidad de interpretación y su relación con el problema 
+de estudio. En algunos casos, un modelo sencillo puede brindar resultados aceptables 
+\n=== PDF PAGINA 18 ===\n 
+7 
+ 
+y fáciles de comprender. En otros, los modelos más robustos pueden reconocer 
+relaciones no lineales y mejorar la precisión de las predicciones. Por ello, en el 
+0presente estudio se considera la comparación de diferentes modelos y el uso de 
+métricas de evaluación, con el fin de determinar cuál se ajusta mejor a 9 los datos del 
+minimarket en estudio y ofrece mejores resultados para la predicción de la demanda. 
+ 
+Mansur, Ahmed e Islam  [19] presentan modelos híbridos basados en redes 
+neuronales y técnicas de machine learning para predecir ventas en tiendas retail, 
+demostrando que la combinación de distintos métodos puede mejorar la precisión del 
+pronóstico. De manera similar, Ahmed, Khan y Ali [20] comparan algoritmos de deep 
+learning, como CNN, LSTM, MLP y modelos híbridos, aplicados al pronóstico de 
+ventas en el sector retail. Estos aportes muestran que existen métodos avanzados 
+para trabajar problemas de forecasting y predicción de demanda. Sin embargo, en el 
+contexto de un minimarket, el uso de modelos complejos debe evaluarse con cuidado, 
+ya que el modelo más avanzado no siempre es el más adecuado para las necesidades 
+del negocio.  
+ 
+Por ello, la elección del modelo debe considerar la cantidad de datos disponibles, la 
+facilidad de implementación y la posibilidad de interpretar los resultados para apoyar 
+la toma de decisiones comerciales. La relación entre la predicción de la demanda y la 
+gestión de inventario es importante en los negocios retail, porque ambas áreas 
+influyen en la disponibilidad de productos y en el uso adecuado de los recursos. Liu, 
+Kalaitzi, Wang y Papanagnou [21] desarro llan un enfoque basado en machine 
+learning para predecir quiebres de stock, relacionando el comportamiento de la 
+demanda con la disponibilidad de productos en el sector retail . Este aporte es 
+relevante porque muestra que anticipar la demanda pudo ayudar a reducir situaciones 
+de desabastecimiento y mejorar la disponibilidad de productos.  
+ 
+En el caso del minimarket  en estudio, la predicción diaria por categoría permite 
+identificar las categorías con mayor riesgo de quiebre de stock, y facilita una mejor 
+planificación de compras y reposición de productos. De esta manera, el modelo no 
+solo tiene valor estadístico, sin o también una utilidad práctica en las operaciones 
+diarias del negocio. Por otra parte, al enfocarnos en la mercadería que recién ingresa 
+a la tienda y carece de un historial amplio, resulta muy útil el estudio de Sousa, Moreira 
+y Ferreira [22], quienes aplican machine learning para proyectar la demanda de estos 
+nuevos artículos en el sector minorista. Sobre este mismo punto, 10 Wang, Chen y 
+Lin [23] proponen una forma de calcular esta demanda dividiendo el análisis en dos 
+etapas, mientras que Hwang, Kim y Park [24] opta n por apoyarse en técnicas de 
+clustering y ensemble learning para afinar mucho más esos pronósticos.  
+ 
+En conjunto, estas investigaciones muestran que un modelo predictivo no debería 
+centrarse únicamente en productos que ya cuentan con un historial de ventas estable. 
+Cuando un establecimiento incorpora un nuevo producto o amplía su oferta comercial, 
+las primeras ventas pueden no reflejar con claridad el comportamiento habitual de la 
+demanda. Por ello, resulta conveniente utilizar métricas complementarias que 
+\n=== PDF PAGINA 19 ===\n 
+8 
+ 
+permitan observar cómo evoluciona el comportamiento de estos productos a medida 
+que ganan presencia en el mercado. En cuanto a las condiciones del entorno físico, 
+Hu et al. [25] demostraron, mediante el uso de AutoML y técnicas de inteligencia 
+geoespacial, que la ubicación geográfica puede influir de manera importante en las 
+tendencias de compra de los consumidores. 
+ 
+Este planteamiento también puede observarse en el distrito de Comas, donde la 
+rotación del inventario no depende solo de la cantidad de productos disponibles en el 
+minimarket. También puede verse influida por factores externos, como la presencia 
+de otros establecimientos comerciales, el flujo de personas y los hábitos de consumo 
+de la población. A ello se suma el avance de los sistemas computacionales, que 
+actualmente permiten  procesar mayores volúmenes de información e incorporar 
+diferentes variables en los modelos utilizados para estimar la demanda. 
+ 
+En este sentido, Shahzad, Khan y Ullah [26] indican que algoritmos como el Temporal 
+Fusion Transformer  pueden obtener buenos resultados en la predicción de la 
+demanda dentro del sector minorista. Esto se alinea bastante con la postura de 
+Seyam, Islam y Hossain [27], quienes destacan que calcular la demanda apoyándose 
+en machine learning y deep learning  es un campo de investigación que sigue más 
+vigente que nunca. Al final del día, todos estos referentes técnicos nos dejan claro 
+que aún tenemos un margen enorme para seguir innovando y perfeccionando la 
+manera en que proyectamos las ventas para este tipo de negocios.  
+ 
+A pesar de todo el avance tecnológico actual, en la práctica es muy común ver que 
+los pequeños negocios siguen sin aprovechar las herramientas predictivas 11 para 
+definir su rumbo comercial. Por lo general, estos locales cumplen con registrar sus 
+ventas del día a día en el sistema, pero al final toda esa información termina archivada 
+sin que nadie le dé un uso analítico real. Precisamente, esta carencia de herramientas 
+analíticas representa una oportunidad para aplicar técnicas de machine learning  en 
+un entorno operativo real. Al implementar este modelo en el minimarket objeto de 
+estudio, el algoritmo no se limitará a procesar registros históricos de manera pasiva; 
+su función principal será transformar dicha base de datos en un motor activo capaz 
+de proyectar la demanda diaria para cada línea de productos.  
+ 
+De esta forma, el establecimiento dará un salto de calidad en sus operaciones dará 
+un salto de calidad enorme en sus operaciones, abandonando esa vieja costumbre 
+de comprar mercadería guiándose solo por presentimientos para empezar a tomar 
+decisiones firme s basadas íntegramente en sus propios datos. Llevando este 
+problema a nuestra realidad, el escenario central de la investigación es un minimarket 
+ubicado en el distrito de Comas. Hablamos de un emprendimiento que está creciendo, 
+pero que hoy en día tropieza con el gran reto de manejar niveles de venta que suben 
+y bajan bruscamente dependiendo del tipo de producto. Esta variación en las ventas 
+complica la organización de los pedidos y la reposición de los productos en los 
+anaqueles. En la actualidad, el inventario se repone principalmente según la 
+\n=== PDF PAGINA 20 ===\n 
+9 
+ 
+experiencia del responsable del minimarket y mediante la revisión visual de los niveles 
+de stock. 
+ 
+Aunque este método puede funcionar durante las primeras etapas del negocio, pierde 
+efectividad conforme aumenta la variedad de productos, debido a que cada categoría 
+presenta un comportamiento de venta distinto. A partir de los registros del sistema 
+Kardex se identificó un desequilibrio en la gestión del inventario: los productos de 
+mayor rotación suelen agotarse con frecuencia, mientras que los de menor demanda 
+o aquellos de carácter perecible permanecen almacenados por más tiempo. 
+ 
+Esta situación genera costos por mantener productos sin movimiento y, a la vez, 
+puede reducir las oportunidades de venta. Frente a ello, un modelo de machine 
+learning permitiría analizar el historial de transacciones y estimar con mayor precisión 
+la cantidad de productos que debería solicitarse en cada categoría. De esta manera, 
+sería posible mejorar la planificación del inventario y apoyar una gestión más eficiente 
+de las operaciones del minimarket . La falta de herramientas predictivas, en cambio, 
+limita la capacidad del establecimiento para anticipar la demanda. 
+ 
+Cuando las proyecciones de ventas no reflejan con precisión el comportamiento de la 
+demanda, la distribución de los recursos puede verse afectada. Esto puede ocasionar 
+acumulación de productos de baja rotación y, al mismo tiempo, falta de stock en 
+aquellos con mayor demanda. Estas situaciones también repercuten en la experiencia 
+del cliente, ya que no encontrar determinados productos puede afectar su percepción 
+sobre el servicio. Por ello, contar con estimaciones más precisas permite organizar 
+mejor las compras, mantener un mayor control del inventario y tomar decisiones más 
+acertadas dentro del minimarket. 
+ 
+Desde el punto de vista administrativo, el principal desafío para garantizar la 
+sostenibilidad del negocio radica en contar con información confiable que permita 
+anticipar el comportamiento de la demanda y respaldar una adecuada planificación 
+de las compra s, el abastecimiento y la gestión del inventario supera la gestión 
+operativa básica de ventas. El éxito comercial reside en la capacidad de disponer de 
+información precisa que permita anticipar el comportamiento de los clientes frente a 
+diversas categorías de productos. Contar con esta ventaja competitiva proporciona el 
+margen de maniobra necesario para la toma de decisiones estratégicas, evitando que 
+la gestión del negocio se vea limitada por situaciones de urgencia.  
+ 
+Por este motivo, conseguir que el sistema nos calcule las ventas del día a día dejó de 
+ser una simple propuesta interesante en papel; hoy por hoy es una necesidad 
+operativa obligatoria y muy práctica si genuinamente buscamos darle un rumbo 
+estructurado a t oda la estrategia comercial de la tienda. El presente estudio se 
+alineará con el Objetivo de Desarrollo Sostenible 9, Industria, innovación e 
+infraestructura, específicamente con la meta 9.5, al desarrollar y evaluar un modelo 
+de machine learning que fortalecerá las capacidades tecnológicas para la gestión de 
+la demanda en un minimarket.  
+\n=== PDF PAGINA 21 ===\n 
+10 
+ 
+ 
+De manera complementaria, se vinculará con la meta 8.2 del Objetivo de Desarrollo 
+Sostenible 8, al promover la productividad mediante una planificación de compras 
+basada en datos, y con la meta 12.2 del Objetivo de Desarrollo Sostenible 12, al 
+favorecer el uso eficiente de los recursos y la reducción del desperdicio asociado al 
+exceso de productos perecibles.  
+ 
+A partir de esta realidad, se formuló el siguiente problema general de investigación: 
+¿De qué manera un modelo de machine learning permitirá predecir la demanda diaria 
+por categoría de producto en un minimarket de Comas 2026? Los problemas 
+específicos planteados fueron los siguientes: (P1) ¿cómo se recopilarán y depurarán 
+los datos históricos de ventas e inventario del minimarket para la construcción del 
+modelo predictivo?; (P2) ¿qué modelos predictivos de machine learning orientados a 
+series temporales presentarán un mejor desempeño durante el entrenamiento para la 
+demanda diaria por categoría?; (P3) ¿cuál será el nivel de desempeño de los modelos 
+evaluados según las métricas de error MAE, RMSE y MAPE?; y (P4) ¿de qué manera 
+el modelo seleccionado apoyará la planificación del inventario y la toma de decisiones 
+?  
+ 
+La investigación se justifica desde el punto de vista teórico porque integra 
+conocimientos sobre machine learning , series temporales y predicción de demanda 
+en el contexto de un minimarket . Asimismo, se justifica desde el punto de vista 
+tecnológico porque demuestra la viabilidad de aplicar técnicas predictivas a un 
+problema real de gestión comercial en un pequeño negocio. Desde el punto de vista 
+práctico, la investigación ofrece una herrami enta de apoyo para mejorar la 
+planificación de la demanda; al predecir la demanda diaria por categoría, permite 
+decidir qué productos comprar, qué categorías reforzar y cómo reducir los riesgos de 
+desabastecimiento o exceso de mercadería.  
+ 
+Desde el punto de vista metodológico, la investigación propone un procedimiento de 
+recopilación, preparación, entrenamiento y evaluación de datos que sirve como 
+referencia para estudios similares. Finalmente, se justifica desde el punto de vista 
+social y e conómico porque una gestión más eficiente de los productos mejora su 
+disponibilidad para los clientes y reduce las pérdidas ocasionadas por una 
+planificación inadecuada.  
+ 
+El objetivo general de la investigación fue desarrollar y evaluar un modelo de machine 
+learning para predecir la demanda diaria por categoría de producto en un minimarket 
+de Comas 2026. Para alcanzar este propósito, se plantearon los siguientes objetivos 
+específicos: (OE1) recopilar y depurar los datos históricos de ventas e inventario del 
+minimarket para la construcción del modelo predictivo; (OE2) entrenar y comparar el 
+desempeño de diversos algoritmos de machine learning  orientados a series 
+temporales para la predicción de la demanda diaria por categoría; (OE3) evaluar el 
+desempeño predictivo de los modelos entrenados utilizando las métricas de error 
+\n=== PDF PAGINA 22 ===\n 
+11 
+ 
+MAE, RMSE y MAPE; y (OE4) analizar la contribución predictiva del modelo 
+seleccionado en la planificación del inventario y la toma de decisiones comerciales. 
+  
+En cuanto a la hipótesis general, se planteó que el desarrollo de un modelo de 
+machine learning permitirá predecir la demanda diaria por categoría de producto en 
+un minimarket de Comas, 2026, logrando un desempeño predictivo, medido a través 
+de MAE, RMSE y MAPE, que será significativamente mejor en comparación con un 
+método de pronóstico base.  
+ 
+Las hipótesis específicas fueron las siguientes: (HE1) Los datos históricos de ventas 
+e inventario, una vez depurados y organizados, permitirán identificar patrones de 
+comportamiento de la demanda por categoría de producto. (HE2) Al menos uno de 
+los modelos de machine learning evaluados presentará un error de predicción menor 
+al método base durante el entrenamiento para la demanda diaria. (HE3) El nivel de 
+error de predicción medido por MAE, RMSE y MAPE de los modelos seleccionados 
+será significativamente menor que el método de  pronóstico base. (HE4) La 
+implementación del modelo 15 seleccionado permitirá optimizar la planificación del 
+inventario al reducir los quiebres de stock y el exceso de inventario en el minimarket.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+\n=== PDF PAGINA 23 ===\n 
+12 
+ 
+ 
+ 
+II. Metodología 
+ 
+La investigación fue de tipo aplicada, porque se orientó al desarrollo y la 
+evaluación de una solución tecnológica para un problema específico del 
+Minimarket Taully, ubicado en Comas. De acuerdo con el Manual de Frascati, la 
+investigación aplicada se dirigió a un objetivo práctico determinado; en este caso, 
+se buscó predecir la demanda diaria por categoría de producto para apoyar la 
+planificación de compras, la reposición y la disponibilidad de productos [32]. 
+El enfoque fue cuantitativo, debido a que se trabajó con registros numéricos de 
+ventas e inventario. El diseño fue no experimental y longitudinal, ya que no se 
+manipularon deliberadamente las variables, sino que se analizaron registros 
+históricos en su secuencia temporal.  
+ 
+El alcance de la investigación fue descriptivo, con un propósito predictivo, debido 
+a que se analizaron los patrones de demanda correspondientes a cada categoría 
+de producto y se evaluó la capacidad de los modelos para estimar valores futuros 
+a partir de d ichos patrones. Para el estudio se consideraron dos variables. La 
+variable independiente correspondió al modelo de machine learning , definido 
+como un conjunto de algoritmos computacionales capaces de aprender patrones 
+a partir de datos históricos y utilizarlos para generar predicciones [1], [4].  La 
+variable dependiente fue la demanda diaria por categoría de producto, entendida 
+como la cantidad de unidades demandadas o vendidas en cada categoría 
+comercial durante un día determinado, sujeta a variaciones de volumen, 
+disponibilidad y estacionalidad [1], [3]. 
+ 
+Desde el punto de vista operacional, el modelo de machine learning comprendió 
+la preparación de los registros, la generación de variables temporales, el 
+entrenamiento de los algoritmos y la validación cronológica de las predicciones 
+obtenidas. La demanda diaria por categoría se determinó mediante la 
+consolidación de las ventas y los movimientos de inventario según la fecha y la 
+categoría de producto. Para su análisis se consideraron las dimensiones de 
+volumen de demanda, disponibilidad de inventario, patrón de demanda y 
+precisión del pronóstico. La definición conceptual y operacional de las variables, 
+así como sus dimensiones, indicadores y escalas de medición, se presentan en 
+la tabla de operacionalización incluida en el Anexo 1. 
+ 
+La unidad de análisis estuvo constituida por el registro diario consolidado de 
+ventas correspondiente a cada categoría de producto. La población estuvo 
+conformada por la totalidad de los registros de ventas y movimientos de 
+inventario almacenados en el sistema del Minimarket Taully, ubicado en Comas, 
+correspondientes al periodo comprendido entre abril y diciembre de 2026 . El 
+conjunto de información comprendió aproximadamente 8,500 transacciones, 320 
+productos y 10 categorías comerciales.  La muestra estuvo conformada por la 
+\n=== PDF PAGINA 24 ===\n 
+13 
+ 
+totalidad de los registros que cumplieron con los criterios establecidos después 
+del proceso de depuración; por esta razón, se empleó un muestreo censal y no 
+fue necesario aplicar una fórmula para determinar el tamaño muestral. Se 
+consideraron las transacc iones correspondientes al periodo de estudio que 
+contaban con una fecha válida, una categoría correctamente identificada, un 
+código de producto consistente y valores positivos en la salida de inventario. 
+ 
+Se excluyeron los registros duplicados, las operaciones anuladas, las 
+devoluciones, los valores nulos, la información incompleta y los errores de 
+digitación. Las campañas promocionales y los feriados se mantuvieron cuando 
+se encontraban correctamente registrados, debido a que constituían información 
+relevante para explicar las variaciones de la demanda. Solo se corrigieron o 
+eliminaron aquellos valores atípicos que pudieron atribuirse a errores de registro. 
+Como técnica de recolección de datos se utilizó el an álisis documental 
+cuantitativo. 
+ 
+Se revisaron los reportes históricos de ventas, los movimientos de almacén y los 
+registros de inventario con el propósito de extraer, organizar y depurar la 
+información requerida para el desarrollo del estudio. Se emplearon una ficha de 
+registro de datos cuantitativos de ventas, una matriz de datos estructurada y una 
+ficha de evaluación del modelo predictivo. Los instrumentos, sus campos y sus 
+fórmulas de cálculo se incorporaron en el Anexo 2. Las fichas fueron elaboradas 
+para este estudio y no correspondieron a instrumentos estandarizados con 
+autores originales. Por esta razón, su validez de contenido requirió juicio de 
+expertos con experiencia en metodología de investigación, análisis de datos  o 
+machine learning.  
+ 
+Se incorporaron las fichas técnicas de los instrumentos en el Anexo 3 y los 
+formatos de validación para tres jueces expertos en los Anexos 4, 5 y 6. Dichos 
+formatos debían consignar la valoración, las observaciones, la identificación y la 
+firma de cada juez antes de la presentación de la versión final. La evaluación de 
+la consistencia interna no fue aplicable, debido a que en el estudio no se 
+emplearon cuestionarios ni escalas psicométricas. La calidad de los datos se 
+garantizó mediante la revisión de registros duplicados, valores nulos, códigos, 
+fechas, categorías y la correspondencia entre la información de ventas e 
+inventario. Asimismo, se siguió un procedimiento definido para limpiar, 
+transformar, entrenar y evaluar los datos, de manera que el proceso pudiera 
+repetirse bajo las mismas condiciones. 
+ 
+El volumen de demanda se analizó mediante dos indicadores: la cantidad 
+demandada y el índice de salida de inventario. La cantidad demandada se 
+calculó con la expresión CD = (SI + EN) - SF, donde SI corresponde al stock 
+inicial, EN a las entradas registrada s y SF al stock final. El índice de salida de 
+inventario permitió conocer qué proporción de los productos disponibles salió 
+durante el periodo evaluado. 
+\n=== PDF PAGINA 25 ===\n 
+14 
+ 
+Por otro lado, la disponibilidad del inventario se evaluó mediante la tasa de 
+quiebre de stock, calculada como TQS = (DQS / DD) × 100. En esta fórmula, 
+DQS representa el número de días en los que se registró un quiebre de stock y 
+DD el total de días considerados en el análisis. 
+Asimismo, el comportamiento de la demanda se analizó mediante el índice 
+estacional, calculado como IE = VD / VPM. En esta fórmula, VD corresponde a 
+la venta diaria y VPM a la venta promedio mensual. 
+ 
+Estos indicadores permitieron identificar variaciones recurrentes en la demanda 
+y reconocer las categorías con mayor riesgo de desabastecimiento. El análisis 
+de los datos se realizó siguiendo el orden cronológico de los registros. Para ello, 
+la información se organizó por fecha y categoría de producto, y se incorporaron 
+variables temporales como el día de la semana, los feriados y las promociones 
+registradas. Asimismo, se evitaron particiones aleatorias que pudieran alterar la 
+secuencia de las series temporales. Los registros más antiguos se utilizaron para 
+el entrenamiento del modelo, mientras que los periodos posteriores se 
+reservaron para las etapas de validación y prueba. Finalmente, la capacidad de 
+generalización se evaluó mediante validación hacia adel ante, respetando en 
+todo momento el orden temporal de los datos. 
+ 
+En una primera etapa se realizó un análisis descriptivo de la demanda, 
+considerando frecuencias, totales, promedios y variaciones según la fecha y la 
+categoría de producto. Luego, se comparó el desempeño del promedio móvil 
+simple, utilizado como modelo bas e, con ARIMA, Random Forest, CatBoost y 
+XGBoost. El análisis se centró en la capacidad predictiva de cada modelo, sin 
+buscar establecer relaciones causales ni asociaciones entre variables. Para 
+evaluar su desempeño se utilizaron las métricas MAE, RMSE y MAPE. El MAE 
+permitió conocer el error absoluto p romedio, el RMSE dio mayor peso a los 
+errores de mayor magnitud y el MAPE mostró el error de predicción en términos 
+porcentuales [31]. 
+ 
+El MAPE se calculó solo cuando la demanda real fue distinta de cero.  Para los 
+registros con demanda igual a cero se utilizaron las métricas MAE y RMSE, con 
+el fin de evitar divisiones indefinidas.  Se seleccionó el modelo que presentó el 
+menor error frente a la línea base, considerando tanto las métricas obtenidas 
+como la estabilidad de los resultados en las validaciones temporales. Asimismo, 
+la investigación se desarrolló bajo los principios de integridad científica, 
+objetividad, transparencia, trazabilidad y confidencialidad. Los registros 
+históricos de ventas e inventario fueron utilizados exclusivamente con fines 
+académicos. 
+ 
+El acceso a la información estuvo limitado al investigador y los resultados se 
+presentaron de manera agregada, evitando la exposición de datos comerciales 
+sensibles o identificadores personales. Debido a que no se recopilaron datos 
+directamente de personas  ni se aplicaron instrumentos a participantes, no fue 
+\n=== PDF PAGINA 26 ===\n 
+15 
+ 
+necesario utilizar consentimiento informado ni asentimiento. La autorización 
+institucional para el uso de la información del Minimarket Taully  se incorporó en 
+los Anexos 7 y 8. En caso de que los registros incluyeran datos personales, estos 
+debían ser anonimizados antes de iniciar el análisis. Asimismo, las 
+autorizaciones institucionales, las fichas de validación firmadas y cualquier 
+documento que pudiera revelar información comercial sensible permanecieron 
+bajo custodia del investigador. 
+ 
+Aunque estos documentos fueron mencionados en el informe e incluidos como 
+sustento para la evaluación académica, se estableció que no debían ser 
+publicados en el Repositorio Institucional, debido a que contienen información de 
+carácter sensible y de uso restringido. 
+ 
+ 
+ 
+\n=== PDF PAGINA 27 ===\n 
+16 
+ 
+ 
+ 
+ 
+III. Resultados 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+\n=== PDF PAGINA 28 ===\n 
+17 
+ 
+ 
+ 
+ 
+IV. Discusión 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+\n=== PDF PAGINA 29 ===\n 
+18 
+ 
+ 
+ 
+ 
+V. Conclusiones 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+\n=== PDF PAGINA 30 ===\n 
+19 
+ 
+ 
+ 
+VI. Recomendaciones 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+\n=== PDF PAGINA 31 ===\n 
+20 
+ 
+ 
+ 
+Referencias 
+ 
+ 
+ 
+[1] C. Brackmann, T. Friedrich, y N. Urbach, "Identifying Application Areas for 
+Machine Learning in the Retail Industry", SN Computer Science, 2023. 
+Consultado: 1 jun. 2026. [En línea]. Disponible: 
+https://link.springer.com/article/10.1007/s42979-023-01888-w  
+[2] J. Wang y L. Luo, "A forecasting method of multi -category product sales: 
+analysis and application", Journal of Cloud Computing, 2023. Consultado: 1 
+jun. 2026. [En línea]. Disponible: 
+https://link.springer.com/article/10.1007/s44176-023-00012-9  
+[3] C. Auppakorn y C. Phumchusri, "Daily Sales Forecasting for Variable -Priced 
+Items in Retail Business", ACM International Conference Proceeding Series, 
+2022. Consultado: 1 jun. 2026. [En línea]. Disponible: 
+https://dl.acm.org/doi/10.1145/3535782.3535794  
+[4] Y. Ahmadov, B. Minaei-Bidgoli, y A. Harati, "Deep learning-based approach for 
+forecasting intermittent online sales", Discover Artificial Intelligence, 2023. 
+Consultado: 1 jun. 2026. [En línea]. Disponible: 
+https://link.springer.com/article/10.1007/s44163-023-00085-1  
+[5] H. Chan y M. I. M. Wahab, "A machine learning framework for predicting 
+weather impact on retail sales", Supply Chain Analytics, 2024. Consultado: 1 
+jun. 2026. [En línea]. Disponible: 
+https://www.sciencedirect.com/science/article/pii/S2949863524000013  
+[6] S. Chen, J. Zhang, y X. Wang, "Which product description phrases affect sales 
+forecasting? An explainable AI framework", Decision Support Systems, 2024. 
+Consultado: 1 jun. 2026. [En línea]. Disponible: 
+https://www.sciencedirect.com/science/article/abs/pii/S0167923623001409  
+[7] Universidad Tecnológica del Perú, "Predicción de la demanda de productos 
+con Machine Learning en un minimarket", Tesis, Univ. Tecnológica del Perú, 
+2024. Consultado: 1 jun. 2026. [En línea]. Disponible: 
+https://repositorio.utp.edu.pe/item/0af5cc5f-1b49-43e1-b3b1-af734f5202fa  
+\n=== PDF PAGINA 32 ===\n 
+21 
+ 
+[8] J. M. Palomino Huarilloclla, "Implementación de un modelo de machine 
+learning para la predicción de la demanda de una ferretería en Moquegua, 
+2024", Tesis, Univ. César Vallejo, Perú, 2024. Consultado: 1 jun. 2026. [En 
+línea]. Disponible: 
+https://alicia.concytec.gob.pe/vufind/Record/UCVV_74ad36992d479d9df5029
+d521249d464/Details  
+[9] R. C. Montero López, "Sistema web inteligente basado en machine learning  
+para apoyar la gestión de inventarios en la empresa E.B. Pareja Lecaros S.A.", 
+Tesis, Univ. Católica Santo Toribio de Mogrovejo, Perú, 2024. Consultado: 1 
+jun. 2026. [En línea]. Disponible: 
+https://repositorio.usat.edu.pe/items/10c2c805-827f-4e41-bc96-a4df605c5dce  
+[10] G. M. Ponce Illacutipa, "Modelo basado en Machine Learning para optimizar el 
+pronóstico de ventas de la empresa Ricos Pan, año 2020 –2021", Tesis, Perú, 
+2021. Consultado: 1 jun. 2026. [En línea]. Disponible: 
+https://alicia.concytec.gob.pe/vufind/Record/RNAP_5b1ee92720df311aa5a22
+708a1fb1488  
+[11] G. A. Flores Taquiri y J. S. Montalvo Celis, "Machine learning para la predicción 
+en la gestión de inventario dirigida a PYMES de venta de productos 
+tecnológicos", Tesis, Univ. César Vallejo, Perú, 2024. Consultado: 1 jun. 2026. 
+[En línea]. Disponible: 
+https://alicia.concytec.gob.pe/vufind/Record/UCVV_802cf5f75bd0c420ae4084
+d6b71ddb29  
+[12] R. L. León Villavicencios y F. E. Vinces Chumbes, "Machine Learning  para la 
+gestión de ventas en la empresa Forever Group SAC", Tesis, Univ. César 
+Vallejo, Perú, 2024. Consultado: 1 jun. 2026. [En línea]. Disponible: 
+https://alicia.concytec.gob.pe/vufind/Record/UCVV_0121b72d7f74603bbdd31f
+79cd25f4ad  
+[13] P. A. Anchante Aybar y D. D. Fernández Chávez, "Machine Learning  para la 
+toma de decisiones en la gestión de ventas, Lima 2024", Tesis, Univ. César 
+Vallejo, Perú, 2024. Consultado: 1 jun. 2026. [En línea]. Disponible: 
+https://alicia.concytec.gob.pe/vufind/Record/UCVV_8cda3aace716d90c01edb
+b0c689177c8/Details  
+[14] J. A. Rojas Vilca, "Aplicativo Móvil con Machine Learning para la gestión de 
+ventas en productos de la empresa Optilook de Lima, 2024", Tesis, Univ. César 
+Vallejo, Perú, 2024. Consultado: 1 jun. 2026. [En línea]. Disponible: 
+\n=== PDF PAGINA 33 ===\n 
+22 
+ 
+https://alicia.concytec.gob.pe/vufind/Record/UCVV_d500babbd2fb53a1abf122
+d8d98c2f3f/Details  
+[15] K. E. Serna Berrocal, "Modelo machine learning para predecir las ventas de 
+una empresa RETAIL, 2025", Tesis, Perú, 2025. Consultado: 1 jun. 2026. [En 
+línea]. Disponible: 
+https://alicia.concytec.gob.pe/vufind/Record/UNSJ_a2810f55353e34c2f024e8
+9d83330f26/Details  
+[16] B. P. González Jauregui y D. M. Mariscal Cruzado, "Improvement Proposal 
+Based on Machine Learning, Big Data and DDMRP to Improve Forecasting 
+Compliance in a Consumer Goods Company", Tesis, Univ. de Lima, Perú, 
+2024. Consultado: 1 jun. 2026. [En línea]. Disponible: 
+https://repositorio.ulima.edu.pe/bitstream/handle/20.500.12724/21467/T018_7
+1910212_T.pdf?isAllowed=y&sequence=1  
+[17] G. Padmanabham, "Machine Learning Framework for Retail Sales 
+Forecasting", International Journal of Computational and Experimental Science 
+and Engineering, 2025. Consultado: 1 jun. 2026. [En línea]. Disponible: 
+https://www.researchgate.net/publication/396173583_Machine_Learning_Fra
+mework_for_Retail_Sales_Forecasting  
+[18] O. O. Mustapha y T. Sithole, "Forecasting Retail Sales using Machine Learning 
+Models", American Journal of Statistics and Actuarial Sciences, 2025. 
+Consultado: 1 jun. 2026. [En línea]. Disponible: 
+https://www.researchgate.net/publication/390949992_Forecasting_Retail_Sal
+es_using_Machine_Learning_Models  
+[19] S. Mansur, F. Ahmed, e M. R. Islam, "Sales forecasting for retail stores using 
+hybrid neural networks and machine learning", PeerJ Computer Science, 2025. 
+Consultado: 1 jun. 2026. [En línea]. Disponible: 
+https://pmc.ncbi.nlm.nih.gov/articles/PMC12453866  
+[20] R. S. Ahmed, M. A. Khan, y S. Ali, "Comparison of Deep Learning Algorithms 
+for Retail Sales Forecasting", ICCK Transactions on Intelligent Systematics, 
+2024. Consultado: 1 jun. 2026. [En línea]. Disponible: 
+https://www.icck.org/article/abs/tis.2024.300700  
+[21] Y. Liu, D. Kalaitzi, M. Wang, y C. Papanagnou , "A machine learning approach 
+to inventory stockout prediction", Journal of Digital Economy, 2025. 
+Consultado: 1 jun. 2026. [En línea]. Disponible: 
+https://www.sciencedirect.com/science/article/pii/S2773067025000202  
+\n=== PDF PAGINA 34 ===\n 
+23 
+ 
+[22] M. S. Sousa, A. M. Moreira, y J. Ferreira, "Predicting demand for new products 
+in fashion retailing using machine learning", Expert Systems with Applications, 
+2025. Consultado: 1 jun. 2026. [En línea]. Disponible: 
+https://www.sciencedirect.com/science/article/pii/S0957417424021808  
+[23] C. C. Wang, Y. H. Chen, y T. Y. Lin, "Dynamic Dual-Phase Forecasting Model 
+for New Product Demand", Mathematics, 2025. Consultado: 1 jun. 2026. [En 
+línea]. Disponible: https://www.mdpi.com/2227-7390/13/10/1613   
+[24] S. Hwang, J. Kim, y M. Park, "Sales Forecasting for New Products Using 
+Homogeneity-Based Clustering and Ensemble Learning", Electronics, 2025. 
+Consultado: 1 jun. 2026. [En línea]. Disponible: https://www.mdpi.com/2079-
+9292/14/3/520  
+[25] H. Hu, D. Tan, P. Thaichon, B. Wang, y Z. Zhu, "Grid -based market sales 
+forecasting for retail businesses using automated machine learning and 
+geospatial intelligence", Expert Systems with Applications, 2025. Consultado: 
+1 jun. 2026. [En línea]. Disponible: 
+https://www.sciencedirect.com/science/article/abs/pii/S0957417425014915  
+[26] M. A. Shahzad, M. A. Khan, y S. Ullah, "Demand forecasting for retail using 
+three-S temporal fusion transformer", Supply Chain Analytics, 2025. 
+Consultado: 1 jun. 2026. [En línea]. Disponible: 
+https://www.sciencedirect.com/science/article/abs/pii/S3051064325000305  
+[27] A. Seyam, M. R. Islam, y S. Hossain, "The application of machine learning and 
+deep learning on demand forecasting", International Journal of Information 
+Management Data Insights, 2026. Consultado: 1 jun. 2026. [En línea]. 
+Disponible: 
+https://www.sciencedirect.com/science/article/pii/S1474034626003174  
+[28] N. A. Mohd Shahar, N. H. Abd Rahman, y S. S. Maidin, "Sales Forecasting 
+Using Machine Learning Methods for Retail Store", Atlantis Press, 2024. 
+Consultado: 1 jun. 2026. [En línea]. Disponible: https://www.atlantis-
+press.com/proceedings/invent-24/126005569  
+[29] C. I. C. Obi, "Demand Forecasting in Retail Business Using the Ensemble 
+Machine Learning Framework: A Stacking Approach", American Scientific 
+Research Journal for Engineering, Technology, and Sciences, 2024. 
+Consultado: 1 jun. 2026. [En línea]. Disponible: 
+https://asrjetsjournal.org/American_Scientific_Journal/article/view/11010  
+\n=== PDF PAGINA 35 ===\n 
+24 
+ 
+[30] I. P. Mariñ , "A Demand Forecasting Model Leveraging Machine Learning", 
+Scientific Programming, 2024. Consultado: 1 jun. 2026. [En línea]. Disponible: 
+https://onlinelibrary.wiley.com/doi/10.1155/2024/8425058  
+[31] R. J. Hyndman y G. Athanasopoulos, Forecasting: Principles and Practice, 3.ª 
+ed. OTexts, 2021. [En línea]. Disponible: https://otexts.com/fpp3/  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+\n=== PDF PAGINA 36 ===\n 
+ 
+ 
+ 
+Anexos 
+ 
+Anexo 1. Tabla de operacionalización de variables. 
+Variables Definición conceptual Definición operacional Dimensiones  Indicadores  Escala de 
+Mediciones  
+Modelo de 
+machine learning 
+Algoritmos computacionales 
+que aprenden patrones de 
+datos históricos para realizar 
+predicciones [1], [4]. 
+Proceso de entrenamiento 
+y ajuste de algoritmos de 
+machine learning (ej. 
+XGBoost, Redes 
+Neuronales) utilizando 
+features temporales. 
+  
+ 
+  
+ 
+\n=== PDF PAGINA 37 ===\n 
+ 
+ 
+Demanda diaria 
+por categoría de 
+producto 
+Cantidad de productos 
+vendidos por categoría, 
+influenciada por factores 
+estacionales y externos [1], 
+[3]. 
+Registro numérico 
+consolidado de las ventas 
+diarias por categoría de 
+producto, depurado de los 
+sistemas del minimarket. 
+Volumen de demanda  
+Cantidad de 
+demanda 
+(Unidad) 
+ Índice de Salida 
+de Inventario 
+Tasa de Quiebre 
+de Stock   
+Razón 
+Patrón de Demanda Estacionalidad 
+Razón 
+Precisión del Pronóstico Error de 
+Pronóstico 
+Razón 
+\n=== PDF PAGINA 38 ===\n 
+ 
+ 
+Anexo 2. Instrumentos de recolección de datos. 
+ 
+ 
+Instrumento de recolección de datos del indicador para el Pretest: Cantidad 
+demandada 
+INDICADOR: Cantidad Demandada  
+INVESTIGADOR: Guerrero Mora, Carlos David Elian 
+LUGAR DE ESTUDIO: Minimarket Taully, Comas 
+FÓRMULA: CD = (SI + EN) - SF 
+DONDE: CD = Cantidad Demandada 
+SI = Stock Inicial 
+EN = Entradas 
+SF = Stock Final 
+Momento  Pretest 
+ 
+ 
+N° Categoria SI EN SF CD 
+1 Abarrotes  394 881 315 960 
+2 Bebidas  712 1 481 597 1 596 
+3 Golosinas  645 905 413 1 137 
+4 Helados  191 309 151 349 
+5 Limpieza 172 335 102 405 
+ Total 2 114 3 911 1 578 4 447 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+\n=== PDF PAGINA 39 ===\n 
+ 
+ 
+Instrumento de recolección de datos del indicador para el Postest: Cantidad 
+demandada 
+INDICADOR: Cantidad Demandada  
+INVESTIGADOR: Guerrero Mora, Carlos David Elian 
+LUGAR DE ESTUDIO: Minimarket Taully, Comas 
+FÓRMULA: CD = (SI + EN) - SF 
+DONDE: CD = Cantidad Demandada 
+SI = Stock Inicial 
+EN = Entradas 
+SF = Stock Final 
+Momento  Postest 
+ 
+ 
+N° Categoria SI EN SF CD 
+1 Abarrotes  372 949 290 1 031 
+2 Bebidas  738 1 433 559 1 612 
+3 Golosinas  638 984 448 1 174 
+4 Helados  210 365 141 434 
+5 Limpieza 169 227 107 289 
+ Total 2 127 3 958 1 545 4 540 
+ 
+ 
+ 
+ 
+\n=== PDF PAGINA 40 ===\n 
+ 
+ 
+ 
+ 
+ 
+Instrumento de recolección de datos del indicador para el Pretest: Índice de 
+Salida de Inventario 
+INDICADOR: Índice de Salida de Inventario 
+INVESTIGADOR: Guerrero Mora, Carlos David Elian 
+LUGAR DE ESTUDIO: Minimarket Taully, Comas 
+FÓRMULA: ISI = CD / (SI + EN) 
+DONDE: ISI = Índice de Salida de Inventario 
+CD = Cantidad Demandada 
+SI = Stock Inicial 
+EN = Entradas 
+Momento  Pretest 
+ 
+ 
+N° Categoría (CD) Stock 
+Inicial (SI) 
+Entradas 
+(EN) 
+Índice de 
+Salida de 
+Inventario 
+(ISI) 
+1 Abarrotes  960 394 881 75,29 % 
+2 Bebidas  1 596 712 1 481 72,78 % 
+3 Golosinas  1 137 645 905 73,35 % 
+4 Helados  349 191 309 69,80 % 
+5 Limpieza 405 172 335 79,88 % 
+ Total 4 447 2 114 3 911 73,81 % 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+\n=== PDF PAGINA 41 ===\n 
+ 
+ 
+Instrumento de recolección de datos del indicador para el Postest: Índice de 
+Salida de Inventario 
+INDICADOR: Índice de Salida de Inventario 
+INVESTIGADOR: Guerrero Mora, Carlos David Elian 
+LUGAR DE ESTUDIO: Minimarket Taully, Comas 
+FÓRMULA: ISI = CD / (SI + EN) 
+DONDE: ISI = Índice de Salida de Inventario 
+CD = Cantidad Demandada 
+SI = Stock Inicial 
+EN = Entradas 
+Momento  Postest 
+ 
+ 
+N° Categoria (CD) Stock 
+Inicial (SI) 
+Entradas 
+(EN) 
+Índice de 
+Salida de 
+Inventario 
+(ISI) 
+1 Abarrotes  1 031 372 949 78,05 % 
+2 Bebidas  1 612 738 1 433 74,25 % 
+3 Golosinas  1 174 638 984 72,38 % 
+4 Helados  434 210 365 75,48 % 
+5 Limpieza 289 169 227 72,98 % 
+ Total 4 540 2 127 3 958 74,61 % 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+\n=== PDF PAGINA 42 ===\n 
+ 
+ 
+ 
+ 
+Instrumento de recolección de datos del indicador para el Pretest: Tasa de 
+quiebre de stock 
+INDICADOR: Tasa de Quiebre de Stock 
+INVESTIGADOR: Guerrero Mora, Carlos David Elian 
+LUGAR DE ESTUDIO: Minimarket Taully, Comas 
+FÓRMULA: TQS =  (DQS / DD) ×  100 
+DONDE: TQS = Tasa de Quiebre de Stock 
+DQS = Días con Quiebre de Stock 
+DD = Días Evaluados 
+Momento Pretest 
+ 
+ 
+N° Categoria DQS DD TQS 
+1 Abarrotes  1 30 3,33 % 
+2 Bebidas  10 30 33,33 % 
+3 Golosinas  11 30 36,67 % 
+4 Helados  1 30 3,33 % 
+5 Limpieza 0 30 0,00 % 
+ Total 23 150 15,33 % 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+\n=== PDF PAGINA 43 ===\n 
+ 
+ 
+Instrumento de recolección de datos del indicador para el Postest: Tasa de 
+quiebre de stock 
+INDICADOR: Tasa de Quiebre de Stock 
+INVESTIGADOR: Guerrero Mora, Carlos David Elian 
+LUGAR DE ESTUDIO: Minimarket Taully, Comas 
+FÓRMULA: TQS =  (DQS / DD) ×  100 
+DONDE: TQS = Tasa de Quiebre de Stock 
+DQS = Días con Quiebre de Stock 
+DD = Días Evaluados 
+Momento Postest 
+ 
+ 
+N° Categoria DQS DD TQS 
+1 Abarrotes  1 30 3,33 % 
+2 Bebidas  2 30 6,67 % 
+3 Golosinas  7 30 23,33 % 
+4 Helados  3 30 10,00 % 
+5 Limpieza 0 30 0,00 % 
+ Total 13 150 8,67 % 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+\n=== PDF PAGINA 44 ===\n 
+ 
+ 
+ 
+ 
+ 
+ 
+Instrumento de recolección de datos del indicador para el Pretest: 
+Estacionalidad 
+INDICADOR: Estacionalidad 
+INVESTIGADOR: Guerrero Mora, Carlos David Elian 
+LUGAR DE ESTUDIO: Minimarket Taully, Comas 
+FÓRMULA: IE =  VD / VPM 
+DONDE: IE = Índice Estacional 
+VD = Venta Diaria 
+VPM = Venta Promedio Mensual 
+Momento  Pretest 
+ 
+ 
+N° IE VD VPM 
+1 1,10 287 261,40 
+2 0,93 243 261,40 
+3 0,84 220 261,40 
+4 1,07 281 261,40 
+5 0,86 226 261,40 
+6 0,77 202 261,40 
+7 0,92 241 261,40 
+8 1,06 278 261,40 
+9 1,15 301 261,40 
+10 0,92 240 261,40 
+11 0,93 242 261,40 
+12 0,85 221 261,40 
+13 1,03 270 261,40 
+14 1,12 293 261,40 
+15 1,22 318 261,40 
+16 1,18 309 261,40 
+17 1,03 269 261,40 
+18 0,85 221 261,40 
+19 0,83 216 261,40 
+20 1,22 318 261,40 
+21 1,03 269 261,40 
+22 1,22 318 261,40 
+23 1,18 308 261,40 
+24 0,94 247 261,40 
+25 0,84 220 261,40 
+26 1,02 267 261,40 
+27 0,92 241 261,40 
+28 1,07 281 261,40 
+29 1,15 301 261,40 
+30 1,03 268 261,40 
+ 
+ 
+\n=== PDF PAGINA 45 ===\n 
+ 
+ 
+ 
+ 
+Instrumento de recolección de datos del indicador para el Postest: 
+Estacionalidad 
+INDICADOR: Estacionalidad 
+INVESTIGADOR: Guerrero Mora, Carlos David Elian 
+LUGAR DE ESTUDIO: Minimarket Taully, Comas 
+FÓRMULA: IE =  VD / VPM 
+DONDE: IE = Índice Estacional 
+VD = Venta Diaria 
+VPM = Venta Promedio Mensual 
+Momento  Postest 
+ 
+ 
+N° IE VD VPM 
+1 0,96 250 261,40 
+2 1,04 272 261,40 
+3 0,71 185 261,40 
+4 0,96 250 261,40 
+5 1,23 322 261,40 
+6 1,25 326 261,40 
+7 1,04 272 261,40 
+8 0,80 209 261,40 
+9 1,07 281 261,40 
+10 1,04 271 261,40 
+11 1,09 284 261,40 
+12 1,19 312 261,40 
+13 1,28 334 261,40 
+14 1,22 319 261,40 
+15 0,96 251 261,40 
+16 0,99 258 261,40 
+17 0,76 198 261,40 
+18 0,93 244 261,40 
+19 1,19 311 261,40 
+20 1,12 292 261,40 
+21 1,09 284 261,40 
+22 0,85 222 261,40 
+23 0,89 233 261,40 
+24 0,77 200 261,40 
+25 0,78 205 261,40 
+26 0,96 250 261,40 
+27 0,98 257 261,40 
+28 0,96 252 261,40 
+29 0,96 252 261,40 
+30 0,98 255 261,40 
+ 
+ 
+ 
+  
+\n=== PDF PAGINA 46 ===\n 
+ 
+ 
+ 
+Instrumento de recolección de datos del indicador para el Pretest: Error de 
+pronóstico 
+ 
+INDICADOR: Error de Pronóstico 
+INVESTIGADOR: Guerrero Mora, Carlos David Elian 
+LUGAR DE ESTUDIO: Minimarket Taully, Comas 
+FÓRMULA: MAPE = (100/n) × Σ |(Demanda Real − 
+Demanda Pronosticada) / Demanda 
+Real| 
+DONDE: MAPE = Error Porcentual Absoluto 
+Medio 
+DR = Demanda Real 
+DP = Demanda Pronosticada 
+n = Número de observaciones 
+Momento: Pretest 
+ 
+ 
+N° Categoría Demanda 
+Real (DR) 
+Demanda 
+Pronosticada 
+(DP) 
+MAPE 
+1 Abarrotes  1 604 1 636,18 21,20 % 
+2 Bebidas  2 799 2 598,75 12,62 % 
+3 Golosinas  2 218 2 204,68 20,50 % 
+4 Helados  715 795,25 39,85 % 
+5 Limpieza 580 532,29 24,61 % 
+ Total 7 916 7 767,14 23,76 % 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+\n=== PDF PAGINA 47 ===\n 
+ 
+ 
+ 
+ 
+Instrumento de recolección de datos del indicador para el Postest: Error de 
+pronóstico 
+ 
+INDICADOR: Error de Pronóstico 
+INVESTIGADOR: Guerrero Mora, Carlos David Elian 
+LUGAR DE ESTUDIO: Minimarket Taully, Comas 
+FÓRMULA: MAPE = (100/n) × Σ |(Demanda Real − 
+Demanda Pronosticada) / Demanda 
+Real| 
+DONDE: MAPE = Error Porcentual Absoluto 
+Medio 
+DR = Demanda Real 
+DP = Demanda Pronosticada 
+n = Número de observaciones 
+Momento: Postest 
+ 
+ 
+N° Categoria Demanda 
+Real (DR) 
+Demanda 
+Pronosticada 
+(DP) 
+MAPE 
+1 Abarrotes  1 653 1 506,70 21,19 % 
+2 Bebidas  2 810 2 666,39 15,08 % 
+3 Golosinas  2 129 2 226,85 22,53 % 
+4 Helados  792 708,73 31,42 % 
+5 Limpieza 467 575,62 40,81 % 
+ Total 7 851 7 684,29 26,21 % 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+\n=== PDF PAGINA 48 ===\n 
+ 
+ 
+Instrumento de recolección de datos de la dimensión para el Pretest: Volumen 
+de demanda 
+INDICADOR: Cantidad Demandada 
+INVESTIGADOR: Guerrero Mora, Carlos David Elian 
+LUGAR DE ESTUDIO: Minimarket Taully, Comas 
+FÓRMULA: CD = Σ Ventas realizadas 
+DONDE: CD = Cantidad Demandada 
+Σ = Sumatoria de ventas realizadas 
+Momento: Pretest 
+ 
+N° Producto Cantidad 
+Vendida 
+Cantidad 
+Demandada (CD 
+1 AGUA CIELO SIN GAS 1 L 68 68 
+2 AGUA CIELO SIN GAS 2.5 L 45 45 
+3 AGUA SAN MATEO SIN GAS 600 ML 105 105 
+4 ARROZ BLANCO AÑEJO FARAÓN 
+VERDE 5 KG 
+4 4 
+5 ARROZ COSTEÑO EXTRA AÑEJO 5 
+KG 
+1 1 
+6 ARROZ COSTEÑO EXTRA AÑEJO 750 
+G 
+52 52 
+7 ARROZ EXTRA COSTEÑO 5 KG 3 3 
+8 ARROZ EXTRA FARAÓN 750 G 60 60 
+9 ARROZ EXTRA GRAN CHALÁN 5 KG 5 5 
+10 ARROZ EXTRA GRAN CHALÁN FINA 
+SELECCIÓN 4 KG 
+6 6 
+11 ARROZ EXTRA PAISANA 1 KG 60 60 
+12 ARROZ EXTRA PAISANA 5 KG 3 3 
+13 ARROZ INTEGRAL VALLE NORTE 750 
+G 
+67 67 
+14 ARROZ SUPERIOR FARAÓN 750 G 84 84 
+15 ARROZ SUPERIOR PAISANA 1 KG 63 63 
+16 ARROZ SUPERIOR PAISANA 5 KG 3 3 
+17 AVENA 3 OSITOS PRECOCIDA 
+CLÁSICA 250 G 
+33 33 
+18 AZÚCAR BLANCA DULFINA 1 KG 65 65 
+19 BARRA CHOCOLATE DELICADORE 
+LECHE Y PISTACHO 98 G 
+47 47 
+20 BARRA DE CHOCOLATE SNICKERS 
+52 G 
+57 57 
+21 BARRA MILKY SIN AZÚCAR LA 
+IBÉRICA 50 G 
+58 58 
+22 BEBIDA HEY FIT COLA 600 ML 67 67 
+23 BEBIDA HEY FIT GOLDEN FIZZ 600 
+ML 
+69 69 
+24 BEBIDA HEY FIT PIÑA COLADA 600 
+ML 
+46 46 
+25 BEBIDA HEY FIT TORONJA CAMU 
+CAMU 600 ML 
+57 57 
+\n=== PDF PAGINA 49 ===\n 
+ 
+ 
+N° Producto Cantidad 
+Vendida 
+Cantidad 
+Demandada (CD 
+26 BEBIDA REHIDRATANTE GATORADE 
+TROPICAL SIXPACK 500 ML 
+48 48 
+27 BEBIDA REHIDRATANTE POWERADE 
+MULTISABOR SIXPACK 600 ML 
+14 14 
+28 BEBIDA REHIDRATANTE SPORADE 
+SURTIDO PACK 12 X 500 ML 
+5 5 
+29 BIZCOCHO CHOCMAN COSTA 
+SIXPACK 201 G 
+5 5 
+30 BOLITAS DE CEREAL CHOCO 
+YOGURT 2 CERRITOS 125 G 
+22 22 
+31 BOMBONES BON O BON BOLSA 90 G 47 47 
+32 BOMBONES CHOCOLATE AMARGO 
+FRANUÍ 150 G 
+12 12 
+33 BOMBONES CHOCOLATE CON 
+LECHE FRANUÍ 150 G 
+12 12 
+34 BOMBONES SUBLIME CHOCOLATE 
+BLANCO CON MANÍ 136 G 
+84 84 
+35 BOMBONES SUBLIME CREMA MANÍ 
+DOYPACK 136 G 
+89 89 
+36 BOMBONES TRIÁNGULO CON 
+LECHE DOYPACK 136 G 
+46 46 
+37 CABELLO DE ÁNGEL DON VITTORIO 
+250 G 
+33 33 
+38 CARAMELOS HALLS MENTA 27 G 84 84 
+39 CARAMELOS HALLS MORA 27 G 101 101 
+40 CHICLE TRIDENT MENTA FRESCA 30 
+G 
+108 108 
+41 CHICLE TRIDENT MORA AZUL 30.6 G 103 103 
+42 CHICLE TRIDENT SANDÍA 30 G 78 78 
+43 CHOCOLATE CHIN CHIN MINI BOLSA 
+224 G 
+44 44 
+44 CHOCOLATE LA IBÉRICA MILKY 
+BITE SIZE 200 G 
+19 19 
+45 CHOCOLATE LA IBÉRICA MINI MILKY 
+BOLSA 10 UND 
+7 7 
+46 CHOCOLATE LENTEJAS FIESTA MINI 
+BOLSA 240 G 
+77 77 
+47 CHOCOLATE PRINCESA CREMA 
+MANÍ DOYPACK 136 G 
+38 38 
+48 CHOCOLATE ROYAL MINTS 
+RELLENO MENTA 200 G 
+35 35 
+49 CHOCOLATE SUBLIME CON 
+GALLETA 28 G 
+62 62 
+50 CHOCOLATE SUBLIME EXTREMO 50 
+G 
+93 93 
+51 CHOCOLATE SUBLIME POWER 
+SIXPACK 150 G 
+82 82 
+\n=== PDF PAGINA 50 ===\n 
+ 
+ 
+N° Producto Cantidad 
+Vendida 
+Cantidad 
+Demandada (CD 
+52 CHOCOLATE SUBLIME SONRISA 
+CAJA 8 UND 
+26  26  
+53 CHOCOLATES VIZZIO ALMENDRA 
+DOYPACK 96 G 
+71 71 
+54 DETERGENTE ACE LIMPIEZA 
+COMPLETA 700 G 
+43 43 
+55 DETERGENTE BOLÍVAR CUIDADO 
+TOTAL 730 G 
+53 53 
+56 DETERGENTE LÍQUIDO BOLÍVAR 
+CUIDADO TOTAL 3 L 
+4 4 
+57 DETERGENTE MARSELLA LAVANDA 
+Y ROSAS 730 G 
+51 51 
+58 DETERGENTE SAPOLIO FLORAL 730 
+G 
+47 47 
+59 FETUCCINI DON VITTORIO 950 G 42 42 
+60 FIDEO LASAGNA MOLITALIA 350 G 36 36 
+61 FIDEO TALLARÍN MOLITALIA 950 G 66 66 
+62 FIDEOS SPAGHETTI MOLITALIA 950 
+G 
+65 65 
+63 GALLETA CASINO MENTA SIXPACK 
+258 G 
+13 13 
+64 GALLETA CHIPS AHOY SIXPACK 222 
+G 
+13 13 
+65 GALLETA CLUB SOCIAL REGULAR 
+SIXPACK 144 G 
+17 17 
+66 GALLETA DE SODA SAN JORGE 
+PACK 7 UND 
+22 22 
+67 GALLETA DOÑA PEPA FIELD 
+SIXPACK 132 G 
+29 29 
+68 GALLETA FIELD CHOKOSODA 
+SIXPACK 216 G 
+12 12 
+69 GALLETA FIELD VAINILLA FAMILIAR 
+136 G 
+25 25 
+70 GALLETA MOROCHAS SIXPACK 180 
+G 
+19 19 
+71 GALLETA OREO ORIGINAL 135 G 56 56 
+72 GALLETA PÍCARAS CHIPS SIXPACK 
+228 G 
+6 6 
+73 GALLETA SODA FIELD SIXPACK 6 
+UND 
+27 27 
+74 GALLETA VICTORIA SODA V 
+ORIGINAL SIXPACK 210 G 
+6 6 
+75 GALLETAS CHARADA CHOCOLATE 
+VAINILLA 226.8 G 
+56 56 
+76 GALLETAS CORONITA CHOCOLATE 
+SIXPACK 216 G 
+14 14 
+77 GALLETAS FIELD CREAM CRACKER 
+258 G 
+28 28 
+\n=== PDF PAGINA 51 ===\n 
+ 
+ 
+N° Producto Cantidad 
+Vendida 
+Cantidad 
+Demandada (CD 
+78 GALLETAS FIELD CREAM CRACKER 
+73.5 G 
+32 32 
+79 GALLETAS PÍCARAS CLÁSICAS 
+SIXPACK 228 G 
+17 17 
+80 GALLETAS PÍCARAS LA CAPUCHINA 
+SIXPACK 228 G 
+9 9 
+81 GALLETAS RITZ PLAIN SIXPACK 120 
+G 
+4 4 
+82 GALLETAS TRAVESURAS FIELD 47.6 
+G 
+33 33 
+83 GALLETAS VICTORIA MARGARITA 
+SIXPACK 246 G 
+7 7 
+84 GASEOSA COCA COLA 1 L 81 81 
+85 GASEOSA COCA COLA 3 L 15 15 
+86 GASEOSA COCA COLA ORIGINAL 1.5 
+L 
+55 55 
+87 GASEOSA COCA COLA ORIGINAL 
+600 ML 
+142 142 
+88 GASEOSA COCA COLA ORIGINAL 
+SIXPACK 600 ML 
+17 17 
+89 GASEOSA COCA COLA PACK 2 
+BOTELLAS 1 L 
+57 57 
+90 GASEOSA COCA COLA PLUS LATA 
+320 ML 
+96 96 
+91 GASEOSA COCA COLA SIN AZÚCAR 
+1 L 
+105 105 
+92 GASEOSA COCA COLA SIN AZÚCAR 
+SIXPACK 300 ML 
+93 93 
+93 GASEOSA COCA COLA ZERO 2.25 L 36 36 
+94 GASEOSA COCA COLA ZERO PACK 
+2 BOTELLAS 1.5 L 
+27 27 
+95 GASEOSA COCA COLA ZERO 
+SIXPACK 600 ML 
+18 18 
+96 GASEOSA EVERVESS PACK 2 
+BOTELLAS 1.5 L 
+7 7 
+97 GASEOSA FANTA KOLA INGLESA 3 L 14 14 
+98 GASEOSA GUARANÁ 3.01 L 48 48 
+99 GASEOSA GUARANÁ 450 ML 88 88 
+100 GASEOSA INCA KOLA 1.5 L 55 55 
+101 GASEOSA INCA KOLA 3 L 21 21 
+102 GASEOSA INCA KOLA 600 ML 109 109 
+103 GASEOSA INCA KOLA ZERO 2.25 L 42 42 
+104 GASEOSA PEPSI 3 L 15 15 
+105 GASEOSA PEPSI COLA 1.5 L 21 21 
+106 GASEOSA PEPSI COLA 450 ML 110 110 
+107 GASEOSA SPRITE LIMA LIMÓN 3 L 4 4 
+108 GATORADE TROPICAL 500 ML 130 130 
+109 GELATINA UNIVERSAL FRESA 130 G 39 39 
+\n=== PDF PAGINA 52 ===\n 
+ 
+ 
+N° Producto Cantidad 
+Vendida 
+Cantidad 
+Demandada (CD 
+110 HARINA DE ARROZ COSTEÑO 1 KG 80 80 
+111 HARINA DE LINAZA NATURANDES 
+300 G 
+29 29 
+112 HARINA DE MAÍZ BLANCO PAN 1 KG 51 51 
+113 HARINA DE MAÍZ PAN AMARILLO 1 
+KG 
+44 44 
+114 HARINA DE QUINUA MOLICUSCO 250 
+G 
+44 44 
+115 HARINA DE TRIGO BLANCA FLOR 1 
+KG 
+73 73 
+116 HARINA DE TRIGO PREPARADA 
+BLANCA FLOR 1 KG 
+54 54 
+117 HARINA PREPARADA MOLITALIA 1 
+KG 
+35 35 
+118 HARINA SIN PREPARAR MOLITALIA 
+1 KG 
+37 37  
+119 HELADO DONOFRIO BOMBONES 
+CAJA 72 ML 
+72 72 
+120 HELADO DONOFRIO BOMBONES 
+VAINILLA POTE 18 UND 
+27 27 
+121 HELADO DONOFRIO DONITO 
+NAPOLITANO 2.2 L 
+10 10 
+122 HELADO DONOFRIO DONITO 
+VAINILLA CHIPS 2.2 L 
+7 7 
+123 HELADO DONOFRIO DONO 
+SANDWICH VAINILLA 900 ML 
+34 34 
+124 HELADO DONOFRIO PEZIDURI 
+CHEESECAKE FRUTOS ROJOS 900 
+ML 
+30 30 
+125 HELADO DONOFRIO PEZIDURI 
+CHOCOCHIPS 2.2 L 
+6 6 
+126 HELADO DONOFRIO PEZIDURI 
+CHOCOCHIPS 900 ML 
+25 25 
+127 HELADO DONOFRIO PEZIDURI 
+CHOCOLÚCUMA VAINILLA 2.2 L 
+21 21 
+128 HELADO DONOFRIO PEZIDURI 
+LÚCUMA 900 ML 
+37 37 
+129 HELADO DONOFRIO PEZIDURI 
+TRICOLOR 2.2 L 
+18 18 
+130 HELADO DONOFRIO PRINCESA 
+CHOCOLATE MANÍ 900 ML 
+8 8 
+131 HELADO DONOFRIO TORNADO 
+VAINILLA CAJA 1.5 L 
+4 4 
+132 HELADO FRÍO RICO CROCANTE 
+MARACUYÁ 900 ML 
+10 10 
+133 HELADO FRÍO RICO CROCANTE 
+SALSA CAFÉ 900 ML 
+21 21 
+134 HELADO FRÍO RICO CROCANTE 
+SALSA FRESA POTE 900 ML 
+26 26 
+\n=== PDF PAGINA 53 ===\n 
+ 
+ 
+N° Producto Cantidad 
+Vendida 
+Cantidad 
+Demandada (CD 
+135 HELADO FRÍO RICO VAINILLA CAJA 
+4 UND 
+14 14 
+136 HELADO MOROCHAS CHOCOLATE Y 
+VAINILLA POTE 900 ML 
+14 14 
+137 HELADO PALETA DONOFRIO 
+ALASKA FRESA 
+33 33 
+138 HELADO PALETA DONOFRIO FRÍO 
+RICO FRESA HUAURA 
+56 56 
+139 HELADO PALETA DONOFRIO 
+SUBLIME CHOCOLATE CON MANÍ 
+61 61 
+140 HELADO PEZIDURI CHOCOLATE 
+POTE 900 ML 
+40 40 
+141 HELADO PEZIDURI TRICOLOR POTE 
+900 ML 
+49 49 
+142 HELADO PEZIDURI VAINILLA POTE 
+900 ML 
+36 36 
+143 HELADO SUBLIME CHOCOLATE CON 
+MANÍ POTE 900 ML 
+18 18 
+144 HELADO TONITTO MENTA 
+ORIENTALE 1 L 
+14 14 
+145 INCA KOLA PACK 2 BOTELLAS 1 L 51 51 
+146 INCA KOLA SIN AZÚCAR SIXPACK 
+300 ML 
+55 55 
+147 INCA KOLA ZERO PACK 2 BOTELLAS 
+1.5 L 
+36 36 
+148 JABÓN DE LAVAR BOLÍVAR 190 G 33 33 
+149 KETCHUP ALACENA DOYPACK 200 
+G 
+17 17 
+150 LAVAVAJILLA AYUDÍN LIMÓN Y 
+SÁBILA 900 ML 
+27 27 
+151 LAVAVAJILLA SAPOLIO LIMA LIMÓN 
+1.25 L 
+53 53 
+152 LEJÍA CLOROX TRADICIONAL 1 KG 44 44 
+153 LEJÍA SAPOLIO ORIGINAL 1.6 KG 51 51 
+154 LENTEJA COSTEÑO 500 G 65 65 
+155 LENTEJAS CONFITADO CHOCOLATE 
+30 G 
+69 69 
+156 MAYONESA ALACENA DOYPACK 235 
+G 
+31 31 
+157 MOSTAZA ALACENA DOYPACK 400 
+G 
+22 22 
+158 MUSS CREMINO CHOCOLATE 
+TURRÓN SIXPACK 84 G 
+6 6 
+159 PACK COCA COLA 3 L + INCA KOLA 
+3 L 
+11 11 
+160 PACK INCA KOLA + COCA COLA + 
+FANTA 3 BOTELLAS 2.25 L 
+41 41 
+\n=== PDF PAGINA 54 ===\n 
+ 
+ 
+N° Producto Cantidad 
+Vendida 
+Cantidad 
+Demandada (CD 
+161 PACK INCA KOLA 1.5 L + COCA 
+COLA SIN AZÚCAR 1.5 L 
+102 102 
+162 PACK INCA KOLA 2.25 L + COCA 
+COLA 2.25 L 
+53 53 
+163 PACK MINI COCA COLA + INCA KOLA 
++ FANTA + SPRITE 300 ML 
+131 131 
+164 QUINUA COSTEÑO 500 G 49 49 
+165 QUITAMANCHAS VANISH ROPA 
+COLOR 450 ML 
+33 33 
+166 SAL DE MAR MARINA MESA 1 KG 39 39 
+167 SALSA POMAROLA CLÁSICA 145 G 45 45 
+168 SPAGUETTI DON VITTORIO 950 G 45 45 
+169 SPORADE APPLE ICE SIN AZÚCAR 
+500 ML 
+124 124 
+170 SPORADE BLUEBERRY 500 ML 64 64 
+171 SPORADE MANDARINA 500 ML 76 76 
+172 SPORADE SURTIDO SIXPACK 500 ML 25 25 
+173 SPORADE UVA 500 ML 94 94 
+174 SUAVIZANTE BOLÍVAR BEBÉS Y 
+NIÑOS 2.8 L 
+4 4 
+175 SUAVIZANTE BOLÍVAR CUIDADO 
+TOTAL FLORAL 1.5 L 
+10 10 
+176 SUAVIZANTE BOLÍVAR CUIDADO 
+TOTAL FLORAL 4.8 L 
+2 2 
+177 SUAVIZANTE BOLÍVAR PLUS 
+LAVANDA 2.8 L 
+4 4 
+178 SUAVIZANTE BOLÍVAR PLUS 
+ORQUÍDEA 2.8 L 
+4 4 
+179 SUAVIZANTE DOWNY FRESH 1.4 L 27 27 
+180 SUAVIZANTE DOWNY INTENSE 
+AMANECER 1.4 L 
+28 28 
+181 SUAVIZANTE DOWNY INTENSE 
+AMANECER 2.6 L 
+2 2 
+182 SUAVIZANTE DOWNY INTENSE 
+FLORAL 2.6 L 
+5 5 
+183 SUAVIZANTE SUAVITEL FRESCA 
+PRIMAVERA 1.5 L 
+9 9 
+184 SUAVIZANTE SUAVITEL FRESCA 
+PRIMAVERA BOTELLA 2.8 L 
+5 5 
+185 SUAVIZANTE SUAVITEL FRESCURA 
+MANZANA 2.3 L 
+2 2 
+186 SUAVIZANTE XPLEND CARICIA DE 
+ALGODÓN 2.8 L 
+1 1 
+187 SUAVIZANTE XPLEND SUEÑO 
+FLORAL 800 ML 
+27 27 
+188 SUAVIZANTE XPLEND SUEÑO 
+FLORAL BOTELLA 2.8 L 
+7 7 
+\n=== PDF PAGINA 55 ===\n 
+ 
+ 
+N° Producto Cantidad 
+Vendida 
+Cantidad 
+Demandada (CD 
+189 SUAVIZANTE XPLEND SUEÑO 
+FLORAL DOYPACK 2.3 L 
+4 4 
+190 TORNILLO DON VITTORIO 500 G 54 54 
+191 TRIPACK COCA COLA 3 L + INCA 
+KOLA 3 L + FANTA 3 L 
+6 6 
+192 WAFER FIELD CUA CUA PACK 9 UND 73 73 
+193 WAFER KIT KAT CHOCOLATE 41.5 G 81 81 
+194 WAFER NIK CHOCOLATE SIXPACK 
+162 G 
+26 26 
+195 WAFER NIK VAINILLA SIXPACK 162 
+G 
+35 35 
+ TOTAL 7,916 7,916 
+ 
+ 
+ 
+ 
+ 
+\n=== PDF PAGINA 56 ===\n 
+ 
+ 
+ 
+ 
+Instrumento de recolección de datos de la dimensión para el Postest: Volumen 
+de demanda 
+INDICADOR: Cantidad Demandada 
+INVESTIGADOR: Guerrero Mora, Carlos David Elian 
+LUGAR DE ESTUDIO: Minimarket Taully, Comas 
+FÓRMULA: CD = Σ Ventas realizadas 
+DONDE: CD = Cantidad Demandada 
+Σ = Sumatoria de ventas realizadas 
+Momento: Postest 
+ 
+ 
+N° Producto Cantidad 
+Vendida 
+Cantidad 
+Demandada (CD 
+1 AGUA CIELO SIN GAS 1 L 67 67 
+2 AGUA CIELO SIN GAS 2.5 L 46 46 
+3 AGUA SAN MATEO SIN GAS 600 
+ML 
+103 103 
+4 ARROZ BLANCO AÑEJO 
+FARAÓN VERDE 5 KG 
+7 7 
+5 ARROZ COSTEÑO EXTRA AÑEJO 
+5 KG 
+5 5 
+6 ARROZ COSTEÑO EXTRA AÑEJO 
+750 G 
+61 61 
+7 ARROZ EXTRA COSTEÑO 5 KG 3 3 
+8 ARROZ EXTRA FARAÓN 750 G 62 62 
+9 ARROZ EXTRA GRAN CHALÁN 5 
+KG 
+7 7 
+10 ARROZ EXTRA GRAN CHALÁN 
+FINA SELECCIÓN 4 KG 
+8 8 
+11 ARROZ EXTRA PAISANA 1 KG 74 74 
+12 ARROZ EXTRA PAISANA 5 KG 5 5 
+13 ARROZ FARAÓN EXTRA 5 KG 2 2 
+14 ARROZ FARAÓN EXTRA AÑEJO 
+PREMIUM 10 KG 
+1 1 
+15 ARROZ INTEGRAL VALLE 
+NORTE 750 G 
+52 52 
+16 ARROZ SUPERIOR FARAÓN 750 
+G 
+59 59 
+17 ARROZ SUPERIOR PAISANA 1 
+KG 
+72 72 
+18 ARROZ SUPERIOR PAISANA 5 
+KG 
+8 8 
+\n=== PDF PAGINA 57 ===\n 
+ 
+ 
+N° Producto Cantidad 
+Vendida 
+Cantidad 
+Demandada (CD 
+19 AVENA 3 OSITOS PRECOCIDA 
+CLÁSICA 250 G 
+32 32 
+20 AZÚCAR BLANCA DULFINA 1 KG 58 58 
+21 BARRA CHOCOLATE 
+DELICADORE LECHE Y 
+PISTACHO 98 G 
+76 76 
+22 BARRA DE CHOCOLATE 
+SNICKERS 52 G 
+58 58 
+23 BARRA MILKY SIN AZÚCAR LA 
+IBÉRICA 50 G 
+53 53 
+24 BEBIDA HEY FIT COLA 600 ML 54 54 
+25 BEBIDA HEY FIT GOLDEN FIZZ 
+600 ML 
+36 36 
+26 BEBIDA HEY FIT PIÑA COLADA 
+600 ML 
+35 35 
+27 BEBIDA HEY FIT TORONJA 
+CAMU CAMU 600 ML 
+50 50 
+28 BEBIDA REHIDRATANTE 
+GATORADE TROPICAL SIXPACK 
+500 ML 
+41 41 
+29 BEBIDA REHIDRATANTE 
+POWERADE MULTISABOR 
+SIXPACK 600 ML 
+34 34 
+30 BEBIDA REHIDRATANTE 
+SPORADE SURTIDO PACK 12 X 
+500 ML 
+6 6 
+31 BIZCOCHO CHOCMAN COSTA 
+SIXPACK 201 G 
+12 12 
+32 BOLITAS DE CEREAL CHOCO 
+YOGURT 2 CERRITOS 125 G 
+35 35 
+33 BOMBONES BON O BON BOLSA 
+90 G 
+46 46 
+34 BOMBONES CHOCOLATE 
+AMARGO FRANUÍ 150 G 
+21 21 
+35 BOMBONES CHOCOLATE CON 
+LECHE FRANUÍ 150 G 
+21 21 
+36 BOMBONES SUBLIME 
+CHOCOLATE BLANCO CON MANÍ 
+136 G 
+48 48 
+37 BOMBONES SUBLIME CREMA 
+MANÍ DOYPACK 136 G 
+66 66 
+\n=== PDF PAGINA 58 ===\n 
+ 
+ 
+N° Producto Cantidad 
+Vendida 
+Cantidad 
+Demandada (CD 
+38 BOMBONES TRIÁNGULO CON 
+LECHE DOYPACK 136 G 
+27 27 
+39 CABELLO DE ÁNGEL DON 
+VITTORIO 250 G 
+41 41 
+40 CARAMELOS HALLS MENTA 27 
+G 
+71 71 
+41 CARAMELOS HALLS MORA 27 G 93 93 
+42 CHICLE TRIDENT MENTA 
+FRESCA 30 G 
+77 77 
+43 CHICLE TRIDENT MORA AZUL 
+30.6 G 
+74 74 
+44 CHICLE TRIDENT SANDÍA 30 G 85 85 
+45 CHOCOLATE CHIN CHIN MINI 
+BOLSA 224 G 
+42 42 
+46 CHOCOLATE LA IBÉRICA MILKY 
+BITE SIZE 200 G 
+17 17 
+47 CHOCOLATE LA IBÉRICA MINI 
+MILKY BOLSA 10 UND 
+6 6 
+48 CHOCOLATE LENTEJAS FIESTA 
+MINI BOLSA 240 G 
+65 65 
+49 CHOCOLATE PRINCESA CREMA 
+MANÍ DOYPACK 136 G 
+48 48 
+50 CHOCOLATE ROYAL MINTS 
+RELLENO MENTA 200 G 
+49 49 
+51 CHOCOLATE SUBLIME CON 
+GALLETA 28 G 
+70 70 
+52 CHOCOLATE SUBLIME 
+EXTREMO 50 G 
+70 70 
+53 CHOCOLATE SUBLIME POWER 
+SIXPACK 150 G 
+52 52 
+54 CHOCOLATE SUBLIME SONRISA 
+CAJA 8 UND 
+25 25 
+55 CHOCOLATES VIZZIO 
+ALMENDRA DOYPACK 96 G 
+68 68 
+56 DETERGENTE ACE LIMPIEZA 
+COMPLETA 700 G 
+29 29 
+57 DETERGENTE BOLÍVAR 
+CUIDADO TOTAL 730 G 
+36 36 
+58 DETERGENTE MARSELLA 
+LAVANDA Y ROSAS 730 G 
+51 51 
+59 DETERGENTE SAPOLIO FLORAL 
+730 G 
+40 40 
+\n=== PDF PAGINA 59 ===\n 
+ 
+ 
+N° Producto Cantidad 
+Vendida 
+Cantidad 
+Demandada (CD 
+60 FETUCCINI DON VITTORIO 950 G 32 32 
+61 FIDEO LASAGNA MOLITALIA 350 
+G 
+48 48 
+62 FIDEO TALLARÍN MOLITALIA 950 
+G 
+66 66 
+63 FIDEOS SPAGHETTI MOLITALIA 
+950 G 
+65 65 
+64 GALLETA CASINO MENTA 
+SIXPACK 258 G 
+14 14 
+65 GALLETA CHIPS AHOY SIXPACK 
+222 G 
+15 15 
+66 GALLETA CLUB SOCIAL 
+REGULAR SIXPACK 144 G 
+13 13 
+67 GALLETA DE SODA SAN JORGE 
+PACK 7 UND 
+28 28 
+68 GALLETA DOÑA PEPA FIELD 
+SIXPACK 132 G 
+22 22 
+69 GALLETA FIELD CHOKOSODA 
+SIXPACK 216 G 
+12 12 
+70 GALLETA FIELD VAINILLA 
+FAMILIAR 136 G 
+36 36 
+71 GALLETA MOROCHAS SIXPACK 
+180 G 
+37 37 
+72 GALLETA OREO ORIGINAL 135 G 75 75 
+73 GALLETA PÍCARAS CHIPS 
+SIXPACK 228 G 
+31 31 
+74 GALLETA SODA FIELD SIXPACK 
+6 UND 
+12 12 
+75 GALLETA VICTORIA SODA V 
+ORIGINAL SIXPACK 210 G 
+10 10 
+76 GALLETAS CHARADA 
+CHOCOLATE VAINILLA 226.8 G 
+85 85 
+77 GALLETAS CORONITA 
+CHOCOLATE SIXPACK 216 G 
+7 7 
+78 GALLETAS FIELD CREAM 
+CRACKER 258 G 
+36 36 
+79 GALLETAS FIELD CREAM 
+CRACKER 73.5 G 
+52 52 
+80 GALLETAS PÍCARAS CLÁSICAS 
+SIXPACK 228 G 
+8 8 
+81 GALLETAS PÍCARAS LA 
+CAPUCHINA SIXPACK 228 G 
+12 12 
+\n=== PDF PAGINA 60 ===\n 
+ 
+ 
+N° Producto Cantidad 
+Vendida 
+Cantidad 
+Demandada (CD 
+82 GALLETAS RITZ PLAIN SIXPACK 
+120 G 
+22 22 
+83 GALLETAS TRAVESURAS FIELD 
+47.6 G 
+34 34 
+84 GALLETAS VICTORIA 
+MARGARITA SIXPACK 246 G 
+4 4 
+85 GASEOSA COCA COLA 1 L 58 58 
+86 GASEOSA COCA COLA 3 L 13 13 
+87 GASEOSA COCA COLA 
+ORIGINAL 1.5 L 
+62 62 
+88 GASEOSA COCA COLA 
+ORIGINAL 600 ML 
+96 96 
+89 GASEOSA COCA COLA 
+ORIGINAL SIXPACK 600 ML 
+20 20 
+90 GASEOSA COCA COLA PACK 2 
+BOTELLAS 1 L 
+49 49 
+91 GASEOSA COCA COLA PLUS 
+LATA 320 ML 
+139 139 
+92 GASEOSA COCA COLA SIN 
+AZÚCAR 1 L 
+95 95 
+93 GASEOSA COCA COLA SIN 
+AZÚCAR SIXPACK 300 ML 
+94 94 
+94 GASEOSA COCA COLA ZERO 
+2.25 L 
+41 41 
+95 GASEOSA COCA COLA ZERO 
+PACK 2 BOTELLAS 1.5 L 
+26 26 
+96 GASEOSA COCA COLA ZERO 
+SIXPACK 600 ML 
+63 63 
+97 GASEOSA EVERVESS PACK 2 
+BOTELLAS 1.5 L 
+11 11 
+98 GASEOSA FANTA KOLA 
+INGLESA 3 L 
+10 10 
+99 GASEOSA GUARANÁ 3.01 L 29 29 
+100 GASEOSA GUARANÁ 450 ML 51 51 
+101 GASEOSA INCA KOLA 1.5 L 44 44 
+102 GASEOSA INCA KOLA 3 L 32 32 
+103 GASEOSA INCA KOLA 600 ML 77 77 
+104 GASEOSA INCA KOLA ZERO 2.25 
+L 
+43 43 
+105 GASEOSA PEPSI 3 L 18 18 
+106 GASEOSA PEPSI COLA 1.5 L 56 56 
+107 GASEOSA PEPSI COLA 450 ML 93 93 
+\n=== PDF PAGINA 61 ===\n 
+ 
+ 
+N° Producto Cantidad 
+Vendida 
+Cantidad 
+Demandada (CD 
+108 GASEOSA SPRITE LIMA LIMÓN 3 
+L 
+15 15 
+109 GATORADE TROPICAL 500 ML 85 85 
+110 GELATINA UNIVERSAL FRESA 
+130 G 
+28 28 
+111 HARINA DE ARROZ COSTEÑO 1 
+KG 
+83 83 
+112 HARINA DE LINAZA 
+NATURANDES 300 G 
+40 40 
+113 HARINA DE MAÍZ BLANCO PAN 1 
+KG 
+42 42 
+114 HARINA DE MAÍZ PAN AMARILLO 
+1 KG 
+47 47 
+115 HARINA DE QUINUA MOLICUSCO 
+250 G 
+30 30 
+116 HARINA DE TRIGO BLANCA 
+FLOR 1 KG 
+45 45 
+117 HARINA DE TRIGO PREPARADA 
+BLANCA FLOR 1 KG 
+57 57 
+118 HARINA PREPARADA MOLITALIA 
+1 KG 
+44 44 
+119 HARINA SIN PREPARAR 
+MOLITALIA 1 KG 
+59 59 
+120 HELADO DONOFRIO BOMBONES 
+CAJA 72 ML 
+50 50 
+121 HELADO DONOFRIO BOMBONES 
+VAINILLA POTE 18 UND 
+47 47 
+122 HELADO DONOFRIO DONITO 
+NAPOLITANO 2.2 L 
+2 2 
+123 HELADO DONOFRIO DONITO 
+VAINILLA CHIPS 2.2 L 
+1 1 
+124 HELADO DONOFRIO DONO 
+SANDWICH VAINILLA 900 ML 
+58 58 
+125 HELADO DONOFRIO PEZIDURI 
+CHEESECAKE FRUTOS ROJOS 
+900 ML 
+24 24 
+126 HELADO DONOFRIO PEZIDURI 
+CHOCOCHIPS 2.2 L 
+10 10 
+127 HELADO DONOFRIO PEZIDURI 
+CHOCOCHIPS 900 ML 
+36 36 
+128 HELADO DONOFRIO PEZIDURI 
+CHOCOLÚCUMA VAINILLA 2.2 L 
+19 19 
+\n=== PDF PAGINA 62 ===\n 
+ 
+ 
+N° Producto Cantidad 
+Vendida 
+Cantidad 
+Demandada (CD 
+129 HELADO DONOFRIO PEZIDURI 
+LÚCUMA 900 ML 
+46 46 
+130 HELADO DONOFRIO PEZIDURI 
+TRICOLOR 2.2 L 
+9 9 
+131 HELADO DONOFRIO PRINCESA 
+CHOCOLATE MANÍ 900 ML 
+15 15 
+132 HELADO DONOFRIO TORNADO 
+VAINILLA CAJA 1.5 L 
+3 3 
+133 HELADO FRÍO RICO CROCANTE 
+MARACUYÁ 900 ML 
+18 18 
+134 HELADO FRÍO RICO CROCANTE 
+SALSA CAFÉ 900 ML 
+8 8 
+135 HELADO FRÍO RICO CROCANTE 
+SALSA FRESA POTE 900 ML 
+13 13 
+136 HELADO FRÍO RICO VAINILLA 
+CAJA 4 UND 
+25 25 
+137 HELADO MOROCHAS 
+CHOCOLATE Y VAINILLA POTE 
+900 ML 
+14 14 
+138 HELADO PALETA DONOFRIO 
+ALASKA FRESA 
+52 52 
+139 HELADO PALETA DONOFRIO 
+FRÍO RICO FRESA HUAURA 
+59 59 
+140 HELADO PALETA DONOFRIO 
+SUBLIME CHOCOLATE CON 
+MANÍ 
+66 66 
+141 HELADO PEZIDURI CHOCOLATE 
+POTE 900 ML 
+42 42 
+142 HELADO PEZIDURI TRICOLOR 
+POTE 900 ML 
+42 42 
+143 HELADO PEZIDURI VAINILLA 
+POTE 900 ML 
+40 40 
+144 HELADO SUBLIME CHOCOLATE 
+CON MANÍ POTE 900 ML 
+34 34 
+145 HELADO TONITTO MENTA 
+ORIENTALE 1 L 
+17 17 
+146 INCA KOLA PACK 2 BOTELLAS 1 
+L 
+36 36 
+147 INCA KOLA SIN AZÚCAR 
+SIXPACK 300 ML 
+105 105 
+148 INCA KOLA ZERO PACK 2 
+BOTELLAS 1.5 L 
+22 22 
+\n=== PDF PAGINA 63 ===\n 
+ 
+ 
+N° Producto Cantidad 
+Vendida 
+Cantidad 
+Demandada (CD 
+149 JABÓN DE LAVAR BOLÍVAR 190 
+G 
+22 22 
+150 KETCHUP ALACENA DOYPACK 
+200 G 
+30 30 
+151 LAVAVAJILLA AYUDÍN LIMÓN Y 
+SÁBILA 900 ML 
+13 13 
+152 LAVAVAJILLA SAPOLIO LIMA 
+LIMÓN 1.25 L 
+31 31 
+153 LEJÍA CLOROX TRADICIONAL 1 
+KG 
+50 50 
+154 LEJÍA SAPOLIO ORIGINAL 1.6 KG 48 48 
+155 LENTEJA COSTEÑO 500 G 67 67 
+156 LENTEJAS CONFITADO 
+CHOCOLATE 30 G 
+36 36 
+157 MAYONESA ALACENA DOYPACK 
+235 G 
+22 22 
+158 MOSTAZA ALACENA DOYPACK 
+400 G 
+49 49 
+159 MUSS CREMINO CHOCOLATE 
+TURRÓN SIXPACK 84 G 
+7 7 
+160 PACK COCA COLA 3 L + INCA 
+KOLA 3 L 
+23 23 
+161 PACK INCA KOLA + COCA COLA 
++ FANTA 3 BOTELLAS 2.25 L 
+60 60 
+162 PACK INCA KOLA 1.5 L + COCA 
+COLA SIN AZÚCAR 1.5 L 
+111 111 
+163 PACK INCA KOLA 2.25 L + COCA 
+COLA 2.25 L 
+45 45 
+164 PACK MINI COCA COLA + INCA 
+KOLA + FANTA + SPRITE 300 ML 
+136 136 
+165 QUINUA COSTEÑO 500 G 59 59 
+166 QUITAMANCHAS VANISH ROPA 
+COLOR 450 ML 
+30 30 
+167 SAL DE MAR MARINA MESA 1 
+KG 
+49 49 
+168 SALSA POMAROLA CLÁSICA 145 
+G 
+54 54 
+169 SPAGUETTI DON VITTORIO 950 G 34 34 
+170 SPORADE APPLE ICE SIN 
+AZÚCAR 500 ML 
+130 130 
+171 SPORADE BLUEBERRY 500 ML 121 121 
+172 SPORADE MANDARINA 500 ML 72 72 
+\n=== PDF PAGINA 64 ===\n 
+ 
+ 
+N° Producto Cantidad 
+Vendida 
+Cantidad 
+Demandada (CD 
+173 SPORADE SURTIDO SIXPACK 
+500 ML 
+25 25 
+174 SPORADE UVA 500 ML 131 131 
+175 SUAVIZANTE BOLÍVAR BEBÉS Y 
+NIÑOS 2.8 L 
+3 3 
+176 SUAVIZANTE BOLÍVAR CUIDADO 
+TOTAL FLORAL 1.5 L 
+3 3 
+177 SUAVIZANTE BOLÍVAR CUIDADO 
+TOTAL FLORAL 2.3 L 
+2 2 
+178 SUAVIZANTE BOLÍVAR CUIDADO 
+TOTAL FLORAL 4.8 L 
+1 1 
+179 SUAVIZANTE BOLÍVAR PLUS 
+LAVANDA 2.8 L 
+10 10 
+180 SUAVIZANTE DOWNY FRESH 1.4 
+L 
+15 15 
+181 SUAVIZANTE DOWNY INTENSE 
+AMANECER 1.4 L 
+20 20 
+182 SUAVIZANTE DOWNY INTENSE 
+AMANECER 2.6 L 
+5 5 
+183 SUAVIZANTE DOWNY INTENSE 
+FLORAL 2.6 L 
+2 2 
+184 SUAVIZANTE SUAVITEL FRESCA 
+PRIMAVERA 1.5 L 
+15 15 
+185 SUAVIZANTE SUAVITEL FRESCA 
+PRIMAVERA 2.3 L 
+1 1 
+186 SUAVIZANTE SUAVITEL FRESCA 
+PRIMAVERA BOTELLA 2.8 L 
+2 2 
+187 SUAVIZANTE SUAVITEL 
+FRESCURA MANZANA 2.3 L 
+2 2 
+188 SUAVIZANTE XPLEND CARICIA 
+DE ALGODÓN 2.8 L 
+2 2 
+189 SUAVIZANTE XPLEND SUEÑO 
+FLORAL 800 ML 
+29 29 
+190 SUAVIZANTE XPLEND SUEÑO 
+FLORAL BOTELLA 2.8 L 
+3 3 
+191 SUAVIZANTE XPLEND SUEÑO 
+FLORAL DOYPACK 2.3 L 
+2 2 
+192 TORNILLO DON VITTORIO 500 G 46 46 
+193 TRIPACK COCA COLA 3 L + INCA 
+KOLA 3 L + FANTA 3 L 
+1 1 
+194 WAFER FIELD CUA CUA PACK 9 
+UND 
+90 90 
+\n=== PDF PAGINA 65 ===\n 
+ 
+ 
+N° Producto Cantidad 
+Vendida 
+Cantidad 
+Demandada (CD 
+195 WAFER KIT KAT CHOCOLATE 
+41.5 G 
+57 57 
+196 WAFER NIK CHOCOLATE 
+SIXPACK 162 G 
+19 19 
+197 WAFER NIK VAINILLA SIXPACK 
+162 G 
+22 22 
+ 
+TOTAL 7,851 7,851 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+\n=== PDF PAGINA 66 ===\n 
+ 
+ 
+ 
+Instrumento de recolección de datos de la dimensión para el pretest:  
+PATRÓN DE DEMANDA 
+INDICADOR: Estacionalidad 
+INVESTIGADOR: Guerrero Mora, Carlos David Elian 
+LUGAR DE ESTUDIO: Minimarket Taully, Comas 
+FÓRMULA: IE = VP / VPR 
+DONDE: IE = Índice Estacional 
+VP = Venta del Período 
+VPR = Venta Promedio de Referencia 
+Momento: Pretest 
+ 
+ 
+N° Categoría  Venta del 
+Período (VP) 
+Venta 
+Promedio 
+(VPR) 
+Índice 
+Estacional 
+(IE) 
+1 Abarrotes 1 604 1 491,00 1,08 
+2 Bebidas 2 799 2 745,00 1,02 
+3 Golosinas 2 218 2 381,00 0,93 
+4 Helados 715 734,00 0,97 
+5 Limpieza 580 491,00 1,18 
+ TOTAL 7 916 7 842,00 1,01 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+\n=== PDF PAGINA 67 ===\n 
+ 
+ 
+ 
+ 
+Instrumento de recolección de datos de la dimensión para el Postest:  
+PATRÓN DE DEMANDA 
+INDICADOR: Estacionalidad 
+INVESTIGADOR: Guerrero Mora, Carlos David Elian 
+LUGAR DE ESTUDIO: Minimarket Taully, Comas 
+FÓRMULA: IE = VP / VPR 
+DONDE: IE = Índice Estacional 
+VP = Venta del Período 
+VPR = Venta Promedio de Referencia 
+Momento: Postest 
+ 
+ 
+N° Categoría  Venta del 
+Período (VP) 
+Venta 
+Promedio 
+(VPR) 
+Índice 
+Estacional 
+(IE) 
+1 Abarrotes 1 653 1 491,00 1,11 
+2 Bebidas 2 810 2 745,00 1,02 
+3 Golosinas 2 129 2 381,00 0,89 
+4 Helados 792 734,00 1,08 
+5 Limpieza 467 491,00 0,95 
+ TOTAL 7 851 7 842,00 1,00 
+ 
+ 
+ 
+ 
+ 
+ 
+\n=== PDF PAGINA 68 ===\n 
+ 
+ 
+ 
+ 
+ 
+ 
+Instrumento de recolección de datos de la dimensión para el Pretest: Precisión 
+del Pronóstico 
+INDICADOR:  Error de Pronóstico 
+INVESTIGADOR: Guerrero Mora, Carlos David Elian 
+LUGAR DE ESTUDIO: Minimarket Taully, Comas 
+FÓRMULA: MAPE = (100/n) × Σ |(DR − DP) / DR| 
+DONDE: MAPE = Error Porcentual Absoluto 
+Medio 
+DR = Demanda Real 
+DP = Demanda Pronosticada 
+n = Número de observaciones 
+Σ = Sumatoria de los errores 
+porcentuales absolutos 
+Momento: Pretest 
+ 
+ 
+N° Categoria Demanda 
+Real (DR) 
+Demanda 
+Pronosticada 
+(DP) 
+MAPE 
+1 Abarrotes  1,604 1,636,18 21,20 % 
+2 Bebidas  2,799 2,598,75 12,62 % 
+3 Golosinas  2,218 2,204,68 20,50 % 
+4 Helados  715 795,25 39,85 % 
+5 Limpieza 580 532,29 24,61 % 
+ Total 7,916 7,767,14 23,76 % 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+\n=== PDF PAGINA 69 ===\n 
+ 
+ 
+Instrumento de recolección de datos de la dimensión para el Postest: 
+Precisión del Pronóstico 
+INDICADOR:  Error de Pronóstico 
+INVESTIGADOR: Guerrero Mora, Carlos David Elian 
+LUGAR DE ESTUDIO: Minimarket Taully, Comas 
+FÓRMULA: MAPE = (100/n) × Σ |(DR − DP) / DR| 
+DONDE: MAPE = Error Porcentual Absoluto 
+Medio 
+DR = Demanda Real 
+DP = Demanda Pronosticada 
+n = Número de observaciones 
+Σ = Sumatoria de los errores 
+porcentuales absolutos 
+Momento: Postest 
+ 
+ 
+N° Categoria Demanda 
+Real (DR) 
+Demanda 
+Pronosticada 
+(DP) 
+MAPE 
+1 Abarrotes  1,653 1,506,70 21,19 % 
+2 Bebidas  2,810 2,666,39 15,08 % 
+3 Golosinas  2,129 2,226,85 22,53 % 
+4 Helados  792 708,73 31,42 % 
+5 Limpieza 467 575,62 40,81 % 
+ Total 7,851 7,684,29 26,21 % 
+ 
+ 
+\n=== PDF PAGINA 70 ===\n 
+ 
+ 
+Anexo 7. Solicitud de autorización para realizar la investigación de la empresa. 
+ 
+ 
+ 
+ 
+
+\n=== PDF PAGINA 71 ===\n 
+ 
+ 
+Anexo 8. Autorización de uso de información de la empresa. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+\n=== PDF PAGINA 72 ===\n 
+ 
+ 
+Anexo 9 
+
+\n=== PDF PAGINA 73 ===\n 
+ 
+ 
+
+\n=== PDF PAGINA 74 ===\n 
+ 
+ 
+
+\n=== PDF PAGINA 75 ===\n 
+ 
+ 
+
+\n=== PDF PAGINA 76 ===\n 
+ 
+ 
+
+\n=== PDF PAGINA 77 ===\n 
+ 
+ 
+
+\n=== PDF PAGINA 78 ===\n 
+ 
+ 
+ 
+ 
+
+\n=== PDF PAGINA 79 ===\n 
+ 
+ 
+Anexo 11. Otras evidencias. 
+ 
+ 
+  
+
+\n=== PDF PAGINA 80 ===\n 
+ 
+ 
+Anexo 12. Matriz de consistencia 
+Problemas Objetivos Hipótesis Variables Dimensiones Indicador Metodología 
+Principal General General Independiente 
+  
+Tipo de 
+Investigación: 
+Aplicada 
+ 
+Enfoque: 
+Cuantitativa 
+ 
+Diseño de 
+investigación: pre-
+experimental:  
+ 
+Población: totalidad 
+de los registros 
+históricos de ventas 
+e inventario del 
+Minimarket Taully, 
+Comas, 
+correspondientes al 
+período de estudio 
+(abril 2026 – 
+diciembre 2026 
+ 
+Alcance : Nivel 
+predictivo   
+ 
+Muestra: censal. 
+ 
+Muestreo: No 
+probabilístico por 
+conveniencia. 
+¿De qué manera un 
+modelo de machine 
+learning permitirá 
+predecir la demanda 
+diaria por categoría 
+de producto en un 
+minimarket de 
+Comas, 2026? 
+desarrollar y evaluar 
+un modelo de 
+machine learning 
+para predecir la 
+demanda diaria por 
+categoría de 
+producto en un 
+minimarket de 
+Comas, 2026. 
+se planteó que el 
+desarrollo de un 
+modelo de machine 
+learning permitirá 
+predecir la demanda 
+diaria por categoría 
+de producto en un 
+minimarket de 
+Comas, 2026 
+Modelo de machine 
+learning 
+Algoritmos 
+computacionales 
+que aprenden 
+patrones de datos 
+históricos para 
+realizar 
+predicciones [1], [4].   
+Segundario Específicas Específicas Dependiente 
+Volumen de 
+Demanda 
+ 
+ 
+Cantidad 
+Demandada 
+(Unidades) 
+ 
+Índice de Salida de 
+Inventario 
+ 
+Tasa de Quiebre de 
+Stock   
+(P1) ¿cómo se 
+recopilarán y 
+depurarán los datos 
+históricos de ventas 
+e inventario del 
+minimarket para la 
+construcción del 
+modelo predictivo? 
+(OE1) recopilar y 
+depurar los datos 
+históricos de ventas 
+e inventario del 
+minimarket para la 
+construcción del 
+modelo predictivo. 
+ (HE1) los datos 
+históricos de ventas 
+e inventario del 
+minimarket, una vez 
+depurados y 
+organizados, 
+permitirán identificar 
+patrones de 
+comportamiento de 
+la demanda por 
+categoría de 
+producto. 
+Demanda diaria por 
+categoría de 
+producto 
+Cantidad de 
+productos vendidos 
+por categoría, 
+influenciada por 
+factores 
+estacionales y 
+externos [1], [3]. (P2) ¿qué modelos 
+predictivos de 
+machine learning 
+orientados a series 
+temporales 
+(OE2) entrenar y 
+comparar el 
+desempeño de 
+diversos algoritmos 
+de machine learning 
+(HE2) al menos uno 
+de los modelos de 
+machine learning 
+evaluados mostrará 
+un error de 
+\n=== PDF PAGINA 81 ===\n 
+ 
+ 
+presentarán un 
+mejor desempeño 
+durante el 
+entrenamiento para 
+la demanda diaria 
+por categoría? 
+orientados a series 
+temporales para la 
+predicción de la 
+demanda diaria por 
+categoría. 
+predicción MAE, 
+RMSE y MAPE 
+menor que el 
+método base 
+ 
+Método de 
+Investigación: 
+Hipotético-deductivo 
+ 
+Técnica e 
+instrumentos: 
+Análisis documental, 
+ficha de registro, 
+dataset de ventas y 
+reporte de métricas. (P3) ¿cuál será el 
+nivel de desempeño 
+de los modelos 
+evaluados según las 
+métricas de error 
+MAE, RMSE y 
+MAPE? 
+(OE3) evaluar el 
+desempeño 
+predictivo de los 
+modelos entrenados 
+utilizando las 
+métricas de error 
+MAE, RMSE y 
+MAPE. 
+(HE3) el modelo de 
+machine learning 
+con el mejor 
+desempeño 
+predictivo facilitará 
+una mejor 
+planificación del 
+inventario al 
+proporcionar 
+estimaciones diarias 
+por categoría, lo que 
+permitirá reducir los 
+quiebres de stock y 
+el exceso de 
+inventario en el 
+minimarket. 
+Patrón de Demanda Estacionalidad 
+(P4) ¿de qué 
+manera el modelo 
+seleccionado 
+apoyará la 
+planificación del 
+inventario y la toma 
+de decisiones 
+comerciales del 
+minimarket? 
+(OE4) analizar la 
+contribución 
+predictiva del 
+modelo 
+seleccionado en la 
+planificación del 
+inventario y la toma 
+de decisiones 
+comerciales del 
+minimarket. 
+(HE4) La 
+implementación del 
+modelo seleccionado 
+permitirá optimizar la 
+planificación del 
+inventario al reducir 
+los quiebres de stock 
+y el exceso de 
+inventario en el 
+minimarket. 
+ 
+Precisión del 
+Pronóstico 
+Error de Pronóstico 
+\n=== PDF PAGINA 82 ===\n 
+ 
+ 
+Anexo 13. Reporte de similitud del software Turnitin.  
+ 

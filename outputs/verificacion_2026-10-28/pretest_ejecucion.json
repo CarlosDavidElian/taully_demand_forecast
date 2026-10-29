@@ -1,0 +1,1358 @@
+{
+  "run_id": "postest_20261028t213748z_20260717_30d_191eafd1",
+  "created_at": "2026-10-28T21:37:48.618989+00:00",
+  "result": {
+    "cutoff_date": "2026-07-17",
+    "horizon_days": 30,
+    "period": {
+      "start_date": "2026-07-18",
+      "end_date": "2026-08-16"
+    },
+    "categories_evaluated": [
+      "ABARROTES",
+      "BEBIDAS",
+      "GOLOSINAS",
+      "HELADOS",
+      "LIMPIEZA"
+    ],
+    "observation_count": 150,
+    "training": {
+      "internal_validation_metrics": {
+        "mae": 8.087413,
+        "rmse": 10.679275,
+        "wape": 16.276756
+      },
+      "trained_categories": 5,
+      "excluded_categories": {},
+      "validation_by_category": {
+        "ABARROTES": {
+          "method": "promedio_estacional",
+          "wape": 12.95
+        },
+        "BEBIDAS": {
+          "method": "random_forest",
+          "wape": 14.55
+        },
+        "GOLOSINAS": {
+          "method": "promedio_estacional",
+          "wape": 15.99
+        },
+        "HELADOS": {
+          "method": "promedio_estacional",
+          "wape": 18.38
+        },
+        "LIMPIEZA": {
+          "method": "random_forest",
+          "wape": 19.51
+        }
+      },
+      "temporary_model_artifact": true
+    },
+    "model": {
+      "name": "Modelo predictivo",
+      "metrics": {
+        "mae": 10.0946,
+        "rmse": 13.434242,
+        "mape": 23.961789,
+        "wape": 19.128221,
+        "actual_total": 7916.0,
+        "prediction_total": 8169.61
+      },
+      "by_category": {
+        "ABARROTES": {
+          "mae": 11.513,
+          "rmse": 14.328638,
+          "mape": 23.899038,
+          "wape": 21.533042,
+          "actual_total": 1604.0,
+          "prediction_total": 1592.13
+        },
+        "BEBIDAS": {
+          "mae": 13.126,
+          "rmse": 15.826888,
+          "mape": 14.667019,
+          "wape": 14.068596,
+          "actual_total": 2799.0,
+          "prediction_total": 2979.0
+        },
+        "GOLOSINAS": {
+          "mae": 13.574667,
+          "rmse": 18.245394,
+          "mape": 22.451073,
+          "wape": 18.360685,
+          "actual_total": 2218.0,
+          "prediction_total": 2449.2
+        },
+        "HELADOS": {
+          "mae": 6.754667,
+          "rmse": 8.21469,
+          "mape": 30.936721,
+          "wape": 28.341259,
+          "actual_total": 715.0,
+          "prediction_total": 701.92
+        },
+        "LIMPIEZA": {
+          "mae": 5.504667,
+          "rmse": 6.798419,
+          "mape": 27.855095,
+          "wape": 28.472414,
+          "actual_total": 580.0,
+          "prediction_total": 447.36
+        }
+      }
+    },
+    "baseline": {
+      "name": "PMS-7",
+      "description": "Promedio móvil simple de 7 días, calculado de forma recursiva.",
+      "metrics": {
+        "mae": 9.491245,
+        "rmse": 12.69674,
+        "mape": 23.757021,
+        "wape": 17.984927,
+        "actual_total": 7916.0,
+        "prediction_total": 7767.141671
+      },
+      "by_category": {
+        "ABARROTES": {
+          "mae": 9.751163,
+          "rmse": 11.914848,
+          "mape": 21.204973,
+          "wape": 18.237836,
+          "actual_total": 1604.0,
+          "prediction_total": 1636.178382
+        },
+        "BEBIDAS": {
+          "mae": 12.573212,
+          "rmse": 16.93612,
+          "mape": 12.619634,
+          "wape": 13.476111,
+          "actual_total": 2799.0,
+          "prediction_total": 2598.750787
+        },
+        "GOLOSINAS": {
+          "mae": 13.240644,
+          "rmse": 16.251999,
+          "mape": 20.49783,
+          "wape": 17.908896,
+          "actual_total": 2218.0,
+          "prediction_total": 2204.677489
+        },
+        "HELADOS": {
+          "mae": 7.65425,
+          "rmse": 9.016027,
+          "mape": 39.853834,
+          "wape": 32.115736,
+          "actual_total": 715.0,
+          "prediction_total": 795.24927
+        },
+        "LIMPIEZA": {
+          "mae": 4.236957,
+          "rmse": 5.641288,
+          "mape": 24.608833,
+          "wape": 21.915295,
+          "actual_total": 580.0,
+          "prediction_total": 532.285743
+        }
+      }
+    },
+    "comparison": {
+      "baseline_name": "PMS-7",
+      "candidate_name": "Modelo predictivo",
+      "improvement_vs_baseline": {
+        "mae": {
+          "absolute": -0.603355,
+          "percent": -6.356964
+        },
+        "rmse": {
+          "absolute": -0.737502,
+          "percent": -5.808593
+        },
+        "mape": {
+          "absolute": -0.204768,
+          "percent": -0.861926
+        },
+        "wape": {
+          "absolute": -1.143294,
+          "percent": -6.356957
+        }
+      },
+      "winner_by_metric": {
+        "mae": "pms_7",
+        "rmse": "pms_7",
+        "mape": "pms_7",
+        "wape": "pms_7"
+      },
+      "interpretation": "Un valor positivo de mejora indica que el modelo redujo el error frente a PMS-7."
+    },
+    "observations": [
+      {
+        "date": "2026-07-18",
+        "category": "ABARROTES",
+        "actual_demand": 56.0,
+        "model_prediction": 68.25,
+        "pms_7_prediction": 54.285714
+      },
+      {
+        "date": "2026-07-19",
+        "category": "ABARROTES",
+        "actual_demand": 66.0,
+        "model_prediction": 45.75,
+        "pms_7_prediction": 52.755102
+      },
+      {
+        "date": "2026-07-20",
+        "category": "ABARROTES",
+        "actual_demand": 52.0,
+        "model_prediction": 50.5,
+        "pms_7_prediction": 54.148688
+      },
+      {
+        "date": "2026-07-21",
+        "category": "ABARROTES",
+        "actual_demand": 71.0,
+        "model_prediction": 45.75,
+        "pms_7_prediction": 54.312786
+      },
+      {
+        "date": "2026-07-22",
+        "category": "ABARROTES",
+        "actual_demand": 39.0,
+        "model_prediction": 51.5,
+        "pms_7_prediction": 55.928899
+      },
+      {
+        "date": "2026-07-23",
+        "category": "ABARROTES",
+        "actual_demand": 26.0,
+        "model_prediction": 53.75,
+        "pms_7_prediction": 54.061598
+      },
+      {
+        "date": "2026-07-24",
+        "category": "ABARROTES",
+        "actual_demand": 58.0,
+        "model_prediction": 52.75,
+        "pms_7_prediction": 55.070398
+      },
+      {
+        "date": "2026-07-25",
+        "category": "ABARROTES",
+        "actual_demand": 43.0,
+        "model_prediction": 68.56,
+        "pms_7_prediction": 54.366169
+      },
+      {
+        "date": "2026-07-26",
+        "category": "ABARROTES",
+        "actual_demand": 68.0,
+        "model_prediction": 45.19,
+        "pms_7_prediction": 54.377663
+      },
+      {
+        "date": "2026-07-27",
+        "category": "ABARROTES",
+        "actual_demand": 41.0,
+        "model_prediction": 51.88,
+        "pms_7_prediction": 54.609457
+      },
+      {
+        "date": "2026-07-28",
+        "category": "ABARROTES",
+        "actual_demand": 48.0,
+        "model_prediction": 50.44,
+        "pms_7_prediction": 54.675282
+      },
+      {
+        "date": "2026-07-29",
+        "category": "ABARROTES",
+        "actual_demand": 44.0,
+        "model_prediction": 53.62,
+        "pms_7_prediction": 54.727067
+      },
+      {
+        "date": "2026-07-30",
+        "category": "ABARROTES",
+        "actual_demand": 60.0,
+        "model_prediction": 49.69,
+        "pms_7_prediction": 54.555376
+      },
+      {
+        "date": "2026-07-31",
+        "category": "ABARROTES",
+        "actual_demand": 72.0,
+        "model_prediction": 51.19,
+        "pms_7_prediction": 54.625916
+      },
+      {
+        "date": "2026-08-01",
+        "category": "ABARROTES",
+        "actual_demand": 51.0,
+        "model_prediction": 69.45,
+        "pms_7_prediction": 54.562419
+      },
+      {
+        "date": "2026-08-02",
+        "category": "ABARROTES",
+        "actual_demand": 65.0,
+        "model_prediction": 44.98,
+        "pms_7_prediction": 54.590454
+      },
+      {
+        "date": "2026-08-03",
+        "category": "ABARROTES",
+        "actual_demand": 55.0,
+        "model_prediction": 49.09,
+        "pms_7_prediction": 54.620853
+      },
+      {
+        "date": "2026-08-04",
+        "category": "ABARROTES",
+        "actual_demand": 47.0,
+        "model_prediction": 47.55,
+        "pms_7_prediction": 54.622481
+      },
+      {
+        "date": "2026-08-05",
+        "category": "ABARROTES",
+        "actual_demand": 32.0,
+        "model_prediction": 55.53,
+        "pms_7_prediction": 54.614938
+      },
+      {
+        "date": "2026-08-06",
+        "category": "ABARROTES",
+        "actual_demand": 66.0,
+        "model_prediction": 49.61,
+        "pms_7_prediction": 54.59892
+      },
+      {
+        "date": "2026-08-07",
+        "category": "ABARROTES",
+        "actual_demand": 58.0,
+        "model_prediction": 51.73,
+        "pms_7_prediction": 54.60514
+      },
+      {
+        "date": "2026-08-08",
+        "category": "ABARROTES",
+        "actual_demand": 68.0,
+        "model_prediction": 67.81,
+        "pms_7_prediction": 54.602172
+      },
+      {
+        "date": "2026-08-09",
+        "category": "ABARROTES",
+        "actual_demand": 52.0,
+        "model_prediction": 44.73,
+        "pms_7_prediction": 54.607851
+      },
+      {
+        "date": "2026-08-10",
+        "category": "ABARROTES",
+        "actual_demand": 51.0,
+        "model_prediction": 51.12,
+        "pms_7_prediction": 54.610336
+      },
+      {
+        "date": "2026-08-11",
+        "category": "ABARROTES",
+        "actual_demand": 39.0,
+        "model_prediction": 46.69,
+        "pms_7_prediction": 54.608834
+      },
+      {
+        "date": "2026-08-12",
+        "category": "ABARROTES",
+        "actual_demand": 52.0,
+        "model_prediction": 57.41,
+        "pms_7_prediction": 54.606885
+      },
+      {
+        "date": "2026-08-13",
+        "category": "ABARROTES",
+        "actual_demand": 40.0,
+        "model_prediction": 50.01,
+        "pms_7_prediction": 54.605734
+      },
+      {
+        "date": "2026-08-14",
+        "category": "ABARROTES",
+        "actual_demand": 56.0,
+        "model_prediction": 53.92,
+        "pms_7_prediction": 54.606708
+      },
+      {
+        "date": "2026-08-15",
+        "category": "ABARROTES",
+        "actual_demand": 69.0,
+        "model_prediction": 68.52,
+        "pms_7_prediction": 54.606931
+      },
+      {
+        "date": "2026-08-16",
+        "category": "ABARROTES",
+        "actual_demand": 59.0,
+        "model_prediction": 45.16,
+        "pms_7_prediction": 54.607611
+      },
+      {
+        "date": "2026-07-18",
+        "category": "BEBIDAS",
+        "actual_demand": 93.0,
+        "model_prediction": 115.54,
+        "pms_7_prediction": 86.714286
+      },
+      {
+        "date": "2026-07-19",
+        "category": "BEBIDAS",
+        "actual_demand": 77.0,
+        "model_prediction": 103.81,
+        "pms_7_prediction": 84.673469
+      },
+      {
+        "date": "2026-07-20",
+        "category": "BEBIDAS",
+        "actual_demand": 90.0,
+        "model_prediction": 90.79,
+        "pms_7_prediction": 85.912536
+      },
+      {
+        "date": "2026-07-21",
+        "category": "BEBIDAS",
+        "actual_demand": 81.0,
+        "model_prediction": 86.01,
+        "pms_7_prediction": 87.47147
+      },
+      {
+        "date": "2026-07-22",
+        "category": "BEBIDAS",
+        "actual_demand": 73.0,
+        "model_prediction": 102.38,
+        "pms_7_prediction": 89.395966
+      },
+      {
+        "date": "2026-07-23",
+        "category": "BEBIDAS",
+        "actual_demand": 82.0,
+        "model_prediction": 94.5,
+        "pms_7_prediction": 86.309675
+      },
+      {
+        "date": "2026-07-24",
+        "category": "BEBIDAS",
+        "actual_demand": 98.0,
+        "model_prediction": 100.91,
+        "pms_7_prediction": 85.353915
+      },
+      {
+        "date": "2026-07-25",
+        "category": "BEBIDAS",
+        "actual_demand": 115.0,
+        "model_prediction": 109.61,
+        "pms_7_prediction": 86.547331
+      },
+      {
+        "date": "2026-07-26",
+        "category": "BEBIDAS",
+        "actual_demand": 88.0,
+        "model_prediction": 106.58,
+        "pms_7_prediction": 86.52348
+      },
+      {
+        "date": "2026-07-27",
+        "category": "BEBIDAS",
+        "actual_demand": 72.0,
+        "model_prediction": 89.56,
+        "pms_7_prediction": 86.787768
+      },
+      {
+        "date": "2026-07-28",
+        "category": "BEBIDAS",
+        "actual_demand": 104.0,
+        "model_prediction": 89.14,
+        "pms_7_prediction": 86.912801
+      },
+      {
+        "date": "2026-07-29",
+        "category": "BEBIDAS",
+        "actual_demand": 79.0,
+        "model_prediction": 101.54,
+        "pms_7_prediction": 86.832991
+      },
+      {
+        "date": "2026-07-30",
+        "category": "BEBIDAS",
+        "actual_demand": 88.0,
+        "model_prediction": 94.7,
+        "pms_7_prediction": 86.466852
+      },
+      {
+        "date": "2026-07-31",
+        "category": "BEBIDAS",
+        "actual_demand": 100.0,
+        "model_prediction": 100.84,
+        "pms_7_prediction": 86.489305
+      },
+      {
+        "date": "2026-08-01",
+        "category": "BEBIDAS",
+        "actual_demand": 125.0,
+        "model_prediction": 104.21,
+        "pms_7_prediction": 86.651504
+      },
+      {
+        "date": "2026-08-02",
+        "category": "BEBIDAS",
+        "actual_demand": 100.0,
+        "model_prediction": 103.18,
+        "pms_7_prediction": 86.666386
+      },
+      {
+        "date": "2026-08-03",
+        "category": "BEBIDAS",
+        "actual_demand": 84.0,
+        "model_prediction": 89.7,
+        "pms_7_prediction": 86.686801
+      },
+      {
+        "date": "2026-08-04",
+        "category": "BEBIDAS",
+        "actual_demand": 75.0,
+        "model_prediction": 89.09,
+        "pms_7_prediction": 86.672377
+      },
+      {
+        "date": "2026-08-05",
+        "category": "BEBIDAS",
+        "actual_demand": 96.0,
+        "model_prediction": 102.8,
+        "pms_7_prediction": 86.638031
+      },
+      {
+        "date": "2026-08-06",
+        "category": "BEBIDAS",
+        "actual_demand": 125.0,
+        "model_prediction": 95.25,
+        "pms_7_prediction": 86.610179
+      },
+      {
+        "date": "2026-08-07",
+        "category": "BEBIDAS",
+        "actual_demand": 88.0,
+        "model_prediction": 100.79,
+        "pms_7_prediction": 86.630655
+      },
+      {
+        "date": "2026-08-08",
+        "category": "BEBIDAS",
+        "actual_demand": 87.0,
+        "model_prediction": 108.73,
+        "pms_7_prediction": 86.650848
+      },
+      {
+        "date": "2026-08-09",
+        "category": "BEBIDAS",
+        "actual_demand": 128.0,
+        "model_prediction": 105.31,
+        "pms_7_prediction": 86.650754
+      },
+      {
+        "date": "2026-08-10",
+        "category": "BEBIDAS",
+        "actual_demand": 90.0,
+        "model_prediction": 89.56,
+        "pms_7_prediction": 86.648521
+      },
+      {
+        "date": "2026-08-11",
+        "category": "BEBIDAS",
+        "actual_demand": 70.0,
+        "model_prediction": 89.17,
+        "pms_7_prediction": 86.643052
+      },
+      {
+        "date": "2026-08-12",
+        "category": "BEBIDAS",
+        "actual_demand": 87.0,
+        "model_prediction": 103.23,
+        "pms_7_prediction": 86.638863
+      },
+      {
+        "date": "2026-08-13",
+        "category": "BEBIDAS",
+        "actual_demand": 112.0,
+        "model_prediction": 99.03,
+        "pms_7_prediction": 86.638982
+      },
+      {
+        "date": "2026-08-14",
+        "category": "BEBIDAS",
+        "actual_demand": 95.0,
+        "model_prediction": 99.27,
+        "pms_7_prediction": 86.643096
+      },
+      {
+        "date": "2026-08-15",
+        "category": "BEBIDAS",
+        "actual_demand": 92.0,
+        "model_prediction": 106.03,
+        "pms_7_prediction": 86.644873
+      },
+      {
+        "date": "2026-08-16",
+        "category": "BEBIDAS",
+        "actual_demand": 105.0,
+        "model_prediction": 107.74,
+        "pms_7_prediction": 86.64402
+      },
+      {
+        "date": "2026-07-18",
+        "category": "GOLOSINAS",
+        "actual_demand": 98.0,
+        "model_prediction": 107.75,
+        "pms_7_prediction": 73.428571
+      },
+      {
+        "date": "2026-07-19",
+        "category": "GOLOSINAS",
+        "actual_demand": 63.0,
+        "model_prediction": 96.75,
+        "pms_7_prediction": 70.632653
+      },
+      {
+        "date": "2026-07-20",
+        "category": "GOLOSINAS",
+        "actual_demand": 49.0,
+        "model_prediction": 82.0,
+        "pms_7_prediction": 71.008746
+      },
+      {
+        "date": "2026-07-21",
+        "category": "GOLOSINAS",
+        "actual_demand": 75.0,
+        "model_prediction": 66.25,
+        "pms_7_prediction": 73.152853
+      },
+      {
+        "date": "2026-07-22",
+        "category": "GOLOSINAS",
+        "actual_demand": 73.0,
+        "model_prediction": 62.25,
+        "pms_7_prediction": 74.603261
+      },
+      {
+        "date": "2026-07-23",
+        "category": "GOLOSINAS",
+        "actual_demand": 61.0,
+        "model_prediction": 75.75,
+        "pms_7_prediction": 74.546583
+      },
+      {
+        "date": "2026-07-24",
+        "category": "GOLOSINAS",
+        "actual_demand": 38.0,
+        "model_prediction": 77.5,
+        "pms_7_prediction": 74.48181
+      },
+      {
+        "date": "2026-07-25",
+        "category": "GOLOSINAS",
+        "actual_demand": 72.0,
+        "model_prediction": 105.44,
+        "pms_7_prediction": 73.122068
+      },
+      {
+        "date": "2026-07-26",
+        "category": "GOLOSINAS",
+        "actual_demand": 94.0,
+        "model_prediction": 98.94,
+        "pms_7_prediction": 73.078282
+      },
+      {
+        "date": "2026-07-27",
+        "category": "GOLOSINAS",
+        "actual_demand": 79.0,
+        "model_prediction": 80.25,
+        "pms_7_prediction": 73.427658
+      },
+      {
+        "date": "2026-07-28",
+        "category": "GOLOSINAS",
+        "actual_demand": 71.0,
+        "model_prediction": 68.31,
+        "pms_7_prediction": 73.773216
+      },
+      {
+        "date": "2026-07-29",
+        "category": "GOLOSINAS",
+        "actual_demand": 60.0,
+        "model_prediction": 63.81,
+        "pms_7_prediction": 73.86184
+      },
+      {
+        "date": "2026-07-30",
+        "category": "GOLOSINAS",
+        "actual_demand": 78.0,
+        "model_prediction": 76.69,
+        "pms_7_prediction": 73.755922
+      },
+      {
+        "date": "2026-07-31",
+        "category": "GOLOSINAS",
+        "actual_demand": 81.0,
+        "model_prediction": 80.38,
+        "pms_7_prediction": 73.642971
+      },
+      {
+        "date": "2026-08-01",
+        "category": "GOLOSINAS",
+        "actual_demand": 84.0,
+        "model_prediction": 107.3,
+        "pms_7_prediction": 73.523137
+      },
+      {
+        "date": "2026-08-02",
+        "category": "GOLOSINAS",
+        "actual_demand": 95.0,
+        "model_prediction": 89.42,
+        "pms_7_prediction": 73.580432
+      },
+      {
+        "date": "2026-08-03",
+        "category": "GOLOSINAS",
+        "actual_demand": 88.0,
+        "model_prediction": 78.06,
+        "pms_7_prediction": 73.652168
+      },
+      {
+        "date": "2026-08-04",
+        "category": "GOLOSINAS",
+        "actual_demand": 53.0,
+        "model_prediction": 65.39,
+        "pms_7_prediction": 73.684241
+      },
+      {
+        "date": "2026-08-05",
+        "category": "GOLOSINAS",
+        "actual_demand": 49.0,
+        "model_prediction": 61.77,
+        "pms_7_prediction": 73.67153
+      },
+      {
+        "date": "2026-08-06",
+        "category": "GOLOSINAS",
+        "actual_demand": 79.0,
+        "model_prediction": 74.86,
+        "pms_7_prediction": 73.644343
+      },
+      {
+        "date": "2026-08-07",
+        "category": "GOLOSINAS",
+        "actual_demand": 73.0,
+        "model_prediction": 78.22,
+        "pms_7_prediction": 73.628403
+      },
+      {
+        "date": "2026-08-08",
+        "category": "GOLOSINAS",
+        "actual_demand": 95.0,
+        "model_prediction": 103.37,
+        "pms_7_prediction": 73.626322
+      },
+      {
+        "date": "2026-08-09",
+        "category": "GOLOSINAS",
+        "actual_demand": 89.0,
+        "model_prediction": 88.28,
+        "pms_7_prediction": 73.641063
+      },
+      {
+        "date": "2026-08-10",
+        "category": "GOLOSINAS",
+        "actual_demand": 67.0,
+        "model_prediction": 74.08,
+        "pms_7_prediction": 73.649724
+      },
+      {
+        "date": "2026-08-11",
+        "category": "GOLOSINAS",
+        "actual_demand": 77.0,
+        "model_prediction": 65.74,
+        "pms_7_prediction": 73.649375
+      },
+      {
+        "date": "2026-08-12",
+        "category": "GOLOSINAS",
+        "actual_demand": 80.0,
+        "model_prediction": 65.71,
+        "pms_7_prediction": 73.644394
+      },
+      {
+        "date": "2026-08-13",
+        "category": "GOLOSINAS",
+        "actual_demand": 62.0,
+        "model_prediction": 75.58,
+        "pms_7_prediction": 73.640518
+      },
+      {
+        "date": "2026-08-14",
+        "category": "GOLOSINAS",
+        "actual_demand": 98.0,
+        "model_prediction": 80.03,
+        "pms_7_prediction": 73.639971
+      },
+      {
+        "date": "2026-08-15",
+        "category": "GOLOSINAS",
+        "actual_demand": 92.0,
+        "model_prediction": 105.97,
+        "pms_7_prediction": 73.641624
+      },
+      {
+        "date": "2026-08-16",
+        "category": "GOLOSINAS",
+        "actual_demand": 45.0,
+        "model_prediction": 93.35,
+        "pms_7_prediction": 73.64381
+      },
+      {
+        "date": "2026-07-18",
+        "category": "HELADOS",
+        "actual_demand": 30.0,
+        "model_prediction": 28.5,
+        "pms_7_prediction": 24.857143
+      },
+      {
+        "date": "2026-07-19",
+        "category": "HELADOS",
+        "actual_demand": 19.0,
+        "model_prediction": 23.0,
+        "pms_7_prediction": 25.265306
+      },
+      {
+        "date": "2026-07-20",
+        "category": "HELADOS",
+        "actual_demand": 12.0,
+        "model_prediction": 20.25,
+        "pms_7_prediction": 25.303207
+      },
+      {
+        "date": "2026-07-21",
+        "category": "HELADOS",
+        "actual_demand": 29.0,
+        "model_prediction": 21.75,
+        "pms_7_prediction": 26.203665
+      },
+      {
+        "date": "2026-07-22",
+        "category": "HELADOS",
+        "actual_demand": 14.0,
+        "model_prediction": 18.5,
+        "pms_7_prediction": 26.661332
+      },
+      {
+        "date": "2026-07-23",
+        "category": "HELADOS",
+        "actual_demand": 17.0,
+        "model_prediction": 25.5,
+        "pms_7_prediction": 27.61295
+      },
+      {
+        "date": "2026-07-24",
+        "category": "HELADOS",
+        "actual_demand": 24.0,
+        "model_prediction": 22.25,
+        "pms_7_prediction": 27.271943
+      },
+      {
+        "date": "2026-07-25",
+        "category": "HELADOS",
+        "actual_demand": 26.0,
+        "model_prediction": 27.62,
+        "pms_7_prediction": 26.167935
+      },
+      {
+        "date": "2026-07-26",
+        "category": "HELADOS",
+        "actual_demand": 32.0,
+        "model_prediction": 23.75,
+        "pms_7_prediction": 26.355191
+      },
+      {
+        "date": "2026-07-27",
+        "category": "HELADOS",
+        "actual_demand": 36.0,
+        "model_prediction": 19.06,
+        "pms_7_prediction": 26.510889
+      },
+      {
+        "date": "2026-07-28",
+        "category": "HELADOS",
+        "actual_demand": 12.0,
+        "model_prediction": 19.94,
+        "pms_7_prediction": 26.683415
+      },
+      {
+        "date": "2026-07-29",
+        "category": "HELADOS",
+        "actual_demand": 20.0,
+        "model_prediction": 21.12,
+        "pms_7_prediction": 26.751951
+      },
+      {
+        "date": "2026-07-30",
+        "category": "HELADOS",
+        "actual_demand": 21.0,
+        "model_prediction": 26.38,
+        "pms_7_prediction": 26.764896
+      },
+      {
+        "date": "2026-07-31",
+        "category": "HELADOS",
+        "actual_demand": 15.0,
+        "model_prediction": 23.31,
+        "pms_7_prediction": 26.643746
+      },
+      {
+        "date": "2026-08-01",
+        "category": "HELADOS",
+        "actual_demand": 29.0,
+        "model_prediction": 28.78,
+        "pms_7_prediction": 26.554003
+      },
+      {
+        "date": "2026-08-02",
+        "category": "HELADOS",
+        "actual_demand": 31.0,
+        "model_prediction": 24.19,
+        "pms_7_prediction": 26.609156
+      },
+      {
+        "date": "2026-08-03",
+        "category": "HELADOS",
+        "actual_demand": 25.0,
+        "model_prediction": 19.83,
+        "pms_7_prediction": 26.645437
+      },
+      {
+        "date": "2026-08-04",
+        "category": "HELADOS",
+        "actual_demand": 28.0,
+        "model_prediction": 21.92,
+        "pms_7_prediction": 26.664658
+      },
+      {
+        "date": "2026-08-05",
+        "category": "HELADOS",
+        "actual_demand": 15.0,
+        "model_prediction": 20.66,
+        "pms_7_prediction": 26.661978
+      },
+      {
+        "date": "2026-08-06",
+        "category": "HELADOS",
+        "actual_demand": 34.0,
+        "model_prediction": 26.47,
+        "pms_7_prediction": 26.649125
+      },
+      {
+        "date": "2026-08-07",
+        "category": "HELADOS",
+        "actual_demand": 31.0,
+        "model_prediction": 22.64,
+        "pms_7_prediction": 26.632586
+      },
+      {
+        "date": "2026-08-08",
+        "category": "HELADOS",
+        "actual_demand": 49.0,
+        "model_prediction": 26.73,
+        "pms_7_prediction": 26.630992
+      },
+      {
+        "date": "2026-08-09",
+        "category": "HELADOS",
+        "actual_demand": 21.0,
+        "model_prediction": 23.98,
+        "pms_7_prediction": 26.64199
+      },
+      {
+        "date": "2026-08-10",
+        "category": "HELADOS",
+        "actual_demand": 23.0,
+        "model_prediction": 19.54,
+        "pms_7_prediction": 26.646681
+      },
+      {
+        "date": "2026-08-11",
+        "category": "HELADOS",
+        "actual_demand": 16.0,
+        "model_prediction": 21.65,
+        "pms_7_prediction": 26.646859
+      },
+      {
+        "date": "2026-08-12",
+        "category": "HELADOS",
+        "actual_demand": 18.0,
+        "model_prediction": 20.07,
+        "pms_7_prediction": 26.644316
+      },
+      {
+        "date": "2026-08-13",
+        "category": "HELADOS",
+        "actual_demand": 15.0,
+        "model_prediction": 27.09,
+        "pms_7_prediction": 26.641793
+      },
+      {
+        "date": "2026-08-14",
+        "category": "HELADOS",
+        "actual_demand": 15.0,
+        "model_prediction": 25.8,
+        "pms_7_prediction": 26.640745
+      },
+      {
+        "date": "2026-08-15",
+        "category": "HELADOS",
+        "actual_demand": 22.0,
+        "model_prediction": 27.91,
+        "pms_7_prediction": 26.641911
+      },
+      {
+        "date": "2026-08-16",
+        "category": "HELADOS",
+        "actual_demand": 36.0,
+        "model_prediction": 23.73,
+        "pms_7_prediction": 26.643471
+      },
+      {
+        "date": "2026-07-18",
+        "category": "LIMPIEZA",
+        "actual_demand": 10.0,
+        "model_prediction": 15.26,
+        "pms_7_prediction": 18.285714
+      },
+      {
+        "date": "2026-07-19",
+        "category": "LIMPIEZA",
+        "actual_demand": 18.0,
+        "model_prediction": 17.08,
+        "pms_7_prediction": 18.040816
+      },
+      {
+        "date": "2026-07-20",
+        "category": "LIMPIEZA",
+        "actual_demand": 17.0,
+        "model_prediction": 13.37,
+        "pms_7_prediction": 18.046647
+      },
+      {
+        "date": "2026-07-21",
+        "category": "LIMPIEZA",
+        "actual_demand": 25.0,
+        "model_prediction": 16.67,
+        "pms_7_prediction": 17.196168
+      },
+      {
+        "date": "2026-07-22",
+        "category": "LIMPIEZA",
+        "actual_demand": 27.0,
+        "model_prediction": 14.35,
+        "pms_7_prediction": 18.081335
+      },
+      {
+        "date": "2026-07-23",
+        "category": "LIMPIEZA",
+        "actual_demand": 16.0,
+        "model_prediction": 14.99,
+        "pms_7_prediction": 17.378669
+      },
+      {
+        "date": "2026-07-24",
+        "category": "LIMPIEZA",
+        "actual_demand": 23.0,
+        "model_prediction": 13.98,
+        "pms_7_prediction": 17.718479
+      },
+      {
+        "date": "2026-07-25",
+        "category": "LIMPIEZA",
+        "actual_demand": 22.0,
+        "model_prediction": 16.08,
+        "pms_7_prediction": 17.821118
+      },
+      {
+        "date": "2026-07-26",
+        "category": "LIMPIEZA",
+        "actual_demand": 19.0,
+        "model_prediction": 15.39,
+        "pms_7_prediction": 17.754748
+      },
+      {
+        "date": "2026-07-27",
+        "category": "LIMPIEZA",
+        "actual_demand": 12.0,
+        "model_prediction": 13.12,
+        "pms_7_prediction": 17.713881
+      },
+      {
+        "date": "2026-07-28",
+        "category": "LIMPIEZA",
+        "actual_demand": 7.0,
+        "model_prediction": 13.9,
+        "pms_7_prediction": 17.666342
+      },
+      {
+        "date": "2026-07-29",
+        "category": "LIMPIEZA",
+        "actual_demand": 18.0,
+        "model_prediction": 17.38,
+        "pms_7_prediction": 17.73351
+      },
+      {
+        "date": "2026-07-30",
+        "category": "LIMPIEZA",
+        "actual_demand": 23.0,
+        "model_prediction": 14.6,
+        "pms_7_prediction": 17.683821
+      },
+      {
+        "date": "2026-07-31",
+        "category": "LIMPIEZA",
+        "actual_demand": 25.0,
+        "model_prediction": 13.79,
+        "pms_7_prediction": 17.727414
+      },
+      {
+        "date": "2026-08-01",
+        "category": "LIMPIEZA",
+        "actual_demand": 29.0,
+        "model_prediction": 16.33,
+        "pms_7_prediction": 17.728691
+      },
+      {
+        "date": "2026-08-02",
+        "category": "LIMPIEZA",
+        "actual_demand": 18.0,
+        "model_prediction": 14.97,
+        "pms_7_prediction": 17.715487
+      },
+      {
+        "date": "2026-08-03",
+        "category": "LIMPIEZA",
+        "actual_demand": 17.0,
+        "model_prediction": 12.8,
+        "pms_7_prediction": 17.709878
+      },
+      {
+        "date": "2026-08-04",
+        "category": "LIMPIEZA",
+        "actual_demand": 18.0,
+        "model_prediction": 15.09,
+        "pms_7_prediction": 17.709306
+      },
+      {
+        "date": "2026-08-05",
+        "category": "LIMPIEZA",
+        "actual_demand": 24.0,
+        "model_prediction": 16.22,
+        "pms_7_prediction": 17.715444
+      },
+      {
+        "date": "2026-08-06",
+        "category": "LIMPIEZA",
+        "actual_demand": 14.0,
+        "model_prediction": 14.02,
+        "pms_7_prediction": 17.712863
+      },
+      {
+        "date": "2026-08-07",
+        "category": "LIMPIEZA",
+        "actual_demand": 19.0,
+        "model_prediction": 14.49,
+        "pms_7_prediction": 17.717012
+      },
+      {
+        "date": "2026-08-08",
+        "category": "LIMPIEZA",
+        "actual_demand": 19.0,
+        "model_prediction": 15.92,
+        "pms_7_prediction": 17.715526
+      },
+      {
+        "date": "2026-08-09",
+        "category": "LIMPIEZA",
+        "actual_demand": 18.0,
+        "model_prediction": 15.16,
+        "pms_7_prediction": 17.713645
+      },
+      {
+        "date": "2026-08-10",
+        "category": "LIMPIEZA",
+        "actual_demand": 16.0,
+        "model_prediction": 12.63,
+        "pms_7_prediction": 17.713382
+      },
+      {
+        "date": "2026-08-11",
+        "category": "LIMPIEZA",
+        "actual_demand": 18.0,
+        "model_prediction": 15.49,
+        "pms_7_prediction": 17.713882
+      },
+      {
+        "date": "2026-08-12",
+        "category": "LIMPIEZA",
+        "actual_demand": 30.0,
+        "model_prediction": 14.39,
+        "pms_7_prediction": 17.714536
+      },
+      {
+        "date": "2026-08-13",
+        "category": "LIMPIEZA",
+        "actual_demand": 12.0,
+        "model_prediction": 14.95,
+        "pms_7_prediction": 17.714407
+      },
+      {
+        "date": "2026-08-14",
+        "category": "LIMPIEZA",
+        "actual_demand": 17.0,
+        "model_prediction": 14.11,
+        "pms_7_prediction": 17.714627
+      },
+      {
+        "date": "2026-08-15",
+        "category": "LIMPIEZA",
+        "actual_demand": 26.0,
+        "model_prediction": 15.96,
+        "pms_7_prediction": 17.714286
+      },
+      {
+        "date": "2026-08-16",
+        "category": "LIMPIEZA",
+        "actual_demand": 23.0,
+        "model_prediction": 14.87,
+        "pms_7_prediction": 17.714109
+      }
+    ],
+    "methodology": {
+      "model": "El modelo se entrena solo con las ventas hasta la fecha de corte en un artefacto temporal y pronostica los días posteriores.",
+      "actuals": "Las ventas reales posteriores se toman del historial procesado.",
+      "baseline": "PMS-7 usa las últimas siete observaciones y añade cada estimación al siguiente paso.",
+      "history_fingerprint": "0ed353a8361cbda3ace5be82ace28f00d3b083f7b710104dab5fc733bbd0a3db",
+      "training_history_fingerprint": "f1f0617848103930ffc8b2ba7800d69a1f041a36a972158e35eb3ebdc3d91a5d",
+      "history_records": 840,
+      "training_history_records": 540
+    },
+    "inventory": {
+      "available": true,
+      "message": "Se muestran indicadores del archivo de demostración. Carga el kardex real de la tienda para resultados oficiales.",
+      "inventory": {
+        "name": "b72605497ca7b241ad7611013dc71af25fd877dc297e8504e6eb68782ac49a4b.xlsx",
+        "source_id": "b72605497ca7b241ad7611013dc71af25fd877dc297e8504e6eb68782ac49a4b",
+        "source_kind": "archivo de demostración del proyecto",
+        "evidence_status": "no_apto_para_evidencia",
+        "is_demonstration": true,
+        "uploaded_at": "2026-10-28T16:26:12.560823",
+        "records": 11748,
+        "categories": 5,
+        "start_date": "2026-04-01",
+        "end_date": "2026-09-15"
+      },
+      "metrics": [
+        {
+          "category": "ABARROTES",
+          "start_date": "2026-07-18",
+          "end_date": "2026-08-16",
+          "records": 514,
+          "SI": 394.0,
+          "EN": 881.0,
+          "SF": 315.0,
+          "CD": 960.0,
+          "ISI": 75.29411764705883,
+          "DQS": 1,
+          "DD": 30,
+          "DD_REGISTRADOS": 30,
+          "COBERTURA": 100.0,
+          "TQS": 3.3333333333333335
+        },
+        {
+          "category": "BEBIDAS",
+          "start_date": "2026-07-18",
+          "end_date": "2026-08-16",
+          "records": 612,
+          "SI": 712.0,
+          "EN": 1481.0,
+          "SF": 597.0,
+          "CD": 1596.0,
+          "ISI": 72.77701778385773,
+          "DQS": 10,
+          "DD": 30,
+          "DD_REGISTRADOS": 30,
+          "COBERTURA": 100.0,
+          "TQS": 33.33333333333333
+        },
+        {
+          "category": "GOLOSINAS",
+          "start_date": "2026-07-18",
+          "end_date": "2026-08-16",
+          "records": 480,
+          "SI": 645.0,
+          "EN": 905.0,
+          "SF": 413.0,
+          "CD": 1137.0,
+          "ISI": 73.35483870967742,
+          "DQS": 11,
+          "DD": 30,
+          "DD_REGISTRADOS": 30,
+          "COBERTURA": 100.0,
+          "TQS": 36.666666666666664
+        },
+        {
+          "category": "HELADOS",
+          "start_date": "2026-07-18",
+          "end_date": "2026-08-16",
+          "records": 269,
+          "SI": 191.0,
+          "EN": 309.0,
+          "SF": 151.0,
+          "CD": 349.0,
+          "ISI": 69.8,
+          "DQS": 1,
+          "DD": 30,
+          "DD_REGISTRADOS": 30,
+          "COBERTURA": 100.0,
+          "TQS": 3.3333333333333335
+        },
+        {
+          "category": "LIMPIEZA",
+          "start_date": "2026-07-18",
+          "end_date": "2026-08-16",
+          "records": 260,
+          "SI": 172.0,
+          "EN": 335.0,
+          "SF": 102.0,
+          "CD": 405.0,
+          "ISI": 79.88165680473372,
+          "DQS": 0,
+          "DD": 30,
+          "DD_REGISTRADOS": 30,
+          "COBERTURA": 100.0,
+          "TQS": 0.0
+        }
+      ],
+      "reconciliation": {
+        "rows_with_difference": 25,
+        "sales_total": 7916.0,
+        "balance_demand": 4447.0,
+        "difference": 3469.0,
+        "reconciled": false
+      },
+      "warnings": [
+        "Fuente: inventario demostrativo del proyecto. Validación con el kardex de la tienda pendiente.",
+        "Conciliación de inventario pendiente: revisar diferencias entre ventas y stock, ajustes, devoluciones, mermas y reposiciones."
+      ]
+    }
+  }
+}

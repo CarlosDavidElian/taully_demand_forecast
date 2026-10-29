@@ -1,0 +1,55 @@
+ 
+ 
+ 
+ 
+Instrumento de recolección de datos de la dimensión para el pretest:  
+PATRÓN DE DEMANDA 
+INDICADOR: Estacionalidad 
+INVESTIGADOR: Guerrero Mora, Carlos David Elian 
+LUGAR DE ESTUDIO: Minimarket Taully, Comas 
+FÓRMULA: IE = VP / VPR 
+DONDE: IE = Índice Estacional 
+VP = Venta del Período 
+VPR = Venta Promedio de Referencia 
+Momento: Pretest 
+ 
+ 
+N° Categoría  Venta del 
+Período (VP) 
+Venta 
+Promedio 
+(VPR) 
+Índice 
+Estacional 
+(IE) 
+1 Abarrotes 1 604 1 491,00 1,08 
+2 Bebidas 2 799 2 745,00 1,02 
+3 Golosinas 2 218 2 381,00 0,93 
+4 Helados 715 734,00 0,97 
+5 Limpieza 580 491,00 1,18 
+ TOTAL 7 916 7 842,00 1,01 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

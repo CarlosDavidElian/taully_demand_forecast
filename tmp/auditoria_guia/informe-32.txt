@@ -1,0 +1,38 @@
+ 
+21 
+ 
+[8] J. M. Palomino Huarilloclla, "Implementación de un modelo de machine 
+learning para la predicción de la demanda de una ferretería en Moquegua, 
+2024", Tesis, Univ. César Vallejo, Perú, 2024. Consultado: 1 jun. 2026. [En 
+línea]. Disponible: 
+https://alicia.concytec.gob.pe/vufind/Record/UCVV_74ad36992d479d9df5029
+d521249d464/Details  
+[9] R. C. Montero López, "Sistema web inteligente basado en machine learning  
+para apoyar la gestión de inventarios en la empresa E.B. Pareja Lecaros S.A.", 
+Tesis, Univ. Católica Santo Toribio de Mogrovejo, Perú, 2024. Consultado: 1 
+jun. 2026. [En línea]. Disponible: 
+https://repositorio.usat.edu.pe/items/10c2c805-827f-4e41-bc96-a4df605c5dce  
+[10] G. M. Ponce Illacutipa, "Modelo basado en Machine Learning para optimizar el 
+pronóstico de ventas de la empresa Ricos Pan, año 2020 –2021", Tesis, Perú, 
+2021. Consultado: 1 jun. 2026. [En línea]. Disponible: 
+https://alicia.concytec.gob.pe/vufind/Record/RNAP_5b1ee92720df311aa5a22
+708a1fb1488  
+[11] G. A. Flores Taquiri y J. S. Montalvo Celis, "Machine learning para la predicción 
+en la gestión de inventario dirigida a PYMES de venta de productos 
+tecnológicos", Tesis, Univ. César Vallejo, Perú, 2024. Consultado: 1 jun. 2026. 
+[En línea]. Disponible: 
+https://alicia.concytec.gob.pe/vufind/Record/UCVV_802cf5f75bd0c420ae4084
+d6b71ddb29  
+[12] R. L. León Villavicencios y F. E. Vinces Chumbes, "Machine Learning  para la 
+gestión de ventas en la empresa Forever Group SAC", Tesis, Univ. César 
+Vallejo, Perú, 2024. Consultado: 1 jun. 2026. [En línea]. Disponible: 
+https://alicia.concytec.gob.pe/vufind/Record/UCVV_0121b72d7f74603bbdd31f
+79cd25f4ad  
+[13] P. A. Anchante Aybar y D. D. Fernández Chávez, "Machine Learning  para la 
+toma de decisiones en la gestión de ventas, Lima 2024", Tesis, Univ. César 
+Vallejo, Perú, 2024. Consultado: 1 jun. 2026. [En línea]. Disponible: 
+https://alicia.concytec.gob.pe/vufind/Record/UCVV_8cda3aace716d90c01edb
+b0c689177c8/Details  
+[14] J. A. Rojas Vilca, "Aplicativo Móvil con Machine Learning para la gestión de 
+ventas en productos de la empresa Optilook de Lima, 2024", Tesis, Univ. César 
+Vallejo, Perú, 2024. Consultado: 1 jun. 2026. [En línea]. Disponible: 

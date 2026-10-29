@@ -1,0 +1,119 @@
+PAGE 6
+3. Methodology
+3.1. Data preparation and preprocessing
+The data we used in our stockout prediction are from an anonymous retailer with over 1.6 million SKUs. The company records 
+several key features for each SKU, including the current inventory level, the lead time for stock replenishment, in-transit quantity, the 
+historical sales (past one, three, six, and nine months), future demand forecasts (next three, six, and nine months), recommended 
+minimum safety stock level, overdue amounts from suppliers, average historical supplier performance (for past six and 12 months), 
+risks factors, and stockout status. We performed data cleaning and transformation to prepare the data for model training. First, 
+incomplete data entries were removed, errors were corrected, and missing values were replaced where possible using mean values. 
+Second, the categorical data were transformed using dummy coding. Third, we used centring and scaling to standardize the dataset to 
+handle skewness and outliers issues.
+Our target variable is the stockout status, which was denoted by “Yes” or “No” in the dataset. We transferred the target variable 
+using “0” to indicate non-stockout, and “1” to represent stockout. In practice, the chances of experiencing stockout should only 
+represent a small percentage in any types of successful business operations. It is the same for our case firm. In this dataset, 99.33 % 
+SKUs are non-stockout, whereas only 0.67 % are stockout. For our model training and prediction purposes, it is important to maintain 
+the same class imbalance in both train and test sets. Thus, we applied a stratified shuffle split technique to create splits by preserving 
+the same percentage for each target class as in the complete set. The stratified shuffle split method can reduce sampling bias where a 
+random slit may fail (Ma et al., 2018; Szeghalmy and Fazekas, 2023).
+3.2. Handling dataset imbalance
+The imbalance in the train set can cause biases in data classification, leading to poor accuracy and generalization performance (Sain 
+and Purnami, 2015; Zheng et al., 2015; Zou et al., 2016). For binary classification problems, the performance of any classifier is usually 
+evaluated by accuracy, precision and recall (Liu, 2022; Zhang et al., 2022). These standard metrics are calculated by using the confusion 
+matrix (Shajalal et al., 2023) as illustrated in Table 2. 
+• Precision = TP
+TP+FP (1)
+• Recall = TP
+TP+FN (2)
+• Accuracy = TP+TN
+TP+FN+FP+FN (3)
+However, for imbalanced classification, accuracy is not adequate to reflect the classifier performance (Evgeniou et al., 2022; 
+Shajalal et al., 2023). To examine the issue, we first trained a logistic regression model (LR) with the train set and make predictions, 
+which returned a 99.33 % accuracy on the test set. Then, we used confusion matrix to evaluate the performance of the classifier as 
+shown in Fig. 1. It can be seen that even though the classifier has a high accuracy rate, the correctly predicted number of TPs (i.e., true 
+stockout) to be zero, indicating a rather poor performance of the model in handling the imbalanced dataset.
+To deal with the imbalance in our dataset, we thus applied a combined over- and under-sampling technique SMOTE + Tomek Links 
+(Batista et al., 2004; Sain and Purnami, 2015). The synthetic minority oversampling technique (SMOTE) has long been proven to be 
+very effective in handling class-imbalanced problem (Chawla et al., 2002), but it can also create overlapping problems between classes 
+(Wang and Japkowicz, 2004). Tomek Links can be used as an under-sampling method or as a data cleaning method (Batista et al., 
+2004), which can remove the overlapping samples that are introduced by SMOTE (Yan et al., 2019). The resampled train set with 
+balanced stockout vs. non-stockout target variables is illustrated in Fig. 2.
+3.3. The stockout prediction analytical model
+We adopted five classical supervised learning models: LR, SVM, RF, AdaBoost, and GB. These models are representative classifiers 
+that have been used in various machine learning tasks (Zhang et al., 2022). In addition, we used eXtreme GB (XGBoost) that augments 
+GB by enhancing regularisation terms to prevent overfitting (Chen and Guestrin, 2016). We first trained these models using our 
+balanced train set and then used our test set to make predictions as shown in Fig. 3. Grid search was also applied to find the best 
+combination of hyperparameters for a given model. The prediction performances of the trained models were then evaluated and results 
+from the best model were presented.
+Table 2 
+Confusion matrix.
+PREDICTED Negative PREDICTED Positive
+ACTUAL Negative TRUE Negative (TN) FALSE Positive (FP)
+ACTUAL Positive FALSE Negative (FN) TRUE Positive (TP)
+Y. Liu et al. Journal of Digital Economy 4 (2025) 144–155
+149
+PAGE 7
+3.4. Results and models performance evaluation
+To evaluate the prediction performance of our trained models, we calculated the area under the curve (AUC) of the receiver 
+operating characteristic (ROC) curve (Fawcett, 2006). AUC measures the discriminative power of the classifier and how well the false 
+positive and true positive rates perform in comparison to the random choice model, which cannot be measured by the standard 
+Fig. 1. Confusion matrix for the LR model.
+Fig. 2. Balanced train set after transformation.
+Fig. 3. The methodological stockout prediction Flowchart.
+Y. Liu et al. Journal of Digital Economy 4 (2025) 144–155
+150
+PAGE 8
+accuracy (Evgeniou et al., 2022). This is especially important when there is imbalance in the dataset (Zhang et al., 2022). An AUC score 
+equal to or close to 1 indicates a perfect classifier (Liu, 2022). Table 3 summarizes the performance scores.
+It can be seen that the RF model outperforms all the other five models, with an AUC score of 0.978 indicating a well performed 
+classifier.
+3.5. Feature importance
+RF are a combination of tree predictors such that each tree depends on the values of a random vector sampled independently and 
+with the same distribution for all trees in the forest (Breiman, 2001). By computing the mean and standard deviation of accumulation 
+of the impurity decrease within each tree, we are able to derive the feature importances. Based on our RF model, we plotted the feature 
+importance with the features included in the dataset. It can be observed that the current inventory level, 3-month forecast, 6-month 
+forecast and 9-month forecast are highly important in predicting stockout as well as the past 1-month sales (see Fig. 4).
+4. Discussion
+As noted in previous studies, inventory stockout or supply shortage can pose significant challenges to business success of firms 
+(Chang et al., 2019), especially for the retail sector (Jing and Lewis, 2011). It can produce adverse effects on the company reputation 
+and consequently lead to loss of customers and sales because of customer dissatisfaction. Therefore, the high accuracy of stockout 
+prediction offers a greater possibility of developing more efficient inventory management systems to effectively tackle back-orders 
+problems faced by many retailers (Shajalal et al., 2023). However, inventory stockout usually takes place due to many varying fac￾tors, making accurate predictions difficult to achieve, especially when there is a large number of SKUs and imbalance in the dataset.
+In our study, to deal with the imbalanced dataset, we first applied the stratified shuffle split technique to create splits by preserving 
+the same percentage for each target class as in the complete set for our model training and testing purposes. Then, we used SMOTE +
+Tomek Links sampling technique to balance our train set. These techniques turned out to be effective in handling the imbalance in our 
+dataset (Batista et al., 2004; Sain and Purnami, 2015). We also trained various classical machine learning algorithms and evaluated 
+their performances. Even though we did not apply more complicated algorithms in our study such as deep neural network (Shajalal 
+et al., 2023), the overall prediction performance is dramatically improved. Most importantly, the results suggest that the proposed 
+analytical model for stockout prediction as depicted in Fig. 3 can help improve stockout prediction accuracy. In real-world applica￾tions, it is vital for inventory managers to fully understand their inventory data and the average stockout rates as per the number of 
+SKUs. If there is an obvious imbalance in the dataset, the managers could follow the proposed stockout prediction process in this study 
+to first deal with the imbalance before feeding the data into any forecasting models in order to improve the prediction performance and 
+accuracy.
+Fig. 4 reveals that the current inventory level and demand forecasts for the next three, six and nine months play more important 
+roles in stockout prediction, followed by past one-month and three-month sales. These results partially support the previous findings, 
+which confirm the relevance of specific predictors and the importance of addressing data imbalance in inventory forecasting. 
+Consistent with Ntakolia et al. (2021), we found that low inventory levels and short-term demand forecasts are critical indicators of 
+potential stockouts. Their study emphasized features such as low stock, quantity in transit, and short-to mid-term demand forecasts as 
+the most influential variables in predicting backorders, aligning closely with our feature importance results. Similarly, Shajalal et al. 
+(2023) highlighted the value of real-time, recent data—particularly sales and supplier-related information—for improving prediction 
+accuracy, a conclusion echoed in our finding that near-term sales and forecasts outperformed longer-term indicators. Furthermore, 
+both studies addressed the challenge of imbalanced datasets using SMOTE-based techniques; however, our study contributes further by 
+applying a combined SMOTE and Tomek Links approach to a uniquely large and highly imbalanced retail dataset comprising over 1.6 
+million SKUs; thus, our research not only aligns with but also extends the current literature by offering scalable, interpretable solutions 
+for stockout prediction in complex, real-world inventory environments.
+To interpret the results from a practical perspective, if the current inventory level of a particular SKU is low, there will be a high risk 
+of having stockout for that item, which is quite straightforward to understand. The findings regarding demand forecasts are consistent 
+with prior research that accurate forecasting is important for effective inventory control (Goltsos et al., 2022; Rego and Mesquita, 
+2015; Tiacci and Saetta, 2009). Poor demand forecasting can often lead to inaccurate replenishment decisions, resulting in stockout. 
+Therefore, inventory managers should strive to make accurate demand forecasts and accordingly make effective inventory control 
+policies to adjust inventory levels and replenishment decisions.
+Our findings further indicate that while demand forecasting is a key factor in stockout prediction, short-term fore￾casts—particularly those for the next three months—are more influential than longer-term forecasts (six- and nine-month horizons). 
+This suggests that recent forecasts more accurately capture current demand trends, thereby exerting a more immediate and significant 
+impact on inventory levels and the likelihood of stockouts. Similarly, recent sales data have a stronger effect on stockout prediction 
+Table 3 
+Model performance metrics.
+LR SVM RF AdaBoost GB XGBoost
+Precision 0.022 0.015 0.428 0.145 0.148 0.181
+AUC 0.759 0.688 0.978 0.938 0.944 0.950
+Y. Liu et al. Journal of Digital Economy 4 (2025) 144–155
+151

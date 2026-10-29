@@ -1,0 +1,221 @@
+PAGE 1
+Daily Sales Forecasting for Variable-Priced Items in Retail
+Business
+Chayakorn Auppakorn
+Department of Industrial Engineering, Faculty of
+Engineering, Chulalongkorn University, Bangkok,
+Thailand
+6370060621@student.chula.ac.th
+Naragain Phumchusri
+Department of Industrial Engineering, Faculty of
+Engineering, Chulalongkorn University, Bangkok,
+Thailand
+Naragain.P@chula.ac.th
+ABSTRACT
+Modern retail business manages products from various sources
+to serve consumers. To be able to respond to customers’ needs,
+accurate sales forecasting is essential to prepare appropriate lev￾els of stocks. This research aims to find methods and features to
+forecast the daily sales for a case study retail store chain having
+many categories of products with varied promotion prices. Three
+main models are considered: (1) Time series forecasting, i.e., TBATS
+model, (2) explanatory forecasting method, i.e., multiple linear re￾gression, and (3) machine learning model, i.e., XGBoost. Different
+types of dependent and independent variables transformation in
+Stepwise regression are also considered in order to find the most
+accurate results. Since there were records of the number of Covid￾19 cases in Thailand from 2020 and there was also government’s
+welfare money policy during Covid-19 crisis, this paper attempts
+to find how these variables affects retail sales. Weighted absolute
+percentage error (WAPE) is used to compare the accuracy among
+different models.
+CCS CONCEPTS
+• Applied Computing; • Computing methodologies;
+KEYWORDS
+Sales Forecasting, TBATS, Multiple Linear Regression, XGBoost,
+Machine Learning, Retail Industry
+ACM Reference Format:
+Chayakorn Auppakorn and Naragain Phumchusri. 2022. Daily Sales Fore￾casting for Variable-Priced Items in Retail Business. In 2022 4th International
+Conference on Management Science and Industrial Engineering (MSIE) (MSIE
+2022), April 28–30, 2022, Chiang Mai, Thailand. ACM, New York, NY, USA,
+7 pages. https://doi.org/10.1145/3535782.3535794
+1 INTRODUCTION
+Nowadays, retail industry progressively gives precedence to sales
+forecasting especially in the age of big data, getting detailed infor￾mation about each product has never been easier [1]. Sales forecasts
+Permission to make digital or hard copies of all or part of this work for personal or
+classroom use is granted without fee provided that copies are not made or distributed
+for profit or commercial advantage and that copies bear this notice and the full citation
+on the first page. Copyrights for components of this work owned by others than ACM
+must be honored. Abstracting with credit is permitted. To copy otherwise, or republish,
+to post on servers or to redistribute to lists, requires prior specific permission and/or a
+fee. Request permissions from permissions@acm.org.
+MSIE 2022, April 28–30, 2022, Chiang Mai, Thailand
+© 2022 Association for Computing Machinery.
+ACM ISBN 978-1-4503-9581-6/22/04. . . $15.00
+https://doi.org/10.1145/3535782.3535794
+are the essential inputs to many managerial decisions, such as pric￾ing, store space allocation, listing/delisting management for an item.
+Moreover, forecasting can also provide the basis for distribution
+and replenishment plans. If the pattern between future potential
+sales and historical sales can be detected, retail managers can ap￾propriately manage the product supply and also staff scheduling.
+The ability of retail managers to estimate the expected sales quan￾tity at the SKU (Stock Keeping Unit) × store level over the short
+term should lead to improve customer satisfaction, reduce waste,
+increase sales revenue and be more effective and efficient These are
+all crucial factors in maintaining competitiveness in the market.
+Even though the COVID-19 pandemic caused the economy to
+slow down from 2020 on, the data from the ’Office of the National
+Economic and Social Development Council’ found that retail busi￾nesses in Thailand from 2012 to 2020 trends are continuously rising
+[2]. The case study company is a convenience store chain in Thai￾land. Advanced forecasting is required for the company to manage
+replenishment plans which need to receive from suppliers. Promo￾tion sales require approximately four weeks of advanced forecasting
+and need to have adequate accuracy so that the inventory is suffi￾cient and not excessive. Therefore, the accurate forecasting is a key
+strategy for this company in order to be used in the replenishment
+planning process.
+Time series models point to consideration of previous observa￾tions on the basis of collected data and establish an appropriate
+model that is used to predict future outcomes. Traditional time
+series techniques like ARIMA and SARIMA are designed to handle
+single seasonality in a time series, but with the existence of mul￾tiple seasonal data, these techniques fail to perform the pattern.
+Hence, Time series model, i.e., Trigonometric, Box-Cox transforma￾tion, ARIMA error, trend multiple seasonal pattern (TBATS) which
+known for capturing the complex seasonal patterns is applied in
+this study. However, one drawback of time series method is that
+independent variables cannot be included to explain forecasting
+variables. In retail business, promotion price is often used to drive
+more sales. In this research, we also consider independent variables
+such as promotion price, day and month effects, holidays, Covid-19
+report numbers, government’s money support, etc. to explore how
+these independent variables can help predict daily sales. Thus, the
+goal of this paper is to find methods and features to forecast the
+daily sales for a case study company
+This paper is organized as follows. We begin by presenting a
+summary of literature review in the next section. In Section 3,
+we explain characteristics of data obtained from the case study
+company. In Section 4, we present the model methodology. Section
+5 present forecasting results and comparative performances among
+different models. Finally, Section 6 concludes with a summary of
+80
+PAGE 2
+MSIE 2022, April 28–30, 2022, Chiang Mai, Thailand Chayakorn Auppakorn and Naragain Phumchusri
+insights from the results and indicates interesting future extensions
+of this research.
+2 LITERATURE REVIEW
+For retail business, it is important to understand the behaviors of
+customers. Forecasting is one of the processes to understanding
+characteristics, supporting factors, negative factors, and a change of
+products to learn the market. The basic models for sales forecasting
+were based on lagged sales in history [3]. In the past decade, the
+traditional time series techniques such as simple moving average or
+Box-Jenkins ARIMA have been widely used [4], moreover, machine
+learning has played a big role as a great instrument for interpreting
+and demonstrating data patterns not only in the retail chain but also
+in other fields such as financial, cognitive science and engineering
+[5].
+[6] proposed methods for predicting sales revenue using Artifi￾cial Neural Network in Grocery Retail Chain in Turkey. [7] found
+that multivariate studies for SKU level forecasts outperformed the
+univariates in case of perishable products like bread and bakery. [8]
+and [9] considered applying machine learning models to forecast
+sales and analyze the impact of properties by comparing Random
+Forest (RF) with promotion forecast techniques. According to the
+results, it was found that the most important variables are the pro￾motion and the day of the week of daily sales. [10] considered
+external factors such as seasonal, promotion, holidays, and weather
+conditions in their retail demand forecasting using machine learn￾ing. [11] forecasted the daily sales of milk teas in two different stores
+with traditional time series, machine learning, and deep learning.
+[12] analyzed the characteristics data with intermittent demand
+and proposed machine learning models for an application in retail
+apparel with plenty of predictors. The upgrade version of boosting
+methods called LightGBM was represented that it had an obvious
+advantage in sales forecasting and reduced training time, moreover
+it can stand with exogenous factors and seasons [13] [14] .
+Since the COVID-19 pandemic has caused the economy to slow
+down from 2020 on, it is interesting to capture how this number
+affects retail sales. There were records of the number of Covid-19
+cases in Thailand from 2020 and there was also government’s wel￾fare money policy during Covid-19 crisis. Unlike previous literature,
+this paper also attempts to find how these variables affects retail
+sales when adding these features in our proposed models.
+3 DATA
+The case study company separates products into 14 main groups.
+However, it is found by Pareto diagram shown in Figure 1 that 7
+groups of products, i.e., milk, baby milk powder, sauce, washing
+powder, disposable diaper, soft drink, and cooking oil already ac￾count for 83% of total sales. This research then focuses on the top
+product with the highest sales in each category. Records of daily
+sales of each product from January 1tst, 2019 to October 31th 2021
+are obtained for this study. After observing sales time series, there
+are 3 groups of behaviors below:
+1. Products with seasonality and trend: i.e., milk, and baby
+powder milk
+2. Products with seasonality but no trend: i.e., sauce and wash￾ing powder.
+3. Products with no seasonality and no trend: i.e., disposable
+diapers, soft drinks and cooking oil.
+Examples from sales time series of products in each group are
+shown in Figure 2-4. Table 1 summarizes the details of sales data
+for each product in each group. Weight represents how much that
+product’s revenue contribution to the total revenue of the focused
+products. The daily sales data were divided into 3 different groups:
+a) Training set from January 1st, 2019 to April 30th, 2021 (about
+80%)
+b) Validation set from May 1st, 2021 to July 31th, 2021 (about
+10%)
+c) Test set from August 1st 2021 to October 31st, 2021 (about
+10%)
+4 METHODOLOGY
+This section describes the methodology of this research. Figure 5
+summarizes procedure flow used in this paper. There main models
+are tested: TBATS for Time Series Model, Multiple Linear Regres￾sion, and XGBoost for Machine Learning. Then, the performance
+of each model is evaluated using the validation set. The model with
+lowest error is then used for the final testing set. All methods are
+run by Python Programming language.
+Mean absolute percentage error (MAPE) is been used to evaluate
+the prediction accuracy
+MAPE =
+1
+N
+Õ
+N
+i=1
+
+
+
+
+yt − ybt
+yt
+
+
+
+
+(1)
+where
+N is the number of observations
+yi
+is the actual sale of day t
+ybi
+is the forecasted sale of day t
+4.1 Forecasting Models
+To identify the accurate methods and features to forecast the daily
+sales for a case study retail store chain, three main models are
+considered: (1) Time series forecasting, i.e., TBATS model, (2) ex￾planatory forecasting method, i.e., multiple linear regression, and
+(3) machine learning model, i.e., XGBoost. The next sub section
+describes details of each model.
+4.1.1 Trigonometric, Box-Cox transformation, ARIMA error, trend
+multiple seasonal pattern (TBATS). TBATS forecasting method is a
+time series forecasting method developed by De Livera et al. in 2011
+[15]. Developed from many forecasting models such as Holt-winter,
+Box-cox transformation, ARIMA, TBATS helps to find parameters
+using the smooth forecast method and helps to solve unobserved
+patterns of time series with the Trigonometric Function method.
+The highlight of the TBATS forecasting method is the ability to
+forecast time series with more than one seasonal index or more
+complex (Multiple seasonal pattern). TBATS equation is as follow;
+y
+(ω)
+t
+=
+(
+y
+(ω)
+t −1
+ω
+, ω , 0
+logyt
+, ω , 0
+(2)
+Components:
+y
+(ω)
+t
+= lt−1 + ϕbt−1 + αdt
+(3)
+81

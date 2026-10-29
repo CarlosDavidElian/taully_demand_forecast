@@ -1,0 +1,60 @@
+ 
+ 
+ 
+ 
+ 
+Instrumento de recolección de datos de la dimensión para el Postest: Volumen 
+de demanda 
+INDICADOR: Cantidad Demandada 
+INVESTIGADOR: Guerrero Mora, Carlos David Elian 
+LUGAR DE ESTUDIO: Minimarket Taully, Comas 
+FÓRMULA: CD = Σ Ventas realizadas 
+DONDE: CD = Cantidad Demandada 
+Σ = Sumatoria de ventas realizadas 
+Momento: Postest 
+ 
+ 
+N° Producto Cantidad 
+Vendida 
+Cantidad 
+Demandada (CD 
+1 AGUA CIELO SIN GAS 1 L 67 67 
+2 AGUA CIELO SIN GAS 2.5 L 46 46 
+3 AGUA SAN MATEO SIN GAS 600 
+ML 
+103 103 
+4 ARROZ BLANCO AÑEJO 
+FARAÓN VERDE 5 KG 
+7 7 
+5 ARROZ COSTEÑO EXTRA AÑEJO 
+5 KG 
+5 5 
+6 ARROZ COSTEÑO EXTRA AÑEJO 
+750 G 
+61 61 
+7 ARROZ EXTRA COSTEÑO 5 KG 3 3 
+8 ARROZ EXTRA FARAÓN 750 G 62 62 
+9 ARROZ EXTRA GRAN CHALÁN 5 
+KG 
+7 7 
+10 ARROZ EXTRA GRAN CHALÁN 
+FINA SELECCIÓN 4 KG 
+8 8 
+11 ARROZ EXTRA PAISANA 1 KG 74 74 
+12 ARROZ EXTRA PAISANA 5 KG 5 5 
+13 ARROZ FARAÓN EXTRA 5 KG 2 2 
+14 ARROZ FARAÓN EXTRA AÑEJO 
+PREMIUM 10 KG 
+1 1 
+15 ARROZ INTEGRAL VALLE 
+NORTE 750 G 
+52 52 
+16 ARROZ SUPERIOR FARAÓN 750 
+G 
+59 59 
+17 ARROZ SUPERIOR PAISANA 1 
+KG 
+72 72 
+18 ARROZ SUPERIOR PAISANA 5 
+KG 
+8 8 

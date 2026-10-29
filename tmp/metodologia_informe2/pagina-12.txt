@@ -1,0 +1,48 @@
+ 
+9 
+ 
+experiencia del responsable del minimarket y mediante la revisión visual de los niveles 
+de stock. 
+ 
+Aunque este método puede funcionar durante las primeras etapas del negocio, pierde 
+efectividad conforme aumenta la variedad de productos, debido a que cada categoría 
+presenta un comportamiento de venta distinto. A partir de los registros del sistema 
+Kardex se identificó un desequilibrio en la gestión del inventario: los productos de 
+mayor rotación suelen agotarse con frecuencia, mientras que los de menor demanda 
+o aquellos de carácter perecible permanecen almacenados por más tiempo. 
+ 
+Esta situación genera costos por mantener productos sin movimiento y, a la vez, 
+puede reducir las oportunidades de venta. Frente a ello, un modelo de machine 
+learning permitiría analizar el historial de transacciones y estimar con mayor precisión 
+la cantidad de productos que debería solicitarse en cada categoría. De esta manera, 
+sería posible mejorar la planificación del inventario y apoyar una gestión más eficiente 
+de las operaciones del minimarket . La falta de herramientas predictivas, en cambio, 
+limita la capacidad del establecimiento para anticipar la demanda. 
+ 
+Cuando las proyecciones de ventas no reflejan con precisión el comportamiento de la 
+demanda, la distribución de los recursos puede verse afectada. Esto puede ocasionar 
+acumulación de productos de baja rotación y, al mismo tiempo, falta de stock en 
+aquellos con mayor demanda. Estas situaciones también repercuten en la experiencia 
+del cliente, ya que no encontrar determinados productos puede afectar su percepción 
+sobre el servicio. Por ello, contar con estimaciones más precisas permite organizar 
+mejor las compras, mantener un mayor control del inventario y tomar decisiones más 
+acertadas dentro del minimarket. 
+ 
+Desde el punto de vista administrativo, el principal desafío para garantizar la 
+sostenibilidad del negocio radica en contar con información confiable que permita 
+anticipar el comportamiento de la demanda y respaldar una adecuada planificación 
+de las compra s, el abastecimiento y la gestión del inventario supera la gestión 
+operativa básica de ventas. El éxito comercial reside en la capacidad de disponer de 
+información precisa que permita anticipar el comportamiento de los clientes frente a 
+diversas categorías de productos. Contar con esta ventaja competitiva proporciona el 
+margen de maniobra necesario para la toma de decisiones estratégicas, evitando que 
+la gestión del negocio se vea limitada por situaciones de urgencia.  
+ 
+Por este motivo, conseguir que el sistema nos calcule las ventas del día a día dejó de 
+ser una simple propuesta interesante en papel; hoy por hoy es una necesidad 
+operativa obligatoria y muy práctica si genuinamente buscamos darle un rumbo 
+estructurado a t oda la estrategia comercial de la tienda. El presente estudio se 
+alineará con el Objetivo de Desarrollo Sostenible 9, Industria, innovación e 
+infraestructura, específicamente con la meta 9.5, al desarrollar y evaluar un modelo 
+de machine learning que fortalecerá las capacidades tecnológicas para la gestión de 
+la demanda en un minimarket.  

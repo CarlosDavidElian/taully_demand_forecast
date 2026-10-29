@@ -1,0 +1,47 @@
+ 
+10 
+ 
+ 
+De manera complementaria, se vinculará con la meta 8.2 del Objetivo de Desarrollo 
+Sostenible 8, al promover la productividad mediante una planificación de compras 
+basada en datos, y con la meta 12.2 del Objetivo de Desarrollo Sostenible 12, al 
+favorecer el uso eficiente de los recursos y la reducción del desperdicio asociado al 
+exceso de productos perecibles.  
+ 
+A partir de esta realidad, se formuló el siguiente problema general de investigación: 
+¿De qué manera un modelo de machine learning permitirá predecir la demanda diaria 
+por categoría de producto en un minimarket de Comas 2026? Los problemas 
+específicos planteados fueron los siguientes: (P1) ¿cómo se recopilarán y depurarán 
+los datos históricos de ventas e inventario del minimarket para la construcción del 
+modelo predictivo?; (P2) ¿qué modelos predictivos de machine learning orientados a 
+series temporales presentarán un mejor desempeño durante el entrenamiento para la 
+demanda diaria por categoría?; (P3) ¿cuál será el nivel de desempeño de los modelos 
+evaluados según las métricas de error MAE, RMSE y MAPE?; y (P4) ¿de qué manera 
+el modelo seleccionado apoyará la planificación del inventario y la toma de decisiones 
+?  
+ 
+La investigación se justifica desde el punto de vista teórico porque integra 
+conocimientos sobre machine learning , series temporales y predicción de demanda 
+en el contexto de un minimarket . Asimismo, se justifica desde el punto de vista 
+tecnológico porque demuestra la viabilidad de aplicar técnicas predictivas a un 
+problema real de gestión comercial en un pequeño negocio. Desde el punto de vista 
+práctico, la investigación ofrece una herrami enta de apoyo para mejorar la 
+planificación de la demanda; al predecir la demanda diaria por categoría, permite 
+decidir qué productos comprar, qué categorías reforzar y cómo reducir los riesgos de 
+desabastecimiento o exceso de mercadería.  
+ 
+Desde el punto de vista metodológico, la investigación propone un procedimiento de 
+recopilación, preparación, entrenamiento y evaluación de datos que sirve como 
+referencia para estudios similares. Finalmente, se justifica desde el punto de vista 
+social y e conómico porque una gestión más eficiente de los productos mejora su 
+disponibilidad para los clientes y reduce las pérdidas ocasionadas por una 
+planificación inadecuada.  
+ 
+El objetivo general de la investigación fue desarrollar y evaluar un modelo de machine 
+learning para predecir la demanda diaria por categoría de producto en un minimarket 
+de Comas 2026. Para alcanzar este propósito, se plantearon los siguientes objetivos 
+específicos: (OE1) recopilar y depurar los datos históricos de ventas e inventario del 
+minimarket para la construcción del modelo predictivo; (OE2) entrenar y comparar el 
+desempeño de diversos algoritmos de machine learning  orientados a series 
+temporales para la predicción de la demanda diaria por categoría; (OE3) evaluar el 
+desempeño predictivo de los modelos entrenados utilizando las métricas de error 

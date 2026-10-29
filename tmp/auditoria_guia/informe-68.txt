@@ -1,0 +1,52 @@
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Instrumento de recolección de datos de la dimensión para el Pretest: Precisión 
+del Pronóstico 
+INDICADOR:  Error de Pronóstico 
+INVESTIGADOR: Guerrero Mora, Carlos David Elian 
+LUGAR DE ESTUDIO: Minimarket Taully, Comas 
+FÓRMULA: MAPE = (100/n) × Σ |(DR − DP) / DR| 
+DONDE: MAPE = Error Porcentual Absoluto 
+Medio 
+DR = Demanda Real 
+DP = Demanda Pronosticada 
+n = Número de observaciones 
+Σ = Sumatoria de los errores 
+porcentuales absolutos 
+Momento: Pretest 
+ 
+ 
+N° Categoria Demanda 
+Real (DR) 
+Demanda 
+Pronosticada 
+(DP) 
+MAPE 
+1 Abarrotes  1,604 1,636,18 21,20 % 
+2 Bebidas  2,799 2,598,75 12,62 % 
+3 Golosinas  2,218 2,204,68 20,50 % 
+4 Helados  715 795,25 39,85 % 
+5 Limpieza 580 532,29 24,61 % 
+ Total 7,916 7,767,14 23,76 % 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

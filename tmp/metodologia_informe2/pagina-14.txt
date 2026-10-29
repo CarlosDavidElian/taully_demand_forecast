@@ -1,0 +1,37 @@
+ 
+11 
+ 
+MAE, RMSE y MAPE; y (OE4) analizar la contribución predictiva del modelo 
+seleccionado en la planificación del inventario y la toma de decisiones comerciales. 
+  
+En cuanto a la hipótesis general, se planteó que el desarrollo de un modelo de 
+machine learning permitirá predecir la demanda diaria por categoría de producto en 
+un minimarket de Comas, 2026, logrando un desempeño predictivo, medido a través 
+de MAE, RMSE y MAPE, que será significativamente mejor en comparación con un 
+método de pronóstico base.  
+ 
+Las hipótesis específicas fueron las siguientes: (HE1) Los datos históricos de ventas 
+e inventario, una vez depurados y organizados, permitirán identificar patrones de 
+comportamiento de la demanda por categoría de producto. (HE2) Al menos uno de 
+los modelos de machine learning evaluados presentará un error de predicción menor 
+al método base durante el entrenamiento para la demanda diaria. (HE3) El nivel de 
+error de predicción medido por MAE, RMSE y MAPE de los modelos seleccionados 
+será significativamente menor que el método de  pronóstico base. (HE4) La 
+implementación del modelo 15 seleccionado permitirá optimizar la planificación del 
+inventario al reducir los quiebres de stock y el exceso de inventario en el minimarket.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

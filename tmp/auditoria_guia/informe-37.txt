@@ -1,0 +1,30 @@
+ 
+ 
+ 
+Demanda diaria 
+por categoría de 
+producto 
+Cantidad de productos 
+vendidos por categoría, 
+influenciada por factores 
+estacionales y externos [1], 
+[3]. 
+Registro numérico 
+consolidado de las ventas 
+diarias por categoría de 
+producto, depurado de los 
+sistemas del minimarket. 
+Volumen de demanda  
+Cantidad de 
+demanda 
+(Unidad) 
+ Índice de Salida 
+de Inventario 
+Tasa de Quiebre 
+de Stock   
+Razón 
+Patrón de Demanda Estacionalidad 
+Razón 
+Precisión del Pronóstico Error de 
+Pronóstico 
+Razón 

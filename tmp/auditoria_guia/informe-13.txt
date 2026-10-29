@@ -1,0 +1,47 @@
+ 
+2 
+ 
+ 
+ 
+Fig. 1. Formula MAPE [3]. 
+ 
+ 
+ 
+A nivel internacional, el uso de machine learning en el sector retail adquirió una mayor 
+importancia debido a su capacidad para analizar datos históricos de ventas e 
+identificar patrones que muchas veces no podían detectarse fácilmente mediante 
+procedimientos manuales. Brackmann, Friedrich y Urbach [1] destacan que el 
+machine learning ofrece un abanico de soluciones muy prácticas para el sector retail, 
+especialmente al momento de administrar las ventas, el inventario y la rutina operativa 
+diaria. Esto demuestra que los modelos predictivos funcionan como un respaldo real 
+para que cualquier comercio mejore su dinámica interna, aunque el éxito de estos 
+pronósticos no pasa solamente por tener el algoritmo más avanzado.  
+ 
+Para que la herramienta realmente funcione, es obligatorio hacer un trabajo de fondo 
+que implica limpiar a detalle la base de datos histórica, clasificar los productos con 
+lógica y tener la habilidad administrativa para traducir esos cálculos en verdaderas  
+acciones de compra o reposición en la tienda. Una vez que se realiza correctamente 
+toda esta preparación técnica, arquitecturas más complejas como las Redes 
+Neuronales Profundas (DNN) logran sacar a relucir todo su potencial, llegando a 
+superar en precisi ón hasta en un 35 % a los métodos estadísticos convencionales 
+como el Promedio Móvil, el método de Croston, ARIMA o el Suavizado Exponencial 
+[4].  
+ 
+En este mismo sentido, el trabajo de Wang y Luo [2] resulta clave, ya que ellos 
+armaron un método para proyectar las ventas dividiendo los productos por categorías 
+a través de modelos como CatBoost, Decision Tree y XGBoost. Tomar en cuenta este 
+antecedente es muy útil para nuestro proyecto porque 3 aborda justo lo que buscamos 
+hacer: predecir cómo se moverá la mercadería según su grupo o familia, lo cual encaja 
+perfectamente con el objetivo del estudio. Sumado a esto, los r esultados que 
+obtuvieron demostraron que el uso de machine learning realmente logró generar 
+estimaciones más precisas y útiles para la planificación comercial y la gestión del 
+inventario.  
+ 
+En el caso de un minimarket, la demanda no se comportó igual en todas las áreas del 
+negocio. Por ejemplo, categorías como bebidas, abarrotes, productos de limpieza, 
+golosinas o artículos de primera necesidad pudieron variar según el día de la semana, 
+la temporada, los precios o los hábitos de compra de los clientes. Por esta razón, 
+analizar solo las ventas totales del negocio no resultó suficiente para tomar decisiones 
+específicas sobre reposición y planificación de productos. La predicción por categoría 
+permitió una visión más detal lada y útil para la gestión diaria del establecimiento. El 
+método híbrido propuesto logró una mejora media en el desempeño de 

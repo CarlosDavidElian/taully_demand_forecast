@@ -1,0 +1,48 @@
+ 
+13 
+ 
+totalidad de los registros que cumplieron con los criterios establecidos después 
+del proceso de depuración; por esta razón, se empleó un muestreo censal y no 
+fue necesario aplicar una fórmula para determinar el tamaño muestral. Se 
+consideraron las transacc iones correspondientes al periodo de estudio que 
+contaban con una fecha válida, una categoría correctamente identificada, un 
+código de producto consistente y valores positivos en la salida de inventario. 
+ 
+Se excluyeron los registros duplicados, las operaciones anuladas, las 
+devoluciones, los valores nulos, la información incompleta y los errores de 
+digitación. Las campañas promocionales y los feriados se mantuvieron cuando 
+se encontraban correctamente registrados, debido a que constituían información 
+relevante para explicar las variaciones de la demanda. Solo se corrigieron o 
+eliminaron aquellos valores atípicos que pudieron atribuirse a errores de registro. 
+Como técnica de recolección de datos se utilizó el an álisis documental 
+cuantitativo. 
+ 
+Se revisaron los reportes históricos de ventas, los movimientos de almacén y los 
+registros de inventario con el propósito de extraer, organizar y depurar la 
+información requerida para el desarrollo del estudio. Se emplearon una ficha de 
+registro de datos cuantitativos de ventas, una matriz de datos estructurada y una 
+ficha de evaluación del modelo predictivo. Los instrumentos, sus campos y sus 
+fórmulas de cálculo se incorporaron en el Anexo 2. Las fichas fueron elaboradas 
+para este estudio y no correspondieron a instrumentos estandarizados con 
+autores originales. Por esta razón, su validez de contenido requirió juicio de 
+expertos con experiencia en metodología de investigación, análisis de datos  o 
+machine learning.  
+ 
+Se incorporaron las fichas técnicas de los instrumentos en el Anexo 3 y los 
+formatos de validación para tres jueces expertos en los Anexos 4, 5 y 6. Dichos 
+formatos debían consignar la valoración, las observaciones, la identificación y la 
+firma de cada juez antes de la presentación de la versión final. La evaluación de 
+la consistencia interna no fue aplicable, debido a que en el estudio no se 
+emplearon cuestionarios ni escalas psicométricas. La calidad de los datos se 
+garantizó mediante la revisión de registros duplicados, valores nulos, códigos, 
+fechas, categorías y la correspondencia entre la información de ventas e 
+inventario. Asimismo, se siguió un procedimiento definido para limpiar, 
+transformar, entrenar y evaluar los datos, de manera que el proceso pudiera 
+repetirse bajo las mismas condiciones. 
+ 
+El volumen de demanda se analizó mediante dos indicadores: la cantidad 
+demandada y el índice de salida de inventario. La cantidad demandada se 
+calculó con la expresión CD = (SI + EN) - SF, donde SI corresponde al stock 
+inicial, EN a las entradas registrada s y SF al stock final. El índice de salida de 
+inventario permitió conocer qué proporción de los productos disponibles salió 
+durante el periodo evaluado. 

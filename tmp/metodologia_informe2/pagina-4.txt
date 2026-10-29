@@ -1,0 +1,45 @@
+ 
+1 
+ 
+I. Introducción 
+ 
+En los últimos años, la gestión de la demanda se convirtió en una necesidad 
+relevante para los negocios dedicados a la comercialización de productos de 
+consumo diario, debido al comportamiento de compra de los clientes presentó 
+variaciones constantes y difíciles de anticipar mediante métodos tradicionales. 
+En el sector retail, estas variaciones se observaron con mayor claridad en 
+empresas que manejaron diversos productos, categorías, precios, promociones 
+y temporadas de venta. Esta situación afectó especialmente a pequeños 
+negocios, como bodegas, tiendas y minimarkets , debido a que muchas de sus 
+decisiones de compra, reposición y abastecimiento continuaron dependiendo de 
+la experiencia del encargado o de revisiones manuales de las ventas. 
+En ese contexto, la predicción de la demanda pasó a ser una herramienta clave 
+para disminuir la incertidumbre y optimizar la planificación de productos dentro 
+del negocio. Las fallas o errores operativos de los empleados en los puntos de 
+venta (POS) representan el 24% de las diferencias de inventario en la industria 
+minorista. [1]. 
+  
+La problemática de la demanda no estuvo relacionada únicamente con vender 
+una mayor o menor cantidad de productos, sino también con factores 
+importantes como la disponibilidad del inventario, la satisfacción de los clientes 
+y el uso eficiente de los recursos del negocio. Cuando un minimarket no lograba 
+estimar de manera aproximada la cantidad de productos que serían solicitados 
+en un determinado periodo, podían generarse distintas dificultades en la 
+operación diaria. Por un lado, el exceso de productos ocasionaba acumulación 
+de mercadería, vencimiento de artículos perecibles, uso innecesario de espacio 
+y pérdidas económicas.  
+ 
+Por otro lado, la escasez de productos provocaba quiebres de stock, pérdida de 
+ventas e incluso la posibilidad de que los clientes optaran por acudir a otros 
+establecimientos. Considerando que en estudios del sector se ha identificado 
+que los errores operativos en los puntos de venta representan el 24% de las 
+diferencias de inventario [1], [3]. Donde el uso de modelos de Machine Learning 
+ha demostrado reducir las tasas de error de pronóstico (WMAPE) en rangos 
+significativos, alcanzando mejoras de precisión de hasta un 4.779% frente a 2 
+métodos tradicionales [1], [2], [3].  
+ 
+Debido a ello, la predicción de la demanda diaria por categoría de producto se 
+convirtió en una necesidad importante para este tipo de negocios, ya que 
+permitió mejorar la organización de las compras y responder de manera más 
+adecuada al comportamiento de los consumidores. 
+ 

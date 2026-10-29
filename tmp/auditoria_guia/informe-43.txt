@@ -1,0 +1,51 @@
+ 
+ 
+ 
+Instrumento de recolección de datos del indicador para el Postest: Tasa de 
+quiebre de stock 
+INDICADOR: Tasa de Quiebre de Stock 
+INVESTIGADOR: Guerrero Mora, Carlos David Elian 
+LUGAR DE ESTUDIO: Minimarket Taully, Comas 
+FÓRMULA: TQS =  (DQS / DD) ×  100 
+DONDE: TQS = Tasa de Quiebre de Stock 
+DQS = Días con Quiebre de Stock 
+DD = Días Evaluados 
+Momento Postest 
+ 
+ 
+N° Categoria DQS DD TQS 
+1 Abarrotes  1 30 3,33 % 
+2 Bebidas  2 30 6,67 % 
+3 Golosinas  7 30 23,33 % 
+4 Helados  3 30 10,00 % 
+5 Limpieza 0 30 0,00 % 
+ Total 13 150 8,67 % 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

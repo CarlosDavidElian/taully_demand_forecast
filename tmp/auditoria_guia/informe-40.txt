@@ -1,0 +1,56 @@
+ 
+ 
+ 
+ 
+ 
+ 
+Instrumento de recolección de datos del indicador para el Pretest: Índice de 
+Salida de Inventario 
+INDICADOR: Índice de Salida de Inventario 
+INVESTIGADOR: Guerrero Mora, Carlos David Elian 
+LUGAR DE ESTUDIO: Minimarket Taully, Comas 
+FÓRMULA: ISI = CD / (SI + EN) 
+DONDE: ISI = Índice de Salida de Inventario 
+CD = Cantidad Demandada 
+SI = Stock Inicial 
+EN = Entradas 
+Momento  Pretest 
+ 
+ 
+N° Categoría (CD) Stock 
+Inicial (SI) 
+Entradas 
+(EN) 
+Índice de 
+Salida de 
+Inventario 
+(ISI) 
+1 Abarrotes  960 394 881 75,29 % 
+2 Bebidas  1 596 712 1 481 72,78 % 
+3 Golosinas  1 137 645 905 73,35 % 
+4 Helados  349 191 309 69,80 % 
+5 Limpieza 405 172 335 79,88 % 
+ Total 4 447 2 114 3 911 73,81 % 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

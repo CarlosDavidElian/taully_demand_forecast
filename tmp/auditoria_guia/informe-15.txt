@@ -1,0 +1,48 @@
+ 
+4 
+ 
+ 
+Sin embargo, la salida de los productos no depende únicamente de la información 
+registrada en el minimarket. También existen factores externos que pueden modificar 
+las decisiones de compra de los consumidores y que no siempre aparecen reflejados 
+en los registros de los puntos de venta (POS). Por esta razón, futuras investigaciones 
+podrían incluir estas variables para mejorar la capacidad de los modelos al momento 
+de estimar la demanda. 
+ 
+Asimismo, desde la perspectiva de la Inteligencia Artificial Explicable (XAI), distintos 
+estudios señalan que las características físicas y comerciales de los productos 
+pueden influir en su nivel de venta. En un minimarket, elementos como el tamaño del 
+envase, la presentación o la forma en que cada artículo es registrado en el sistema 
+suelen formar parte de la gestión cotidiana. Sin embargo, al momento de desarrollar 
+un modelo de pronóstico, estas características pueden convertirse en variables útiles 
+para comprender mejor el comportamiento de la demanda. 
+ 
+En el caso del Minimarket Taully, ello pone de manifiesto que, antes de implementar 
+un modelo de machine learning, es necesario revisar, organizar y depurar el catálogo 
+de productos para disponer de información comercial consistente y confiable De esta 
+manera, el proceso de predicción se fundamentará en datos correctamente 
+estructurados, favoreciendo un entrenamiento más adecuado del modelo y una 
+estimación más precisa de la demanda. Si juntamos los productos de forma 
+desordenada o simplemente co mo el encargado está acostumbrado a ubicarlos en 
+los estantes, el sistema va a recibir información cruzada durante su fase de 
+entrenamiento. El resultado de este error es que el algoritmo nunca logrará identificar 
+los verdaderos patrones de consumo de los clientes.  
+ 
+Por este motivo, estimar cuánto se va a vender va mucho más allá de aplicar una 
+ecuación matemática; la verdadera clave está en hacer el trabajo previo de depurar, 
+organizar y estructurar toda la base de datos del local para que la computadora 
+procese información limpia y apegada a la realidad. 
+A nivel local, también logramos identificar distintos trabajos de investigación 
+enfocados en aplicar el machine learning para solucionar problemas reales de ventas, 
+inventario y cálculo de la demanda. Un referente directo de esto es el proyecto 
+desarrollado en la Universidad Tecnológica del Perú [7], donde estructuraron un 
+modelo dedicado específicamente a predecir la neces idad de mercadería dentro de 
+un minimarket basándose en este tipo de técnicas predictivas. 
+ 
+Este antecedente se relacionó directamente con el presente estudio, ya que abordó 
+un contexto similar y demostró que este tipo de 6 modelos también pudo aplicarse en 
+pequeños negocios comerciales. Este aporte permitió evidenciar que el problema de 
+anticipar la demanda no fue exclusivo de grandes cadenas comerciales, sino que 
+también afectó a pequeños y medianos negocios del contexto peruano. Sin embargo, 
+se debió considerar que cada minimarket  presentó características particulares en 
+cuanto a ubicación, tipo de clientes, variedad de productos, frecuencia de compra y 

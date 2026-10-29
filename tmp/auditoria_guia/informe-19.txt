@@ -1,0 +1,47 @@
+ 
+8 
+ 
+permitan observar cómo evoluciona el comportamiento de estos productos a medida 
+que ganan presencia en el mercado. En cuanto a las condiciones del entorno físico, 
+Hu et al. [25] demostraron, mediante el uso de AutoML y técnicas de inteligencia 
+geoespacial, que la ubicación geográfica puede influir de manera importante en las 
+tendencias de compra de los consumidores. 
+ 
+Este planteamiento también puede observarse en el distrito de Comas, donde la 
+rotación del inventario no depende solo de la cantidad de productos disponibles en el 
+minimarket. También puede verse influida por factores externos, como la presencia 
+de otros establecimientos comerciales, el flujo de personas y los hábitos de consumo 
+de la población. A ello se suma el avance de los sistemas computacionales, que 
+actualmente permiten  procesar mayores volúmenes de información e incorporar 
+diferentes variables en los modelos utilizados para estimar la demanda. 
+ 
+En este sentido, Shahzad, Khan y Ullah [26] indican que algoritmos como el Temporal 
+Fusion Transformer  pueden obtener buenos resultados en la predicción de la 
+demanda dentro del sector minorista. Esto se alinea bastante con la postura de 
+Seyam, Islam y Hossain [27], quienes destacan que calcular la demanda apoyándose 
+en machine learning y deep learning  es un campo de investigación que sigue más 
+vigente que nunca. Al final del día, todos estos referentes técnicos nos dejan claro 
+que aún tenemos un margen enorme para seguir innovando y perfeccionando la 
+manera en que proyectamos las ventas para este tipo de negocios.  
+ 
+A pesar de todo el avance tecnológico actual, en la práctica es muy común ver que 
+los pequeños negocios siguen sin aprovechar las herramientas predictivas 11 para 
+definir su rumbo comercial. Por lo general, estos locales cumplen con registrar sus 
+ventas del día a día en el sistema, pero al final toda esa información termina archivada 
+sin que nadie le dé un uso analítico real. Precisamente, esta carencia de herramientas 
+analíticas representa una oportunidad para aplicar técnicas de machine learning  en 
+un entorno operativo real. Al implementar este modelo en el minimarket objeto de 
+estudio, el algoritmo no se limitará a procesar registros históricos de manera pasiva; 
+su función principal será transformar dicha base de datos en un motor activo capaz 
+de proyectar la demanda diaria para cada línea de productos.  
+ 
+De esta forma, el establecimiento dará un salto de calidad en sus operaciones dará 
+un salto de calidad enorme en sus operaciones, abandonando esa vieja costumbre 
+de comprar mercadería guiándose solo por presentimientos para empezar a tomar 
+decisiones firme s basadas íntegramente en sus propios datos. Llevando este 
+problema a nuestra realidad, el escenario central de la investigación es un minimarket 
+ubicado en el distrito de Comas. Hablamos de un emprendimiento que está creciendo, 
+pero que hoy en día tropieza con el gran reto de manejar niveles de venta que suben 
+y bajan bruscamente dependiendo del tipo de producto. Esta variación en las ventas 
+complica la organización de los pedidos y la reposición de los productos en los 
+anaqueles. En la actualidad, el inventario se repone principalmente según la 

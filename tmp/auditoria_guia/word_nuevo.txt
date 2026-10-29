@@ -1,0 +1,566 @@
+P2:  FACULTAD DE INGENIERÍA Y ARQUITECTURA
+P3: ESCUELA PROFESIONAL DE INGENIERÍA DE SISTEMAS
+P5: Modelo de machine learning para predecir la demanda diaria por categoría de producto en minimarket del distrito de Comas 2026
+P9: Tesis para obtener el título profesional de:
+P10: Ingeniería de Sistemas
+P12:   Autor :
+P13: Guerrero Mora, Carlos David Elian (orcid.org/0000-0002-2045-0688)  
+P15: Asesor(a)(es):
+P16: Mg. Perez Farfan, Ivan Martin (orcid.org/0000-0001-5833-9400)
+P19: Línea de investigación:
+P20: Sistemas de Información y Comunicaciones
+P22: Línea de responsabilidad social universitaria:
+P23: Innovación Tecnológica y Transformación Digital
+P25: LIMA – PERÚ
+P26: 2026 
+P28: Declaratoria de autenticidad del asesor
+P37: Declaratoria de originalidad del autor
+P43: Dedicatoria
+P73: Agradecimiento
+P103: Índice de contenidos
+P105: Caratula…………………………………………………………………………………i
+P123: Índice de tablas
+P168: Índice de figuras
+P171: Fig. 1. Formula mape [3].	2
+P214: Resumen
+P257: Abstract
+P303: I. Introducción
+P305: En los últimos años, la gestión de la demanda se convirtió en una necesidad relevante para los negocios dedicados a la comercialización de productos de consumo diario, debido al comportamiento de compra de los clientes presentó variaciones constantes y difíciles de anticipar mediante métodos tradicionales. En el sector retail, estas variaciones se observaron con mayor claridad en empresas que manejaron diversos productos, categorías, precios, promociones y temporadas de venta. Esta situación afectó especialmente a pequeños negocios, como bodegas, tiendas y minimarkets, debido a que muchas de sus decisiones de compra, reposición y abastecimiento continuaron dependiendo de la experiencia del encargado o de revisiones manuales de las ventas.
+P306: En ese contexto, la predicción de la demanda pasó a ser una herramienta clave para disminuir la incertidumbre y optimizar la planificación de productos dentro del negocio. Las fallas o errores operativos de los empleados en los puntos de venta (POS) representan el 24% de las diferencias de inventario en la industria minorista. [1].
+P308: La problemática de la demanda no estuvo relacionada únicamente con vender una mayor o menor cantidad de productos, sino también con factores importantes como la disponibilidad del inventario, la satisfacción de los clientes y el uso eficiente de los recursos del negocio. Cuando un minimarket no lograba estimar de manera aproximada la cantidad de productos que serían solicitados en un determinado periodo, podían generarse distintas dificultades en la operación diaria. Por un lado, el exceso de productos ocasionaba acumulación de mercadería, vencimiento de artículos perecibles, uso innecesario de espacio y pérdidas económicas. 
+P310: Por otro lado, la escasez de productos provocaba quiebres de stock, pérdida de ventas e incluso la posibilidad de que los clientes optaran por acudir a otros establecimientos. Considerando que en estudios del sector se ha identificado que los errores operativos en los puntos de venta representan el 24% de las diferencias de inventario [1], [3]. Donde el uso de modelos de Machine Learning ha demostrado reducir las tasas de error de pronóstico (WMAPE) en rangos significativos, alcanzando mejoras de precisión de hasta un 4.779% frente a 2 métodos tradicionales [1], [2], [3]. 
+P312: Debido a ello, la predicción de la demanda diaria por categoría de producto se convirtió en una necesidad importante para este tipo de negocios, ya que permitió mejorar la organización de las compras y responder de manera más adecuada al comportamiento de los consumidores.
+P316: Formula MAPE [3].
+P320: A nivel internacional, el uso de machine learning en el sector retail adquirió una mayor importancia debido a su capacidad para analizar datos históricos de ventas e identificar patrones que muchas veces no podían detectarse fácilmente mediante procedimientos manuales. Brackmann, Friedrich y Urbach [1] destacan que el machine learning ofrece un abanico de soluciones muy prácticas para el sector retail, especialmente al momento de administrar las ventas, el inventario y la rutina operativa diaria. Esto demuestra que los modelos predictivos funcionan como un respaldo real para que cualquier comercio mejore su dinámica interna, aunque el éxito de estos pronósticos no pasa solamente por tener el algoritmo más avanzado. 
+P322: Para que la herramienta realmente funcione, es obligatorio hacer un trabajo de fondo que implica limpiar a detalle la base de datos histórica, clasificar los productos con lógica y tener la habilidad administrativa para traducir esos cálculos en verdaderas acciones de compra o reposición en la tienda. Una vez que se realiza correctamente toda esta preparación técnica, arquitecturas más complejas como las Redes Neuronales Profundas (DNN) logran sacar a relucir todo su potencial, llegando a superar en precisión hasta en un 35 % a los métodos estadísticos convencionales como el Promedio Móvil, el método de Croston, ARIMA o el Suavizado Exponencial [4]. 
+P324: En este mismo sentido, el trabajo de Wang y Luo [2] resulta clave, ya que ellos armaron un método para proyectar las ventas dividiendo los productos por categorías a través de modelos como CatBoost, Decision Tree y XGBoost. Tomar en cuenta este antecedente es muy útil para nuestro proyecto porque 3 aborda justo lo que buscamos hacer: predecir cómo se moverá la mercadería según su grupo o familia, lo cual encaja perfectamente con el objetivo del estudio. Sumado a esto, los resultados que obtuvieron demostraron que el uso de machine learning realmente logró generar estimaciones más precisas y útiles para la planificación comercial y la gestión del inventario. 
+P326: En el caso de un minimarket, la demanda no se comportó igual en todas las áreas del negocio. Por ejemplo, categorías como bebidas, abarrotes, productos de limpieza, golosinas o artículos de primera necesidad pudieron variar según el día de la semana, la temporada, los precios o los hábitos de compra de los clientes. Por esta razón, analizar solo las ventas totales del negocio no resultó suficiente para tomar decisiones específicas sobre reposición y planificación de productos. La predicción por categoría permitió una visión más detallada y útil para la gestión diaria del establecimiento. El método híbrido propuesto logró una mejora media en el desempeño de aproximadamente un 4% en comparación con los tres métodos tradicionales evaluados [2]. 
+P328: El análisis estadístico reveló que la distribución Exponencial-Poisson puede generar valores cercanos a las ventas reales con un margen de error inferior al 7% [4]. Superaron a los métodos tradicionales en un rango del 9% al 35% en términos de error cuadrático medio (MSE) [4]. Asimismo, Auppakorn y Phumchusri [3] propusieron métodos para el pronóstico de ventas diarias en negocios retail con productos de distintas categorías y precios variables. Este antecedente se relacionó directamente con el tema de investigación, ya que trabajó con ventas diarias, categorías de productos y un entorno comercial minorista. En el caso de un minimarket, la demanda diaria pudo variar considerablemente entre días laborables, fines de semana, fechas de pago, campañas escolares, feriados o temporadas de mayor consumo. 
+P330: Debido a ello, una estimación mensual o general pudo resultar poco precisa para orientar decisiones de compra a corto plazo. En cambio, la predicción diaria ofreció una referencia más cercana a la realidad operativa del negocio. El problema también estuvo relacionado con la presencia de productos con demanda irregular. Ahmadov et al. [4] abordaron la predicción de ventas 4 intermitentes mediante técnicas de deep learning, resaltando la dificultad de anticipar el comportamiento de productos que no se vendieron todos los días o que presentaron patrones de consumo variables. Este aspecto resultó importante para los minimarkets, ya que no todas las categorías tuvieron la misma frecuencia de rotación. 
+P332: Mientras algunos productos pudieron venderse diariamente, otros dependieron de necesidades ocasionales, promociones o cambios en las preferencias de los consumidores. En consecuencia, un modelo de predicción debió considerar que la demanda de determinadas categorías podía presentar una alta variabilidad y no seguir siempre patrones simples o constantes, ya que el comportamiento de compra de los consumidores pudo cambiar según distintos factores Las entrevistas realizadas tuvieron una duración promedio de 59 minutos [5]. Las fallas o errores operativos de los empleados en los puntos de venta (POS) representan el 24% de las diferencias de inventario en la industria minorista [5]. Otro factor que influyó en la demanda dentro del sector retail fue el contexto externo. 
+P334: Chan y Wahab [5] analizaron el impacto de las condiciones climáticas en las ventas mediante técnicas de machine learning, demostrando que factores como el calor, el frío o las lluvias podían influir en el comportamiento de compra de los consumidores. Este aspecto es relevante para un minimarket ubicado en Comas, ya que la demanda de algunas categorías, como bebidas, helados, productos de limpieza y alimentos de consumo rápido, puede variar según las condiciones climáticas y la temporada del año. Por ello, la presente investigación busca estimar la demanda diaria a partir del análisis del historial de ventas de cada categoría de producto.
+P338: Sin embargo, la salida de los productos no depende únicamente de la información registrada en el minimarket. También existen factores externos que pueden modificar las decisiones de compra de los consumidores y que no siempre aparecen reflejados en los registros de los puntos de venta (POS). Por esta razón, futuras investigaciones podrían incluir estas variables para mejorar la capacidad de los modelos al momento de estimar la demanda.
+P340: Asimismo, desde la perspectiva de la Inteligencia Artificial Explicable (XAI), distintos estudios señalan que las características físicas y comerciales de los productos pueden influir en su nivel de venta. En un minimarket, elementos como el tamaño del envase, la presentación o la forma en que cada artículo es registrado en el sistema suelen formar parte de la gestión cotidiana. Sin embargo, al momento de desarrollar un modelo de pronóstico, estas características pueden convertirse en variables útiles para comprender mejor el comportamiento de la demanda.
+P342: En el caso del Minimarket Taully, ello pone de manifiesto que, antes de implementar un modelo de machine learning, es necesario revisar, organizar y depurar el catálogo de productos para disponer de información comercial consistente y confiable De esta manera, el proceso de predicción se fundamentará en datos correctamente estructurados, favoreciendo un entrenamiento más adecuado del modelo y una estimación más precisa de la demanda. Si juntamos los productos de forma desordenada o simplemente como el encargado está acostumbrado a ubicarlos en los estantes, el sistema va a recibir información cruzada durante su fase de entrenamiento. El resultado de este error es que el algoritmo nunca logrará identificar los verdaderos patrones de consumo de los clientes. 
+P344: Por este motivo, estimar cuánto se va a vender va mucho más allá de aplicar una ecuación matemática; la verdadera clave está en hacer el trabajo previo de depurar, organizar y estructurar toda la base de datos del local para que la computadora procese información limpia y apegada a la realidad.
+P345: A nivel local, también logramos identificar distintos trabajos de investigación enfocados en aplicar el machine learning para solucionar problemas reales de ventas, inventario y cálculo de la demanda. Un referente directo de esto es el proyecto desarrollado en la Universidad Tecnológica del Perú [7], donde estructuraron un modelo dedicado específicamente a predecir la necesidad de mercadería dentro de un minimarket basándose en este tipo de técnicas predictivas.
+P347: Este antecedente se relacionó directamente con el presente estudio, ya que abordó un contexto similar y demostró que este tipo de 6 modelos también pudo aplicarse en pequeños negocios comerciales. Este aporte permitió evidenciar que el problema de anticipar la demanda no fue exclusivo de grandes cadenas comerciales, sino que también afectó a pequeños y medianos negocios del contexto peruano. Sin embargo, se debió considerar que cada minimarket presentó características particulares en cuanto a ubicación, tipo de clientes, variedad de productos, frecuencia de compra y nivel de digitalización. Por ello, los resultados obtenidos en otros estudios no pudieron aplicarse automáticamente al caso del minimarket en estudio sin realizar previamente un análisis de sus propios datos. 
+P349: Palomino Huarilloclla [8] implementó un modelo de machine learning para la predicción de la demanda en una ferretería de Moquegua, relacionando la predicción con la gestión de inventarios y la toma de decisiones dentro de una empresa comercial local. Aunque una ferretería no perteneció al mismo rubro que un minimarket, ambos negocios compartieron una dificultad similar: anticipar qué productos serían más solicitados y en qué momento sería necesario reponerlos. Este antecedente permitió sostener que los modelos predictivos pudieron adaptarse a distintos tipos de negocios, siempre que existiera información histórica suficiente y una adecuada selección de variables. 
+P351: En el caso del minimarket en estudio, dicha adaptación resultó necesaria debido a que el comportamiento de compra estuvo asociado a productos de consumo frecuente y a categorías con diferentes niveles de rotación. Montero López [9] propuso un sistema web inteligente basado en machine learning para mejorar la gestión y el análisis de información relacionada con las ventas, la demanda y el inventario de una empresa. Este estudio fue relevante porque relacionó los modelos predictivos con el control de stock y demostró que la predicción pudo aplicarse a necesidades concretas de gestión. 
+P353: En el caso de un minimarket, un modelo predictivo no solo permitiría estimar cantidades futuras, sino también apoyar decisiones sobre compras, reposición, almacenamiento y disponibilidad de productos. Desde esta perspectiva, el machine learning pudo ayudar a reducir decisiones improvisadas y fortalecer una gestión basada en datos. Ponce Illacutipa [10] desarrolló un modelo basado en machine learning para optimizar el pronóstico de ventas de la empresa Ricos Pan durante el periodo 2020-2021. 
+P355: Este estudio mostró que las técnicas de aprendizaje automático pudieron mejorar la estimación de ventas y servir como apoyo para la toma de decisiones en una empresa comercial. Asimismo, demostró la importancia de trabajar con datos históricos para identificar patrones de comportamiento en las ventas y obtener proyecciones más precisas. Este estudio aportó al presente trabajo al evidenciar que el pronóstico de ventas pudo utilizarse como una herramienta para estimar la demanda en negocios del contexto peruano. Aunque el rubro de panificación presentó características distintas al de un minimarket, ambos contextos compartieron la necesidad de anticipar el comportamiento de compra para evitar pérdidas por exceso de producción, falta de productos o mala planificación. 
+P357: Flores Taquiri y Montalvo Celis [11] analizaron el uso de machine learning para mejorar la predicción en la gestión de inventario dirigida a PYMES de venta de productos tecnológicos. Su investigación fue útil porque abordó el problema desde la realidad de pequeñas y medianas empresas, donde muchas decisiones continuaron dependiendo de registros básicos, hojas de cálculo o criterios empíricos. Esta situación fue cercana al contexto de un minimarket, donde la falta de herramientas predictivas pudo limitar la planificación de compras y ocasionar errores en la reposición. 
+P359: Sin embargo, también se reconoció que la aplicación de machine learning en una PYME exigió condiciones mínimas, como disponibilidad de datos históricos, categorización correcta de productos y evaluación objetiva del desempeño del modelo. León Villavicencio y Vinces Chumbes [12] aplicaron machine learning para la gestión de ventas en la empresa Forever Group SAC, considerando la predicción de ingresos y cantidades vendidas. Este antecedente permitió observar que las técnicas de aprendizaje automático pudieron apoyar el análisis comercial en empresas peruanas. Asimismo, Anchante Aybar y Fernández Chávez [13] estudiaron el machine learning para la toma de decisiones en la gestión de ventas en Lima, reforzando la idea de que los modelos predictivos no solo tuvieron valor técnico, sino también valor 8 administrativo. 
+P361: Rojas Vilca [14] desarrolló un aplicativo móvil con machine learning para la gestión de ventas en productos de una empresa de Lima, relacionando tecnología, productos, ventas y modelos predictivos dentro de una solución aplicada. Serna Berrocal [15] planteó un modelo de machine learning para predecir las ventas de una empresa retail, y González Jauregui y Mariscal Cruzado [16] propusieron mejoras basadas en machine learning, Big Data y DDMRP para optimizar el cumplimiento del pronóstico en una empresa de bienes de consumo. Separa Desde el enfoque teórico, el machine learning se entiende como una rama de la inteligencia artificial orientada al desarrollo de modelos capaces de aprender patrones a partir de datos históricos para realizar predicciones o clasificaciones. 
+P363: En el caso de la predicción de demanda, el aprendizaje automático permite utilizar registros históricos de ventas para estimar comportamientos futuros. Padmanabham [17] propone un marco de machine learning para el pronóstico de ventas en el sector retail, considerando etapas como el preprocesamiento de datos, el análisis exploratorio, la ingeniería de características y la comparación de modelos de regresión. Este enfoque resulta importante para el presente estudio, porque muestra que el rendimiento de un modelo no depende solo del algoritmo seleccionado, sino también de la preparación adecuada de los datos, la calidad de la información utilizada y la correcta selección de variables para el proceso de predicción.
+P365: Mustapha y Sithole [18] evalúan modelos como Random Forest, XGBoost, regresión lineal y ARIMA para el pronóstico de ventas en el sector retail, comparando métodos tradicionales con modelos basados en machine learning. Este antecedente muestra que la elección de un modelo no debe depender solo de qué tan complejo fuera, sino también de su desempeño, su facilidad de interpretación y su relación con el problema de estudio. En algunos casos, un modelo sencillo puede brindar resultados aceptables y fáciles de comprender. En otros, los modelos más robustos pueden reconocer relaciones no lineales y mejorar la precisión de las predicciones. Por ello, en el 0presente estudio se considera la comparación de diferentes modelos y el uso de métricas de evaluación, con el fin de determinar cuál se ajusta mejor a 9 los datos del minimarket en estudio y ofrece mejores resultados para la predicción de la demanda.
+P367: Mansur, Ahmed e Islam [19] presentan modelos híbridos basados en redes neuronales y técnicas de machine learning para predecir ventas en tiendas retail, demostrando que la combinación de distintos métodos puede mejorar la precisión del pronóstico. De manera similar, Ahmed, Khan y Ali [20] comparan algoritmos de deep learning, como CNN, LSTM, MLP y modelos híbridos, aplicados al pronóstico de ventas en el sector retail. Estos aportes muestran que existen métodos avanzados para trabajar problemas de forecasting y predicción de demanda. Sin embargo, en el contexto de un minimarket, el uso de modelos complejos debe evaluarse con cuidado, ya que el modelo más avanzado no siempre es el más adecuado para las necesidades del negocio. 
+P369: Por ello, la elección del modelo debe considerar la cantidad de datos disponibles, la facilidad de implementación y la posibilidad de interpretar los resultados para apoyar la toma de decisiones comerciales. La relación entre la predicción de la demanda y la gestión de inventario es importante en los negocios retail, porque ambas áreas influyen en la disponibilidad de productos y en el uso adecuado de los recursos. Liu, Kalaitzi, Wang y Papanagnou [21] desarrollan un enfoque basado en machine learning para predecir quiebres de stock, relacionando el comportamiento de la demanda con la disponibilidad de productos en el sector retail. Este aporte es relevante porque muestra que anticipar la demanda pudo ayudar a reducir situaciones de desabastecimiento y mejorar la disponibilidad de productos. 
+P371: En el caso del minimarket en estudio, la predicción diaria por categoría permite identificar las categorías con mayor riesgo de quiebre de stock, y facilita una mejor planificación de compras y reposición de productos. De esta manera, el modelo no solo tiene valor estadístico, sino también una utilidad práctica en las operaciones diarias del negocio. Por otra parte, al enfocarnos en la mercadería que recién ingresa a la tienda y carece de un historial amplio, resulta muy útil el estudio de Sousa, Moreira y Ferreira [22], quienes aplican machine learning para proyectar la demanda de estos nuevos artículos en el sector minorista. Sobre este mismo punto, 10 Wang, Chen y Lin [23] proponen una forma de calcular esta demanda dividiendo el análisis en dos etapas, mientras que Hwang, Kim y Park [24] optan por apoyarse en técnicas de clustering y ensemble learning para afinar mucho más esos pronósticos. 
+P373: En conjunto, estas investigaciones muestran que un modelo predictivo no debería centrarse únicamente en productos que ya cuentan con un historial de ventas estable. Cuando un establecimiento incorpora un nuevo producto o amplía su oferta comercial, las primeras ventas pueden no reflejar con claridad el comportamiento habitual de la demanda. Por ello, resulta conveniente utilizar métricas complementarias que permitan observar cómo evoluciona el comportamiento de estos productos a medida que ganan presencia en el mercado. En cuanto a las condiciones del entorno físico, Hu et al. [25] demostraron, mediante el uso de AutoML y técnicas de inteligencia geoespacial, que la ubicación geográfica puede influir de manera importante en las tendencias de compra de los consumidores.
+P375: Este planteamiento también puede observarse en el distrito de Comas, donde la rotación del inventario no depende solo de la cantidad de productos disponibles en el minimarket. También puede verse influida por factores externos, como la presencia de otros establecimientos comerciales, el flujo de personas y los hábitos de consumo de la población. A ello se suma el avance de los sistemas computacionales, que actualmente permiten procesar mayores volúmenes de información e incorporar diferentes variables en los modelos utilizados para estimar la demanda.
+P377: En este sentido, Shahzad, Khan y Ullah [26] indican que algoritmos como el Temporal Fusion Transformer pueden obtener buenos resultados en la predicción de la demanda dentro del sector minorista. Esto se alinea bastante con la postura de Seyam, Islam y Hossain [27], quienes destacan que calcular la demanda apoyándose en machine learning y deep learning es un campo de investigación que sigue más vigente que nunca. Al final del día, todos estos referentes técnicos nos dejan claro que aún tenemos un margen enorme para seguir innovando y perfeccionando la manera en que proyectamos las ventas para este tipo de negocios. 
+P379: A pesar de todo el avance tecnológico actual, en la práctica es muy común ver que los pequeños negocios siguen sin aprovechar las herramientas predictivas 11 para definir su rumbo comercial. Por lo general, estos locales cumplen con registrar sus ventas del día a día en el sistema, pero al final toda esa información termina archivada sin que nadie le dé un uso analítico real. Precisamente, esta carencia de herramientas analíticas representa una oportunidad para aplicar técnicas de machine learning en un entorno operativo real. Al implementar este modelo en el minimarket objeto de estudio, el algoritmo no se limitará a procesar registros históricos de manera pasiva; su función principal será transformar dicha base de datos en un motor activo capaz de proyectar la demanda diaria para cada línea de productos. 
+P381: De esta forma, el establecimiento dará un salto de calidad en sus operaciones dará un salto de calidad enorme en sus operaciones, abandonando esa vieja costumbre de comprar mercadería guiándose solo por presentimientos para empezar a tomar decisiones firmes basadas íntegramente en sus propios datos. Llevando este problema a nuestra realidad, el escenario central de la investigación es un minimarket ubicado en el distrito de Comas. Hablamos de un emprendimiento que está creciendo, pero que hoy en día tropieza con el gran reto de manejar niveles de venta que suben y bajan bruscamente dependiendo del tipo de producto. Esta variación en las ventas complica la organización de los pedidos y la reposición de los productos en los anaqueles. En la actualidad, el inventario se repone principalmente según la experiencia del responsable del minimarket y mediante la revisión visual de los niveles de stock.
+P383: Aunque este método puede funcionar durante las primeras etapas del negocio, pierde efectividad conforme aumenta la variedad de productos, debido a que cada categoría presenta un comportamiento de venta distinto. A partir de los registros del sistema Kardex se identificó un desequilibrio en la gestión del inventario: los productos de mayor rotación suelen agotarse con frecuencia, mientras que los de menor demanda o aquellos de carácter perecible permanecen almacenados por más tiempo.
+P385: Esta situación genera costos por mantener productos sin movimiento y, a la vez, puede reducir las oportunidades de venta. Frente a ello, un modelo de machine learning permitiría analizar el historial de transacciones y estimar con mayor precisión la cantidad de productos que debería solicitarse en cada categoría. De esta manera, sería posible mejorar la planificación del inventario y apoyar una gestión más eficiente de las operaciones del minimarket. La falta de herramientas predictivas, en cambio, limita la capacidad del establecimiento para anticipar la demanda.
+P387: Cuando las proyecciones de ventas no reflejan con precisión el comportamiento de la demanda, la distribución de los recursos puede verse afectada. Esto puede ocasionar acumulación de productos de baja rotación y, al mismo tiempo, falta de stock en aquellos con mayor demanda. Estas situaciones también repercuten en la experiencia del cliente, ya que no encontrar determinados productos puede afectar su percepción sobre el servicio. Por ello, contar con estimaciones más precisas permite organizar mejor las compras, mantener un mayor control del inventario y tomar decisiones más acertadas dentro del minimarket.
+P389: Desde el punto de vista administrativo, el principal desafío para garantizar la sostenibilidad del negocio radica en contar con información confiable que permita anticipar el comportamiento de la demanda y respaldar una adecuada planificación de las compras, el abastecimiento y la gestión del inventario supera la gestión operativa básica de ventas. El éxito comercial reside en la capacidad de disponer de información precisa que permita anticipar el comportamiento de los clientes frente a diversas categorías de productos. Contar con esta ventaja competitiva proporciona el margen de maniobra necesario para la toma de decisiones estratégicas, evitando que la gestión del negocio se vea limitada por situaciones de urgencia. 
+P391: Por este motivo, conseguir que el sistema nos calcule las ventas del día a día dejó de ser una simple propuesta interesante en papel; hoy por hoy es una necesidad operativa obligatoria y muy práctica si genuinamente buscamos darle un rumbo estructurado a toda la estrategia comercial de la tienda. El presente estudio se alineará con el Objetivo de Desarrollo Sostenible 9, Industria, innovación e infraestructura, específicamente con la meta 9.5, al desarrollar y evaluar un modelo de machine learning que fortalecerá las capacidades tecnológicas para la gestión de la demanda en un minimarket. 
+P393: De manera complementaria, se vinculará con la meta 8.2 del Objetivo de Desarrollo Sostenible 8, al promover la productividad mediante una planificación de compras basada en datos, y con la meta 12.2 del Objetivo de Desarrollo Sostenible 12, al favorecer el uso eficiente de los recursos y la reducción del desperdicio asociado al exceso de productos perecibles. 
+P395: A partir de esta realidad, se formuló el siguiente problema general de investigación: ¿De qué manera un modelo de machine learning permitirá predecir la demanda diaria por categoría de producto en un minimarket de Comas 2026? Los problemas específicos planteados fueron los siguientes: (P1) ¿cómo se recopilarán y depurarán los datos históricos de ventas e inventario del minimarket para la construcción del modelo predictivo?; (P2) ¿qué modelos predictivos de machine learning orientados a series temporales presentarán un mejor desempeño durante el entrenamiento para la demanda diaria por categoría?; (P3) ¿cuál será el nivel de desempeño de los modelos evaluados según las métricas de error MAE, RMSE y MAPE?; y (P4) ¿de qué manera el modelo seleccionado apoyará la planificación del inventario y la toma de decisiones ? 
+P397: La investigación se justifica desde el punto de vista teórico porque integra conocimientos sobre machine learning, series temporales y predicción de demanda en el contexto de un minimarket. Asimismo, se justifica desde el punto de vista tecnológico porque demuestra la viabilidad de aplicar técnicas predictivas a un problema real de gestión comercial en un pequeño negocio. Desde el punto de vista práctico, la investigación ofrece una herramienta de apoyo para mejorar la planificación de la demanda; al predecir la demanda diaria por categoría, permite decidir qué productos comprar, qué categorías reforzar y cómo reducir los riesgos de desabastecimiento o exceso de mercadería. 
+P399: Desde el punto de vista metodológico, la investigación propone un procedimiento de recopilación, preparación, entrenamiento y evaluación de datos que sirve como referencia para estudios similares. Finalmente, se justifica desde el punto de vista social y económico porque una gestión más eficiente de los productos mejora su disponibilidad para los clientes y reduce las pérdidas ocasionadas por una planificación inadecuada. 
+P401: El objetivo general de la investigación fue desarrollar y evaluar un modelo de machine learning para predecir la demanda diaria por categoría de producto en un minimarket de Comas 2026. Para alcanzar este propósito, se plantearon los siguientes objetivos específicos: (OE1) recopilar y depurar los datos históricos de ventas e inventario del minimarket para la construcción del modelo predictivo; (OE2) entrenar y comparar el desempeño de diversos algoritmos de machine learning orientados a series temporales para la predicción de la demanda diaria por categoría; (OE3) evaluar el desempeño predictivo de los modelos entrenados utilizando las métricas de error MAE, RMSE y MAPE; y (OE4) analizar la contribución predictiva del modelo seleccionado en la planificación del inventario y la toma de decisiones comerciales.
+P403: En cuanto a la hipótesis general, se planteó que el desarrollo de un modelo de machine learning permitirá predecir la demanda diaria por categoría de producto en un minimarket de Comas, 2026, logrando un desempeño predictivo, medido a través de MAE, RMSE y MAPE, que será significativamente mejor en comparación con un método de pronóstico base. 
+P405: Las hipótesis específicas fueron las siguientes: (HE1) Los datos históricos de ventas e inventario, una vez depurados y organizados, permitirán identificar patrones de comportamiento de la demanda por categoría de producto. (HE2) Al menos uno de los modelos de machine learning evaluados presentará un error de predicción menor al método base durante el entrenamiento para la demanda diaria. (HE3) El nivel de error de predicción medido por MAE, RMSE y MAPE de los modelos seleccionados será significativamente menor que el método de pronóstico base. (HE4) La implementación del modelo 15 seleccionado permitirá optimizar la planificación del inventario al reducir los quiebres de stock y el exceso de inventario en el minimarket. 
+P424: II. Metodología
+P426: La investigación fue de tipo aplicada, porque se orientó al desarrollo y la evaluación de una solución tecnológica para un problema específico del Minimarket Taully, ubicado en Comas. De acuerdo con el Manual de Frascati, la investigación aplicada se dirigió a un objetivo práctico determinado; en este caso, se buscó predecir la demanda diaria por categoría de producto para apoyar la planificación de compras, la reposición y la disponibilidad de productos [32]. El enfoque fue cuantitativo, debido a que se trabajó con registros numéricos de ventas e inventario. El diseño fue pre-experimental, ya que se manipuló deliberadamente la variable independiente (modelo de machine learning) para evaluar su efecto sobre la variable dependiente (demanda diaria por categoría de producto), mediante mediciones en un solo grupo con control limitado de variables.
+P428: El alcance de la investigación fue descriptivo, con un propósito predictivo, debido a que se analizaron los patrones de demanda correspondientes a cada categoría de producto y se evaluó la capacidad de los modelos para estimar valores futuros a partir de dichos patrones. Para el estudio se consideraron dos variables. La variable independiente correspondió al modelo de machine learning, definido como un conjunto de algoritmos computacionales capaces de aprender patrones a partir de datos históricos y utilizarlos para generar predicciones [1], [4]. La variable dependiente fue la demanda diaria por categoría de producto, entendida como la cantidad de unidades demandadas o vendidas en cada categoría comercial durante un día determinado, sujeta a variaciones de volumen, disponibilidad y estacionalidad [1], [3].
+P430: Desde el punto de vista operacional, el modelo de machine learning comprendió la preparación de los registros, la generación de variables temporales, el entrenamiento de los algoritmos y la validación cronológica de las predicciones obtenidas. La demanda diaria por categoría se determinó mediante la consolidación de las ventas y los movimientos de inventario según la fecha y la categoría de producto. Para su análisis se consideraron las dimensiones de volumen de demanda, disponibilidad de inventario, patrón de demanda y precisión del pronóstico. La definición conceptual y operacional de las variables, así como sus dimensiones, indicadores y escalas de medición, se presentan en la tabla de operacionalización incluida en el Anexo 1.
+P432: La unidad de análisis estuvo constituida por el registro diario consolidado de ventas correspondiente a cada categoría de producto. La población estuvo conformada por la totalidad de los registros de ventas y movimientos de inventario almacenados en el sistema del Minimarket Taully, ubicado en Comas, correspondientes al periodo comprendido entre abril y diciembre de 2026. El conjunto de información comprendió aproximadamente 8,500 transacciones, 320 productos y 5 categorías comerciales. La muestra estuvo conformada por la totalidad de los registros que cumplieron con los criterios establecidos después del proceso de depuración; por esta razón, se empleó un muestreo censal y no fue necesario aplicar una fórmula para determinar el tamaño muestral. Se consideraron las transacciones correspondientes al periodo de estudio que contaban con una fecha válida, una categoría correctamente identificada, un código de producto consistente y valores positivos en la salida de inventario.
+P434: Se excluyeron los registros duplicados, las operaciones anuladas, las devoluciones, los valores nulos, la información incompleta y los errores de digitación. Las campañas promocionales y los feriados se mantuvieron cuando se encontraban correctamente registrados, debido a que constituían información relevante para explicar las variaciones de la demanda. Solo se corrigieron o eliminaron aquellos valores atípicos que pudieron atribuirse a errores de registro. Como técnica de recolección de datos se utilizó el análisis documental cuantitativo.
+P436: Se revisaron los reportes históricos de ventas, los movimientos de almacén y los registros de inventario con el propósito de extraer, organizar y depurar la información requerida para el desarrollo del estudio. Se emplearon una ficha de registro de datos cuantitativos de ventas, una matriz de datos estructurada y una ficha de evaluación del modelo predictivo. Los instrumentos, sus campos y sus fórmulas de cálculo se incorporaron en el Anexo 2. Las fichas fueron elaboradas para este estudio y no correspondieron a instrumentos estandarizados con autores originales. Por esta razón, su validez de contenido requirió juicio de expertos con experiencia en metodología de investigación, análisis de datos o machine learning. 
+P438: Se incorporaron las fichas técnicas de los instrumentos en el Anexo 3 y los formatos de validación para tres jueces expertos en los Anexos 4, 5 y 6. Dichos formatos debían consignar la valoración, las observaciones, la identificación y la firma de cada juez antes de la presentación de la versión final. La evaluación de la consistencia interna no fue aplicable, debido a que en el estudio no se emplearon cuestionarios ni escalas psicométricas. La calidad de los datos se garantizó mediante la revisión de registros duplicados, valores nulos, códigos, fechas, categorías y la correspondencia entre la información de ventas e inventario. Asimismo, se siguió un procedimiento definido para limpiar, transformar, entrenar y evaluar los datos, de manera que el proceso pudiera repetirse bajo las mismas condiciones.
+P440: El volumen de demanda se analizó mediante dos indicadores: la cantidad demandada y el índice de salida de inventario. La cantidad demandada se calculó con la expresión CD = (SI + EN) - SF, donde SI corresponde al stock inicial, EN a las entradas registradas y SF al stock final. El índice de salida de inventario permitió conocer qué proporción de los productos disponibles salió durante el periodo evaluado.
+P441: Por otro lado, la disponibilidad del inventario se evaluó mediante la tasa de quiebre de stock, calculada como TQS = (DQS / DD) × 100. En esta fórmula, DQS representa el número de días en los que se registró un quiebre de stock y DD el total de días considerados en el análisis.
+P442: Asimismo, el comportamiento de la demanda se analizó mediante el índice estacional, calculado como IE = VD / VPM. En esta fórmula, VD corresponde a la venta diaria y VPM a la venta promedio mensual.
+P444: Estos indicadores permitieron identificar variaciones recurrentes en la demanda y reconocer las categorías con mayor riesgo de desabastecimiento. El análisis de los datos se realizó siguiendo el orden cronológico de los registros. Para ello, la información se organizó por fecha y categoría de producto, y se incorporaron variables temporales como el día de la semana, los feriados y las promociones registradas. Asimismo, se evitaron particiones aleatorias que pudieran alterar la secuencia de las series temporales. Los registros más antiguos se utilizaron para el entrenamiento del modelo, mientras que los periodos posteriores se reservaron para las etapas de validación y prueba. Finalmente, la capacidad de generalización se evaluó mediante validación hacia adelante, respetando en todo momento el orden temporal de los datos.
+P446: En una primera etapa se realizó un análisis descriptivo de la demanda, considerando frecuencias, totales, promedios y variaciones según la fecha y la categoría de producto. Luego, se comparó el desempeño del promedio móvil simple, utilizado como modelo base, con ARIMA, Random Forest, CatBoost y XGBoost. El análisis se centró en la capacidad predictiva de cada modelo, sin buscar establecer relaciones causales ni asociaciones entre variables. Para evaluar su desempeño se utilizaron las métricas MAE, RMSE y MAPE. El MAE permitió conocer el error absoluto promedio, el RMSE dio mayor peso a los errores de mayor magnitud y el MAPE mostró el error de predicción en términos porcentuales [31].
+P448: El MAPE se calculó solo cuando la demanda real fue distinta de cero. Para los registros con demanda igual a cero se utilizaron las métricas MAE y RMSE, con el fin de evitar divisiones indefinidas. Se seleccionó el modelo que presentó el menor error frente a la línea base, considerando tanto las métricas obtenidas como la estabilidad de los resultados en las validaciones temporales. Asimismo, la investigación se desarrolló bajo los principios de integridad científica, objetividad, transparencia, trazabilidad y confidencialidad. Los registros históricos de ventas e inventario fueron utilizados exclusivamente con fines académicos.
+P450: El acceso a la información estuvo limitado al investigador y los resultados se presentaron de manera agregada, evitando la exposición de datos comerciales sensibles o identificadores personales. Debido a que no se recopilaron datos directamente de personas ni se aplicaron instrumentos a participantes, no fue necesario utilizar consentimiento informado ni asentimiento. La autorización institucional para el uso de la información del Minimarket Taully se incorporó en los Anexos 7 y 8. En caso de que los registros incluyeran datos personales, estos debían ser anonimizados antes de iniciar el análisis. Asimismo, las autorizaciones institucionales, las fichas de validación firmadas y cualquier documento que pudiera revelar información comercial sensible permanecieron bajo custodia del investigador.
+P452: Aunque estos documentos fueron mencionados en el informe e incluidos como sustento para la evaluación académica, se estableció que no debían ser publicados en el Repositorio Institucional, debido a que contienen información de carácter sensible y de uso restringido.
+P459: III. Resultados
+P504: IV. Discusión
+P549: V. Conclusiones
+P593: VI. Recomendaciones
+P638: Referencias
+P642: C. Brackmann, T. Friedrich, y N. Urbach, "Identifying Application Areas for Machine Learning in the Retail Industry", SN Computer Science, 2023. Consultado: 1 jun. 2026. [En línea]. Disponible: https://link.springer.com/article/10.1007/s42979-023-01888-w 
+P643: J. Wang y L. Luo, "A forecasting method of multi-category product sales: analysis and application", Journal of Cloud Computing, 2023. Consultado: 1 jun. 2026. [En línea]. Disponible: https://link.springer.com/article/10.1007/s44176-023-00012-9 
+P644: C. Auppakorn y C. Phumchusri, "Daily Sales Forecasting for Variable-Priced Items in Retail Business", ACM International Conference Proceeding Series, 2022. Consultado: 1 jun. 2026. [En línea]. Disponible: https://dl.acm.org/doi/10.1145/3535782.3535794 
+P645: Y. Ahmadov, B. Minaei-Bidgoli, y A. Harati, "Deep learning-based approach for forecasting intermittent online sales", Discover Artificial Intelligence, 2023. Consultado: 1 jun. 2026. [En línea]. Disponible: https://link.springer.com/article/10.1007/s44163-023-00085-1 
+P646: H. Chan y M. I. M. Wahab, "A machine learning framework for predicting weather impact on retail sales", Supply Chain Analytics, 2024. Consultado: 1 jun. 2026. [En línea]. Disponible: https://www.sciencedirect.com/science/article/pii/S2949863524000013 
+P647: S. Chen, J. Zhang, y X. Wang, "Which product description phrases affect sales forecasting? An explainable AI framework", Decision Support Systems, 2024. Consultado: 1 jun. 2026. [En línea]. Disponible: https://www.sciencedirect.com/science/article/abs/pii/S0167923623001409 
+P648: Universidad Tecnológica del Perú, "Predicción de la demanda de productos con Machine Learning en un minimarket", Tesis, Univ. Tecnológica del Perú, 2024. Consultado: 1 jun. 2026. [En línea]. Disponible: https://repositorio.utp.edu.pe/item/0af5cc5f-1b49-43e1-b3b1-af734f5202fa 
+P649: J. M. Palomino Huarilloclla, "Implementación de un modelo de machine learning para la predicción de la demanda de una ferretería en Moquegua, 2024", Tesis, Univ. César Vallejo, Perú, 2024. Consultado: 1 jun. 2026. [En línea]. Disponible: https://alicia.concytec.gob.pe/vufind/Record/UCVV_74ad36992d479d9df5029d521249d464/Details 
+P650: R. C. Montero López, "Sistema web inteligente basado en machine learning para apoyar la gestión de inventarios en la empresa E.B. Pareja Lecaros S.A.", Tesis, Univ. Católica Santo Toribio de Mogrovejo, Perú, 2024. Consultado: 1 jun. 2026. [En línea]. Disponible: https://repositorio.usat.edu.pe/items/10c2c805-827f-4e41-bc96-a4df605c5dce 
+P651: G. M. Ponce Illacutipa, "Modelo basado en Machine Learning para optimizar el pronóstico de ventas de la empresa Ricos Pan, año 2020–2021", Tesis, Perú, 2021. Consultado: 1 jun. 2026. [En línea]. Disponible: https://alicia.concytec.gob.pe/vufind/Record/RNAP_5b1ee92720df311aa5a22708a1fb1488 
+P652: G. A. Flores Taquiri y J. S. Montalvo Celis, "Machine learning para la predicción en la gestión de inventario dirigida a PYMES de venta de productos tecnológicos", Tesis, Univ. César Vallejo, Perú, 2024. Consultado: 1 jun. 2026. [En línea]. Disponible: https://alicia.concytec.gob.pe/vufind/Record/UCVV_802cf5f75bd0c420ae4084d6b71ddb29 
+P653: R. L. León Villavicencios y F. E. Vinces Chumbes, "Machine Learning para la gestión de ventas en la empresa Forever Group SAC", Tesis, Univ. César Vallejo, Perú, 2024. Consultado: 1 jun. 2026. [En línea]. Disponible: https://alicia.concytec.gob.pe/vufind/Record/UCVV_0121b72d7f74603bbdd31f79cd25f4ad 
+P654: P. A. Anchante Aybar y D. D. Fernández Chávez, "Machine Learning para la toma de decisiones en la gestión de ventas, Lima 2024", Tesis, Univ. César Vallejo, Perú, 2024. Consultado: 1 jun. 2026. [En línea]. Disponible: https://alicia.concytec.gob.pe/vufind/Record/UCVV_8cda3aace716d90c01edbb0c689177c8/Details 
+P655: J. A. Rojas Vilca, "Aplicativo Móvil con Machine Learning para la gestión de ventas en productos de la empresa Optilook de Lima, 2024", Tesis, Univ. César Vallejo, Perú, 2024. Consultado: 1 jun. 2026. [En línea]. Disponible: https://alicia.concytec.gob.pe/vufind/Record/UCVV_d500babbd2fb53a1abf122d8d98c2f3f/Details 
+P656: K. E. Serna Berrocal, "Modelo machine learning para predecir las ventas de una empresa RETAIL, 2025", Tesis, Perú, 2025. Consultado: 1 jun. 2026. [En línea]. Disponible: https://alicia.concytec.gob.pe/vufind/Record/UNSJ_a2810f55353e34c2f024e89d83330f26/Details 
+P657: B. P. González Jauregui y D. M. Mariscal Cruzado, "Improvement Proposal Based on Machine Learning, Big Data and DDMRP to Improve Forecasting Compliance in a Consumer Goods Company", Tesis, Univ. de Lima, Perú, 2024. Consultado: 1 jun. 2026. [En línea]. Disponible: https://repositorio.ulima.edu.pe/bitstream/handle/20.500.12724/21467/T018_71910212_T.pdf?isAllowed=y&sequence=1 
+P658: G. Padmanabham, "Machine Learning Framework for Retail Sales Forecasting", International Journal of Computational and Experimental Science and Engineering, 2025. Consultado: 1 jun. 2026. [En línea]. Disponible: https://www.researchgate.net/publication/396173583_Machine_Learning_Framework_for_Retail_Sales_Forecasting 
+P659: O. O. Mustapha y T. Sithole, "Forecasting Retail Sales using Machine Learning Models", American Journal of Statistics and Actuarial Sciences, 2025. Consultado: 1 jun. 2026. [En línea]. Disponible: https://www.researchgate.net/publication/390949992_Forecasting_Retail_Sales_using_Machine_Learning_Models 
+P660: S. Mansur, F. Ahmed, e M. R. Islam, "Sales forecasting for retail stores using hybrid neural networks and machine learning", PeerJ Computer Science, 2025. Consultado: 1 jun. 2026. [En línea]. Disponible: https://pmc.ncbi.nlm.nih.gov/articles/PMC12453866 
+P661: R. S. Ahmed, M. A. Khan, y S. Ali, "Comparison of Deep Learning Algorithms for Retail Sales Forecasting", ICCK Transactions on Intelligent Systematics, 2024. Consultado: 1 jun. 2026. [En línea]. Disponible: https://www.icck.org/article/abs/tis.2024.300700 
+P662: Y. Liu, D. Kalaitzi, M. Wang, y C. Papanagnou, "A machine learning approach to inventory stockout prediction", Journal of Digital Economy, 2025. Consultado: 1 jun. 2026. [En línea]. Disponible: https://www.sciencedirect.com/science/article/pii/S2773067025000202 
+P663: M. S. Sousa, A. M. Moreira, y J. Ferreira, "Predicting demand for new products in fashion retailing using machine learning", Expert Systems with Applications, 2025. Consultado: 1 jun. 2026. [En línea]. Disponible: https://www.sciencedirect.com/science/article/pii/S0957417424021808 
+P664: C. C. Wang, Y. H. Chen, y T. Y. Lin, "Dynamic Dual-Phase Forecasting Model for New Product Demand", Mathematics, 2025. Consultado: 1 jun. 2026. [En línea]. Disponible: https://www.mdpi.com/2227-7390/13/10/1613  
+P665: S. Hwang, J. Kim, y M. Park, "Sales Forecasting for New Products Using Homogeneity-Based Clustering and Ensemble Learning", Electronics, 2025. Consultado: 1 jun. 2026. [En línea]. Disponible: https://www.mdpi.com/2079-9292/14/3/520 
+P666: H. Hu, D. Tan, P. Thaichon, B. Wang, y Z. Zhu, "Grid-based market sales forecasting for retail businesses using automated machine learning and geospatial intelligence", Expert Systems with Applications, 2025. Consultado: 1 jun. 2026. [En línea]. Disponible: https://www.sciencedirect.com/science/article/abs/pii/S0957417425014915 
+P667: M. A. Shahzad, M. A. Khan, y S. Ullah, "Demand forecasting for retail using three-S temporal fusion transformer", Supply Chain Analytics, 2025. Consultado: 1 jun. 2026. [En línea]. Disponible: https://www.sciencedirect.com/science/article/abs/pii/S3051064325000305 
+P668: A. Seyam, M. R. Islam, y S. Hossain, "The application of machine learning and deep learning on demand forecasting", International Journal of Information Management Data Insights, 2026. Consultado: 1 jun. 2026. [En línea]. Disponible: https://www.sciencedirect.com/science/article/pii/S1474034626003174 
+P669: N. A. Mohd Shahar, N. H. Abd Rahman, y S. S. Maidin, "Sales Forecasting Using Machine Learning Methods for Retail Store", Atlantis Press, 2024. Consultado: 1 jun. 2026. [En línea]. Disponible: https://www.atlantis-press.com/proceedings/invent-24/126005569 
+P670: C. I. C. Obi, "Demand Forecasting in Retail Business Using the Ensemble Machine Learning Framework: A Stacking Approach", American Scientific Research Journal for Engineering, Technology, and Sciences, 2024. Consultado: 1 jun. 2026. [En línea]. Disponible: https://asrjetsjournal.org/American_Scientific_Journal/article/view/11010 
+P671: I. P. Mariñ, "A Demand Forecasting Model Leveraging Machine Learning", Scientific Programming, 2024. Consultado: 1 jun. 2026. [En línea]. Disponible: https://onlinelibrary.wiley.com/doi/10.1155/2024/8425058 
+P672: R. J. Hyndman y G. Athanasopoulos, Forecasting: Principles and Practice, 3.ª ed. OTexts, 2021. [En línea]. Disponible: https://otexts.com/fpp3/ 
+P707: Anexos
+P709: Anexo 1. Tabla de operacionalización de variables.
+
+TABLA 710
+Variables | Definición conceptual | Definición operacional | Dimensiones  | Indicadores  | Escala de Mediciones 
+Modelo de machine learning | Algoritmos computacionales que aprenden patrones de datos históricos para realizar predicciones [1], [4]. | Proceso de entrenamiento y ajuste de algoritmos de machine learning (ej. XGBoost, Redes Neuronales) utilizando features temporales. |  |  | 
+Modelo de machine learning | Algoritmos computacionales que aprenden patrones de datos históricos para realizar predicciones [1], [4]. | Proceso de entrenamiento y ajuste de algoritmos de machine learning (ej. XGBoost, Redes Neuronales) utilizando features temporales. |  |  | 
+Demanda diaria por categoría de producto | Cantidad de productos vendidos por categoría, influenciada por factores estacionales y externos [1], [3]. | Registro numérico consolidado de las ventas diarias por categoría de producto, depurado de los sistemas del minimarket. | Volumen de demanda  | Cantidad de demanda (Unidad)
+ Índice de Salida de Inventario
+Tasa de Quiebre de Stock   | Razón
+Demanda diaria por categoría de producto | Cantidad de productos vendidos por categoría, influenciada por factores estacionales y externos [1], [3]. | Registro numérico consolidado de las ventas diarias por categoría de producto, depurado de los sistemas del minimarket. | Patrón de Demanda | Estacionalidad | Razón
+Demanda diaria por categoría de producto | Cantidad de productos vendidos por categoría, influenciada por factores estacionales y externos [1], [3]. | Registro numérico consolidado de las ventas diarias por categoría de producto, depurado de los sistemas del minimarket. | Precisión del Pronóstico | Error de Pronóstico | Razón
+P712: Anexo 2. Instrumentos de recolección de datos.
+P715: Instrumento de recolección de datos del indicador para el Pretest: Cantidad demandada
+
+TABLA 716
+INDICADOR: | Cantidad Demandada 
+INVESTIGADOR: | Guerrero Mora, Carlos David Elian
+LUGAR DE ESTUDIO: | Minimarket Taully, Comas
+FÓRMULA: | CD = (SI + EN) - SF
+DONDE: | CD = Cantidad Demandada
+SI = Stock Inicial
+EN = Entradas
+SF = Stock Final
+Momento  | Pretest
+
+TABLA 719
+N° | Categoria | SI | EN | SF | CD
+1 | Abarrotes  | 394 | 881 | 315 | 960
+2 | Bebidas  | 712 | 1 481 | 597 | 1 596
+3 | Golosinas  | 645 | 905 | 413 | 1 137
+4 | Helados  | 191 | 309 | 151 | 349
+5 | Limpieza | 172 | 335 | 102 | 405
+ | Total | 2 114 | 3 911 | 1 578 | 4 447
+P744: Instrumento de recolección de datos del indicador para el Postest: Cantidad demandada
+
+TABLA 745
+INDICADOR: | Cantidad Demandada 
+INVESTIGADOR: | Guerrero Mora, Carlos David Elian
+LUGAR DE ESTUDIO: | Minimarket Taully, Comas
+FÓRMULA: | CD = (SI + EN) - SF
+DONDE: | CD = Cantidad Demandada
+SI = Stock Inicial
+EN = Entradas
+SF = Stock Final
+Momento  | Postest
+
+TABLA 748
+N° | Categoria | SI | EN | SF | CD
+1 | Abarrotes  | 372 | 949 | 290 | 1 031
+2 | Bebidas  | 738 | 1 433 | 559 | 1 612
+3 | Golosinas  | 638 | 984 | 448 | 1 174
+4 | Helados  | 210 | 365 | 141 | 434
+5 | Limpieza | 169 | 227 | 107 | 289
+ | Total | 2 127 | 3 958 | 1 545 | 4 540
+P754: Instrumento de recolección de datos del indicador para el Pretest: Índice de Salida de Inventario
+
+TABLA 755
+INDICADOR: | Índice de Salida de Inventario
+INVESTIGADOR: | Guerrero Mora, Carlos David Elian
+LUGAR DE ESTUDIO: | Minimarket Taully, Comas
+FÓRMULA: | ISI = CD / (SI + EN)
+DONDE: | ISI = Índice de Salida de Inventario
+CD = Cantidad Demandada
+SI = Stock Inicial
+EN = Entradas
+Momento  | Pretest
+
+TABLA 758
+N° | Categoría | (CD) | Stock Inicial (SI) | Entradas (EN) | Índice de Salida de Inventario (ISI)
+1 | Abarrotes  | 960 | 394 | 881 | 75,29 %
+2 | Bebidas  | 1 596 | 712 | 1 481 | 72,78 %
+3 | Golosinas  | 1 137 | 645 | 905 | 73,35 %
+4 | Helados  | 349 | 191 | 309 | 69,80 %
+5 | Limpieza | 405 | 172 | 335 | 79,88 %
+ | Total | 4 447 | 2 114 | 3 911 | 73,81 %
+P782: Instrumento de recolección de datos del indicador para el Postest: Índice de Salida de Inventario
+
+TABLA 783
+INDICADOR: | Índice de Salida de Inventario
+INVESTIGADOR: | Guerrero Mora, Carlos David Elian
+LUGAR DE ESTUDIO: | Minimarket Taully, Comas
+FÓRMULA: | ISI = CD / (SI + EN)
+DONDE: | ISI = Índice de Salida de Inventario
+CD = Cantidad Demandada
+SI = Stock Inicial
+EN = Entradas
+Momento  | Postest
+
+TABLA 786
+N° | Categoria | (CD) | Stock Inicial (SI) | Entradas (EN) | Índice de Salida de Inventario (ISI)
+1 | Abarrotes  | 1 031 | 372 | 949 | 78,05 %
+2 | Bebidas  | 1 612 | 738 | 1 433 | 74,25 %
+3 | Golosinas  | 1 174 | 638 | 984 | 72,38 %
+4 | Helados  | 434 | 210 | 365 | 75,48 %
+5 | Limpieza | 289 | 169 | 227 | 72,98 %
+ | Total | 4 540 | 2 127 | 3 958 | 74,61 %
+P814: Instrumento de recolección de datos del indicador para el Pretest: Tasa de quiebre de stock
+
+TABLA 815
+INDICADOR: | Tasa de Quiebre de Stock
+INVESTIGADOR: | Guerrero Mora, Carlos David Elian
+LUGAR DE ESTUDIO: | Minimarket Taully, Comas
+FÓRMULA: | 
+DONDE: | TQS = Tasa de Quiebre de Stock
+DQS = Días con Quiebre de Stock
+DD = Días Evaluados
+Momento | Pretest
+
+TABLA 818
+N° | Categoria | DQS | DD | TQS
+1 | Abarrotes  | 1 | 30 | 3,33 %
+2 | Bebidas  | 10 | 30 | 33,33 %
+3 | Golosinas  | 11 | 30 | 36,67 %
+4 | Helados  | 1 | 30 | 3,33 %
+5 | Limpieza | 0 | 30 | 0,00 %
+ | Total | 23 | 150 | 15,33 %
+P844: Instrumento de recolección de datos del indicador para el Postest: Tasa de quiebre de stock
+
+TABLA 845
+INDICADOR: | Tasa de Quiebre de Stock
+INVESTIGADOR: | Guerrero Mora, Carlos David Elian
+LUGAR DE ESTUDIO: | Minimarket Taully, Comas
+FÓRMULA: | 
+DONDE: | TQS = Tasa de Quiebre de Stock
+DQS = Días con Quiebre de Stock
+DD = Días Evaluados
+Momento | Postest
+
+TABLA 848
+N° | Categoria | DQS | DD | TQS
+1 | Abarrotes  | 1 | 30 | 3,33 %
+2 | Bebidas  | 2 | 30 | 6,67 %
+3 | Golosinas  | 7 | 30 | 23,33 %
+4 | Helados  | 3 | 30 | 10,00 %
+5 | Limpieza | 0 | 30 | 0,00 %
+ | Total | 13 | 150 | 8,67 %
+P882: Instrumento de recolección de datos del indicador para el Pretest: Estacionalidad
+
+TABLA 883
+INDICADOR: | Estacionalidad
+INVESTIGADOR: | Guerrero Mora, Carlos David Elian
+LUGAR DE ESTUDIO: | Minimarket Taully, Comas
+FÓRMULA: | 
+DONDE: | IE = Índice Estacional
+VD = Venta Diaria
+VPM = Venta Promedio Mensual
+Momento  | Pretest
+
+TABLA 886
+N° | IE | VD | VPM
+1 | 1,10 | 287 | 261,40
+2 | 0,93 | 243 | 261,40
+3 | 0,84 | 220 | 261,40
+4 | 1,07 | 281 | 261,40
+5 | 0,86 | 226 | 261,40
+6 | 0,77 | 202 | 261,40
+7 | 0,92 | 241 | 261,40
+8 | 1,06 | 278 | 261,40
+9 | 1,15 | 301 | 261,40
+10 | 0,92 | 240 | 261,40
+11 | 0,93 | 242 | 261,40
+12 | 0,85 | 221 | 261,40
+13 | 1,03 | 270 | 261,40
+14 | 1,12 | 293 | 261,40
+15 | 1,22 | 318 | 261,40
+16 | 1,18 | 309 | 261,40
+17 | 1,03 | 269 | 261,40
+18 | 0,85 | 221 | 261,40
+19 | 0,83 | 216 | 261,40
+20 | 1,22 | 318 | 261,40
+21 | 1,03 | 269 | 261,40
+22 | 1,22 | 318 | 261,40
+23 | 1,18 | 308 | 261,40
+24 | 0,94 | 247 | 261,40
+25 | 0,84 | 220 | 261,40
+26 | 1,02 | 267 | 261,40
+27 | 0,92 | 241 | 261,40
+28 | 1,07 | 281 | 261,40
+29 | 1,15 | 301 | 261,40
+30 | 1,03 | 268 | 261,40
+P891: Instrumento de recolección de datos del indicador para el Postest: Estacionalidad
+
+TABLA 892
+INDICADOR: | Estacionalidad
+INVESTIGADOR: | Guerrero Mora, Carlos David Elian
+LUGAR DE ESTUDIO: | Minimarket Taully, Comas
+FÓRMULA: | 
+DONDE: | IE = Índice Estacional
+VD = Venta Diaria
+VPM = Venta Promedio Mensual
+Momento  | Postest
+
+TABLA 895
+N° | IE | VD | VPM
+1 | 0,96 | 250 | 261,40
+2 | 1,04 | 272 | 261,40
+3 | 0,71 | 185 | 261,40
+4 | 0,96 | 250 | 261,40
+5 | 1,23 | 322 | 261,40
+6 | 1,25 | 326 | 261,40
+7 | 1,04 | 272 | 261,40
+8 | 0,80 | 209 | 261,40
+9 | 1,07 | 281 | 261,40
+10 | 1,04 | 271 | 261,40
+11 | 1,09 | 284 | 261,40
+12 | 1,19 | 312 | 261,40
+13 | 1,28 | 334 | 261,40
+14 | 1,22 | 319 | 261,40
+15 | 0,96 | 251 | 261,40
+16 | 0,99 | 258 | 261,40
+17 | 0,76 | 198 | 261,40
+18 | 0,93 | 244 | 261,40
+19 | 1,19 | 311 | 261,40
+20 | 1,12 | 292 | 261,40
+21 | 1,09 | 284 | 261,40
+22 | 0,85 | 222 | 261,40
+23 | 0,89 | 233 | 261,40
+24 | 0,77 | 200 | 261,40
+25 | 0,78 | 205 | 261,40
+26 | 0,96 | 250 | 261,40
+27 | 0,98 | 257 | 261,40
+28 | 0,96 | 252 | 261,40
+29 | 0,96 | 252 | 261,40
+30 | 0,98 | 255 | 261,40
+P901: Instrumento de recolección de datos del indicador para el Pretest: Error de pronóstico
+
+TABLA 903
+INDICADOR: | Error de Pronóstico
+INVESTIGADOR: | Guerrero Mora, Carlos David Elian
+LUGAR DE ESTUDIO: | Minimarket Taully, Comas
+FÓRMULA: | MAPE = (100/n) × Σ |(Demanda Real − Demanda Pronosticada) / Demanda Real|
+DONDE: | MAPE = Error Porcentual Absoluto Medio
+DR = Demanda Real
+DP = Demanda Pronosticada
+n = Número de observaciones
+Momento: | Pretest
+
+TABLA 906
+N° | Categoría | Demanda Real (DR) | Demanda Pronosticada (DP) | MAPE
+1 | Abarrotes  | 1 604 | 1 636,18 | 21,20 %
+2 | Bebidas  | 2 799 | 2 598,75 | 12,62 %
+3 | Golosinas  | 2 218 | 2 204,68 | 20,50 %
+4 | Helados  | 715 | 795,25 | 39,85 %
+5 | Limpieza | 580 | 532,29 | 24,61 %
+ | Total | 7 916 | 7 767,14 | 23,76 %
+P916: Instrumento de recolección de datos del indicador para el Postest: Error de pronóstico
+
+TABLA 918
+INDICADOR: | Error de Pronóstico
+INVESTIGADOR: | Guerrero Mora, Carlos David Elian
+LUGAR DE ESTUDIO: | Minimarket Taully, Comas
+FÓRMULA: | MAPE = (100/n) × Σ |(Demanda Real − Demanda Pronosticada) / Demanda Real|
+DONDE: | MAPE = Error Porcentual Absoluto Medio
+DR = Demanda Real
+DP = Demanda Pronosticada
+n = Número de observaciones
+Momento: | Postest
+
+TABLA 921
+N° | Categoria | Demanda Real (DR) | Demanda Pronosticada (DP) | MAPE
+1 | Abarrotes  | 1 653 | 1 506,70 | 21,19 %
+2 | Bebidas  | 2 810 | 2 666,39 | 15,08 %
+3 | Golosinas  | 2 129 | 2 226,85 | 22,53 %
+4 | Helados  | 792 | 708,73 | 31,42 %
+5 | Limpieza | 467 | 575,62 | 40,81 %
+ | Total | 7 851 | 7 684,29 | 26,21 %
+P939: Anexo 7. Solicitud de autorización para realizar la investigación de la empresa.
+P942: Anexo 8. Autorización de uso de información de la empresa.
+P954: Anexo 9
+
+P956: Anexo 11. Otras evidencias.
+P961: Anexo 12. Matriz de consistencia
+
+TABLA 962
+Problemas | Objetivos | Hipótesis | Variables | Dimensiones | Indicador | Metodología
+Principal | General | General | Independiente |  |  | Tipo de Investigación: Aplicada
+
+Enfoque: Cuantitativa
+
+Diseño de investigación: preexperimental: 
+
+Población: totalidad de los registros históricos de ventas e inventario del Minimarket Taully, Comas, correspondientes al período de estudio (abril 2026 – diciembre 2026
+
+Alcance : Nivel predictivo  
+
+Muestra: censal.
+
+Muestreo: No probabilístico por conveniencia.
+
+Método de Investigación: Hipotético-deductivo
+
+Técnica e instrumentos: Análisis documental, ficha de registro, dataset de ventas y reporte de métricas.
+¿De qué manera un modelo de machine learning permitirá predecir la demanda diaria por categoría de producto en un minimarket de Comas, 2026? | desarrollar y evaluar un modelo de machine learning para predecir la demanda diaria por categoría de producto en un minimarket de Comas, 2026. | se planteó que el desarrollo de un modelo de machine learning permitirá predecir la demanda diaria por categoría de producto en un minimarket de Comas, 2026 | Modelo de machine learning
+Algoritmos computacionales que aprenden patrones de datos históricos para realizar predicciones [1], [4]. |  |  | Tipo de Investigación: Aplicada
+
+Enfoque: Cuantitativa
+
+Diseño de investigación: preexperimental: 
+
+Población: totalidad de los registros históricos de ventas e inventario del Minimarket Taully, Comas, correspondientes al período de estudio (abril 2026 – diciembre 2026
+
+Alcance : Nivel predictivo  
+
+Muestra: censal.
+
+Muestreo: No probabilístico por conveniencia.
+
+Método de Investigación: Hipotético-deductivo
+
+Técnica e instrumentos: Análisis documental, ficha de registro, dataset de ventas y reporte de métricas.
+¿De qué manera un modelo de machine learning permitirá predecir la demanda diaria por categoría de producto en un minimarket de Comas, 2026? | desarrollar y evaluar un modelo de machine learning para predecir la demanda diaria por categoría de producto en un minimarket de Comas, 2026. | se planteó que el desarrollo de un modelo de machine learning permitirá predecir la demanda diaria por categoría de producto en un minimarket de Comas, 2026 | Modelo de machine learning
+Algoritmos computacionales que aprenden patrones de datos históricos para realizar predicciones [1], [4]. |  |  | Tipo de Investigación: Aplicada
+
+Enfoque: Cuantitativa
+
+Diseño de investigación: preexperimental: 
+
+Población: totalidad de los registros históricos de ventas e inventario del Minimarket Taully, Comas, correspondientes al período de estudio (abril 2026 – diciembre 2026
+
+Alcance : Nivel predictivo  
+
+Muestra: censal.
+
+Muestreo: No probabilístico por conveniencia.
+
+Método de Investigación: Hipotético-deductivo
+
+Técnica e instrumentos: Análisis documental, ficha de registro, dataset de ventas y reporte de métricas.
+Segundario | Específicas | Específicas | Dependiente | Volumen de Demanda
+
+ | Cantidad Demandada (Unidades)
+
+Índice de Salida de Inventario
+
+Tasa de Quiebre de Stock   | Tipo de Investigación: Aplicada
+
+Enfoque: Cuantitativa
+
+Diseño de investigación: preexperimental: 
+
+Población: totalidad de los registros históricos de ventas e inventario del Minimarket Taully, Comas, correspondientes al período de estudio (abril 2026 – diciembre 2026
+
+Alcance : Nivel predictivo  
+
+Muestra: censal.
+
+Muestreo: No probabilístico por conveniencia.
+
+Método de Investigación: Hipotético-deductivo
+
+Técnica e instrumentos: Análisis documental, ficha de registro, dataset de ventas y reporte de métricas.
+(P1) ¿cómo se recopilarán y depurarán los datos históricos de ventas e inventario del minimarket para la construcción del modelo predictivo? | (OE1) recopilar y depurar los datos históricos de ventas e inventario del minimarket para la construcción del modelo predictivo. |  (HE1) los datos históricos de ventas e inventario del minimarket, una vez depurados y organizados, permitirán identificar patrones de comportamiento de la demanda por categoría de producto. | Demanda diaria por categoría de producto
+Cantidad de productos vendidos por categoría, influenciada por factores estacionales y externos [1], [3]. | Volumen de Demanda
+
+ | Cantidad Demandada (Unidades)
+
+Índice de Salida de Inventario
+
+Tasa de Quiebre de Stock   | Tipo de Investigación: Aplicada
+
+Enfoque: Cuantitativa
+
+Diseño de investigación: preexperimental: 
+
+Población: totalidad de los registros históricos de ventas e inventario del Minimarket Taully, Comas, correspondientes al período de estudio (abril 2026 – diciembre 2026
+
+Alcance : Nivel predictivo  
+
+Muestra: censal.
+
+Muestreo: No probabilístico por conveniencia.
+
+Método de Investigación: Hipotético-deductivo
+
+Técnica e instrumentos: Análisis documental, ficha de registro, dataset de ventas y reporte de métricas.
+(P2) ¿qué modelos predictivos de machine learning orientados a series temporales presentarán un mejor desempeño durante el entrenamiento para la demanda diaria por categoría? | (OE2) entrenar y comparar el desempeño de diversos algoritmos de machine learning orientados a series temporales para la predicción de la demanda diaria por categoría. | (HE2) al menos uno de los modelos de machine learning evaluados mostrará un error de predicción MAE, RMSE y MAPE menor que el método base | Demanda diaria por categoría de producto
+Cantidad de productos vendidos por categoría, influenciada por factores estacionales y externos [1], [3]. | Volumen de Demanda
+
+ | Cantidad Demandada (Unidades)
+
+Índice de Salida de Inventario
+
+Tasa de Quiebre de Stock   | Tipo de Investigación: Aplicada
+
+Enfoque: Cuantitativa
+
+Diseño de investigación: preexperimental: 
+
+Población: totalidad de los registros históricos de ventas e inventario del Minimarket Taully, Comas, correspondientes al período de estudio (abril 2026 – diciembre 2026
+
+Alcance : Nivel predictivo  
+
+Muestra: censal.
+
+Muestreo: No probabilístico por conveniencia.
+
+Método de Investigación: Hipotético-deductivo
+
+Técnica e instrumentos: Análisis documental, ficha de registro, dataset de ventas y reporte de métricas.
+(P3) ¿cuál será el nivel de desempeño de los modelos evaluados según las métricas de error MAE, RMSE y MAPE? | (OE3) evaluar el desempeño predictivo de los modelos entrenados utilizando las métricas de error MAE, RMSE y MAPE. | (HE3) el modelo de machine learning con el mejor desempeño predictivo facilitará una mejor planificación del inventario al proporcionar estimaciones diarias por categoría, lo que permitirá reducir los quiebres de stock y el exceso de inventario en el minimarket. | Demanda diaria por categoría de producto
+Cantidad de productos vendidos por categoría, influenciada por factores estacionales y externos [1], [3]. | Patrón de Demanda | Estacionalidad | Tipo de Investigación: Aplicada
+
+Enfoque: Cuantitativa
+
+Diseño de investigación: preexperimental: 
+
+Población: totalidad de los registros históricos de ventas e inventario del Minimarket Taully, Comas, correspondientes al período de estudio (abril 2026 – diciembre 2026
+
+Alcance : Nivel predictivo  
+
+Muestra: censal.
+
+Muestreo: No probabilístico por conveniencia.
+
+Método de Investigación: Hipotético-deductivo
+
+Técnica e instrumentos: Análisis documental, ficha de registro, dataset de ventas y reporte de métricas.
+(P4) ¿de qué manera el modelo seleccionado apoyará la planificación del inventario y la toma de decisiones comerciales del minimarket? | (OE4) analizar la contribución predictiva del modelo seleccionado en la planificación del inventario y la toma de decisiones comerciales del minimarket. | (HE4) La implementación del modelo seleccionado permitirá optimizar la planificación del inventario al reducir los quiebres de stock y el exceso de inventario en el minimarket. | Demanda diaria por categoría de producto
+Cantidad de productos vendidos por categoría, influenciada por factores estacionales y externos [1], [3]. | 
+Precisión del Pronóstico | Error de Pronóstico | Tipo de Investigación: Aplicada
+
+Enfoque: Cuantitativa
+
+Diseño de investigación: preexperimental: 
+
+Población: totalidad de los registros históricos de ventas e inventario del Minimarket Taully, Comas, correspondientes al período de estudio (abril 2026 – diciembre 2026
+
+Alcance : Nivel predictivo  
+
+Muestra: censal.
+
+Muestreo: No probabilístico por conveniencia.
+
+Método de Investigación: Hipotético-deductivo
+
+Técnica e instrumentos: Análisis documental, ficha de registro, dataset de ventas y reporte de métricas.
+P964: Anexo 13. Reporte de similitud del software Turnitin. 

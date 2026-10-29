@@ -1,0 +1,40 @@
+ 
+24 
+ 
+[30] I. P. Mariñ , "A Demand Forecasting Model Leveraging Machine Learning", 
+Scientific Programming, 2024. Consultado: 1 jun. 2026. [En línea]. Disponible: 
+https://onlinelibrary.wiley.com/doi/10.1155/2024/8425058  
+[31] R. J. Hyndman y G. Athanasopoulos, Forecasting: Principles and Practice, 3.ª 
+ed. OTexts, 2021. [En línea]. Disponible: https://otexts.com/fpp3/  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

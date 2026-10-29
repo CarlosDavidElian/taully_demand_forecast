@@ -1,0 +1,48 @@
+ 
+14 
+ 
+Por otro lado, la disponibilidad del inventario se evaluó mediante la tasa de 
+quiebre de stock, calculada como TQS = (DQS / DD) × 100. En esta fórmula, 
+DQS representa el número de días en los que se registró un quiebre de stock y 
+DD el total de días considerados en el análisis. 
+Asimismo, el comportamiento de la demanda se analizó mediante el índice 
+estacional, calculado como IE = VD / VPM. En esta fórmula, VD corresponde a 
+la venta diaria y VPM a la venta promedio mensual. 
+ 
+Estos indicadores permitieron identificar variaciones recurrentes en la demanda 
+y reconocer las categorías con mayor riesgo de desabastecimiento. El análisis 
+de los datos se realizó siguiendo el orden cronológico de los registros. Para ello, 
+la información se organizó por fecha y categoría de producto, y se incorporaron 
+variables temporales como el día de la semana, los feriados y las promociones 
+registradas. Asimismo, se evitaron particiones aleatorias que pudieran alterar la 
+secuencia de las series temporales. Los registros más antiguos se utilizaron para 
+el entrenamiento del modelo, mientras que los periodos posteriores se 
+reservaron para las etapas de validación y prueba. Finalmente, la capacidad de 
+generalización se evaluó mediante validación hacia adel ante, respetando en 
+todo momento el orden temporal de los datos. 
+ 
+En una primera etapa se realizó un análisis descriptivo de la demanda, 
+considerando frecuencias, totales, promedios y variaciones según la fecha y la 
+categoría de producto. Luego, se comparó el desempeño del promedio móvil 
+simple, utilizado como modelo bas e, con ARIMA, Random Forest, CatBoost y 
+XGBoost. El análisis se centró en la capacidad predictiva de cada modelo, sin 
+buscar establecer relaciones causales ni asociaciones entre variables. Para 
+evaluar su desempeño se utilizaron las métricas MAE, RMSE y MAPE. El MAE 
+permitió conocer el error absoluto p romedio, el RMSE dio mayor peso a los 
+errores de mayor magnitud y el MAPE mostró el error de predicción en términos 
+porcentuales [31]. 
+ 
+El MAPE se calculó solo cuando la demanda real fue distinta de cero.  Para los 
+registros con demanda igual a cero se utilizaron las métricas MAE y RMSE, con 
+el fin de evitar divisiones indefinidas.  Se seleccionó el modelo que presentó el 
+menor error frente a la línea base, considerando tanto las métricas obtenidas 
+como la estabilidad de los resultados en las validaciones temporales. Asimismo, 
+la investigación se desarrolló bajo los principios de integridad científica, 
+objetividad, transparencia, trazabilidad y confidencialidad. Los registros 
+históricos de ventas e inventario fueron utilizados exclusivamente con fines 
+académicos. 
+ 
+El acceso a la información estuvo limitado al investigador y los resultados se 
+presentaron de manera agregada, evitando la exposición de datos comerciales 
+sensibles o identificadores personales. Debido a que no se recopilaron datos 
+directamente de personas  ni se aplicaron instrumentos a participantes, no fue 

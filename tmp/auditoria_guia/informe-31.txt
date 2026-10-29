@@ -1,0 +1,37 @@
+ 
+20 
+ 
+ 
+ 
+Referencias 
+ 
+ 
+ 
+[1] C. Brackmann, T. Friedrich, y N. Urbach, "Identifying Application Areas for 
+Machine Learning in the Retail Industry", SN Computer Science, 2023. 
+Consultado: 1 jun. 2026. [En línea]. Disponible: 
+https://link.springer.com/article/10.1007/s42979-023-01888-w  
+[2] J. Wang y L. Luo, "A forecasting method of multi -category product sales: 
+analysis and application", Journal of Cloud Computing, 2023. Consultado: 1 
+jun. 2026. [En línea]. Disponible: 
+https://link.springer.com/article/10.1007/s44176-023-00012-9  
+[3] C. Auppakorn y C. Phumchusri, "Daily Sales Forecasting for Variable -Priced 
+Items in Retail Business", ACM International Conference Proceeding Series, 
+2022. Consultado: 1 jun. 2026. [En línea]. Disponible: 
+https://dl.acm.org/doi/10.1145/3535782.3535794  
+[4] Y. Ahmadov, B. Minaei-Bidgoli, y A. Harati, "Deep learning-based approach for 
+forecasting intermittent online sales", Discover Artificial Intelligence, 2023. 
+Consultado: 1 jun. 2026. [En línea]. Disponible: 
+https://link.springer.com/article/10.1007/s44163-023-00085-1  
+[5] H. Chan y M. I. M. Wahab, "A machine learning framework for predicting 
+weather impact on retail sales", Supply Chain Analytics, 2024. Consultado: 1 
+jun. 2026. [En línea]. Disponible: 
+https://www.sciencedirect.com/science/article/pii/S2949863524000013  
+[6] S. Chen, J. Zhang, y X. Wang, "Which product description phrases affect sales 
+forecasting? An explainable AI framework", Decision Support Systems, 2024. 
+Consultado: 1 jun. 2026. [En línea]. Disponible: 
+https://www.sciencedirect.com/science/article/abs/pii/S0167923623001409  
+[7] Universidad Tecnológica del Perú, "Predicción de la demanda de productos 
+con Machine Learning en un minimarket", Tesis, Univ. Tecnológica del Perú, 
+2024. Consultado: 1 jun. 2026. [En línea]. Disponible: 
+https://repositorio.utp.edu.pe/item/0af5cc5f-1b49-43e1-b3b1-af734f5202fa  

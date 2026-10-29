@@ -1,0 +1,25 @@
+ 
+ 
+ 
+ 
+Anexos 
+ 
+Anexo 1. Tabla de operacionalización de variables. 
+Variables Definición conceptual Definición operacional Dimensiones  Indicadores  Escala de 
+Mediciones  
+Modelo de 
+machine learning 
+Algoritmos computacionales 
+que aprenden patrones de 
+datos históricos para realizar 
+predicciones [1], [4]. 
+Proceso de entrenamiento 
+y ajuste de algoritmos de 
+machine learning (ej. 
+XGBoost, Redes 
+Neuronales) utilizando 
+features temporales. 
+  
+ 
+  
+ 

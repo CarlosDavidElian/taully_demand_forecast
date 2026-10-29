@@ -1,0 +1,113 @@
+PAGE 46
+46 FORECASTING: PRINCIPLES AND PRACTICE 
+to inflation. A $200,000 house this year is not the same as a 
+$200,000 house twenty years ago. For this reason, financial 
+time series are usually adjusted so all values are stated in dollar 
+values from a particular year. For example, the house price data 
+may be stated in year 2000 dollars. 
+To make these adjustments a price index is used. If Zt de￾notes the price index and Jlt denotes the original house price 
+in year t, then Xt = ytf zt * z2000 gives the adjusted house price 
+at year 2000 dollar values. Price indexes are often constructed 
+by government agencies. For consumer goods, a common price 
+index is the Consumer Price Index (or CPI). 
+2/5 Evaluating forecast accuracy 
+Forecast accuracy measures 
+Let Yi denote the ith observation and Yi denote a forecast of Yi·
+Scale-dependent errors The forecast error is simply ei = Yi -yi,
+which is on the same scale as the data. Accuracy measures that 
+are based on ei are therefore scale-dependent and cannot be 
+used to make comparisons between series that are on different 
+scales. 
+The two most commonly used scale-dependent measures are 
+based on the absolute errors or squared errors: 
+Mean absolute error: MAE = mean(leil), 
+Root mean squared error: RMSE = ✓mean(eT)-
+When comparing forecast methods on a single data set, the 
+MAE is popular as it is easy to understand and compute. 
+Percentage errors The percentage error is given by Pi =
+1 00eJYi · Percentage errors have the advantage of being scale￾independent, and so are frequently used to compare forecast 
+performance between different data sets. The most commonly 
+used measure is: 
+Mean absolute percentage error: MAPE = mean(lp;I). 
+Measures based on percentage errors have the disadvantage 
+of being infinite or undefined if Yi = 0 for any i in the period 
+PAGE 159
+6/ TIME SERIES DECOMPOSITION 159 
+Name ao a1 a2 a3 a4 a5 a6 a7 as a9 a10 au 
+3-MA .333 .333
+SMA .200 .200 .200 
+2x 12-MA .083 .083 .083 .083 .083 .083 .042 
+3x3-MA .333 .222 .111 
+3x5-MA .200 .200 .133 .067 
+S15-MA .231 .209 .144 .066 .009 -.016 -.019 -.009 
+S21-MA .171 .163 .134 .037 .051 .017 -.006 -.014 -.014 -.009 -.003 
+HS-MA .558 .294 -.073 
+H9-MA .330 .267 .119 -.010 -.041 
+H13-MA .240 .214 .147 .066 .000 -.028 -.019 
+H23-MA .148 .138 .122 .097 .068 .039 .013 -.005 -.015 
+S = Spencer's weighted moving average 
+H = Henderson's weighted moving average 
+6/3 Classical decomposition 
+The classical decomposition method originated in the 1920s. It 
+is a relatively simple procedure and forms the basis for most 
+other methods of time series decomposition. There are two 
+forms of classical decomposition: an additive decomposition 
+and a multiplicative decomposition. These are described below 
+for a time series with seasonal period m (e.g., m = 4 for quar￾terly data, m = l 2 for monthly data, m = 7 for daily data with a 
+weekly pattern). 
+In classical decomposition, we assume the seasonal compo￾nent is constant from year to year. These m values are some￾times called the "seasonal indices". 
+Additive decomposition 
+Step 1 If mis an even number, compute the trend-cycle compo￾nent using a 2 x m-MA to obtain Tt
+. If mis an odd number, 
+compute the trend-cycle component using an m-MA to ob￾tain Tt
+. 
+Step 2 Calculate the detrended series: Yt - Tt
+. 
+Step 3 To estimate the seasonal component for each month, 
+simply average the detrended values for that month. For 
+-.016 -.011 -.004 
+Table 6.3: Commonly 
+used weights in 
+weighted moving 
+averages. 
+PAGE 160
+160 FORECASTING: PRINCIPLES AND PRACTICE 
+example, the seasonal index for March is the average of all 
+the detrended March values in the data. These seasonal 
+indexes are then adjusted to ensure that they add to zero. 
+The seasonal component is obtained by stringing together all 
+the seasonal indices for each year of data. This gives St
+. 
+Step 4 The remainder component is calculated by subtracting 
+the estimated seasonal and trend-cycle components: Et = 
+Yt - tt -St
+. 
+Multiplicative decomposition 
+A classical multiplicative decomposition is very similar except 
+the subtractions are replaced by divisions. 
+Step 1 If mis an even number, compute the trend-cycle compo￾nent using a 2 x m-MA to obtain I't
+. If mis an odd number, 
+compute the trend-cycle component using an m-MA to ob￾tain I't
+. 
+Step 2 Calculate the detrended series: ytfTt
+. 
+Step 3 To estimate the seasonal component for each month, 
+simply average the detrended values for that month. For 
+example, the seasonal index for March is the average of all 
+the detrended March values in the data. These seasonal 
+indexes are then adjusted to ensure that they add to m. The 
+seasonal component is obtained by stringing together all the 
+seasonal indices for each year of data. This gives St
+. 
+Step 4 The remainder component is calculated by dividing 
+out the estimated seasonal and trend-cycle components: 
+Et
+= ytf(Ttst )-
+---------- R code 
+#xis the time series 
+fit <- decompose(x, type="multiplicative") 
+plot(fit) 
+Comments on classical decomposition 
+While classical decomposition is still widely used, it is not rec￾ommended. There are now several much better methods. Some 
+of the problems with classical decomposition are summarised 
+below. 

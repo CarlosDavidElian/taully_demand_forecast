@@ -1,0 +1,27 @@
+ 
+ 
+ 
+Instrumento de recolección de datos del indicador para el Postest: Cantidad 
+demandada 
+INDICADOR: Cantidad Demandada  
+INVESTIGADOR: Guerrero Mora, Carlos David Elian 
+LUGAR DE ESTUDIO: Minimarket Taully, Comas 
+FÓRMULA: CD = (SI + EN) - SF 
+DONDE: CD = Cantidad Demandada 
+SI = Stock Inicial 
+EN = Entradas 
+SF = Stock Final 
+Momento  Postest 
+ 
+ 
+N° Categoria SI EN SF CD 
+1 Abarrotes  372 949 290 1 031 
+2 Bebidas  738 1 433 559 1 612 
+3 Golosinas  638 984 448 1 174 
+4 Helados  210 365 141 434 
+5 Limpieza 169 227 107 289 
+ Total 2 127 3 958 1 545 4 540 
+ 
+ 
+ 
+ 

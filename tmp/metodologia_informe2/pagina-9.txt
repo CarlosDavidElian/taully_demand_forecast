@@ -1,0 +1,48 @@
+ 
+6 
+ 
+realidad de pequeñas y medianas empresas, donde muchas decisiones continuaron 
+dependiendo de registros básicos, hojas de cálculo o criterios empíricos. Esta 
+situación fue cercana al contexto de un minimarket, donde la falta de herramientas 
+predictivas pudo  limitar la planificación de compras y ocasionar errores en la 
+reposición.  
+ 
+Sin embargo, también se reconoció que la aplicación de machine learning  en una 
+PYME exigió condiciones mínimas, como disponibilidad de datos históricos, 
+categorización correcta de productos y evaluación objetiva del desempeño del 
+modelo. León Villavicencio y Vinces Chumbes [12] aplicaron machine learning para la 
+gestión de ventas en la empresa Forever Group SAC, considerando la predicción de 
+ingresos y cantidades vendidas. Este antecedente permitió observar que las técnicas 
+de aprendizaje automático pudieron apoyar el análisis comercial en empresas 
+peruanas. Asimismo, Anchante Aybar y Fernández Chávez [13] estudiaron el machine 
+learning para la toma de decisiones en la gestión de ventas en Lima, reforzando la 
+idea de que los modelos predictivos no solo tuvieron valor técnico, sino también valor 
+8 administrativo.  
+ 
+Rojas Vilca [14] desarrolló un aplicativo móvil con machine learning para la gestión de 
+ventas en productos de una empresa de Lima, relacionando tecnología, productos, 
+ventas y modelos predictivos dentro de una solución aplicada. Serna Berrocal [15] 
+planteó un modelo de machine learning para predecir las ventas de una empresa 
+retail, y González Jauregui y Mariscal Cruzado [16] propusieron mejoras basadas en 
+machine learning, Big Data y DDMRP para optimizar el cumplimiento del pronóstico 
+en una empresa de bienes de consumo. Separa Desde el enfoque teórico, el machine 
+learning se entiende como una rama de la inteligencia artificial orientada al desarrollo 
+de modelos capaces de aprender patrones a partir de datos históricos para realizar 
+predicciones o clasificaciones.  
+ 
+En el caso de la predicción de demanda, el aprendizaje automático permite utilizar 
+registros históricos de ventas para estimar comportamientos futuros. Padmanabham 
+[17] propone un marco de machine learning para el pronóstico de ventas en el sector 
+retail, considerando etapas como el preprocesamiento de datos, el análisis 
+exploratorio, la ingeniería de características y la comparación de modelos de 
+regresión. Este enfoque resulta importante para el presente estudio, porque muestra 
+que el rendimiento de un modelo no depende solo del algoritmo seleccionado, sino 
+también de la preparación adecuada de los datos, la calidad de la información 
+utilizada y la correcta selección de variables para el proceso de predicción. 
+  
+Mustapha y Sithole [18] evalúan modelos como Random Forest, XGBoost, regresión 
+lineal y ARIMA para el pronóstico de ventas en el sector retail, comparando métodos 
+tradicionales con modelos basados en machine learning. Este antecedente muestra 
+que la elección de un modelo no debe depender solo de qué tan complejo fuera, sino 
+también de su desempeño, su facilidad de interpretación y su relación con el problema 
+de estudio. En algunos casos, un modelo sencillo puede brindar resultados aceptables 

@@ -1,0 +1,93 @@
+ 
+ 
+ 
+presentarán un 
+mejor desempeño 
+durante el 
+entrenamiento para 
+la demanda diaria 
+por categoría? 
+orientados a series 
+temporales para la 
+predicción de la 
+demanda diaria por 
+categoría. 
+predicción MAE, 
+RMSE y MAPE 
+menor que el 
+método base 
+ 
+Método de 
+Investigación: 
+Hipotético-deductivo 
+ 
+Técnica e 
+instrumentos: 
+Análisis documental, 
+ficha de registro, 
+dataset de ventas y 
+reporte de métricas. (P3) ¿cuál será el 
+nivel de desempeño 
+de los modelos 
+evaluados según las 
+métricas de error 
+MAE, RMSE y 
+MAPE? 
+(OE3) evaluar el 
+desempeño 
+predictivo de los 
+modelos entrenados 
+utilizando las 
+métricas de error 
+MAE, RMSE y 
+MAPE. 
+(HE3) el modelo de 
+machine learning 
+con el mejor 
+desempeño 
+predictivo facilitará 
+una mejor 
+planificación del 
+inventario al 
+proporcionar 
+estimaciones diarias 
+por categoría, lo que 
+permitirá reducir los 
+quiebres de stock y 
+el exceso de 
+inventario en el 
+minimarket. 
+Patrón de Demanda Estacionalidad 
+(P4) ¿de qué 
+manera el modelo 
+seleccionado 
+apoyará la 
+planificación del 
+inventario y la toma 
+de decisiones 
+comerciales del 
+minimarket? 
+(OE4) analizar la 
+contribución 
+predictiva del 
+modelo 
+seleccionado en la 
+planificación del 
+inventario y la toma 
+de decisiones 
+comerciales del 
+minimarket. 
+(HE4) La 
+implementación del 
+modelo seleccionado 
+permitirá optimizar la 
+planificación del 
+inventario al reducir 
+los quiebres de stock 
+y el exceso de 
+inventario en el 
+minimarket. 
+ 
+Precisión del 
+Pronóstico 
+Error de Pronóstico 

@@ -1,0 +1,91 @@
+PAGE 18
+8
+materiales que una empresa posee para su posterior venta, producción o uso en sus 
+operaciones comerciales, por ello, Zapata (como se citó en Torres, 2022, p. 15) “El 
+inventario es la cantidad de material disponible en un almacén, que incluye insumos, 
+productos semielaborados y culminados. Asimismo, en algunos casos la demanda se 
+incrementa sobre la cantidad disponible donde el periodo de reposición cubre el déficit
+generado, entonces se considera que el agotamiento del inventario. Por otro lado, la 
+situación opuesta sería un inventario excesivo o sobre stock”. Es importante destacar 
+que, aunque "stock" e "inventario" se utilizan a menudo de manera intercambiable, 
+algunos pueden considerar que "stock" se refiere específicamente a los productos 
+disponibles para la venta, mientras que "inventario" incluiría todos los activos 
+almacenados, incluyendo materias primas y otros elementos.
+Metodología CRISP-DM Según Schröer, Kruse y Gómez (2021) indican que es el
+modelo idóneo aplicado para minería de datos es CRISP-DM, que descompone el 
+proceso de capacitación en extracción de datos en seis etapas bien definidas. 
+También establece las actividades que deben llevarse a cabo en cada etapa, así 
+como los resultados estimados. Las fases son iterativas lo que permite la posibilidad 
+de volver atrás en el proceso, y es menos rígido que el enfoque en cascada tradicional 
+utilizado en el desarrollo de aplicaciones.
+Para este estudio, se estableció como variable dependiente el concepto de 
+gestión de inventario. Para ello Zapata (como se citó en Torres, 2022, p. 15) “la 
+gestión de inventarios asegura productos que son necesarios tanto en la compañia
+como para los clientes estén disponibles, lo que conlleva la sincronización de las 
+áreas de adquisiciones, producción y distribución.”. Las dimensiones representan una 
+faceta de una variable que puede ser complicada de evaluar y surge a raíz del proceso 
+de desglose y análisis. En esta investigación, una de las dimensiones clave es la 
+gestión, que abarca varios indicadores, El primer indicador que se abordo es el índice 
+de rotación de inventario. Para Montoya (como se citó en Llasaca (2020) El objetivo 
+de este indicador es cuantificar la frecuencia con la que los productos ingresan y salen 
+de la organización, lo que se denomina 'rotación del inventario', y se expresa como la
+frecuencia donde se recupera el dinero invertido a través de las ventas. Se tiene la 
+fórmula:
+PAGE 19
+9
+𝐼𝑅𝐼 =
+𝑈𝑆
+𝐼𝑃
+IRI = índice de rotación de inventario
+ US = unidades salidas
+IP = Inventario Promedio = (inventario inicial - inventario final) /2
+Fuente: Torres (2022)
+El otro indicador que se tomó para la investigación es la duración del inventario. 
+Para Zapata (como se citó en Torres, 2022, p. 15) Este indicador tiene como finalidad 
+calcular el período durante el cual los productos permanecen en el inventario, lo que 
+permite evaluar el nivel de inventario en peligro de volverse obsoleto o de ser 
+extraviado. Se tiene la fórmula:
+𝐼𝐷𝐼 =
+𝐼𝐹
+𝑆𝑃 𝑥30
+ IDI = índice de duración de inventario
+IF = inventario final
+ SP = salidas promedio
+Fuente: Torres (2022)
+Asimismo, el estudio tuvo como hipótesis general es: Un sistema basado en
+machine learning para la predicción mejora la gestión de inventarios dirigida a PYMES 
+de venta de productos tecnológicos. Asimismo, tiene como hipótesis específicas: Un 
+sistema basado en machine learning para la predicción mejora el índice de rotación 
+de inventario en la gestión de inventarios dirigida a PYMES de venta de productos 
+tecnológicos y Un sistema basado en machine learning para la predicción mejora el 
+índice de duración de inventario en la gestión de inventarios dirigida a PYMES de 
+venta de productos tecnológicos.
+PAGE 87
+78
+en la data proporcionada por la empresa del mes de julio solo mostraba datos 
+hasta el día 20/07/2023, cuando julio consta de 31 dias, para no contaminar la 
+veracidad de los datos se trató de llenar con información de los productos 
+salientes del almacén de esos dias.
+Inconsistencias: se encontraron productos que no pertenecían a la categoría 
+correcta en el mes de agosto, en este caso a través de un filtrado se los coloco en 
+la categoría correcta para no afectar la consistencia de la data.
+3) Preparación de los Datos
+La fase de preparación de datos cubre todas las actividades con las que se 
+construye el conjunto final de datos a partir de los datos de los que disponemos y 
+se guardaran en un xls para la comparación de algoritmos.
+Selección
+En cuanto a la información que se tomara será toda la que pertenezca a la 
+tabla de datos que pertenezcan a los meses de enero hasta septiembre del 2023.
+Construcción de los nuevos datos
+Añadiremos las siguientes columnas a la tabla:
+Columna de índice de rotación de stock: se llenará con toda la data 
+obtenida a través de la siguiente formula.
+𝐼𝑅𝐼 =
+𝑈𝑆
+𝐼𝑃
+ IRI = índice de rotación de inventario
+ US = unidades salidas
+ IP = Inventario Promedio = (inventario inicial - inventario final) /2
+Fuente: Llasaca (2020)
+Columna de índice de duración de inventario: se llenará con toda la data obtenida 
+a través de la siguiente formula.

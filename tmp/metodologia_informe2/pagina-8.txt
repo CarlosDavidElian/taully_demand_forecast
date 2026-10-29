@@ -1,0 +1,48 @@
+ 
+5 
+ 
+nivel de digitalización. Por ello, los resultados obtenidos en otros estudios no pudieron 
+aplicarse automáticamente al caso del minimarket en estudio sin realizar previamente 
+un análisis de sus propios datos.  
+ 
+Palomino Huarilloclla [8] implementó un modelo de machine learning para la 
+predicción de la demanda en una ferretería de Moquegua, relacionando la predicción 
+con la gestión de inventarios y la toma de decisiones dentro de una empresa comercial 
+local. Aunque una ferretería no perteneció al mismo rubro que un minimarket, ambos 
+negocios compartieron una dificultad similar: anticipar qué productos serían más 
+solicitados y en qué momento sería necesario reponerlos. Este antecedente permitió 
+sostener que los modelos predictivos pudieron adaptarse a distintos tipos de 
+negocios, siempre que existiera información histórica suficiente y una adecuada 
+selección de variables.  
+ 
+En el caso del minimarket  en estudio, dicha adaptación resultó necesaria debido a 
+que el comportamiento de compra estuvo asociado a productos de consumo frecuente 
+y a categorías con diferentes niveles de rotación. Montero López [9] propuso un 
+sistema web inteligente basado en mach ine learning  para mejorar la gestión y el 
+análisis de información relacionada con las ventas, la demanda y el inventario de una 
+empresa. Este estudio fue relevante porque relacionó los modelos predictivos con el 
+control de stock y demostró que la predicción pudo aplicarse a necesidades concretas 
+de gestión.  
+ 
+En el caso de un minimarket , un modelo predictivo no solo permitiría estimar 
+cantidades futuras, sino también apoyar decisiones sobre compras, reposición, 
+almacenamiento y disponibilidad de productos. Desde esta perspectiva, el machine 
+learning pudo ayudar a reducir decisiones impro visadas y fortalecer una gestión 
+basada en datos.  Ponce Illacutipa [10] desarrolló un modelo basado en machine 
+learning para optimizar el pronóstico de ventas de la empresa Ricos Pan durante el 
+periodo 2020-2021.  
+ 
+Este estudio mostró que las técnicas de aprendizaje automático pudieron mejorar la 
+estimación de ventas y servir como apoyo para la toma de decisiones en una empresa 
+comercial. Asimismo, demostró la importancia de trabajar con datos históricos para 
+identificar patrones de comportamiento en las ventas y obtener proyecciones más 
+precisas. Este estudio aportó al presente trabajo al evidenciar que el pronóstico de 
+ventas pudo utilizarse como una herramienta para estimar la demanda en negocios 
+del contexto perua no. Aunque el rubro de panificación presentó características 
+distintas al de un minimarket, ambos contextos compartieron la necesidad de anticipar 
+el comportamiento de compra para evitar pérdidas por exceso de producción, falta de 
+productos o mala planificación.  
+ 
+Flores Taquiri y Montalvo Celis [11] analizaron el uso de machine learning para 
+mejorar la predicción en la gestión de inventario dirigida a PYMES de venta de 
+productos tecnológicos. Su investigación fue útil porque abordó el problema desde la 

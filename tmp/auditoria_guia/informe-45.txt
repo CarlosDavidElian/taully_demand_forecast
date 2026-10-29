@@ -1,0 +1,52 @@
+ 
+ 
+ 
+ 
+ 
+Instrumento de recolección de datos del indicador para el Postest: 
+Estacionalidad 
+INDICADOR: Estacionalidad 
+INVESTIGADOR: Guerrero Mora, Carlos David Elian 
+LUGAR DE ESTUDIO: Minimarket Taully, Comas 
+FÓRMULA: IE =  VD / VPM 
+DONDE: IE = Índice Estacional 
+VD = Venta Diaria 
+VPM = Venta Promedio Mensual 
+Momento  Postest 
+ 
+ 
+N° IE VD VPM 
+1 0,96 250 261,40 
+2 1,04 272 261,40 
+3 0,71 185 261,40 
+4 0,96 250 261,40 
+5 1,23 322 261,40 
+6 1,25 326 261,40 
+7 1,04 272 261,40 
+8 0,80 209 261,40 
+9 1,07 281 261,40 
+10 1,04 271 261,40 
+11 1,09 284 261,40 
+12 1,19 312 261,40 
+13 1,28 334 261,40 
+14 1,22 319 261,40 
+15 0,96 251 261,40 
+16 0,99 258 261,40 
+17 0,76 198 261,40 
+18 0,93 244 261,40 
+19 1,19 311 261,40 
+20 1,12 292 261,40 
+21 1,09 284 261,40 
+22 0,85 222 261,40 
+23 0,89 233 261,40 
+24 0,77 200 261,40 
+25 0,78 205 261,40 
+26 0,96 250 261,40 
+27 0,98 257 261,40 
+28 0,96 252 261,40 
+29 0,96 252 261,40 
+30 0,98 255 261,40 
+ 
+ 
+ 
+  

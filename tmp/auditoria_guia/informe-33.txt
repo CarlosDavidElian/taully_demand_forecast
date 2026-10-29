@@ -1,0 +1,38 @@
+ 
+22 
+ 
+https://alicia.concytec.gob.pe/vufind/Record/UCVV_d500babbd2fb53a1abf122
+d8d98c2f3f/Details  
+[15] K. E. Serna Berrocal, "Modelo machine learning para predecir las ventas de 
+una empresa RETAIL, 2025", Tesis, Perú, 2025. Consultado: 1 jun. 2026. [En 
+línea]. Disponible: 
+https://alicia.concytec.gob.pe/vufind/Record/UNSJ_a2810f55353e34c2f024e8
+9d83330f26/Details  
+[16] B. P. González Jauregui y D. M. Mariscal Cruzado, "Improvement Proposal 
+Based on Machine Learning, Big Data and DDMRP to Improve Forecasting 
+Compliance in a Consumer Goods Company", Tesis, Univ. de Lima, Perú, 
+2024. Consultado: 1 jun. 2026. [En línea]. Disponible: 
+https://repositorio.ulima.edu.pe/bitstream/handle/20.500.12724/21467/T018_7
+1910212_T.pdf?isAllowed=y&sequence=1  
+[17] G. Padmanabham, "Machine Learning Framework for Retail Sales 
+Forecasting", International Journal of Computational and Experimental Science 
+and Engineering, 2025. Consultado: 1 jun. 2026. [En línea]. Disponible: 
+https://www.researchgate.net/publication/396173583_Machine_Learning_Fra
+mework_for_Retail_Sales_Forecasting  
+[18] O. O. Mustapha y T. Sithole, "Forecasting Retail Sales using Machine Learning 
+Models", American Journal of Statistics and Actuarial Sciences, 2025. 
+Consultado: 1 jun. 2026. [En línea]. Disponible: 
+https://www.researchgate.net/publication/390949992_Forecasting_Retail_Sal
+es_using_Machine_Learning_Models  
+[19] S. Mansur, F. Ahmed, e M. R. Islam, "Sales forecasting for retail stores using 
+hybrid neural networks and machine learning", PeerJ Computer Science, 2025. 
+Consultado: 1 jun. 2026. [En línea]. Disponible: 
+https://pmc.ncbi.nlm.nih.gov/articles/PMC12453866  
+[20] R. S. Ahmed, M. A. Khan, y S. Ali, "Comparison of Deep Learning Algorithms 
+for Retail Sales Forecasting", ICCK Transactions on Intelligent Systematics, 
+2024. Consultado: 1 jun. 2026. [En línea]. Disponible: 
+https://www.icck.org/article/abs/tis.2024.300700  
+[21] Y. Liu, D. Kalaitzi, M. Wang, y C. Papanagnou , "A machine learning approach 
+to inventory stockout prediction", Journal of Digital Economy, 2025. 
+Consultado: 1 jun. 2026. [En línea]. Disponible: 
+https://www.sciencedirect.com/science/article/pii/S2773067025000202  

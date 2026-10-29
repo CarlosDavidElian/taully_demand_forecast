@@ -1,0 +1,48 @@
+ 
+12 
+ 
+ 
+ 
+II. Metodología 
+ 
+La investigación fue de tipo aplicada, porque se orientó al desarrollo y la 
+evaluación de una solución tecnológica para un problema específico del 
+Minimarket Taully, ubicado en Comas. De acuerdo con el Manual de Frascati, la 
+investigación aplicada se dirigió a un objetivo práctico determinado; en este caso, 
+se buscó predecir la demanda diaria por categoría de producto para apoyar la 
+planificación de compras, la reposición y la disponibilidad de productos [32]. 
+El enfoque fue cuantitativo, debido a que se trabajó con registros numéricos de 
+ventas e inventario. El diseño fue no experimental y longitudinal, ya que no se 
+manipularon deliberadamente las variables, sino que se analizaron registros 
+históricos en su secuencia temporal.  
+ 
+El alcance de la investigación fue descriptivo, con un propósito predictivo, debido 
+a que se analizaron los patrones de demanda correspondientes a cada categoría 
+de producto y se evaluó la capacidad de los modelos para estimar valores futuros 
+a partir de d ichos patrones. Para el estudio se consideraron dos variables. La 
+variable independiente correspondió al modelo de machine learning , definido 
+como un conjunto de algoritmos computacionales capaces de aprender patrones 
+a partir de datos históricos y utilizarlos para generar predicciones [1], [4].  La 
+variable dependiente fue la demanda diaria por categoría de producto, entendida 
+como la cantidad de unidades demandadas o vendidas en cada categoría 
+comercial durante un día determinado, sujeta a variaciones de volumen, 
+disponibilidad y estacionalidad [1], [3]. 
+ 
+Desde el punto de vista operacional, el modelo de machine learning comprendió 
+la preparación de los registros, la generación de variables temporales, el 
+entrenamiento de los algoritmos y la validación cronológica de las predicciones 
+obtenidas. La demanda diaria por categoría se determinó mediante la 
+consolidación de las ventas y los movimientos de inventario según la fecha y la 
+categoría de producto. Para su análisis se consideraron las dimensiones de 
+volumen de demanda, disponibilidad de inventario, patrón de demanda y 
+precisión del pronóstico. La definición conceptual y operacional de las variables, 
+así como sus dimensiones, indicadores y escalas de medición, se presentan en 
+la tabla de operacionalización incluida en el Anexo 1. 
+ 
+La unidad de análisis estuvo constituida por el registro diario consolidado de 
+ventas correspondiente a cada categoría de producto. La población estuvo 
+conformada por la totalidad de los registros de ventas y movimientos de 
+inventario almacenados en el sistema del Minimarket Taully, ubicado en Comas, 
+correspondientes al periodo comprendido entre abril y diciembre de 2026 . El 
+conjunto de información comprendió aproximadamente 8,500 transacciones, 320 
+productos y 10 categorías comerciales.  La muestra estuvo conformada por la 

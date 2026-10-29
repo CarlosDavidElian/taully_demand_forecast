@@ -1,0 +1,37 @@
+ 
+23 
+ 
+[22] M. S. Sousa, A. M. Moreira, y J. Ferreira, "Predicting demand for new products 
+in fashion retailing using machine learning", Expert Systems with Applications, 
+2025. Consultado: 1 jun. 2026. [En línea]. Disponible: 
+https://www.sciencedirect.com/science/article/pii/S0957417424021808  
+[23] C. C. Wang, Y. H. Chen, y T. Y. Lin, "Dynamic Dual-Phase Forecasting Model 
+for New Product Demand", Mathematics, 2025. Consultado: 1 jun. 2026. [En 
+línea]. Disponible: https://www.mdpi.com/2227-7390/13/10/1613   
+[24] S. Hwang, J. Kim, y M. Park, "Sales Forecasting for New Products Using 
+Homogeneity-Based Clustering and Ensemble Learning", Electronics, 2025. 
+Consultado: 1 jun. 2026. [En línea]. Disponible: https://www.mdpi.com/2079-
+9292/14/3/520  
+[25] H. Hu, D. Tan, P. Thaichon, B. Wang, y Z. Zhu, "Grid -based market sales 
+forecasting for retail businesses using automated machine learning and 
+geospatial intelligence", Expert Systems with Applications, 2025. Consultado: 
+1 jun. 2026. [En línea]. Disponible: 
+https://www.sciencedirect.com/science/article/abs/pii/S0957417425014915  
+[26] M. A. Shahzad, M. A. Khan, y S. Ullah, "Demand forecasting for retail using 
+three-S temporal fusion transformer", Supply Chain Analytics, 2025. 
+Consultado: 1 jun. 2026. [En línea]. Disponible: 
+https://www.sciencedirect.com/science/article/abs/pii/S3051064325000305  
+[27] A. Seyam, M. R. Islam, y S. Hossain, "The application of machine learning and 
+deep learning on demand forecasting", International Journal of Information 
+Management Data Insights, 2026. Consultado: 1 jun. 2026. [En línea]. 
+Disponible: 
+https://www.sciencedirect.com/science/article/pii/S1474034626003174  
+[28] N. A. Mohd Shahar, N. H. Abd Rahman, y S. S. Maidin, "Sales Forecasting 
+Using Machine Learning Methods for Retail Store", Atlantis Press, 2024. 
+Consultado: 1 jun. 2026. [En línea]. Disponible: https://www.atlantis-
+press.com/proceedings/invent-24/126005569  
+[29] C. I. C. Obi, "Demand Forecasting in Retail Business Using the Ensemble 
+Machine Learning Framework: A Stacking Approach", American Scientific 
+Research Journal for Engineering, Technology, and Sciences, 2024. 
+Consultado: 1 jun. 2026. [En línea]. Disponible: 
+https://asrjetsjournal.org/American_Scientific_Journal/article/view/11010  

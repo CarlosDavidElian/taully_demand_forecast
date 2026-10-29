@@ -109,6 +109,8 @@ function escapeHtml(value) {
 function setStatus(message = "", kind = "") {
   statusMessage.textContent = message;
   statusMessage.dataset.kind = kind;
+  const localStatus = document.querySelector("#posttest-local-status");
+  if (localStatus) { localStatus.textContent = message; localStatus.dataset.kind = kind; }
 }
 
 function setButtonLoading(button, active, label) {
@@ -159,7 +161,7 @@ function renderDashboard(data) {
   document.querySelector("#history-updated-at").textContent = formatDateTime(summary.history_updated_at);
   updateHistoricalCutoffControl(summary);
   document.querySelector("#category-history-explanation").textContent = summary.records
-    ? `Acumulado histórico: unidades y porcentaje de participación de cada categoría en todos los reportes, desde ${formatDate(summary.first_sale_date)} hasta ${formatDate(summary.last_sale_date)}. Se actualiza al cargar un reporte. No es un pronóstico.`
+    ? `Suma las unidades vendidas por categoría entre el ${formatDate(summary.first_sale_date)} y el ${formatDate(summary.last_sale_date)}. El porcentaje indica la participación de cada categoría en el total vendido.`
     : "Aún no hay reportes cargados para calcular el acumulado histórico.";
   document.querySelector("#catalog-products").textContent = numberFormat.format(catalog.products);
   document.querySelector("#catalog-families").textContent = numberFormat.format(catalog.families);
@@ -379,13 +381,28 @@ inventoryForm.addEventListener("submit", async (event) => {
   }
 });
 
+for (const [id, cutoff, label] of [
+  ["preset-pretest", "2026-07-17", "Pretest: 18/07 al 16/08/2026. Horizonte: 30 días. Lee PMS-7."],
+  ["preset-posttest", "2026-08-16", "Postest: 17/08 al 15/09/2026. Horizonte: 30 días. Lee Modelo predictivo."]
+]) {
+  document.querySelector(`#${id}`).addEventListener("click", () => {
+    if (runPosttestButton.disabled) return;
+    forecastDays.value = "30";
+    forecastDays.dispatchEvent(new Event("change"));
+    forecastCutoff.value = cutoff;
+    forecastCutoff.dispatchEvent(new Event("change"));
+    document.querySelector("#posttest-selection").textContent = label;
+    setStatus("Período seleccionado. Pulsa Ejecutar Postest.", "");
+  });
+}
+
 runPosttestButton.addEventListener("click", async () => {
   const cutoffDate = selectedForecastCutoff();
   const days = Number(forecastDays.value);
   const bounds = posttestCutoffBounds();
   if (!cutoffDate) {
-    setStatus("Para ejecutar el Postest, selecciona arriba el corte de prueba: el día anterior al período que deseas evaluar.", "error");
-    forecastCutoff.focus();
+    setStatus("Elige Pretest de las fichas o Postest de las fichas junto a este botón. También puedes configurar el corte arriba.", "error");
+    
     return;
   }
   if (!bounds.available || cutoffDate < bounds.min || cutoffDate > bounds.max) {
@@ -395,7 +412,7 @@ runPosttestButton.addEventListener("click", async () => {
         : `Aún no hay datos suficientes para un Postest de ${numberFormat.format(bounds.days)} días.`,
       "error"
     );
-    forecastCutoff.focus();
+    
     return;
   }
   setButtonLoading(runPosttestButton, true, "Evaluando");
@@ -733,6 +750,12 @@ function renderPosttest(data) {
     inventoryNote.textContent = inventory.message || "No hay datos de inventario para este período.";
     inventoryRows.innerHTML = '<tr><td colspan="5" class="empty-state">Sin indicadores de inventario para mostrar.</td></tr>';
   }
+
+  document.querySelector("#indicator-fiches").innerHTML = `<h3>Fichas de los cinco indicadores</h3><p>Resultados del período seleccionado. Pretest de las fichas: corte 17/07/2026, 30 días, PMS-7. Postest: corte 16/08/2026, 30 días, modelo predictivo.</p>` +
+    (data.indicator_tables || []).map(table => `<article class="posttest-table-card">
+      <h4>${escapeHtml(table.title)}</h4><p>${escapeHtml(table.formula)}</p>
+      <div class="table-wrap"><table class="posttest-table"><thead><tr>${table.headers.map(h => `<th>${escapeHtml(h)}</th>`).join("")}</tr></thead>
+      <tbody>${table.rows.length ? table.rows.map(row => `<tr>${row.map(v => `<td>${typeof v === "number" ? formatMetricNumber(v) : escapeHtml(v == null ? "No disponible" : String(v))}</td>`).join("")}</tr>`).join("") : `<tr><td colspan="${table.headers.length}">No hay inventario aplicable a este período.</td></tr>`}</tbody></table></div></article>`).join("");
 
   downloadPosttestButton.onclick = () => downloadPosttestExcel(data.run_id);
   posttestResults.hidden = false;

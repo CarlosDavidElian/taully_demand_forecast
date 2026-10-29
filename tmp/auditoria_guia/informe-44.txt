@@ -1,0 +1,52 @@
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Instrumento de recolección de datos del indicador para el Pretest: 
+Estacionalidad 
+INDICADOR: Estacionalidad 
+INVESTIGADOR: Guerrero Mora, Carlos David Elian 
+LUGAR DE ESTUDIO: Minimarket Taully, Comas 
+FÓRMULA: IE =  VD / VPM 
+DONDE: IE = Índice Estacional 
+VD = Venta Diaria 
+VPM = Venta Promedio Mensual 
+Momento  Pretest 
+ 
+ 
+N° IE VD VPM 
+1 1,10 287 261,40 
+2 0,93 243 261,40 
+3 0,84 220 261,40 
+4 1,07 281 261,40 
+5 0,86 226 261,40 
+6 0,77 202 261,40 
+7 0,92 241 261,40 
+8 1,06 278 261,40 
+9 1,15 301 261,40 
+10 0,92 240 261,40 
+11 0,93 242 261,40 
+12 0,85 221 261,40 
+13 1,03 270 261,40 
+14 1,12 293 261,40 
+15 1,22 318 261,40 
+16 1,18 309 261,40 
+17 1,03 269 261,40 
+18 0,85 221 261,40 
+19 0,83 216 261,40 
+20 1,22 318 261,40 
+21 1,03 269 261,40 
+22 1,22 318 261,40 
+23 1,18 308 261,40 
+24 0,94 247 261,40 
+25 0,84 220 261,40 
+26 1,02 267 261,40 
+27 0,92 241 261,40 
+28 1,07 281 261,40 
+29 1,15 301 261,40 
+30 1,03 268 261,40 
+ 
+ 

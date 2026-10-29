@@ -183,7 +183,7 @@
               <tbody id="recent-table"><tr><td colspan="3" class="empty-state">Cargando historial…</td></tr></tbody>
             </table>
           </div>
-          <p class="history-explanation">Actividad reciente: muestra ventas reales por fecha y categoría de los últimos reportes cargados. Cada fila corresponde a un día específico; no es un pronóstico ni un acumulado.</p>
+          <p class="history-explanation">Muestra las ventas de los últimos días, separadas por fecha y categoría. Estas cifras provienen de los reportes de ventas cargados.</p>
         </article>
       </section>
 
@@ -241,6 +241,12 @@
               <div><dt>2</dt><dd>Pronostica el horizonte elegido.</dd></div>
               <div><dt>3</dt><dd>Compara modelo y PMS-7 contra ventas reales.</dd></div>
             </dl>
+            <div aria-label="Elegir período de las fichas">
+              <button id="preset-pretest" class="button button-outline" type="button">Pretest de las fichas · 18/07 al 16/08/2026</button>
+              <button id="preset-posttest" class="button button-outline" type="button">Postest de las fichas · 17/08 al 15/09/2026</button>
+              <p id="posttest-selection" aria-live="polite">Elige un período aquí o configura el corte y horizonte arriba.</p>
+            </div>
+            <p id="posttest-local-status" role="status" aria-live="polite"></p>
             <button id="run-posttest-button" class="button button-dark" type="button">Ejecutar Postest <span aria-hidden="true">→</span></button>
           </div>
         </div>
@@ -293,11 +299,12 @@
                 </table>
               </div>
             </article>
+            <section id="indicator-fiches" aria-label="Fichas de los cinco indicadores"></section>
           </div>
         </section>
       </section>
 
     </main>
-    <script src="{{ url_for('static', filename='dashboard.js', v='32') }}"></script>
+    <script src="{{ url_for('static', filename='dashboard.js', v='36') }}"></script>
   </body>
 </html>

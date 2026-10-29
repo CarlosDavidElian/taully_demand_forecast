@@ -24,6 +24,7 @@ from application.services.ingest_service import IngestService
 from application.services.inventory_service import InventoryService
 from application.services.predict_service import PredictService
 from application.services.posttest_evaluation_service import PosttestEvaluationService
+from application.services.indicator_tables import build_indicator_tables
 from application.services.train_service import TrainService
 from config.settings import (
     BASE_DIR,
@@ -74,6 +75,7 @@ def create_app(test_config: dict[str, Any] | None = None) -> Flask:
         INVENTORY_SELECTION_FILE=INVENTORY_SELECTION_FILE,
         POSTTEST_RESULTS_DIR=POSTTEST_RESULTS_DIR,
         SEND_FILE_MAX_AGE_DEFAULT=0,
+        TEMPLATES_AUTO_RELOAD=True,
     )
     if test_config:
         app.config.update(test_config)
@@ -584,6 +586,9 @@ def create_app(test_config: dict[str, Any] | None = None) -> Flask:
                     "metrics": [],
                 }
 
+            result["indicator_tables"] = build_indicator_tables(
+                result, CSVDemandRepository().get_all_demands()
+            )
             record = PosttestResultRepository(Path(app.config["POSTTEST_RESULTS_DIR"])).save(result)
             return _json_response(
                 {
@@ -1438,6 +1443,30 @@ def _create_posttest_export(record: Any) -> tuple[BytesIO, str]:
         }.items():
             inventory_sheet.column_dimensions[column].width = width
         inventory_sheet.auto_filter.ref = f"A{inventory_header_row}:K{max(inventory_header_row, len(inventory['metrics']) + inventory_header_row)}"
+
+    sheet_names = ["1 Cantidad demandada", "2 Salida inventario", "3 Quiebre stock", "4 Estacionalidad categoría", "4b Estacionalidad diaria", "5 Error pronóstico"]
+    for index, table in enumerate(result.get("indicator_tables", [])):
+        sheet = workbook.create_sheet(sheet_names[index])
+        sheet.append([table["title"]])
+        sheet.append([f"Período: {period_start.isoformat()} al {period_end.isoformat()}"])
+        sheet.append([table["formula"]])
+        sheet.merge_cells(start_row=3, start_column=1, end_row=3, end_column=len(table["headers"]))
+        sheet.cell(3, 1).alignment = Alignment(wrap_text=True, vertical="top")
+        sheet.row_dimensions[3].height = 65
+        sheet.append(table["headers"])
+        for values in table["rows"]:
+            sheet.append([_excel_safe_text(v) if isinstance(v, str) else v for v in values])
+        sheet.freeze_panes = "B5"
+        sheet.sheet_view.showGridLines = False
+        for cell in sheet[4]:
+            cell.fill = PatternFill("solid", fgColor=navy)
+            cell.font = Font(bold=True, color="FFFFFF")
+        for row in sheet.iter_rows(min_row=5):
+            for cell in row:
+                if isinstance(cell.value, (int, float)):
+                    cell.number_format = "#,##0.00"
+        for col in range(1, len(table["headers"]) + 1):
+            sheet.column_dimensions[chr(64 + col)].width = 24
 
     workbook_bytes = BytesIO()
     workbook.save(workbook_bytes)

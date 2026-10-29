@@ -1,0 +1,48 @@
+ 
+7 
+ 
+y fáciles de comprender. En otros, los modelos más robustos pueden reconocer 
+relaciones no lineales y mejorar la precisión de las predicciones. Por ello, en el 
+0presente estudio se considera la comparación de diferentes modelos y el uso de 
+métricas de evaluación, con el fin de determinar cuál se ajusta mejor a 9 los datos del 
+minimarket en estudio y ofrece mejores resultados para la predicción de la demanda. 
+ 
+Mansur, Ahmed e Islam  [19] presentan modelos híbridos basados en redes 
+neuronales y técnicas de machine learning para predecir ventas en tiendas retail, 
+demostrando que la combinación de distintos métodos puede mejorar la precisión del 
+pronóstico. De manera similar, Ahmed, Khan y Ali [20] comparan algoritmos de deep 
+learning, como CNN, LSTM, MLP y modelos híbridos, aplicados al pronóstico de 
+ventas en el sector retail. Estos aportes muestran que existen métodos avanzados 
+para trabajar problemas de forecasting y predicción de demanda. Sin embargo, en el 
+contexto de un minimarket, el uso de modelos complejos debe evaluarse con cuidado, 
+ya que el modelo más avanzado no siempre es el más adecuado para las necesidades 
+del negocio.  
+ 
+Por ello, la elección del modelo debe considerar la cantidad de datos disponibles, la 
+facilidad de implementación y la posibilidad de interpretar los resultados para apoyar 
+la toma de decisiones comerciales. La relación entre la predicción de la demanda y la 
+gestión de inventario es importante en los negocios retail, porque ambas áreas 
+influyen en la disponibilidad de productos y en el uso adecuado de los recursos. Liu, 
+Kalaitzi, Wang y Papanagnou [21] desarro llan un enfoque basado en machine 
+learning para predecir quiebres de stock, relacionando el comportamiento de la 
+demanda con la disponibilidad de productos en el sector retail . Este aporte es 
+relevante porque muestra que anticipar la demanda pudo ayudar a reducir situaciones 
+de desabastecimiento y mejorar la disponibilidad de productos.  
+ 
+En el caso del minimarket  en estudio, la predicción diaria por categoría permite 
+identificar las categorías con mayor riesgo de quiebre de stock, y facilita una mejor 
+planificación de compras y reposición de productos. De esta manera, el modelo no 
+solo tiene valor estadístico, sin o también una utilidad práctica en las operaciones 
+diarias del negocio. Por otra parte, al enfocarnos en la mercadería que recién ingresa 
+a la tienda y carece de un historial amplio, resulta muy útil el estudio de Sousa, Moreira 
+y Ferreira [22], quienes aplican machine learning para proyectar la demanda de estos 
+nuevos artículos en el sector minorista. Sobre este mismo punto, 10 Wang, Chen y 
+Lin [23] proponen una forma de calcular esta demanda dividiendo el análisis en dos 
+etapas, mientras que Hwang, Kim y Park [24] opta n por apoyarse en técnicas de 
+clustering y ensemble learning para afinar mucho más esos pronósticos.  
+ 
+En conjunto, estas investigaciones muestran que un modelo predictivo no debería 
+centrarse únicamente en productos que ya cuentan con un historial de ventas estable. 
+Cuando un establecimiento incorpora un nuevo producto o amplía su oferta comercial, 
+las primeras ventas pueden no reflejar con claridad el comportamiento habitual de la 
+demanda. Por ello, resulta conveniente utilizar métricas complementarias que 

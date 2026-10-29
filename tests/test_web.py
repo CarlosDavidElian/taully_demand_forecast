@@ -508,7 +508,9 @@ class WebTests(unittest.TestCase):
             from openpyxl import load_workbook
 
             workbook = load_workbook(BytesIO(exported.data), data_only=True)
-            self.assertEqual(workbook.sheetnames, ["Resumen postest", "Métricas categoría", "Detalle diario"])
+            self.assertEqual(workbook.sheetnames[:3], ["Resumen postest", "Métricas categoría", "Detalle diario"])
+            self.assertIn("4 Estacionalidad categoría", workbook.sheetnames)
+            self.assertIn("5 Error pronóstico", workbook.sheetnames)
             summary = workbook["Resumen postest"]
             self.assertEqual(summary["A1"].value, "Postest de pronóstico y comparación con PMS-7")
             metric_rows = {

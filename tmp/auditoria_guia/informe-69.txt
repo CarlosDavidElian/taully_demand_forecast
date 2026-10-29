@@ -1,0 +1,33 @@
+ 
+ 
+ 
+Instrumento de recolección de datos de la dimensión para el Postest: 
+Precisión del Pronóstico 
+INDICADOR:  Error de Pronóstico 
+INVESTIGADOR: Guerrero Mora, Carlos David Elian 
+LUGAR DE ESTUDIO: Minimarket Taully, Comas 
+FÓRMULA: MAPE = (100/n) × Σ |(DR − DP) / DR| 
+DONDE: MAPE = Error Porcentual Absoluto 
+Medio 
+DR = Demanda Real 
+DP = Demanda Pronosticada 
+n = Número de observaciones 
+Σ = Sumatoria de los errores 
+porcentuales absolutos 
+Momento: Postest 
+ 
+ 
+N° Categoria Demanda 
+Real (DR) 
+Demanda 
+Pronosticada 
+(DP) 
+MAPE 
+1 Abarrotes  1,653 1,506,70 21,19 % 
+2 Bebidas  2,810 2,666,39 15,08 % 
+3 Golosinas  2,129 2,226,85 22,53 % 
+4 Helados  792 708,73 31,42 % 
+5 Limpieza 467 575,62 40,81 % 
+ Total 7,851 7,684,29 26,21 % 
+ 
+ 
